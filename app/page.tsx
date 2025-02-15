@@ -144,7 +144,7 @@ export default function Home() {
                 name: "DFX.swiss",
                 description:
                   "Institutional DeFi FX solutions for CHF, EUR, and USD.",
-                logo: "/images/partners/dfx.svg",
+                logo: "/images/partners/dfx.jpg",
                 link: "https://dfx.swiss",
               },
               {
@@ -158,7 +158,7 @@ export default function Home() {
                 name: "Bitcoin Suisse",
                 description:
                   "Pioneering crypto brokerage and custody services.",
-                logo: "/images/partners/bitcoin-suisse.svg",
+                logo: "/images/partners/bitcoin-suisse.jpg",
                 link: "https://bitcoinsuisse.com",
               },
             ].map((partner) => (
