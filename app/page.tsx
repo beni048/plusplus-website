@@ -82,19 +82,19 @@ export default function Home() {
               {
                 name: "Jonas",
                 role: "CEO",
-                bio: "Former head of digital assets at a Swiss private bank. 10+ years in fintech innovation.",
+                bio: "Former Relai advisor and key contributor to scaling Lionstep from 1 to 9 million in three years, with expertise in sales and B2B networking.",
                 image: "/images/team/jonas-walti.jpg",
               },
               {
                 name: "Benjamin",
                 role: "CTO",
-                bio: "Ex-ETH Zurich blockchain researcher. Built DeFi protocols since 2018.",
+                bio: "Technology and business expert with a background from ETH and ZHAW, specializing in development, IT consulting, cybersecurity, and cloud technologies.",
                 image: "/images/team/benjamin-rossi.jpg",
               },
               {
                 name: "Florian",
                 role: "Board & Compliance",
-                bio: "Compliance Lead at Crypto Finance AG. Ensures PA Finance meets FINMA standards.",
+                bio: "Compliance Lead at Crypto Finance AG. Ensures PA Finance meets regulatory standards.",
                 image: "/images/team/florian-meier.png",
               },
             ].map((member) => (
