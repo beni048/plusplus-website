@@ -95,7 +95,7 @@ export default function Home() {
                 name: "Florian",
                 role: "Board & Compliance",
                 bio: "Compliance Lead at Crypto Finance AG. Ensures PA Finance meets FINMA standards.",
-                image: "/images/team/florian-lachenmeier.jpg",
+                image: "/images/team/florian-meier.png",
               },
             ].map((member) => (
               <Card key={member.name} className="overflow-hidden">
