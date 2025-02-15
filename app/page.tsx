@@ -39,10 +39,10 @@ export default function Home() {
         {/* Logo Placeholder */}
           <div className="absolute left-6 top-6 z-20 md:left-12 md:top-12">
             <Image
-              src="/images/prospera_23.png"
+              src="/images/pa.JPG"
               alt="PA Finance"
-              width={200}
-              height={67}
+              width={300}
+              height={300}
               className="h-12 w-auto md:h-16 lg:h-20"
             />
           </div>
