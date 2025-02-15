@@ -130,14 +130,14 @@ export default function Home() {
                 name: "Zinsli.com",
                 description:
                   "Swiss-regulated crypto exchange, enabling seamless CHF/DeFi transactions.",
-                logo: "/images/partners/zinsli.svg",
+                logo: "/images/partners/zinsli.jpg",
                 link: "https://zinsli.com",
               },
               {
                 name: "Frankencoin.com",
                 description:
                   "Decentralized Swiss Franc stablecoin ecosystem.",
-                logo: "/images/partners/frankencoin.svg",
+                logo: "/images/partners/frankencoin.webp",
                 link: "https://frankencoin.com",
               },
               {
