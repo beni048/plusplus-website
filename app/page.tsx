@@ -46,7 +46,6 @@ export default function Home() {
               className="h-12 w-auto md:h-16 lg:h-20"
             />
           </div>
-        </div>
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center text-white">
           <h1 className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
             Bridging TradFi and DeFi
