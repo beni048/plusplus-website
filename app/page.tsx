@@ -37,14 +37,15 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/50" />
         </div>
         {/* Logo Placeholder */}
-        <div className="absolute left-4 top-4 z-20 md:left-8 md:top-8">
-          <Image
-            src="/images/logo.svg"
-            alt="PA Finance"
-            width={120}
-            height={40}
-            className="h-8 w-auto md:h-10"
-          />
+          <div className="absolute left-6 top-6 z-20 md:left-12 md:top-12">
+            <Image
+              src="/images/prospera_2.png"
+              alt="PA Finance"
+              width={200}
+              height={67}
+              className="h-12 w-auto md:h-16 lg:h-20"
+            />
+          </div>
         </div>
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center text-white">
           <h1 className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
