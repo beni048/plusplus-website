@@ -89,7 +89,7 @@ export default function Home() {
                 name: "Benjamin",
                 role: "CTO",
                 bio: "Ex-ETH Zurich blockchain researcher. Built DeFi protocols since 2018.",
-                image: "/images/team/benjamin-rossi.png",
+                image: "/images/team/benjamin-rossi.jpg",
               },
               {
                 name: "Florian",
