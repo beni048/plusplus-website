@@ -82,8 +82,8 @@ export default function Home() {
               {
                 name: "Jonas",
                 role: "CEO",
-                bio: "Former Relai advisor and key contributor to scaling Lionstep from 1 to 9 million in three years, with expertise in sales and B2B networking.",
-                image: "/images/team/jonas-walti.jpg",
+                bio: "Sales and Crypto Expert.", //"Former Relai advisor and key contributor to scaling Lionstep from 1 to 9 million in three years, with expertise in sales and B2B networking."
+                image: "/images/team/florian-meier.png",
               },
               {
                 name: "Benjamin",
@@ -94,7 +94,7 @@ export default function Home() {
               {
                 name: "Florian",
                 role: "Board & Compliance",
-                bio: "Compliance Lead at Crypto Finance AG. Ensures PA Finance meets regulatory standards.",
+                bio: "Compliance and Regulations Expert",//"Compliance Lead at Crypto Finance AG. Ensures PA Finance meets regulatory standards.",
                 image: "/images/team/florian-meier.png",
               },
             ].map((member) => (
