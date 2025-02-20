@@ -170,7 +170,7 @@ export default function Home() {
                 className="transition-transform hover:scale-105"
               >
                 <Card className="h-full p-8">
-                  <div className="relative h-16 mb-6">
+                  <div className="mb-6 flex justify-center">
                     <Image
                       src={partner.logo}
                       alt={partner.name}
