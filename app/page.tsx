@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Building2, Mail, MapPin, Users } from "lucide-react";
+import { Building2, Mail, MapPin, Users, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
