@@ -8,7 +8,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center">
             <Image
-              src="/images/logo.svg"
+              src="/images/pa.JPG"
               alt="PA Finance"
               width={150}
               height={50}
