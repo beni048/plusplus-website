@@ -15,15 +15,7 @@ export default function Navbar() {
               className="h-12 w-auto"
             />
           </Link>
-          <div className="flex gap-8">
-            {/*
-            <Link 
-              href="/" 
-              className="text-gray-600 hover:text-gray-900 font-medium"
-            >
-              Home
-            </Link>
-            */}
+          <div>
             <Link 
               href="/help" 
               className="text-gray-600 hover:text-gray-900 font-medium"
