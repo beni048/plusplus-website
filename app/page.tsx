@@ -41,7 +41,7 @@ export default function Home() {
           <h1 className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
             Bridging TradFi and DeFi
           </h1>
-          <p className="mx-auto max-w-2xl text-lg sm:text-xl md:text-2xl mb-10">
+          <p className="mx-auto max-w-2xl text-lg sm:text-xl md:text-2xl mb-8">
             We bring the advantages of decentralization to traditional finance, from Switzerland to a global market.
           </p>
           <Link href="/help">
