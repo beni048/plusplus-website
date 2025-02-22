@@ -51,10 +51,10 @@ export default function Home() {
         */}
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center text-white">
           <h1 className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-            Reimagining Finance: Swiss Innovation Meets Decentralized Solutions
+            Bridging TradFi and DeFi
           </h1>
           <p className="mx-auto max-w-2xl text-lg sm:text-xl md:text-2xl">
-            We transform traditional assets into secure, tokenized opportunities—delivering regulated financial solutions from Switzerland to a global market.
+            We bring the advantages of decentralized finance from Switzerland to a global market.
           </p>
           <Link href="/help">
             <Button variant="secondary" size="lg" className="text-lg px-8 group">
