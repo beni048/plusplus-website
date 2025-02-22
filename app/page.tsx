@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Building2, Mail, MapPin, Users } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -37,6 +38,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/50" />
         </div>
         {/* Logo Placeholder */}
+        {/*
           <div className="absolute left-6 top-6 z-20 md:left-12 md:top-12">
             <Image
               src="/images/pa2.JPG"
@@ -45,14 +47,21 @@ export default function Home() {
               height={300}
               className="h-12 w-auto md:h-16 lg:h-20"
             />
-          </div>
+          </div
+        */}
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center text-white">
           <h1 className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-            Bridging TradFi and DeFi
+            Reimagining Finance: Swiss Innovation Meets Decentralized Solutions
           </h1>
           <p className="mx-auto max-w-2xl text-lg sm:text-xl md:text-2xl">
-            Starting in Zug, Expanding Globally
+            We transform traditional assets into secure, tokenized opportunities—delivering regulated financial solutions from Switzerland to a global market.
           </p>
+          <Link href="/help">
+            <Button variant="secondary" size="lg" className="text-lg px-8 group">
+              Learn More
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </Link>
         </div>
       </section>
 
@@ -63,12 +72,7 @@ export default function Home() {
             Our Purpose & Vision
           </h2>
           <p className="mx-auto max-w-3xl text-center text-xl leading-relaxed text-gray-600">
-            PA Finance bridges traditional finance (TradFi) and decentralized
-            finance (DeFi) by offering institutional-grade tools for asset
-            tokenization, liquidity provisioning, and yield optimization. Based in
-            Zug, Switzerland, we combine Swiss regulatory rigor with blockchain
-            innovation. Our vision is to become the global gateway for TradFi
-            institutions entering the DeFi ecosystem.
+            PA Finance revolutionizes traditional savings by bridging the efficiency of decentralized finance (DeFi) with the stability of the Swiss Franc market. We offer institutional-grade solutions that deliver attractive yields (3-4% APY) on Swiss Franc deposits through secure, regulated DeFi protocols. Our vision is to make high-yield savings accessible to everyone while maintaining the security and reliability of Swiss financial standards. Through innovative blockchain technology and smart contracts, we're creating a future where traditional and decentralized finance work seamlessly together.
           </p>
         </div>
       </section>
