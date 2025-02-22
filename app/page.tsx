@@ -37,18 +37,6 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-black/50" />
         </div>
-        {/* Logo Placeholder */}
-        {/*
-          <div className="absolute left-6 top-6 z-20 md:left-12 md:top-12">
-            <Image
-              src="/images/pa2.JPG"
-              alt="PA Finance"
-              width={300}
-              height={300}
-              className="h-12 w-auto md:h-16 lg:h-20"
-            />
-          </div
-        */}
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center text-white">
           <h1 className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
             Bridging TradFi and DeFi
@@ -71,9 +59,14 @@ export default function Home() {
           <h2 className="mb-12 text-center text-4xl font-bold">
             Our Purpose & Vision
           </h2>
-          <p className="mx-auto max-w-3xl text-center text-xl leading-relaxed text-gray-600">
-            PA Finance revolutionizes traditional savings by bridging the efficiency of decentralized finance (DeFi) with the stability of the Swiss Franc market. We offer institutional-grade solutions that deliver attractive yields (3-4% APY) on Swiss Franc deposits through secure, regulated DeFi protocols. Our vision is to make high-yield savings accessible to everyone while maintaining the security and reliability of Swiss financial standards. Through innovative blockchain technology and smart contracts, we're creating a future where traditional and decentralized finance work seamlessly together.
-          </p>
+          <div className="mx-auto max-w-3xl text-center space-y-6">
+            <p className="text-xl leading-relaxed text-gray-600">
+              PA Finance revolutionizes traditional savings by bridging the efficiency of decentralized finance (DeFi) with the stability of the Swiss Franc market. We offer institutional-grade solutions that deliver attractive yields (3-4% APY) on Swiss Franc deposits through secure, regulated DeFi protocols.
+            </p>
+            <p className="text-xl leading-relaxed text-gray-600">
+              Our vision is to make high-yield savings accessible to everyone while maintaining the security and reliability of Swiss financial standards. Through innovative blockchain technology and smart contracts, we're creating a future where traditional and decentralized finance work seamlessly together.
+            </p>
+          </div>
         </div>
       </section>
 
