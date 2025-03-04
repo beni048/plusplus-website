@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
           <p className="text-lg">© PA Finance 2025 | Zug, Switzerland</p>
           <a
-            href="https://linkedin.com/company/pa-finance"
+            href="https://linkedin.com/company/pafinance"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center space-x-3 text-white transition-colors hover:text-gray-300"
