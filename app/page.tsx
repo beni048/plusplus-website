@@ -243,7 +243,7 @@ export default function Home() {
       <footer className="bg-gray-900 py-12 text-white">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
-            <p className="text-lg">© PA Finance 2024 | Zug, Switzerland</p>
+            <p className="text-lg">© PA Finance 2025 | Zug, Switzerland</p>
             <a
               href="https://linkedin.com/company/pafinance"
               target="_blank"
