@@ -7,9 +7,9 @@ import Footer from "./components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "PA Finance - Bridging TradFi and DeFi",
+  title: "Plusplus - Bridging TradFi and DeFi",
   description:
-    "PA Finance empowers Swiss institutions with secure, compliant DeFi solutions. We simplify decentralized finance integration for banks, asset managers, and enterprises.",
+    "Plusplus empowers Swiss institutions with secure, compliant DeFi solutions. We simplify decentralized finance integration for banks, asset managers, and enterprises.",
 };
 
 export default function RootLayout({

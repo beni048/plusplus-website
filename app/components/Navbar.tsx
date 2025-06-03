@@ -9,7 +9,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center">
             <Image
               src="/images/pa3.png"
-              alt="PA Finance"
+              alt="Plusplus"
               width={150}
               height={50}
               className="h-12 w-auto"

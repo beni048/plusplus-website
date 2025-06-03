@@ -61,7 +61,7 @@ export default function Home() {
           </h2>
           <div className="mx-auto max-w-3xl text-center space-y-6">
             <p className="text-xl leading-relaxed text-gray-600">
-              PA Finance revolutionizes traditional savings by bridging the efficiency of decentralized finance (DeFi) with the stability of the Swiss Franc market. We offer institutional-grade solutions that deliver attractive yields (3-4% APY) on Swiss Franc deposits through secure, regulated DeFi protocols.
+              Plusplus revolutionizes traditional savings by bridging the efficiency of decentralized finance (DeFi) with the stability of the Swiss Franc market. We offer institutional-grade solutions that deliver attractive yields (3-4% APY) on Swiss Franc deposits through secure, regulated DeFi protocols.
             </p>
             <p className="text-xl leading-relaxed text-gray-600">
               Our vision is to make high-yield savings accessible to everyone while maintaining the security and reliability of Swiss financial standards. Through innovative blockchain technology and smart contracts, we're creating a future where traditional and decentralized finance work seamlessly together.
@@ -78,20 +78,20 @@ export default function Home() {
             {[
               {
                 name: "Jonas",
-                role: "CEO",
-                bio: "Sales and Crypto Expert.", //"Former Relai advisor and key contributor to scaling Lionstep from 1 to 9 million in three years, with expertise in sales and B2B networking."
+                role: "Founder",
+                bio: "Sales and Business Development Expert.", //"Former Relai advisor and key contributor to scaling Lionstep from 1 to 9 million in three years, with expertise in sales and B2B networking."
                 image: "/images/team/florian-meier.png",
               },
               {
                 name: "Benjamin",
-                role: "CTO",
+                role: "Founder & CEO interim",
                 bio: "Technology and business expert with a background from ETH and ZHAW, specializing in development, IT consulting, cybersecurity, and cloud technologies.",
                 image: "/images/team/benjamin-rossi.jpg",
               },
               {
-                name: "Florian",
-                role: "Board & Compliance",
-                bio: "Compliance and Regulations Expert",//"Compliance Lead at Crypto Finance AG. Ensures PA Finance meets regulatory standards.",
+                name: "Matthias",
+                role: "CTO",
+                bio: "PhD candidate at Unibas. Expert on rental deposits on the blockchain, DeFi and Ethereum.",
                 image: "/images/team/florian-meier.png",
               },
             ].map((member) => (
