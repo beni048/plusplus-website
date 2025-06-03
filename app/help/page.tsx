@@ -8,10 +8,10 @@ export default function HelpPage() {
         
         <div className="max-w-3xl mx-auto">
           <Accordion type="single" collapsible className="space-y-4">
-            <AccordionItem value="what-is-pa-finance">
-              <AccordionTrigger className="text-xl">What is PA Finance?</AccordionTrigger>
+            <AccordionItem value="what-is-plusplus">
+              <AccordionTrigger className="text-xl">What is Plusplus?</AccordionTrigger>
               <AccordionContent className="text-gray-600 leading-relaxed">
-                PA Finance is a Swiss financial technology company that bridges traditional finance (TradFi) with decentralized finance (DeFi). We provide institutional-grade solutions that offer attractive yields on Swiss Franc deposits while ensuring full compliance with Swiss financial regulations.
+                Plusplus AG is a Swiss financial technology company that bridges traditional finance (TradFi) with decentralized finance (DeFi). We provide institutional-grade solutions that offer attractive yields on Swiss Franc deposits while ensuring full compliance with Swiss financial regulations.
               </AccordionContent>
             </AccordionItem>
 
@@ -30,7 +30,7 @@ export default function HelpPage() {
             </AccordionItem>
 
             <AccordionItem value="security">
-              <AccordionTrigger className="text-xl">How secure is PA Finance?</AccordionTrigger>
+              <AccordionTrigger className="text-xl">How secure is Plusplus?</AccordionTrigger>
               <AccordionContent className="text-gray-600 leading-relaxed">
                 Security is our top priority. We operate under full compliance with Swiss financial regulations (FINMA, VQF) and implement institutional-grade security measures. All smart contracts are thoroughly audited, and we maintain comprehensive insurance coverage for digital assets.
               </AccordionContent>
