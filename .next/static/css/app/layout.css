@@ -1532,6 +1532,10 @@ video {
 .text-\[1\.2rem\] {
   font-size: 1.2rem;
 }
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
 .font-bold {
   font-weight: 700;
 }
@@ -2654,6 +2658,16 @@ video {
     font-size: 1.44rem;
   }
 
+  .sm\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .sm\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
   .data-\[state\=open\]\:sm\:slide-in-from-bottom-full[data-state=open] {
     --tw-enter-translate-y: 100%;
   }
@@ -2737,6 +2751,11 @@ video {
 
   .lg\:text-\[7\.7rem\] {
     font-size: 7.7rem;
+  }
+
+  .lg\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
   }
 }
 
