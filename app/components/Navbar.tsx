@@ -18,7 +18,7 @@ export default function Navbar() {
           <div>
             <Link 
               href="/help" 
-              className="text-gray-600 hover:text-gray-900 font-medium"
+              className="text-primary-navy hover:text-primary-blue font-medium"
             >
               Help
             </Link>

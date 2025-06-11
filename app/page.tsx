@@ -35,17 +35,17 @@ export default function Home() {
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-primary-navy/40" />
         </div>
-        <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center text-white">
+        <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center text-neutral-white">
           <h1 className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-            Bridging TradFi and DeFi!
+            Bridging TradFi and DeFi
           </h1>
           <p className="mx-auto max-w-2xl text-lg sm:text-xl md:text-2xl mb-8">
             We bring the advantages of decentralization to traditional finance, from Switzerland to a global market.
           </p>
           <Link href="/help">
-            <Button variant="secondary" size="lg" className="text-lg px-8 group">
+            <Button variant="default" size="lg" className="text-lg px-8 group bg-primary-teal hover:bg-primary-teal/90 text-primary-navy">
               Learn More
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
@@ -54,16 +54,16 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="bg-white py-24">
+      <section id="about" className="bg-neutral-white py-24">
         <div className="container mx-auto px-4">
-          <h2 className="mb-12 text-center text-4xl font-bold">
+          <h2 className="mb-12 text-center text-4xl font-bold text-primary-navy">
             Our Purpose & Vision
           </h2>
           <div className="mx-auto max-w-3xl text-center space-y-6">
-            <p className="text-xl leading-relaxed text-gray-600">
+            <p className="text-xl leading-relaxed text-neutral-dark">
               Plusplus revolutionizes traditional savings by bridging the efficiency of decentralized finance (DeFi) with the stability of the Swiss Franc market. We offer institutional-grade solutions that deliver attractive yields (3-4% APY) on Swiss Franc deposits through secure, regulated DeFi protocols.
             </p>
-            <p className="text-xl leading-relaxed text-gray-600">
+            <p className="text-xl leading-relaxed text-neutral-dark">
               Our vision is to make high-yield savings accessible to everyone while maintaining the security and reliability of Swiss financial standards. Through innovative blockchain technology and smart contracts, we're creating a future where traditional and decentralized finance work seamlessly together.
             </p>
           </div>
@@ -71,9 +71,9 @@ export default function Home() {
       </section>
 
       {/* Team Section */}
-      <section id="team" className="bg-gray-50 py-24">
+      <section id="team" className="bg-neutral-light py-24">
         <div className="container mx-auto px-4">
-          <h2 className="mb-16 text-center text-4xl font-bold">Our Team</h2>
+          <h2 className="mb-16 text-center text-4xl font-bold text-primary-navy">Our Team</h2>
           <div className="grid gap-8 md:grid-cols-3">
             {[
               {
@@ -95,7 +95,7 @@ export default function Home() {
                 image: "/images/team/florian-meier.png",
               },
             ].map((member) => (
-              <Card key={member.name} className="overflow-hidden">
+              <Card key={member.name} className="overflow-hidden border-primary-teal/20">
                 <div className="relative aspect-square w-48 mx-auto">
                   <Image
                     src={member.image}
@@ -105,9 +105,9 @@ export default function Home() {
                   />
                 </div>
                 <div className="p-8">
-                  <h3 className="mb-2 text-2xl font-semibold">{member.name}</h3>
-                  <p className="mb-4 text-lg font-medium text-gray-500">{member.role}</p>
-                  <p className="text-gray-600">{member.bio}</p>
+                  <h3 className="mb-2 text-2xl font-semibold text-primary-navy">{member.name}</h3>
+                  <p className="mb-4 text-lg font-medium text-primary-blue">{member.role}</p>
+                  <p className="text-neutral-dark">{member.bio}</p>
                 </div>
               </Card>
             ))}
@@ -116,9 +116,9 @@ export default function Home() {
       </section>
 
       {/* Partners Section */}
-      <section id="partners" className="bg-white py-24">
+      <section id="partners" className="bg-neutral-white py-24">
         <div className="container mx-auto px-4">
-          <h2 className="mb-16 text-center text-4xl font-bold">
+          <h2 className="mb-16 text-center text-4xl font-bold text-primary-navy">
             Trusted Partners
           </h2>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -166,7 +166,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="transition-transform hover:scale-105"
               >
-                <Card className="h-full p-8">
+                <Card className="h-full p-8 border-primary-teal/20">
                   <div className="mb-6 flex justify-center">
                     <Image
                       src={partner.logo}
@@ -176,10 +176,10 @@ export default function Home() {
                       className="h-12 w-auto"
                     />
                   </div>
-                  <h3 className="mb-4 text-center text-xl font-semibold">
+                  <h3 className="mb-4 text-center text-xl font-semibold text-primary-navy">
                     {partner.name}
                   </h3>
-                  <p className="text-center text-gray-600">
+                  <p className="text-center text-neutral-dark">
                     {partner.description}
                   </p>
                 </Card>
@@ -190,11 +190,11 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="bg-gray-50 py-24">
+      <section id="contact" className="bg-neutral-light py-24">
         <div className="container mx-auto px-4">
-          <h2 className="mb-16 text-center text-4xl font-bold">Get in Touch</h2>
+          <h2 className="mb-16 text-center text-4xl font-bold text-primary-navy">Get in Touch</h2>
           <div className="mx-auto max-w-lg">
-            <Card className="p-8">
+            <Card className="p-8 border-primary-teal/20">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <Input
@@ -230,7 +230,7 @@ export default function Home() {
                     className="min-h-[150px] resize-none"
                   />
                 </div>
-                <Button type="submit" className="h-12 w-full text-lg">
+                <Button type="submit" className="h-12 w-full text-lg bg-accent-orange hover:bg-accent-orange/90">
                   Send Message
                 </Button>
               </form>

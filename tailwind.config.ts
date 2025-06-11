@@ -33,6 +33,9 @@ const config: Config = {
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
+          teal: '#76DBD3',
+          navy: '#010350',
+          blue: '#5069E2',
         },
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
@@ -45,6 +48,7 @@ const config: Config = {
         accent: {
           DEFAULT: 'hsl(var(--accent))',
           foreground: 'hsl(var(--accent-foreground))',
+          orange: '#F1642E',
         },
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',
@@ -60,6 +64,16 @@ const config: Config = {
           '4': 'hsl(var(--chart-4))',
           '5': 'hsl(var(--chart-5))',
         },
+        neutral: {
+          white: '#FFFFFF',
+          light: '#F1F1F1',
+          dark: '#3A3A3A',
+          black: '#0A0A0A',
+        },
+      },
+      fontFamily: {
+        heading: ['"Noir Pro"', 'sans-serif'],
+        body: ['"Satoshi"', 'sans-serif'],
       },
       keyframes: {
         'accordion-down': {
