@@ -20,9 +20,8 @@ export default function Home() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    // Set loading state
     setIsLoading(true);
+    setStatusMessage("");
 
     try {
       const response = await fetch("/api/contact", {
@@ -30,33 +29,23 @@ export default function Home() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData), // Use formData object instead of individual variables
+        body: JSON.stringify(formData),
       });
 
       const data = await response.json();
 
       if (response.ok) {
-        // Success message
         setStatusMessage("Message sent successfully!");
-
-        // Reset form
         setFormData({
           name: "",
           email: "",
           message: "",
         });
       } else {
-        // Error message from API
         setStatusMessage(`Error: ${data.message || "Failed to send message"}`);
       }
     } catch (error) {
       console.error("Error sending message:", error);
-
-      // More detailed logging
-      if (error instanceof Error) {
-        console.error("Error details:", error.message);
-      }
-
       setStatusMessage("An unexpected error occurred. Please try again.");
     } finally {
       setIsLoading(false);

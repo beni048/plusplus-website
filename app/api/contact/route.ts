@@ -3,14 +3,11 @@ import nodemailer from 'nodemailer';
 
 export async function POST(request: Request) {
   try {
-    // Get form data from request body
+    // Parse request body
     const body = await request.json();
     const { name, email, message } = body;
     
-    // Log the form data (without exposing sensitive info)
-    console.log('Form submission received:', { name, email: email ? 'valid' : 'missing' });
-    
-    // Validate form data
+    // Validate required fields
     if (!name || !email || !message) {
       return NextResponse.json(
         { message: 'Missing required fields' },
@@ -18,12 +15,21 @@ export async function POST(request: Request) {
       );
     }
     
-    // Check if environment variables are set
+    // Validate email format using regex
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return NextResponse.json(
+        { message: 'Invalid email address' },
+        { status: 400 }
+      );
+    }
+    
+    // Check environment variables
     if (!process.env.PROTON_SMTP_USER || 
         !process.env.PROTON_SMTP_TOKEN || 
         !process.env.PROTON_SMTP_HOST || 
         !process.env.PROTON_SMTP_PORT) {
-      console.error('Missing environment variables for email configuration');
+      console.error('Missing required environment variables');
       return NextResponse.json(
         { message: 'Server configuration error' },
         { status: 500 }
@@ -34,22 +40,19 @@ export async function POST(request: Request) {
     const transporter = nodemailer.createTransport({
       host: process.env.PROTON_SMTP_HOST,
       port: Number(process.env.PROTON_SMTP_PORT),
-      secure: false, // true for 465, false for other ports (like 587 with STARTTLS)
+      secure: false, // Use STARTTLS
       auth: {
         user: process.env.PROTON_SMTP_USER,
         pass: process.env.PROTON_SMTP_TOKEN,
       },
-      tls: {
-        rejectUnauthorized: true, // Keep this true for security
-      },
     });
     
-    // Email content
+    // Set up email content
     const mailOptions = {
       from: process.env.PROTON_SMTP_USER,
       to: 'hello@plusplus.swiss',
       replyTo: email,
-      subject: `Contact Form: Message from ${name}`,
+      subject: `Website Contact: ${name}`,
       text: `
 Name: ${name}
 Email: ${email}
@@ -70,39 +73,26 @@ ${message}
     
     // Return success response
     return NextResponse.json({ message: 'Email sent successfully' });
-  } catch (error) {
-    // Enhanced error logging
-    console.error('Error in contact API route:');
-    if (error instanceof Error) {
-      console.error('Error name:', error.name);
-      console.error('Error message:', error.message);
-      console.error('Error stack:', error.stack);
-    } else {
-      console.error('Unknown error object:', error);
-    }
     
+  } catch (error) {
+    console.error('Error sending email:', error);
     return NextResponse.json(
-      { message: 'Failed to send email. Server error.' },
+      { message: 'Failed to send email' },
       { status: 500 }
     );
   }
 }
 
-// Helper function to validate email format
-function isValidEmail(email: string): boolean {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-}
-
-// Test endpoint that doesn't actually send email but validates the request
+// Testing endpoint
 export async function GET() {
   return NextResponse.json({
-    message: 'Contact API is working. Use POST to send messages.',
+    status: "online",
+    message: "Contact API is working",
     environment: {
-      smtpUser: process.env.PROTON_SMTP_USER ? 'Set' : 'Not set',
-      smtpToken: process.env.PROTON_SMTP_TOKEN ? 'Set' : 'Not set',
-      smtpHost: process.env.PROTON_SMTP_HOST ? 'Set' : 'Not set',
-      smtpPort: process.env.PROTON_SMTP_PORT ? 'Set' : 'Not set',
+      smtpUser: process.env.PROTON_SMTP_USER ? "Set" : "Not set",
+      smtpToken: process.env.PROTON_SMTP_TOKEN ? "Set" : "Not set", 
+      smtpHost: process.env.PROTON_SMTP_HOST ? "Set" : "Not set",
+      smtpPort: process.env.PROTON_SMTP_PORT ? "Set" : "Not set",
     }
   });
 }
