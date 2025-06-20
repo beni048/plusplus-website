@@ -78,13 +78,13 @@ export default function Home() {
             {[
               {
                 name: "Jonas",
-                role: "Founder",
+                role: "Co-Founder",
                 bio: "Sales and Business Development Expert.", //"Former Relai advisor and key contributor to scaling Lionstep from 1 to 9 million in three years, with expertise in sales and B2B networking."
                 image: "/images/team/florian-meier.png",
               },
               {
                 name: "Benjamin",
-                role: "Founder & CEO interim",
+                role: "Co-Founder & CEO interim",
                 bio: "Technology and business expert with a background from ETH and ZHAW, specializing in development, IT consulting, cybersecurity, and cloud technologies.",
                 image: "/images/team/benjamin-rossi.jpg",
               },
