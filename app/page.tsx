@@ -18,8 +18,39 @@ export default function Home() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Implement form submission
-    console.log("Form submitted:", formData);
+
+    // Set loading state if you have one
+    setIsLoading(true);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        // Success message
+        setStatusMessage("Message sent successfully!");
+
+        // Reset form
+        setName("");
+        setEmail("");
+        setMessage("");
+      } else {
+        // Error message from API
+        setStatusMessage(`Error: ${data.message || "Failed to send message"}`);
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
+      setStatusMessage("An unexpected error occurred. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -42,10 +73,15 @@ export default function Home() {
             Bridging TradFi and DeFi
           </h1>
           <p className="mx-auto max-w-2xl text-lg sm:text-2xl md:text-3xl mb-8">
-            We bring the advantages of decentralization to traditional finance, from Switzerland to a global market.
+            We bring the advantages of decentralization to traditional finance, from
+            Switzerland to a global market.
           </p>
           <Link href="/help">
-            <Button variant="default" size="lg" className="text-lg px-8 group bg-primary-teal hover:bg-primary-teal/90 text-primary-navy">
+            <Button
+              variant="default"
+              size="lg"
+              className="text-lg px-8 group bg-primary-teal hover:bg-primary-teal/90 text-primary-navy"
+            >
               Learn More
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
@@ -61,10 +97,18 @@ export default function Home() {
           </h2>
           <div className="mx-auto max-w-3xl text-center space-y-6">
             <p className="text-xl leading-relaxed text-neutral-dark">
-              Plusplus revolutionizes traditional savings by bridging the efficiency of decentralized finance (DeFi) with the stability of the Swiss Franc market. We offer institutional-grade solutions that deliver attractive yields (3-4% APY) on Swiss Franc deposits through secure, regulated DeFi protocols.
+              Plusplus revolutionizes traditional savings by bridging the efficiency
+              of decentralized finance (DeFi) with the stability of the Swiss Franc
+              market. We offer institutional-grade solutions that deliver attractive
+              yields (3-4% APY) on Swiss Franc deposits through secure, regulated
+              DeFi protocols.
             </p>
             <p className="text-xl leading-relaxed text-neutral-dark">
-              Our vision is to make high-yield savings accessible to everyone while maintaining the security and reliability of Swiss financial standards. Through innovative blockchain technology and smart contracts, we're creating a future where traditional and decentralized finance work seamlessly together.
+              Our vision is to make high-yield savings accessible to everyone while
+              maintaining the security and reliability of Swiss financial standards.
+              Through innovative blockchain technology and smart contracts, we're
+              creating a future where traditional and decentralized finance work
+              seamlessly together.
             </p>
           </div>
         </div>
@@ -73,7 +117,9 @@ export default function Home() {
       {/* Team Section */}
       <section id="team" className="bg-neutral-light py-24">
         <div className="container mx-auto px-4">
-          <h2 className="mb-16 text-center text-4xl font-medium text-primary-navy">Our Team</h2>
+          <h2 className="mb-16 text-center text-4xl font-medium text-primary-navy">
+            Our Team
+          </h2>
           <div className="grid gap-8 md:grid-cols-3">
             {[
               {
@@ -105,8 +151,12 @@ export default function Home() {
                   />
                 </div>
                 <div className="p-8">
-                  <h3 className="mb-2 text-2xl font-bold text-primary-navy">{member.name}</h3>
-                  <p className="mb-4 text-lg font-medium text-primary-blue">{member.role}</p>
+                  <h3 className="mb-2 text-2xl font-bold text-primary-navy">
+                    {member.name}
+                  </h3>
+                  <p className="mb-4 text-lg font-medium text-primary-blue">
+                    {member.role}
+                  </p>
                   <p className="text-neutral-dark">{member.bio}</p>
                 </div>
               </Card>
@@ -192,7 +242,9 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="bg-neutral-light py-24">
         <div className="container mx-auto px-4">
-          <h2 className="mb-16 text-center text-4xl font-medium text-primary-navy">Get in Touch</h2>
+          <h2 className="mb-16 text-center text-4xl font-medium text-primary-navy">
+            Get in Touch
+          </h2>
           <div className="mx-auto max-w-lg">
             <Card className="p-8 border-primary-teal/20">
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -230,7 +282,10 @@ export default function Home() {
                     className="min-h-[150px] resize-none"
                   />
                 </div>
-                <Button type="submit" className="h-12 w-full text-lg bg-accent-orange hover:bg-accent-orange/90">
+                <Button
+                  type="submit"
+                  className="h-12 w-full text-lg bg-accent-orange hover:bg-accent-orange/90"
+                >
                   Send Message
                 </Button>
               </form>
