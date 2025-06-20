@@ -15,11 +15,13 @@ export default function Home() {
     email: "",
     message: "",
   });
+  const [isLoading, setIsLoading] = useState(false);
+  const [statusMessage, setStatusMessage] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Set loading state if you have one
+    // Set loading state
     setIsLoading(true);
 
     try {
@@ -28,7 +30,7 @@ export default function Home() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ name, email, message }),
+        body: JSON.stringify(formData), // Use formData object instead of individual variables
       });
 
       const data = await response.json();
@@ -38,9 +40,11 @@ export default function Home() {
         setStatusMessage("Message sent successfully!");
 
         // Reset form
-        setName("");
-        setEmail("");
-        setMessage("");
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
       } else {
         // Error message from API
         setStatusMessage(`Error: ${data.message || "Failed to send message"}`);
@@ -282,11 +286,21 @@ export default function Home() {
                     className="min-h-[150px] resize-none"
                   />
                 </div>
+                {statusMessage && (
+                  <div className={`text-center p-2 rounded-md ${
+                    statusMessage.includes('Error') 
+                      ? 'bg-red-100 text-red-700' 
+                      : 'bg-green-100 text-green-700'
+                  }`}>
+                    {statusMessage}
+                  </div>
+                )}
                 <Button
                   type="submit"
                   className="h-12 w-full text-lg bg-accent-orange hover:bg-accent-orange/90"
+                  disabled={isLoading}
                 >
-                  Send Message
+                  {isLoading ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </Card>
