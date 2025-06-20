@@ -72,8 +72,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        heading: ['"Noir Pro"', 'sans-serif'],
-        body: ['"Satoshi"', 'sans-serif'],
+        heading: ['"Outfit"', 'sans-serif'],
+        body: ['"Mulish"', 'sans-serif'],
       },
       keyframes: {
         'accordion-down': {

@@ -38,7 +38,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-primary-navy/40" />
         </div>
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center text-neutral-white">
-          <h1 className="mb-6 text-4xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
+          <h1 className="mb-6 text-4xl font-medium tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
             Bridging TradFi and DeFi
           </h1>
           <p className="mx-auto max-w-2xl text-lg sm:text-2xl md:text-3xl mb-8">
@@ -56,7 +56,7 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className="bg-neutral-white py-24">
         <div className="container mx-auto px-4">
-          <h2 className="mb-12 text-center text-4xl font-bold text-primary-navy">
+          <h2 className="mb-12 text-center text-4xl font-medium text-primary-navy">
             Our Purpose & Vision
           </h2>
           <div className="mx-auto max-w-3xl text-center space-y-6">
@@ -73,18 +73,18 @@ export default function Home() {
       {/* Team Section */}
       <section id="team" className="bg-neutral-light py-24">
         <div className="container mx-auto px-4">
-          <h2 className="mb-16 text-center text-4xl font-bold text-primary-navy">Our Team</h2>
+          <h2 className="mb-16 text-center text-4xl font-medium text-primary-navy">Our Team</h2>
           <div className="grid gap-8 md:grid-cols-3">
             {[
               {
                 name: "Jonas",
-                role: "Co-Founder",
+                role: "Founder",
                 bio: "Sales and Business Development Expert.", //"Former Relai advisor and key contributor to scaling Lionstep from 1 to 9 million in three years, with expertise in sales and B2B networking."
                 image: "/images/team/florian-meier.png",
               },
               {
                 name: "Benjamin",
-                role: "Co-Founder & CEO interim",
+                role: "Founder & CEO interim",
                 bio: "Technology and business expert with a background from ETH and ZHAW, specializing in development, IT consulting, cybersecurity, and cloud technologies.",
                 image: "/images/team/benjamin-rossi.jpg",
               },
@@ -105,7 +105,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="p-8">
-                  <h3 className="mb-2 text-2xl font-semibold text-primary-navy">{member.name}</h3>
+                  <h3 className="mb-2 text-2xl font-bold text-primary-navy">{member.name}</h3>
                   <p className="mb-4 text-lg font-medium text-primary-blue">{member.role}</p>
                   <p className="text-neutral-dark">{member.bio}</p>
                 </div>
@@ -118,7 +118,7 @@ export default function Home() {
       {/* Partners Section */}
       <section id="partners" className="bg-neutral-white py-24">
         <div className="container mx-auto px-4">
-          <h2 className="mb-16 text-center text-4xl font-bold text-primary-navy">
+          <h2 className="mb-16 text-center text-4xl font-medium text-primary-navy">
             Trusted Partners
           </h2>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -176,7 +176,7 @@ export default function Home() {
                       className="h-12 w-auto"
                     />
                   </div>
-                  <h3 className="mb-4 text-center text-xl font-semibold text-primary-navy">
+                  <h3 className="mb-4 text-center text-xl font-bold text-primary-navy">
                     {partner.name}
                   </h3>
                   <p className="text-center text-neutral-dark">
@@ -192,7 +192,7 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="bg-neutral-light py-24">
         <div className="container mx-auto px-4">
-          <h2 className="mb-16 text-center text-4xl font-bold text-primary-navy">Get in Touch</h2>
+          <h2 className="mb-16 text-center text-4xl font-medium text-primary-navy">Get in Touch</h2>
           <div className="mx-auto max-w-lg">
             <Card className="p-8 border-primary-teal/20">
               <form onSubmit={handleSubmit} className="space-y-6">
