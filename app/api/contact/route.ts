@@ -7,6 +7,9 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { name, email, message } = body;
     
+    // Log the form data (without exposing sensitive info)
+    console.log('Form submission received:', { name, email: email ? 'valid' : 'missing' });
+    
     // Validate form data
     if (!name || !email || !message) {
       return NextResponse.json(
@@ -15,10 +18,15 @@ export async function POST(request: Request) {
       );
     }
     
-    if (!isValidEmail(email)) {
+    // Check if environment variables are set
+    if (!process.env.PROTON_SMTP_USER || 
+        !process.env.PROTON_SMTP_TOKEN || 
+        !process.env.PROTON_SMTP_HOST || 
+        !process.env.PROTON_SMTP_PORT) {
+      console.error('Missing environment variables for email configuration');
       return NextResponse.json(
-        { message: 'Invalid email address' },
-        { status: 400 }
+        { message: 'Server configuration error' },
+        { status: 500 }
       );
     }
     
@@ -63,9 +71,18 @@ ${message}
     // Return success response
     return NextResponse.json({ message: 'Email sent successfully' });
   } catch (error) {
-    console.error('Error sending email:', error);
+    // Enhanced error logging
+    console.error('Error in contact API route:');
+    if (error instanceof Error) {
+      console.error('Error name:', error.name);
+      console.error('Error message:', error.message);
+      console.error('Error stack:', error.stack);
+    } else {
+      console.error('Unknown error object:', error);
+    }
+    
     return NextResponse.json(
-      { message: 'Failed to send email' },
+      { message: 'Failed to send email. Server error.' },
       { status: 500 }
     );
   }
@@ -75,4 +92,17 @@ ${message}
 function isValidEmail(email: string): boolean {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
+}
+
+// Test endpoint that doesn't actually send email but validates the request
+export async function GET() {
+  return NextResponse.json({
+    message: 'Contact API is working. Use POST to send messages.',
+    environment: {
+      smtpUser: process.env.PROTON_SMTP_USER ? 'Set' : 'Not set',
+      smtpToken: process.env.PROTON_SMTP_TOKEN ? 'Set' : 'Not set',
+      smtpHost: process.env.PROTON_SMTP_HOST ? 'Set' : 'Not set',
+      smtpPort: process.env.PROTON_SMTP_PORT ? 'Set' : 'Not set',
+    }
+  });
 }
