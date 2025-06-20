@@ -51,6 +51,12 @@ export default function Home() {
       }
     } catch (error) {
       console.error("Error sending message:", error);
+
+      // More detailed logging
+      if (error instanceof Error) {
+        console.error("Error details:", error.message);
+      }
+
       setStatusMessage("An unexpected error occurred. Please try again.");
     } finally {
       setIsLoading(false);
