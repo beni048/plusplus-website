@@ -66,11 +66,11 @@ export default function Home() {
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-primary-navy/40" />
+          <div className="absolute inset-0 bg-primary-navy/50" />
         </div>
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center text-neutral-white">
-          <h1 className="mb-6 text-4xl font-medium tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
-            Bridging TradFi and DeFi
+          <h1 className="mb-6 text-8xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
+            Your trustworthy and simple entry into DeFi 
           </h1>
           <p className="mx-auto max-w-2xl text-lg sm:text-2xl md:text-3xl mb-8">
             We bring the advantages of decentralization to traditional finance, from

@@ -49,9 +49,10 @@ export async function POST(request: Request) {
       );
     }
     
-    // Construct message payload according to Mailjet v3.1 API
+    // Construct message payload with two messages
     const messageData = {
       Messages: [
+        // First message: Notification to support inbox
         {
           From: { 
             Email: process.env.CONTACT_FORM_FROM_EMAIL, 
@@ -71,6 +72,37 @@ ${message}`,
 <p><strong>Message:</strong></p>
 <p>${message.replace(/\n/g, '<br>')}</p>`,
           Headers: { 'Reply-To': email }
+        },
+        // Second message: Confirmation to the user
+        {
+          From: { 
+            Email: process.env.CONTACT_FORM_FROM_EMAIL, 
+            Name: "Plusplus" 
+          },
+          To: [
+            { Email: email, Name: name }
+          ],
+          Subject: `We received your message, ${name}`,
+          TextPart: `Hello ${name},
+
+Thank you for contacting us. We've received your message and will get back to you as soon as possible.
+
+For your reference, here's a copy of your message:
+
+${message}
+
+Best regards,
+The Plusplus Team`,
+          HTMLPart: `<h3>Thank you for your message</h3>
+<p>Hello ${name},</p>
+<p>We've received your message and will get back to you as soon as possible.</p>
+<p><strong>For your reference, here's a copy of your message:</strong></p>
+<blockquote style="border-left: 2px solid #ccc; padding-left: 10px; margin-left: 10px;">
+${message.replace(/\n/g, '<br>')}
+</blockquote>
+<p>Best regards,<br>
+The Plusplus Team</p>`,
+          Headers: { 'Reply-To': process.env.CONTACT_FORM_TO_EMAIL }
         }
       ]
     };
@@ -78,12 +110,12 @@ ${message}`,
     // Log the full request payload for debugging
     console.log('Sending Mailjet request:', JSON.stringify(messageData, null, 2));
     
-    // Send email using Mailjet - FIXED: use single result object instead of destructuring
+    // Send both emails in a single Mailjet API call
     const result = await mailjet
       .post("send", { version: "v3.1" })
       .request(messageData);
     
-    // Log the response body - FIXED: use result.response.status and result.body
+    // Log the response body
     console.log('Mailjet response status:', result.response.status);
     console.log('Mailjet response body:', JSON.stringify(result.body, null, 2));
     
