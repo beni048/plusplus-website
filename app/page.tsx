@@ -8,6 +8,7 @@ import { Building2, Mail, MapPin, Users, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
+import confetti from 'canvas-confetti';
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -16,12 +17,11 @@ export default function Home() {
     message: "",
   });
   const [isLoading, setIsLoading] = useState(false);
-  const [statusMessage, setStatusMessage] = useState("");
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    setStatusMessage("");
 
     try {
       const response = await fetch("/api/contact", {
@@ -32,21 +32,22 @@ export default function Home() {
         body: JSON.stringify(formData),
       });
 
-      const data = await response.json();
-
       if (response.ok) {
-        setStatusMessage("Message sent successfully!");
+        setIsSubmitted(true);
         setFormData({
           name: "",
           email: "",
           message: "",
         });
-      } else {
-        setStatusMessage(`Error: ${data.message || "Failed to send message"}`);
+        // Trigger confetti effect on success
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { y: 0.6 }
+        });
       }
     } catch (error) {
       console.error("Error sending message:", error);
-      setStatusMessage("An unexpected error occurred. Please try again.");
     } finally {
       setIsLoading(false);
     }
@@ -246,58 +247,60 @@ export default function Home() {
           </h2>
           <div className="mx-auto max-w-lg">
             <Card className="p-8 border-primary-teal/20">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <Input
-                    placeholder="Name"
-                    value={formData.name}
-                    onChange={(e) =>
-                      setFormData({ ...formData, name: e.target.value })
-                    }
-                    required
-                    className="h-12"
-                  />
+              {isSubmitted ? (
+                <div className="text-center py-12">
+                  <h3 className="text-2xl font-medium text-primary-navy mb-4">
+                    Thank you for your message!
+                  </h3>
+                  <p className="text-neutral-dark">
+                    We'll get back to you as soon as possible.
+                  </p>
                 </div>
-                <div>
-                  <Input
-                    type="email"
-                    placeholder="Email"
-                    value={formData.email}
-                    onChange={(e) =>
-                      setFormData({ ...formData, email: e.target.value })
-                    }
-                    required
-                    className="h-12"
-                  />
-                </div>
-                <div>
-                  <Textarea
-                    placeholder="Message"
-                    value={formData.message}
-                    onChange={(e) =>
-                      setFormData({ ...formData, message: e.target.value })
-                    }
-                    required
-                    className="min-h-[150px] resize-none"
-                  />
-                </div>
-                {statusMessage && (
-                  <div className={`text-center p-2 rounded-md ${
-                    statusMessage.includes('Error') 
-                      ? 'bg-red-100 text-red-700' 
-                      : 'bg-green-100 text-green-700'
-                  }`}>
-                    {statusMessage}
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div>
+                    <Input
+                      placeholder="Name"
+                      value={formData.name}
+                      onChange={(e) =>
+                        setFormData({ ...formData, name: e.target.value })
+                      }
+                      required
+                      className="h-12"
+                    />
                   </div>
-                )}
-                <Button
-                  type="submit"
-                  className="h-12 w-full text-lg bg-accent-orange hover:bg-accent-orange/90"
-                  disabled={isLoading}
-                >
-                  {isLoading ? "Sending..." : "Send Message"}
-                </Button>
-              </form>
+                  <div>
+                    <Input
+                      type="email"
+                      placeholder="Email"
+                      value={formData.email}
+                      onChange={(e) =>
+                        setFormData({ ...formData, email: e.target.value })
+                      }
+                      required
+                      className="h-12"
+                    />
+                  </div>
+                  <div>
+                    <Textarea
+                      placeholder="Message"
+                      value={formData.message}
+                      onChange={(e) =>
+                        setFormData({ ...formData, message: e.target.value })
+                      }
+                      required
+                      className="min-h-[150px] resize-none"
+                    />
+                  </div>
+                  <Button
+                    type="submit"
+                    className="h-12 w-full text-lg bg-accent-orange hover:bg-accent-orange/90"
+                    disabled={isLoading}
+                  >
+                    {isLoading ? "Sending..." : "Send Message"}
+                  </Button>
+                </form>
+              )}
             </Card>
           </div>
         </div>

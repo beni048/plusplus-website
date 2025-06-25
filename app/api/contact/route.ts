@@ -1,11 +1,36 @@
 import { NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
+import Mailjet from 'node-mailjet';
+
+// Ensure dynamic rendering for API routes
+export const dynamic = 'force-dynamic';
+
+// Initialize Mailjet client
+const mailjet = Mailjet.apiConnect(
+  process.env.MJ_APIKEY_PUBLIC!, 
+  process.env.MJ_APIKEY_PRIVATE!
+);
 
 export async function POST(request: Request) {
+  // Check if environment variables are set
+  if (!process.env.MJ_APIKEY_PUBLIC || !process.env.MJ_APIKEY_PRIVATE) {
+    console.error('Missing Mailjet API keys');
+    return NextResponse.json(
+      { message: 'Server configuration error' },
+      { status: 500 }
+    );
+  }
+
+  if (!process.env.CONTACT_FORM_FROM_EMAIL || !process.env.CONTACT_FORM_TO_EMAIL) {
+    console.error('Missing email configuration');
+    return NextResponse.json(
+      { message: 'Server configuration error' },
+      { status: 500 }
+    );
+  }
+
   try {
     // Parse request body
-    const body = await request.json();
-    const { name, email, message } = body;
+    const { name, email, message } = await request.json();
     
     // Validate required fields
     if (!name || !email || !message) {
@@ -24,58 +49,57 @@ export async function POST(request: Request) {
       );
     }
     
-    // Check environment variables
-    if (!process.env.PROTON_SMTP_USER || 
-        !process.env.PROTON_SMTP_TOKEN || 
-        !process.env.PROTON_SMTP_HOST || 
-        !process.env.PROTON_SMTP_PORT) {
-      console.error('Missing required environment variables');
-      return NextResponse.json(
-        { message: 'Server configuration error' },
-        { status: 500 }
-      );
-    }
-    
-    // Configure Nodemailer transporter with Proton Mail SMTP
-    const transporter = nodemailer.createTransport({
-      host: process.env.PROTON_SMTP_HOST,
-      port: Number(process.env.PROTON_SMTP_PORT),
-      secure: false, // Use STARTTLS
-      auth: {
-        user: process.env.PROTON_SMTP_USER,
-        pass: process.env.PROTON_SMTP_TOKEN,
-      },
-    });
-    
-    // Set up email content
-    const mailOptions = {
-      from: process.env.PROTON_SMTP_USER,
-      to: 'hello@plusplus.swiss',
-      replyTo: email,
-      subject: `Website Contact: ${name}`,
-      text: `
-Name: ${name}
-Email: ${email}
+    // Construct message payload according to Mailjet v3.1 API
+    const messageData = {
+      Messages: [
+        {
+          From: { 
+            Email: process.env.CONTACT_FORM_FROM_EMAIL, 
+            Name: "Plusplus Contact Form" 
+          },
+          To: [
+            { Email: process.env.CONTACT_FORM_TO_EMAIL }
+          ],
+          Subject: `New Contact Form: ${name}`,
+          TextPart: `Hello,
 
-Message:
-${message}
-      `,
-      html: `
-<p><strong>Name:</strong> ${name}</p>
-<p><strong>Email:</strong> ${email}</p>
+You have a new form entry from: ${name} <${email}>.
+
+${message}`,
+          HTMLPart: `<h3>New Contact Form Submission</h3>
+<p><strong>From:</strong> ${name} &lt;${email}&gt;</p>
 <p><strong>Message:</strong></p>
-<p>${message.replace(/\n/g, '<br>')}</p>
-      `,
+<p>${message.replace(/\n/g, '<br>')}</p>`,
+          Headers: { 'Reply-To': email }
+        }
+      ]
     };
     
-    // Send email
-    await transporter.sendMail(mailOptions);
+    // Log the full request payload for debugging
+    console.log('Sending Mailjet request:', JSON.stringify(messageData, null, 2));
+    
+    // Send email using Mailjet - FIXED: use single result object instead of destructuring
+    const result = await mailjet
+      .post("send", { version: "v3.1" })
+      .request(messageData);
+    
+    // Log the response body - FIXED: use result.response.status and result.body
+    console.log('Mailjet response status:', result.response.status);
+    console.log('Mailjet response body:', JSON.stringify(result.body, null, 2));
     
     // Return success response
-    return NextResponse.json({ message: 'Email sent successfully' });
+    return NextResponse.json({ submitted: true });
     
-  } catch (error) {
-    console.error('Error sending email:', error);
+  } catch (error: any) {
+    // Enhanced error logging
+    console.error('Error sending email:');
+    console.error('Status code:', error.statusCode);
+    console.error('Error message:', error.message);
+    
+    if (error.response && error.response.data) {
+      console.error('Mailjet error response:', JSON.stringify(error.response.data, null, 2));
+    }
+    
     return NextResponse.json(
       { message: 'Failed to send email' },
       { status: 500 }
@@ -83,16 +107,16 @@ ${message}
   }
 }
 
-// Testing endpoint
+// Keep the existing GET handler for status checking
 export async function GET() {
   return NextResponse.json({
     status: "online",
     message: "Contact API is working",
     environment: {
-      smtpUser: process.env.PROTON_SMTP_USER ? "Set" : "Not set",
-      smtpToken: process.env.PROTON_SMTP_TOKEN ? "Set" : "Not set", 
-      smtpHost: process.env.PROTON_SMTP_HOST ? "Set" : "Not set",
-      smtpPort: process.env.PROTON_SMTP_PORT ? "Set" : "Not set",
+      mjPublic: process.env.MJ_APIKEY_PUBLIC ? "Set" : "Not set",
+      mjPrivate: process.env.MJ_APIKEY_PRIVATE ? "Set" : "Not set",
+      fromEmail: process.env.CONTACT_FORM_FROM_EMAIL ? "Set" : "Not set",
+      toEmail: process.env.CONTACT_FORM_TO_EMAIL ? "Set" : "Not set",
     }
   });
 }
