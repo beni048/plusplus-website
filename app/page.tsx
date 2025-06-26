@@ -176,7 +176,7 @@ export default function Home() {
               {
                 name: "Zinsli.com",
                 description:
-                  "Swiss-regulated crypto exchange, enabling seamless CHF/DeFi transactions.",
+                  "Swiss marketplace for digital rental‑deposit solutions.",
                 logo: "/images/partners/zinsli.jpg",
                 link: "https://zinsli.com",
               },
