@@ -68,24 +68,32 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-primary-navy/60" />
         </div>
-        <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center text-neutral-white">
-          <h1 className="mb-8 text-left sm:text-center text-5xl font-extrabold tracking-normal sm:text-6xl md:text-7xl lg:text-8xl">
+        {/* Content container with responsive positioning and navbar margin on mobile */}
+        <div className="relative z-10 flex h-full flex-col px-4 text-neutral-white
+          sm:items-center sm:justify-center sm:text-center
+          items-start justify-center pt-20 text-left">
+          {/* Title - left-aligned on mobile, centered on desktop */}
+          <h1 className="mb-4 sm:mb-8 w-full text-left sm:text-center text-4xl sm:text-5xl font-extrabold tracking-normal sm:text-6xl md:text-7xl lg:text-8xl">
             YOUR TRUSTWORTHY AND SIMPLE ENTRY INTO DEFI
           </h1>
-          <p className="text-left sm:text-center mx-auto pr-20 sm:pr-0 max-w-2xl text-xl sm:text-2xl md:text-3xl mb-6">
+          {/* Paragraph - hidden on very small screens to save space, left-aligned on mobile, centered on desktop */}
+          <p className="hidden min-[480px]:block text-left sm:text-center sm:mx-auto max-w-2xl text-lg sm:text-xl md:text-2xl lg:text-3xl mb-4 sm:mb-6">
             We bring the advantages of decentralization to traditional finance, from
             Switzerland to a global market.
           </p>
-          <Link href="/help">
-            <Button
-              variant="default"
-              size="lg"
-              className="text-lg px-8 group bg-primary-teal hover:bg-primary-teal/90 text-primary-navy"
-            >
-              Learn More
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Button>
-          </Link>
+          {/* Button container - left aligned on mobile (<640px), centered on desktop (≥640px) */}
+          <div className="w-full max-w-2xl flex justify-start sm:justify-center">
+            <Link href="/help">
+              <Button
+                variant="default"
+                size="lg"
+                className="text-lg px-8 group bg-primary-teal hover:bg-primary-teal/90 text-primary-navy"
+              >
+                Learn More
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
