@@ -783,6 +783,9 @@ video {
 .mt-auto {
   margin-top: auto;
 }
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
 .block {
   display: block;
 }
@@ -2612,6 +2615,18 @@ video {
 
   .sm\:max-w-sm {
     max-width: 24rem;
+  }
+
+  .sm\:max-w-4xl {
+    max-width: 56rem;
+  }
+
+  .sm\:max-w-6xl {
+    max-width: 72rem;
+  }
+
+  .sm\:max-w-7xl {
+    max-width: 80rem;
   }
 
   .sm\:flex-row {
