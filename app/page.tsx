@@ -66,13 +66,13 @@ export default function Home() {
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-primary-navy/50" />
+          <div className="absolute inset-0 bg-primary-navy/60" />
         </div>
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center text-neutral-white">
           <h1 className="mb-8 text-left sm:text-center text-5xl font-extrabold tracking-normal sm:text-6xl md:text-7xl lg:text-8xl">
             YOUR TRUSTWORTHY AND SIMPLE ENTRY INTO DEFI
           </h1>
-          <p className="text-left sm:text-center mx-auto pr-20 sm:pr-0 max-w-2xl text-lg sm:text-2xl md:text-3xl mb-6">
+          <p className="text-left sm:text-center mx-auto pr-20 sm:pr-0 max-w-2xl text-xl sm:text-2xl md:text-3xl mb-6">
             We bring the advantages of decentralization to traditional finance, from
             Switzerland to a global market.
           </p>
