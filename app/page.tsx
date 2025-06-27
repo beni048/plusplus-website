@@ -69,8 +69,8 @@ export default function Home() {
           <div className="absolute inset-0 bg-primary-navy/50" />
         </div>
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center text-neutral-white">
-          <h1 className="mb-6 text-4xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
-            Your trustworthy and simple entry into DeFi 
+          <h1 className="mb-8 text-4xl font-extrabold tracking-normal sm:text-6xl md:text-7xl lg:text-8xl">
+            YOUR TRUSTWORTHY AND SIMPLE ENTRY INTO DEFI
           </h1>
           <p className="mx-auto max-w-2xl text-lg sm:text-2xl md:text-3xl mb-8">
             We bring the advantages of decentralization to traditional finance, from
