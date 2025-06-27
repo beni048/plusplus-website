@@ -73,7 +73,7 @@ export default function Home() {
           sm:items-center sm:justify-center sm:text-center
           items-start justify-center pt-20 text-left">
           {/* Title - left-aligned on mobile, centered on desktop */}
-          <h1 className="mb-4 sm:mb-8 w-full text-left sm:text-center text-4xl sm:text-5xl font-extrabold tracking-normal sm:text-6xl md:text-7xl lg:text-8xl">
+          <h1 className="mb-6 sm:mb-8 w-full text-left sm:text-center text-4xl sm:text-5xl font-extrabold tracking-normal sm:text-6xl md:text-7xl lg:text-8xl">
             YOUR TRUSTWORTHY AND SIMPLE ENTRY INTO DEFI
           </h1>
           {/* Paragraph - hidden on very small screens to save space, left-aligned on mobile, centered on desktop */}
@@ -82,7 +82,7 @@ export default function Home() {
             Switzerland to a global market.
           </p>
           {/* Button container - left aligned on mobile (<640px), centered on desktop (≥640px) */}
-          <div className="w-full max-w-2xl flex justify-start sm:justify-center">
+          <div className="w-full max-w-2xl flex justify-end sm:justify-center">
             <Link href="/help">
               <Button
                 variant="default"
