@@ -133,19 +133,19 @@ export default function Home() {
               {
                 name: "Jonas",
                 role: "Co-Founder",
-                bio: "Sales and Business Development Expert.", //"Former Relai advisor and key contributor to scaling Lionstep from 1 to 9 million in three years, with expertise in sales and B2B networking."
+                bio: "Sales and Business Development Expert. Former Relai advisor and key contributor to scaling Lionstep from 1 to 9 million in three years.",
                 image: "/images/team/florian-meier.png",
               },
               {
                 name: "Benjamin",
                 role: "Co-Founder & CEO interim",
                 bio: "Technology and business expert with a background from ETH and ZHAW, specializing in development, IT consulting, cybersecurity, and cloud technologies.",
-                image: "/images/team/benjamin-rossi.jpg",
+                image: "/images/team/florian-meier.png",
               },
               {
                 name: "Matthias",
                 role: "CTO",
-                bio: "PhD candidate at Unibas. Expert on rental deposits on the blockchain, DeFi and Ethereum.",
+                bio: "Published researcher and PhD candidate at Unibas. 10 years+ of expertise in decentralized finance, smart contract development and the Ethereum environment.",
                 image: "/images/team/florian-meier.png",
               },
             ].map((member) => (
