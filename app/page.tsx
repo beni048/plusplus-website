@@ -104,14 +104,14 @@ export default function Home() {
             Our Purpose & Vision
           </h2>
           <div className="mx-auto max-w-3xl text-center space-y-6">
-            <p className="text-xl leading-relaxed text-neutral-dark">
+            <p className="text-lg leading-relaxed text-neutral-dark">
               Plusplus revolutionizes traditional savings by bridging the efficiency
               of decentralized finance (DeFi) with the stability of the Swiss Franc
               market. We offer institutional-grade solutions that deliver attractive
               yields (3-4% APY) on Swiss Franc deposits through secure, regulated
               DeFi protocols.
             </p>
-            <p className="text-xl leading-relaxed text-neutral-dark">
+            <p className="text-lg leading-relaxed text-neutral-dark">
               Our vision is to make high-yield savings accessible to everyone while
               maintaining the security and reliability of Swiss financial standards.
               Through innovative blockchain technology and smart contracts, we're
@@ -165,7 +165,7 @@ export default function Home() {
                   <p className="mb-4 text-lg font-medium text-primary-blue">
                     {member.role}
                   </p>
-                  <p className="text-neutral-dark">{member.bio}</p>
+                  <p className="text-lg text-neutral-dark">{member.bio}</p>
                 </div>
               </Card>
             ))}
@@ -237,7 +237,7 @@ export default function Home() {
                   <h3 className="mb-4 text-center text-xl font-bold text-primary-navy">
                     {partner.name}
                   </h3>
-                  <p className="text-center text-neutral-dark">
+                  <p className="text-lg text-center text-neutral-dark">
                     {partner.description}
                   </p>
                 </Card>
