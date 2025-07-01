@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import CookieConsentBanner from "./components/CookieConsent";
 
 export const metadata: Metadata = {
   title: "Plusplus - Bridging TradFi and DeFi",
@@ -20,6 +21,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Footer />
+          <CookieConsentBanner />
       </body>
     </html>
   );
