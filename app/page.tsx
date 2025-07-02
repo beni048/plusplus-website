@@ -73,8 +73,9 @@ export default function Home() {
           sm:items-center sm:justify-center sm:text-center
           items-start justify-center pt-20 text-left">
           {/* Title - left-aligned on mobile, centered on desktop with constrained width */}
-          <h1 className="mb-10 sm:mb-8 w-full sm:max-w-7xl text-left sm:text-center text-4xl sm:text-5xl font-extrabold tracking-normal sm:text-6xl md:text-7xl lg:text-8xl">
-            YOUR TRUSTWORTHY AND SIMPLE ENTRY INTO DEFI
+          <h1 className="mb-10 sm:mb-8 w-full sm:max-w-7xl text-left sm:text-center font-black tracking-normal text-6xl sm:text-7xl md:text-8xl lg:text-9xl">
+            <span className="sm:hidden">YOUR SIMPLE ENTRY INTO DEFI</span>
+            <span className="hidden sm:inline">YOUR TRUSTWORTHY AND SIMPLE ENTRY INTO DEFI</span>
           </h1>
           {/* Paragraph - hidden on very small screens to save space, left-aligned on mobile, centered on desktop */}
           <p className="hidden min-[480px]:block text-left sm:text-center sm:mx-auto max-w-2xl text-lg sm:text-xl md:text-2xl lg:text-3xl mb-4 sm:mb-6">
