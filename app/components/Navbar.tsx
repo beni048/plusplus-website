@@ -2,17 +2,18 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Navbar() {
   const t = useTranslations('nav');
+  const locale = useLocale();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center">
+          <Link href={`/${locale}`} className="flex items-center">
             <Image
               src="/images/logo_plusplus.png"
               alt="Plusplus"
@@ -25,7 +26,7 @@ export default function Navbar() {
           </Link>
           <div className="flex items-center space-x-6">
             <Link 
-              href="/help" 
+              href={`/${locale}/help`} 
               className="text-primary-navy hover:text-primary-blue font-medium"
             >
               {t('help')}

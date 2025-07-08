@@ -10,10 +10,11 @@ import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import confetti from 'canvas-confetti';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 export default function Home() {
   const t = useTranslations();
+  const locale = useLocale(); // Add this line
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -70,103 +71,114 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-primary-navy/60" />
         </div>
-        <div className="relative z-10 flex h-full flex-col px-4 text-neutral-white
-          sm:items-center sm:justify-center sm:text-center
-          items-start justify-center pt-20 text-left">
-          <h1 
-            className="mb-10 sm:mb-8 w-full sm:max-w-7xl text-left sm:text-center font-black tracking-normal 
-              text-[clamp(2.5rem,8vw,6rem)] 
-              sm:text-[clamp(3.5rem,10vw,7rem)] 
-              md:text-[clamp(4.5rem,12vw,8rem)] 
-              lg:text-[clamp(5.5rem,14vw,9rem)]
-              leading-[0.85] sm:leading-[0.9] md:leading-[0.95]"
-            lang={t('hero.title.lang')}
-            style={{ 
-              hyphens: t('hero.title.lang') === 'de' ? 'auto' : 'none',
-              wordBreak: t('hero.title.lang') === 'de' ? 'normal' : 'keep-all'
-            }}
-          >
-            {/* Mobile version */}
-            <span className="sm:hidden">
-              {t('hero.title.mobile')
-                .split(' ')
-                .map((word, index) => {
-                  const isHighlightWord = ['EINFACHER', 'EINSTIEG', 'SIMPLE', 'ENTRY'].includes(word);
-                  const isBreakWord = ['INTO', 'IN', 'UND'].includes(word);
-                  const isLongGermanWord = word === 'VERTRAUENSWÜRDIGER';
-                  
-                  let displayWord = word;
-                  if (isLongGermanWord) {
-                    displayWord = 'VERTRAUENS&shy;WÜRDIGER';
-                  }
-                  
-                  if (isHighlightWord) {
-                    return (
-                      <React.Fragment key={index}>
-                        {index > 0 && <br />}
-                        <span 
-                          className="text-primary-teal"
-                          dangerouslySetInnerHTML={{ __html: `${displayWord} ` }}
-                        />
-                      </React.Fragment>
-                    );
-                  }
-                  
-                  if (isBreakWord) {
-                    return (
-                      <React.Fragment key={index}>
-                        <br />
-                        <span dangerouslySetInnerHTML={{ __html: `${displayWord} ` }} />
-                      </React.Fragment>
-                    );
-                  }
-                  
-                  return (
-                    <span 
-                      key={index}
-                      dangerouslySetInnerHTML={{ __html: `${displayWord} ` }}
-                    />
-                  );
-                })}
-            </span>
-
-            {/* Desktop version */}
-            <span className="hidden sm:inline">
-              {t('hero.title.desktop')
-                .split(' ')
-                .map((word, index) => {
-                  const isHighlightWord = ['EINFACHER', 'EINSTIEG', 'SIMPLE', 'ENTRY'].includes(word);
-                  const isLongGermanWord = word === 'VERTRAUENSWÜRDIGER';
-                  
-                  let displayWord = word;
-                  if (isLongGermanWord) {
-                    displayWord = 'VERTRAUENS&shy;WÜRDIGER';
-                  }
-                  
-                  if (isHighlightWord) {
+        <div className="relative z-10 flex h-full flex-col text-neutral-white
+          sm:items-center sm:justify-center sm:text-center sm:px-4
+          items-start justify-center pt-20 text-left px-1">
+          
+          {/* Mobile-optimized title container */}
+          <div className="w-full max-w-full sm:max-w-7xl">
+            <h1 
+              className="mb-10 sm:mb-8 w-full max-w-full text-left sm:text-center font-black tracking-normal 
+                text-[clamp(2.8rem,14vw,5.5rem)] 
+                sm:text-[clamp(3rem,8vw,6rem)] 
+                md:text-[clamp(4rem,10vw,7rem)] 
+                lg:text-[clamp(5rem,12vw,8rem)]
+                leading-[0.9] sm:leading-[0.9] md:leading-[0.95]
+                break-words"
+              lang={t('hero.title.lang')}
+              style={{ 
+                wordBreak: 'break-word',
+                overflowWrap: 'break-word',
+                hyphens: t('hero.title.lang') === 'de' ? 'auto' : 'none'
+              }}
+            >
+              {/* Mobile version */}
+              <span className="sm:hidden block">
+                {t('hero.title.mobile')
+                  .split(' ')
+                  .map((word, index) => {
+                    const isHighlightWord = ['EINFACHER', 'EINSTIEG', 'SIMPLE', 'ENTRY'].includes(word);
+                    const isBreakWord = ['INTO', 'IN', 'UND'].includes(word);
+                    const isLongGermanWord = word === 'VERTRAUENSWÜRDIGER';
+                    
+                    let displayWord = word;
+                    if (isLongGermanWord) {
+                      displayWord = 'VERTRAUENS&shy;WÜRDIGER';
+                    }
+                    
+                    if (isHighlightWord) {
+                      return (
+                        <React.Fragment key={index}>
+                          {index > 0 && <br />}
+                          <span 
+                            className="text-primary-teal inline-block"
+                            dangerouslySetInnerHTML={{ __html: `${displayWord} ` }}
+                          />
+                        </React.Fragment>
+                      );
+                    }
+                    
+                    if (isBreakWord) {
+                      return (
+                        <React.Fragment key={index}>
+                          <br />
+                          <span 
+                            className="inline-block"
+                            dangerouslySetInnerHTML={{ __html: `${displayWord}&nbsp; ` }} 
+                          />
+                        </React.Fragment>
+                      );
+                    }
+                    
                     return (
                       <span 
                         key={index}
-                        className="text-primary-teal"
+                        className="inline-block"
+                        dangerouslySetInnerHTML={{ __html: `${displayWord}&nbsp; ` }}
+                      />
+                    );
+                  })}
+              </span>
+
+              {/* Desktop version */}
+              <span className="hidden sm:inline">
+                {t('hero.title.desktop')
+                  .split(' ')
+                  .map((word, index) => {
+                    const isHighlightWord = ['EINFACHER', 'EINSTIEG', 'SIMPLE', 'ENTRY'].includes(word);
+                    const isLongGermanWord = word === 'VERTRAUENSWÜRDIGER';
+                    
+                    let displayWord = word;
+                    if (isLongGermanWord) {
+                      displayWord = 'VERTRAUENS&shy;WÜRDIGER';
+                    }
+                    
+                    if (isHighlightWord) {
+                      return (
+                        <span 
+                          key={index}
+                          className="text-primary-teal"
+                          dangerouslySetInnerHTML={{ __html: `${displayWord} ` }}
+                        />
+                      );
+                    }
+                    
+                    return (
+                      <span 
+                        key={index}
                         dangerouslySetInnerHTML={{ __html: `${displayWord} ` }}
                       />
                     );
-                  }
-                  
-                  return (
-                    <span 
-                      key={index}
-                      dangerouslySetInnerHTML={{ __html: `${displayWord} ` }}
-                    />
-                  );
-                })}
-            </span>
-          </h1>
-          <p className="hidden min-[480px]:block text-left sm:text-center sm:mx-auto max-w-2xl text-lg sm:text-xl md:text-2xl lg:text-3xl mb-4 sm:mb-6">
+                  })}
+              </span>
+            </h1>
+          </div>
+          
+          <p className="hidden min-[480px]:block text-left sm:text-center sm:mx-auto max-w-2xl text-lg sm:text-xl md:text-2xl lg:text-3xl mb-4 sm:mb-6 px-2 sm:px-0">
             {t('hero.subtitle')}
           </p>
-          <div className="w-full max-w-2xl flex justify-start sm:justify-center">
-            <Link href="/help">
+          <div className="w-full max-w-2xl flex justify-start sm:justify-center px-2 sm:px-0">
+            <Link href={`/${locale}/help`}>
               <Button
                 variant="default"
                 size="lg"

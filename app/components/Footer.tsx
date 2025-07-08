@@ -2,11 +2,12 @@
 
 import { Mail } from 'lucide-react';
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Footer() {
   const t = useTranslations('footer');
+  const locale = useLocale();
 
   return (
     <footer className="bg-primary-navy py-12 text-neutral-white">
@@ -15,7 +16,7 @@ export default function Footer() {
           <div className="flex flex-col items-center space-y-2 md:items-start">
             <p className="text-lg">{t('copyright')}</p>
             <Link
-              href="/privacy-policy"
+              href={`/${locale}/privacy-policy`}
               className="text-sm text-neutral-white transition-colors hover:text-primary-teal underline"
             >
               {t('privacy')}

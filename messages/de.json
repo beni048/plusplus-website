@@ -37,7 +37,7 @@
     }
   },
   "partners": {
-    "title": "Vertrauenspartner",
+    "title": "Partner",
     "descriptions": {
       "zinsli": "Schweizer Marktplatz für digitale Mietkautions-Lösungen.",
       "frankencoin": "Dezentrales Schweizer Franken Stablecoin-Ökosystem.",
@@ -66,9 +66,10 @@
     "linkedin": "Folgen Sie uns auf LinkedIn"
   },
   "cookies": {
-    "text": "Wir verwenden Cookies, um Ihr Browsing-Erlebnis zu verbessern, personalisierte Inhalte bereitzustellen und unseren Traffic zu analysieren. Durch Klicken auf \"Akzeptieren\" stimmen Sie der Verwendung von Cookies zu. Sie können Ihre Einstellungen verwalten oder mehr erfahren in unserer",
-    "privacyLink": "Datenschutzerklärung",
-    "accept": "Akzeptieren",
+    "title": "Cookie-Einstellungen",
+    "description": "Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern.",
+    "learnMore": "Mehr erfahren",
+    "accept": "Alle akzeptieren",
     "decline": "Ablehnen"
   },
   "language": {

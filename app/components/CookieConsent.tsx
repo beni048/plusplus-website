@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import CookieConsent from "react-cookie-consent";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import Link from "next/link";
 import { useTranslations, useLocale } from 'next-intl';
 
 export default function CookieConsentBanner() {
@@ -10,24 +12,19 @@ export default function CookieConsentBanner() {
   const [showBanner, setShowBanner] = useState(false);
 
   useEffect(() => {
-    const isEnabled = process.env.NEXT_PUBLIC_COOKIE_CONSENT_ENABLED !== "false";
-    
-    if (isEnabled) {
-      const hasConsent = document.cookie
-        .split("; ")
-        .find((row) => row.startsWith("cookieConsent="));
-      
-      if (!hasConsent) {
-        setShowBanner(true);
-      }
+    const consent = localStorage.getItem('cookie-consent');
+    if (!consent) {
+      setShowBanner(true);
     }
   }, []);
 
   const handleAccept = () => {
+    localStorage.setItem('cookie-consent', 'accepted');
     setShowBanner(false);
   };
 
   const handleDecline = () => {
+    localStorage.setItem('cookie-consent', 'declined');
     setShowBanner(false);
   };
 
@@ -36,74 +33,40 @@ export default function CookieConsentBanner() {
   }
 
   return (
-    <CookieConsent
-      location="bottom"
-      buttonText={t('accept')}
-      declineButtonText={t('decline')}
-      cookieName="cookieConsent"
-      cookieValue="accepted"
-      declineCookieValue="declined"
-      expires={365}
-      enableDeclineButton={true}
-      flipButtons={false}
-      onAccept={handleAccept}
-      onDecline={handleDecline}
-      style={{
-        background: "#1e293b",
-        color: "#f8fafc",
-        fontSize: "16px",
-        padding: "20px",
-        boxShadow: "0 -4px 6px -1px rgba(0, 0, 0, 0.1)",
-      }}
-      buttonStyle={{
-        backgroundColor: "#0d9488",
-        color: "#1e293b",
-        fontSize: "16px",
-        fontWeight: "600",
-        padding: "12px 24px",
-        borderRadius: "6px",
-        border: "none",
-        cursor: "pointer",
-        marginLeft: "12px",
-        transition: "background-color 0.2s ease",
-      }}
-      declineButtonStyle={{
-        backgroundColor: "#64748b",
-        color: "#f8fafc",
-        fontSize: "16px",
-        fontWeight: "600",
-        padding: "12px 24px",
-        borderRadius: "6px",
-        border: "none",
-        cursor: "pointer",
-        marginLeft: "12px",
-        transition: "background-color 0.2s ease",
-      }}
-      contentStyle={{
-        flex: "1 1 auto",
-        marginRight: "20px",
-        lineHeight: "1.5",
-      }}
-      containerClasses="fixed bottom-0 left-0 right-0 z-50 flex items-center justify-between max-w-none"
-      contentClasses="text-slate-100"
-      buttonClasses="hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
-      declineButtonClasses="hover:bg-slate-600 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2"
-      sameSite="strict"
-      cookieSecurity={true}
-    >
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between w-full">
-        <div className="mb-4 sm:mb-0 sm:mr-6 flex-1">
-          <p className="text-sm sm:text-base">
-            {t('text')}{" "}
-            <a 
-              href="/privacy-policy"
-              className="underline hover:text-teal-300 transition-colors"
+    <div className="fixed bottom-4 left-4 right-4 z-50 sm:left-auto sm:right-4 sm:w-96">
+      <Card className="p-6 bg-white shadow-lg border-primary-teal/20">
+        <div className="space-y-4">
+          <h3 className="font-semibold text-primary-navy">
+            {t('title')}
+          </h3>
+          <p className="text-sm text-neutral-dark">
+            {t('description')}{' '}
+            <Link 
+              href={`/${locale}/privacy-policy`} 
+              className="text-primary-teal underline hover:text-primary-blue"
             >
-              {t('privacyLink')}
-            </a>.
+              {t('learnMore')}
+            </Link>
           </p>
+          <div className="flex gap-2 flex-col sm:flex-row">
+            <Button
+              onClick={handleAccept}
+              className="bg-primary-teal hover:bg-primary-teal/90 text-primary-navy"
+              size="sm"
+            >
+              {t('accept')}
+            </Button>
+            <Button
+              onClick={handleDecline}
+              variant="outline"
+              className="border-primary-teal text-primary-teal hover:bg-primary-teal/10"
+              size="sm"
+            >
+              {t('decline')}
+            </Button>
+          </div>
         </div>
-      </div>
-    </CookieConsent>
+      </Card>
+    </div>
   );
 }
