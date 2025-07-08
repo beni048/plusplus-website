@@ -2,16 +2,17 @@
 
 import { useEffect, useState } from "react";
 import CookieConsent from "react-cookie-consent";
+import { useTranslations, useLocale } from 'next-intl';
 
 export default function CookieConsentBanner() {
+  const t = useTranslations('cookies');
+  const locale = useLocale();
   const [showBanner, setShowBanner] = useState(false);
 
   useEffect(() => {
-    // Check if cookie consent is enabled via environment variable (default: true)
     const isEnabled = process.env.NEXT_PUBLIC_COOKIE_CONSENT_ENABLED !== "false";
     
     if (isEnabled) {
-      // Check if consent cookie already exists
       const hasConsent = document.cookie
         .split("; ")
         .find((row) => row.startsWith("cookieConsent="));
@@ -23,12 +24,10 @@ export default function CookieConsentBanner() {
   }, []);
 
   const handleAccept = () => {
-    // Enable non-essential scripts here
     setShowBanner(false);
   };
 
   const handleDecline = () => {
-    // Block non-essential scripts
     setShowBanner(false);
   };
 
@@ -39,8 +38,8 @@ export default function CookieConsentBanner() {
   return (
     <CookieConsent
       location="bottom"
-      buttonText="Accept"
-      declineButtonText="Decline"
+      buttonText={t('accept')}
+      declineButtonText={t('decline')}
       cookieName="cookieConsent"
       cookieValue="accepted"
       declineCookieValue="declined"
@@ -95,14 +94,12 @@ export default function CookieConsentBanner() {
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between w-full">
         <div className="mb-4 sm:mb-0 sm:mr-6 flex-1">
           <p className="text-sm sm:text-base">
-            We use cookies to enhance your browsing experience, serve personalized content, 
-            and analyze our traffic. By clicking "Accept", you consent to our use of cookies. 
-            You can manage your preferences or learn more in our{" "}
+            {t('text')}{" "}
             <a 
-              href="/privacy-policy" 
+              href="/privacy-policy"
               className="underline hover:text-teal-300 transition-colors"
             >
-              Privacy Policy
+              {t('privacyLink')}
             </a>.
           </p>
         </div>

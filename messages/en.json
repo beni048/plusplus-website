@@ -1,0 +1,165 @@
+{
+  "nav": {
+    "help": "Help"
+  },
+  "hero": {
+    "title": {
+      "lang": "en",
+      "mobile": "YOUR SIMPLE ENTRY INTO DEFI",
+      "desktop": "YOUR TRUSTWORTHY AND SIMPLE ENTRY INTO DEFI"
+    },
+    "subtitle": "We bring the advantages of decentralization to traditional finance, from Switzerland to a global market.",
+    "cta": "Learn More"
+  },
+  "about": {
+    "title": "Our Purpose & Vision",
+    "paragraph1": "Plusplus revolutionizes traditional savings by bridging the efficiency of decentralized finance (DeFi) with the stability of the Swiss Franc market. We offer institutional-grade solutions that deliver attractive yields (3-4% APY) on Swiss Franc deposits through secure, regulated DeFi protocols.",
+    "paragraph2": "Our vision is to make high-yield savings accessible to everyone while maintaining the security and reliability of Swiss financial standards. Through innovative blockchain technology and smart contracts, we're creating a future where traditional and decentralized finance work seamlessly together."
+  },
+  "team": {
+    "title": "Our Team",
+    "members": {
+      "jonas": {
+        "name": "Jonas",
+        "role": "Co-Founder & Sales Advisor",
+        "bio": "Sales and Business Development Expert. Former Relai advisor and key contributor to scaling Lionstep from 1 to 9 million in three years."
+      },
+      "benjamin": {
+        "name": "Benjamin",
+        "role": "Co-Founder & COO",
+        "bio": "Technology and business expert with a background from ETH and ZHAW, specializing in development, IT consulting, cybersecurity, and cloud technologies."
+      },
+      "matthias": {
+        "name": "Matthias",
+        "role": "CTO",
+        "bio": "Published researcher and PhD candidate at Unibas. 10 years+ of expertise in decentralized finance, smart contract development and the Ethereum environment."
+      }
+    }
+  },
+  "partners": {
+    "title": "Trusted Partners",
+    "descriptions": {
+      "zinsli": "Swiss marketplace for digital rental‑deposit solutions.",
+      "frankencoin": "Decentralized Swiss Franc stablecoin ecosystem.",
+      "dfx": "Institutional DeFi FX solutions for CHF, EUR, and USD.",
+      "aktionariat": "Equity tokenization platform for Swiss SMEs.",
+      "bitcoinsuisse": "Pioneering crypto brokerage and custody services."
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send Message",
+      "sending": "Sending..."
+    },
+    "success": {
+      "title": "Thank you for your message!",
+      "message": "We'll get back to you as soon as possible."
+    }
+  },
+  "footer": {
+    "copyright": "© Plusplus AG 2025 | Zug, Switzerland",
+    "privacy": "Privacy Policy",
+    "linkedin": "Follow us on LinkedIn"
+  },
+  "cookies": {
+    "text": "We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking \"Accept\", you consent to our use of cookies. You can manage your preferences or learn more in our",
+    "privacyLink": "Privacy Policy",
+    "accept": "Accept",
+    "decline": "Decline"
+  },
+  "language": {
+    "en": "English",
+    "de": "Deutsch"
+  },
+  "help": {
+    "title": "Frequently Asked Questions",
+    "questions": {
+      "whatIs": {
+        "question": "What is Plusplus?",
+        "answer": "Plusplus AG is a Swiss financial technology company that bridges traditional finance (TradFi) with decentralized finance (DeFi). We provide institutional-grade solutions that offer attractive yields on Swiss Franc deposits while ensuring full compliance with Swiss financial regulations."
+      },
+      "howItWorks": {
+        "question": "How does it work?",
+        "answer": "Our platform converts your CHF deposits into Swiss Franc-backed stablecoins (ZCHF) which are then placed in high-yield DeFi protocols. The process is fully automated and secure, with smart contracts managing interest payments and withdrawals. You can withdraw your funds back to CHF at any time."
+      },
+      "returns": {
+        "question": "What returns can I expect?",
+        "answer": "Our platform typically offers yields between 3-4% APY on Swiss Franc deposits, significantly higher than traditional savings accounts. These returns are generated through efficient DeFi protocols while maintaining the stability of the Swiss Franc."
+      },
+      "security": {
+        "question": "How secure is Plusplus?",
+        "answer": "Security is our top priority. We operate under full compliance with Swiss financial regulations (FINMA, VQF) and implement institutional-grade security measures. All smart contracts are thoroughly audited, and we maintain comprehensive insurance coverage for digital assets."
+      },
+      "getStarted": {
+        "question": "How can I get started?",
+        "answer": "Getting started is simple. Once our platform launches, you can create an account, complete the verification process, and make your first deposit. Our user-friendly interface guides you through each step, making it easy to start earning higher yields on your Swiss Franc deposits."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "intro": "This Privacy Policy explains the nature, scope, and purpose of processing personal data on www.plusplus.swiss (the \"Website\"). For definitions such as \"personal data\" and \"processing,\" please refer to Article 4 of the GDPR and Article 3 of the Swiss Federal Data Protection Act (nFADP).",
+    "section1": {
+      "title": "1. Data Controller",
+      "content": "Plusplus AG<br />Poststrasse 22<br />6300 Zug, Switzerland<br />Email: hello@plusplus.swiss"
+    },
+    "section2": {
+      "title": "2. Collection and Processing of Personal Data",
+      "subsection1": {
+        "title": "2.1. Access Data / Server Log Files",
+        "content": "When you visit the Website, certain data is automatically transmitted by your browser to our hosting provider, Vercel. This includes your IP address, date and time of access, and the URL requested. These data are technically necessary to operate the Website (Art. 45c TCA, Art. 6(1)(c) GDPR)."
+      },
+      "subsection2": {
+        "title": "2.2. Contact Form",
+        "content": "If you use our contact form, we collect your name, email address, and the message content you submit. Processing is based on our legitimate interest in responding to inquiries (Art. 6(1)(f) GDPR) and, if required, on your explicit consent (Art. 6(1)(a) GDPR)."
+      },
+      "subsection3": {
+        "title": "2.3. Cookies and Tracking",
+        "content1": "The Website uses the following cookies and trackers:",
+        "list": {
+          "item1": "Necessary cookies for basic site functionality (no consent required).",
+          "item2": "Preference, Statistics, and Marketing cookies only after you have given explicit consent via the cookie banner."
+        },
+        "content2": "Upon consent, we store a cookie named cookieConsent to record your choice. You may withdraw or modify your consent at any time via the cookie banner."
+      },
+      "subsection4": {
+        "title": "2.4. Web Analytics",
+        "content": "We use Simple Analytics (EU-hosted, no cookies) or—only after consent—Google Analytics 4 with Consent Mode v2. Data are collected in anonymized form and not linked to any other Google services."
+      },
+      "subsection5": {
+        "title": "2.5. Third-Party Services",
+        "content1": "– reCAPTCHA by Google (operating under the EU-US Data Privacy Framework)<br />– Vercel Analytics (GDPR-compliant)",
+        "content2": "Data are processed only on a lawful basis or after consent and are not transferred to countries without adequate data protection safeguards."
+      }
+    },
+    "section3": {
+      "title": "3. Legal Bases",
+      "list": {
+        "item1": "Art. 6(1)(c) GDPR / TCA § 45c: Storage of access data to ensure technical operation",
+        "item2": "Art. 6(1)(f) GDPR: Legitimate interest in customer communication",
+        "item3": "Art. 6(1)(a) GDPR: Consent for non-essential cookies and tracking"
+      }
+    },
+    "section4": {
+      "title": "4. International Data Transfers",
+      "content": "Personal data are transferred only to countries with an adequate level of protection (Switzerland, EU, UK, Canada, U.S. companies under the EU-US Data Privacy Framework). For transfers to other countries, we use Standard Contractual Clauses."
+    },
+    "section5": {
+      "title": "5. Data Retention",
+      "content": "We retain personal data only as long as necessary for the purposes stated or as required by law."
+    },
+    "section6": {
+      "title": "6. Your Rights",
+      "content": "Under Articles 15–20 GDPR, you have the right to access, rectify, erase, restrict processing, and data portability. To exercise these rights, contact us at hello@plusplus.swiss."
+    },
+    "section7": {
+      "title": "7. Updates to This Policy",
+      "content": "We may update this Privacy Policy periodically. The date of the latest revision appears below."
+    },
+    "lastUpdated": "Last Updated: July 1, 2025."
+  }
+}

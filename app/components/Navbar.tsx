@@ -1,7 +1,13 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Navbar() {
+  const t = useTranslations('nav');
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm shadow-sm">
       <div className="container mx-auto px-4">
@@ -10,10 +16,11 @@ export default function Navbar() {
             <Image
               src="/images/logo_plusplus.png"
               alt="Plusplus"
-              width={120}
-              height={40}
-              className="h-8 w-auto"
+              width={240}
+              height={80}
+              className="h-8 w-auto object-contain"
               priority
+              quality={100}
             />
           </Link>
           <div className="flex items-center space-x-6">
@@ -21,8 +28,11 @@ export default function Navbar() {
               href="/help" 
               className="text-primary-navy hover:text-primary-blue font-medium"
             >
-              Help
+              {t('help')}
             </Link>
+            <div className="hidden sm:block">
+              <LanguageSwitcher />
+            </div>
           </div>
         </div>
       </div>
