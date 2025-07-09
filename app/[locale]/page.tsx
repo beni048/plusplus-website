@@ -209,53 +209,55 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section id="team" className="bg-neutral-light py-24">
-        <div className="container mx-auto px-4">
-          <h2 className="mb-16 text-center text-4xl font-medium text-primary-navy">
-            {t('team.title')}
-          </h2>
-          <div className="grid gap-8 md:grid-cols-3">
-            {[
-              {
-                key: 'benjamin',
-                image: "/images/team/benjamin_.png",
-              },
-              {
-                key: 'matthias',
-                image: "/images/team/matthias.png",
-              },
-              {
-                key: 'jonas',
-                image: "/images/team/jonas.png",
-              },
-            ].map((member) => (
-              <Card key={member.key} className="overflow-hidden border-primary-teal/20">
-                <div className="relative aspect-square w-48 mx-auto rounded-full overflow-hidden">
-                  <Image
-                    src={member.image}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    alt="Team Member"
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-8">
-                  <h3 className="mb-2 text-2xl font-bold text-primary-navy">
-                    {t(`team.members.${member.key}.name`)}
-                  </h3>
-                  <p className="mb-4 text-lg font-medium text-primary-blue">
-                    {t(`team.members.${member.key}.role`)}
-                  </p>
-                  <p className="text-lg text-neutral-dark">
-                    {t(`team.members.${member.key}.bio`)}
-                  </p>
-                </div>
-              </Card>
-            ))}
+      {/* Team Section - DEACTIVATED */}
+      {false && (
+        <section id="team" className="bg-neutral-light py-24">
+          <div className="container mx-auto px-4">
+            <h2 className="mb-16 text-center text-4xl font-medium text-primary-navy">
+              {t('team.title')}
+            </h2>
+            <div className="grid gap-8 md:grid-cols-3">
+              {[
+                {
+                  key: 'benjamin',
+                  image: "/images/team/benjamin_.png",
+                },
+                {
+                  key: 'matthias',
+                  image: "/images/team/matthias.png",
+                },
+                {
+                  key: 'jonas',
+                  image: "/images/team/jonas.png",
+                },
+              ].map((member) => (
+                <Card key={member.key} className="overflow-hidden border-primary-teal/20">
+                  <div className="relative aspect-square w-48 mx-auto rounded-full overflow-hidden">
+                    <Image
+                      src={member.image}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      alt="Team Member"
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-8">
+                    <h3 className="mb-2 text-2xl font-bold text-primary-navy">
+                      {t(`team.members.${member.key}.name`)}
+                    </h3>
+                    <p className="mb-4 text-lg font-medium text-primary-blue">
+                      {t(`team.members.${member.key}.role`)}
+                    </p>
+                    <p className="text-lg text-neutral-dark">
+                      {t(`team.members.${member.key}.bio`)}
+                    </p>
+                  </div>
+                </Card>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Partners Section */}
       <section id="partners" className="bg-neutral-white py-24">
