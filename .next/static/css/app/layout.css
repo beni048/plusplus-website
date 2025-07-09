@@ -1297,6 +1297,10 @@ video {
 .border-transparent {
   border-color: transparent;
 }
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
 .border-l-transparent {
   border-left-color: transparent;
 }
@@ -1374,6 +1378,13 @@ video {
 }
 .bg-white\/80 {
   background-color: rgb(255 255 255 / 0.8);
+}
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+.bg-black\/60 {
+  background-color: rgb(0 0 0 / 0.6);
 }
 .fill-current {
   fill: currentColor;
@@ -1565,6 +1576,10 @@ video {
   font-size: 0.75rem;
   line-height: 1rem;
 }
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
 .font-black {
   font-weight: 900;
 }
@@ -1657,6 +1672,14 @@ video {
 }
 .text-secondary-foreground {
   color: hsl(var(--secondary-foreground));
+}
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 .underline {
   text-decoration-line: underline;
@@ -1960,6 +1983,16 @@ video {
 
 .hover\:bg-transparent:hover {
   background-color: transparent;
+}
+
+.hover\:bg-gray-800:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-gray-100:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
 .hover\:text-accent-foreground:hover {
@@ -2768,6 +2801,19 @@ video {
     line-height: 1.75rem;
   }
 
+  .sm\:text-\[clamp\(2\.5rem\2c 6vw\2c 4\.5rem\)\] {
+    font-size: clamp(2.5rem,6vw,4.5rem);
+  }
+
+  .sm\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .sm\:font-extrabold {
+    font-weight: 800;
+  }
+
   .sm\:leading-\[0\.9\] {
     line-height: 0.9;
   }
@@ -2830,6 +2876,19 @@ video {
     font-size: clamp(4rem,10vw,7rem);
   }
 
+  .md\:text-\[clamp\(3rem\2c 7vw\2c 5rem\)\] {
+    font-size: clamp(3rem,7vw,5rem);
+  }
+
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .md\:font-bold {
+    font-weight: 700;
+  }
+
   .md\:leading-\[0\.95\] {
     line-height: 0.95;
   }
@@ -2848,6 +2907,19 @@ video {
 
   .lg\:text-\[clamp\(5rem\2c 12vw\2c 8rem\)\] {
     font-size: clamp(5rem,12vw,8rem);
+  }
+
+  .lg\:text-\[clamp\(3\.5rem\2c 8vw\2c 5\.5rem\)\] {
+    font-size: clamp(3.5rem,8vw,5.5rem);
+  }
+
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .lg\:font-bold {
+    font-weight: 700;
   }
 }
 

@@ -10,7 +10,7 @@ export default function Footer() {
   const locale = useLocale();
 
   return (
-    <footer className="bg-primary-navy py-12 text-neutral-white">
+    <footer className="bg-black py-12 text-neutral-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
           <div className="flex flex-col items-center space-y-2 md:items-start">

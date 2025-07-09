@@ -69,7 +69,7 @@ export default function Home() {
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-primary-navy/60" />
+          <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="relative z-10 flex h-full flex-col text-neutral-white
           sm:items-center sm:justify-center sm:text-center sm:px-4
@@ -79,10 +79,10 @@ export default function Home() {
           <div className="w-full max-w-full sm:max-w-7xl">
             <h1 
               className="mb-10 sm:mb-8 w-full max-w-full text-left sm:text-center font-black tracking-normal 
-                text-[clamp(2.8rem,14vw,5.5rem)] 
-                sm:text-[clamp(3rem,8vw,6rem)] 
-                md:text-[clamp(4rem,10vw,7rem)] 
-                lg:text-[clamp(5rem,12vw,8rem)]
+                text-[clamp(2.8rem,14vw,5.5rem)] font-black
+                sm:text-[clamp(2.5rem,6vw,4.5rem)] sm:font-extrabold
+                md:text-[clamp(3rem,7vw,5rem)] md:font-bold
+                lg:text-[clamp(3.5rem,8vw,5.5rem)] lg:font-bold
                 leading-[0.9] sm:leading-[0.9] md:leading-[0.95]
                 break-words"
               lang={t('hero.title.lang')}
@@ -111,7 +111,7 @@ export default function Home() {
                         <React.Fragment key={index}>
                           {index > 0 && <br />}
                           <span 
-                            className="text-primary-teal inline-block"
+                            className="inline-block"
                             dangerouslySetInnerHTML={{ __html: `${displayWord} ` }}
                           />
                         </React.Fragment>
@@ -153,16 +153,6 @@ export default function Home() {
                       displayWord = 'VERTRAUENS&shy;WÜRDIGER';
                     }
                     
-                    if (isHighlightWord) {
-                      return (
-                        <span 
-                          key={index}
-                          className="text-primary-teal"
-                          dangerouslySetInnerHTML={{ __html: `${displayWord} ` }}
-                        />
-                      );
-                    }
-                    
                     return (
                       <span 
                         key={index}
@@ -174,7 +164,7 @@ export default function Home() {
             </h1>
           </div>
           
-          <p className="hidden min-[480px]:block text-left sm:text-center sm:mx-auto max-w-2xl text-lg sm:text-xl md:text-2xl lg:text-3xl mb-4 sm:mb-6 px-2 sm:px-0">
+          <p className="hidden min-[480px]:block text-left sm:text-center sm:mx-auto max-w-2xl text-base sm:text-lg md:text-xl lg:text-2xl mb-4 sm:mb-6 px-2 sm:px-0">
             {t('hero.subtitle')}
           </p>
           <div className="w-full max-w-2xl flex justify-start sm:justify-center px-2 sm:px-0">
@@ -182,7 +172,7 @@ export default function Home() {
               <Button
                 variant="default"
                 size="lg"
-                className="text-lg px-8 group bg-primary-teal hover:bg-primary-teal/90 text-primary-navy"
+                className="text-lg px-8 py-4 group bg-white hover:bg-gray-100 text-black border-2 border-white shadow-lg backdrop-blur-sm"
               >
                 {t('hero.cta')}
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -258,6 +248,9 @@ export default function Home() {
           </div>
         </section>
       )}
+
+      {/* Divider line */}
+      <div className="h-px bg-neutral-light"></div>
 
       {/* Partners Section */}
       <section id="partners" className="bg-neutral-white py-24">
