@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -81,5 +84,18 @@
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading;
+  }
+}
+
+/* Add this class for the hero title */
+.hero-title-mobile {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 900;
+  font-stretch: condensed; /* Makes text appear bolder */
+}
+
+@media (min-width: 640px) {
+  .hero-title-mobile {
+    font-weight: 800;
   }
 }

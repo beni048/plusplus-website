@@ -17,7 +17,7 @@ export default function Footer() {
             <p className="text-lg">{t('copyright')}</p>
             <Link
               href={`/${locale}/privacy-policy`}
-              className="text-sm text-neutral-white transition-colors hover:text-primary-teal underline"
+              className="text-sm text-neutral-white transition-colors hover:text-accent-orange underline"
             >
               {t('privacy')}
             </Link>
@@ -27,7 +27,7 @@ export default function Footer() {
               href="https://linkedin.com/company/plusplusag"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center space-x-3 text-neutral-white transition-colors hover:text-primary-teal"
+              className="flex items-center space-x-3 text-neutral-white transition-colors hover:text-accent-orange"
             >
               <Mail className="h-6 w-6" />
               <span className="text-lg">{t('linkedin')}</span>

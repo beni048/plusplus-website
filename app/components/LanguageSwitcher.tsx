@@ -33,7 +33,7 @@ export default function LanguageSwitcher({ mobile = false }: LanguageSwitcherPro
       variant="ghost"
       size="sm"
       onClick={() => switchToLocale(targetLocale)}
-      className={`${mobile ? 'w-full justify-start text-neutral-white hover:text-primary-teal' : 'text-primary-navy hover:text-primary-teal'} hover:bg-transparent font-medium transition-colors`}
+      className={`${mobile ? 'w-full justify-start text-neutral-white hover:text-accent-orange' : 'text-black hover:text-accent-orange'} hover:bg-transparent font-medium transition-colors`}
     >
       <Globe className="mr-2 h-4 w-4" />
       {targetLabel}

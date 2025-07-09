@@ -36,14 +36,14 @@ export default function CookieConsentBanner() {
     <div className="fixed bottom-4 left-4 right-4 z-50 sm:left-auto sm:right-4 sm:w-96">
       <Card className="p-6 bg-white shadow-lg border-primary-teal/20">
         <div className="space-y-4">
-          <h3 className="font-semibold text-primary-navy">
+          <h3 className="font-semibold text-black">
             {t('title')}
           </h3>
           <p className="text-sm text-neutral-dark">
             {t('description')}{' '}
             <Link 
               href={`/${locale}/privacy-policy`} 
-              className="text-primary-teal underline hover:text-primary-blue"
+              className="text-black underline hover:text-accent-orange transition-colors"
             >
               {t('learnMore')}
             </Link>
@@ -51,7 +51,7 @@ export default function CookieConsentBanner() {
           <div className="flex gap-2 flex-col sm:flex-row">
             <Button
               onClick={handleAccept}
-              className="bg-primary-teal hover:bg-primary-teal/90 text-primary-navy"
+              className="bg-accent-orange hover:bg-accent-orange/90 text-white"
               size="sm"
             >
               {t('accept')}
@@ -59,7 +59,7 @@ export default function CookieConsentBanner() {
             <Button
               onClick={handleDecline}
               variant="outline"
-              className="border-primary-teal text-primary-teal hover:bg-primary-teal/10"
+              className="border-black text-black hover:bg-accent-orange hover:text-white hover:border-accent-orange transition-colors"
               size="sm"
             >
               {t('decline')}

@@ -185,7 +185,7 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className="bg-neutral-white py-24">
         <div className="container mx-auto px-4">
-          <h2 className="mb-12 text-center text-4xl font-medium text-primary-navy">
+          <h2 className="mb-12 text-center text-4xl font-medium text-black">
             {t('about.title')}
           </h2>
           <div className="mx-auto max-w-3xl text-center space-y-6">
@@ -203,7 +203,7 @@ export default function Home() {
       {false && (
         <section id="team" className="bg-neutral-light py-24">
           <div className="container mx-auto px-4">
-            <h2 className="mb-16 text-center text-4xl font-medium text-primary-navy">
+            <h2 className="mb-16 text-center text-4xl font-medium text-black">
               {t('team.title')}
             </h2>
             <div className="grid gap-8 md:grid-cols-3">
@@ -232,7 +232,7 @@ export default function Home() {
                     />
                   </div>
                   <div className="p-8">
-                    <h3 className="mb-2 text-2xl font-bold text-primary-navy">
+                    <h3 className="mb-2 text-2xl font-bold text-black">
                       {t(`team.members.${member.key}.name`)}
                     </h3>
                     <p className="mb-4 text-lg font-medium text-primary-blue">
@@ -255,7 +255,7 @@ export default function Home() {
       {/* Partners Section */}
       <section id="partners" className="bg-neutral-white py-24">
         <div className="container mx-auto px-4">
-          <h2 className="mb-16 text-center text-4xl font-medium text-primary-navy">
+          <h2 className="mb-16 text-center text-4xl font-medium text-black">
             {t('partners.title')}
           </h2>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -308,7 +308,7 @@ export default function Home() {
                       className="h-12 w-auto"
                     />
                   </div>
-                  <h3 className="mb-4 text-center text-xl font-bold text-primary-navy">
+                  <h3 className="mb-4 text-center text-xl font-bold text-black">
                     {partner.name}
                   </h3>
                   <p className="text-lg text-center text-neutral-dark">
@@ -324,14 +324,14 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="bg-neutral-light py-24">
         <div className="container mx-auto px-4">
-          <h2 className="mb-16 text-center text-4xl font-medium text-primary-navy">
+          <h2 className="mb-16 text-center text-4xl font-medium text-black">
             {t('contact.title')}
           </h2>
           <div className="mx-auto max-w-lg">
             <Card className="p-8 border-primary-teal/20">
               {isSubmitted ? (
                 <div className="text-center py-12">
-                  <h3 className="text-2xl font-medium text-primary-navy mb-4">
+                  <h3 className="text-2xl font-medium text-black mb-4">
                     {t('contact.success.title')}
                   </h3>
                   <p className="text-neutral-dark">
@@ -376,7 +376,7 @@ export default function Home() {
                   </div>
                   <Button
                     type="submit"
-                    className="h-12 w-full text-lg bg-accent-orange hover:bg-accent-orange/90"
+                    className="h-12 w-full text-lg bg-accent-orange hover:bg-accent-orange/90 text-black"
                     disabled={isLoading}
                   >
                     {isLoading ? t('contact.form.sending') : t('contact.form.submit')}

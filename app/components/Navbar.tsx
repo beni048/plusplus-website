@@ -27,7 +27,7 @@ export default function Navbar() {
           <div className="flex items-center space-x-6">
             <Link 
               href={`/${locale}/help`} 
-              className="text-primary-navy hover:text-primary-blue font-medium"
+              className="text-black hover:text-accent-orange font-medium transition-colors"
             >
               {t('help')}
             </Link>
