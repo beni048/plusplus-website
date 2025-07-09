@@ -63,70 +63,70 @@ export default function HelpPage() {
         <div className="max-w-3xl mx-auto">
           <Accordion type="single" collapsible className="space-y-4">
             <AccordionItem value="what-is-plusplus">
-              <AccordionTrigger className="text-xl text-black">{t('questions.whatIs.question')}</AccordionTrigger>
+              <AccordionTrigger className="text-xl text-black text-left">{t('questions.whatIs.question')}</AccordionTrigger>
               <AccordionContent className="text-lg text-neutral-dark leading-relaxed">
                 {t('questions.whatIs.answer')}
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="products">
-              <AccordionTrigger className="text-xl text-black">{t('questions.products.question')}</AccordionTrigger>
+              <AccordionTrigger className="text-xl text-black text-left">{t('questions.products.question')}</AccordionTrigger>
               <AccordionContent className="text-lg text-neutral-dark leading-relaxed">
                 {t('questions.products.answer')}
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="how-it-works">
-              <AccordionTrigger className="text-xl text-black">{t('questions.howItWorks.question')}</AccordionTrigger>
+              <AccordionTrigger className="text-xl text-black text-left">{t('questions.howItWorks.question')}</AccordionTrigger>
               <AccordionContent className="text-lg text-neutral-dark leading-relaxed">
                 {t('questions.howItWorks.answer')}
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="benefits">
-              <AccordionTrigger className="text-xl text-black">{t('questions.benefits.question')}</AccordionTrigger>
+              <AccordionTrigger className="text-xl text-black text-left">{t('questions.benefits.question')}</AccordionTrigger>
               <AccordionContent className="text-lg text-neutral-dark leading-relaxed">
                 {t('questions.benefits.answer')}
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="security">
-              <AccordionTrigger className="text-xl text-black">{t('questions.security.question')}</AccordionTrigger>
+              <AccordionTrigger className="text-xl text-black text-left">{t('questions.security.question')}</AccordionTrigger>
               <AccordionContent className="text-lg text-neutral-dark leading-relaxed">
                 {t('questions.security.answer')}
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="risks">
-              <AccordionTrigger className="text-xl text-black">{t('questions.risks.question')}</AccordionTrigger>
+              <AccordionTrigger className="text-xl text-black text-left">{t('questions.risks.question')}</AccordionTrigger>
               <AccordionContent className="text-lg text-neutral-dark leading-relaxed">
                 {t('questions.risks.answer')}
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="access">
-              <AccordionTrigger className="text-xl text-black">{t('questions.access.question')}</AccordionTrigger>
+              <AccordionTrigger className="text-xl text-black text-left">{t('questions.access.question')}</AccordionTrigger>
               <AccordionContent className="text-lg text-neutral-dark leading-relaxed">
                 {t('questions.access.answer')}
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="regulation">
-              <AccordionTrigger className="text-xl text-black">{t('questions.regulation.question')}</AccordionTrigger>
+              <AccordionTrigger className="text-xl text-black text-left">{t('questions.regulation.question')}</AccordionTrigger>
               <AccordionContent className="text-lg text-neutral-dark leading-relaxed">
                 {t('questions.regulation.answer')}
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="privacy">
-              <AccordionTrigger className="text-xl text-black">{t('questions.privacy.question')}</AccordionTrigger>
+              <AccordionTrigger className="text-xl text-black text-left">{t('questions.privacy.question')}</AccordionTrigger>
               <AccordionContent className="text-lg text-neutral-dark leading-relaxed">
                 {t('questions.privacy.answer')}
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="support">
-              <AccordionTrigger className="text-xl text-black">{t('questions.support.question')}</AccordionTrigger>
+              <AccordionTrigger className="text-xl text-black text-left">{t('questions.support.question')}</AccordionTrigger>
               <AccordionContent>
                 <SupportAnswer />
               </AccordionContent>
