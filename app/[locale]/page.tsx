@@ -59,126 +59,29 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
       {/* Hero Section */}
-      <section className="relative h-[100svh]">
-        <div className="absolute inset-0">
-          <Image
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=3270&auto=format&fit=crop"
-            alt="Modern Building"
-            fill
-            className="object-cover"
-            priority
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-black/60" />
-        </div>
-        <div className="relative z-10 flex h-full flex-col text-neutral-white
-          sm:items-center sm:justify-center sm:text-center sm:px-4
-          items-start justify-center pt-20 text-left px-1">
-          
-          {/* Mobile-optimized title container */}
-          <div className="w-full max-w-full sm:max-w-7xl">
-            <h1 
-              className="mb-10 sm:mb-8 w-full max-w-full text-left sm:text-center font-black tracking-normal 
-                text-[clamp(2.8rem,14vw,5.5rem)] font-black
-                sm:text-[clamp(2.5rem,6vw,4.5rem)] sm:font-extrabold
-                md:text-[clamp(3rem,7vw,5rem)] md:font-bold
-                lg:text-[clamp(3.5rem,8vw,5.5rem)] lg:font-bold
-                leading-[0.9] sm:leading-[0.9] md:leading-[0.95]
-                break-words"
-              lang={t('hero.title.lang')}
-              style={{ 
-                wordBreak: 'break-word',
-                overflowWrap: 'break-word',
-                hyphens: t('hero.title.lang') === 'de' ? 'auto' : 'none'
-              }}
-            >
-              {/* Mobile version */}
-              <span className="sm:hidden block">
-                {t('hero.title.mobile')
-                  .split(' ')
-                  .map((word, index) => {
-                    const isHighlightWord = ['EINFACHER', 'EINSTIEG', 'SIMPLE', 'ENTRY'].includes(word);
-                    const isBreakWord = ['INTO', 'IN', 'UND'].includes(word);
-                    const isLongGermanWord = word === 'VERTRAUENSWÜRDIGER';
-                    
-                    let displayWord = word;
-                    if (isLongGermanWord) {
-                      displayWord = 'VERTRAUENS&shy;WÜRDIGER';
-                    }
-                    
-                    if (isHighlightWord) {
-                      return (
-                        <React.Fragment key={index}>
-                          {index > 0 && <br />}
-                          <span 
-                            className="inline-block"
-                            dangerouslySetInnerHTML={{ __html: `${displayWord} ` }}
-                          />
-                        </React.Fragment>
-                      );
-                    }
-                    
-                    if (isBreakWord) {
-                      return (
-                        <React.Fragment key={index}>
-                          <br />
-                          <span 
-                            className="inline-block"
-                            dangerouslySetInnerHTML={{ __html: `${displayWord}&nbsp; ` }} 
-                          />
-                        </React.Fragment>
-                      );
-                    }
-                    
-                    return (
-                      <span 
-                        key={index}
-                        className="inline-block"
-                        dangerouslySetInnerHTML={{ __html: `${displayWord}&nbsp; ` }}
-                      />
-                    );
-                  })}
-              </span>
-
-              {/* Desktop version */}
-              <span className="hidden sm:inline">
-                {t('hero.title.desktop')
-                  .split(' ')
-                  .map((word, index) => {
-                    const isHighlightWord = ['EINFACHER', 'EINSTIEG', 'SIMPLE', 'ENTRY'].includes(word);
-                    const isLongGermanWord = word === 'VERTRAUENSWÜRDIGER';
-                    
-                    let displayWord = word;
-                    if (isLongGermanWord) {
-                      displayWord = 'VERTRAUENS&shy;WÜRDIGER';
-                    }
-                    
-                    return (
-                      <span 
-                        key={index}
-                        dangerouslySetInnerHTML={{ __html: `${displayWord} ` }}
-                      />
-                    );
-                  })}
-              </span>
-            </h1>
-          </div>
-          
-          <p className="hidden min-[480px]:block text-left sm:text-center sm:mx-auto max-w-2xl text-base sm:text-lg md:text-xl lg:text-2xl mb-4 sm:mb-6 px-2 sm:px-0">
+      <section className="relative h-[100svh] flex items-center justify-center">
+        <Image
+          src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1500&q=80"
+          alt="Star filled sky with mountains"
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/70 to-gray-400/80" />
+        <div className="relative z-10 flex flex-col items-center text-center px-4">
+          <h1 className="font-black text-[clamp(2.5rem,8vw,5rem)] text-gray-900 mb-4 leading-tight">
+            {t('hero.title.simple')} <span className="text-accent-orange">{t('hero.title.highlight')}</span>, {t('hero.title.subtitle')}
+          </h1>
+          <p className="text-lg md:text-2xl text-gray-700 mb-8 max-w-2xl">
             {t('hero.subtitle')}
           </p>
-          <div className="w-full max-w-2xl flex justify-start sm:justify-center px-2 sm:px-0">
-            <Link href={`/${locale}/help`}>
-              <Button
-                variant="default"
-                size="lg"
-                className="text-lg px-8 py-4 group bg-white hover:bg-gray-100 text-black border-2 border-white shadow-lg backdrop-blur-sm"
-              >
-                {t('hero.cta')}
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Button>
-            </Link>
-          </div>
+          <Link href={`/${locale}/help`}>
+            <Button className="bg-accent-orange text-white px-8 py-4 text-lg shadow-lg hover:bg-accent-orange/90 group">
+              {t('hero.cta')}
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </Link>
         </div>
       </section>
 
@@ -376,7 +279,7 @@ export default function Home() {
                   </div>
                   <Button
                     type="submit"
-                    className="h-12 w-full text-lg bg-accent-orange hover:bg-accent-orange/90 text-black"
+                    className="h-12 w-full text-lg bg-accent-orange hover:bg-accent-orange/90 text-white"
                     disabled={isLoading}
                   >
                     {isLoading ? t('contact.form.sending') : t('contact.form.submit')}

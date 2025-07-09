@@ -4,12 +4,12 @@
   },
   "hero": {
     "title": {
-      "lang": "en",
-      "mobile": "YOUR SIMPLE ENTRY INTO DEFI",
-      "desktop": "YOUR TRUSTWORTHY AND SIMPLE ENTRY INTO DEFI"
+      "simple": "Next-Gen",
+      "highlight": "DeFi",
+      "subtitle": "Made Simple"
     },
-    "subtitle": "We bring the advantages of decentralization to traditional finance, from Switzerland to a global market.",
-    "cta": "Learn More"
+    "subtitle": "We bridge traditional and decentralized finance with Swiss transparency, security, and trust.",
+    "cta": "Discover Now"
   },
   "about": {
     "title": "Our Purpose & Vision",
