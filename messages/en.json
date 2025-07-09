@@ -81,24 +81,44 @@
     "questions": {
       "whatIs": {
         "question": "What is Plusplus?",
-        "answer": "Plusplus AG is a Swiss financial technology company that bridges traditional finance (TradFi) with decentralized finance (DeFi). We provide institutional-grade solutions that offer attractive yields on Swiss Franc deposits while ensuring full compliance with Swiss financial regulations."
+        "answer": "Plusplus AG is a Swiss fintech company based in Zug that bridges traditional finance with decentralized finance (DeFi). We make DeFi accessible to everyone by simplifying complex blockchain technology while maintaining Swiss standards for security, transparency, and regulatory compliance. Our mission is to unlock the benefits of DeFi—such as efficiency, transparency, and innovation—without requiring technical expertise from our users."
+      },
+      "products": {
+        "question": "What services and products does Plusplus offer?",
+        "answer": "We offer DeFi-powered financial products that combine the innovation of blockchain technology with the stability of traditional assets. Currently, this includes WBTC (Bitcoin-based) and ZCHF (Swiss Franc stablecoin) solutions for rental deposits and yield generation. Our product suite is designed to expand over time, offering more ways to access DeFi benefits through user-friendly, regulated services."
       },
       "howItWorks": {
-        "question": "How does it work?",
-        "answer": "Our platform converts your CHF deposits into Swiss Franc-backed stablecoins (ZCHF) which are then placed in high-yield DeFi protocols. The process is fully automated and secure, with smart contracts managing interest payments and withdrawals. You can withdraw your funds back to CHF at any time."
+        "question": "How does Plusplus work?",
+        "answer": "Plusplus acts as a bridge between you and the DeFi ecosystem. When you deposit funds, we handle the technical complexity of blockchain interactions, smart contract management, and protocol optimization on your behalf. Your assets are converted into appropriate digital formats (like WBTC or ZCHF) and deployed across vetted DeFi protocols to generate returns. You maintain access to your funds while we manage the technical infrastructure."
       },
-      "returns": {
-        "question": "What returns can I expect?",
-        "answer": "Our platform typically offers yields between 3-4% APY on Swiss Franc deposits, significantly higher than traditional savings accounts. These returns are generated through efficient DeFi protocols while maintaining the stability of the Swiss Franc."
+      "benefits": {
+        "question": "What are the benefits of using Plusplus?",
+        "answer": "DeFi offers several advantages over traditional finance: greater efficiency through automated smart contracts, complete transparency of operations, potential for higher returns, and 24/7 global accessibility. Plusplus makes these benefits accessible without requiring technical knowledge. You get DeFi innovation with Swiss regulatory oversight, professional risk management, institutional-grade security, and user-friendly interfaces that feel familiar to traditional banking."
       },
       "security": {
-        "question": "How secure is Plusplus?",
-        "answer": "Security is our top priority. We operate under full compliance with Swiss financial regulations (FINMA, VQF) and implement institutional-grade security measures. All smart contracts are thoroughly audited, and we maintain comprehensive insurance coverage for digital assets."
+        "question": "How are my funds secured?",
+        "answer": "Security is our top priority. We implement multiple layers of protection: regulated Swiss custody solutions, thoroughly audited smart contracts, multi-signature wallet controls, and comprehensive insurance coverage. Our technical infrastructure undergoes regular security assessments, and we maintain strict operational procedures. All DeFi protocols we use are carefully vetted for security and reliability."
       },
-      "getStarted": {
-        "question": "How can I get started?",
-        "answer": "Getting started is simple. Once our platform launches, you can create an account, complete the verification process, and make your first deposit. Our user-friendly interface guides you through each step, making it easy to start earning higher yields on your Swiss Franc deposits."
-      }
+      "risks": {
+        "question": "What are the risks of using Plusplus?",
+        "answer": "Like all financial products, DeFi carries inherent risks that we transparently communicate: smart contract vulnerabilities, market volatility affecting asset values, potential temporary illiquidity in underlying protocols, regulatory changes affecting DeFi operations, and technology risks such as network congestion. We actively manage these risks through diversification, continuous monitoring, insurance coverage, and working only with established, audited protocols. Detailed risk disclosures are provided for each product."
+      },
+      "access": {
+        "question": "How can I access my funds? Are there restrictions?",
+        "answer": "Fund accessibility depends on the specific product and underlying DeFi protocols. Generally, we strive to provide flexible access to your investments. Some products may have optimal withdrawal windows to maximize efficiency, while others offer near-instant access. Any restrictions or optimal timing are clearly communicated upfront. Emergency access procedures are available when needed, though they may involve additional costs to ensure rapid processing."
+      },
+      "regulation": {
+        "question": "Is Plusplus regulated?",
+        "answer": "Yes, Plusplus AG operates under Swiss financial regulations and maintains full compliance with applicable laws. We are registered in Zug, Switzerland, and follow guidelines for digital asset services. We implement know-your-customer (KYC) and anti-money laundering (AML) procedures."
+      },
+      "privacy": {
+        "question": "How is my privacy protected?",
+        "answer": "We are committed to protecting your privacy under Swiss data protection laws and GDPR. Personal data is collected only when necessary for service provision and regulatory compliance. We use secure, encrypted systems for data storage and transmission. Data is never sold to third parties and is only shared with regulated partners as required for service delivery. You maintain full control over your personal information and can request access, correction, or deletion at any time."
+      },
+      "support": {
+        "question": "How do I get started or get support?",
+        "answer": "Getting started is easy! For tenants: Contact your landlord and ask them to initiate the process with <a href=\"https://zinsli.com\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-black underline hover:text-accent-orange transition-colors\">Zinsli</a> to use our WBTC and ZCHF-based deposit products for your rental deposit. For landlords: Reach out to Zinsli directly to offer these innovative deposit solutions to your tenants. Need assistance connecting with Zinsli or have questions? Our Swiss-based team is here to help. Contact us at <a href=\"mailto:hello@plusplus.swiss\" class=\"text-black underline hover:text-accent-orange transition-colors\">hello@plusplus.swiss</a> or through our website contact form."
+            }
     }
   },
   "privacy": {

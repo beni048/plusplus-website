@@ -81,23 +81,43 @@
     "questions": {
       "whatIs": {
         "question": "Was ist Plusplus?",
-        "answer": "Plusplus AG ist ein Schweizer Fintech-Unternehmen, das traditionelle Finanzwelt (TradFi) mit dezentraler Finanzwelt (DeFi) verbindet. Wir bieten institutionelle Lösungen, die attraktive Renditen auf Schweizer Franken-Einlagen bieten und dabei die volle Compliance mit Schweizer Finanzvorschriften gewährleisten."
+        "answer": "Plusplus AG ist ein Schweizer Fintech-Unternehmen mit Sitz in Zug, das traditionelle Finanzwelt mit dezentraler Finanzwelt (DeFi) verbindet. Wir machen DeFi für alle zugänglich, indem wir komplexe Blockchain-Technologie vereinfachen und dabei Schweizer Standards für Sicherheit, Transparenz und regulatorische Compliance beibehalten. Unser Ziel ist es, die Vorteile von DeFi—wie Effizienz, Transparenz und Innovation—zu erschliessen, ohne dass technisches Fachwissen erforderlich ist."
+      },
+      "products": {
+        "question": "Welche Services und Produkte bietet Plusplus an?",
+        "answer": "Wir bieten DeFi-basierte Finanzprodukte, die Innovation der Blockchain-Technologie mit der Stabilität traditioneller Anlagen verbinden. Derzeit umfasst dies WBTC (Bitcoin-basierte) und ZCHF (Schweizer Franken Stablecoin) Lösungen für Mietkautionen und Rendite-Generierung. Unser Produktportfolio ist darauf ausgelegt, sich über die Zeit zu erweitern und mehr Möglichkeiten zu bieten, DeFi-Vorteile durch benutzerfreundliche, regulierte Services zu nutzen."
       },
       "howItWorks": {
-        "question": "Wie funktioniert es?",
-        "answer": "Unsere Plattform wandelt Ihre CHF-Einlagen in Schweizer Franken-backed Stablecoins (ZCHF) um, die dann in hochrentierlichen DeFi-Protokollen platziert werden. Der Prozess ist vollautomatisiert und sicher, mit Smart Contracts, die Zinszahlungen und Abhebungen verwalten. Sie können Ihre Mittel jederzeit zurück in CHF abheben."
+        "question": "Wie funktioniert Plusplus?",
+        "answer": "Plusplus fungiert als Brücke zwischen Ihnen und dem DeFi-Ökosystem. Wenn Sie Geld einzahlen, übernehmen wir die technische Komplexität von Blockchain-Interaktionen, Smart Contract-Management und Protokoll-Optimierung für Sie. Ihre Vermögenswerte werden in entsprechende digitale Formate (wie WBTC oder ZCHF) umgewandelt und in geprüften DeFi-Protokollen eingesetzt, um Renditen zu generieren. Sie behalten Zugang zu Ihren Mitteln, während wir die technische Infrastruktur verwalten."
       },
-      "returns": {
-        "question": "Welche Renditen kann ich erwarten?",
-        "answer": "Unsere Plattform bietet typischerweise Renditen zwischen 3-4% APY auf Schweizer Franken-Einlagen, deutlich höher als traditionelle Sparkonten. Diese Renditen werden durch effiziente DeFi-Protokolle generiert, während die Stabilität des Schweizer Frankens erhalten bleibt."
+      "benefits": {
+        "question": "Welche Vorteile bietet die Nutzung von Plusplus?",
+        "answer": "DeFi bietet mehrere Vorteile gegenüber traditioneller Finanzwelt: grössere Effizienz durch automatisierte Smart Contracts, vollständige Transparenz der Operationen, Potenzial für höhere Renditen und 24/7 globale Zugänglichkeit. Plusplus macht diese Vorteile zugänglich, ohne technisches Wissen zu erfordern. Sie erhalten DeFi-Innovation mit Schweizer regulatorischer Aufsicht, professionellem Risikomanagement, institutioneller Sicherheit und benutzerfreundlichen Oberflächen, die sich vertraut wie traditionelles Banking anfühlen."
       },
       "security": {
-        "question": "Wie sicher ist Plusplus?",
-        "answer": "Sicherheit ist unsere oberste Priorität. Wir operieren in voller Compliance mit Schweizer Finanzvorschriften (FINMA, VQF) und implementieren institutionelle Sicherheitsmassnahmen. Alle Smart Contracts sind gründlich auditiert, und wir unterhalten umfassende Versicherungsdeckung für digitale Vermögenswerte."
+        "question": "Wie sind meine Gelder gesichert?",
+        "answer": "Sicherheit ist unsere oberste Priorität. Wir implementieren mehrere Sicherheits-Layer: regulierte Schweizer Custody-Lösungen, gründlich auditierte Smart Contracts, Multi-Signatur-Wallet-Kontrollen und umfassende Versicherungsdeckung. Unsere technische Infrastruktur unterliegt regelmässigen Sicherheitsbewertungen, und wir halten strenge operative Verfahren ein. Alle DeFi-Protokolle, die wir verwenden, werden sorgfältig auf Sicherheit und Zuverlässigkeit geprüft."
       },
-      "getStarted": {
-        "question": "Wie kann ich beginnen?",
-        "answer": "Der Einstieg ist einfach. Sobald unsere Plattform startet, können Sie ein Konto erstellen, den Verifizierungsprozess abschliessen und Ihre erste Einzahlung vornehmen. Unsere benutzerfreundliche Oberfläche führt Sie durch jeden Schritt und macht es einfach, höhere Renditen auf Ihre Schweizer Franken-Einlagen zu erzielen."
+      "risks": {
+        "question": "Welche Risiken bestehen bei der Nutzung von Plusplus?",
+        "answer": "Wie alle Finanzprodukte birgt DeFi inhärente Risiken, die wir transparent kommunizieren: Smart Contract-Schwachstellen, Marktvolatilität, die Vermögenswerte beeinflusst, potenzielle temporäre Illiquidität in zugrunde liegenden Protokollen, regulatorische Änderungen, die DeFi-Operationen betreffen, und Technologierisiken wie Netzwerküberlastung. Wir managen diese Risiken aktiv durch Diversifikation, kontinuierliche Überwachung, Versicherungsschutz und Arbeit nur mit etablierten, auditierten Protokollen. Detaillierte Risikoaufklärungen werden für jedes Produkt bereitgestellt."
+      },
+      "access": {
+        "question": "Wie kann ich auf meine Gelder zugreifen? Gibt es Beschränkungen?",
+        "answer": "Die Verfügbarkeit von Geldern hängt vom spezifischen Produkt und den zugrunde liegenden DeFi-Protokollen ab. Generell streben wir flexiblen Zugang zu Ihren Investitionen an. Einige Produkte können optimale Abhebungsfenster haben, um Effizienz zu maximieren, während andere nahezu sofortigen Zugang bieten. Alle Beschränkungen oder optimale Zeiten werden vorab klar kommuniziert. Notfall-Zugangsverfahren sind bei Bedarf verfügbar, können aber zusätzliche Kosten für schnelle Bearbeitung verursachen."
+      },
+      "regulation": {
+        "question": "Ist Plusplus reguliert?",
+        "answer": "Ja, Plusplus AG operiert unter Schweizer Finanzvorschriften und hält vollständige Compliance mit anwendbaren Gesetzen ein. Wir sind in Zug, Schweiz registriert und folgen Richtlinien für digitale Asset-Services. Wir implementieren umfassende Know-Your-Customer (KYC) und Anti-Geldwäsche (AML) Verfahren."
+      },
+      "privacy": {
+        "question": "Wie wird meine Privatsphäre geschützt?",
+        "answer": "Wir verpflichten uns zum Schutz Ihrer Privatsphäre unter Schweizer Datenschutzgesetzen und DSGVO. Persönliche Daten werden nur erhoben, wenn für Service-Bereitstellung und regulatorische Compliance notwendig. Wir verwenden sichere, verschlüsselte Systeme für Datenspeicherung und -übertragung. Daten werden niemals an Dritte verkauft und nur mit regulierten Partnern geteilt, wie für Service-Bereitstellung erforderlich. Sie behalten vollständige Kontrolle über Ihre persönlichen Informationen und können jederzeit Zugang, Korrektur oder Löschung beantragen."
+      },
+      "support": {
+        "question": "Wie fange ich an oder erhalte Support?",
+        "answer": "Der Einstieg ist einfach! Für Mieter: Kontaktieren Sie Ihren Vermieter und bitten Sie ihn, den Prozess mit <a href=\"https://zinsli.com\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-black underline hover:text-accent-orange transition-colors\">Zinsli</a> zu initiieren, um unsere WBTC- und ZCHF-basierten Kautionsprodukte für Ihre Mietkaution zu nutzen. Für Vermieter: Wenden Sie sich direkt an Zinsli, um diese innovativen Kautionslösungen Ihren Mietern anzubieten. Benötigen Sie Hilfe bei der Verbindung mit Zinsli oder haben Fragen? Unser Schweizer Team hilft gerne. Kontaktieren Sie uns unter <a href=\"mailto:hello@plusplus.swiss\" class=\"text-black underline hover:text-accent-orange transition-colors\">hello@plusplus.swiss</a> oder über das Kontaktformular unserer Website."
       }
     }
   },
