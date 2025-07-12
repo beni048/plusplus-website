@@ -96,10 +96,14 @@ export default function Home() {
               {t('about.paragraph1')}
             </p>
             <p className="text-lg leading-relaxed text-neutral-dark">
-              {t('about.paragraph2')}
+              <span dangerouslySetInnerHTML={{ 
+                __html: t('about.paragraph2').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') 
+              }} />
             </p>
             <p className="text-lg leading-relaxed text-neutral-dark">
-              {t('about.paragraph3')}
+              <span dangerouslySetInnerHTML={{ 
+                __html: t('about.paragraph3').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') 
+              }} />
             </p>
           </div>
         </div>
