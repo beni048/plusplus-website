@@ -181,7 +181,7 @@ export default function Home() {
               {
                 name: "DFX.swiss",
                 descriptionKey: "dfx",
-                logo: "/images/partners/dfx.avif",
+                logo: "/images/partners/dfx.svg",
                 link: "https://dfx.swiss",
               },
               {
