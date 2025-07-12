@@ -169,31 +169,31 @@ export default function Home() {
               {
                 name: "Zinsli.com",
                 descriptionKey: "zinsli",
-                logo: "/images/partners/zinsli.jpg",
+                logo: "/images/partners/zinsli.svg",
                 link: "https://zinsli.com",
               },
               {
                 name: "Frankencoin.com",
                 descriptionKey: "frankencoin",
-                logo: "/images/partners/frankencoin.webp",
+                logo: "/images/partners/frankencoin.png",
                 link: "https://frankencoin.com",
               },
               {
                 name: "DFX.swiss",
                 descriptionKey: "dfx",
-                logo: "/images/partners/dfx.jpg",
+                logo: "/images/partners/dfx.avif",
                 link: "https://dfx.swiss",
               },
               {
                 name: "Aktionariat",
                 descriptionKey: "aktionariat",
-                logo: "/images/partners/aktionariat.svg",
+                logo: "/images/partners/aktionariat.webp",
                 link: "https://aktionariat.com",
               },
               {
                 name: "Bitcoin Suisse",
                 descriptionKey: "bitcoinsuisse",
-                logo: "/images/partners/bitcoin-suisse.jpg",
+                logo: "/images/partners/bitcoin-suisse.png",
                 link: "https://bitcoinsuisse.com",
               },
             ].map((partner) => (
