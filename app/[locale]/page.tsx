@@ -98,6 +98,9 @@ export default function Home() {
             <p className="text-lg leading-relaxed text-neutral-dark">
               {t('about.paragraph2')}
             </p>
+            <p className="text-lg leading-relaxed text-neutral-dark">
+              {t('about.paragraph3')}
+            </p>
           </div>
         </div>
       </section>
