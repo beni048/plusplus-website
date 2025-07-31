@@ -10,6 +10,10 @@ export default function GoogleAnalytics() {
 
   useEffect(() => {
     if (!GA_TRACKING_ID) return;
+    
+    // Check if analytics is enabled
+    const analyticsEnabled = process.env.NEXT_PUBLIC_ANALYTICS_ENABLED === 'true';
+    if (!analyticsEnabled) return;
 
     // Check if user has consented to cookies
     const consent = localStorage.getItem('cookie-consent');
@@ -17,20 +21,16 @@ export default function GoogleAnalytics() {
     if (consent === 'accepted') {
       // Update consent for analytics
       updateConsent(true);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (!GA_TRACKING_ID) return;
-
-    // Track page views when pathname changes
-    const consent = localStorage.getItem('cookie-consent');
-    if (consent === 'accepted') {
-      trackPageView(pathname);
+      // Send initial page view after consent update
+      setTimeout(() => trackPageView(pathname), 100);
+    } else if (consent === 'declined') {
+      // Explicitly update consent to denied
+      updateConsent(false);
     }
   }, [pathname]);
 
-  if (!GA_TRACKING_ID) {
+  // Don't render if analytics is disabled or no tracking ID
+  if (!GA_TRACKING_ID || process.env.NEXT_PUBLIC_ANALYTICS_ENABLED !== 'true') {
     return null;
   }
 
@@ -77,7 +77,7 @@ export default function GoogleAnalytics() {
             });
             
             ${process.env.NEXT_PUBLIC_GA_DEBUG_MODE === 'true' ? 
-              "console.log('Google Analytics initialized with privacy-first settings');" : 
+              "console.log('Google Analytics initialized with GA ID: ${GA_TRACKING_ID}');" : 
               ""
             }
           `,

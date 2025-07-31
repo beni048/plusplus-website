@@ -8,9 +8,27 @@ declare global {
   }
 }
 
+// Check if analytics is active (consent given and not opted out AND enabled)
+export const isAnalyticsActive = (): boolean => {
+  if (typeof window === 'undefined') return false;
+  
+  // Check if analytics is enabled in environment
+  const analyticsEnabled = process.env.NEXT_PUBLIC_ANALYTICS_ENABLED === 'true';
+  if (!analyticsEnabled) return false;
+  
+  const consent = localStorage.getItem('cookie-consent');
+  const optOut = localStorage.getItem('ga-opt-out');
+  
+  return consent === 'accepted' && optOut !== 'true';
+};
+
 // Update consent when user accepts/rejects cookies
 export const updateConsent = (granted: boolean) => {
   if (!GA_TRACKING_ID || typeof window === 'undefined') return;
+  
+  // Only update if analytics is enabled
+  const analyticsEnabled = process.env.NEXT_PUBLIC_ANALYTICS_ENABLED === 'true';
+  if (!analyticsEnabled) return;
 
   window.gtag('consent', 'update', {
     'analytics_storage': granted ? 'granted' : 'denied',
@@ -27,6 +45,9 @@ export const updateConsent = (granted: boolean) => {
 // Track page views manually
 export const trackPageView = (url: string, title?: string) => {
   if (!GA_TRACKING_ID || typeof window === 'undefined') return;
+  
+  // Only track if analytics is enabled and active
+  if (!isAnalyticsActive()) return;
 
   window.gtag('config', GA_TRACKING_ID, {
     page_path: url,
@@ -54,16 +75,6 @@ export const trackEvent = (action: string, category: string, label?: string, val
   if (process.env.NEXT_PUBLIC_GA_DEBUG_MODE === 'true') {
     console.log('Event tracked:', { action, category, label, value });
   }
-};
-
-// Check if analytics is active (consent given and not opted out)
-export const isAnalyticsActive = (): boolean => {
-  if (typeof window === 'undefined') return false;
-  
-  const consent = localStorage.getItem('cookie-consent');
-  const optOut = localStorage.getItem('ga-opt-out');
-  
-  return consent === 'accepted' && optOut !== 'true';
 };
 
 // User opt-out functionality

@@ -1,5 +1,7 @@
 {
-  "version": 3,
+  "sortedMiddleware": [
+    "/"
+  ],
   "middleware": {
     "/": {
       "files": [
@@ -15,18 +17,9 @@
         }
       ],
       "wasm": [],
-      "assets": [],
-      "env": {
-        "__NEXT_BUILD_ID": "development",
-        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "OkEO/gVhKae2xpkPjW8qUTgG19StdntZJfbJ4Pm0PRg=",
-        "__NEXT_PREVIEW_MODE_ID": "51e0e5f352f238954df222b8155eab93",
-        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "7dce4801ebeb161f1c8e4b89e24ba1dcdd7a0f8c0b25d5eba3452b9de83a4cad",
-        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "411c9927cf8958b4cee51f6fa767955357285e36e48d0ed53ff1d48ddb1f7527"
-      }
+      "assets": []
     }
   },
   "functions": {},
-  "sortedMiddleware": [
-    "/"
-  ]
+  "version": 2
 }
