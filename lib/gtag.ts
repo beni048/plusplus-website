@@ -1,20 +1,26 @@
-// lib/gtag.ts
+// Google Analytics 4 utilities with GDPR compliance
 export const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID;
 
+// Environment configuration
+const ANALYTICS_ENABLED = process.env.NEXT_PUBLIC_ANALYTICS_ENABLED === 'true';
+const GA_DEBUG_MODE = process.env.NEXT_PUBLIC_GA_DEBUG_MODE === 'true';
+
+// Global gtag interface
 declare global {
   interface Window {
     gtag: (...args: any[]) => void;
-    [key: string]: any; // Allow dynamic property access
+    [key: string]: any;
   }
 }
 
-// Check if analytics is active (consent given and not opted out AND enabled)
+// Check if analytics is properly configured and enabled
+export const isAnalyticsEnabled = (): boolean => {
+  return Boolean(GA_TRACKING_ID && ANALYTICS_ENABLED);
+};
+
+// Check if user has consented and analytics is active
 export const isAnalyticsActive = (): boolean => {
-  if (typeof window === 'undefined') return false;
-  
-  // Check if analytics is enabled in environment
-  const analyticsEnabled = process.env.NEXT_PUBLIC_ANALYTICS_ENABLED === 'true';
-  if (!analyticsEnabled) return false;
+  if (typeof window === 'undefined' || !isAnalyticsEnabled()) return false;
   
   const consent = localStorage.getItem('cookie-consent');
   const optOut = localStorage.getItem('ga-opt-out');
@@ -23,30 +29,23 @@ export const isAnalyticsActive = (): boolean => {
 };
 
 // Update consent when user accepts/rejects cookies
-export const updateConsent = (granted: boolean) => {
-  if (!GA_TRACKING_ID || typeof window === 'undefined') return;
-  
-  // Only update if analytics is enabled
-  const analyticsEnabled = process.env.NEXT_PUBLIC_ANALYTICS_ENABLED === 'true';
-  if (!analyticsEnabled) return;
+export const updateConsent = (granted: boolean): void => {
+  if (!isAnalyticsEnabled() || typeof window === 'undefined') return;
 
   window.gtag('consent', 'update', {
     'analytics_storage': granted ? 'granted' : 'denied',
-    'ad_storage': 'denied', // Always deny advertising storage for GDPR compliance
+    'ad_storage': 'denied', // Always denied for GDPR compliance
     'ad_user_data': 'denied',
     'ad_personalization': 'denied',
   });
 
-  if (process.env.NEXT_PUBLIC_GA_DEBUG_MODE === 'true') {
-    console.log(`Analytics consent updated: ${granted ? 'granted' : 'denied'}`);
+  if (GA_DEBUG_MODE) {
+    console.log(`Analytics consent: ${granted ? 'granted' : 'denied'}`);
   }
 };
 
-// Track page views manually
-export const trackPageView = (url: string, title?: string) => {
-  if (!GA_TRACKING_ID || typeof window === 'undefined') return;
-  
-  // Only track if analytics is enabled and active
+// Track page views manually for better control
+export const trackPageView = (url: string, title?: string): void => {
   if (!isAnalyticsActive()) return;
 
   window.gtag('config', GA_TRACKING_ID, {
@@ -55,63 +54,55 @@ export const trackPageView = (url: string, title?: string) => {
     page_location: window.location.href,
   });
 
-  if (process.env.NEXT_PUBLIC_GA_DEBUG_MODE === 'true') {
-    console.log('Page view tracked:', { url, title });
+  if (GA_DEBUG_MODE) {
+    console.log('Page view tracked:', url);
   }
 };
 
-// Track custom events with privacy considerations
-export const trackEvent = (action: string, category: string, label?: string, value?: number) => {
-  if (!GA_TRACKING_ID || typeof window === 'undefined') return;
+// Track custom events with privacy protection
+export const trackEvent = (action: string, category: string, label?: string, value?: number): void => {
+  if (!isAnalyticsActive()) return;
 
   window.gtag('event', action, {
     event_category: category,
     event_label: label,
     value: value,
-    // Ensure no personal data is sent
-    non_interaction: true,
+    non_interaction: true, // Prevent bounce rate impact
   });
 
-  if (process.env.NEXT_PUBLIC_GA_DEBUG_MODE === 'true') {
+  if (GA_DEBUG_MODE) {
     console.log('Event tracked:', { action, category, label, value });
   }
 };
 
-// User opt-out functionality
-export const optOutAnalytics = () => {
+// User opt-out functionality (for privacy controls)
+export const optOutAnalytics = (): void => {
   localStorage.setItem('ga-opt-out', 'true');
   
   if (typeof window !== 'undefined' && GA_TRACKING_ID) {
-    // Disable Google Analytics
     window[`ga-disable-${GA_TRACKING_ID}`] = true;
-    
-    // Update consent to denied
-    window.gtag('consent', 'update', {
-      'analytics_storage': 'denied',
-    });
+    updateConsent(false);
   }
   
-  if (process.env.NEXT_PUBLIC_GA_DEBUG_MODE === 'true') {
+  if (GA_DEBUG_MODE) {
     console.log('User opted out of analytics');
   }
 };
 
-// User opt-in functionality
-export const optInAnalytics = () => {
+// User opt-in functionality (for privacy controls)
+export const optInAnalytics = (): void => {
   localStorage.removeItem('ga-opt-out');
   
   if (typeof window !== 'undefined' && GA_TRACKING_ID) {
-    // Enable Google Analytics
     window[`ga-disable-${GA_TRACKING_ID}`] = false;
     
-    // Update consent if cookies are accepted
     const consent = localStorage.getItem('cookie-consent');
     if (consent === 'accepted') {
       updateConsent(true);
     }
   }
   
-  if (process.env.NEXT_PUBLIC_GA_DEBUG_MODE === 'true') {
+  if (GA_DEBUG_MODE) {
     console.log('User opted in to analytics');
   }
 };
@@ -122,20 +113,20 @@ export const getOptOutStatus = (): boolean => {
   return localStorage.getItem('ga-opt-out') === 'true';
 };
 
-// GDPR-compliant data deletion request
-export const requestDataDeletion = () => {
-  // Clear all local analytics data
+// GDPR-compliant data deletion
+export const requestDataDeletion = (): void => {
   localStorage.removeItem('cookie-consent');
   localStorage.setItem('ga-opt-out', 'true');
   
-  // Clear any GA cookies
-  if (typeof document !== 'undefined') {
-    document.cookie = '_ga=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/;';
-    document.cookie = '_ga_' + GA_TRACKING_ID?.slice(2) + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/;';
-    document.cookie = '_gid=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/;';
+  // Clear GA cookies
+  if (typeof document !== 'undefined' && GA_TRACKING_ID) {
+    const domain = window.location.hostname;
+    document.cookie = `_ga=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=${domain}`;
+    document.cookie = `_ga_${GA_TRACKING_ID.slice(2)}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=${domain}`;
+    document.cookie = `_gid=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=${domain}`;
   }
   
-  if (process.env.NEXT_PUBLIC_GA_DEBUG_MODE === 'true') {
-    console.log('Data deletion requested - all local data cleared');
+  if (GA_DEBUG_MODE) {
+    console.log('Analytics data deletion completed');
   }
 };

@@ -1,33 +1,21 @@
 "use client";
 
-import React, { useEffect, useCallback } from 'react';
-import { usePathname } from 'next/navigation';
-import { trackEvent, trackPageView, isAnalyticsActive } from '@/lib/gtag';
+import { useCallback } from 'react';
+import { trackEvent, isAnalyticsActive } from '@/lib/gtag';
 
-// Custom hook for analytics tracking
+// Simplified analytics hook for event tracking
 export function useAnalytics() {
-  const pathname = usePathname();
-
-  // Track page views
-  useEffect(() => {
-    if (isAnalyticsActive()) {
-      trackPageView(pathname, document.title);
-    }
-  }, [pathname]);
-
-  // Custom event tracking function
+  // Generic event tracking function
   const trackCustomEvent = useCallback((
     action: string, 
     category: string, 
     label?: string, 
     value?: number
   ) => {
-    if (isAnalyticsActive()) {
-      trackEvent(action, category, label, value);
-    }
+    trackEvent(action, category, label, value);
   }, []);
 
-  // Specific tracking functions for common events
+  // Pre-configured tracking functions for common events
   const trackContactFormSubmit = useCallback(() => {
     trackCustomEvent('submit', 'contact_form', 'header');
   }, [trackCustomEvent]);
@@ -62,25 +50,4 @@ export function useAnalytics() {
     trackPrivacyAction,
     isActive: isAnalyticsActive(),
   };
-}
-
-// Higher-order component to add analytics tracking to any component
-export function withAnalytics<T extends Record<string, any>>(
-  WrappedComponent: React.ComponentType<T>,
-  eventCategory: string
-): React.ComponentType<T> {
-  const AnalyticsWrapper = (props: T) => {
-    const { trackCustomEvent } = useAnalytics();
-
-    const enhancedProps = {
-      ...props,
-      onAnalyticsEvent: (action: string, label?: string, value?: number) => {
-        trackCustomEvent(action, eventCategory, label, value);
-      },
-    };
-
-    return React.createElement(WrappedComponent, enhancedProps);
-  };
-
-  return AnalyticsWrapper;
 }

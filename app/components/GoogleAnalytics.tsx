@@ -3,56 +3,54 @@
 import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Script from 'next/script';
-import { trackPageView, updateConsent, GA_TRACKING_ID } from '@/lib/gtag';
+import { trackPageView, updateConsent, GA_TRACKING_ID, isAnalyticsEnabled } from '@/lib/gtag';
 
 export default function GoogleAnalytics() {
   const pathname = usePathname();
 
+  // Handle consent and page tracking when pathname changes
   useEffect(() => {
-    if (!GA_TRACKING_ID) return;
+    // Early return if analytics not configured or disabled
+    if (!isAnalyticsEnabled()) return;
     
-    // Check if analytics is enabled
-    const analyticsEnabled = process.env.NEXT_PUBLIC_ANALYTICS_ENABLED === 'true';
-    if (!analyticsEnabled) return;
-
-    // Check if user has consented to cookies
+    // Get current consent status from localStorage
     const consent = localStorage.getItem('cookie-consent');
     
+    // Update analytics consent based on user choice
     if (consent === 'accepted') {
-      // Update consent for analytics
       updateConsent(true);
-      // Send initial page view after consent update
+      // Track page view after consent granted (small delay ensures gtag is ready)
       setTimeout(() => trackPageView(pathname), 100);
     } else if (consent === 'declined') {
-      // Explicitly update consent to denied
       updateConsent(false);
     }
   }, [pathname]);
 
-  // Don't render if analytics is disabled or no tracking ID
-  if (!GA_TRACKING_ID || process.env.NEXT_PUBLIC_ANALYTICS_ENABLED !== 'true') {
+  // Don't render scripts if analytics disabled or not configured
+  if (!isAnalyticsEnabled()) {
     return null;
   }
 
   return (
     <>
-      {/* Load gtag.js script */}
+      {/* Load Google Analytics gtag.js library */}
       <Script
-        strategy="afterInteractive"
+        strategy="beforeInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
       />
       
-      {/* Initialize gtag with consent mode */}
+      {/* Initialize gtag with privacy-first consent mode */}
       <Script
         id="gtag-init"
-        strategy="afterInteractive"
+        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{
           __html: `
+            // Initialize dataLayer and gtag function
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             window.gtag = gtag;
             
-            // Initialize with consent mode v2 (privacy-first)
+            // Set consent defaults to 'denied' for GDPR compliance
             gtag('consent', 'default', {
               'analytics_storage': 'denied',
               'ad_storage': 'denied',
@@ -63,22 +61,22 @@ export default function GoogleAnalytics() {
               'wait_for_update': 500,
             });
             
-            // Initialize Google Analytics
+            // Initialize Google Analytics with current timestamp
             gtag('js', new Date());
             
             // Configure GA4 with privacy settings
             gtag('config', '${GA_TRACKING_ID}', {
               page_title: document.title,
               page_location: window.location.href,
-              anonymize_ip: ${process.env.NEXT_PUBLIC_GA_ANONYMIZE_IP === 'true'},
+              anonymize_ip: true,
               allow_google_signals: false,
               allow_ad_personalization_signals: false,
-              send_page_view: false,
+              send_page_view: false, // We handle page views manually
             });
             
-            ${process.env.NEXT_PUBLIC_GA_DEBUG_MODE === 'true' ? 
-              "console.log('Google Analytics initialized with GA ID: ${GA_TRACKING_ID}');" : 
-              ""
+            // Debug logging if enabled in development
+            if (typeof window !== 'undefined' && window.location.hostname === 'localhost') {
+              console.log('GA4 initialized:', '${GA_TRACKING_ID}');
             }
           `,
         }}
