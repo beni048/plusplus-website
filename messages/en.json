@@ -64,6 +64,7 @@
   "footer": {
     "copyright": "© Plusplus AG 2025 | Zug, Switzerland",
     "privacy": "Privacy Policy",
+    "privacySettings": "Privacy Settings",
     "linkedin": "Follow us on LinkedIn"
   },
   "cookies": {
@@ -71,7 +72,53 @@
     "description": "We use cookies to improve your experience on our website.",
     "learnMore": "Learn more",
     "accept": "Accept All",
-    "decline": "Decline"
+    "decline": "Decline",
+    "acceptAll": "Accept All",
+    "declineAll": "Decline All",
+    "customize": "Customize",
+    "savePreferences": "Save Preferences",
+    "back": "Back",
+    "cookieSettings": "Cookie Settings",
+    "necessary": "Necessary Cookies",
+    "necessaryDescription": "Essential for basic website functionality and security. Cannot be disabled.",
+    "analytics": "Analytics Cookies",
+    "analyticsDescription": "Help us understand how visitors use our website to improve user experience.",
+    "marketing": "Marketing Cookies",
+    "marketingDescription": "Used for advertising and remarketing. Currently disabled for privacy compliance."
+  },
+  "privacy": {
+    "controlsTitle": "Privacy Controls",
+    "pageSubtitle": "Manage your privacy preferences and control how your data is used on our website.",
+    "aboutAnalyticsTitle": "About Our Analytics",
+    "aboutAnalyticsDescription": "We use Google Analytics 4 with privacy-first configuration to understand how visitors use our website. Our implementation includes:",
+    "consentModeLabel": "Consent Mode v2",
+    "consentModeFeature": "Analytics only runs with your explicit consent",
+    "ipAnonymizationLabel": "IP Anonymization",
+    "ipAnonymizationFeature": "Your IP address is anonymized before processing",
+    "noAdvertisingLabel": "No Advertising",
+    "noAdvertisingFeature": "We don't use advertising or remarketing features",
+    "dataRetentionLabel": "Data Retention",
+    "dataRetentionFeature": "Analytics data is automatically deleted after 14 months",
+    "gdprComplianceLabel": "GDPR Compliance",
+    "gdprComplianceFeature": "Full compliance with EU privacy regulations",
+    "optOutInfo": "You can opt out of analytics at any time, and we provide tools to delete all your data if you wish to exercise your right to be forgotten.",
+    "cookieConsent": "Cookie Consent",
+    "cookieConsentDescription": "Allow cookies for enhanced functionality and analytics",
+    "analyticsTracking": "Analytics Tracking",
+    "analyticsTrackingDescription": "Allow anonymous analytics to help us improve our website",
+    "deleteData": "Delete My Data",
+    "deleteDataDescription": "Remove all stored data and tracking preferences",
+    "deleteDataButton": "Delete Data",
+    "deleteDataConfirmTitle": "Delete All Data?",
+    "deleteDataConfirmDescription": "This will permanently delete all your stored preferences and tracking data. This action cannot be undone.",
+    "cancel": "Cancel",
+    "confirmDelete": "Delete All Data",
+    "dataDeletionConfirmation": "All your data has been deleted successfully.",
+    "privacyInfo": "Our Privacy Commitment",
+    "privacyPoint1": "IP addresses are anonymized before processing",
+    "privacyPoint2": "Data retention limited to 14 months maximum",
+    "privacyPoint3": "No advertising or remarketing tracking",
+    "privacyPoint4": "Full control over your data and preferences"
   },
   "language": {
     "en": "English",
@@ -122,7 +169,7 @@
             }
     }
   },
-  "privacy": {
+  "privacyPolicy": {
     "title": "Privacy Policy",
     "intro": "This Privacy Policy explains the nature, scope, and purpose of processing personal data on www.plusplus.swiss (the \"Website\"). For definitions such as \"personal data\" and \"processing,\" please refer to Article 4 of the GDPR and Article 3 of the Swiss Federal Data Protection Act (nFADP).",
     "section1": {

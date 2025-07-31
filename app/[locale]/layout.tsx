@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CookieConsentBanner from '../components/CookieConsent';
+import GoogleAnalytics from '../components/GoogleAnalytics';
 
 const locales = ['en', 'de'];
 
@@ -31,6 +32,7 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider messages={messages} locale={locale}>
+      <GoogleAnalytics />
       <Navbar />
       {children}
       <Footer />

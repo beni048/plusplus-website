@@ -15,12 +15,20 @@ export default function Footer() {
         <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
           <div className="flex flex-col items-center space-y-2 md:items-start">
             <p className="text-lg">{t('copyright')}</p>
-            <Link
-              href={`/${locale}/privacy-policy`}
-              className="text-sm text-neutral-white transition-colors hover:text-accent-orange underline"
-            >
-              {t('privacy')}
-            </Link>
+            <div className="flex space-x-4">
+              <Link
+                href={`/${locale}/privacy-policy`}
+                className="text-sm text-neutral-white transition-colors hover:text-accent-orange underline"
+              >
+                {t('privacy')}
+              </Link>
+              <Link
+                href={`/${locale}/privacy-settings`}
+                className="text-sm text-neutral-white transition-colors hover:text-accent-orange underline"
+              >
+                {t('privacySettings')}
+              </Link>
+            </div>
           </div>
           <div className="flex flex-col items-center space-y-4 md:items-end">
             <a

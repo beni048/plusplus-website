@@ -64,6 +64,7 @@
   "footer": {
     "copyright": "© Plusplus AG 2025 | Zug, Schweiz",
     "privacy": "Datenschutzerklärung",
+    "privacySettings": "Privatsphäre Einstellungen",
     "linkedin": "Folgen Sie uns auf LinkedIn"
   },
   "cookies": {
@@ -71,7 +72,53 @@
     "description": "Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern.",
     "learnMore": "Mehr erfahren",
     "accept": "Alle akzeptieren",
-    "decline": "Ablehnen"
+    "decline": "Ablehnen",
+    "acceptAll": "Alle akzeptieren",
+    "declineAll": "Alle ablehnen",
+    "customize": "Anpassen",
+    "savePreferences": "Einstellungen speichern",
+    "back": "Zurück",
+    "cookieSettings": "Cookie-Einstellungen",
+    "necessary": "Notwendige Cookies",
+    "necessaryDescription": "Erforderlich für grundlegende Website-Funktionen und Sicherheit. Kann nicht deaktiviert werden.",
+    "analytics": "Analyse-Cookies",
+    "analyticsDescription": "Helfen uns zu verstehen, wie Besucher unsere Website nutzen, um die Benutzererfahrung zu verbessern.",
+    "marketing": "Marketing-Cookies",
+    "marketingDescription": "Verwendet für Werbung und Remarketing. Derzeit für Datenschutz-Compliance deaktiviert."
+  },
+  "privacy": {
+    "controlsTitle": "Datenschutz-Kontrollen",
+    "pageSubtitle": "Verwalten Sie Ihre Datenschutzpräferenzen und kontrollieren Sie, wie Ihre Daten auf unserer Website verwendet werden.",
+    "aboutAnalyticsTitle": "Über unsere Analysen",
+    "aboutAnalyticsDescription": "Wir verwenden Google Analytics 4 mit datenschutzorientierter Konfiguration, um zu verstehen, wie Besucher unsere Website nutzen. Unsere Implementierung umfasst:",
+    "consentModeLabel": "Einwilligungsmodus v2",
+    "consentModeFeature": "Analysen laufen nur mit Ihrer ausdrücklichen Einwilligung",
+    "ipAnonymizationLabel": "IP-Anonymisierung",
+    "ipAnonymizationFeature": "Ihre IP-Adresse wird vor der Verarbeitung anonymisiert",
+    "noAdvertisingLabel": "Keine Werbung",
+    "noAdvertisingFeature": "Wir verwenden keine Werbe- oder Remarketing-Funktionen",
+    "dataRetentionLabel": "Datenspeicherung",
+    "dataRetentionFeature": "Analysedaten werden automatisch nach 14 Monaten gelöscht",
+    "gdprComplianceLabel": "DSGVO-Konformität",
+    "gdprComplianceFeature": "Vollständige Einhaltung der EU-Datenschutzbestimmungen",
+    "optOutInfo": "Sie können jederzeit die Analyse deaktivieren und wir stellen Ihnen Werkzeuge zur Verfügung, um alle Ihre Daten zu löschen, falls Sie Ihr Recht auf Vergessenwerden ausüben möchten.",
+    "cookieConsent": "Cookie-Einwilligung",
+    "cookieConsentDescription": "Cookies für erweiterte Funktionalität und Analyse erlauben",
+    "analyticsTracking": "Analyse-Tracking",
+    "analyticsTrackingDescription": "Anonyme Analyse erlauben, um unsere Website zu verbessern",
+    "deleteData": "Meine Daten löschen",
+    "deleteDataDescription": "Alle gespeicherten Daten und Tracking-Präferenzen entfernen",
+    "deleteDataButton": "Daten löschen",
+    "deleteDataConfirmTitle": "Alle Daten löschen?",
+    "deleteDataConfirmDescription": "Dies wird dauerhaft alle Ihre gespeicherten Präferenzen und Tracking-Daten löschen. Diese Aktion kann nicht rückgängig gemacht werden.",
+    "cancel": "Abbrechen",
+    "confirmDelete": "Alle Daten löschen",
+    "dataDeletionConfirmation": "Alle Ihre Daten wurden erfolgreich gelöscht.",
+    "privacyInfo": "Unser Datenschutz-Engagement",
+    "privacyPoint1": "IP-Adressen werden vor der Verarbeitung anonymisiert",
+    "privacyPoint2": "Datenspeicherung auf maximal 14 Monate begrenzt",
+    "privacyPoint3": "Kein Werbe- oder Remarketing-Tracking",
+    "privacyPoint4": "Vollständige Kontrolle über Ihre Daten und Präferenzen"
   },
   "language": {
     "en": "English",
@@ -122,7 +169,7 @@
       }
     }
   },
-  "privacy": {
+  "privacyPolicy": {
     "title": "Datenschutzerklärung",
     "intro": "Diese Datenschutzerklärung erläutert Art, Umfang und Zweck der Verarbeitung personenbezogener Daten auf www.plusplus.swiss (die \"Website\"). Für Definitionen wie \"personenbezogene Daten\" und \"Verarbeitung\" siehe Art. 4 DSGVO und Art. 3 des Schweizer Bundesdatenschutzgesetzes (nDSG).",
     "section1": {
