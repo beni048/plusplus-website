@@ -164,7 +164,7 @@ export function useAnalytics() {
     trackPageSection,
     
     // Legacy support
-    trackCustomEvent: trackCustomEventLegacy,
+    trackCustomEventLegacy,
     
     // Context information
     isActive: isAnalyticsActive(),
