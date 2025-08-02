@@ -68,23 +68,13 @@
     "linkedin": "Follow us on LinkedIn"
   },
   "cookies": {
-    "title": "Cookie Settings",
-    "description": "We use cookies to improve your experience on our website.",
+    "description": "We use cookies to improve your experience.",
     "learnMore": "Learn more",
-    "accept": "Accept All",
-    "decline": "Decline",
-    "acceptAll": "Accept All",
-    "declineAll": "Decline All",
-    "customize": "Customize",
-    "savePreferences": "Save Preferences",
-    "back": "Back",
-    "cookieSettings": "Cookie Settings",
-    "necessary": "Necessary Cookies",
-    "necessaryDescription": "Essential for basic website functionality and security. Cannot be disabled.",
-    "analytics": "Analytics Cookies",
-    "analyticsDescription": "Help us understand how visitors use our website to improve user experience.",
-    "marketing": "Marketing Cookies",
-    "marketingDescription": "Used for advertising and remarketing. Currently disabled for privacy compliance."
+    "acceptOptional": "Accept All",
+    "declineOptional": "Essential Only",
+    "customize": "Options",
+    "savePreferences": "Save",
+    "back": "Back"
   },
   "privacy": {
     "controlsTitle": "Privacy Controls",
@@ -102,8 +92,13 @@
     "gdprComplianceLabel": "GDPR Compliance",
     "gdprComplianceFeature": "Full compliance with EU privacy regulations",
     "optOutInfo": "You can opt out of analytics at any time, and we provide tools to delete all your data if you wish to exercise your right to be forgotten.",
-    "cookieConsent": "Cookie Consent",
+    "cookieConsent": "Cookie Consent (Legacy)",
     "cookieConsentDescription": "Allow cookies for enhanced functionality and analytics",
+    "optionalCookieConsent": "Optional Cookies Consent", 
+    "optionalCookieConsentDescription": "Enable optional cookies for analytics and enhanced functionality",
+    "necessaryCookies": "Necessary Cookies",
+    "necessaryCookiesDescription": "Essential cookies required for basic website functionality and security. These are always active and cannot be disabled under GDPR/ePrivacy Directive.",
+    "alwaysActive": "Always Active",
     "analyticsTracking": "Analytics Tracking",
     "analyticsTrackingDescription": "Allow anonymous analytics to help us improve our website",
     "deleteData": "Delete My Data",
@@ -113,12 +108,7 @@
     "deleteDataConfirmDescription": "This will permanently delete all your stored preferences and tracking data. This action cannot be undone.",
     "cancel": "Cancel",
     "confirmDelete": "Delete All Data",
-    "dataDeletionConfirmation": "All your data has been deleted successfully.",
-    "privacyInfo": "Our Privacy Commitment",
-    "privacyPoint1": "IP addresses are anonymized before processing",
-    "privacyPoint2": "Data retention limited to 14 months maximum",
-    "privacyPoint3": "No advertising or remarketing tracking",
-    "privacyPoint4": "Full control over your data and preferences"
+    "dataDeletionConfirmation": "All your data has been deleted successfully."
   },
   "language": {
     "en": "English",

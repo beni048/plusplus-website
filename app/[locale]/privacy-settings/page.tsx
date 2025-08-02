@@ -1,10 +1,59 @@
 "use client";
 
+import { useEffect } from 'react';
 import { useTranslations } from 'next-intl';
+import { useAnalytics } from '@/hooks/use-analytics';
 import PrivacyControls from '@/app/components/PrivacyControls';
 
 export default function PrivacySettingsPage() {
   const t = useTranslations('privacy');
+  const { trackCustomEvent } = useAnalytics();
+
+  useEffect(() => {
+    // Track privacy settings page access for compliance
+    trackCustomEvent('page_view', 'privacy_settings', {
+      component_id: 'privacy_settings_page',
+      component_type: 'settings_page',
+      page_type: 'privacy_settings',
+      privacy_management: true,
+      compliance_tracking: true,
+      access_timestamp: Date.now(),
+      user_intent: 'manage_privacy_preferences'
+    });
+
+    // Track time spent on settings page
+    const startTime = Date.now();
+    const handleBeforeUnload = () => {
+      const timeSpent = Date.now() - startTime;
+      trackCustomEvent('page_time_spent', 'privacy_settings', {
+        component_id: 'privacy_settings_page',
+        component_type: 'settings_page',
+        time_spent_ms: timeSpent,
+        time_spent_seconds: Math.round(timeSpent / 1000),
+        settings_engagement: timeSpent > 30000 ? 'high' : timeSpent > 10000 ? 'medium' : 'low',
+        compliance_metric: true
+      });
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, [trackCustomEvent]);
+
+  // Callback to track when settings are changed from this page
+  const handleSettingChange = (settingType: string, settingValue: any, additionalContext?: any) => {
+    trackCustomEvent('setting_change_from_page', 'privacy_settings', {
+      component_id: 'privacy_settings_page_change',
+      component_type: 'settings_interaction',
+      setting_type: settingType,
+      setting_value: settingValue,
+      change_context: 'settings_page',
+      page_source: 'privacy_settings_page',
+      ...additionalContext
+    });
+  };
 
   return (
     <main className="min-h-screen bg-neutral-light pt-32 pb-24">
@@ -21,7 +70,7 @@ export default function PrivacySettingsPage() {
           </div>
 
           <div className="flex justify-center mb-12">
-            <PrivacyControls />
+            <PrivacyControls onSettingChange={handleSettingChange} />
           </div>
 
           <div className="prose prose-lg max-w-none text-neutral-dark">

@@ -13,13 +13,12 @@ import { useAnalytics } from '@/hooks/use-analytics';
 export default function CookieConsentBanner() {
   const t = useTranslations('cookies');
   const locale = useLocale();
-  const { trackCookieConsent } = useAnalytics();
+  const { trackCookieConsent, trackCustomEvent } = useAnalytics();
   const [showBanner, setShowBanner] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
   const [preferences, setPreferences] = useState({
     necessary: true, // Always true, cannot be disabled
     analytics: false,
-    marketing: false,
   });
 
   useEffect(() => {
@@ -29,63 +28,90 @@ export default function CookieConsentBanner() {
     }
   }, []);
 
-  const handleAcceptAll = () => {
+  const handleAcceptOptional = () => {
     const newPreferences = {
       necessary: true,
       analytics: true,
-      marketing: false, // Keep false for GDPR compliance
     };
+    
+    trackCustomEvent('accept_optional_cookies', 'cookie_consent', {
+      component_id: 'cookie_consent_accept_optional',
+      component_type: 'button',
+      consent_method: 'accept_optional',
+      categories_enabled: {
+        necessary: true,
+        analytics: true
+      },
+      previous_preferences: preferences
+    });
     
     setPreferences(newPreferences);
     localStorage.setItem('cookie-consent', 'accepted');
     localStorage.setItem('cookie-preferences', JSON.stringify(newPreferences));
-    
-    // Update Google Analytics consent
     updateConsent(true);
-    
-    // Track the consent action
-    trackCookieConsent('accept');
-    
+    trackCookieConsent('accept', 'cookie_consent_accept_optional');
     setShowBanner(false);
   };
 
-  const handleDeclineAll = () => {
+  const handleDeclineOptional = () => {
     const newPreferences = {
       necessary: true,
       analytics: false,
-      marketing: false,
     };
+    
+    trackCustomEvent('decline_optional_cookies', 'cookie_consent', {
+      component_id: 'cookie_consent_decline_optional',
+      component_type: 'button',
+      consent_method: 'decline_optional',
+      categories_declined: {
+        analytics: true
+      },
+      previous_preferences: preferences
+    });
     
     setPreferences(newPreferences);
     localStorage.setItem('cookie-consent', 'declined');
     localStorage.setItem('cookie-preferences', JSON.stringify(newPreferences));
-    
-    // Update Google Analytics consent
     updateConsent(false);
-    
-    // Track the consent action
-    trackCookieConsent('decline');
-    
+    trackCookieConsent('decline', 'cookie_consent_decline_optional');
     setShowBanner(false);
   };
 
   const handleSavePreferences = () => {
     const consentStatus = preferences.analytics ? 'accepted' : 'declined';
+    
+    trackCustomEvent('save_cookie_preferences', 'cookie_consent', {
+      component_id: 'cookie_consent_save_preferences',
+      component_type: 'button',
+      consent_method: 'customize',
+      final_preferences: preferences,
+      analytics_enabled: preferences.analytics,
+      consent_status: consentStatus
+    });
+    
     localStorage.setItem('cookie-consent', consentStatus);
     localStorage.setItem('cookie-preferences', JSON.stringify(preferences));
-    
-    // Update Google Analytics consent
     updateConsent(preferences.analytics);
-    
-    // Track the consent action
-    trackCookieConsent('customize');
-    
+    trackCookieConsent('customize', 'cookie_consent_save_preferences');
     setShowBanner(false);
   };
 
-  const handlePreferenceChange = (key: keyof typeof preferences, value: boolean) => {
+  const handlePreferenceChange = (key: 'necessary' | 'analytics', value: boolean) => {
     if (key === 'necessary') return; // Cannot disable necessary cookies
-    setPreferences(prev => ({ ...prev, [key]: value }));
+    
+    const previousValue = preferences[key];
+    
+    trackCustomEvent('toggle_cookie_category', 'cookie_consent', {
+      component_id: `cookie_toggle_${key}`,
+      component_type: 'cookie_toggle',
+      category: key,
+      enabled: value,
+      previous_value: previousValue,
+      consent_stage: 'customization',
+      state_change: `${key}_${previousValue}_to_${value}`
+    });
+    
+    setPreferences((prev) => ({ ...prev, [key]: value }));
   };
 
   if (!showBanner) {
@@ -93,109 +119,116 @@ export default function CookieConsentBanner() {
   }
 
   return (
-    <div className="fixed bottom-4 left-4 right-4 z-50 sm:left-auto sm:right-4 sm:w-96">
-      <Card className="p-6 bg-white shadow-lg border-primary-teal/20">
+    <div className="fixed bottom-4 left-4 right-4 z-50 sm:left-auto sm:right-4 sm:w-[400px] sm:max-w-[90vw]">
+      <Card className="p-4 bg-white shadow-lg border-primary-teal/20">
         <div className="space-y-4">
-          <h3 className="font-semibold text-black">
-            {t('title')}
-          </h3>
+          {/* Minimal, essential message only */}
           <p className="text-sm text-neutral-dark">
             {t('description')}{' '}
             <Link 
               href={`/${locale}/privacy-policy`} 
               className="text-black underline hover:text-accent-orange transition-colors"
+              onClick={() => {
+                trackCustomEvent('click_privacy_link', 'cookie_consent', {
+                  component_id: 'cookie_banner_privacy_link',
+                  component_type: 'link',
+                  link_destination: 'privacy_policy',
+                  consent_stage: showDetails ? 'detailed_view' : 'banner_view'
+                });
+              }}
             >
               {t('learnMore')}
             </Link>
           </p>
 
-          {/* Cookie Preferences Details */}
+          {/* Streamlined cookie preferences - only show when customizing */}
           {showDetails && (
-            <div className="space-y-4 border-t pt-4">
-              <h4 className="font-medium text-sm">{t('cookieSettings')}</h4>
-              
-              {/* Necessary Cookies */}
-              <div className="flex items-center justify-between">
-                <div className="flex-1">
-                  <Label className="text-sm font-medium">{t('necessary')}</Label>
-                  <p className="text-xs text-neutral-dark">{t('necessaryDescription')}</p>
+            <div className="space-y-3 border-t pt-4">
+              {/* Essential Cookies - Always Active */}
+              <div className="flex items-center justify-between py-2">
+                <div className="flex-1 pr-4">
+                  <Label className="text-sm font-medium text-gray-900">Essential Cookies</Label>
+                  <p className="text-xs text-gray-600 mt-1">Required for website functionality</p>
                 </div>
-                <Switch
-                  checked={preferences.necessary}
-                  disabled
-                  className="opacity-50"
-                />
+                <div className="flex items-center gap-2 flex-shrink-0">
+                  <span className="text-xs font-medium text-green-700 bg-green-100 px-2 py-1 rounded">
+                    Always On
+                  </span>
+                  <Switch
+                    checked={true}
+                    disabled
+                    className="opacity-70"
+                  />
+                </div>
               </div>
 
-              {/* Analytics Cookies */}
-              <div className="flex items-center justify-between">
-                <div className="flex-1">
-                  <Label className="text-sm font-medium">{t('analytics')}</Label>
-                  <p className="text-xs text-neutral-dark">{t('analyticsDescription')}</p>
+              {/* Analytics Cookies - User Choice */}
+              <div className="flex items-center justify-between py-2">
+                <div className="flex-1 pr-4">
+                  <Label className="text-sm font-medium text-gray-900">Analytics</Label>
+                  <p className="text-xs text-gray-600 mt-1">Help improve our website</p>
                 </div>
-                <Switch
-                  checked={preferences.analytics}
-                  onCheckedChange={(checked) => handlePreferenceChange('analytics', checked)}
-                />
-              </div>
-
-              {/* Marketing Cookies - Disabled for GDPR compliance */}
-              <div className="flex items-center justify-between opacity-50">
-                <div className="flex-1">
-                  <Label className="text-sm font-medium">{t('marketing')}</Label>
-                  <p className="text-xs text-neutral-dark">{t('marketingDescription')}</p>
+                <div className="flex-shrink-0">
+                  <Switch
+                    checked={preferences.analytics}
+                    onCheckedChange={(checked: boolean) => handlePreferenceChange('analytics', checked)}
+                  />
                 </div>
-                <Switch
-                  checked={preferences.marketing}
-                  disabled
-                />
               </div>
             </div>
           )}
 
-          <div className="flex gap-2 flex-col sm:flex-row">
+          {/* Minimal button layout */}
+          <div className="flex gap-2 mt-4">
             {showDetails ? (
-              <>
+              <div className="flex gap-2 w-full">
                 <Button
                   onClick={handleSavePreferences}
-                  className="bg-accent-orange hover:bg-accent-orange/90 text-white"
-                  size="sm"
+                  className="bg-accent-orange hover:bg-accent-orange/90 text-white flex-1 h-10"
                 >
-                  {t('savePreferences')}
+                  Save
                 </Button>
                 <Button
-                  onClick={() => setShowDetails(false)}
+                  onClick={() => {
+                    trackCustomEvent('click_back_button', 'cookie_consent', {
+                      component_id: 'cookie_consent_back_button',
+                      component_type: 'button'
+                    });
+                    setShowDetails(false);
+                  }}
                   variant="outline"
-                  className="border-black text-black hover:bg-accent-orange hover:text-white hover:border-accent-orange transition-colors"
-                  size="sm"
+                  className="flex-1 h-10"
                 >
-                  {t('back')}
+                  Back
                 </Button>
-              </>
+              </div>
             ) : (
               <>
                 <Button
-                  onClick={handleAcceptAll}
-                  className="bg-accent-orange hover:bg-accent-orange/90 text-white"
-                  size="sm"
+                  onClick={handleAcceptOptional}
+                  className="bg-accent-orange hover:bg-accent-orange/90 text-white flex-1 h-10"
                 >
-                  {t('acceptAll')}
+                  Accept All
                 </Button>
                 <Button
-                  onClick={handleDeclineAll}
+                  onClick={handleDeclineOptional}
                   variant="outline"
-                  className="border-black text-black hover:bg-accent-orange hover:text-white hover:border-accent-orange transition-colors"
-                  size="sm"
+                  className="flex-1 h-10"
                 >
-                  {t('declineAll')}
+                  Essential Only
                 </Button>
                 <Button
-                  onClick={() => setShowDetails(true)}
+                  onClick={() => {
+                    trackCustomEvent('click_customize_button', 'cookie_consent', {
+                      component_id: 'cookie_consent_customize_button',
+                      component_type: 'button'
+                    });
+                    setShowDetails(true);
+                  }}
                   variant="ghost"
-                  className="text-black hover:bg-accent-orange hover:text-white transition-colors"
-                  size="sm"
+                  className="px-3 h-10 text-sm"
                 >
-                  {t('customize')}
+                  Options
                 </Button>
               </>
             )}

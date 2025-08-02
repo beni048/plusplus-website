@@ -17,62 +17,97 @@ import {
 } from '@/lib/gtag';
 import { useAnalytics } from '@/hooks/use-analytics';
 
+// Get debug mode from environment
+const GA_DEBUG_MODE = typeof window !== 'undefined' ? false : false; // Will be replaced by build-time check
+
 interface PrivacyControlsProps {
   className?: string;
+  onSettingChange?: (settingType: string, settingValue: any, additionalContext?: any) => void;
 }
 
-export default function PrivacyControls({ className = '' }: PrivacyControlsProps) {
+export default function PrivacyControls({ className = '', onSettingChange }: PrivacyControlsProps) {
   const t = useTranslations('privacy');
-  const { trackPrivacyAction } = useAnalytics();
+  const { trackPrivacyAction, trackCustomEvent } = useAnalytics();
   const [cookiesAccepted, setCookiesAccepted] = useState(false);
   const [analyticsOptedOut, setAnalyticsOptedOut] = useState(false);
   const [showDeletionConfirm, setShowDeletionConfirm] = useState(false);
 
   useEffect(() => {
-    // Check current consent status
     const consent = localStorage.getItem('cookie-consent');
+    const storedPreferences = localStorage.getItem('cookie-preferences');
+    
     setCookiesAccepted(consent === 'accepted');
     
-    // Check opt-out status
-    setAnalyticsOptedOut(getOptOutStatus());
-  }, []);
-
-  const handleCookieToggle = (enabled: boolean) => {
-    if (enabled) {
-      localStorage.setItem('cookie-consent', 'accepted');
-      updateConsent(true);
-      
-      // Re-enable analytics if not opted out
-      if (!analyticsOptedOut) {
-        optInAnalytics();
+    if (storedPreferences) {
+      try {
+        const preferences = JSON.parse(storedPreferences);
+        setAnalyticsOptedOut(!preferences.analytics);
+      } catch (error) {
+        console.error('Failed to parse cookie preferences:', error);
+        setAnalyticsOptedOut(getOptOutStatus());
       }
     } else {
-      localStorage.setItem('cookie-consent', 'declined');
-      updateConsent(false);
+      setAnalyticsOptedOut(getOptOutStatus());
     }
-    setCookiesAccepted(enabled);
-  };
+  }, []);
 
   const handleAnalyticsToggle = (enabled: boolean) => {
+    const previousOptedOut = analyticsOptedOut;
+    
+    // Update cookie preferences to include analytics choice
+    const newPreferences = {
+      necessary: true,
+      analytics: enabled,
+    };
+    
+    trackCustomEvent('toggle_analytics_tracking', 'privacy_compliance', {
+      component_id: 'privacy_controls_analytics_toggle',
+      component_type: 'toggle_switch',
+      opted_out: !enabled,
+      previous_opted_out: previousOptedOut
+    });
+    
     if (enabled) {
+      // Enable analytics and update consent status
       optInAnalytics();
-      trackPrivacyAction('opt_in');
+      trackPrivacyAction('opt_in', 'privacy_controls_analytics_optin');
+      localStorage.setItem('cookie-consent', 'accepted');
+      localStorage.setItem('cookie-preferences', JSON.stringify(newPreferences));
+      updateConsent(true);
+      setCookiesAccepted(true);
     } else {
+      // Disable analytics but keep essential cookies
       optOutAnalytics();
-      trackPrivacyAction('opt_out');
+      trackPrivacyAction('opt_out', 'privacy_controls_analytics_optout');
+      localStorage.setItem('cookie-consent', 'declined');
+      localStorage.setItem('cookie-preferences', JSON.stringify(newPreferences));
+      updateConsent(false);
     }
+    
     setAnalyticsOptedOut(!enabled);
+    
+    if (onSettingChange) {
+      onSettingChange('analytics_tracking', enabled, {
+        previous_opted_out: previousOptedOut
+      });
+    }
   };
 
   const handleDataDeletion = () => {
+    trackCustomEvent('request_data_deletion', 'privacy_compliance', {
+      component_id: 'privacy_controls_delete_button',
+      component_type: 'deletion_action',
+      deletion_confirmed: true,
+      gdpr_compliance: true
+    });
+    
     requestDataDeletion();
-    trackPrivacyAction('delete_data');
+    trackPrivacyAction('delete_data', 'privacy_controls_deletion_confirmed');
     setCookiesAccepted(false);
     setAnalyticsOptedOut(true);
     setShowDeletionConfirm(false);
     
-    // Show confirmation to user
-    alert(t('dataDeletionConfirmation'));
+    alert('All your data has been deleted successfully.');
   };
 
   return (
@@ -80,93 +115,87 @@ export default function PrivacyControls({ className = '' }: PrivacyControlsProps
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <Shield className="h-5 w-5" />
-          {t('controlsTitle')}
+          Privacy Controls
         </CardTitle>
       </CardHeader>
-      <CardContent className="space-y-6">
-        {/* Cookie Consent Toggle */}
-        <div className="flex items-center justify-between">
-          <div className="space-y-0.5">
-            <Label className="text-base font-medium">
-              {t('cookieConsent')}
-            </Label>
-            <p className="text-sm text-muted-foreground">
-              {t('cookieConsentDescription')}
+      <CardContent className="space-y-4">
+        {/* Essential Cookies */}
+        <div className="flex items-center justify-between p-4 bg-green-50 border border-green-200 rounded-lg">
+          <div className="flex-1 pr-6">
+            <Label className="text-base font-medium text-green-800">Essential Cookies</Label>
+            <p className="text-sm text-green-700 mt-1">
+              Required for website functionality and security
             </p>
           </div>
-          <Switch
-            checked={cookiesAccepted}
-            onCheckedChange={handleCookieToggle}
-          />
+          <div className="flex items-center gap-3 flex-shrink-0">
+            <span className="text-xs font-medium text-green-700 bg-green-100 px-3 py-1 rounded-full">
+              Always On
+            </span>
+            <Switch
+              checked={true}
+              disabled
+              className="opacity-70"
+            />
+          </div>
         </div>
 
-        {/* Analytics Opt-out Toggle */}
-        <div className="flex items-center justify-between">
-          <div className="space-y-0.5">
-            <Label className="text-base font-medium flex items-center gap-2">
-              {analyticsOptedOut ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
-              {t('analyticsTracking')}
-            </Label>
-            <p className="text-sm text-muted-foreground">
-              {t('analyticsTrackingDescription')}
+        {/* Analytics Cookies */}
+        <div className="flex items-center justify-between p-4 border rounded-lg">
+          <div className="flex-1 pr-6">
+            <Label className="text-base font-medium text-gray-900">Analytics</Label>
+            <p className="text-sm text-gray-600 mt-1">
+              Help improve our website with anonymous usage data
             </p>
           </div>
-          <Switch
-            checked={!analyticsOptedOut && cookiesAccepted}
-            onCheckedChange={handleAnalyticsToggle}
-            disabled={!cookiesAccepted}
-          />
+          <div className="flex-shrink-0">
+            <Switch
+              checked={!analyticsOptedOut}
+              onCheckedChange={handleAnalyticsToggle}
+            />
+          </div>
         </div>
 
         {/* Data Deletion */}
-        <div className="border-t pt-4">
-          <div className="flex items-center justify-between">
-            <div className="space-y-0.5">
-              <Label className="text-base font-medium flex items-center gap-2">
-                <Trash2 className="h-4 w-4" />
-                {t('deleteData')}
-              </Label>
-              <p className="text-sm text-muted-foreground">
-                {t('deleteDataDescription')}
+        <div className="border-t pt-4 mt-6">
+          <div className="flex items-center justify-between p-4 bg-red-50 border border-red-200 rounded-lg">
+            <div className="flex-1 pr-6">
+              <Label className="text-base font-medium text-red-800">Delete All Data</Label>
+              <p className="text-sm text-red-700 mt-1">
+                Permanently remove all stored preferences and data
               </p>
             </div>
-            <AlertDialog open={showDeletionConfirm} onOpenChange={setShowDeletionConfirm}>
-              <AlertDialogTrigger asChild>
-                <Button variant="destructive" size="sm">
-                  {t('deleteDataButton')}
-                </Button>
-              </AlertDialogTrigger>
-              <AlertDialogContent>
-                <AlertDialogHeader>
-                  <AlertDialogTitle>{t('deleteDataConfirmTitle')}</AlertDialogTitle>
-                  <AlertDialogDescription>
-                    {t('deleteDataConfirmDescription')}
-                  </AlertDialogDescription>
-                </AlertDialogHeader>
-                <AlertDialogFooter>
-                  <AlertDialogCancel>{t('cancel')}</AlertDialogCancel>
-                  <AlertDialogAction
-                    onClick={handleDataDeletion}
-                    className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+            <div className="flex-shrink-0">
+              <AlertDialog open={showDeletionConfirm} onOpenChange={setShowDeletionConfirm}>
+                <AlertDialogTrigger asChild>
+                  <Button 
+                    className="bg-accent-orange hover:bg-accent-orange/90 text-white"
+                    size="sm"
                   >
-                    {t('confirmDelete')}
-                  </AlertDialogAction>
-                </AlertDialogFooter>
-              </AlertDialogContent>
-            </AlertDialog>
+                    Delete Data
+                  </Button>
+                </AlertDialogTrigger>
+                <AlertDialogContent>
+                  <AlertDialogHeader>
+                    <AlertDialogTitle>Delete All Data?</AlertDialogTitle>
+                    <AlertDialogDescription>
+                      This will permanently delete all your stored preferences and tracking data. This action cannot be undone.
+                    </AlertDialogDescription>
+                  </AlertDialogHeader>
+                  <AlertDialogFooter>
+                    <AlertDialogCancel>Cancel</AlertDialogCancel>
+                    <AlertDialogAction 
+                      onClick={handleDataDeletion}
+                      className="bg-accent-orange hover:bg-accent-orange/90 text-white"
+                    >
+                      Delete All Data
+                    </AlertDialogAction>
+                  </AlertDialogFooter>
+                </AlertDialogContent>
+              </AlertDialog>
+            </div>
           </div>
         </div>
 
-        {/* Privacy Information */}
-        <div className="bg-muted p-4 rounded-lg space-y-2">
-          <h4 className="font-medium">{t('privacyInfo')}</h4>
-          <ul className="text-sm text-muted-foreground space-y-1">
-            <li>• {t('privacyPoint1')}</li>
-            <li>• {t('privacyPoint2')}</li>
-            <li>• {t('privacyPoint3')}</li>
-            <li>• {t('privacyPoint4')}</li>
-          </ul>
-        </div>
       </CardContent>
     </Card>
   );
