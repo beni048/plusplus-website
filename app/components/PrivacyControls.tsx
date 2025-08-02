@@ -107,7 +107,7 @@ export default function PrivacyControls({ className = '', onSettingChange }: Pri
     setAnalyticsOptedOut(true);
     setShowDeletionConfirm(false);
     
-    alert('All your data has been deleted successfully.');
+    alert(t('dataDeletionConfirmation'));
   };
 
   return (
@@ -115,21 +115,21 @@ export default function PrivacyControls({ className = '', onSettingChange }: Pri
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <Shield className="h-5 w-5" />
-          Privacy Controls
+          {t('controlsTitle')}
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-4">
         {/* Essential Cookies */}
         <div className="flex items-center justify-between p-4 bg-green-50 border border-green-200 rounded-lg">
           <div className="flex-1 pr-6">
-            <Label className="text-base font-medium text-green-800">Essential Cookies</Label>
+            <Label className="text-base font-medium text-green-800">{t('essentialCookies')}</Label>
             <p className="text-sm text-green-700 mt-1">
-              Required for website functionality and security
+              {t('essentialCookiesDescription')}
             </p>
           </div>
           <div className="flex items-center gap-3 flex-shrink-0">
             <span className="text-xs font-medium text-green-700 bg-green-100 px-3 py-1 rounded-full">
-              Always On
+              {t('alwaysActive')}
             </span>
             <Switch
               checked={true}
@@ -142,9 +142,9 @@ export default function PrivacyControls({ className = '', onSettingChange }: Pri
         {/* Analytics Cookies */}
         <div className="flex items-center justify-between p-4 border rounded-lg">
           <div className="flex-1 pr-6">
-            <Label className="text-base font-medium text-gray-900">Analytics</Label>
+            <Label className="text-base font-medium text-gray-900">{t('analytics')}</Label>
             <p className="text-sm text-gray-600 mt-1">
-              Help improve our website with anonymous usage data
+              {t('analyticsDescription')}
             </p>
           </div>
           <div className="flex-shrink-0">
@@ -159,9 +159,9 @@ export default function PrivacyControls({ className = '', onSettingChange }: Pri
         <div className="border-t pt-4 mt-6">
           <div className="flex items-center justify-between p-4 bg-red-50 border border-red-200 rounded-lg">
             <div className="flex-1 pr-6">
-              <Label className="text-base font-medium text-red-800">Delete All Data</Label>
+              <Label className="text-base font-medium text-red-800">{t('deleteAllData')}</Label>
               <p className="text-sm text-red-700 mt-1">
-                Permanently remove all stored preferences and data
+                {t('deleteAllDataDescription')}
               </p>
             </div>
             <div className="flex-shrink-0">
@@ -171,23 +171,23 @@ export default function PrivacyControls({ className = '', onSettingChange }: Pri
                     className="bg-accent-orange hover:bg-accent-orange/90 text-white"
                     size="sm"
                   >
-                    Delete Data
+                    {t('deleteDataButton')}
                   </Button>
                 </AlertDialogTrigger>
                 <AlertDialogContent>
                   <AlertDialogHeader>
-                    <AlertDialogTitle>Delete All Data?</AlertDialogTitle>
+                    <AlertDialogTitle>{t('deleteDataConfirmTitle')}</AlertDialogTitle>
                     <AlertDialogDescription>
-                      This will permanently delete all your stored preferences and tracking data. This action cannot be undone.
+                      {t('deleteDataConfirmDescription')}
                     </AlertDialogDescription>
                   </AlertDialogHeader>
                   <AlertDialogFooter>
-                    <AlertDialogCancel>Cancel</AlertDialogCancel>
+                    <AlertDialogCancel>{t('cancel')}</AlertDialogCancel>
                     <AlertDialogAction 
                       onClick={handleDataDeletion}
                       className="bg-accent-orange hover:bg-accent-orange/90 text-white"
                     >
-                      Delete All Data
+                      {t('confirmDelete')}
                     </AlertDialogAction>
                   </AlertDialogFooter>
                 </AlertDialogContent>

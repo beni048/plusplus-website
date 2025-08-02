@@ -74,7 +74,12 @@
     "declineOptional": "Essential Only",
     "customize": "Options",
     "savePreferences": "Save",
-    "back": "Back"
+    "back": "Back",
+    "essentialCookies": "Essential Cookies",
+    "essentialDescription": "Required for website functionality",
+    "analytics": "Analytics",
+    "analyticsDescription": "Help improve our website",
+    "alwaysOn": "Always On"
   },
   "privacy": {
     "controlsTitle": "Privacy Controls",
@@ -105,10 +110,16 @@
     "deleteDataDescription": "Remove all stored data and tracking preferences",
     "deleteDataButton": "Delete Data",
     "deleteDataConfirmTitle": "Delete All Data?",
-    "deleteDataConfirmDescription": "This will permanently delete all your stored preferences and tracking data. This action cannot be undone.",
+    "deleteDataConfirmDescription": "This will permanently delete all your stored preferences and tracking data.",
     "cancel": "Cancel",
     "confirmDelete": "Delete All Data",
-    "dataDeletionConfirmation": "All your data has been deleted successfully."
+    "dataDeletionConfirmation": "All your data has been deleted successfully.",
+    "essentialCookies": "Essential Cookies",
+    "essentialCookiesDescription": "Required for website functionality and security",
+    "analytics": "Analytics",
+    "analyticsDescription": "Help improve our website with anonymous usage data",
+    "deleteAllData": "Delete All Data",
+    "deleteAllDataDescription": "Permanently remove all stored preferences and data"
   },
   "language": {
     "en": "English",

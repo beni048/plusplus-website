@@ -147,12 +147,12 @@ export default function CookieConsentBanner() {
               {/* Essential Cookies - Always Active */}
               <div className="flex items-center justify-between py-2">
                 <div className="flex-1 pr-4">
-                  <Label className="text-sm font-medium text-gray-900">Essential Cookies</Label>
-                  <p className="text-xs text-gray-600 mt-1">Required for website functionality</p>
+                  <Label className="text-sm font-medium text-gray-900">{t('essentialCookies')}</Label>
+                  <p className="text-xs text-gray-600 mt-1">{t('essentialDescription')}</p>
                 </div>
                 <div className="flex items-center gap-2 flex-shrink-0">
                   <span className="text-xs font-medium text-green-700 bg-green-100 px-2 py-1 rounded">
-                    Always On
+                    {t('alwaysOn')}
                   </span>
                   <Switch
                     checked={true}
@@ -165,8 +165,8 @@ export default function CookieConsentBanner() {
               {/* Analytics Cookies - User Choice */}
               <div className="flex items-center justify-between py-2">
                 <div className="flex-1 pr-4">
-                  <Label className="text-sm font-medium text-gray-900">Analytics</Label>
-                  <p className="text-xs text-gray-600 mt-1">Help improve our website</p>
+                  <Label className="text-sm font-medium text-gray-900">{t('analytics')}</Label>
+                  <p className="text-xs text-gray-600 mt-1">{t('analyticsDescription')}</p>
                 </div>
                 <div className="flex-shrink-0">
                   <Switch
@@ -186,7 +186,7 @@ export default function CookieConsentBanner() {
                   onClick={handleSavePreferences}
                   className="bg-accent-orange hover:bg-accent-orange/90 text-white flex-1 h-10"
                 >
-                  Save
+                  {t('savePreferences')}
                 </Button>
                 <Button
                   onClick={() => {
@@ -199,7 +199,7 @@ export default function CookieConsentBanner() {
                   variant="outline"
                   className="flex-1 h-10"
                 >
-                  Back
+                  {t('back')}
                 </Button>
               </div>
             ) : (
@@ -208,14 +208,14 @@ export default function CookieConsentBanner() {
                   onClick={handleAcceptOptional}
                   className="bg-accent-orange hover:bg-accent-orange/90 text-white flex-1 h-10"
                 >
-                  Accept All
+                  {t('acceptOptional')}
                 </Button>
                 <Button
                   onClick={handleDeclineOptional}
                   variant="outline"
                   className="flex-1 h-10"
                 >
-                  Essential Only
+                  {t('declineOptional')}
                 </Button>
                 <Button
                   onClick={() => {
@@ -228,7 +228,7 @@ export default function CookieConsentBanner() {
                   variant="ghost"
                   className="px-3 h-10 text-sm"
                 >
-                  Options
+                  {t('customize')}
                 </Button>
               </>
             )}
