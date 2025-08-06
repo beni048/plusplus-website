@@ -12,9 +12,9 @@ const initializeGtag = () => {
   try {
     // Initialize dataLayer and gtag function
     window.dataLayer = window.dataLayer || [];
-    function gtag(...args: any[]){
+    const gtag = (...args: any[]) => {
       window.dataLayer.push(arguments);
-    }
+    };
     window.gtag = gtag;
     
     // Set consent defaults to 'denied' for GDPR compliance
