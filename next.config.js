@@ -13,6 +13,11 @@ const nextConfig = {
     ],
   },
   async headers() {
+    const isDev = process.env.NODE_ENV === 'development';
+    const scriptSrc = isDev 
+      ? "'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com"
+      : "'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com";
+    
     return [
       {
         source: '/(.*)',
@@ -21,7 +26,7 @@ const nextConfig = {
             key: 'Content-Security-Policy',
             value: `
               default-src 'self';
-              script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com;
+              script-src ${scriptSrc};
               style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
               font-src 'self' https://fonts.gstatic.com;
               img-src 'self' data: https: blob:;
