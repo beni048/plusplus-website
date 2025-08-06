@@ -13,7 +13,7 @@ const initializeGtag = () => {
     // Initialize dataLayer and gtag function
     window.dataLayer = window.dataLayer || [];
     const gtag = (...args: any[]) => {
-      window.dataLayer.push(arguments);
+      window.dataLayer.push(args);
     };
     window.gtag = gtag;
     
