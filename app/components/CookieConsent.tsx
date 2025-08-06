@@ -22,9 +22,14 @@ export default function CookieConsentBanner() {
   });
 
   useEffect(() => {
-    const consent = localStorage.getItem('cookie-consent');
-    if (!consent) {
-      setShowBanner(true);
+    try {
+      const consent = localStorage.getItem('cookie-consent');
+      if (!consent) {
+        setShowBanner(true);
+      }
+    } catch (error) {
+      console.warn('Failed to access localStorage for cookie consent:', error);
+      setShowBanner(true); // Show banner if can't access localStorage
     }
   }, []);
 
@@ -46,8 +51,12 @@ export default function CookieConsentBanner() {
     });
     
     setPreferences(newPreferences);
-    localStorage.setItem('cookie-consent', 'accepted');
-    localStorage.setItem('cookie-preferences', JSON.stringify(newPreferences));
+    try {
+      localStorage.setItem('cookie-consent', 'accepted');
+      localStorage.setItem('cookie-preferences', JSON.stringify(newPreferences));
+    } catch (error) {
+      console.warn('Failed to save cookie consent to localStorage:', error);
+    }
     updateConsent(true);
     trackCookieConsent('accept', 'cookie_consent_accept_optional');
     setShowBanner(false);
@@ -70,8 +79,12 @@ export default function CookieConsentBanner() {
     });
     
     setPreferences(newPreferences);
-    localStorage.setItem('cookie-consent', 'declined');
-    localStorage.setItem('cookie-preferences', JSON.stringify(newPreferences));
+    try {
+      localStorage.setItem('cookie-consent', 'declined');
+      localStorage.setItem('cookie-preferences', JSON.stringify(newPreferences));
+    } catch (error) {
+      console.warn('Failed to save cookie consent to localStorage:', error);
+    }
     updateConsent(false);
     trackCookieConsent('decline', 'cookie_consent_decline_optional');
     setShowBanner(false);
@@ -89,8 +102,12 @@ export default function CookieConsentBanner() {
       consent_status: consentStatus
     });
     
-    localStorage.setItem('cookie-consent', consentStatus);
-    localStorage.setItem('cookie-preferences', JSON.stringify(preferences));
+    try {
+      localStorage.setItem('cookie-consent', consentStatus);
+      localStorage.setItem('cookie-preferences', JSON.stringify(preferences));
+    } catch (error) {
+      console.warn('Failed to save cookie preferences to localStorage:', error);
+    }
     updateConsent(preferences.analytics);
     trackCookieConsent('customize', 'cookie_consent_save_preferences');
     setShowBanner(false);

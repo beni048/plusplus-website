@@ -22,6 +22,8 @@ export const isAnalyticsEnabled = (): boolean => {
 export const isAnalyticsActive = (): boolean => {
   if (typeof window === 'undefined' || !isAnalyticsEnabled()) return false;
   
+  if (typeof localStorage === 'undefined') return false;
+  
   const consent = localStorage.getItem('cookie-consent');
   const optOut = localStorage.getItem('ga-opt-out');
   
@@ -31,13 +33,18 @@ export const isAnalyticsActive = (): boolean => {
 // Update consent when user accepts/rejects cookies
 export const updateConsent = (granted: boolean): void => {
   if (!isAnalyticsEnabled() || typeof window === 'undefined') return;
+  if (typeof window.gtag === 'undefined') return;
 
-  window.gtag('consent', 'update', {
-    'analytics_storage': granted ? 'granted' : 'denied',
-    'ad_storage': 'denied', // Always denied for GDPR compliance
-    'ad_user_data': 'denied',
-    'ad_personalization': 'denied',
-  });
+  try {
+    window.gtag('consent', 'update', {
+      'analytics_storage': granted ? 'granted' : 'denied',
+      'ad_storage': 'denied', // Always denied for GDPR compliance
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+    });
+  } catch (error) {
+    console.warn('Google Analytics consent update failed:', error);
+  }
 
   if (GA_DEBUG_MODE) {
     console.log(`🔧 GA4 Consent Update: Analytics ${granted ? 'GRANTED' : 'DENIED'}`);
@@ -53,12 +60,18 @@ export const updateConsent = (granted: boolean): void => {
 // Track page views manually for better control
 export const trackPageView = (url: string, title?: string): void => {
   if (!isAnalyticsActive()) return;
+  if (typeof window.gtag === 'undefined') return;
+  if (typeof document === 'undefined') return;
 
-  window.gtag('config', GA_TRACKING_ID, {
-    page_path: url,
-    page_title: title || document.title,
-    page_location: window.location.href,
-  });
+  try {
+    window.gtag('config', GA_TRACKING_ID, {
+      page_path: url,
+      page_title: title || document.title,
+      page_location: window.location.href,
+    });
+  } catch (error) {
+    console.warn('Google Analytics page view tracking failed:', error);
+  }
 
   if (GA_DEBUG_MODE) {
     console.log('Page view tracked:', url);
@@ -124,8 +137,14 @@ export const trackEvent = (
 
   // Clean undefined values before sending to GA4
   const cleanParams = cleanEventParams(eventParams);
+  
+  if (typeof window.gtag === 'undefined') return;
 
-  window.gtag('event', action, cleanParams);
+  try {
+    window.gtag('event', action, cleanParams);
+  } catch (error) {
+    console.warn('Google Analytics event tracking failed:', error);
+  }
 
   if (GA_DEBUG_MODE) {
     console.group(`🎯 GA4 Event: ${action}`);
@@ -143,6 +162,8 @@ export const trackEventLegacy = (action: string, category: string, label?: strin
 
 // User opt-out functionality (for privacy controls)
 export const optOutAnalytics = (): void => {
+  if (typeof localStorage === 'undefined') return;
+  
   localStorage.setItem('ga-opt-out', 'true');
   
   if (typeof window !== 'undefined' && GA_TRACKING_ID) {
@@ -158,6 +179,8 @@ export const optOutAnalytics = (): void => {
 
 // User opt-in functionality (for privacy controls)
 export const optInAnalytics = (): void => {
+  if (typeof localStorage === 'undefined') return;
+  
   localStorage.removeItem('ga-opt-out');
   
   if (typeof window !== 'undefined' && GA_TRACKING_ID) {
@@ -179,16 +202,19 @@ export const optInAnalytics = (): void => {
 // Get user's current opt-out status
 export const getOptOutStatus = (): boolean => {
   if (typeof window === 'undefined') return false;
+  if (typeof localStorage === 'undefined') return false;
   return localStorage.getItem('ga-opt-out') === 'true';
 };
 
 // GDPR-compliant data deletion
 export const requestDataDeletion = (): void => {
+  if (typeof localStorage === 'undefined') return;
+  
   localStorage.removeItem('cookie-consent');
   localStorage.setItem('ga-opt-out', 'true');
   
   // Clear GA cookies
-  if (typeof document !== 'undefined' && GA_TRACKING_ID) {
+  if (typeof document !== 'undefined' && typeof window !== 'undefined' && GA_TRACKING_ID) {
     const domain = window.location.hostname;
     document.cookie = `_ga=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=${domain}`;
     document.cookie = `_ga_${GA_TRACKING_ID.slice(2)}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=${domain}`;

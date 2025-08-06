@@ -393,6 +393,9 @@ export default function Home() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <Input
+                      id="contact-name"
+                      name="name"
+                      autoComplete="name"
                       placeholder={t('contact.form.name')}
                       value={formData.name}
                       onChange={(e) =>
@@ -404,7 +407,10 @@ export default function Home() {
                   </div>
                   <div>
                     <Input
+                      id="contact-email"
+                      name="email"
                       type="email"
+                      autoComplete="email"
                       placeholder={t('contact.form.email')}
                       value={formData.email}
                       onChange={(e) =>
@@ -416,6 +422,9 @@ export default function Home() {
                   </div>
                   <div>
                     <Textarea
+                      id="contact-message"
+                      name="message"
+                      autoComplete="off"
                       placeholder={t('contact.form.message')}
                       value={formData.message}
                       onChange={(e) =>
