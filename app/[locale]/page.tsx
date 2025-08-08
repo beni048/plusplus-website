@@ -198,18 +198,20 @@ export default function Home() {
                 logo: "/images/partners/dfx.svg",
                 link: "https://dfx.swiss",
               },
-              {
-                name: "Aktionariat",
-                descriptionKey: "aktionariat",
-                logo: "/images/partners/aktionariat.webp",
-                link: "https://aktionariat.com",
-              },
-              {
-                name: "Bitcoin Suisse",
-                descriptionKey: "bitcoinsuisse",
-                logo: "/images/partners/bitcoin-suisse.png",
-                link: "https://bitcoinsuisse.com",
-              },
+              // DEACTIVATED: Aktionariat
+              // {
+              //   name: "Aktionariat",
+              //   descriptionKey: "aktionariat",
+              //   logo: "/images/partners/aktionariat.webp",
+              //   link: "https://aktionariat.com",
+              // },
+              // DEACTIVATED: Bitcoin Suisse
+              // {
+              //   name: "Bitcoin Suisse",
+              //   descriptionKey: "bitcoinsuisse",
+              //   logo: "/images/partners/bitcoin-suisse.png",
+              //   link: "https://bitcoinsuisse.com",
+              // },
             ].map((partner) => (
               <a
                 key={partner.name}
