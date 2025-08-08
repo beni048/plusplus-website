@@ -20,32 +20,10 @@ export default function LanguageSwitcher({
   const locale = useLocale();
   const pathname = usePathname();
   const router = useRouter();
-  const { trackCustomEvent } = useAnalytics();
+  const { trackLanguageSwitch } = useAnalytics();
 
   const switchToLocale = (newLocale: string) => {
-    const previousLocale = locale;
-    
-    // Determine source context automatically if not provided
-    const contextSource = sourceContext || (mobile ? 'mobile' : 'navbar');
-    
-    // Track language change with comprehensive context
-    trackCustomEvent('change_language', 'internationalization', {
-      component_id: `language_switcher_${contextSource}`,
-      component_type: 'language_switcher',
-      previous_language: previousLocale,
-      new_language: newLocale,
-      source_context: contextSource,
-      device_context: mobile ? 'mobile' : 'desktop',
-      current_page: pathname,
-      language_preference_change: true,
-      ui_language_switch: true,
-      locale_transition: `${previousLocale}_to_${newLocale}`
-    });
-    
-    // Call parent callback if provided
-    if (onLanguageChange) {
-      onLanguageChange(previousLocale, newLocale);
-    }
+    trackLanguageSwitch(newLocale);
     
     // Remove the current locale from pathname if it exists
     const pathWithoutLocale = pathname.replace(/^\/[a-z]{2}/, '') || '/';

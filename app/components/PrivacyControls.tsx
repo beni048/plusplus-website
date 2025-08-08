@@ -6,7 +6,7 @@ import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from '@/components/ui/alert-dialog';
-import { Shield, Eye, EyeOff, Trash2 } from 'lucide-react';
+import { Shield } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { 
   optOutAnalytics, 
@@ -15,103 +15,32 @@ import {
   requestDataDeletion, 
   updateConsent 
 } from '@/lib/gtag';
-import { useAnalytics } from '@/hooks/use-analytics';
 
-// Get debug mode from environment
-const GA_DEBUG_MODE = typeof window !== 'undefined' ? false : false; // Will be replaced by build-time check
-
-interface PrivacyControlsProps {
-  className?: string;
-  onSettingChange?: (settingType: string, settingValue: any, additionalContext?: any) => void;
-}
-
-export default function PrivacyControls({ className = '', onSettingChange }: PrivacyControlsProps) {
+export default function PrivacyControls() {
   const t = useTranslations('privacy');
-  const { trackPrivacyAction, trackCustomEvent } = useAnalytics();
-  const [cookiesAccepted, setCookiesAccepted] = useState(false);
-  const [analyticsOptedOut, setAnalyticsOptedOut] = useState(false);
-  const [showDeletionConfirm, setShowDeletionConfirm] = useState(false);
+  const [analyticsEnabled, setAnalyticsEnabled] = useState(false);
 
   useEffect(() => {
-    const consent = localStorage.getItem('cookie-consent');
-    const storedPreferences = localStorage.getItem('cookie-preferences');
-    
-    setCookiesAccepted(consent === 'accepted');
-    
-    if (storedPreferences) {
-      try {
-        const preferences = JSON.parse(storedPreferences);
-        setAnalyticsOptedOut(!preferences.analytics);
-      } catch (error) {
-        console.error('Failed to parse cookie preferences:', error);
-        setAnalyticsOptedOut(getOptOutStatus());
-      }
-    } else {
-      setAnalyticsOptedOut(getOptOutStatus());
-    }
+    setAnalyticsEnabled(!getOptOutStatus());
   }, []);
 
   const handleAnalyticsToggle = (enabled: boolean) => {
-    const previousOptedOut = analyticsOptedOut;
-    
-    // Update cookie preferences to include analytics choice
-    const newPreferences = {
-      necessary: true,
-      analytics: enabled,
-    };
-    
-    trackCustomEvent('toggle_analytics_tracking', 'privacy_compliance', {
-      component_id: 'privacy_controls_analytics_toggle',
-      component_type: 'toggle_switch',
-      opted_out: !enabled,
-      previous_opted_out: previousOptedOut
-    });
-    
     if (enabled) {
-      // Enable analytics and update consent status
       optInAnalytics();
-      trackPrivacyAction('opt_in', 'privacy_controls_analytics_optin');
-      localStorage.setItem('cookie-consent', 'accepted');
-      localStorage.setItem('cookie-preferences', JSON.stringify(newPreferences));
-      updateConsent(true);
-      setCookiesAccepted(true);
     } else {
-      // Disable analytics but keep essential cookies
       optOutAnalytics();
-      trackPrivacyAction('opt_out', 'privacy_controls_analytics_optout');
-      localStorage.setItem('cookie-consent', 'declined');
-      localStorage.setItem('cookie-preferences', JSON.stringify(newPreferences));
-      updateConsent(false);
     }
-    
-    setAnalyticsOptedOut(!enabled);
-    
-    if (onSettingChange) {
-      onSettingChange('analytics_tracking', enabled, {
-        previous_opted_out: previousOptedOut
-      });
-    }
+    setAnalyticsEnabled(enabled);
   };
 
   const handleDataDeletion = () => {
-    trackCustomEvent('request_data_deletion', 'privacy_compliance', {
-      component_id: 'privacy_controls_delete_button',
-      component_type: 'deletion_action',
-      deletion_confirmed: true,
-      gdpr_compliance: true
-    });
-    
     requestDataDeletion();
-    trackPrivacyAction('delete_data', 'privacy_controls_deletion_confirmed');
-    setCookiesAccepted(false);
-    setAnalyticsOptedOut(true);
-    setShowDeletionConfirm(false);
-    
+    setAnalyticsEnabled(false);
     alert(t('dataDeletionConfirmation'));
   };
 
   return (
-    <Card className={`w-full max-w-2xl ${className}`}>
+    <Card className="w-full max-w-2xl">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <Shield className="h-5 w-5" />
@@ -121,81 +50,69 @@ export default function PrivacyControls({ className = '', onSettingChange }: Pri
       <CardContent className="space-y-4">
         {/* Essential Cookies */}
         <div className="flex items-center justify-between p-4 bg-green-50 border border-green-200 rounded-lg">
-          <div className="flex-1 pr-6">
+          <div className="flex-1">
             <Label className="text-base font-medium text-green-800">{t('essentialCookies')}</Label>
             <p className="text-sm text-green-700 mt-1">
               {t('essentialCookiesDescription')}
             </p>
           </div>
-          <div className="flex items-center gap-3 flex-shrink-0">
+          <div className="flex items-center gap-3">
             <span className="text-xs font-medium text-green-700 bg-green-100 px-3 py-1 rounded-full">
               {t('alwaysActive')}
             </span>
-            <Switch
-              checked={true}
-              disabled
-              className="opacity-70"
-            />
+            <Switch checked={true} disabled />
           </div>
         </div>
 
         {/* Analytics Cookies */}
         <div className="flex items-center justify-between p-4 border rounded-lg">
-          <div className="flex-1 pr-6">
-            <Label className="text-base font-medium text-gray-900">{t('analytics')}</Label>
+          <div className="flex-1">
+            <Label className="text-base font-medium">{t('analytics')}</Label>
             <p className="text-sm text-gray-600 mt-1">
               {t('analyticsDescription')}
             </p>
           </div>
-          <div className="flex-shrink-0">
-            <Switch
-              checked={!analyticsOptedOut}
-              onCheckedChange={handleAnalyticsToggle}
-            />
-          </div>
+          <Switch
+            checked={analyticsEnabled}
+            onCheckedChange={handleAnalyticsToggle}
+          />
         </div>
 
         {/* Data Deletion */}
         <div className="border-t pt-4 mt-6">
           <div className="flex items-center justify-between p-4 bg-red-50 border border-red-200 rounded-lg">
-            <div className="flex-1 pr-6">
+            <div className="flex-1">
               <Label className="text-base font-medium text-red-800">{t('deleteAllData')}</Label>
               <p className="text-sm text-red-700 mt-1">
                 {t('deleteAllDataDescription')}
               </p>
             </div>
-            <div className="flex-shrink-0">
-              <AlertDialog open={showDeletionConfirm} onOpenChange={setShowDeletionConfirm}>
-                <AlertDialogTrigger asChild>
-                  <Button 
+            <AlertDialog>
+              <AlertDialogTrigger asChild>
+                <Button className="bg-accent-orange hover:bg-accent-orange/90 text-white" size="sm">
+                  {t('deleteDataButton')}
+                </Button>
+              </AlertDialogTrigger>
+              <AlertDialogContent>
+                <AlertDialogHeader>
+                  <AlertDialogTitle>{t('deleteDataConfirmTitle')}</AlertDialogTitle>
+                  <AlertDialogDescription>
+                    {t('deleteDataConfirmDescription')}
+                  </AlertDialogDescription>
+                </AlertDialogHeader>
+                <AlertDialogFooter>
+                  <AlertDialogCancel>{t('cancel')}</AlertDialogCancel>
+                  <AlertDialogAction 
+                    onClick={handleDataDeletion}
                     className="bg-accent-orange hover:bg-accent-orange/90 text-white"
-                    size="sm"
                   >
-                    {t('deleteDataButton')}
-                  </Button>
-                </AlertDialogTrigger>
-                <AlertDialogContent>
-                  <AlertDialogHeader>
-                    <AlertDialogTitle>{t('deleteDataConfirmTitle')}</AlertDialogTitle>
-                    <AlertDialogDescription>
-                      {t('deleteDataConfirmDescription')}
-                    </AlertDialogDescription>
-                  </AlertDialogHeader>
-                  <AlertDialogFooter>
-                    <AlertDialogCancel>{t('cancel')}</AlertDialogCancel>
-                    <AlertDialogAction 
-                      onClick={handleDataDeletion}
-                      className="bg-accent-orange hover:bg-accent-orange/90 text-white"
-                    >
-                      {t('confirmDelete')}
-                    </AlertDialogAction>
-                  </AlertDialogFooter>
-                </AlertDialogContent>
-              </AlertDialog>
-            </div>
+                    {t('confirmDelete')}
+                  </AlertDialogAction>
+                </AlertDialogFooter>
+              </AlertDialogContent>
+            </AlertDialog>
           </div>
         </div>
-
       </CardContent>
     </Card>
   );

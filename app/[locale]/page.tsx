@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -24,82 +24,14 @@ export default function Home() {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  
-  // Scroll tracking state
-  const scrollTrackingRef = useRef({
-    tracked25: false,
-    tracked50: false,
-    tracked75: false,
-  });
 
-  // Scroll depth tracking with throttling
-  useEffect(() => {
-    let ticking = false;
-
-    const handleScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-          const tracking = scrollTrackingRef.current;
-
-          if (scrolled >= 25 && !tracking.tracked25) {
-            analytics.trackCustomEvent('scroll_depth', 'engagement', {
-              component_id: 'homepage_scroll',
-              component_type: 'page_section',
-              scroll_depth: 25,
-              value: 25
-            });
-            tracking.tracked25 = true;
-          }
-          
-          if (scrolled >= 50 && !tracking.tracked50) {
-            analytics.trackCustomEvent('scroll_depth', 'engagement', {
-              component_id: 'homepage_scroll',
-              component_type: 'page_section',
-              scroll_depth: 50,
-              value: 50
-            });
-            tracking.tracked50 = true;
-          }
-          
-          if (scrolled >= 75 && !tracking.tracked75) {
-            analytics.trackCustomEvent('scroll_depth', 'engagement', {
-              component_id: 'homepage_scroll',
-              component_type: 'page_section',
-              scroll_depth: 75,
-              value: 75
-            });
-            tracking.tracked75 = true;
-          }
-          
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [analytics]);
-
-  // Enhanced form submission handler with comprehensive tracking
+  // Simple form submission handler
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
 
-    // Track form submission attempt
-    analytics.trackCustomEvent('form_submit_attempt', 'contact_form', {
-      component_id: 'homepage_contact_form',
-      component_type: 'form',
-      form_location: 'contact_section',
-      fields_count: 3,
-      form_data: {
-        has_name: !!formData.name,
-        has_email: !!formData.email,
-        has_message: !!formData.message,
-        message_length: formData.message.length
-      }
-    });
+    // Track form submission for analytics
+    analytics.trackContactFormSubmit();
 
     try {
       const response = await fetch("/api/contact", {
@@ -111,15 +43,7 @@ export default function Home() {
       });
 
       if (response.ok) {
-        // Track successful form submission
-        analytics.trackCustomEvent('form_success', 'contact_form', {
-          component_id: 'homepage_contact_form',
-          component_type: 'form',
-          form_location: 'contact_section',
-          response_status: response.status,
-          success_type: 'api_success'
-        });
-
+        console.log("Form submitted successfully, triggering confetti");
         setIsSubmitted(true);
         setFormData({
           name: "",
@@ -127,70 +51,17 @@ export default function Home() {
           message: "",
         });
         
-        // Track confetti celebration
-        analytics.trackCustomEvent('celebration_shown', 'user_experience', {
-          component_id: 'contact_form_confetti',
-          component_type: 'animation',
-          trigger_event: 'form_success'
-        });
-        
         confetti({
           particleCount: 100,
           spread: 70,
           origin: { y: 0.6 }
         });
-      } else {
-        // Track API error
-        analytics.trackCustomEvent('form_error', 'contact_form', {
-          component_id: 'homepage_contact_form',
-          component_type: 'form',
-          error_type: 'api_error',
-          error_status: response.status,
-          error_context: 'response_not_ok'
-        });
       }
     } catch (error) {
-      // Track network/fetch error
-      analytics.trackCustomEvent('form_error', 'contact_form', {
-        component_id: 'homepage_contact_form',
-        component_type: 'form',
-        error_type: 'network_error',
-        error_context: 'fetch_exception',
-        error_message: error instanceof Error ? error.message : 'unknown_error'
-      });
-      
       console.error("Error sending message:", error);
     } finally {
       setIsLoading(false);
     }
-  };
-
-  // Hero CTA button click handler
-  const handleHeroCTAClick = () => {
-    analytics.trackCustomEvent('cta_click', 'navigation', {
-      component_id: 'hero_cta_button',
-      component_type: 'button',
-      button_text: t('hero.cta'),
-      destination: `/${locale}/help`,
-      cta_location: 'hero_section',
-      button_style: 'primary'
-    });
-  };
-
-  // Partner link click handler
-  const handlePartnerClick = (partnerName: string, partnerUrl: string) => {
-    const partnerSlug = partnerName.toLowerCase().replace(/[^a-z0-9]/g, '_');
-    
-    analytics.trackExternalLink(partnerUrl, partnerName, `partner_link_${partnerSlug}`);
-    
-    // Additional partner-specific tracking
-    analytics.trackCustomEvent('partner_engagement', 'external_link', {
-      component_id: `partner_link_${partnerSlug}`,
-      component_type: 'partner_card',
-      partner_name: partnerName,
-      link_section: 'partners_section',
-      click_context: 'partner_discovery'
-    });
   };
 
   return (
@@ -216,7 +87,6 @@ export default function Home() {
           <Link href={`/${locale}/help`}>
             <Button 
               className="bg-accent-orange text-white px-8 py-4 text-lg shadow-lg hover:bg-accent-orange/90 group"
-              onClick={handleHeroCTAClick}
             >
               {t('hero.cta')}
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -347,7 +217,6 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-transform hover:scale-105"
-                onClick={() => handlePartnerClick(partner.name, partner.link)}
               >
                 <Card className="h-full p-8 border-primary-teal/20">
                   <div className="mb-6 flex justify-center">
