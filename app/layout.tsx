@@ -1,5 +1,18 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import { Outfit, Mulish } from "next/font/google";
+
+const outfit = Outfit({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-outfit',
+});
+
+const mulish = Mulish({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-mulish',
+});
 
 export const metadata: Metadata = {
   title: "Plusplus - Bridging TradFi and DeFi",
@@ -35,7 +48,7 @@ export default function RootLayout({
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body>{children}</body>
+      <body className={`${outfit.variable} ${mulish.variable} font-sans`}>{children}</body>
     </html>
   );
 }

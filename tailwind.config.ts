@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        '3xl': '1920px',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -48,7 +51,7 @@ const config: Config = {
         accent: {
           DEFAULT: 'hsl(var(--accent))',
           foreground: 'hsl(var(--accent-foreground))',
-          orange: '#F1642E',
+          orange: '#FF0000',
         },
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',
@@ -72,8 +75,9 @@ const config: Config = {
         },
       },
       fontFamily: {
-        heading: ['"Outfit"', 'sans-serif'],
-        body: ['"Mulish"', 'sans-serif'],
+        sans: ['var(--font-outfit)', 'sans-serif'],
+        heading: ['var(--font-outfit)', 'sans-serif'],
+        body: ['var(--font-mulish)', 'sans-serif'],
       },
       keyframes: {
         'accordion-down': {
@@ -92,10 +96,21 @@ const config: Config = {
             height: '0',
           },
         },
+        'slide-in-right': {
+          from: {
+            transform: 'translateX(100%)',
+            opacity: '0',
+          },
+          to: {
+            transform: 'translateX(0)',
+            opacity: '1',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'slide-in-right': 'slide-in-right 0.8s ease-out',
       },
     },
   },

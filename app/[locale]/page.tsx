@@ -24,6 +24,32 @@ export default function Home() {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [boxPosition, setBoxPosition] = useState('calc(33.33vh - 12rem)');
+
+  // Mouse tracking for hero section
+  const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    setMousePosition({ x, y });
+    
+    // Calculate box position based on mouse Y position
+    const sectionHeight = rect.height;
+    const mouseYPercent = y / sectionHeight;
+    
+    // Move box away from mouse - if mouse is in upper half, move box down, vice versa
+    if (mouseYPercent < 0.5) {
+      setBoxPosition('calc(66.67vh - 12rem)'); // Move to lower third
+    } else {
+      setBoxPosition('calc(16.67vh - 6rem)'); // Move to upper third
+    }
+  };
+
+  const handleMouseLeave = () => {
+    // Return to default position when mouse leaves
+    setBoxPosition('calc(33.33vh - 12rem)');
+  };
 
   // Simple form submission handler
   const handleSubmit = async (e: React.FormEvent) => {
@@ -67,31 +93,36 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
       {/* Hero Section */}
-      <section className="relative h-[100svh] flex items-center justify-center">
+      <section 
+        className="relative h-[100svh] flex items-center justify-center cursor-none"
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+      >
         <Image
-          src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1500&q=80"
-          alt="Star filled sky with mountains"
+          src="/images/title_img.webp"
+          alt="Title background image"
           fill
           className="object-cover"
           priority
+          quality={95}
           sizes="100vw"
+          placeholder="blur"
+          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-white/70 to-gray-400/80" />
-        <div className="relative z-10 flex flex-col items-center text-center px-4">
-          <h1 className="font-black text-[clamp(2.5rem,8vw,5rem)] text-gray-900 mb-4 leading-tight">
-            {t('hero.title.simple')} <span className="text-accent-orange">{t('hero.title.highlight')}</span>, {t('hero.title.subtitle')}
-          </h1>
-          <p className="text-lg md:text-2xl text-gray-700 mb-8 max-w-2xl">
-            {t('hero.subtitle')}
-          </p>
-          <Link href={`/${locale}/help`}>
-            <Button 
-              className="bg-accent-orange text-white px-8 py-4 text-lg shadow-lg hover:bg-accent-orange/90 group"
-            >
-              {t('hero.cta')}
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Button>
-          </Link>
+        <div 
+          className="absolute inset-0 flex items-start justify-end transition-all duration-500 ease-out" 
+          style={{ paddingTop: boxPosition }}
+        >
+          <div className="bg-black/20 backdrop-blur-lg border-l border-white/30 shadow-2xl h-auto animate-slide-in-right flex items-center justify-start mr-0 ml-0 sm:ml-[10vw] md:ml-[15vw] lg:ml-[25vw] xl:ml-[35vw] 2xl:ml-[45vw]" style={{ borderRadius: '0px', width: '100%', maxWidth: '100%', minHeight: 'auto' }}>
+            <div className="p-6 md:p-8 lg:p-10 max-w-2xl w-full ml-0 sm:ml-[2vw] md:ml-[3vw] lg:ml-[4vw] xl:ml-[5vw]">
+              <h1 className="font-heading font-black text-[clamp(2.5rem,6vw,4rem)] text-white mt-6 mb-4 leading-tight text-left drop-shadow-lg">
+                {t('hero.title.simple')} <span className="text-accent-orange drop-shadow-lg">{t('hero.title.highlight')}</span> {t('hero.title.subtitle')}
+              </h1>
+              <p className="font-body text-lg md:text-xl text-gray-50 mb-6 leading-relaxed text-left font-medium drop-shadow-md">
+                {t('hero.subtitle')}
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
