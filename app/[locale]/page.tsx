@@ -25,7 +25,7 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [boxPosition, setBoxPosition] = useState('calc(33.33vh - 12rem)');
+  const [boxPosition, setBoxPosition] = useState('max(calc(33.33vh - 6rem), 6rem)');
 
   // Mouse tracking for hero section
   const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
@@ -40,15 +40,15 @@ export default function Home() {
     
     // Move box away from mouse - if mouse is in upper half, move box down, vice versa
     if (mouseYPercent < 0.5) {
-      setBoxPosition('calc(66.67vh - 12rem)'); // Move to lower third
+      setBoxPosition('max(calc(66.67vh - 6rem), 6rem)'); // Move to lower third, but ensure min distance from navbar
     } else {
-      setBoxPosition('calc(16.67vh - 6rem)'); // Move to upper third
+      setBoxPosition('max(calc(16.67vh - 3rem), 6rem)'); // Move to upper third, but ensure min distance from navbar
     }
   };
 
   const handleMouseLeave = () => {
     // Return to default position when mouse leaves
-    setBoxPosition('calc(33.33vh - 12rem)');
+    setBoxPosition('max(calc(33.33vh - 6rem), 6rem)');
   };
 
   // Simple form submission handler
@@ -113,7 +113,7 @@ export default function Home() {
           className="absolute inset-0 flex items-start justify-end transition-all duration-500 ease-out" 
           style={{ paddingTop: boxPosition }}
         >
-          <div className="bg-black/20 backdrop-blur-lg border-l border-white/30 shadow-2xl h-auto animate-slide-in-right flex items-center justify-start mr-0 ml-0 sm:ml-[10vw] md:ml-[15vw] lg:ml-[25vw] xl:ml-[35vw] 2xl:ml-[45vw]" style={{ borderRadius: '0px', width: '100%', maxWidth: '100%', minHeight: 'auto' }}>
+          <div className="bg-black/30 backdrop-blur-lg border-l border-white/30 shadow-2xl h-auto animate-slide-in-right flex items-center justify-start mr-0 ml-0 sm:ml-[10vw] md:ml-[15vw] lg:ml-[25vw] xl:ml-[35vw] 2xl:ml-[45vw]" style={{ borderRadius: '0px', width: '100%', maxWidth: '100%', minHeight: 'auto' }}>
             <div className="p-6 md:p-8 lg:p-10 max-w-2xl w-full ml-0 sm:ml-[2vw] md:ml-[3vw] lg:ml-[4vw] xl:ml-[5vw]">
               <h1 className="font-heading font-black text-[clamp(2.5rem,6vw,4rem)] text-white mt-6 mb-4 leading-tight text-left drop-shadow-lg">
                 {t('hero.title.simple')} <span className="text-accent-orange drop-shadow-lg">{t('hero.title.highlight')}</span> {t('hero.title.subtitle')}
