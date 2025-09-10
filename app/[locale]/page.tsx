@@ -24,32 +24,6 @@ export default function Home() {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [boxPosition, setBoxPosition] = useState('max(calc(33.33vh - 6rem), 6rem)');
-
-  // Mouse tracking for hero section
-  const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    setMousePosition({ x, y });
-    
-    // Calculate box position based on mouse Y position
-    const sectionHeight = rect.height;
-    const mouseYPercent = y / sectionHeight;
-    
-    // Move box away from mouse - if mouse is in upper half, move box down, vice versa
-    if (mouseYPercent < 0.5) {
-      setBoxPosition('max(calc(66.67vh - 6rem), 6rem)'); // Move to lower third, but ensure min distance from navbar
-    } else {
-      setBoxPosition('max(calc(16.67vh - 3rem), 6rem)'); // Move to upper third, but ensure min distance from navbar
-    }
-  };
-
-  const handleMouseLeave = () => {
-    // Return to default position when mouse leaves
-    setBoxPosition('max(calc(33.33vh - 6rem), 6rem)');
-  };
 
   // Simple form submission handler
   const handleSubmit = async (e: React.FormEvent) => {
@@ -93,11 +67,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
       {/* Hero Section */}
-      <section 
-        className="relative h-[100svh] flex items-center justify-center cursor-none"
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
-      >
+      <section className="relative h-[100svh] flex items-center justify-center">
         <Image
           src="/images/title_img.webp"
           alt="Title background image"
@@ -109,10 +79,7 @@ export default function Home() {
           placeholder="blur"
           blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
         />
-        <div 
-          className="absolute inset-0 flex items-start justify-end transition-all duration-500 ease-out" 
-          style={{ paddingTop: boxPosition }}
-        >
+        <div className="absolute inset-0 flex items-start justify-end" style={{ paddingTop: 'max(calc(33.33vh - 6rem), 6rem)' }}>
           <div className="bg-black/30 backdrop-blur-lg border-l border-white/30 shadow-2xl h-auto animate-slide-in-right flex items-center justify-start mr-0 ml-0 sm:ml-[10vw] md:ml-[15vw] lg:ml-[25vw] xl:ml-[35vw] 2xl:ml-[45vw]" style={{ borderRadius: '0px', width: '100%', maxWidth: '100%', minHeight: 'auto' }}>
             <div className="p-6 md:p-8 lg:p-10 max-w-2xl w-full ml-0 sm:ml-[2vw] md:ml-[3vw] lg:ml-[4vw] xl:ml-[5vw]">
               <h1 className="font-heading font-black text-[clamp(2.5rem,6vw,4rem)] text-white mt-6 mb-4 leading-tight text-left drop-shadow-lg">
@@ -121,6 +88,16 @@ export default function Home() {
               <p className="font-body text-lg md:text-xl text-gray-50 mb-6 leading-relaxed text-left font-medium drop-shadow-md">
                 {t('hero.subtitle')}
               </p>
+              <div className="mt-8">
+                <Link href={`/${locale}/help`}>
+                  <Button 
+                    className="bg-accent-orange text-white px-6 py-3 md:px-8 md:py-4 text-lg shadow-lg hover:bg-accent-orange/90 group transition-all duration-300"
+                  >
+                    {t('hero.cta')}
+                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
