@@ -3,7 +3,6 @@
 import { Mail } from 'lucide-react';
 import Link from 'next/link';
 import { useTranslations, useLocale } from 'next-intl';
-import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Footer() {
   const t = useTranslations('footer');
@@ -40,10 +39,6 @@ export default function Footer() {
               <Mail className="h-6 w-6" />
               <span className="text-lg">{t('linkedin')}</span>
             </a>
-            {/* Mobile language switcher - always visible on mobile */}
-            <div className="block sm:hidden">
-              <LanguageSwitcher mobile sourceContext="footer" />
-            </div>
           </div>
         </div>
       </div>

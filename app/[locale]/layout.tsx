@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CookieConsentBanner from '../components/CookieConsent';
 import GoogleAnalytics from '../components/GoogleAnalytics';
+import ScrollToTop from '../components/ScrollToTop';
 
 const locales = ['en', 'de'];
 
@@ -38,6 +39,7 @@ export default async function LocaleLayout({
       {children}
       <Footer />
       <CookieConsentBanner />
+      <ScrollToTop />
     </NextIntlClientProvider>
   );
 }
