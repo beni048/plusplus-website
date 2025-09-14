@@ -40,6 +40,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/[locale]/rental-solutions/landlord/page.js"
+    ],
+    "/[locale]/rental-solutions/tenant/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[locale]/rental-solutions/tenant/page.js"
     ]
   }
 }

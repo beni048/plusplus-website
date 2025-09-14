@@ -251,11 +251,11 @@
     "title": "Wählen Sie Ihren Weg",
     "subtitle": "Teilen Sie uns Ihre Rolle auf dem Mietmarkt mit, um personalisierte Lösungen zu erhalten.",
     "tenant": {
-      "title": "Ich bin Mieter",
+      "title": "Ich miete",
       "description": "Auf der Suche nach flexiblen Mietkautionslösungen und besseren finanziellen Möglichkeiten."
     },
     "landlord": {
-      "title": "Ich bin Vermieter/Immobilienbesitzer",
+      "title": "Ich vermiete",
       "description": "Auf der Suche nach effizienter Immobilienverwaltung und Mietgarantielösungen."
     }
   },
