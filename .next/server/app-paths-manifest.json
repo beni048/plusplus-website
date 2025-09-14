@@ -1,3 +1,8 @@
 {
+  "/[locale]/rental-solutions/select/page": "app/[locale]/rental-solutions/select/page.js",
+  "/[locale]/corporate-treasury/page": "app/[locale]/corporate-treasury/page.js",
+  "/[locale]/downloads/page": "app/[locale]/downloads/page.js",
+  "/[locale]/select/page": "app/[locale]/select/page.js",
+  "/[locale]/rental-solutions/landlord/page": "app/[locale]/rental-solutions/landlord/page.js",
   "/[locale]/page": "app/[locale]/page.js"
 }

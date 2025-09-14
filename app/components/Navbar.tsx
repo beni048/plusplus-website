@@ -43,19 +43,19 @@ export default function Navbar() {
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-6">
             <Link 
-              href={`/${locale}/help`} 
+              href={`/${locale}/rental-solutions/select`} 
               className="text-black hover:text-accent-orange font-medium transition-colors"
             >
               {t('rentalSolutions')}
             </Link>
             <Link 
-              href={`/${locale}/help`} 
+              href={`/${locale}/corporate-treasury`} 
               className="text-black hover:text-accent-orange font-medium transition-colors"
             >
               {t('corporateTreasury')}
             </Link>
             <Link 
-              href={`/${locale}/help`} 
+              href={`/${locale}/downloads`} 
               className="text-black hover:text-accent-orange font-medium transition-colors"
             >
               {t('downloads')}
@@ -86,21 +86,21 @@ export default function Navbar() {
           <div className="lg:hidden bg-white/95 backdrop-blur-sm border-t border-gray-200">
             <div className="px-4 py-6 space-y-4">
               <Link 
-                href={`/${locale}/help`} 
+                href={`/${locale}/rental-solutions/select`} 
                 className="block text-black hover:text-accent-orange font-medium transition-colors py-2"
                 onClick={closeMobileMenu}
               >
                 {t('rentalSolutions')}
               </Link>
               <Link 
-                href={`/${locale}/help`} 
+                href={`/${locale}/corporate-treasury`} 
                 className="block text-black hover:text-accent-orange font-medium transition-colors py-2"
                 onClick={closeMobileMenu}
               >
                 {t('corporateTreasury')}
               </Link>
               <Link 
-                href={`/${locale}/help`} 
+                href={`/${locale}/downloads`} 
                 className="block text-black hover:text-accent-orange font-medium transition-colors py-2"
                 onClick={closeMobileMenu}
               >

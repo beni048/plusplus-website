@@ -91,7 +91,7 @@ export default function Home() {
                   {t('hero.subtitle')}
                 </p>
                 <div className="mt-8">
-                  <Link href={`/${locale}/help`}>
+                  <Link href={`/${locale}/select`}>
                     <Button 
                       className="bg-accent-orange text-white px-6 py-3 md:px-8 md:py-4 text-lg shadow-lg hover:bg-accent-orange/90 group transition-all duration-300"
                     >
@@ -116,7 +116,7 @@ export default function Home() {
               
               {/* Button below the box */}
               <div>
-                <Link href={`/${locale}/help`}>
+                <Link href={`/${locale}/select`}>
                   <Button 
                     className="bg-accent-orange text-white px-8 py-4 text-lg shadow-2xl hover:bg-accent-orange/90 group transition-all duration-300 border-2 border-black/20"
                   >

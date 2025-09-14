@@ -234,5 +234,257 @@
       "content": "We may update this Privacy Policy periodically. The date of the latest revision appears below."
     },
     "lastUpdated": "Last Updated: July 1, 2025."
+  },
+  "productSelect": {
+    "title": "Choose Your Solution",
+    "subtitle": "Select the product category that best fits your needs and discover how Plusplus can help you.",
+    "rentalSolutions": {
+      "title": "Rental Solutions",
+      "description": "Smart rental deposit management and property solutions for tenants and landlords."
+    },
+    "corporateTreasury": {
+      "title": "Corporate Treasury",
+      "description": "Advanced treasury management and investment solutions for businesses and institutions."
+    }
+  },
+  "rentalSolutionsSelect": {
+    "title": "Choose Your Path",
+    "subtitle": "Tell us about your role in the rental market to get personalized solutions.",
+    "tenant": {
+      "title": "I'm a Tenant",
+      "description": "Looking for flexible rental deposit solutions and better financial opportunities."
+    },
+    "landlord": {
+      "title": "I'm a Landlord/Real Estate Owner",
+      "description": "Seeking efficient property management and rental guarantee solutions."
+    }
+  },
+  "rentalSolutionsTenant": {
+    "title": "Rental Solutions for Tenants",
+    "subtitle": "Transform your rental deposit into a smart investment opportunity while securing your dream home.",
+    "benefits": {
+      "title": "Benefits for Tenants",
+      "benefit1": "Earn returns on your rental deposit instead of letting it sit idle",
+      "benefit2": "Flexible payment options that match your financial situation",
+      "benefit3": "Digital management of all rental-related documents and payments",
+      "benefit4": "Build your credit score through consistent, tracked payments"
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "step1": {
+        "title": "1. Apply for Your Rental",
+        "description": "Use our platform to apply for rentals with enhanced credibility through our verification system."
+      },
+      "step2": {
+        "title": "2. Smart Deposit Investment",
+        "description": "Instead of a traditional deposit, invest your money in our secure, yield-generating products."
+      },
+      "step3": {
+        "title": "3. Enjoy Your Home",
+        "description": "Live in your rental while your deposit works for you, earning returns over time."
+      }
+    },
+    "features": {
+      "title": "Key Features",
+      "feature1": "Swiss-regulated investment products for maximum security",
+      "feature2": "Real-time tracking of your deposit performance",
+      "feature3": "Instant access to funds when needed",
+      "feature4": "Comprehensive rental insurance included"
+    },
+    "cta": {
+      "button": "Get Started as Tenant"
+    }
+  },
+  "rentalSolutionsLandlord": {
+    "title": "Rental Solutions for Landlords",
+    "subtitle": "Streamline your property management with guaranteed rent payments and comprehensive tenant screening.",
+    "benefits": {
+      "title": "Benefits for Landlords",
+      "benefit1": "Guaranteed rent payments even if tenants default",
+      "benefit2": "Comprehensive tenant screening and credit assessment",
+      "benefit3": "Digital property management tools and documentation",
+      "benefit4": "Reduced vacancy periods through our tenant network"
+    },
+    "services": {
+      "title": "Our Services",
+      "screening": {
+        "title": "Advanced Tenant Screening",
+        "description": "Our comprehensive screening process includes credit checks, income verification, and rental history analysis to ensure you get reliable tenants."
+      },
+      "guarantee": {
+        "title": "Rent Guarantee",
+        "description": "We guarantee your rental income for up to 12 months, protecting you from tenant defaults and providing peace of mind."
+      },
+      "management": {
+        "title": "Digital Property Management",
+        "description": "Manage all aspects of your rental properties through our digital platform, from lease agreements to maintenance requests."
+      }
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "step1": {
+        "title": "1. List Your Property",
+        "description": "Add your rental property to our platform with detailed information and photos."
+      },
+      "step2": {
+        "title": "2. Tenant Matching",
+        "description": "We screen and match qualified tenants to your property based on our comprehensive criteria."
+      },
+      "step3": {
+        "title": "3. Secure Management",
+        "description": "Enjoy guaranteed rent payments and full property management support throughout the tenancy."
+      }
+    },
+    "cta": {
+      "button": "Get Started as Landlord"
+    }
+  },
+  "rentalSolutions": {
+    "hero": {
+      "title": "Rental Solutions",
+      "subtitle": "Innovative rental deposit and property management solutions that benefit both tenants and landlords."
+    },
+    "overview": {
+      "title": "Overview",
+      "description": "Our rental solutions bridge the gap between traditional rental processes and modern financial technology. We provide secure, profitable, and efficient solutions for all parties in the rental market."
+    },
+    "benefits": {
+      "title": "Benefits",
+      "tenants": {
+        "title": "For Tenants",
+        "benefit1": "Earn returns on your rental deposit",
+        "benefit2": "Flexible payment options",
+        "benefit3": "Digital document management"
+      },
+      "landlords": {
+        "title": "For Landlords",
+        "benefit1": "Guaranteed rental income",
+        "benefit2": "Professional tenant screening",
+        "benefit3": "Reduced administrative burden"
+      }
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "step1": {
+        "title": "1. Registration",
+        "description": "Sign up on our platform and complete your profile verification."
+      },
+      "step2": {
+        "title": "2. Matching",
+        "description": "We connect qualified tenants with suitable properties using our advanced matching algorithm."
+      },
+      "step3": {
+        "title": "3. Secure Transactions",
+        "description": "All payments and deposits are processed securely through our Swiss-regulated platform."
+      }
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "description": "Join thousands of satisfied tenants and landlords who trust our platform.",
+      "button": "Contact Us Today"
+    }
+  },
+  "corporateTreasury": {
+    "hero": {
+      "title": "Corporate Treasury",
+      "subtitle": "Advanced treasury management solutions for modern businesses seeking optimal returns on their cash reserves."
+    },
+    "overview": {
+      "title": "Overview",
+      "description": "Our corporate treasury solutions help businesses optimize their cash management through secure, high-yield investment products while maintaining the liquidity and security required for operational excellence."
+    },
+    "services": {
+      "title": "Our Services",
+      "liquidity": {
+        "title": "Liquidity Management",
+        "description": "Optimize your cash flow with our flexible liquidity solutions designed for businesses of all sizes.",
+        "feature1": "Real-time cash flow monitoring",
+        "feature2": "Automated liquidity optimization"
+      },
+      "yield": {
+        "title": "Yield Enhancement",
+        "description": "Maximize returns on your excess cash through our carefully curated investment products.",
+        "feature1": "Swiss-regulated investment options",
+        "feature2": "Diversified portfolio management"
+      }
+    },
+    "benefits": {
+      "title": "Benefits",
+      "efficiency": {
+        "title": "Operational Efficiency",
+        "description": "Streamline your treasury operations with our automated systems and real-time reporting."
+      },
+      "security": {
+        "title": "Swiss Security",
+        "description": "All investments are backed by Swiss regulations and our robust security infrastructure."
+      },
+      "transparency": {
+        "title": "Full Transparency",
+        "description": "Complete visibility into your investments with detailed reporting and analytics."
+      }
+    },
+    "clients": {
+      "title": "Who We Serve",
+      "sme": {
+        "title": "Small & Medium Enterprises",
+        "description": "Tailored solutions for growing businesses looking to optimize their treasury management."
+      },
+      "institutions": {
+        "title": "Financial Institutions",
+        "description": "Advanced treasury solutions for banks, credit unions, and financial service providers."
+      },
+      "startups": {
+        "title": "Startups & Scale-ups",
+        "description": "Flexible treasury management for fast-growing companies with dynamic cash flow needs."
+      }
+    },
+    "cta": {
+      "title": "Transform Your Treasury",
+      "description": "Ready to optimize your corporate cash management?",
+      "button": "Schedule Consultation"
+    }
+  },
+  "downloads": {
+    "hero": {
+      "title": "Downloads & Resources",
+      "subtitle": "Access comprehensive documentation, legal documents, and press materials for Plusplus."
+    },
+    "documentation": {
+      "title": "Documentation",
+      "whitepaper": {
+        "title": "Plusplus Whitepaper",
+        "description": "Comprehensive overview of our technology, business model, and vision for the future of rental finance.",
+        "button": "Download Whitepaper"
+      },
+      "factsheet": {
+        "title": "Product Factsheet",
+        "description": "Quick overview of our key products, features, and benefits for tenants and landlords.",
+        "button": "Download Factsheet"
+      }
+    },
+    "legal": {
+      "title": "Legal Documents",
+      "terms": {
+        "title": "Terms & Conditions",
+        "description": "Complete terms of service and user agreements for our platform and services.",
+        "button": "Download Terms"
+      },
+      "disclosure": {
+        "title": "Risk Disclosure",
+        "description": "Important information about investment risks and regulatory compliance.",
+        "button": "View Risk Document"
+      }
+    },
+    "pressKit": {
+      "title": "Press Kit",
+      "description": "Brand assets, logos, and guidelines for media and partnership use.",
+      "logos": "Download Logos",
+      "guidelines": "Brand Guidelines"
+    },
+    "contact": {
+      "title": "Need More Information?",
+      "description": "Can't find what you're looking for? Contact our team for additional resources and support.",
+      "button": "Contact Support"
+    }
   }
 }

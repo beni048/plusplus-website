@@ -61,7 +61,7 @@ export default function ScrollToTop() {
       onClick={scrollToTop}
       className={`fixed right-4 z-40 p-3 bg-accent-orange hover:bg-accent-orange/90 text-white rounded-full shadow-lg transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-accent-orange focus:ring-offset-2 ${
         cookieBannerVisible 
-          ? 'bottom-24 sm:bottom-4 sm:right-[432px]' // Above cookie banner on mobile, to the left on desktop
+          ? 'bottom-44 sm:bottom-44' // Above cookie banner on both mobile and desktop
           : 'bottom-4' // Normal position when no cookie banner
       }`}
       aria-label="Scroll to top"

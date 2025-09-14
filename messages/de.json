@@ -234,5 +234,257 @@
       "content": "Wir können diese Datenschutzerklärung regelmässig aktualisieren. Das Datum der letzten Überarbeitung finden Sie unten."
     },
     "lastUpdated": "Letzte Aktualisierung: 1. Juli 2025."
+  },
+  "productSelect": {
+    "title": "Wählen Sie Ihre Lösung",
+    "subtitle": "Wählen Sie die Produktkategorie, die am besten zu Ihren Bedürfnissen passt, und entdecken Sie, wie Plusplus Ihnen helfen kann.",
+    "rentalSolutions": {
+      "title": "Mietlösungen",
+      "description": "Intelligente Mietkautionsverwaltung und Immobilienlösungen für Mieter und Vermieter."
+    },
+    "corporateTreasury": {
+      "title": "Corporate Treasury",
+      "description": "Fortschrittliche Treasury-Management- und Investitionslösungen für Unternehmen und Institutionen."
+    }
+  },
+  "rentalSolutionsSelect": {
+    "title": "Wählen Sie Ihren Weg",
+    "subtitle": "Teilen Sie uns Ihre Rolle auf dem Mietmarkt mit, um personalisierte Lösungen zu erhalten.",
+    "tenant": {
+      "title": "Ich bin Mieter",
+      "description": "Auf der Suche nach flexiblen Mietkautionslösungen und besseren finanziellen Möglichkeiten."
+    },
+    "landlord": {
+      "title": "Ich bin Vermieter/Immobilienbesitzer",
+      "description": "Auf der Suche nach effizienter Immobilienverwaltung und Mietgarantielösungen."
+    }
+  },
+  "rentalSolutionsTenant": {
+    "title": "Mietlösungen für Mieter",
+    "subtitle": "Verwandeln Sie Ihre Mietkaution in eine intelligente Investitionsmöglichkeit und sichern Sie sich Ihr Traumzuhause.",
+    "benefits": {
+      "title": "Vorteile für Mieter",
+      "benefit1": "Erzielen Sie Renditen auf Ihre Mietkaution, anstatt sie untätig liegen zu lassen",
+      "benefit2": "Flexible Zahlungsoptionen, die zu Ihrer finanziellen Situation passen",
+      "benefit3": "Digitale Verwaltung aller mietbezogenen Dokumente und Zahlungen",
+      "benefit4": "Aufbau Ihrer Kreditwürdigkeit durch konsistente, nachverfolgte Zahlungen"
+    },
+    "howItWorks": {
+      "title": "So funktioniert es",
+      "step1": {
+        "title": "1. Bewerben Sie sich für Ihre Mietwohnung",
+        "description": "Nutzen Sie unsere Plattform, um sich für Mietwohnungen mit verbesserter Glaubwürdigkeit durch unser Verifizierungssystem zu bewerben."
+      },
+      "step2": {
+        "title": "2. Intelligente Kautionsinvestition",
+        "description": "Anstatt einer traditionellen Kaution investieren Sie Ihr Geld in unsere sicheren, renditestarken Produkte."
+      },
+      "step3": {
+        "title": "3. Geniessen Sie Ihr Zuhause",
+        "description": "Leben Sie in Ihrer Mietwohnung, während Ihre Kaution für Sie arbeitet und im Laufe der Zeit Renditen erzielt."
+      }
+    },
+    "features": {
+      "title": "Hauptmerkmale",
+      "feature1": "Schweizer regulierte Anlageprodukte für maximale Sicherheit",
+      "feature2": "Echtzeitverfolgung Ihrer Kautionsperformance",
+      "feature3": "Sofortiger Zugang zu Mitteln bei Bedarf",
+      "feature4": "Umfassende Mietversicherung inklusive"
+    },
+    "cta": {
+      "button": "Als Mieter starten"
+    }
+  },
+  "rentalSolutionsLandlord": {
+    "title": "Mietlösungen für Vermieter",
+    "subtitle": "Optimieren Sie Ihre Immobilienverwaltung mit garantierten Mietzahlungen und umfassender Mieterprüfung.",
+    "benefits": {
+      "title": "Vorteile für Vermieter",
+      "benefit1": "Garantierte Mietzahlungen auch bei Mietausfall",
+      "benefit2": "Umfassende Mieterprüfung und Kreditbewertung",
+      "benefit3": "Digitale Immobilienverwaltungstools und Dokumentation",
+      "benefit4": "Reduzierte Leerstandszeiten durch unser Mieternetzwerk"
+    },
+    "services": {
+      "title": "Unsere Dienstleistungen",
+      "screening": {
+        "title": "Erweiterte Mieterprüfung",
+        "description": "Unser umfassender Prüfprozess umfasst Bonitätsprüfungen, Einkommensverifizierung und Miethistorienanalyse, um zuverlässige Mieter zu gewährleisten."
+      },
+      "guarantee": {
+        "title": "Mietgarantie",
+        "description": "Wir garantieren Ihr Mieteinkommen für bis zu 12 Monate und schützen Sie vor Mietausfällen für Ihre Sicherheit."
+      },
+      "management": {
+        "title": "Digitale Immobilienverwaltung",
+        "description": "Verwalten Sie alle Aspekte Ihrer Mietimmobilien über unsere digitale Plattform, von Mietverträgen bis zu Wartungsanfragen."
+      }
+    },
+    "howItWorks": {
+      "title": "So funktioniert es",
+      "step1": {
+        "title": "1. Listen Sie Ihre Immobilie auf",
+        "description": "Fügen Sie Ihre Mietimmobilie mit detaillierten Informationen und Fotos zu unserer Plattform hinzu."
+      },
+      "step2": {
+        "title": "2. Mieter-Matching",
+        "description": "Wir prüfen und vermitteln qualifizierte Mieter für Ihre Immobilie basierend auf unseren umfassenden Kriterien."
+      },
+      "step3": {
+        "title": "3. Sichere Verwaltung",
+        "description": "Geniessen Sie garantierte Mietzahlungen und vollständige Immobilienverwaltungsunterstützung während der gesamten Mietdauer."
+      }
+    },
+    "cta": {
+      "button": "Als Vermieter starten"
+    }
+  },
+  "rentalSolutions": {
+    "hero": {
+      "title": "Mietlösungen",
+      "subtitle": "Innovative Mietkautions- und Immobilienverwaltungslösungen, die sowohl Mietern als auch Vermietern zugutekommen."
+    },
+    "overview": {
+      "title": "Überblick",
+      "description": "Unsere Mietlösungen überbrücken die Lücke zwischen traditionellen Mietprozessen und moderner Finanztechnologie. Wir bieten sichere, profitable und effiziente Lösungen für alle Parteien im Mietmarkt."
+    },
+    "benefits": {
+      "title": "Vorteile",
+      "tenants": {
+        "title": "Für Mieter",
+        "benefit1": "Erzielen Sie Renditen auf Ihre Mietkaution",
+        "benefit2": "Flexible Zahlungsoptionen",
+        "benefit3": "Digitale Dokumentenverwaltung"
+      },
+      "landlords": {
+        "title": "Für Vermieter",
+        "benefit1": "Garantiertes Mieteinkommen",
+        "benefit2": "Professionelle Mieterprüfung",
+        "benefit3": "Reduzierter Verwaltungsaufwand"
+      }
+    },
+    "howItWorks": {
+      "title": "So funktioniert es",
+      "step1": {
+        "title": "1. Registrierung",
+        "description": "Melden Sie sich auf unserer Plattform an und schliessen Sie die Profilverifizierung ab."
+      },
+      "step2": {
+        "title": "2. Matching",
+        "description": "Wir verbinden qualifizierte Mieter mit geeigneten Immobilien über unseren fortschrittlichen Matching-Algorithmus."
+      },
+      "step3": {
+        "title": "3. Sichere Transaktionen",
+        "description": "Alle Zahlungen und Kautionen werden sicher über unsere schweizer-regulierte Plattform abgewickelt."
+      }
+    },
+    "cta": {
+      "title": "Bereit anzufangen?",
+      "description": "Schliessen Sie sich Tausenden zufriedener Mieter und Vermieter an, die unserer Plattform vertrauen.",
+      "button": "Kontaktieren Sie uns heute"
+    }
+  },
+  "corporateTreasury": {
+    "hero": {
+      "title": "Corporate Treasury",
+      "subtitle": "Fortschrittliche Treasury-Management-Lösungen für moderne Unternehmen, die optimale Renditen auf ihre Geldreserven anstreben."
+    },
+    "overview": {
+      "title": "Überblick",
+      "description": "Unsere Corporate Treasury-Lösungen helfen Unternehmen, ihr Cash-Management durch sichere, hochrentable Anlageprodukte zu optimieren und dabei die für operative Exzellenz erforderliche Liquidität und Sicherheit zu gewährleisten."
+    },
+    "services": {
+      "title": "Unsere Dienstleistungen",
+      "liquidity": {
+        "title": "Liquiditätsmanagement",
+        "description": "Optimieren Sie Ihren Cashflow mit unseren flexiblen Liquiditätslösungen für Unternehmen jeder Grösse.",
+        "feature1": "Echtzeit-Cashflow-Überwachung",
+        "feature2": "Automatisierte Liquiditätsoptimierung"
+      },
+      "yield": {
+        "title": "Renditeoptimierung",
+        "description": "Maximieren Sie die Renditen auf Ihre überschüssigen Geldmittel durch unsere sorgfältig kuratierten Anlageprodukte.",
+        "feature1": "Schweizer regulierte Anlageoptionen",
+        "feature2": "Diversifiziertes Portfoliomanagement"
+      }
+    },
+    "benefits": {
+      "title": "Vorteile",
+      "efficiency": {
+        "title": "Operative Effizienz",
+        "description": "Optimieren Sie Ihre Treasury-Operationen mit unseren automatisierten Systemen und Echtzeit-Reporting."
+      },
+      "security": {
+        "title": "Schweizer Sicherheit",
+        "description": "Alle Investitionen sind durch Schweizer Regulierungen und unsere robuste Sicherheitsinfrastruktur abgesichert."
+      },
+      "transparency": {
+        "title": "Vollständige Transparenz",
+        "description": "Vollständige Sichtbarkeit Ihrer Investitionen mit detailliertem Reporting und Analysen."
+      }
+    },
+    "clients": {
+      "title": "Wen wir bedienen",
+      "sme": {
+        "title": "Klein- und Mittelunternehmen",
+        "description": "Massgeschneiderte Lösungen für wachsende Unternehmen, die ihr Treasury-Management optimieren möchten."
+      },
+      "institutions": {
+        "title": "Finanzinstitute",
+        "description": "Erweiterte Treasury-Lösungen für Banken, Kreditgenossenschaften und Finanzdienstleister."
+      },
+      "startups": {
+        "title": "Startups & Scale-ups",
+        "description": "Flexibles Treasury-Management für schnell wachsende Unternehmen mit dynamischen Cashflow-Bedürfnissen."
+      }
+    },
+    "cta": {
+      "title": "Transformieren Sie Ihr Treasury",
+      "description": "Bereit, Ihr Unternehmens-Cash-Management zu optimieren?",
+      "button": "Beratung vereinbaren"
+    }
+  },
+  "downloads": {
+    "hero": {
+      "title": "Downloads & Ressourcen",
+      "subtitle": "Zugang zu umfassender Dokumentation, rechtlichen Dokumenten und Pressematerialien für Plusplus."
+    },
+    "documentation": {
+      "title": "Dokumentation",
+      "whitepaper": {
+        "title": "Plusplus Whitepaper",
+        "description": "Umfassender Überblick über unsere Technologie, unser Geschäftsmodell und unsere Vision für die Zukunft der Mietfinanzierung.",
+        "button": "Whitepaper herunterladen"
+      },
+      "factsheet": {
+        "title": "Produkt-Factsheet",
+        "description": "Schneller Überblick über unsere wichtigsten Produkte, Funktionen und Vorteile für Mieter und Vermieter.",
+        "button": "Factsheet herunterladen"
+      }
+    },
+    "legal": {
+      "title": "Rechtliche Dokumente",
+      "terms": {
+        "title": "Geschäftsbedingungen",
+        "description": "Vollständige Servicebedingungen und Nutzervereinbarungen für unsere Plattform und Dienstleistungen.",
+        "button": "Bedingungen herunterladen"
+      },
+      "disclosure": {
+        "title": "Risikoaufklärung",
+        "description": "Wichtige Informationen über Anlagerisiken und regulatorische Compliance.",
+        "button": "Risikodokument ansehen"
+      }
+    },
+    "pressKit": {
+      "title": "Pressekit",
+      "description": "Marken-Assets, Logos und Richtlinien für Medien und Partnerschaftsnutzung.",
+      "logos": "Logos herunterladen",
+      "guidelines": "Markenrichtlinien"
+    },
+    "contact": {
+      "title": "Benötigen Sie weitere Informationen?",
+      "description": "Können Sie nicht finden, was Sie suchen? Kontaktieren Sie unser Team für zusätzliche Ressourcen und Support.",
+      "button": "Support kontaktieren"
+    }
   }
 }
