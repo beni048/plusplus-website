@@ -2,7 +2,7 @@
   "nav": {
     "rentalSolutions": "Mietlösungen",
     "corporateTreasury": "Corporate Treasury",
-    "downloads": "Downloads",
+    "contact": "Kontakt",
     "help": "Hilfe"
   },
   "hero": {
@@ -19,6 +19,31 @@
     "paragraph1": "Wir verbinden die Welt von DeFi mit der Stabilität des Schweizer Frankens und die Welt von TradFi mit der Rentabilität des Bitcoins. Für alle.",
     "paragraph2": "**Unsere Lösung**: Mietkautionen, die nicht einfach auf dem Konto verstauben, sondern für Sie arbeiten. Ob Bitcoin oder Stablecoins. Bei uns bekommen Sie die Möglichkeit, Ihre Mietkaution nach Ihren Bedürfnissen in einem innovativen Produkt anzulegen. Für Unternehmen bieten wir einfache, sichere und regulierte Zugänge zur dezentralen Finanzwelt. Swiss Made, ohne Tech-Frust.",
     "paragraph3": "**Unsere Vision**: Wir schaffen eine Finanzwelt, in der Geld nicht einfach liegt, sondern lebt. Plusplus bringt DeFi dorthin, wo es wirklich Sinn macht – in den Alltag. Ob Kaution oder Business Treasury: Wir machen renditestarkes Sparen einfach, sicher und für alle zugänglich."
+  },
+  "mainSections": {
+    "rentalSolutions": {
+      "title": "Mietlösungen",
+      "paragraph1": "Entdecken Sie unsere umfassenden Mietlösungen, die darauf ausgelegt sind, Ihre finanziellen Bedürfnisse zu erfüllen. Von Geräte-Finanzierung bis hin zu flexiblen Leasingverträgen bieten wir maßgeschneiderte Lösungen, die Ihrem Unternehmen beim Wachstum helfen und gleichzeitig einen optimalen Cashflow aufrechterhalten.",
+      "paragraph2": "Unsere Mietlösungen bieten wettbewerbsfähige Zinssätze, flexible Konditionen und fachkundige Unterstützung während des gesamten Prozesses. Ob Sie ein Startup oder ein etabliertes Unternehmen sind, wir haben die richtige Lösung für Sie.",
+      "button": "Mehr erfahren"
+    },
+    "corporateTreasury": {
+      "title": "Corporate Treasury",
+      "paragraph1": "Optimieren Sie Ihr Corporate Treasury Management mit unseren fortschrittlichen Finanzlösungen. Wir helfen Unternehmen dabei, ihr Cash Management zu rationalisieren, die Liquidität zu verbessern und fundierte Investitionsentscheidungen zu treffen.",
+      "paragraph2": "Unsere Treasury-Services umfassen Cashflow-Prognosen, Risikomanagement und strategische Finanzplanung. Arbeiten Sie mit uns zusammen, um Ihre Finanzoperationen zu verbessern und nachhaltiges Wachstum zu fördern.",
+      "button": "Services erkunden"
+    },
+    "partners": {
+      "title": "Partner",
+      "paragraph1": "Wir arbeiten mit führenden Finanztechnologie-Unternehmen zusammen, um Ihnen die bestmöglichen Lösungen zu bieten. Unsere strategischen Partnerschaften ermöglichen es uns, innovative Services und Wettbewerbsvorteile anzubieten.",
+      "paragraph2": "Durch diese Partnerschaften stellen wir den Zugang zu modernster Technologie, erhöhter Sicherheit und umfassendem Support für alle Ihre finanziellen Bedürfnisse sicher."
+    },
+    "contact": {
+      "title": "Bereit loszulegen?",
+      "paragraph": "Vereinbaren Sie eine Beratung mit unserem Vertriebsteam, um Ihre finanziellen Bedürfnisse zu besprechen und zu entdecken, wie unsere Lösungen Ihrem Unternehmen zugutekommen können.",
+      "button": "Meeting planen",
+      "subtitle": "Buchen Sie eine 30-minütige Beratung mit unserem Vertriebsleiter"
+    }
   },
   "team": {
     "title": "Unser Team",
@@ -66,9 +91,10 @@
   },
   "footer": {
     "copyright": "© Plusplus AG 2025 | Zug, Schweiz",
-    "privacy": "Datenschutzerklärung",
+    "privacyPolicy": "Datenschutzerklärung",
     "privacySettings": "Privatsphäre Einstellungen",
-    "linkedin": "Folgen Sie uns auf LinkedIn"
+    "impressum": "Impressum",
+    "terms": "Allgemeine Geschäftsbedingungen"
   },
   "cookies": {
     "description": "Wir verwenden Cookies, um Ihre Erfahrung zu verbessern.",
@@ -485,6 +511,96 @@
       "title": "Benötigen Sie weitere Informationen?",
       "description": "Können Sie nicht finden, was Sie suchen? Kontaktieren Sie unser Team für zusätzliche Ressourcen und Support.",
       "button": "Support kontaktieren"
+    }
+  },
+  "impressum": {
+    "title": "Impressum",
+    "company": {
+      "title": "Unternehmen",
+      "name": "Firma",
+      "companyName": "Plusplus AG",
+      "address": "Adresse",
+      "street": "Poststrasse 22",
+      "city": "6300 Zug",
+      "country": "Schweiz"
+    },
+    "contact": {
+      "title": "Kontakt",
+      "email": "E-Mail",
+      "emailAddress": "hello@plusplus.swiss"
+    },
+    "legal": {
+      "title": "Rechtliche Angaben",
+      "registry": "Handelsregister",
+      "registryValue": "Handelsregister Zug",
+      "uid": "UID",
+      "uidValue": "CHE-417.251.274",
+      "vatNumber": "MWST-Nummer",
+      "vatValue": "CHE-417.251.274"
+    },
+    "disclaimer": {
+      "title": "Haftungsausschluss",
+      "content": "Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.",
+      "liability": "Alle Angaben erfolgen ohne Gewähr. Eine Haftung für Schäden, die sich aus der Verwendung der veröffentlichten Inhalte ergeben, ist ausgeschlossen.",
+      "links": "Verweise und Links auf Webseiten Dritter liegen ausserhalb unseres Verantwortungsbereichs. Es wird jegliche Verantwortung für solche Webseiten abgelehnt."
+    },
+    "copyright": {
+      "title": "Urheberrecht",
+      "text": "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem schweizerischen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung ausserhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers."
+    }
+  },
+  "terms": {
+    "title": "Allgemeine Geschäftsbedingungen",
+    "scope": {
+      "title": "Geltungsbereich",
+      "text1": "Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Geschäftsbeziehungen zwischen Plusplus AG und ihren Kunden.",
+      "text2": "Abweichende Bedingungen des Kunden werden nur wirksam, wenn sie von Plusplus AG ausdrücklich schriftlich anerkannt werden."
+    },
+    "contractConclusion": {
+      "title": "Vertragsabschluss",
+      "text1": "Unsere Angebote sind freibleibend und unverbindlich, sofern sie nicht ausdrücklich als verbindlich bezeichnet sind.",
+      "text2": "Ein Vertrag kommt erst durch unsere schriftliche Auftragsbestätigung oder durch die Ausführung der Leistung zustande.",
+      "text3": "Änderungen und Ergänzungen von Vereinbarungen bedürfen der Schriftform."
+    },
+    "services": {
+      "title": "Leistungen",
+      "text1": "Wir erbringen unsere Leistungen nach den anerkannten Regeln der Technik und entsprechend den vereinbarten Spezifikationen.",
+      "text2": "Änderungen der Leistungen sind nur mit schriftlicher Vereinbarung möglich.",
+      "text3": "Der Kunde ist verpflichtet, bei der Leistungserbringung mitzuwirken und alle erforderlichen Informationen rechtzeitig zur Verfügung zu stellen."
+    },
+    "prices": {
+      "title": "Preise und Zahlungsbedingungen",
+      "text1": "Alle Preise verstehen sich in Schweizer Franken und sind exklusive Mehrwertsteuer.",
+      "text2": "Rechnungen sind innerhalb von 30 Tagen nach Rechnungsdatum ohne Abzug zur Zahlung fällig.",
+      "text3": "Bei Zahlungsverzug sind wir berechtigt, Verzugszinsen von 5% p.a. zu berechnen."
+    },
+    "liability": {
+      "title": "Haftung",
+      "text1": "Die Haftung von Plusplus AG ist auf Vorsatz und grobe Fahrlässigkeit beschränkt.",
+      "text2": "Eine Haftung für indirekte Schäden, entgangenen Gewinn oder Folgeschäden ist ausgeschlossen."
+    },
+    "dataProtection": {
+      "title": "Datenschutz",
+      "text1": "Wir behandeln alle Kundendaten vertraulich und entsprechend den geltenden Datenschutzbestimmungen.",
+      "text2": "Nähere Informationen finden Sie in unserer Datenschutzerklärung."
+    },
+    "applicableLaw": {
+      "title": "Anwendbares Recht und Gerichtsstand",
+      "text1": "Auf alle Rechtsbeziehungen zwischen Plusplus AG und dem Kunden findet schweizerisches Recht Anwendung.",
+      "text2": "Ausschliesslicher Gerichtsstand ist Zug, Schweiz."
+    },
+    "changes": {
+      "title": "Änderungen der AGB",
+      "text": "Plusplus AG behält sich das Recht vor, diese AGB jederzeit zu ändern. Änderungen werden dem Kunden schriftlich mitgeteilt und gelten als genehmigt, wenn der Kunde nicht innerhalb von 30 Tagen schriftlich widerspricht."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "companyName": "Plusplus AG",
+      "street": "Poststrasse 22",
+      "city": "6300 Zug",
+      "country": "Schweiz",
+      "email": "hello@plusplus.swiss",
+      "phone": "+41 41 123 45 67"
     }
   }
 }

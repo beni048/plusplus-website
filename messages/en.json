@@ -2,7 +2,7 @@
   "nav": {
     "rentalSolutions": "Rental Solutions",
     "corporateTreasury": "Corporate Treasury",
-    "downloads": "Downloads",
+    "contact": "Contact",
     "help": "Help"
   },
   "hero": {
@@ -19,6 +19,31 @@
     "paragraph1": "We connect the world of DeFi with the stability of the Swiss Franc and the world of TradFi with the profitability of Bitcoin. For everyone.",
     "paragraph2": "**Our solution**: Rental deposits that don't just sit idle in your account, but work for you. Whether Bitcoin or stablecoins. We give you the opportunity to invest your rental deposit according to your needs in an innovative product. For businesses we offer simple, secure, and regulated access to the decentralized financial world. Swiss Made, without tech frustration.",
     "paragraph3": "**Our vision**: We create a financial world where money doesn't just sit, but lives. Plusplus brings DeFi where it truly makes sense – into everyday life. Whether deposits or business treasury: We make high-yield saving simple, secure, and accessible to everyone."
+  },
+  "mainSections": {
+    "rentalSolutions": {
+      "title": "Rental Solutions",
+      "paragraph1": "Discover our comprehensive rental solutions designed to meet your financial needs. From equipment financing to flexible lease agreements, we provide tailored solutions that help your business grow while maintaining optimal cash flow.",
+      "paragraph2": "Our rental solutions offer competitive rates, flexible terms, and expert support throughout the entire process. Whether you're a startup or an established enterprise, we have the right solution for you.",
+      "button": "Learn More"
+    },
+    "corporateTreasury": {
+      "title": "Corporate Treasury",
+      "paragraph1": "Optimize your corporate treasury management with our advanced financial solutions. We help businesses streamline their cash management, improve liquidity, and make informed investment decisions.",
+      "paragraph2": "Our treasury services include cash flow forecasting, risk management, and strategic financial planning. Partner with us to enhance your financial operations and drive sustainable growth.",
+      "button": "Explore Services"
+    },
+    "partners": {
+      "title": "Partners",
+      "paragraph1": "We collaborate with leading financial technology companies to provide you with the best possible solutions. Our strategic partnerships enable us to offer innovative services and competitive advantages.",
+      "paragraph2": "Through these partnerships, we ensure access to cutting-edge technology, enhanced security, and comprehensive support for all your financial needs."
+    },
+    "contact": {
+      "title": "Ready to Get Started?",
+      "paragraph": "Schedule a consultation with our sales team to discuss your financial needs and discover how our solutions can benefit your business.",
+      "button": "Schedule a Meeting",
+      "subtitle": "Book a 30-minute consultation with our sales head"
+    }
   },
   "team": {
     "title": "Our Team",
@@ -66,9 +91,10 @@
   },
   "footer": {
     "copyright": "© Plusplus AG 2025 | Zug, Switzerland",
-    "privacy": "Privacy Policy",
+    "privacyPolicy": "Privacy Policy",
     "privacySettings": "Privacy Settings",
-    "linkedin": "Follow us on LinkedIn"
+    "impressum": "Imprint",
+    "terms": "Terms & Conditions"
   },
   "cookies": {
     "description": "We use cookies to improve your experience.",
@@ -485,6 +511,96 @@
       "title": "Need More Information?",
       "description": "Can't find what you're looking for? Contact our team for additional resources and support.",
       "button": "Contact Support"
+    }
+  },
+  "impressum": {
+    "title": "Imprint",
+    "company": {
+      "title": "Company",
+      "name": "Company",
+      "companyName": "Plusplus AG",
+      "address": "Address",
+      "street": "Poststrasse 22",
+      "city": "6300 Zug",
+      "country": "Switzerland"
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "Email",
+      "emailAddress": "hello@plusplus.swiss"
+    },
+    "legal": {
+      "title": "Legal Information",
+      "registry": "Commercial Register",
+      "registryValue": "Commercial Register Zug",
+      "uid": "UID",
+      "uidValue": "CHE-417.251.274",
+      "vatNumber": "VAT Number",
+      "vatValue": "CHE-417.251.274"
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "content": "Despite careful content control, we assume no liability for the content of external links. The operators of the linked pages are solely responsible for their content.",
+      "liability": "All information is provided without warranty. Liability for damages arising from the use of published content is excluded.",
+      "links": "References and links to third-party websites are beyond our area of responsibility. We disclaim any responsibility for such websites."
+    },
+    "copyright": {
+      "title": "Copyright",
+      "text": "The content and works created by the site operators on these pages are subject to Swiss copyright law. Reproduction, editing, distribution and any kind of exploitation outside the limits of copyright law require the written consent of the respective author or creator."
+    }
+  },
+  "terms": {
+    "title": "Terms and Conditions",
+    "scope": {
+      "title": "Scope",
+      "text1": "These Terms and Conditions (T&C) apply to all business relationships between Plusplus AG and its customers.",
+      "text2": "Deviating conditions of the customer only become effective if they are expressly acknowledged in writing by Plusplus AG."
+    },
+    "contractConclusion": {
+      "title": "Contract Conclusion",
+      "text1": "Our offers are subject to change and non-binding unless expressly designated as binding.",
+      "text2": "A contract is only concluded through our written order confirmation or through the execution of the service.",
+      "text3": "Changes and additions to agreements require written form."
+    },
+    "services": {
+      "title": "Services",
+      "text1": "We provide our services according to recognized technical standards and in accordance with agreed specifications.",
+      "text2": "Changes to services are only possible with written agreement.",
+      "text3": "The customer is obliged to cooperate in the provision of services and to provide all necessary information in a timely manner."
+    },
+    "prices": {
+      "title": "Prices and Payment Terms",
+      "text1": "All prices are in Swiss Francs and exclude VAT.",
+      "text2": "Invoices are due for payment within 30 days of the invoice date without deduction.",
+      "text3": "In case of payment delay, we are entitled to charge default interest of 5% p.a."
+    },
+    "liability": {
+      "title": "Liability",
+      "text1": "The liability of Plusplus AG is limited to intent and gross negligence.",
+      "text2": "Liability for indirect damages, lost profits or consequential damages is excluded."
+    },
+    "dataProtection": {
+      "title": "Data Protection",
+      "text1": "We treat all customer data confidentially and in accordance with applicable data protection regulations.",
+      "text2": "For more information, please see our privacy policy."
+    },
+    "applicableLaw": {
+      "title": "Applicable Law and Jurisdiction",
+      "text1": "Swiss law applies to all legal relationships between Plusplus AG and the customer.",
+      "text2": "The exclusive place of jurisdiction is Zug, Switzerland."
+    },
+    "changes": {
+      "title": "Changes to the T&C",
+      "text": "Plusplus AG reserves the right to change these T&C at any time. Changes will be communicated to the customer in writing and are deemed approved if the customer does not object in writing within 30 days."
+    },
+    "contact": {
+      "title": "Contact",
+      "companyName": "Plusplus AG",
+      "street": "Poststrasse 22",
+      "city": "6300 Zug",
+      "country": "Switzerland",
+      "email": "hello@plusplus.swiss",
+      "phone": "+41 41 123 45 67"
     }
   }
 }

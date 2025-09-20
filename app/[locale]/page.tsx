@@ -1,14 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Calendar } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import confetti from 'canvas-confetti';
 import { useTranslations, useLocale } from 'next-intl';
 import { useAnalytics } from '@/hooks/use-analytics';
 
@@ -16,53 +12,6 @@ export default function Home() {
   const t = useTranslations();
   const locale = useLocale();
   const analytics = useAnalytics();
-  
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [isLoading, setIsLoading] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  // Simple form submission handler
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-
-    // Track form submission for analytics
-    analytics.trackContactFormSubmit();
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        console.log("Form submitted successfully, triggering confetti");
-        setIsSubmitted(true);
-        setFormData({
-          name: "",
-          email: "",
-          message: "",
-        });
-        
-        confetti({
-          particleCount: 100,
-          spread: 70,
-          origin: { y: 0.6 }
-        });
-      }
-    } catch (error) {
-      console.error("Error sending message:", error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
 
   return (
     <main className="flex min-h-screen flex-col">
@@ -84,16 +33,16 @@ export default function Home() {
           <div className="hidden sm:block bg-black/30 backdrop-blur-md border-l border-white/30 shadow-2xl h-auto animate-slide-in-right ml-0 sm:ml-[10vw] md:ml-[15vw] lg:ml-[25vw] xl:ml-[35vw] 2xl:ml-[45vw]" style={{ borderRadius: '0px 0px 0px 0px', borderTopLeftRadius: '0.5rem', borderBottomLeftRadius: '0.5rem', width: '100%', maxWidth: '100%', minHeight: 'auto' }}>
             <div className="flex items-center justify-start">
               <div className="p-6 md:p-8 lg:p-10 max-w-2xl w-full ml-0 sm:ml-[2vw] md:ml-[3vw] lg:ml-[4vw] xl:ml-[5vw]">
-                <h1 className="font-heading font-black text-[clamp(2.5rem,6vw,4rem)] text-white mt-6 mb-4 leading-tight text-left drop-shadow-lg">
+                <h1 className="font-primary font-black text-[clamp(2.5rem,6vw,4rem)] text-white mt-6 mb-4 leading-tight text-left drop-shadow-lg">
                   {t('hero.title.simple')} <span className="text-accent-orange drop-shadow-lg">{t('hero.title.highlight')}</span> {t('hero.title.subtitle')}
                 </h1>
-                <p className="font-body text-lg md:text-xl text-gray-50 mb-6 leading-relaxed text-left font-medium drop-shadow-md">
+                <p className="font-secondary text-lg md:text-xl text-gray-50 mb-6 leading-relaxed text-left font-medium drop-shadow-md">
                   {t('hero.subtitle')}
                 </p>
                 <div className="mt-8">
                   <Link href={`/${locale}/select`}>
                     <Button 
-                      className="bg-accent-orange text-white px-6 py-3 md:px-8 md:py-4 text-lg shadow-lg hover:bg-accent-orange/90 group transition-all duration-300"
+                      className="bg-accent-orange text-white px-6 py-3 md:px-8 md:py-4 text-lg shadow-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary"
                     >
                       {t('hero.cta')}
                       <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -109,7 +58,7 @@ export default function Home() {
             <div className="text-center">
               {/* Light background box for title only */}
               <div className="bg-black/20 backdrop-blur-md rounded-lg p-6 mb-6 shadow-lg">
-                <h1 className="font-heading font-black text-[clamp(2.5rem,8vw,3.5rem)] text-white leading-tight drop-shadow-lg">
+                <h1 className="font-primary font-black text-[clamp(2.5rem,8vw,3.5rem)] text-white leading-tight drop-shadow-lg">
                   {t('hero.title.simple')} <span className="text-accent-orange drop-shadow-lg">{t('hero.title.highlight')}</span> {t('hero.title.subtitle')}
                 </h1>
               </div>
@@ -118,7 +67,7 @@ export default function Home() {
               <div>
                 <Link href={`/${locale}/select`}>
                   <Button 
-                    className="bg-accent-orange text-white px-8 py-4 text-lg shadow-2xl hover:bg-accent-orange/90 group transition-all duration-300 border-2 border-black/20"
+                    className="bg-accent-orange text-white px-8 py-4 text-lg shadow-2xl hover:bg-accent-orange/90 group transition-all duration-300 border-2 border-black/20 font-primary"
                   >
                     {t('hero.cta')}
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -130,79 +79,83 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="bg-neutral-white py-24">
+      {/* Rental Solutions Section */}
+      <section id="rental-solutions" className="bg-neutral-white py-24">
         <div className="container mx-auto px-4">
-          <h2 className="mb-12 text-center text-4xl font-medium text-black">
-            {t('about.title')}
-          </h2>
-          <div className="mx-auto max-w-3xl text-center space-y-6">
-            <p className="text-lg leading-relaxed text-neutral-dark">
-              {t('about.paragraph1')}
-            </p>
-            <p className="text-lg leading-relaxed text-neutral-dark">
-              <span dangerouslySetInnerHTML={{ 
-                __html: t('about.paragraph2').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') 
-              }} />
-            </p>
-            <p className="text-lg leading-relaxed text-neutral-dark">
-              <span dangerouslySetInnerHTML={{ 
-                __html: t('about.paragraph3').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') 
-              }} />
-            </p>
+          <div className="grid gap-12 lg:grid-cols-2 items-center">
+            {/* Text Left */}
+            <div className="space-y-6">
+              <h2 className="text-4xl font-primary font-medium text-black">
+                {t('mainSections.rentalSolutions.title')}
+              </h2>
+              <p className="text-lg leading-relaxed text-neutral-dark font-secondary">
+                {t('mainSections.rentalSolutions.paragraph1')}
+              </p>
+              <p className="text-lg leading-relaxed text-neutral-dark font-secondary">
+                {t('mainSections.rentalSolutions.paragraph2')}
+              </p>
+              <div className="pt-4">
+                <Link href={`/${locale}/rental-solutions/select`}>
+                  <Button className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary">
+                    {t('mainSections.rentalSolutions.button')}
+                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
+            
+            {/* Image Right */}
+            <div className="relative aspect-[4/3] w-full">
+              <Image
+                src="/images/title_img.webp"
+                alt="Rental Solutions"
+                fill
+                className="object-cover rounded-lg shadow-lg"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Team Section - DEACTIVATED */}
-      {false && (
-        <section id="team" className="bg-neutral-light py-24">
-          <div className="container mx-auto px-4">
-            <h2 className="mb-16 text-center text-4xl font-medium text-black">
-              {t('team.title')}
-            </h2>
-            <div className="grid gap-8 md:grid-cols-3">
-              {[
-                {
-                  key: 'benjamin',
-                  image: "/images/team/benjamin_.png",
-                },
-                {
-                  key: 'matthias',
-                  image: "/images/team/matthias.png",
-                },
-                {
-                  key: 'jonas',
-                  image: "/images/team/jonas.png",
-                },
-              ].map((member) => (
-                <Card key={member.key} className="overflow-hidden border-primary-teal/20">
-                  <div className="relative aspect-square w-48 mx-auto rounded-full overflow-hidden">
-                    <Image
-                      src={member.image}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      alt="Team Member"
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-8">
-                    <h3 className="mb-2 text-2xl font-bold text-black">
-                      {t(`team.members.${member.key}.name`)}
-                    </h3>
-                    <p className="mb-4 text-lg font-medium text-primary-blue">
-                      {t(`team.members.${member.key}.role`)}
-                    </p>
-                    <p className="text-lg text-neutral-dark">
-                      {t(`team.members.${member.key}.bio`)}
-                    </p>
-                  </div>
-                </Card>
-              ))}
+      {/* Corporate Treasury Section */}
+      <section id="corporate-treasury" className="bg-neutral-light py-24">
+        <div className="container mx-auto px-4">
+          <div className="grid gap-12 lg:grid-cols-2 items-center">
+            {/* Image Left */}
+            <div className="relative aspect-[4/3] w-full lg:order-1">
+              <Image
+                src="/images/title_img.webp"
+                alt="Corporate Treasury"
+                fill
+                className="object-cover rounded-lg shadow-lg"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+            
+            {/* Text Right */}
+            <div className="space-y-6 lg:order-2">
+              <h2 className="text-4xl font-primary font-medium text-black">
+                {t('mainSections.corporateTreasury.title')}
+              </h2>
+              <p className="text-lg leading-relaxed text-neutral-dark font-secondary">
+                {t('mainSections.corporateTreasury.paragraph1')}
+              </p>
+              <p className="text-lg leading-relaxed text-neutral-dark font-secondary">
+                {t('mainSections.corporateTreasury.paragraph2')}
+              </p>
+              <div className="pt-4">
+                <Link href={`/${locale}/corporate-treasury`}>
+                  <Button className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary">
+                    {t('mainSections.corporateTreasury.button')}
+                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
-        </section>
-      )}
+        </div>
+      </section>
 
       {/* Divider line */}
       <div className="h-px bg-neutral-light"></div>
@@ -210,70 +163,69 @@ export default function Home() {
       {/* Partners Section */}
       <section id="partners" className="bg-neutral-white py-24">
         <div className="container mx-auto px-4">
-          <h2 className="mb-16 text-center text-4xl font-medium text-black">
-            {t('partners.title')}
-          </h2>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                name: "Zinsli.com",
-                descriptionKey: "zinsli",
-                logo: "/images/partners/zinsli.svg",
-                link: "https://zinsli.com",
-              },
-              {
-                name: "Frankencoin.com",
-                descriptionKey: "frankencoin",
-                logo: "/images/partners/frankencoin.png",
-                link: "https://frankencoin.com",
-              },
-              {
-                name: "DFX.swiss",
-                descriptionKey: "dfx",
-                logo: "/images/partners/dfx.svg",
-                link: "https://dfx.swiss",
-              },
-              // DEACTIVATED: Aktionariat
-              // {
-              //   name: "Aktionariat",
-              //   descriptionKey: "aktionariat",
-              //   logo: "/images/partners/aktionariat.webp",
-              //   link: "https://aktionariat.com",
-              // },
-              // DEACTIVATED: Bitcoin Suisse
-              // {
-              //   name: "Bitcoin Suisse",
-              //   descriptionKey: "bitcoinsuisse",
-              //   logo: "/images/partners/bitcoin-suisse.png",
-              //   link: "https://bitcoinsuisse.com",
-              // },
-            ].map((partner) => (
-              <a
-                key={partner.name}
-                href={partner.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition-transform hover:scale-105"
-              >
-                <Card className="h-full p-8 border-primary-teal/20">
-                  <div className="mb-6 flex justify-center">
-                    <Image
-                      src={partner.logo}
-                      alt={partner.name}
-                      width={150}
-                      height={50}
-                      className="h-12 w-auto"
-                    />
-                  </div>
-                  <h3 className="mb-4 text-center text-xl font-bold text-black">
-                    {partner.name}
-                  </h3>
-                  <p className="text-lg text-center text-neutral-dark">
-                    {t(`partners.descriptions.${partner.descriptionKey}`)}
-                  </p>
-                </Card>
-              </a>
-            ))}
+          <div className="grid gap-12 lg:grid-cols-2 items-center">
+            {/* Text Left */}
+            <div className="space-y-6">
+              <h2 className="text-4xl font-primary font-medium text-black">
+                {t('mainSections.partners.title')}
+              </h2>
+              <p className="text-lg leading-relaxed text-neutral-dark font-secondary">
+                {t('mainSections.partners.paragraph1')}
+              </p>
+              <p className="text-lg leading-relaxed text-neutral-dark font-secondary">
+                {t('mainSections.partners.paragraph2')}
+              </p>
+            </div>
+            
+            {/* Partners Collection Right */}
+            <div className="grid gap-6 md:grid-cols-2">
+              {[
+                {
+                  name: "Zinsli.com",
+                  descriptionKey: "zinsli",
+                  logo: "/images/partners/zinsli.svg",
+                  link: "https://zinsli.com",
+                },
+                {
+                  name: "Frankencoin.com",
+                  descriptionKey: "frankencoin",
+                  logo: "/images/partners/frankencoin.png",
+                  link: "https://frankencoin.com",
+                },
+                {
+                  name: "DFX.swiss",
+                  descriptionKey: "dfx",
+                  logo: "/images/partners/dfx.svg",
+                  link: "https://dfx.swiss",
+                },
+              ].map((partner) => (
+                <a
+                  key={partner.name}
+                  href={partner.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-transform hover:scale-105"
+                >
+                  <Card className="h-full p-6 border-primary-teal/20">
+                    <div className="mb-4 flex justify-center">
+                      <Image
+                        src={partner.logo}
+                        alt={partner.name}
+                        width={120}
+                        height={40}
+                        className="h-10 w-auto"
+                      />
+                    </div>
+                    <h3 className="mb-3 text-center text-lg font-primary font-bold text-black">
+                      {partner.name}
+                    </h3>
+                    <p className="text-sm text-center text-neutral-dark font-secondary">
+                      {t(`partners.descriptions.${partner.descriptionKey}`)}
+                    </p>
+                  </Card>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -281,74 +233,26 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="bg-neutral-light py-24">
         <div className="container mx-auto px-4">
-          <h2 className="mb-16 text-center text-4xl font-medium text-black">
-            {t('contact.title')}
-          </h2>
-          <div className="mx-auto max-w-lg">
-            <Card className="p-8 border-primary-teal/20">
-              {isSubmitted ? (
-                <div className="text-center py-12">
-                  <h3 className="text-2xl font-medium text-black mb-4">
-                    {t('contact.success.title')}
-                  </h3>
-                  <p className="text-neutral-dark">
-                    {t('contact.success.message')}
-                  </p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <Input
-                      id="contact-name"
-                      name="name"
-                      autoComplete="name"
-                      placeholder={t('contact.form.name')}
-                      value={formData.name}
-                      onChange={(e) =>
-                        setFormData({ ...formData, name: e.target.value })
-                      }
-                      required
-                      className="h-12"
-                    />
-                  </div>
-                  <div>
-                    <Input
-                      id="contact-email"
-                      name="email"
-                      type="email"
-                      autoComplete="email"
-                      placeholder={t('contact.form.email')}
-                      value={formData.email}
-                      onChange={(e) =>
-                        setFormData({ ...formData, email: e.target.value })
-                      }
-                      required
-                      className="h-12"
-                    />
-                  </div>
-                  <div>
-                    <Textarea
-                      id="contact-message"
-                      name="message"
-                      autoComplete="off"
-                      placeholder={t('contact.form.message')}
-                      value={formData.message}
-                      onChange={(e) =>
-                        setFormData({ ...formData, message: e.target.value })
-                      }
-                      required
-                      className="min-h-[150px] resize-none"
-                    />
-                  </div>
-                  <Button
-                    type="submit"
-                    className="h-12 w-full text-lg bg-accent-orange hover:bg-accent-orange/90 text-white"
-                    disabled={isLoading}
-                  >
-                    {isLoading ? t('contact.form.sending') : t('contact.form.submit')}
-                  </Button>
-                </form>
-              )}
+          <div className="max-w-2xl mx-auto text-center">
+            <Card className="p-12 shadow-lg border-primary-teal/20">
+              <h2 className="text-4xl font-primary font-medium text-black mb-6">
+                {t('mainSections.contact.title')}
+              </h2>
+              <p className="text-lg leading-relaxed text-neutral-dark mb-8 font-secondary">
+                {t('mainSections.contact.paragraph')}
+              </p>
+              <div className="space-y-4">
+                <Button 
+                  className="bg-accent-orange text-white px-8 py-4 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary"
+                  onClick={() => window.open('https://meetings-eu1.hubspot.com/jonas-waelti?uuid=907baac1-ae5e-422b-9703-6d822d374dbe', '_blank')}
+                >
+                  <Calendar className="mr-2 h-5 w-5" />
+                  {t('mainSections.contact.button')}
+                </Button>
+                <p className="text-sm text-neutral-dark font-secondary">
+                  {t('mainSections.contact.subtitle')}
+                </p>
+              </div>
             </Card>
           </div>
         </div>

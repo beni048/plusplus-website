@@ -41,31 +41,33 @@ export default function Navbar() {
           </Link>
           
           {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center space-x-6">
-            <Link 
-              href={`/${locale}/rental-solutions/select`} 
-              className="text-black hover:text-accent-orange font-medium transition-colors"
-            >
-              {t('rentalSolutions')}
-            </Link>
-            <Link 
-              href={`/${locale}/corporate-treasury`} 
-              className="text-black hover:text-accent-orange font-medium transition-colors"
-            >
-              {t('corporateTreasury')}
-            </Link>
-            <Link 
-              href={`/${locale}/downloads`} 
-              className="text-black hover:text-accent-orange font-medium transition-colors"
-            >
-              {t('downloads')}
-            </Link>
-            <Link 
-              href={`/${locale}/help`} 
-              className="text-black hover:text-accent-orange font-medium transition-colors"
-            >
-              {t('help')}
-            </Link>
+          <div className="hidden lg:flex items-center">
+            {/* Navigation Links */}
+            <div className="flex items-center space-x-6">
+              <Link 
+                href={`/${locale}/rental-solutions/select`} 
+                className="text-black hover:text-accent-orange font-primary font-medium transition-colors"
+              >
+                {t('rentalSolutions')}
+              </Link>
+              <Link 
+                href={`/${locale}/corporate-treasury`} 
+                className="text-black hover:text-accent-orange font-primary font-medium transition-colors"
+              >
+                {t('corporateTreasury')}
+              </Link>
+              <Link 
+                href={`/${locale}/contact`} 
+                className="text-black hover:text-accent-orange font-primary font-medium transition-colors"
+              >
+                {t('contact')}
+              </Link>
+            </div>
+            
+            {/* Separator */}
+            <div className="h-6 w-px bg-gray-300 mx-6"></div>
+            
+            {/* Language Switcher */}
             <div className="hidden sm:block">
               <LanguageSwitcher sourceContext="navbar" />
             </div>
@@ -87,34 +89,27 @@ export default function Navbar() {
             <div className="px-4 py-6 space-y-4">
               <Link 
                 href={`/${locale}/rental-solutions/select`} 
-                className="block text-black hover:text-accent-orange font-medium transition-colors py-2"
+                className="block text-black hover:text-accent-orange font-primary font-medium transition-colors py-2"
                 onClick={closeMobileMenu}
               >
                 {t('rentalSolutions')}
               </Link>
               <Link 
                 href={`/${locale}/corporate-treasury`} 
-                className="block text-black hover:text-accent-orange font-medium transition-colors py-2"
+                className="block text-black hover:text-accent-orange font-primary font-medium transition-colors py-2"
                 onClick={closeMobileMenu}
               >
                 {t('corporateTreasury')}
               </Link>
               <Link 
-                href={`/${locale}/downloads`} 
-                className="block text-black hover:text-accent-orange font-medium transition-colors py-2"
+                href={`/${locale}/contact`} 
+                className="block text-black hover:text-accent-orange font-primary font-medium transition-colors py-2"
                 onClick={closeMobileMenu}
               >
-                {t('downloads')}
-              </Link>
-              <Link 
-                href={`/${locale}/help`} 
-                className="block text-black hover:text-accent-orange font-medium transition-colors py-2"
-                onClick={closeMobileMenu}
-              >
-                {t('help')}
+                {t('contact')}
               </Link>
               <div className="pt-4 border-t border-gray-200">
-                <LanguageSwitcher sourceContext="navbar" />
+                <LanguageSwitcher sourceContext="navbar" mobile />
               </div>
             </div>
           </div>

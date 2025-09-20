@@ -9,9 +9,6 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      screens: {
-        '3xl': '1920px',
-      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -76,6 +73,8 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['var(--font-outfit)', 'sans-serif'],
+        primary: ['var(--font-outfit)', 'sans-serif'],
+        secondary: ['var(--font-mulish)', 'sans-serif'],
         heading: ['var(--font-outfit)', 'sans-serif'],
         body: ['var(--font-mulish)', 'sans-serif'],
       },
