@@ -9,11 +9,11 @@ export default function ImpressumPage() {
     <main className="min-h-screen bg-neutral-light pt-32 pb-24">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h1 className="mb-12 text-center text-4xl font-primary font-medium text-black">
+          <h1 className="mb-12 text-center text-3xl sm:text-4xl lg:text-5xl font-primary font-medium text-black px-4">
             {t('title')}
           </h1>
           
-          <div className="space-y-8 text-neutral-dark leading-relaxed">
+          <div className="space-y-8 text-neutral-dark leading-relaxed px-4">
             <section>
               <h2 className="text-2xl font-primary font-medium text-black mb-4">{t('company.title')}</h2>
               <div className="space-y-2">
@@ -44,15 +44,15 @@ export default function ImpressumPage() {
             <section>
               <h2 className="text-2xl font-primary font-medium text-black mb-4">{t('disclaimer.title')}</h2>
               <div className="space-y-4">
-                <p className="font-secondary">{t('disclaimer.content')}</p>
-                <p className="font-secondary">{t('disclaimer.liability')}</p>
-                <p className="font-secondary">{t('disclaimer.links')}</p>
+                <p className="font-secondary text-justify">{t('disclaimer.content')}</p>
+                <p className="font-secondary text-justify">{t('disclaimer.liability')}</p>
+                <p className="font-secondary text-justify">{t('disclaimer.links')}</p>
               </div>
             </section>
 
             <section>
               <h2 className="text-2xl font-primary font-medium text-black mb-4">{t('copyright.title')}</h2>
-              <p className="font-secondary">{t('copyright.text')}</p>
+              <p className="font-secondary text-justify">{t('copyright.text')}</p>
             </section>
 
             {/* Effective Date */}

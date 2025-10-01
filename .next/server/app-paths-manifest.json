@@ -1,7 +1,7 @@
 {
-  "/[locale]/rental-solutions/select/page": "app/[locale]/rental-solutions/select/page.js",
-  "/[locale]/select/page": "app/[locale]/select/page.js",
-  "/[locale]/corporate-treasury/page": "app/[locale]/corporate-treasury/page.js",
-  "/[locale]/rental-solutions/tenant/page": "app/[locale]/rental-solutions/tenant/page.js",
-  "/[locale]/rental-solutions/landlord/page": "app/[locale]/rental-solutions/landlord/page.js"
+  "/[locale]/terms-and-conditions/page": "app/[locale]/terms-and-conditions/page.js",
+  "/[locale]/imprint/page": "app/[locale]/imprint/page.js",
+  "/[locale]/privacy-policy/page": "app/[locale]/privacy-policy/page.js",
+  "/[locale]/privacy-settings/page": "app/[locale]/privacy-settings/page.js",
+  "/[locale]/contact/page": "app/[locale]/contact/page.js"
 }

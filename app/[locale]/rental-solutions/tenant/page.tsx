@@ -9,7 +9,7 @@ export default function RentalSolutionsTenant() {
     <main className="min-h-screen bg-neutral-light pt-32 pb-24">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h1 className="mb-12 text-center text-4xl font-medium text-black">
+          <h1 className="mb-12 text-center text-3xl sm:text-4xl lg:text-5xl font-medium text-black px-4">
             {t('rentalSolutionsTenant.title')}
           </h1>
           
@@ -24,15 +24,15 @@ export default function RentalSolutionsTenant() {
             </div>
           </div>
           
-          <div className="prose prose-lg max-w-none text-neutral-dark">
-            <p className="text-lg leading-relaxed mb-8 font-secondary">
+          <div className="prose prose-lg max-w-none text-neutral-dark px-4">
+            <p className="text-base sm:text-lg leading-relaxed mb-8 font-secondary">
               {t('rentalSolutionsTenant.subtitle')}
             </p>
 
             <h2 className="text-2xl font-semibold text-black mb-4 mt-8">
               {t('rentalSolutionsTenant.benefits.title')}
             </h2>
-            <ul className="text-lg leading-relaxed mb-6 ml-6 list-disc font-secondary">
+            <ul className="text-base sm:text-lg leading-relaxed mb-6 ml-6 list-disc font-secondary">
               <li>{t('rentalSolutionsTenant.benefits.benefit1')}</li>
               <li>{t('rentalSolutionsTenant.benefits.benefit2')}</li>
               <li>{t('rentalSolutionsTenant.benefits.benefit3')}</li>
@@ -46,28 +46,28 @@ export default function RentalSolutionsTenant() {
             <h3 className="text-xl font-medium text-black mb-3 mt-6">
               {t('rentalSolutionsTenant.howItWorks.step1.title')}
             </h3>
-            <p className="text-lg leading-relaxed mb-6 font-secondary">
+            <p className="text-base sm:text-lg leading-relaxed mb-6 font-secondary">
               {t('rentalSolutionsTenant.howItWorks.step1.description')}
             </p>
 
             <h3 className="text-xl font-medium text-black mb-3 mt-6">
               {t('rentalSolutionsTenant.howItWorks.step2.title')}
             </h3>
-            <p className="text-lg leading-relaxed mb-6 font-secondary">
+            <p className="text-base sm:text-lg leading-relaxed mb-6 font-secondary">
               {t('rentalSolutionsTenant.howItWorks.step2.description')}
             </p>
 
             <h3 className="text-xl font-medium text-black mb-3 mt-6">
               {t('rentalSolutionsTenant.howItWorks.step3.title')}
             </h3>
-            <p className="text-lg leading-relaxed mb-6 font-secondary">
+            <p className="text-base sm:text-lg leading-relaxed mb-6 font-secondary">
               {t('rentalSolutionsTenant.howItWorks.step3.description')}
             </p>
 
             <h2 className="text-2xl font-semibold text-black mb-4 mt-8">
               {t('rentalSolutionsTenant.features.title')}
             </h2>
-            <ul className="text-lg leading-relaxed mb-6 ml-6 list-disc font-secondary">
+            <ul className="text-base sm:text-lg leading-relaxed mb-6 ml-6 list-disc font-secondary">
               <li>{t('rentalSolutionsTenant.features.feature1')}</li>
               <li>{t('rentalSolutionsTenant.features.feature2')}</li>
               <li>{t('rentalSolutionsTenant.features.feature3')}</li>

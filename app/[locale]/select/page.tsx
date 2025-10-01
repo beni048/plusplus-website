@@ -18,10 +18,10 @@ export default function ProductSelect() {
         <div className="max-w-6xl mx-auto">
           {/* Header Section */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl lg:text-5xl font-primary font-bold text-black mb-6">
+            <h1 className="mb-12 text-center text-3xl sm:text-4xl lg:text-5xl font-primary font-medium text-black px-4">
               {t('title')}
             </h1>
-            <p className="text-xl font-secondary text-neutral-dark max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl font-secondary text-neutral-dark max-w-3xl mx-auto leading-relaxed px-4">
               {t('subtitle')}
             </p>
           </div>
@@ -117,11 +117,11 @@ export default function ProductSelect() {
               </p>
               <div className="space-y-4">
                 <Button 
-                  className="bg-accent-orange text-white px-8 py-4 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary"
+                  className="w-full sm:w-auto bg-accent-orange text-white px-4 sm:px-8 py-3 sm:py-4 text-base sm:text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary"
                   onClick={() => window.location.href = `/${locale}/contact`}
                 >
-                  <ArrowRight className="mr-2 h-5 w-5" />
-                  {t('contact.button')}
+                  <ArrowRight className="mr-2 h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
+                  <span className="truncate">{t('contact.button')}</span>
                 </Button>
               </div>
             </Card>
