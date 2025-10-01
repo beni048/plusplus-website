@@ -11,20 +11,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/[locale]/layout.js"
     ],
-    "/[locale]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/page.js"
-    ],
     "/[locale]/terms-and-conditions/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/[locale]/terms-and-conditions/page.js"
-    ],
-    "/[locale]/imprint/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/imprint/page.js"
     ],
     "/[locale]/privacy-settings/page": [
       "static/chunks/webpack.js",
@@ -35,26 +25,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/[locale]/privacy-policy/page.js"
-    ],
-    "/[locale]/contact/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/contact/page.js"
-    ],
-    "/[locale]/rental-solutions/select/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/rental-solutions/select/page.js"
-    ],
-    "/[locale]/rental-solutions/tenant/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/rental-solutions/tenant/page.js"
-    ],
-    "/[locale]/corporate-treasury/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/corporate-treasury/page.js"
     ]
   }
 }

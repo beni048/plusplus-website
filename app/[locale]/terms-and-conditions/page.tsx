@@ -24,7 +24,7 @@ export default function TermsPage() {
             {t('title')}
           </h1>
           
-          <div className="bg-white rounded-lg shadow-sm p-4 sm:p-6 lg:p-8 text-sm sm:text-base">
+          <div className="px-4">
             
             {/* PDF Download Buttons - Only show for German */}
             {locale === 'de' && (

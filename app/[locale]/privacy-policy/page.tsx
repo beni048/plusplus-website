@@ -11,7 +11,7 @@ export default function PrivacyPage() {
         <div className="max-w-4xl mx-auto">
           <h1 className="mb-12 text-center text-3xl sm:text-4xl lg:text-5xl font-primary font-medium text-black px-4">{t('title')}</h1>
           
-          <div className="prose prose-lg max-w-none text-neutral-dark px-4 text-sm sm:text-base">
+          <div className="prose prose-lg max-w-none text-neutral-dark px-4">
             <p className="font-secondary leading-relaxed mb-8 text-justify">
               {t('intro')}
             </p>
@@ -44,13 +44,13 @@ export default function PrivacyPage() {
             </p>
 
             <h3 className="text-xl font-primary font-medium text-black mb-3 mt-6">{t('section2.subsection4.title')}</h3>
-            <p className="font-secondary leading-relaxed mb-6">
+            <p className="font-secondary leading-relaxed mb-6 text-justify">
               {t('section2.subsection4.content')}
             </p>
 
             <h3 className="text-xl font-primary font-medium text-black mb-3 mt-6">{t('section2.subsection5.title')}</h3>
-            <p className="font-secondary leading-relaxed mb-2" dangerouslySetInnerHTML={{ __html: t('section2.subsection5.content1') }} />
-            <p className="font-secondary leading-relaxed mb-6">
+            <p className="font-secondary leading-relaxed mb-2 text-justify" dangerouslySetInnerHTML={{ __html: t('section2.subsection5.content1') }} />
+            <p className="font-secondary leading-relaxed mb-6 text-justify">
               {t('section2.subsection5.content2')}
             </p>
 

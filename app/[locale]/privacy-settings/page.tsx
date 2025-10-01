@@ -24,7 +24,7 @@ export default function PrivacySettingsPage() {
             <PrivacyControls />
           </div>
 
-          <div className="prose prose-lg max-w-none text-neutral-dark">
+          <div className="prose prose-lg max-w-none text-neutral-dark px-4">
             <h2 className="text-2xl font-primary font-semibold text-black mb-4 mt-8">
               {t('aboutAnalyticsTitle')}
             </h2>
