@@ -5,12 +5,13 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Calendar } from "lucide-react";
 import confetti from 'canvas-confetti';
 import { useTranslations } from 'next-intl';
 import { useAnalytics } from '@/hooks/use-analytics';
 
 export default function ContactPage() {
-  const t = useTranslations('contact');
+  const t = useTranslations(); // Remove namespace to access all translations
   const analytics = useAnalytics();
   
   const [formData, setFormData] = useState({
@@ -61,21 +62,21 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-20">
-      <div className="container mx-auto px-4 py-16">
+    <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-20">
+      <div className="container mx-auto px-4 pt-16">
         <div className="max-w-2xl mx-auto">
           <h1 className="text-4xl font-bold text-center mb-8 text-gray-900">
-            {t('title')}
+            {t('contact.title')}
           </h1>
           
           <Card className="p-8 border-primary-teal/20">
             {isSubmitted ? (
               <div className="text-center py-12">
                 <h3 className="text-2xl font-medium text-black mb-4">
-                  {t('success.title')}
+                  {t('contact.success.title')}
                 </h3>
                 <p className="text-neutral-dark">
-                  {t('success.message')}
+                  {t('contact.success.message')}
                 </p>
               </div>
             ) : (
@@ -84,8 +85,9 @@ export default function ContactPage() {
                   <Input
                     id="contact-name"
                     name="name"
+                    type="text"
                     autoComplete="name"
-                    placeholder={t('form.name')}
+                    placeholder={t('contact.form.name')}
                     value={formData.name}
                     onChange={(e) =>
                       setFormData({ ...formData, name: e.target.value })
@@ -100,7 +102,7 @@ export default function ContactPage() {
                     name="email"
                     type="email"
                     autoComplete="email"
-                    placeholder={t('form.email')}
+                    placeholder={t('contact.form.email')}
                     value={formData.email}
                     onChange={(e) =>
                       setFormData({ ...formData, email: e.target.value })
@@ -114,7 +116,7 @@ export default function ContactPage() {
                     id="contact-message"
                     name="message"
                     autoComplete="off"
-                    placeholder={t('form.message')}
+                    placeholder={t('contact.form.message')}
                     value={formData.message}
                     onChange={(e) =>
                       setFormData({ ...formData, message: e.target.value })
@@ -128,13 +130,42 @@ export default function ContactPage() {
                   className="h-12 w-full text-lg bg-accent-orange hover:bg-accent-orange/90 text-white"
                   disabled={isLoading}
                 >
-                  {isLoading ? t('form.sending') : t('form.submit')}
+                  {isLoading ? t('contact.form.sending') : t('contact.form.submit')}
                 </Button>
               </form>
             )}
           </Card>
         </div>
+        <div className="pb-24"></div>
       </div>
-    </div>
+
+      {/* Sales Meeting Section */}
+      <section className="bg-neutral-light py-24">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto text-center">
+            <Card className="p-12 shadow-lg border-primary-teal/20">
+              <h2 className="text-4xl font-primary font-medium text-black mb-6">
+                {t('mainSections.contact.title')}
+              </h2>
+              <p className="text-lg leading-relaxed text-neutral-dark mb-8 font-secondary">
+                {t('mainSections.contact.paragraph')}
+              </p>
+              <div className="space-y-4">
+                <Button 
+                  className="bg-accent-orange text-white px-8 py-4 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary"
+                  onClick={() => window.open('https://meetings-eu1.hubspot.com/jonas-waelti?uuid=907baac1-ae5e-422b-9703-6d822d374dbe', '_blank')}
+                >
+                  <Calendar className="mr-2 h-5 w-5" />
+                  {t('mainSections.contact.button')}
+                </Button>
+                <p className="text-sm text-neutral-dark font-secondary">
+                  {t('mainSections.contact.subtitle')}
+                </p>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }

@@ -28,6 +28,10 @@ export default function Home() {
           placeholder="blur"
           blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
         />
+        {/* Discrete photo credit */}
+        <div className="absolute bottom-2 right-2 text-[10px] text-white/40 font-secondary">
+          Collin Croome
+        </div>
         <div className="absolute inset-0 flex items-start justify-end" style={{ paddingTop: 'max(calc(33.33vh - 6rem), 6rem)' }}>
           {/* Desktop: Box with background, Mobile: No box */}
           <div className="hidden sm:block bg-black/30 backdrop-blur-md border-l border-white/30 shadow-2xl h-auto animate-slide-in-right ml-0 sm:ml-[10vw] md:ml-[15vw] lg:ml-[25vw] xl:ml-[35vw] 2xl:ml-[45vw]" style={{ borderRadius: '0px 0px 0px 0px', borderTopLeftRadius: '0.5rem', borderBottomLeftRadius: '0.5rem', width: '100%', maxWidth: '100%', minHeight: 'auto' }}>
@@ -107,12 +111,16 @@ export default function Home() {
             {/* Image Right */}
             <div className="relative aspect-[4/3] w-full">
               <Image
-                src="/images/title_img.webp"
+                src="/images/collection/eric-weber-_wB88hxsW8M-unsplash.webp"
                 alt="Rental Solutions"
                 fill
                 className="object-cover rounded-lg shadow-lg"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
+              {/* Discrete photo credit */}
+              <div className="absolute bottom-1 right-1 text-[10px] text-white/40 font-secondary">
+                Eric Weber
+              </div>
             </div>
           </div>
         </div>
@@ -125,12 +133,16 @@ export default function Home() {
             {/* Image Left */}
             <div className="relative aspect-[4/3] w-full lg:order-1">
               <Image
-                src="/images/title_img.webp"
+                src="/images/collection/florian-schmid-M8ek54EzfzA-unsplash.webp"
                 alt="Corporate Treasury"
                 fill
                 className="object-cover rounded-lg shadow-lg"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
+              {/* Discrete photo credit */}
+              <div className="absolute bottom-1 right-1 text-[10px] text-white/40 font-secondary">
+                Florian Schmid
+              </div>
             </div>
             
             {/* Text Right */}

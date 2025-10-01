@@ -33,7 +33,7 @@ export default function ProductSelect() {
               <Card className="h-full overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-all duration-300 group-hover:scale-105 bg-white">
                 <div className="relative h-64 lg:h-80">
                   <Image
-                    src="/images/title_img.webp"
+                    src="/images/collection/alain-rouiller-kMSJ5S4gJjw-unsplash.webp"
                     alt="Rental Solutions"
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -45,6 +45,10 @@ export default function ProductSelect() {
                       <Home className="h-8 w-8 text-white" />
                     </div>
                   </div>
+                  {/* Discrete photo credit */}
+                  <div className="absolute bottom-1 right-1 text-[10px] text-white/40 font-secondary">
+                    Alain Rouiller
+                  </div>
                 </div>
                 <CardContent className="p-8">
                   <h2 className="text-2xl lg:text-3xl font-primary font-bold text-black mb-4 group-hover:text-accent-orange transition-colors">
@@ -54,7 +58,7 @@ export default function ProductSelect() {
                     {t('rentalSolutions.description')}
                   </p>
                   <div className="flex items-center text-accent-orange font-primary font-medium">
-                    <span className="mr-2">Learn More</span>
+                    <span className="mr-2">{t('rentalSolutions.cta')}</span>
                     <ArrowRight className="h-5 w-5 group-hover:translate-x-2 transition-transform" />
                   </div>
                 </CardContent>
@@ -66,7 +70,7 @@ export default function ProductSelect() {
               <Card className="h-full overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-all duration-300 group-hover:scale-105 bg-white">
                 <div className="relative h-64 lg:h-80">
                   <Image
-                    src="/images/title_img.webp"
+                    src="/images/collection/scott-graham-5fNmWej4tAA-unsplash.webp"
                     alt="Corporate Treasury"
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -78,6 +82,10 @@ export default function ProductSelect() {
                       <Building2 className="h-8 w-8 text-white" />
                     </div>
                   </div>
+                  {/* Discrete photo credit */}
+                  <div className="absolute bottom-1 right-1 text-[10px] text-white/40 font-secondary">
+                    Scott Graham
+                  </div>
                 </div>
                 <CardContent className="p-8">
                   <h2 className="text-2xl lg:text-3xl font-primary font-bold text-black mb-4 group-hover:text-primary-teal transition-colors">
@@ -87,7 +95,7 @@ export default function ProductSelect() {
                     {t('corporateTreasury.description')}
                   </p>
                   <div className="flex items-center text-primary-teal font-primary font-medium">
-                    <span className="mr-2">Explore Services</span>
+                    <span className="mr-2">{t('corporateTreasury.cta')}</span>
                     <ArrowRight className="h-5 w-5 group-hover:translate-x-2 transition-transform" />
                   </div>
                 </CardContent>
@@ -99,13 +107,13 @@ export default function ProductSelect() {
           <div className="text-center mt-16">
             <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-8 max-w-2xl mx-auto">
               <p className="text-lg font-secondary text-neutral-dark mb-6">
-                Need help choosing the right solution for your needs?
+                {t('contact.question')}
               </p>
               <Link 
                 href={`/${locale}/contact`}
                 className="inline-flex items-center bg-accent-orange text-white px-8 py-4 text-lg font-primary font-medium rounded-lg shadow-lg hover:bg-accent-orange/90 transition-all duration-300 group"
               >
-                Contact Our Experts
+                {t('contact.button')}
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>

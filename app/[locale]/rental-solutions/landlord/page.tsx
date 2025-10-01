@@ -91,7 +91,9 @@ export default function RentalSolutionsLandlord() {
 
             <div className="text-center mt-12 mb-8">
               <a
-                href="mailto:hello@plusplus.swiss"
+                href="https://zinsli.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-accent-orange text-white px-8 py-4 text-lg shadow-lg hover:bg-accent-orange/90 transition-all duration-300 rounded-lg inline-block font-medium"
               >
                 {t('rentalSolutionsLandlord.cta.button')}

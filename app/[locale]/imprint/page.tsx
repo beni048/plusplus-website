@@ -1,3 +1,5 @@
+'use client';
+
 import { useTranslations } from 'next-intl';
 
 export default function ImpressumPage() {
@@ -15,11 +17,11 @@ export default function ImpressumPage() {
             <section>
               <h2 className="text-2xl font-primary font-medium text-black mb-4">{t('company.title')}</h2>
               <div className="space-y-2">
-                <p className="font-secondary text-base"><strong className="font-primary">{t('company.name')}:</strong> {t('company.companyName')}</p>
-                <p className="font-secondary text-base"><strong className="font-primary">{t('company.address')}:</strong></p>
-                <p className="font-secondary text-base">{t('company.street')}</p>
-                <p className="font-secondary text-base">{t('company.city')}</p>
-                <p className="font-secondary text-base">{t('company.country')}</p>
+                <p className="font-secondary text-lg"><strong className="font-primary">{t('company.name')}:</strong> {t('company.companyName')}</p>
+                <p className="font-secondary text-lg"><strong className="font-primary">{t('company.address')}:</strong></p>
+                <p className="font-secondary text-lg">{t('company.street')}</p>
+                <p className="font-secondary text-lg">{t('company.city')}</p>
+                <p className="font-secondary text-lg">{t('company.country')}</p>
               </div>
             </section>
 
@@ -33,25 +35,32 @@ export default function ImpressumPage() {
             <section>
               <h2 className="text-2xl font-primary font-medium text-black mb-4">{t('legal.title')}</h2>
               <div className="space-y-2">
-                <p className="font-secondary text-base"><strong className="font-primary">{t('legal.registry')}:</strong> {t('legal.registryValue')}</p>
-                <p className="font-secondary text-base"><strong className="font-primary">{t('legal.uid')}:</strong> {t('legal.uidValue')}</p>
-                <p className="font-secondary text-base"><strong className="font-primary">{t('legal.vatNumber')}:</strong> {t('legal.vatValue')}</p>
+                <p className="font-secondary text-lg"><strong className="font-primary">{t('legal.registry')}:</strong> {t('legal.registryValue')}</p>
+                <p className="font-secondary text-lg"><strong className="font-primary">{t('legal.uid')}:</strong> {t('legal.uidValue')}</p>
+                <p className="font-secondary text-lg"><strong className="font-primary">{t('legal.vatNumber')}:</strong> {t('legal.vatValue')}</p>
               </div>
             </section>
 
             <section>
               <h2 className="text-2xl font-primary font-medium text-black mb-4">{t('disclaimer.title')}</h2>
               <div className="space-y-4">
-                <p className="font-secondary text-base">{t('disclaimer.content')}</p>
-                <p className="font-secondary text-base">{t('disclaimer.liability')}</p>
-                <p className="font-secondary text-base">{t('disclaimer.links')}</p>
+                <p className="font-secondary text-lg">{t('disclaimer.content')}</p>
+                <p className="font-secondary text-lg">{t('disclaimer.liability')}</p>
+                <p className="font-secondary text-lg">{t('disclaimer.links')}</p>
               </div>
             </section>
 
             <section>
               <h2 className="text-2xl font-primary font-medium text-black mb-4">{t('copyright.title')}</h2>
-              <p className="font-secondary text-base">{t('copyright.text')}</p>
+              <p className="font-secondary text-lg">{t('copyright.text')}</p>
             </section>
+
+            {/* Effective Date */}
+            <div className="text-right mt-8">
+              <p className="text-sm text-gray-600 font-secondary italic">
+                {t('effective.title')}
+              </p>
+            </div>
           </div>
         </div>
       </div>

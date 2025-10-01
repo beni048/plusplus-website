@@ -259,18 +259,26 @@
       "title": "7. Aktualisierungen dieser Erklärung",
       "content": "Wir können diese Datenschutzerklärung regelmässig aktualisieren. Das Datum der letzten Überarbeitung finden Sie unten."
     },
-    "lastUpdated": "Letzte Aktualisierung: 1. Juli 2025."
+    "effective": {
+      "title": "Stand: September 2025"
+    }
   },
   "productSelect": {
     "title": "Wählen Sie Ihre Lösung",
     "subtitle": "Wählen Sie die Produktkategorie, die am besten zu Ihren Bedürfnissen passt, und entdecken Sie, wie Plusplus Ihnen helfen kann.",
     "rentalSolutions": {
       "title": "Mietlösungen",
-      "description": "Intelligente Mietkautionsverwaltung und Immobilienlösungen für Mieter und Vermieter."
+      "description": "Intelligente Mietkautionsverwaltung und Immobilienlösungen für Mieter und Vermieter.",
+      "cta": "Mehr erfahren"
     },
     "corporateTreasury": {
       "title": "Corporate Treasury",
-      "description": "Fortschrittliche Treasury-Management- und Investitionslösungen für Unternehmen und Institutionen."
+      "description": "Fortschrittliche Treasury-Management- und Investitionslösungen für Unternehmen und Institutionen.",
+      "cta": "Services entdecken"
+    },
+    "contact": {
+      "question": "Brauchen Sie Hilfe bei der Auswahl der richtigen Lösung für Ihre Bedürfnisse?",
+      "button": "Unsere Experten kontaktieren"
     }
   },
   "rentalSolutionsSelect": {
@@ -278,11 +286,17 @@
     "subtitle": "Teilen Sie uns Ihre Rolle auf dem Mietmarkt mit, um personalisierte Lösungen zu erhalten.",
     "tenant": {
       "title": "Ich miete",
-      "description": "Auf der Suche nach flexiblen Mietkautionslösungen und besseren finanziellen Möglichkeiten."
+      "description": "Auf der Suche nach flexiblen Mietkautionslösungen und besseren finanziellen Möglichkeiten.",
+      "cta": "Loslegen"
     },
     "landlord": {
       "title": "Ich vermiete",
-      "description": "Auf der Suche nach effizienter Immobilienverwaltung und Mietgarantielösungen."
+      "description": "Auf der Suche nach effizienter Immobilienverwaltung und Mietgarantielösungen.",
+      "cta": "Mehr erfahren"
+    },
+    "contact": {
+      "question": "Nicht sicher, welche Option für Sie richtig ist?",
+      "button": "Unser Team kontaktieren"
     }
   },
   "rentalSolutionsTenant": {
@@ -547,60 +561,198 @@
     "copyright": {
       "title": "Urheberrecht",
       "text": "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem schweizerischen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung ausserhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers."
+    },
+    "effective": {
+      "title": "Stand: September 2025"
     }
   },
   "terms": {
     "title": "Allgemeine Geschäftsbedingungen",
-    "scope": {
-      "title": "Geltungsbereich",
-      "text1": "Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Geschäftsbeziehungen zwischen Plusplus AG und ihren Kunden.",
-      "text2": "Abweichende Bedingungen des Kunden werden nur wirksam, wenn sie von Plusplus AG ausdrücklich schriftlich anerkannt werden."
+    "pdfDownload": {
+      "title": "PDF-Dokumente herunterladen",
+      "agb": "AGB herunterladen",
+      "agbZinsli": "AGB Zinsli herunterladen"
     },
-    "contractConclusion": {
-      "title": "Vertragsabschluss",
-      "text1": "Unsere Angebote sind freibleibend und unverbindlich, sofern sie nicht ausdrücklich als verbindlich bezeichnet sind.",
-      "text2": "Ein Vertrag kommt erst durch unsere schriftliche Auftragsbestätigung oder durch die Ausführung der Leistung zustande.",
-      "text3": "Änderungen und Ergänzungen von Vereinbarungen bedürfen der Schriftform."
+    "agb": {
+      "general": {
+        "title": "I. Allgemeines",
+        "text1": "1. Die nachfolgenden Allgemeinen Geschäftsbedingungen (nachfolgend AGB) regeln das Vertragsverhältnis zwischen der Plusplus AG, c/o Alexander Brozek, Poststrasse 22, 6300 Zug, Schweiz (nachfolgend Plusplus) und ihren Kunden (nachfolgend Kunde) im Zusammenhang mit sämtlichen von Plusplus angebotenen Dienstleistungen, sofern nicht produktspezifische AGB ausdrücklich und vorrangig Anwendung finden. Im Falle von Abweichungen oder Widersprüchen gehen die produktspezifischen AGB den vorliegenden AGB vor.",
+        "text2": "2. Plusplus erbringt ihre Dienstleistungen ausschliesslich auf Grundlage dieser AGB, etwaiger Zusatzbedingungen sowie der jeweils aktuellen Fassung der Datenschutzerklärung, wie sie auf der Webseite von Plusplus veröffentlicht ist. Diese AGB gelten für die Nutzung aller von Plusplus angebotenen Dienstleistungen, einschliesslich sämtlicher Inhalte, Funktionen und Dienste (nachfolgend SERVICES). Mit der Nutzung der Dienstleistungen akzeptiert der Kunde diese AGB und bestätigt, dass er diese gelesen und verstanden hat.",
+        "text3": "3. Sofern Plusplus Dienstleistungen von Drittanbietern an den Kunden vermittelt, gelangen im Verhältnis zwischen dem Kunden und den Drittanbietern ausschliesslich deren allgemeine Geschäftsbedingungen zur Anwendung."
+      },
+      "contractSubject": {
+        "title": "II. Vertragsgegenstand und Nutzungsbedingungen",
+        "intro": "1. Diese AGB erfassen alle SERVICES, die von Plusplus angeboten werden. Mit der Registrierung bzw. der Inanspruchnahme der SERVICES bestätigt der Kunde, dass er:",
+        "requirement1": "18 Jahre alt ist;",
+        "requirement2": "handlungsfähig ist; und",
+        "requirement3": "an ggf. an Plusplus zu überweisenden Vermögenswerten wirtschaftlich berechtigt ist.",
+        "text1": "2. Plusplus erbringt gegenüber dem Kunden keine Finanzdienstleistungen und insbesondere keine Vermögensverwaltung, Effektenverwahrung, Effektenhandel oder Finanzberatung im Sinne des Schweizerischen Finanzdienstleistungsgesetzes (FIDLEG) bzw. des Schweizerischen Finanzinstitutsgesetzes (FINIG). Die SERVICES von Plusplus haben zudem keine Finanz-, Steuer- oder Rechtsberatung zum Gegenstand.",
+        "text2": "3. Plusplus behält sich vor, Informationen, Unterlagen und Auskünfte vom Kunden zu verlangen, Prüfungen durchzuführen und die Aufnahme einer Geschäftsbeziehung zum Kunden zu verweigern und jederzeit zu beenden.",
+        "text3": "4. Plusplus kann Dienstleistungen von Partnerunternehmen vermitteln und zu diesem Zweck Daten des Kunden weiterleiten. Die Vorstellung eines Partnerunternehmens stellt in keinem Fall und in keiner Weise eine Beratung dar.",
+        "text4": "5. Plusplus ist stets um eine möglichst uneingeschränkte Nutz- und Verfügbarkeit der SERVICES bemüht, kann für die Sicherstellung jedoch keine Garantie übernehmen. Der Kunde nimmt zur Kenntnis und stimmt zu, dass SERVICES aus technischen (z. B. Störungen, Wartungen, Übertragungsfehler, Systemunterbrüche) oder aus ausserhalb des Einflussbereichs von Plusplus liegenden Gründen (z. B. höhere Gewalt, Drittverschulden oder jede Art von Funktionsstörung) zeitweilig beschränkt sein können. Plusplus ist nicht verantwortlich für Personen oder Systeme ausserhalb ihres Einflussbereichs und übernimmt keine Gewähr für die Verfügbarkeit bestimmter SERVICES oder von Dritten zur Verfügung gestellter Dienstleistungen.",
+        "text5": "6. Plusplus ist bemüht, ihre SERVICES fortlaufend weiterzuentwickeln und zu verbessern. Deshalb behält sich Plusplus das Recht vor, die SERVICES sowie deren Inhalte ganz oder teilweise jederzeit mit oder ohne Ankündigung und ohne jede Haftung gegenüber dem Kunden zu löschen, zu verändern, zu verlegen, zu entfernen oder zu übertragen.",
+        "text6": "7. Plusplus ist befugt, insbesondere aufgrund gesetzlicher oder aufsichtsrechtlicher Auskunfts- oder Meldepflichten nach eigenem Ermessen den Zugang zu den SERVICES vorübergehend zu sperren.",
+        "text7": "8. Im Übrigen trifft Plusplus angemessene Massnahmen, um Missbrauch ihrer SERVICES zu erkennen und zu verhindern, und wendet die im Geschäftsverkehr übliche Sorgfalt an."
+      },
+      "orderProcessing": {
+        "title": "III. Auftragsabwicklung",
+        "text1": "1. Der Kunde erteilt alle Weisungen im Zusammenhang mit den SERVICES über die bereitgestellte Webplattform oder andere explizit hierfür vorgesehene Kommunikationskanäle. Plusplus kann nach eigenem Ermessen Aufträge akzeptieren und bearbeiten, die ausserhalb dieser Kommunikationskanäle erteilt werden.",
+        "text2": "2. Aufträge gelten als erteilt, sobald sie von Plusplus bestätigt wurden. Plusplus kann Aufträge jederzeit und ohne Angabe von Gründen ablehnen. Bestätigte Aufträge können vom Kunden grundsätzlich nicht mehr geändert oder storniert werden. Plusplus nimmt entgegen, übermittelt und/oder führt die vom Kunden erteilten Aufträge auf reiner Execution-Only-Basis gemäss ihrer Sorgfaltspflicht aus, die keine Verpflichtung zur Aufklärung oder Beratung des Kunden umfasst. Der Kunde anerkennt und erklärt sich damit einverstanden, dass keine Kommunikation zwischen Plusplus und dem Kunden eine Anlageberatung in Bezug auf jegliche angebotenen Zahlungstoken (nachstehend TOKEN) oder Investitionen darin darstellt und dass Plusplus weder die Kenntnisse und Erfahrungen des Kunden noch seine finanzielle Situation oder seine Anlageziele abgeklärt hat.",
+        "text3": "3. Plusplus führt Aufträge basierend auf den Weisungen des Kunden aus. Im Falle ungenauer oder unvollständiger Informationen kann Plusplus den Auftrag dennoch ausführen, wenn die ungenauen oder unvollständigen Informationen von Plusplus ohne jeden vernünftigen Zweifel korrigiert und/oder vervollständigt werden können. Der Kunde trägt in jedem Fall das Risiko, das mit einem unklar formulierten oder unvollständigen Auftrag oder einem Auftrag, der Fehler enthält, verbunden ist."
+      },
+      "dataProtection": {
+        "title": "IV. Datenschutz, Datenabruf und andere Geheimhaltungsvorschriften",
+        "text1": "1. Plusplus hält sich an die jeweils geltende Fassung der auf sie anwendbaren Datenschutzgesetzgebung.",
+        "text2": "2. Plusplus verpflichtet sich, Kundendaten jederzeit durch angemessene und dem aktuellsten Stand der Technik entsprechende Massnahmen zu schützen und versichert, keine Personendaten des Kunden an Dritte weiterzugeben, sofern dies nicht gesetzlich vorgesehen ist oder der jeweilige Kunde nicht eingewilligt hat.",
+        "text3": "3. Plusplus ist befugt, zur Abwicklung von Transaktionen gemäss den jeweils angebotenen SERVICES, insbesondere zur Umwandlung von Geldern in TOKEN, Personendaten des Kunden herauszugeben, sofern dies für die ordnungsgemässe Ausführung der Transaktionen notwendig ist.",
+        "text4": "4. Der Kunde ermächtigt Plusplus, die relevanten Kundendaten und alle damit verbundenen Informationen an Dritte weiterzugeben, einschliesslich, aber nicht beschränkt auf Dienstleistung, die an der Abwicklung von Zahlungen beteiligt sind, Behörden sowie Tochtergesellschaften von Plusplus, im Zusammenhang mit der Erfüllung eines Vertrags zwischen dem Kunden und Plusplus, zur Erfüllung gesetzlicher und regulatorischer Anforderungen, zur Einhaltung von Anfragen schweizerischer oder ausländischer Behörden oder zur Wahrung der berechtigten Interessen von Plusplus.",
+        "text5": "5. Im Weiteren publiziert Plusplus eine Datenschutzerklärung, welche unter der Website abrufbar ist und die Einzelheiten zum Umgang mit den Daten des Kunden sowie der Datensicherheit festlegt. Im Falle eines Widerspruchs zwischen dieser AGB und der Datenschutzerklärung geht letztere vor."
+      },
+      "serviceOutsourcing": {
+        "title": "V. Auslagerung von Dienstleistungen",
+        "text1": "Plusplus ist befugt, die Erbringung von SERVICES ganz oder teilweise an Dritte in- oder ausserhalb der Schweiz auszulagern. Der Kunde erklärt sich damit einverstanden, dass Plusplus alle für die Auslagerung notwendigen Personendaten an Dritte übermitteln darf."
+      },
+      "dataProcessing": {
+        "title": "VI. Bearbeitung, Aufzeichnung, Weitergabe, Speicherung und Löschung von Daten",
+        "text1": "Damit Plusplus die Bedürfnisse des Kunden ermitteln und diesen gerecht werden kann, benötigt Plusplus unter Beachtung der anwendbaren Datenschutzgesetze und der Datenschutzerklärung gewisse Daten. Zur Verhinderung von Missbrauch und vorbehaltlich längerer gesetzlicher Fristen speichert Plusplus Kundendaten über eine Frist von 10 Jahren nach Vertragsende. Danach hat der Kunde das Recht, strukturierte Kundendaten aus produktiven Systemen, soweit gesetzlich zulässig, löschen zu lassen. Mehr Informationen hierzu befinden sich in der Datenschutzerklärung."
+      },
+      "intellectualProperty": {
+        "title": "VII. Geistiges Eigentum",
+        "text1": "Sämtliche Immaterialgüterrechte sowie ähnliche Rechte im Zusammenhang mit allen Inhalten der bereitgestellten SERVICES, einschliesslich Software, verbleiben bei Plusplus."
+      },
+      "customerDuties": {
+        "title": "VIII. Sorgfaltspflichten des Kunden",
+        "text1": "1. Kunden sind verpflichtet, alle Dokumente im Zusammenhang mit den SERVICES sorgfältig und sicher aufzubewahren, damit Unbefugte nicht auf die darin enthaltenen Informationen zugreifen können. Der Kunde ist weiter verpflichtet, sämtliche Vorsichtsmassnahmen zu treffen, die das Risiko von Betrug oder dergleichen minimieren, und ist für die Einhaltung der auf ihn anwendbaren gesetzlichen Bestimmungen verantwortlich, insbesondere betreffend Steuer- und Geldwäschereivorschriften.",
+        "text2": "2. Der Kunde anerkennt, dass Geräte und Software Teil eines Systems sein können, das sich nicht im Kontrollbereich von Plusplus befindet. Der Kunde ist für die Integrität der von ihm für die Nutzung der SERVICES verwendeten Systeme verantwortlich. Es wird empfohlen, sensitive oder zeitkritische Informationen an Plusplus nicht über unverschlüsselte E-Mails oder ungeschützte elektronische Kommunikationskanäle zu übermitteln, sondern Kanäle zu nutzen, welche zu diesem Zweck von Plusplus sowie offiziellen Drittanbietern bereitgestellt wurden.",
+        "text3": "3. Kunden sind weiter verpflichtet, korrekte, aktuelle und vollständige Kundendaten (einschliesslich einer E-Mail-Adresse) sowie alle anderen Informationen zur Verfügung zu stellen, die Plusplus zur Erbringung der Dienstleistungen benötigt. Plusplus ist berechtigt, sich auf die vom Kunden bereitgestellten Informationen zu verlassen und bei nachrichtenlosen Vermögenswerten Nachforschungen auf Kosten des Kunden zu betreiben."
+      },
+      "indemnification": {
+        "title": "IX. Schadloshaltung von Plusplus und Haftung des Kunden",
+        "text1": "Der Kunde hält Plusplus schadlos von sämtlichen Ansprüchen, einschliesslich etwaiger Schadenersatzansprüche, die andere Kunden oder Dritte, einschliesslich Behörden, gegen Plusplus wegen einer Verletzung von Rechten oder Pflichten durch die Nutzung der SERVICES geltend machen. Der Kunde haftet in diesem Fall für jegliche Kosten, einschliesslich der für die Rechtsvertretung entstehenden Kosten, die Plusplus aufgrund einer geltend gemachten Verletzung von Rechten Dritter entstehen."
+      },
+      "riskDisclosure": {
+        "title": "X. Risikoaufklärung",
+        "text1": "1. Der Kunde hat zur Kenntnis genommen, dass (i) Plusplus über keine Bewilligung der FINMA verfügt und nicht der Aufsicht der FINMA untersteht, (ii) Plusplus ausschliesslich für Kunden Transaktionen abwickelt, um Kundengelder in TOKEN umzutauschen, welche nicht als Effekten oder Finanzinstrumente gemäss dem Schweizerischen Finanzdienstleistungsgesetz (FIDLEG) sowie einschlägigen Rundschreiben der Schweizerischen Finanzmarktaufsichtsbehörde (FINMA) qualifizieren, und (iii) die TOKEN durch Plusplus für den Kunden jederzeit bereitgehalten werden und hierfür individuell und technisch segregiert auf eine Blockchain transferiert werden (Einzelverwahrung).",
+        "text2": "2. Der Kunde hat weiter zur Kenntnis genommen, dass TOKEN sehr volatil und/oder inflationär sein können sowie dass die zugrundeliegenden Märkte illiquide sein können, mit dem Risiko, dass ihr Wert erheblich sinken kann oder dass solche TOKEN auch aus anderen Gründen wie z.B. regulatorische oder technische Gründe sogar völlig wertlos werden können. Der Kunde nimmt zur Kenntnis und erklärt sich damit einverstanden, dass Crypto Assets weder durch eine bestimmte Nation, eine Institution, ein Unternehmen, eine Person noch durch Plusplus garantiert oder abgesichert sind. Darüber hinaus nimmt der Kunde zur Kenntnis und erklärt sich damit einverstanden, dass TOKEN in einigen Rechtsordnungen nicht reguliert sind und ihr rechtlicher und regulatorischer Status unsicher sein kann, sodass die SERVICES von Plusplus entsprechenden Risiken unterliegen.",
+        "text3": "3. Der Kunde ist sich bewusst, dass TOKEN trotz professioneller Sicherheitsvorkehrungen von Plusplus erheblichen technischen Risiken ausgesetzt ist. Insbesondere gibt es für einige Features der SERVICES bislang wenig technische Erfahrungswerte, weshalb deren Stabilität, Fehlerfreiheit, Verfügbarkeit und Sicherheit nicht gewährleistet werden kann. Sicherheitslücken oder Fehlkonfigurationen können von Angreifern ausgenetzt werden, was zum unwiderruflichen Totalverlust der TOKEN des Kunden führen kann. Selbst modernste Sicherheitsstandards bieten keinen vollständigen Schutz vor gezielten Cyberangriffen, Zero-Day-Exploits oder internen Fehlern. Der Kunde nimmt zur Kenntnis, dass im Fall technischer Kompromittierung oder Fehlern alle TOKEN des Kunden unwiderruflich verloren sein können, ohne Möglichkeit einer Rückabwicklung oder Wiederherstellung.",
+        "text4": "4. Der Kunde bestätigt, die für die ihn betreffenden SERVICES entsprechenden produktespezifische Informationen zur Risikoaufklärung gelesen und verstanden zu haben, die ihm auf der Website zur Verfügung gestellt werden.",
+        "text5": "5. Der Kunde erkennt die mit den SERVICES verbundenen Risiken vollständig an und akzeptiert diese. Die in den AGB und die in der in dieser Ziffer erwähnten Broschüre aufgeführten Risiken sind nicht abschliessend., Plusplus schliesst jegliche Haftung im gesetzlich zulässigen Umfang aus."
+      },
+      "liability": {
+        "title": "XI. Haftungsausschluss",
+        "text1": "1. Alle SERVICES, einschliesslich der dabei bereitgestellten Informationen, werden von Plusplus \"wie gesehen\" zur Verfügung gestellt. Plusplus schliesst jegliche Haftung soweit gesetzlich zulässig aus und haftet lediglich für vorsätzliche oder grob fahrlässige Handlungen. In jedem Fall wird die Haftung auf direkte Schäden beschränkt; die Geltendmachung mittelbarer oder indirekter Schäden, entgangenem Gewinn und Mangelfolgeschäden wird ausdrücklich ausgeschlossen.",
+        "text2": "2. Der Kunde nimmt zur Kenntnis, dass die für ihn durch Plusplus vorzunehmenden Transaktionen ohne Ermessen ausgeführt werden und es zu Verzögerungen von mehreren Wochen kommen kann. Plusplus haftet nicht für Schäden, einschliesslich Folgeschäden oder entgangene Gewinne, welche durch verspätet oder zu anderweitig ungünstigen Zeitpunkten erfolgte Transaktionen (einschliesslich Liquidation bei Kündigung) entstehen. Der Kunde nimmt weiter zur Kenntnis, dass zwecks Durchführung von Transaktionen Gelder oder TOKEN des Kunden auf Abwicklungskonti oder Abwicklungs-Wallets von Plusplus gehalten werden und diese zu diesem Zeitpunkt nicht konkursrechtlich privilegiert sind.",
+        "text3": "3. Plusplus haftet nicht für Handlungen oder Unterlassungen von Partnerunternehmen.",
+        "text4": "4. Plusplus haftet nicht für Verzögerungen, Fehler oder Ausfälle, die durch Umstände verursacht werden, welche ihre Ursache ausserhalb des Kontrollbereichs von Plusplus haben, wie z. B. höhere Gewalt.",
+        "text5": "5. Soweit gesetzlich zulässig, schliesst Plusplus jegliche Haftung für Schäden aufgrund verzögerter oder nicht ausgeführter Bearbeitungen von Anträgen oder der Bereitstellung von Informationen aus."
+      },
+      "providedInformation": {
+        "title": "XII. Bereitgestellte Informationen",
+        "text1": "1. Die von Plusplus bereitgestellten Informationen zu TOKEN sind nicht zur Verwendung im Handel oder im Sinne einer Beratung in Finanz-, Anlage-, Steuer-, Rechts-, Buchhaltungs- oder anderen Fragen gedacht. Plusplus ist weder ein Vermögensverwalter, Anlage- oder Finanzberater noch ein Wertpapierhaus. Keine der SERVICES stellt eine Anlageberatung oder ein Angebot, eine Empfehlung oder eine Aufforderung von Plusplus zum Kauf, Verkauf oder Behalten eines Wertpapiers oder Finanzprodukts dar. Plusplus macht keine Zusicherung und gibt keine Einschätzung hinsichtlich der Ratsamkeit oder Eignung einer Anlage ab.",
+        "text2": "2. Keine der SERVICES stellt eine allgemeine oder individuelle Anlageberatung dar. Die Finanzprodukte oder -transaktionen, auf die sich gewisse SERVICES beziehen, sind möglicherweise nicht für das Anlageprofil und die Anlageziele des Kunden oder dessen Erwartungen geeignet. Es obliegt der Verantwortung des Kunden festzustellen, ob die jeweiligen SERVICES auf der Basis seiner Interessen und seiner Risikobereitschaft geeignet sind. Plusplus haftet nicht für etwaige Schäden, die sich aus den hier genannten Transaktionen ergeben. Plusplus empfiehlt nicht, die zur Verfügung gestellten SERVICES als alleinige Grundlage für Entscheidungen des Kunden zur Nutzung der SERVICES zu verwenden.",
+        "text3": "3. Die von Plusplus bereitgestellten Informationen werden teilweise von Drittanbietern bezogen und zur Verfügung gestellt und können entsprechend den Angaben dieser Datenanbieter verzögert ankommen. Plusplus überprüft keine Daten und lehnt jegliche Verpflichtung dazu ab.",
+        "text4": "4. Plusplus lehnt ausdrücklich die Haftung für die Richtigkeit, Angemessenheit oder Vollständigkeit jeglicher bereitgestellten Informationen ab und haftet nicht für Fehler, Auslassungen oder andere Mängel der Informationen, für deren verzögerte oder unterbrochene Bereitstellung oder für Massnahmen, die im Vertrauen auf die Informationen ergriffen werden. Plusplus schliesst soweit gesetzlich zulässig jegliche Haftung für Schäden, die im Zusammenhang mit der Verwendung der im Rahmen ihrer SERVICES bereitgestellten Informationen zu TOKEN oder anderen Vermögensanlagen entstehen, aus."
+      },
+      "termination": {
+        "title": "XIII. Laufzeit und Beendigung der Nutzung",
+        "text1": "1. Sofern nicht anders vorgesehen, wird die Vertragsbeziehung zwischen dem Kunden und Plusplus auf unbestimmte Zeit geschlossen. Für die Nutzung von SERVICES hinsichtlich Mietzinsdepots gelten insbesondere die Konditionen gemäss den jeweils einschlägigen Spezialbedingungen in ihrer jeweils gültigen Fassung, welche auf der Website zur Verfügung gestellt werden.",
+        "text2": "2. Kündigungen können über die für den Kunden bereitgestellte Kündigungsfunktion oder die Benachrichtigungsfunktion, die Website sowie via E-Mail oder per Einschreiben erfolgen.",
+        "text3": "3. Plusplus ist befugt, die Vertragsbeziehung oder die Nutzung der SERVICES jederzeit ohne Angabe von Gründen mit sofortiger Wirkung einzuschränken oder zu kündigen."
+      },
+      "amendments": {
+        "title": "XIV. Inkrafttreten und Änderungen der AGB",
+        "text1": "Diese AGB treten per sofort in Kraft. Plusplus behält sich die jederzeitige Änderung dieser AGB vor. Bei sämtlichen Änderungen werden dem Kunden die aktualisierten AGB jeweils per E-Mail zur Verfügung gestellt, welche mangels Widerspruch innert 30 Tagen als vom Kunden genehmigt gelten. Die Änderung einer Hauptleistungspflicht ist ausgeschlossen."
+      },
+      "fees": {
+        "title": "XV. Gebühren und Vergütungen",
+        "text1": "1. Plusplus erhebt gegenüber den Kunden Gebühren gemäss der aktuell geltenden Preisliste, welche auf der Website abgerufen werden kann.",
+        "text2": "2. Plusplus darf Gebühren direkt mit allfälligen für den Kunden jederzeit bereitgehaltenen Guthaben auf WALLETS verrechnen und von in Einzelverwahrung befindlichen TOKEN über das WALLET des Kunden oder bei Durchführung einer Transaktion/Umwandlung belasten. Weiter ist Plusplus ermächtigt, den vom Kunden hinterlegten Zahlungsmitteln jegliche Forderungen gegenüber dem Kunden, einschliesslich Gebühren, zu belasten.",
+        "text3": "3. Plusplus behält sich das Recht auf Änderungen und Anpassungen des Gebührenreglements vor. Jede Änderung ist dem Kunden in geeigneter Form schriftlich oder elektronisch durch Plusplus oder ggf. über Partner und Drittanbieter mitzuteilen und gilt als genehmigt, wenn der Kunde binnen 30 Tagen der Änderung nicht schriftlich widerspricht.",
+        "text4": "4. Plusplus ist befugt, die geltende Mehrwertsteuer sowie andere, im Zusammenhang mit der Erbringung der SERVICES anfallende Steuern und Gebühren dem Kunden in Rechnung zu stellen oder mit Guthaben/Forderungen des Kunden zu verrechnen.",
+        "text5": "5. Plusplus ist befugt, besondere und ausserordentliche durch den Kunden verursachte Kosten dem Kunden in Rechnung zu stellen.",
+        "text6": "6. Plusplus kann für die Inanspruchnahme von SERVICES, insbesondere der Durchführung von Transaktionen, von Drittanbietern Vergütungen erhalten. Solche Vergütungen werden dem Kunden offengelegt. Der Kunde ist damit einverstanden, dass Plusplus diese Vergütungen annimmt und alle Vergütungen vollumfänglich bei Plusplus verbleiben. Der Kunde verzichtet zugunsten von Plusplus auf jedes Recht auf Herausgabe dieser Vergütungen. Der Kunde ist sich in diesem Zusammenhang bewusst, dass nicht auszuschliessen ist, dass Vergütungen im Einzelfall zu Interessenkonflikten führen können."
+      },
+      "communication": {
+        "title": "XVI. Mitteilungen und Kommunikation",
+        "text1": "1. Der Kunde teilt Plusplus alle wesentlichen Tatsachen für die Geschäftsbeziehung (z. B. Änderungen von Namen, Adresse, Wohnsitz, Telefonnummer oder E-Mail-Adresse) unverzüglich mit. Sobald elektronische Dokumente und Mitteilungen von Plusplus an den Kunden abrufbar oder per E-Mail versendet worden sind, gelten diese als zugestellt.",
+        "text2": "2. Der Kunde erklärt sich einverstanden, dass Plusplus über jegliche elektronischen Kanäle mit dem Kunden kommunizieren kann (z. B. E-Mails, Apps, Websites oder Telefon). Die Kommunikation kann direkt durch Plusplus und/oder über Partner und Drittanbieter und deren jeweiligen Kommunikationskanäle erfolgen."
+      },
+      "severability": {
+        "title": "XVII. Salvatorische Klausel",
+        "text1": "Sollten in dieser AGB oder in verwandten Dokumenten enthaltene Bestimmungen, Bedingungen oder Regelungen in jeglichem Umfang für ungültig oder nicht durchsetzbar befunden werden, so lässt dies die Gültigkeit oder Durchsetzbarkeit der übrigen Bestimmungen dieser AGB oder anderer Dokumente unberührt. Dasselbe gilt, falls die AGB oder das Dokument eine wesentliche Bestimmung nicht enthalten sollte. Anstelle der ungültigen oder nicht durchsetzbaren Bestimmung oder zur Füllung einer Vertragslücke findet diejenige gültige und durchsetzbare Bestimmung Anwendung, die der wirtschaftlichen Absicht der Parteien so weit wie möglich nahekommt, die mit der ungültigen, nicht durchsetzbaren Bestimmung verfolgt wurde oder für die eine Regelung fehlte."
+      },
+      "jurisdiction": {
+        "title": "XVIII. Rechtswahl und Gerichtsstand",
+        "text1": "1. Alle Rechtsbeziehungen zwischen Plusplus und dem Kunden unterstehen materiellem schweizerischen Recht unter Ausschluss des Kollisionsrechts und staatsvertraglicher Vereinbarungen.",
+        "text2": "2. Ausschliesslicher Gerichtsstand (vorbehaltlich anderer zwingender Gerichtsstände) ist die Stadt Zürich, Schweiz. Plusplus ist jedoch befugt, ihre Rechte auch am Domizil des Kunden oder vor jeder anderen zuständigen Behörde geltend zu machen, wobei die vorstehende Rechtswahl gültig bleibt."
+      },
+      "effective": {
+        "title": "Stand: September 2025"
+      }
     },
-    "services": {
-      "title": "Leistungen",
-      "text1": "Wir erbringen unsere Leistungen nach den anerkannten Regeln der Technik und entsprechend den vereinbarten Spezifikationen.",
-      "text2": "Änderungen der Leistungen sind nur mit schriftlicher Vereinbarung möglich.",
-      "text3": "Der Kunde ist verpflichtet, bei der Leistungserbringung mitzuwirken und alle erforderlichen Informationen rechtzeitig zur Verfügung zu stellen."
-    },
-    "prices": {
-      "title": "Preise und Zahlungsbedingungen",
-      "text1": "Alle Preise verstehen sich in Schweizer Franken und sind exklusive Mehrwertsteuer.",
-      "text2": "Rechnungen sind innerhalb von 30 Tagen nach Rechnungsdatum ohne Abzug zur Zahlung fällig.",
-      "text3": "Bei Zahlungsverzug sind wir berechtigt, Verzugszinsen von 5% p.a. zu berechnen."
-    },
-    "liability": {
-      "title": "Haftung",
-      "text1": "Die Haftung von Plusplus AG ist auf Vorsatz und grobe Fahrlässigkeit beschränkt.",
-      "text2": "Eine Haftung für indirekte Schäden, entgangenen Gewinn oder Folgeschäden ist ausgeschlossen."
-    },
-    "dataProtection": {
-      "title": "Datenschutz",
-      "text1": "Wir behandeln alle Kundendaten vertraulich und entsprechend den geltenden Datenschutzbestimmungen.",
-      "text2": "Nähere Informationen finden Sie in unserer Datenschutzerklärung."
-    },
-    "applicableLaw": {
-      "title": "Anwendbares Recht und Gerichtsstand",
-      "text1": "Auf alle Rechtsbeziehungen zwischen Plusplus AG und dem Kunden findet schweizerisches Recht Anwendung.",
-      "text2": "Ausschliesslicher Gerichtsstand ist Zug, Schweiz."
-    },
-    "changes": {
-      "title": "Änderungen der AGB",
-      "text": "Plusplus AG behält sich das Recht vor, diese AGB jederzeit zu ändern. Änderungen werden dem Kunden schriftlich mitgeteilt und gelten als genehmigt, wenn der Kunde nicht innerhalb von 30 Tagen schriftlich widerspricht."
-    },
-    "contact": {
-      "title": "Kontakt",
-      "companyName": "Plusplus AG",
-      "street": "Poststrasse 22",
-      "city": "6300 Zug",
-      "country": "Schweiz",
-      "email": "hello@plusplus.swiss",
-      "phone": "+41 41 123 45 67"
+    "specialConditions": {
+      "title": "Spezialbedingungen für Mietkautionen über die Zinsli-Plattform",
+      "general": {
+        "title": "I. Allgemeines und Anwendungsbereich",
+        "text1": "1. Die nachfolgenden Spezialbedingungen für Mietkautionen über die «Zinsli-Plattform» (nachfolgend Spezialbedingungen) regeln das Vertragsverhältnis zwischen der Plusplus AG, c/o Alexander Brozek, Poststrasse 22, 6300 Zug, Schweiz, (nachfolgend Plusplus) sowie Mietern und Vermietern für Dienstleistungen von Plusplus im Zusammenhang mit der Verwaltung von Mietkautionen nach Art. 257e OR, soweit zutreffend, über die Plattform von Zinsli Finance AG (www.zinsli.com) (nachfolgend Zinsli-Plattform, die Dienstleistungen die SERVICES).",
+        "text2": "2. Die vorliegenden Spezialbestimmungen gelten zusätzlich zu den Allgemeinen Geschäftsbedingungen von Plusplus (nachfolgend AGB). Im Falle von Abweichungen oder Widersprüchen gehen diese Spezialbestimmungen den AGB vor.",
+        "text3": "3. Plusplus erbringt ihre SERVICES ausschliesslich auf Grundlage dieser Spezialbestimmungen, allfälligen Zusatzvereinbarungen, den AGB sowie der jeweils aktuellen Fassung der Datenschutzerklärung, wie sie auf der Webseite von Plusplus veröffentlicht ist. Diese Spezialbedingungen gelten für die Nutzung aller von Plusplus angebotenen Dienstleistungen, einschliesslich sämtlicher Inhalte, Funktionen und Dienste im Zusammenhang mit den SERVICES. Mit der Nutzung der SERVICES oder bei der Registrierung zur Nutzung von Dienstleistungen von Plusplus über die Zinsli-Plattform akzeptiert der Mieter bzw. Vermieter diese Spezialbedingungen."
+      },
+      "deposit": {
+        "title": "II. Eröffnung eines Mietzinsdepots und Umtausch durch Plusplus",
+        "text1": "1. Mieter und Vermieter können über die Zinsli-Plattform vereinbaren, dass das Mietzinsdepot zur Hinterlegung ihrer Mietkaution nach Art. 257e OR durch Anlage in Zahlungstoken (nachstehend TOKEN) hinterlegt wird.",
+        "intro": "2. Mit der Registrierung bestätigt der Mieter, dass er:",
+        "requirement1": "Entweder Schweizer Bürger ist oder ein Ausländer im Besitz einer Aufenthaltsbewilligung B, B (anerkannter Flüchtling), C oder F sind;",
+        "requirement2": "Das Mietobjekt, für welches das Mietzinsdepot eröffnet wird, sich in der Schweiz befindet; und",
+        "requirement3": "Die AGB gelesen und akzeptiert hat und die darin enthaltenen weiteren Anforderungen erfüllt.",
+        "text2": "3. Über die Zinsli-Plattform erteilen Mieter und Vermieter ihre Zustimmung zur Anlage der Mietkaution in TOKEN und beauftragen damit Plusplus, ihre Mietkaution in der Form der von ihnen gewählten TOKEN in einem individuell erstellten und technisch pro Mieter segregierten DLT-Depot (nachstehend DEPOT) für den Mieter jederzeit bereitzuhalten. Während der Verwahrungsdauer verfügt einzig Plusplus über Zugang zum DEPOT. Inhaber des DEPOT bleibt gemäss Art. 257e OR jeweils der Mieter.",
+        "text3": "4. Plusplus ist befugt, einseitig jederzeit Änderungen an den angebotenen Auswahlmöglichkeiten und angebotenen Produkten vorzunehmen.",
+        "text4": "5. Die Zahlung des Mieters erfolgt per Banküberweisung und hat über ein Schweizer Bankkonto des Mieters zu erfolgen, welches auf seinen Namen lautet.",
+        "text5": "6. Nach Zahlungseingang der Kaution bei Plusplus durch Banküberweisung tauscht Plusplus die Kaution in die gewünschten TOKEN um und transferiert diese auf das DEPOT. Die Umwandlung von Geldern in TOKEN durch Plusplus erfolgt über Drittanbieter und ohne jegliches Ermessen seitens Plusplus.",
+        "text6": "7. Mieter und Vermieter wurden auf die Risikoaufklärung gemäss Ziffer X der AGB sowie der produktespezifischen Informationen über die Anlagerisiken aufgeklärt."
+      },
+      "losses": {
+        "title": "III. Verluste und Ertragsverwendung",
+        "text1": "1. Die Mieter nehmen zur Kenntnis, dass die von ihnen gewählten Produkte volatil sein können und Wertschwankungen ausgesetzt sind, für welche alleine der Mieter das Risiko trägt.",
+        "text2": "2. Sofern auf dem DEPOT des Mieters Erträge anfallen, stimmt der Mieter zu, dass jegliche Erträge, Kapitalgewinne oder anderweitige Wertsteigerungen, soweit gesetzlich zulässig, als Haftungssubstrat weiterhin Bestandteil der Mietkaution nach Art. 257e OR dienen und der Mieter ausserhalb der Bestimmungen in Art. 257e Abs. 3 und 4 OR bis zur Auflösung der Mietkaution keinen Anspruch auf Herausgabe dieser Wertsteigerungen hat. Der Mieter verzichtet zudem auf die Geltendmachung jeglicher teilweisen Auszahlungsansprüche.",
+        "text3": "3. Der Vermieter ist sich bewusst, dass Wertschwankungen oder technische Probleme bzw. regulatorische Entwicklungen dazu führen können, dass die vereinbarte Kaution zeitweise unterschritten werden kann oder gänzlich wertlos werden könnte. In diesem Zusammenhang verzichtet der Vermieter gegenüber Plusplus und dem Mieter auf die Geltendmachung weiterer Sicherheiten bzw. der Leistung von Nachschüssen.",
+        "text4": "4. Mieter und Vermieter nehmen zur Kenntnis, dass keine Garantie besteht, dass die Mietkaution Gewinn abwirft oder den ursprünglichen Kautionsbetrag deckt. Insbesondere nehmen Mieter und Vermieter zur Kenntnis, dass ein Totalverlust möglich ist."
+      },
+      "duration": {
+        "title": "IV. Weitere Bestimmungen während der Dauer der Mietkaution",
+        "text1": "1. Vorbehaltlich der vollständigen Auflösung der Mietkaution verzichten Mieter und Vermieter für die Dauer der SERVICES auf teilweise Auszahlungen aus dem DEPOT.",
+        "text2": "2. Mieter und Vermieter können während der Dauer der Verwahrung der Mietkaution im DEPOT bis zu deren Auflösung keine Änderungen an der Produktewahl vornehmen.",
+        "text3": "3. Vorbehaltlich der vollständigen Auflösung und Auszahlung des Mietzinsdepots gemäss Ziff. V hiernach besteht zu keiner Zeit ein Anspruch auf Rückzahlung der vom Mieter an Plusplus geleisteten Banküberweisung.",
+        "text4": "4. Vorbehaltlich der vollständigen Auflösung des Mietzinsdepots gemäss Ziff. V hiernach verzichten Mieter und Vermieter auf Auszahlungen aus dem DEPOT."
+      },
+      "dissolution": {
+        "title": "V. Auflösung des Mietzinsdepots",
+        "text1": "1. Die Nutzung der SERVICES von Plusplus bedingt eine gültige Vertragsbeziehung zu Zinsli Finance AG zur Nutzung der Zinsli-Plattform. Ungeachtet der nachstehenden Bedingungen führt eine Kündigung des Mieters oder des Vermieters gegenüber Zinsli Finance AG automatisch zur Kündigung der Vertragsbeziehung zu Plusplus.",
+        "text2": "2. Die Auflösung des Mietzinsdepots erfolgt gemäss den gesetzlichen Regelungen in Art. 257e Abs. 3 OR. Demnach ist Plusplus nur dann zur Auszahlung des Depots berechtigt, wenn Mieter und Vermieter dem zugestimmt haben, ein rechtskräftiger Zahlungsbefehl oder rechtskräftiges Gerichtsurteil vorliegen oder der Vermieter während eines Jahres nach Beendigung des Mietverhältnisses keinen Anspruch geltend gemacht hat.",
+        "text3": "3. Die Auflösung des Mietzinsdepots erfolgt über die für den Mieter oder den Vermieter bereitgestellte Kündigungsfunktion oder die Benachrichtigungsfunktion auf der Zinsli-Plattform. Sie kann auch per Einschreiben erfolgen.",
+        "text4": "4. Im Falle der Kündigung durch Plusplus oder der Auflösung des Mietzinsdepots durch den Mieter oder den Vermieter werden die TOKEN vorbehaltlich der mietrechtlichen Bestimmungen nach Art. 257e Abs. 3 OR gemäss den Bestimmungen der AGB bis zur Auszahlung für den Mieter jederzeit bereitgehalten.",
+        "text5": "5. Entscheidet sich der Mieter über die Dauer des Mietzinsdepots die TOKEN weiterhin durch Plusplus im Rahmen der AGB bereithalten zu lassen, führt Plusplus eine erweiterte Prüfung gemäss dem Schweizerischen Geldwäschereigesetz (GWG) durch. Der Mieter hat alle hierfür für Plusplus erforderlichen zusätzlichen Informationen und Dokumente bereitzustellen. Plusplus behält sich das Recht vor, die Kundenbeziehung ohne Angabe von Gründen abzulehnen.",
+        "text6": "6. Plusplus haftet nicht für Schäden oder entgangene Gewinne, welche durch verspätete oder nicht erfolgte Liquidation eines DEPOTS bei Kündigung oder Auflösung des Mietzinsdepots entstehen."
+      },
+      "specialFees": {
+        "title": "VI. Gebühren",
+        "text1": "1. Plusplus erhebt bis zur Auszahlung des Mietzinsdepots gegenüber Mietern und Vermietern Gebühren gemäss der aktuell geltenden Preisliste, welche unter der Website abgerufen werden kann. Sämtliche Gebühren verstehen sich ohne allfällige weitere Kosten, die Mieter oder Vermieter im Zusammenhang mit der Zinsli-Plattform schulden.",
+        "text2": "2. Plusplus darf Gebühren direkt mit allfälligen für den Mieter jederzeit bereitgehaltenen Guthaben auf DEPOTS verrechnen und von in Einzelverwahrung befindlichen TOKEN über das DEPOT des Mieters oder bei Durchführung einer Transaktion/Umwandlung belasten. Weiter ist Plusplus ermächtigt, den vom Mieter oder dem Vermieter hinterlegten Zahlungsmitteln jegliche Forderungen gegenüber dem Mieter oder dem Vermieter, einschliesslich Gebühren, zu belasten.",
+        "text3": "3. Plusplus ist befugt, die geltende Mehrwertsteuer sowie andere, im Zusammenhang mit der Erbringung der SERVICES anfallende Steuern und Gebühren dem Kunden in Rechnung zu stellen oder mit Guthaben/Forderungen des Kunden zu verrechnen.",
+        "text4": "4. Plusplus behält sich das Recht auf Änderungen und Anpassungen des Gebührenreglements vor. Jede Änderung ist dem Mieter oder der Vermieterin per E-Mail mitzuteilen und gilt als genehmigt, wenn der Mieter oder die Vermieterin binnen 30 Tagen der Änderung nicht widerspricht. Im Übrigen gelten die Gebührenbestimmungen der AGB."
+      },
+      "specialSeverability": {
+        "title": "VII. Salvatorische Klausel",
+        "text1": "Sollten in diesen Spezialbedingungen oder in verwandten Dokumenten enthaltene Bestimmungen, Bedingungen oder Regelungen in jeglichem Umfang für ungültig oder nicht durchsetzbar befunden werden, so lässt dies die Gültigkeit oder Durchsetzbarkeit der übrigen Bestimmungen diesen Spezialbedingungen oder anderer Dokumente unberührt. Dasselbe gilt, falls die Spezialbedingungen oder das Dokument eine wesentliche Bestimmung nicht enthalten sollten. Anstelle der ungültigen oder nicht durchsetzbaren Bestimmung oder zur Füllung einer Vertragslücke findet diejenige gültige und durchsetzbare Bestimmung Anwendung, die der wirtschaftlichen Absicht der Parteien so weit wie möglich nahekommt, die mit der ungültigen, nicht durchsetzbaren Bestimmung verfolgt wurde oder für die eine Regelung fehlte."
+      },
+      "specialJurisdiction": {
+        "title": "VIII. Rechtswahl und Gerichtsstand",
+        "text1": "1. Alle Rechtsbeziehungen zwischen Plusplus und dem Mieter und Vermieter unterstehen materiellem schweizerischen Recht unter Ausschluss des Kollisionsrechts und staatsvertraglicher Vereinbarungen.",
+        "text2": "2. Ausschliesslicher Gerichtsstand (vorbehaltlich anderer zwingender Gerichtsstände) ist die Stadt Zürich, Schweiz. Plusplus ist jedoch befugt, ihre Rechte auch am Domizil des Mieters bzw. Vermieters oder vor jeder anderen zuständigen Behörde geltend zu machen, wobei die vorstehende Rechtswahl gültig bleibt."
+      },
+      "specialEffective": {
+        "title": "Stand: September 2025"
+      }
     }
   }
 }

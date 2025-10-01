@@ -259,18 +259,26 @@
       "title": "7. Updates to This Policy",
       "content": "We may update this Privacy Policy periodically. The date of the latest revision appears below."
     },
-    "lastUpdated": "Last Updated: July 1, 2025."
+    "effective": {
+      "title": "Last updated: September 2025"
+    }
   },
   "productSelect": {
     "title": "Choose Your Solution",
     "subtitle": "Select the product category that best fits your needs and discover how Plusplus can help you.",
     "rentalSolutions": {
       "title": "Rental Solutions",
-      "description": "Smart rental deposit management and property solutions for tenants and landlords."
+      "description": "Smart rental deposit management and property solutions for tenants and landlords.",
+      "cta": "Learn More"
     },
     "corporateTreasury": {
       "title": "Corporate Treasury",
-      "description": "Advanced treasury management and investment solutions for businesses and institutions."
+      "description": "Advanced treasury management and investment solutions for businesses and institutions.",
+      "cta": "Explore Services"
+    },
+    "contact": {
+      "question": "Need help choosing the right solution for your needs?",
+      "button": "Contact Our Experts"
     }
   },
   "rentalSolutionsSelect": {
@@ -278,11 +286,17 @@
     "subtitle": "Tell us about your role in the rental market to get personalized solutions.",
     "tenant": {
       "title": "I'm a Tenant",
-      "description": "Looking for flexible rental deposit solutions and better financial opportunities."
+      "description": "Looking for flexible rental deposit solutions and better financial opportunities.",
+      "cta": "Get Started"
     },
     "landlord": {
       "title": "I'm a Landlord/Real Estate Owner",
-      "description": "Seeking efficient property management and rental guarantee solutions."
+      "description": "Seeking efficient property management and rental guarantee solutions.",
+      "cta": "Learn More"
+    },
+    "contact": {
+      "question": "Not sure which option is right for you?",
+      "button": "Contact Our Team"
     }
   },
   "rentalSolutionsTenant": {
@@ -547,60 +561,194 @@
     "copyright": {
       "title": "Copyright",
       "text": "The content and works created by the site operators on these pages are subject to Swiss copyright law. Reproduction, editing, distribution and any kind of exploitation outside the limits of copyright law require the written consent of the respective author or creator."
+    },
+    "effective": {
+      "title": "Last updated: September 2025"
     }
   },
   "terms": {
     "title": "Terms and Conditions",
-    "scope": {
-      "title": "Scope",
-      "text1": "These Terms and Conditions (T&C) apply to all business relationships between Plusplus AG and its customers.",
-      "text2": "Deviating conditions of the customer only become effective if they are expressly acknowledged in writing by Plusplus AG."
+    "disclaimer": "In the event of any discrepancy between the German and English versions of this document, the German version shall prevail and be legally binding.",
+    "agb": {
+      "general": {
+        "title": "I. General",
+        "text1": "1. The following General Terms and Conditions (hereinafter T&C) govern the contractual relationship between Plusplus AG, c/o Alexander Brozek, Poststrasse 22, 6300 Zug, Switzerland (hereinafter Plusplus) and its customers (hereinafter Customer) in connection with all services offered by Plusplus, unless product-specific T&C expressly and with priority apply. In the event of deviations or contradictions, the product-specific T&C shall take precedence over these T&C.",
+        "text2": "2. Plusplus provides its services exclusively on the basis of these T&C, any additional terms and conditions, and the current version of the privacy policy as published on the Plusplus website. These T&C apply to the use of all services offered by Plusplus, including all content, functions and services (hereinafter SERVICES). By using the services, the Customer accepts these T&C and confirms that they have read and understood them.",
+        "text3": "3. Where Plusplus mediates services from third-party providers to the Customer, only the general terms and conditions of such third-party providers shall apply in the relationship between the Customer and the third-party providers."
+      },
+      "contractSubject": {
+        "title": "II. Contract Subject and Terms of Use",
+        "intro": "1. These T&C cover all SERVICES offered by Plusplus. By registering or using the SERVICES, the Customer confirms that they:",
+        "requirement1": "are 18 years of age;",
+        "requirement2": "have legal capacity; and",
+        "requirement3": "are economically entitled to any assets to be transferred to Plusplus.",
+        "text1": "2. Plusplus does not provide financial services to the Customer and in particular no asset management, securities custody, securities trading or financial advice within the meaning of the Swiss Financial Services Act (FinSA) or the Swiss Financial Institutions Act (FinIA). The SERVICES of Plusplus also do not include financial, tax or legal advice.",
+        "text2": "3. Plusplus reserves the right to request information, documents and explanations from the Customer, to conduct examinations and to refuse to enter into a business relationship with the Customer and to terminate it at any time.",
+        "text3": "4. Plusplus may mediate services from partner companies and forward Customer data for this purpose. The presentation of a partner company does not in any case and in any way constitute advice.",
+        "text4": "5. Plusplus always strives for the most unrestricted use and availability of the SERVICES possible, but cannot guarantee this. The Customer acknowledges and agrees that SERVICES may be temporarily restricted for technical reasons (e.g. disruptions, maintenance, transmission errors, system interruptions) or for reasons beyond Plusplus's control (e.g. force majeure, third-party fault or any kind of malfunction). Plusplus is not responsible for persons or systems outside its sphere of influence and assumes no warranty for the availability of certain SERVICES or services provided by third parties.",
+        "text5": "6. Plusplus strives to continuously develop and improve its SERVICES. Therefore, Plusplus reserves the right to delete, modify, relocate, remove or transfer the SERVICES and their content in whole or in part at any time with or without notice and without any liability to the Customer.",
+        "text6": "7. Plusplus is authorized to temporarily block access to the SERVICES at its own discretion, particularly due to legal or supervisory disclosure or reporting obligations.",
+        "text7": "8. Furthermore, Plusplus takes appropriate measures to detect and prevent misuse of its SERVICES and applies the due diligence customary in business transactions."
+      },
+      "orderProcessing": {
+        "title": "III. Order Processing",
+        "text1": "1. The Customer issues all instructions in connection with the SERVICES via the provided web platform or other communication channels explicitly designated for this purpose. Plusplus may, at its own discretion, accept and process orders issued outside these communication channels.",
+        "text2": "2. Orders are deemed to have been placed as soon as they have been confirmed by Plusplus. Plusplus may reject orders at any time and without giving reasons. Confirmed orders can generally no longer be changed or cancelled by the Customer. Plusplus receives, transmits and/or executes the orders placed by the Customer on a purely execution-only basis in accordance with its duty of care, which does not include any obligation to inform or advise the Customer. The Customer acknowledges and agrees that no communication between Plusplus and the Customer constitutes investment advice with respect to any payment tokens offered (hereinafter TOKEN) or investments therein and that Plusplus has not assessed the Customer's knowledge and experience, financial situation or investment objectives.",
+        "text3": "3. Plusplus executes orders based on the Customer's instructions. In the case of inaccurate or incomplete information, Plusplus may nevertheless execute the order if the inaccurate or incomplete information can be corrected and/or completed by Plusplus without any reasonable doubt. In any case, the Customer bears the risk associated with an unclearly formulated or incomplete order or an order that contains errors."
+      },
+      "dataProtection": {
+        "title": "IV. Data Protection, Data Retrieval and Other Confidentiality Provisions",
+        "text1": "1. Plusplus adheres to the applicable version of the data protection legislation applicable to it.",
+        "text2": "2. Plusplus undertakes to protect Customer data at all times through appropriate measures corresponding to the latest state of technology and assures that it will not pass on personal data of the Customer to third parties unless this is legally required or the respective Customer has not consented.",
+        "text3": "3. Plusplus is authorized to disclose personal data of the Customer for the processing of transactions in accordance with the respective SERVICES offered, in particular for the conversion of funds into TOKEN, insofar as this is necessary for the proper execution of the transactions.",
+        "text4": "4. The Customer authorizes Plusplus to pass on the relevant Customer data and all associated information to third parties, including but not limited to services involved in the processing of payments, authorities as well as subsidiaries of Plusplus, in connection with the fulfillment of a contract between the Customer and Plusplus, to meet legal and regulatory requirements, to comply with requests from Swiss or foreign authorities or to protect the legitimate interests of Plusplus.",
+        "text5": "5. Furthermore, Plusplus publishes a privacy policy, which can be accessed on the website and which sets out the details regarding the handling of Customer data and data security. In the event of a contradiction between these T&C and the privacy policy, the latter shall prevail."
+      },
+      "serviceOutsourcing": {
+        "title": "V. Service Outsourcing",
+        "text1": "Plusplus is authorized to outsource the provision of SERVICES in whole or in part to third parties within or outside Switzerland. The Customer agrees that Plusplus may transmit all personal data necessary for the outsourcing to third parties."
+      },
+      "dataProcessing": {
+        "title": "VI. Processing, Recording, Transmission, Storage and Deletion of Data",
+        "text1": "In order for Plusplus to determine and meet the Customer's needs, Plusplus requires certain data in compliance with applicable data protection laws and the privacy policy. To prevent misuse and subject to longer statutory periods, Plusplus stores Customer data for a period of 10 years after the end of the contract. Thereafter, the Customer has the right to have structured Customer data deleted from productive systems, insofar as legally permissible. More information on this can be found in the privacy policy."
+      },
+      "intellectualProperty": {
+        "title": "VII. Intellectual Property",
+        "text1": "All intellectual property rights as well as similar rights in connection with all content of the provided SERVICES, including software, remain with Plusplus."
+      },
+      "customerDuties": {
+        "title": "VIII. Customer Due Diligence Obligations",
+        "text1": "1. Customers are obligated to store all documents in connection with the SERVICES carefully and securely so that unauthorized persons cannot access the information contained therein. The Customer is further obligated to take all precautionary measures that minimize the risk of fraud or the like and is responsible for compliance with the legal provisions applicable to them, in particular regarding tax and anti-money laundering regulations.",
+        "text2": "2. The Customer acknowledges that devices and software may be part of a system that is not within Plusplus's control. The Customer is responsible for the integrity of the systems they use to utilize the SERVICES. It is recommended not to transmit sensitive or time-critical information to Plusplus via unencrypted emails or unprotected electronic communication channels, but to use channels that have been provided for this purpose by Plusplus as well as official third-party providers.",
+        "text3": "3. Customers are further obligated to provide correct, current and complete Customer data (including an email address) as well as all other information that Plusplus needs to provide the services. Plusplus is entitled to rely on the information provided by the Customer and to conduct investigations at the Customer's expense in the case of dormant assets."
+      },
+      "indemnification": {
+        "title": "IX. Indemnification of Plusplus and Customer Liability",
+        "text1": "The Customer shall indemnify Plusplus against all claims, including any claims for damages, that other customers or third parties, including authorities, assert against Plusplus due to a violation of rights or obligations through the use of the SERVICES. In this case, the Customer is liable for any costs, including those arising for legal representation, that arise for Plusplus due to an asserted violation of third-party rights."
+      },
+      "riskDisclosure": {
+        "title": "X. Risk Disclosure",
+        "text1": "1. The Customer has acknowledged that (i) Plusplus does not have authorization from FINMA and is not subject to FINMA supervision, (ii) Plusplus exclusively processes transactions for customers to exchange customer funds into TOKEN, which do not qualify as securities or financial instruments under the Swiss Financial Services Act (FinSA) and relevant circulars of the Swiss Financial Market Supervisory Authority (FINMA), and (iii) the TOKEN are held available for the customer by Plusplus at all times and are transferred individually and technically segregated to a blockchain for this purpose (individual custody).",
+        "text2": "2. The Customer has further acknowledged that TOKEN can be very volatile and/or inflationary and that the underlying markets can be illiquid, with the risk that their value can decline significantly or that such TOKEN can even become completely worthless for other reasons such as regulatory or technical reasons. The Customer acknowledges and agrees that crypto assets are not guaranteed or secured by any particular nation, institution, company, person or by Plusplus. Furthermore, the Customer acknowledges and agrees that TOKEN are not regulated in some jurisdictions and their legal and regulatory status may be uncertain, so that Plusplus's SERVICES are subject to corresponding risks.",
+        "text3": "3. The Customer is aware that TOKEN, despite professional security precautions by Plusplus, are exposed to significant technical risks. In particular, there is little technical experience with some features of the SERVICES to date, which is why their stability, error-free operation, availability and security cannot be guaranteed. Security vulnerabilities or misconfigurations can be exploited by attackers, which can lead to the irrevocable total loss of the Customer's TOKEN. Even the most modern security standards offer no complete protection against targeted cyber attacks, zero-day exploits or internal errors. The Customer acknowledges that in the case of technical compromise or errors, all of the Customer's TOKEN may be irrevocably lost, without the possibility of reversal or recovery.",
+        "text4": "4. The Customer confirms that they have read and understood the corresponding product-specific risk disclosure information for the SERVICES concerning them, which are made available to them on the website.",
+        "text5": "5. The Customer fully acknowledges and accepts the risks associated with the SERVICES. The risks listed in the T&C and in the brochure mentioned in this section are not exhaustive. Plusplus excludes any liability to the extent permitted by law."
+      },
+      "liability": {
+        "title": "XI. Liability Exclusion",
+        "text1": "1. All SERVICES, including the information provided therein, are made available by Plusplus \"as seen\". Plusplus excludes any liability to the extent legally permissible and is only liable for intentional or grossly negligent acts. In any case, liability is limited to direct damages; the assertion of indirect or consequential damages, lost profits and defect-related consequential damages is expressly excluded.",
+        "text2": "2. The Customer acknowledges that the transactions to be carried out for them by Plusplus are executed without discretion and delays of several weeks may occur. Plusplus is not liable for damages, including consequential damages or lost profits, arising from transactions carried out late or at otherwise unfavorable times (including liquidation upon termination). The Customer further acknowledges that for the purpose of executing transactions, the Customer's funds or TOKEN are held in settlement accounts or settlement wallets of Plusplus and are not privileged under bankruptcy law at that time.",
+        "text3": "3. Plusplus is not liable for acts or omissions of partner companies.",
+        "text4": "4. Plusplus is not liable for delays, errors or failures caused by circumstances that have their cause outside the control of Plusplus, such as force majeure.",
+        "text5": "5. To the extent legally permissible, Plusplus excludes any liability for damages due to delayed or unexecuted processing of applications or the provision of information."
+      },
+      "providedInformation": {
+        "title": "XII. Provided Information",
+        "text1": "1. The information about TOKEN provided by Plusplus is not intended for use in trading or in the sense of advice on financial, investment, tax, legal, accounting or other matters. Plusplus is neither an asset manager, investment or financial advisor nor a securities house. None of the SERVICES constitute investment advice or an offer, recommendation or solicitation by Plusplus to buy, sell or hold any security or financial product. Plusplus makes no representation and gives no assessment regarding the advisability or suitability of any investment.",
+        "text2": "2. None of the SERVICES constitute general or individual investment advice. The financial products or transactions to which certain SERVICES relate may not be suitable for the Customer's investment profile and investment objectives or expectations. It is the Customer's responsibility to determine whether the respective SERVICES are suitable based on their interests and risk tolerance. Plusplus is not liable for any damages arising from the transactions mentioned here. Plusplus does not recommend using the SERVICES provided as the sole basis for Customer decisions regarding the use of the SERVICES.",
+        "text3": "3. The information provided by Plusplus is partly obtained and made available by third-party providers and may arrive delayed according to the information from these data providers. Plusplus does not verify any data and disclaims any obligation to do so.",
+        "text4": "4. Plusplus expressly disclaims liability for the accuracy, appropriateness or completeness of any information provided and is not liable for errors, omissions or other defects in the information, for their delayed or interrupted provision or for actions taken in reliance on the information. Plusplus excludes, to the extent legally permissible, any liability for damages arising in connection with the use of information about TOKEN or other investments provided as part of its SERVICES."
+      },
+      "termination": {
+        "title": "XIII. Term and Termination of Use",
+        "text1": "1. Unless otherwise provided, the contractual relationship between the Customer and Plusplus is concluded for an indefinite period. For the use of SERVICES regarding rental deposits, the conditions according to the respective applicable special conditions in their respectively valid version, which are made available on the website, apply in particular.",
+        "text2": "2. Terminations can be made via the termination function or notification function provided for the Customer, the website as well as via email or by registered mail.",
+        "text3": "3. Plusplus is authorized to restrict or terminate the contractual relationship or the use of the SERVICES at any time without giving reasons with immediate effect."
+      },
+      "amendments": {
+        "title": "XIV. Entry into Force and Amendments to the T&C",
+        "text1": "These T&C enter into force immediately. Plusplus reserves the right to amend these T&C at any time. For all amendments, the updated T&C will be made available to the Customer by email, which shall be deemed approved by the Customer in the absence of objection within 30 days. The amendment of a main performance obligation is excluded."
+      },
+      "fees": {
+        "title": "XV. Fees and Remuneration",
+        "text1": "1. Plusplus charges customers fees according to the currently valid price list, which can be accessed on the website.",
+        "text2": "2. Plusplus may directly offset fees with any credit held available for the Customer at all times on WALLETS and charge individually held TOKEN via the Customer's WALLET or when conducting a transaction/conversion. Furthermore, Plusplus is authorized to charge any claims against the Customer, including fees, to the payment methods deposited by the Customer.",
+        "text3": "3. Plusplus reserves the right to changes and adjustments to the fee regulations. Every change must be communicated to the Customer in appropriate form in writing or electronically by Plusplus or, if applicable, via partners and third-party providers and shall be deemed approved if the Customer does not object to the change in writing within 30 days.",
+        "text4": "4. Plusplus is authorized to charge the Customer the applicable value-added tax as well as other taxes and fees arising in connection with the provision of the SERVICES or to offset them with the Customer's credit/claims.",
+        "text5": "5. Plusplus is authorized to charge the Customer for special and extraordinary costs caused by the Customer.",
+        "text6": "6. Plusplus may receive remuneration from third-party providers for the use of SERVICES, in particular for conducting transactions. Such remuneration is disclosed to the Customer. The Customer agrees that Plusplus accepts this remuneration and that all remuneration remains fully with Plusplus. The Customer waives in favor of Plusplus any right to surrender of this remuneration. In this context, the Customer is aware that it cannot be excluded that remuneration may lead to conflicts of interest in individual cases."
+      },
+      "communication": {
+        "title": "XVI. Notifications and Communication",
+        "text1": "1. The Customer shall immediately notify Plusplus of all material facts for the business relationship (e.g. changes of name, address, residence, telephone number or email address). As soon as electronic documents and notifications from Plusplus are accessible to the Customer or have been sent by email, they shall be deemed delivered.",
+        "text2": "2. The Customer agrees that Plusplus may communicate with the Customer via any electronic channels (e.g. emails, apps, websites or telephone). Communication may be carried out directly by Plusplus and/or via partners and third-party providers and their respective communication channels."
+      },
+      "severability": {
+        "title": "XVII. Severability Clause",
+        "text1": "Should any provisions, conditions or regulations contained in these T&C or in related documents be found to be invalid or unenforceable to any extent, this shall not affect the validity or enforceability of the remaining provisions of these T&C or other documents. The same applies if the T&C or the document should not contain an essential provision. Instead of the invalid or unenforceable provision or to fill a contractual gap, that valid and enforceable provision shall apply which comes as close as possible to the economic intention of the parties that was pursued with the invalid, unenforceable provision or for which a regulation was missing."
+      },
+      "jurisdiction": {
+        "title": "XVIII. Choice of Law and Jurisdiction",
+        "text1": "1. All legal relationships between Plusplus and the Customer are subject to substantive Swiss law, excluding conflict of laws and international treaties.",
+        "text2": "2. The exclusive place of jurisdiction (subject to other mandatory jurisdictions) is the city of Zurich, Switzerland. However, Plusplus is entitled to assert its rights also at the Customer's domicile or before any other competent authority, whereby the above choice of law remains valid."
+      },
+      "effective": {
+        "title": "Last updated: September 2025"
+      }
     },
-    "contractConclusion": {
-      "title": "Contract Conclusion",
-      "text1": "Our offers are subject to change and non-binding unless expressly designated as binding.",
-      "text2": "A contract is only concluded through our written order confirmation or through the execution of the service.",
-      "text3": "Changes and additions to agreements require written form."
-    },
-    "services": {
-      "title": "Services",
-      "text1": "We provide our services according to recognized technical standards and in accordance with agreed specifications.",
-      "text2": "Changes to services are only possible with written agreement.",
-      "text3": "The customer is obliged to cooperate in the provision of services and to provide all necessary information in a timely manner."
-    },
-    "prices": {
-      "title": "Prices and Payment Terms",
-      "text1": "All prices are in Swiss Francs and exclude VAT.",
-      "text2": "Invoices are due for payment within 30 days of the invoice date without deduction.",
-      "text3": "In case of payment delay, we are entitled to charge default interest of 5% p.a."
-    },
-    "liability": {
-      "title": "Liability",
-      "text1": "The liability of Plusplus AG is limited to intent and gross negligence.",
-      "text2": "Liability for indirect damages, lost profits or consequential damages is excluded."
-    },
-    "dataProtection": {
-      "title": "Data Protection",
-      "text1": "We treat all customer data confidentially and in accordance with applicable data protection regulations.",
-      "text2": "For more information, please see our privacy policy."
-    },
-    "applicableLaw": {
-      "title": "Applicable Law and Jurisdiction",
-      "text1": "Swiss law applies to all legal relationships between Plusplus AG and the customer.",
-      "text2": "The exclusive place of jurisdiction is Zug, Switzerland."
-    },
-    "changes": {
-      "title": "Changes to the T&C",
-      "text": "Plusplus AG reserves the right to change these T&C at any time. Changes will be communicated to the customer in writing and are deemed approved if the customer does not object in writing within 30 days."
-    },
-    "contact": {
-      "title": "Contact",
-      "companyName": "Plusplus AG",
-      "street": "Poststrasse 22",
-      "city": "6300 Zug",
-      "country": "Switzerland",
-      "email": "hello@plusplus.swiss",
-      "phone": "+41 41 123 45 67"
+    "specialConditions": {
+      "title": "Special Conditions for Rental Deposits via the Zinsli Platform",
+      "general": {
+        "title": "I. General and Scope of Application",
+        "text1": "1. The following special conditions for rental deposits via the \"Zinsli Platform\" (hereinafter Special Conditions) govern the contractual relationship between Plusplus AG, c/o Alexander Brozek, Poststrasse 22, 6300 Zug, Switzerland, (hereinafter Plusplus) as well as tenants and landlords for services of Plusplus in connection with the management of rental deposits according to Art. 257e OR, where applicable, via the platform of Zinsli Finance AG (www.zinsli.com) (hereinafter Zinsli Platform, the services the SERVICES).",
+        "text2": "2. These special provisions apply in addition to the General Terms and Conditions of Plusplus (hereinafter T&C). In the event of deviations or contradictions, these special provisions shall take precedence over the T&C.",
+        "text3": "3. Plusplus provides its SERVICES exclusively on the basis of these special provisions, any additional agreements, the T&C as well as the current version of the privacy policy as published on the Plusplus website. These special conditions apply to the use of all services offered by Plusplus, including all content, functions and services in connection with the SERVICES. By using the SERVICES or when registering to use services of Plusplus via the Zinsli Platform, the tenant or landlord accepts these special conditions."
+      },
+      "deposit": {
+        "title": "II. Opening of a Rental Deposit and Exchange by Plusplus",
+        "text1": "1. Tenants and landlords can agree via the Zinsli Platform that the rental deposit for depositing their rental security according to Art. 257e OR is deposited by investment in payment tokens (hereinafter TOKEN).",
+        "intro": "2. By registering, the tenant confirms that they:",
+        "requirement1": "Are either a Swiss citizen or a foreigner in possession of a residence permit B, B (recognized refugee), C or F;",
+        "requirement2": "The rental property for which the rental deposit is opened is located in Switzerland; and",
+        "requirement3": "Have read and accepted the T&C and meet the additional requirements contained therein.",
+        "text2": "3. Via the Zinsli Platform, tenants and landlords give their consent to the investment of the rental security in TOKEN and thereby instruct Plusplus to hold their rental security available at all times for the tenant in the form of the TOKEN they have chosen in an individually created and technically segregated DLT depot per tenant (hereinafter DEPOT). During the custody period, only Plusplus has access to the DEPOT. According to Art. 257e OR, the owner of the DEPOT remains the respective tenant.",
+        "text3": "4. Plusplus is authorized to unilaterally make changes to the offered selection options and offered products at any time.",
+        "text4": "5. Payment by the tenant is made by bank transfer and must be made via a Swiss bank account of the tenant that is in their name.",
+        "text5": "6. After receipt of payment of the deposit at Plusplus by bank transfer, Plusplus exchanges the deposit into the desired TOKEN and transfers them to the DEPOT. The conversion of funds into TOKEN by Plusplus is carried out via third-party providers and without any discretion on the part of Plusplus.",
+        "text6": "7. Tenants and landlords have been informed about the risk disclosure according to section X of the T&C as well as the product-specific information about investment risks."
+      },
+      "losses": {
+        "title": "III. Losses and Use of Returns",
+        "text1": "1. The tenants acknowledge that the products they have chosen may be volatile and subject to value fluctuations, for which the tenant alone bears the risk.",
+        "text2": "2. If returns accrue on the tenant's DEPOT, the tenant agrees that any returns, capital gains or other increases in value, insofar as legally permissible, continue to serve as liability substrate as part of the rental deposit according to Art. 257e OR and the tenant has no claim to the surrender of these increases in value outside the provisions in Art. 257e para. 3 and 4 OR until the dissolution of the rental deposit. The tenant also waives the assertion of any partial payout claims.",
+        "text3": "3. The landlord is aware that value fluctuations or technical problems or regulatory developments can lead to the agreed deposit being temporarily undercut or becoming completely worthless. In this context, the landlord waives vis-à-vis Plusplus and the tenant the assertion of additional securities or the performance of additional payments.",
+        "text4": "4. Tenants and landlords acknowledge that there is no guarantee that the rental deposit will generate profit or cover the original deposit amount. In particular, tenants and landlords acknowledge that a total loss is possible."
+      },
+      "duration": {
+        "title": "IV. Further Provisions During the Duration of the Rental Deposit",
+        "text1": "1. Subject to the complete dissolution of the rental deposit, tenants and landlords waive partial payouts from the DEPOT for the duration of the SERVICES.",
+        "text2": "2. Tenants and landlords cannot make changes to the product selection during the duration of custody of the rental deposit in the DEPOT until its dissolution.",
+        "text3": "3. Subject to the complete dissolution and payout of the rental deposit according to section V hereinafter, there is no claim at any time to repayment of the bank transfer made by the tenant to Plusplus.",
+        "text4": "4. Subject to the complete dissolution of the rental deposit according to section V hereinafter, tenants and landlords waive payouts from the DEPOT."
+      },
+      "dissolution": {
+        "title": "V. Dissolution of the Rental Deposit",
+        "text1": "1. The use of Plusplus's SERVICES requires a valid contractual relationship with Zinsli Finance AG for the use of the Zinsli Platform. Regardless of the conditions below, a termination by the tenant or landlord vis-à-vis Zinsli Finance AG automatically leads to the termination of the contractual relationship with Plusplus.",
+        "text2": "2. The dissolution of the rental deposit is carried out according to the legal regulations in Art. 257e para. 3 OR. Accordingly, Plusplus is only entitled to pay out the depot if tenant and landlord have agreed to this, a legally binding payment order or legally binding court judgment exists, or the landlord has not asserted any claim during one year after termination of the rental relationship.",
+        "text3": "3. The dissolution of the rental deposit is carried out via the termination function or notification function provided for the tenant or landlord on the Zinsli Platform. It can also be done by registered mail.",
+        "text4": "4. In the case of termination by Plusplus or dissolution of the rental deposit by the tenant or landlord, the TOKEN are held available for the tenant at all times according to the provisions of the T&C until payout, subject to the rental law provisions according to Art. 257e para. 3 OR.",
+        "text5": "5. If the tenant decides to continue to have the TOKEN held available by Plusplus within the framework of the T&C for the duration of the rental deposit, Plusplus conducts an extended examination according to the Swiss Anti-Money Laundering Act (AMLA). The tenant must provide all additional information and documents required for Plusplus for this purpose. Plusplus reserves the right to refuse the customer relationship without giving reasons.",
+        "text6": "6. Plusplus is not liable for damages or lost profits arising from delayed or failed liquidation of a DEPOT upon termination or dissolution of the rental deposit."
+      },
+      "specialFees": {
+        "title": "VI. Fees",
+        "text1": "1. Plusplus charges tenants and landlords fees according to the currently valid price list, which can be accessed on the website, until the payout of the rental deposit. All fees are understood to be without any additional costs that tenants or landlords owe in connection with the Zinsli Platform.",
+        "text2": "2. Plusplus may directly offset fees with any credit held available for the tenant at all times on DEPOTS and charge individually held TOKEN via the tenant's DEPOT or when conducting a transaction/conversion. Furthermore, Plusplus is authorized to charge any claims against the tenant or landlord, including fees, to the payment methods deposited by the tenant or landlord.",
+        "text3": "3. Plusplus is authorized to charge the customer the applicable value-added tax as well as other taxes and fees arising in connection with the provision of the SERVICES or to offset them with the customer's credit/claims.",
+        "text4": "4. Plusplus reserves the right to changes and adjustments to the fee regulations. Every change must be communicated to the tenant or landlord by email and is deemed approved if the tenant or landlord does not object to the change within 30 days. Otherwise, the fee provisions of the T&C apply."
+      },
+      "specialSeverability": {
+        "title": "VII. Severability Clause",
+        "text1": "Should any provisions, conditions or regulations contained in these special conditions or in related documents be found to be invalid or unenforceable to any extent, this shall not affect the validity or enforceability of the remaining provisions of these special conditions or other documents. The same applies if the special conditions or the document should not contain an essential provision. Instead of the invalid or unenforceable provision or to fill a contractual gap, that valid and enforceable provision shall apply which comes as close as possible to the economic intention of the parties that was pursued with the invalid, unenforceable provision or for which a regulation was missing."
+      },
+      "specialJurisdiction": {
+        "title": "VIII. Choice of Law and Jurisdiction",
+        "text1": "1. All legal relationships between Plusplus and the tenant and landlord are subject to substantive Swiss law, excluding conflict of laws and international treaties.",
+        "text2": "2. The exclusive place of jurisdiction (subject to other mandatory jurisdictions) is the city of Zurich, Switzerland. However, Plusplus is entitled to assert its rights also at the domicile of the tenant or landlord or before any other competent authority, whereby the above choice of law remains valid."
+      },
+      "specialEffective": {
+        "title": "Last updated: September 2025"
+      }
     }
   }
 }
