@@ -17,13 +17,14 @@ export default function TermsPage() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col">
-      <div className="container mx-auto px-4 py-24">
+    <main className="min-h-screen bg-neutral-light pt-32 pb-24">
+      <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
+          <h1 className="mb-12 text-center text-4xl font-primary font-medium text-black">
+            {t('title')}
+          </h1>
+          
           <div className="bg-white rounded-lg shadow-sm p-8">
-            <h1 className="text-4xl font-primary font-bold text-black mb-8">
-              {t('title')}
-            </h1>
             
             {/* PDF Download Buttons - Only show for German */}
             {locale === 'de' && (

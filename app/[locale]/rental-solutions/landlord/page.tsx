@@ -25,14 +25,14 @@ export default function RentalSolutionsLandlord() {
           </div>
           
           <div className="prose prose-lg max-w-none text-neutral-dark">
-            <p className="text-lg leading-relaxed mb-8">
+            <p className="text-lg leading-relaxed mb-8 font-secondary">
               {t('rentalSolutionsLandlord.subtitle')}
             </p>
 
             <h2 className="text-2xl font-semibold text-black mb-4 mt-8">
               {t('rentalSolutionsLandlord.benefits.title')}
             </h2>
-            <ul className="text-lg leading-relaxed mb-6 ml-6 list-disc">
+            <ul className="text-lg leading-relaxed mb-6 ml-6 list-disc font-secondary">
               <li>{t('rentalSolutionsLandlord.benefits.benefit1')}</li>
               <li>{t('rentalSolutionsLandlord.benefits.benefit2')}</li>
               <li>{t('rentalSolutionsLandlord.benefits.benefit3')}</li>
@@ -46,21 +46,21 @@ export default function RentalSolutionsLandlord() {
             <h3 className="text-xl font-medium text-black mb-3 mt-6">
               {t('rentalSolutionsLandlord.services.screening.title')}
             </h3>
-            <p className="text-lg leading-relaxed mb-6">
+            <p className="text-lg leading-relaxed mb-6 font-secondary">
               {t('rentalSolutionsLandlord.services.screening.description')}
             </p>
 
             <h3 className="text-xl font-medium text-black mb-3 mt-6">
               {t('rentalSolutionsLandlord.services.guarantee.title')}
             </h3>
-            <p className="text-lg leading-relaxed mb-6">
+            <p className="text-lg leading-relaxed mb-6 font-secondary">
               {t('rentalSolutionsLandlord.services.guarantee.description')}
             </p>
 
             <h3 className="text-xl font-medium text-black mb-3 mt-6">
               {t('rentalSolutionsLandlord.services.management.title')}
             </h3>
-            <p className="text-lg leading-relaxed mb-6">
+            <p className="text-lg leading-relaxed mb-6 font-secondary">
               {t('rentalSolutionsLandlord.services.management.description')}
             </p>
 
@@ -71,21 +71,21 @@ export default function RentalSolutionsLandlord() {
             <h3 className="text-xl font-medium text-black mb-3 mt-6">
               {t('rentalSolutionsLandlord.howItWorks.step1.title')}
             </h3>
-            <p className="text-lg leading-relaxed mb-6">
+            <p className="text-lg leading-relaxed mb-6 font-secondary">
               {t('rentalSolutionsLandlord.howItWorks.step1.description')}
             </p>
 
             <h3 className="text-xl font-medium text-black mb-3 mt-6">
               {t('rentalSolutionsLandlord.howItWorks.step2.title')}
             </h3>
-            <p className="text-lg leading-relaxed mb-6">
+            <p className="text-lg leading-relaxed mb-6 font-secondary">
               {t('rentalSolutionsLandlord.howItWorks.step2.description')}
             </p>
 
             <h3 className="text-xl font-medium text-black mb-3 mt-6">
               {t('rentalSolutionsLandlord.howItWorks.step3.title')}
             </h3>
-            <p className="text-lg leading-relaxed mb-6">
+            <p className="text-lg leading-relaxed mb-6 font-secondary">
               {t('rentalSolutionsLandlord.howItWorks.step3.description')}
             </p>
 

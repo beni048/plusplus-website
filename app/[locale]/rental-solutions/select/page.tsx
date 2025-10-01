@@ -5,6 +5,7 @@ import { useLocale } from 'next-intl';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import { ArrowRight, Building2, User } from 'lucide-react';
 
 export default function RentalSolutionsSelect() {
@@ -12,7 +13,7 @@ export default function RentalSolutionsSelect() {
   const locale = useLocale();
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-neutral-white to-neutral-light pt-32 pb-24">
+    <main className="min-h-screen bg-neutral-light pt-32 pb-24">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header Section */}
@@ -102,24 +103,31 @@ export default function RentalSolutionsSelect() {
               </Card>
             </Link>
           </div>
+        </div>
+        <div className="pb-24"></div>
+      </div>
 
-          {/* Bottom CTA Section */}
-          <div className="text-center mt-16">
-            <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-8 max-w-2xl mx-auto">
-              <p className="text-lg font-secondary text-neutral-dark mb-6">
+      {/* Contact Team Section */}
+      <section className="bg-neutral-white py-24">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto text-center">
+            <Card className="p-12 shadow-lg border-primary-teal/20">
+              <p className="text-lg leading-relaxed text-neutral-dark mb-8 font-secondary">
                 {t('contact.question')}
               </p>
-              <Link 
-                href={`/${locale}/contact`}
-                className="inline-flex items-center bg-accent-orange text-white px-8 py-4 text-lg font-primary font-medium rounded-lg shadow-lg hover:bg-accent-orange/90 transition-all duration-300 group"
-              >
-                {t('contact.button')}
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
+              <div className="space-y-4">
+                <Button 
+                  className="bg-accent-orange text-white px-8 py-4 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary"
+                  onClick={() => window.location.href = `/${locale}/contact`}
+                >
+                  <ArrowRight className="mr-2 h-5 w-5" />
+                  {t('contact.button')}
+                </Button>
+              </div>
+            </Card>
           </div>
         </div>
-      </div>
+      </section>
     </main>
   );
 }
