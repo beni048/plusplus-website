@@ -335,6 +335,34 @@
       "button": "Als Mieter starten"
     }
   },
+  "depositCalculator": {
+    "title": "Kautionsrechner",
+    "subtitle": "Berechnen Sie jetzt, wie viel mehr Sie mit unseren innovativen Kautionslösungen im Vergleich zu herkömmlichen Optionen verdienen können.",
+    "grossRent": "Mietzins (CHF/Monat)",
+    "rentalPeriod": "Mietdauer (Jahre)",
+    "depositMultiplier": "Kautionsfaktor",
+    "deposit": "Gesamtkaution",
+    "monthlyRent": "Mietzins",
+    "automaticCalculation": "Kaution wird automatisch als {multiplier}× Bruttomietzins gesetzt = {amount}",
+    "products": {
+      "bankDeposit": "Bank-Sparkonto",
+      "depositInsurance": "Kautionsversicherung",
+      "bitcoinDeposit": "Bitcoin Kaution",
+      "frankencoinDeposit": "Digitaler Schweizer Franken Kaution"
+    },
+    "productA": "Produkt A",
+    "productB": "Produkt B",
+    "marketAssumptions": "Marktannahmen (Schweiz, Oktober 2025)",
+    "dataSource": "Berechnungen und Beträge basieren auf Schweizer Marktdaten vom Oktober 2025",
+    "totalReturn": "Gesamtertrag über Laufzeit",
+    "totalCost": "Gesamtkosten über Laufzeit",
+    "perYear": "∅ pro Jahr",
+    "capitalAtEnd": "Kapital am Ende",
+    "fullyAvailable": "Kaution vollständig verfügbar",
+    "noDepositBound": "Keine Kaution gebunden",
+    "capitalDevelopment": "Kapitalentwicklung",
+    "disclaimer": "Alle Berechnungen basieren auf Marktdaten vom Oktober 2025 (Renditen, Zinsen, Gebühren pro Produkt). Tatsächliche Werte können abweichen. Bitcoin Durchschnitt p.a. über die letzten 5 Jahre ~63%. Versicherung 4-5%, Bank-Sperrkonto 0,1-0,4%, Frankencoin 3% (historisch zwischen 3-5%)."
+  },
   "rentalSolutionsLandlord": {
     "title": "Mietlösungen für Vermieter",
     "subtitle": "Optimieren Sie Ihre Immobilienverwaltung mit garantierten Mietzahlungen und umfassender Mieterprüfung.",

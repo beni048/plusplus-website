@@ -335,6 +335,34 @@
       "button": "Get Started as Tenant"
     }
   },
+  "depositCalculator": {
+    "title": "Deposit Calculator",
+    "subtitle": "Calculate now how much more you can earn with our innovative deposit solutions compared to traditional options.",
+    "grossRent": "Gross Rent (CHF/Month)",
+    "rentalPeriod": "Rental Period (Years)",
+    "depositMultiplier": "Deposit Multiplier",
+    "deposit": "Total Deposit",
+    "monthlyRent": "Monthly Rent",
+    "automaticCalculation": "Deposit is automatically set to {multiplier}× gross rent = {amount}",
+    "products": {
+      "bankDeposit": "Bank Savings Account",
+      "depositInsurance": "Deposit Insurance",
+      "bitcoinDeposit": "Bitcoin Deposit",
+      "frankencoinDeposit": "Digital Swiss Franc Deposit"
+    },
+    "productA": "Product A",
+    "productB": "Product B",
+    "marketAssumptions": "Market Assumptions (Switzerland, October 2025)",
+    "dataSource": "Calculations and amounts are based on Swiss market data from October 2025",
+    "totalReturn": "Total return over term",
+    "totalCost": "Total cost over term",
+    "perYear": "∅ per year",
+    "capitalAtEnd": "Capital at end",
+    "fullyAvailable": "Deposit fully available",
+    "noDepositBound": "No deposit bound",
+    "capitalDevelopment": "Capital Development",
+    "disclaimer": "All calculations are based on market data in October 2025 (returns, interest, fees per product). Actual values may vary. Bitcoin average p.a. over the last 5 years ~63%. Insurance 4-5%, bank locked account 0.1-0.4%, Frankencoin 3% (historically between 3-5%)."
+  },
   "rentalSolutionsLandlord": {
     "title": "Rental Solutions for Landlords",
     "subtitle": "Streamline your property management with guaranteed rent payments and comprehensive tenant screening.",

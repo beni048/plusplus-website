@@ -1,5 +1,3 @@
 {
-  "/[locale]/terms-and-conditions/page": "app/[locale]/terms-and-conditions/page.js",
-  "/[locale]/privacy-settings/page": "app/[locale]/privacy-settings/page.js",
-  "/[locale]/privacy-policy/page": "app/[locale]/privacy-policy/page.js"
+  "/[locale]/rental-solutions/tenant/page": "app/[locale]/rental-solutions/tenant/page.js"
 }

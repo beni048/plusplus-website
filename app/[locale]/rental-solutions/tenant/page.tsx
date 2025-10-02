@@ -1,6 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import DepositCalculator from '../../../../components/DepositCalculator';
 
 export default function RentalSolutionsTenant() {
   const t = useTranslations();
@@ -12,6 +13,11 @@ export default function RentalSolutionsTenant() {
           <h1 className="mb-12 text-center text-3xl sm:text-4xl lg:text-5xl font-medium text-black px-4">
             {t('rentalSolutionsTenant.title')}
           </h1>
+          
+          {/* Deposit Calculator Section - Moved to top */}
+          <div className="mb-16">
+            <DepositCalculator />
+          </div>
           
           {/* Development Notice */}
           <div className="bg-amber-50 border-l-4 border-amber-400 p-4 mb-8 rounded-r-lg">
