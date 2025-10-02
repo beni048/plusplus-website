@@ -16,7 +16,7 @@ export const PRODUCTS = {
     rate: 0.0025, // 0.25% average
     rateRange: '0.1-0.4%',
     type: 'investment',
-    color: '#76DBD3', // primary-teal
+    color: '#9CA3AF', // gray-400 - boring bank color
     hasDeposit: true
   },
   depositInsurance: {
@@ -25,7 +25,7 @@ export const PRODUCTS = {
     rate: 0.045, // 4.5% average
     rateRange: '4-5%',
     type: 'cost',
-    color: '#5069E2', // primary-blue
+    color: '#6B7280', // gray-500 - boring insurance color
     hasDeposit: false
   },
   bitcoinDeposit: {
@@ -34,7 +34,7 @@ export const PRODUCTS = {
     rate: 0.63, // 63% average 2020-2025
     rateRange: '~63% p.a.',
     type: 'investment',
-    color: '#F97316', // orange-500
+    color: '#F97316', // orange-500 - keep bitcoin orange
     hasDeposit: true
   },
   frankencoinDeposit: {
@@ -43,7 +43,7 @@ export const PRODUCTS = {
     rate: 0.03, // 3% current
     rateRange: '3%',
     type: 'investment',
-    color: '#10B981', // emerald-500
+    color: '#10B981', // emerald-500 - keep green
     hasDeposit: true
   }
 };
@@ -95,22 +95,22 @@ export const calculateProduct = (deposit: number, product: any, years: number) =
 };
 
 export const formatCurrency = (amount: number, currency: string = 'CHF') => {
-  return `${Math.round(amount).toLocaleString()} ${currency}`;
+  return `${Math.round(amount).toLocaleString('de-CH')} ${currency}`;
 };
 
 // Handle large numbers with fun messages
 export const formatCurrencyWithOverflow = (amount: number, currency: string = 'CHF') => {
-  if (Math.abs(amount) >= 10000000) { // 10M+
-    return "🚀💎⚡ CHF";
+  if (Math.abs(amount) >= 99000000) { // 99M+
+    return "🚀 CHF";
   }
   return formatCurrency(amount, currency);
 };
 
 export const formatCurrencyMobileWithOverflow = (amount: number, currency: string = 'CHF') => {
-  if (Math.abs(amount) >= 10000000) { // 10M+
-    return { amount: "🚀💎⚡", currency: "CHF" };
+  if (Math.abs(amount) >= 99000000) { // 99M+
+    return { amount: "🚀", currency: "CHF" };
   }
-  const formatted = Math.round(amount).toLocaleString();
+  const formatted = Math.round(amount).toLocaleString('de-CH');
   return { amount: formatted, currency };
 };
 
@@ -299,7 +299,12 @@ const CapitalDevelopmentChart: React.FC<CapitalDevelopmentChartProps> = ({
               fontSize={12}
               fontFamily="var(--font-mulish)"
               width={30}
-              tickFormatter={(value) => `${Math.round(value / 1000)}k`}
+              tickFormatter={(value) => {
+                if (Math.abs(value) >= 1000000) {
+                  return `${Math.round(value / 1000000)}M`;
+                }
+                return `${Math.round(value / 1000)}k`;
+              }}
             />
             <Tooltip content={customTooltip} />
             <Line 
@@ -330,8 +335,8 @@ export default function DepositCalculator() {
   const [grossRent, setGrossRent] = useState(2000);
   const [rentalPeriod, setRentalPeriod] = useState(5);
   const [depositMultiplier, setDepositMultiplier] = useState(3);
-  const [productA, setProductA] = useState('depositInsurance');
-  const [productB, setProductB] = useState('bitcoinDeposit');
+  const [productA, setProductA] = useState('bankDeposit');
+  const [productB, setProductB] = useState('frankencoinDeposit');
 
   const selectedProductA = PRODUCTS[productA as keyof typeof PRODUCTS];
   const selectedProductB = PRODUCTS[productB as keyof typeof PRODUCTS];

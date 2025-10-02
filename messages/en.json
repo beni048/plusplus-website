@@ -345,10 +345,10 @@
     "monthlyRent": "Monthly Rent",
     "automaticCalculation": "Deposit is automatically set to {multiplier}× gross rent = {amount}",
     "products": {
-      "bankDeposit": "Bank Savings Account",
-      "depositInsurance": "Deposit Insurance",
-      "bitcoinDeposit": "Bitcoin Deposit",
-      "frankencoinDeposit": "Digital Swiss Franc Deposit"
+      "bankDeposit": "Example Bank Account",
+      "depositInsurance": "Example Deposit Insurance",
+      "bitcoinDeposit": "Plusplus Bitcoin Deposit",
+      "frankencoinDeposit": "Plusplus Digital Swiss Franc Deposit"
     },
     "productA": "Product A",
     "productB": "Product B",
