@@ -11,6 +11,16 @@
       "static/chunks/main-app.js",
       "static/chunks/app/[locale]/layout.js"
     ],
+    "/[locale]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[locale]/page.js"
+    ],
+    "/[locale]/rental-solutions/select/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[locale]/rental-solutions/select/page.js"
+    ],
     "/[locale]/rental-solutions/tenant/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",

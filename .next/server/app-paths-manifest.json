@@ -1,3 +1,4 @@
 {
+  "/[locale]/rental-solutions/select/page": "app/[locale]/rental-solutions/select/page.js",
   "/[locale]/rental-solutions/tenant/page": "app/[locale]/rental-solutions/tenant/page.js"
 }

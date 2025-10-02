@@ -361,6 +361,7 @@
     "fullyAvailable": "Deposit fully available",
     "noDepositBound": "No deposit bound",
     "capitalDevelopment": "Capital Development",
+    "year": "Year",
     "disclaimer": "All calculations are based on market data in October 2025 (returns, interest, fees per product). Actual values may vary. Bitcoin average p.a. over the last 5 years ~63%. Insurance 4-5%, bank locked account 0.1-0.4%, Frankencoin 3% (historically between 3-5%)."
   },
   "rentalSolutionsLandlord": {

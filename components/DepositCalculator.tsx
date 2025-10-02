@@ -98,6 +98,22 @@ export const formatCurrency = (amount: number, currency: string = 'CHF') => {
   return `${Math.round(amount).toLocaleString()} ${currency}`;
 };
 
+// Handle large numbers with fun messages
+export const formatCurrencyWithOverflow = (amount: number, currency: string = 'CHF') => {
+  if (Math.abs(amount) >= 10000000) { // 10M+
+    return "🚀💎⚡ CHF";
+  }
+  return formatCurrency(amount, currency);
+};
+
+export const formatCurrencyMobileWithOverflow = (amount: number, currency: string = 'CHF') => {
+  if (Math.abs(amount) >= 10000000) { // 10M+
+    return { amount: "🚀💎⚡", currency: "CHF" };
+  }
+  const formatted = Math.round(amount).toLocaleString();
+  return { amount: formatted, currency };
+};
+
 interface ProductCardProps {
   title: string;
   product: any;
@@ -140,24 +156,36 @@ const ProductCard: React.FC<ProductCardProps> = ({
               : t('depositCalculator.totalCost')
             }
           </span>
-          <span 
-            className="font-bold text-lg"
+          <div 
+            className="font-bold text-lg text-right"
             style={{ color: product.type === 'investment' ? product.color : '#EF4444' }}
           >
-            {product.type === 'investment' ? '+' : '-'} 
-            {formatCurrency(product.type === 'investment' ? calc.totalReturn : calc.totalCost)}
-          </span>
+            <span className="hidden sm:inline">
+              {product.type === 'investment' ? '+' : '-'} 
+              {formatCurrencyWithOverflow(product.type === 'investment' ? calc.totalReturn : calc.totalCost)}
+            </span>
+            <div className="sm:hidden">
+              <div>{product.type === 'investment' ? '+' : '-'}{formatCurrencyMobileWithOverflow(product.type === 'investment' ? calc.totalReturn : calc.totalCost).amount}</div>
+              <div className="text-sm">{formatCurrencyMobileWithOverflow(product.type === 'investment' ? calc.totalReturn : calc.totalCost).currency}</div>
+            </div>
+          </div>
         </div>
 
         <div className="flex justify-between items-center py-3 border-b border-gray-100">
           <span className="text-neutral-dark font-medium">{t('depositCalculator.perYear')}</span>
-          <span 
-            className="font-bold"
+          <div 
+            className="font-bold text-right"
             style={{ color: product.type === 'investment' ? product.color : '#EF4444' }}
           >
-            {product.type === 'investment' ? '+' : '-'} 
-            {formatCurrency(product.type === 'investment' ? calc.annualReturn : calc.annualCost)}/Jahr
-          </span>
+            <span className="hidden sm:inline">
+              {product.type === 'investment' ? '+' : '-'} 
+              {formatCurrencyWithOverflow(product.type === 'investment' ? calc.annualReturn : calc.annualCost)}/Jahr
+            </span>
+            <div className="sm:hidden">
+              <div>{product.type === 'investment' ? '+' : '-'}{formatCurrencyMobileWithOverflow(product.type === 'investment' ? calc.annualReturn : calc.annualCost).amount}</div>
+              <div className="text-sm">{formatCurrencyMobileWithOverflow(product.type === 'investment' ? calc.annualReturn : calc.annualCost).currency}/Jahr</div>
+            </div>
+          </div>
         </div>
       </CardContent>
     </Card>
@@ -196,7 +224,7 @@ const CapitalDevelopmentChart: React.FC<CapitalDevelopmentChartProps> = ({
       const calcB = calculateProduct(deposit, productB, year);
       
       data.push({
-        year: year === 0 ? '0' : `Jahr ${year}`,
+        year: year === 0 ? '0' : `${t('depositCalculator.year')} ${year}`,
         productA: productA.type === 'investment' 
           ? deposit + calcA.totalReturn 
           : -calcA.totalCost,
@@ -230,9 +258,10 @@ const CapitalDevelopmentChart: React.FC<CapitalDevelopmentChartProps> = ({
   return (
     <Card className="bg-white border border-gray-200 shadow-lg">
       <CardHeader className="pb-4">
-        <CardTitle className="flex justify-between items-center text-neutral-black">
-          <span className="text-xl font-semibold">{t('depositCalculator.capitalDevelopment')}</span>
-          <div className="flex space-x-6">
+        <CardTitle className="text-neutral-black">
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
+            <span className="text-xl font-semibold mb-3 sm:mb-0">{t('depositCalculator.capitalDevelopment')} (CHF)</span>
+            <div className="flex flex-col sm:flex-row sm:space-x-6 space-y-2 sm:space-y-0">
             <div className="flex items-center">
               <div 
                 className="w-3 h-3 rounded-full mr-2" 
@@ -252,6 +281,7 @@ const CapitalDevelopmentChart: React.FC<CapitalDevelopmentChartProps> = ({
               </span>
             </div>
           </div>
+          </div>
         </CardTitle>
       </CardHeader>
       <CardContent className="pt-0">
@@ -268,7 +298,8 @@ const CapitalDevelopmentChart: React.FC<CapitalDevelopmentChartProps> = ({
               stroke="#6B7280" 
               fontSize={12}
               fontFamily="var(--font-mulish)"
-              tickFormatter={(value) => `${Math.round(value / 1000)}k CHF`}
+              width={30}
+              tickFormatter={(value) => `${Math.round(value / 1000)}k`}
             />
             <Tooltip content={customTooltip} />
             <Line 
@@ -322,9 +353,10 @@ export default function DepositCalculator() {
             id="grossRent"
             type="number" 
             value={grossRent}
-            onChange={(e) => setGrossRent(Number(e.target.value))}
+            onChange={(e) => setGrossRent(Math.min(50000, Number(e.target.value)))}
             className="bg-white border-gray-300 text-neutral-black focus:border-primary-teal focus:ring-primary-teal"
             placeholder="2000"
+            max="50000"
           />
         </div>
         
@@ -336,9 +368,10 @@ export default function DepositCalculator() {
             id="rentalPeriod"
             type="number" 
             value={rentalPeriod}
-            onChange={(e) => setRentalPeriod(Number(e.target.value))}
+            onChange={(e) => setRentalPeriod(Math.min(20, Number(e.target.value)))}
             className="bg-white border-gray-300 text-neutral-black focus:border-primary-teal focus:ring-primary-teal"
             placeholder="5"
+            max="20"
           />
         </div>
 
