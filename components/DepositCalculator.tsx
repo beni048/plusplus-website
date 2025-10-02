@@ -41,7 +41,7 @@ export const PRODUCTS = {
     id: 'frankencoinDeposit',
     nameKey: 'depositCalculator.products.frankencoinDeposit',
     rate: 0.03, // 3% current
-    rateRange: '3% (historically 3-5%)',
+    rateRange: '3%',
     type: 'investment',
     color: '#10B981', // emerald-500
     hasDeposit: true
@@ -158,21 +158,6 @@ const ProductCard: React.FC<ProductCardProps> = ({
             {product.type === 'investment' ? '+' : '-'} 
             {formatCurrency(product.type === 'investment' ? calc.annualReturn : calc.annualCost)}/Jahr
           </span>
-        </div>
-
-        <div className="pt-4 bg-neutral-light/50 -mx-6 -mb-6 px-6 pb-6 rounded-b-lg">
-          <div className="flex justify-between items-center">
-            <span className="text-neutral-dark font-medium">{t('depositCalculator.capitalAtEnd')}</span>
-            <span className="text-neutral-black font-semibold">
-              {product.hasDeposit 
-                ? (product.type === 'investment' 
-                    ? formatCurrency(calc.finalAmount)
-                    : t('depositCalculator.fullyAvailable')
-                  )
-                : t('depositCalculator.noDepositBound')
-              }
-            </span>
-          </div>
         </div>
       </CardContent>
     </Card>
@@ -380,9 +365,6 @@ export default function DepositCalculator() {
           <div className="bg-primary-teal/10 border border-primary-teal/30 rounded-md px-3 py-2 text-neutral-black font-medium">
             {formatCurrency(grossRent * depositMultiplier)}
           </div>
-          <p className="text-xs text-neutral-dark">
-            {depositMultiplier}× {t('depositCalculator.monthlyRent')}
-          </p>
         </div>
       </div>
 
