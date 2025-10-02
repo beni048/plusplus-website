@@ -134,15 +134,25 @@ const ProductCard: React.FC<ProductCardProps> = ({
   const deposit = grossRent * depositMultiplier;
   const calc = calculateProduct(deposit, product, rentalPeriod);
 
+  // Split title into provider and product
+  const titleParts = title.split(' - ');
+  const provider = titleParts[0] || '';
+  const productName = titleParts[1] || title;
+
   return (
     <Card className="bg-white border border-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-300">
       <CardHeader className="pb-4">
         <CardTitle className="flex items-center text-neutral-black">
-          <div 
-            className="w-3 h-3 rounded-full mr-3" 
-            style={{ backgroundColor: product.color }}
-          ></div>
-          <span className="text-lg font-semibold">{title}</span>
+          <div className="flex-1">
+            <div className="flex items-center">
+              <div 
+                className="w-3 h-3 rounded-full mr-3" 
+                style={{ backgroundColor: product.color }}
+              ></div>
+              <span className="text-lg font-semibold">{productName}</span>
+            </div>
+            <div className="text-sm italic text-gray-500 ml-6">{provider}</div>
+          </div>
           <span className="ml-auto text-xs bg-neutral-light text-neutral-dark px-2 py-1 rounded-full">
             {product.rateRange}
           </span>
@@ -300,6 +310,9 @@ const CapitalDevelopmentChart: React.FC<CapitalDevelopmentChartProps> = ({
               fontFamily="var(--font-mulish)"
               width={30}
               tickFormatter={(value) => {
+                if (Math.abs(value) >= 99000000) {
+                  return "🚀";
+                }
                 if (Math.abs(value) >= 1000000) {
                   return `${Math.round(value / 1000000)}M`;
                 }
@@ -359,8 +372,10 @@ export default function DepositCalculator() {
             type="number" 
             value={grossRent}
             onChange={(e) => setGrossRent(Math.min(50000, Number(e.target.value)))}
+            onBlur={(e) => setGrossRent(Math.min(50000, Math.max(1000, Number(e.target.value))))}
             className="bg-white border-gray-300 text-neutral-black focus:border-primary-teal focus:ring-primary-teal"
             placeholder="2000"
+            min="1000"
             max="50000"
           />
         </div>
@@ -374,9 +389,12 @@ export default function DepositCalculator() {
             type="number" 
             value={rentalPeriod}
             onChange={(e) => setRentalPeriod(Math.min(20, Number(e.target.value)))}
+            onBlur={(e) => setRentalPeriod(Math.min(20, Math.max(0.5, Number(e.target.value))))}
             className="bg-white border-gray-300 text-neutral-black focus:border-primary-teal focus:ring-primary-teal"
             placeholder="5"
+            min="0.5"
             max="20"
+            step="0.1"
           />
         </div>
 
@@ -415,11 +433,18 @@ export default function DepositCalculator() {
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
-              {Object.entries(PRODUCTS).map(([key, product]) => (
-                <SelectItem key={key} value={key}>
-                  {t(product.nameKey)}
-                </SelectItem>
-              ))}
+              <SelectItem value="frankencoinDeposit">
+                {t(PRODUCTS.frankencoinDeposit.nameKey)}
+              </SelectItem>
+              <SelectItem value="bitcoinDeposit">
+                {t(PRODUCTS.bitcoinDeposit.nameKey)}
+              </SelectItem>
+              <SelectItem value="bankDeposit">
+                {t(PRODUCTS.bankDeposit.nameKey)}
+              </SelectItem>
+              <SelectItem value="depositInsurance">
+                {t(PRODUCTS.depositInsurance.nameKey)}
+              </SelectItem>
             </SelectContent>
           </Select>
         </div>
@@ -431,11 +456,18 @@ export default function DepositCalculator() {
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
-              {Object.entries(PRODUCTS).map(([key, product]) => (
-                <SelectItem key={key} value={key}>
-                  {t(product.nameKey)}
-                </SelectItem>
-              ))}
+              <SelectItem value="frankencoinDeposit">
+                {t(PRODUCTS.frankencoinDeposit.nameKey)}
+              </SelectItem>
+              <SelectItem value="bitcoinDeposit">
+                {t(PRODUCTS.bitcoinDeposit.nameKey)}
+              </SelectItem>
+              <SelectItem value="bankDeposit">
+                {t(PRODUCTS.bankDeposit.nameKey)}
+              </SelectItem>
+              <SelectItem value="depositInsurance">
+                {t(PRODUCTS.depositInsurance.nameKey)}
+              </SelectItem>
             </SelectContent>
           </Select>
         </div>

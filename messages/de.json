@@ -345,10 +345,10 @@
     "monthlyRent": "Mietzins",
     "automaticCalculation": "Kaution wird automatisch als {multiplier}× Bruttomietzins gesetzt = {amount}",
     "products": {
-      "bankDeposit": "Beispiel Bankkonto",
-      "depositInsurance": "Beispiel Kautionsversicherung",
-      "bitcoinDeposit": "Plusplus Bitcoin Kaution",
-      "frankencoinDeposit": "Plusplus Digitaler Schweizer Franken Kaution"
+      "bankDeposit": "Tradition Bank - Bankkonto",
+      "depositInsurance": "Sadcautio - Kautionsversicherung",
+      "bitcoinDeposit": "Plusplus - Bitcoin Kaution",
+      "frankencoinDeposit": "Plusplus - Digitaler Schweizer Franken Kaution"
     },
     "productA": "Produkt A",
     "productB": "Produkt B",
