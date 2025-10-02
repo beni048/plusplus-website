@@ -165,7 +165,10 @@ const ProductCard: React.FC<ProductCardProps> = ({
             <span className="text-neutral-dark font-medium">{t('depositCalculator.capitalAtEnd')}</span>
             <span className="text-neutral-black font-semibold">
               {product.hasDeposit 
-                ? t('depositCalculator.fullyAvailable')
+                ? (product.type === 'investment' 
+                    ? formatCurrency(calc.finalAmount)
+                    : t('depositCalculator.fullyAvailable')
+                  )
                 : t('depositCalculator.noDepositBound')
               }
             </span>
