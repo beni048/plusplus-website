@@ -311,12 +311,15 @@ const CapitalDevelopmentChart: React.FC<CapitalDevelopmentChartProps> = ({
               width={30}
               tickFormatter={(value) => {
                 if (Math.abs(value) >= 99000000) {
-                  return "🚀";
+                  return value < 0 ? "-🚀" : "🚀";
                 }
                 if (Math.abs(value) >= 1000000) {
-                  return `${Math.round(value / 1000000)}M`;
+                  return `${(value / 1000000).toFixed(1)}M`.replace('.0M', 'M');
                 }
-                return `${Math.round(value / 1000)}k`;
+                if (Math.abs(value) >= 1000) {
+                  return `${(value / 1000).toFixed(1)}k`.replace('.0k', 'k');
+                }
+                return Math.round(value).toString();
               }}
             />
             <Tooltip content={customTooltip} />
@@ -389,10 +392,10 @@ export default function DepositCalculator() {
             type="number" 
             value={rentalPeriod}
             onChange={(e) => setRentalPeriod(Math.min(20, Number(e.target.value)))}
-            onBlur={(e) => setRentalPeriod(Math.min(20, Math.max(0.5, Number(e.target.value))))}
+            onBlur={(e) => setRentalPeriod(Math.min(20, Math.max(1, Number(e.target.value))))}
             className="bg-white border-gray-300 text-neutral-black focus:border-primary-teal focus:ring-primary-teal"
             placeholder="5"
-            min="0.5"
+            min="1"
             max="20"
             step="0.1"
           />
@@ -429,8 +432,8 @@ export default function DepositCalculator() {
         <div className="space-y-2">
           <Label className="text-neutral-dark font-medium">{t('depositCalculator.productA')}</Label>
           <Select value={productA} onValueChange={setProductA}>
-            <SelectTrigger className="bg-white border-gray-300 focus:border-primary-teal focus:ring-primary-teal">
-              <SelectValue />
+            <SelectTrigger className="bg-white border-gray-300 focus:border-primary-teal focus:ring-primary-teal text-left">
+              <SelectValue className="text-left" />
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="frankencoinDeposit">
@@ -452,8 +455,8 @@ export default function DepositCalculator() {
         <div className="space-y-2">
           <Label className="text-neutral-dark font-medium">{t('depositCalculator.productB')}</Label>
           <Select value={productB} onValueChange={setProductB}>
-            <SelectTrigger className="bg-white border-gray-300 focus:border-primary-teal focus:ring-primary-teal">
-              <SelectValue />
+            <SelectTrigger className="bg-white border-gray-300 focus:border-primary-teal focus:ring-primary-teal text-left">
+              <SelectValue className="text-left" />
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="frankencoinDeposit">
