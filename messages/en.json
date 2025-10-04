@@ -277,8 +277,8 @@
       "cta": "Explore Services"
     },
     "contact": {
-      "question": "Need help choosing the right solution for your needs?",
-      "button": "Contact Our Experts"
+      "question": "None of the above options fit your needs?",
+      "button": "Get in Touch"
     }
   },
   "rentalSolutionsSelect": {
@@ -295,8 +295,8 @@
       "cta": "Learn More"
     },
     "contact": {
-      "question": "Not sure which option is right for you?",
-      "button": "Contact Our Team"
+      "question": "None of the above options fit your needs?",
+      "button": "Get in Touch"
     }
   },
   "rentalSolutionsTenant": {
