@@ -302,6 +302,34 @@
   "rentalSolutionsTenant": {
     "title": "Mietlösungen für Mieter",
     "subtitle": "Verwandeln Sie Ihre Mietkaution in eine intelligente Investitionsmöglichkeit und sichern Sie sich Ihr Traumzuhause.",
+    "frankencoin": {
+      "title": "Frankencoin Stablecoin Kautionen",
+      "description": "Zahlen Sie Ihre Mietkaution mit Frankencoin (ZCHF), einem an den Schweizer Franken gekoppelten Stablecoin, der Stabilität und Transparenz bietet. Perfekt für technikaffine Mieter, die Blockchain-Technologie für ihre Mietverträge nutzen möchten.",
+      "benefits": {
+        "stability": "Stabiler Wert gekoppelt an Schweizer Franken",
+        "transparency": "Blockchain-basierte Transparenz",
+        "settlement": "Sofortige Abwicklung und Verifikation",
+        "fees": "Niedrigere Gebühren als traditionelles Banking"
+      }
+    },
+    "bitcoin": {
+      "title": "Bitcoin Mietkautionen",
+      "description": "Nutzen Sie Bitcoin für Ihre Mietkaution und bewahren Sie das Potenzial für Wertsteigerungen. Ihre Kaution bleibt sicher verwahrt, während Sie von Bitcoins langfristigem Wachstumspotenzial profitieren.",
+      "benefits": {
+        "appreciation": "Potenzial für Wertsteigerung",
+        "escrow": "Sichere Treuhandverwaltung",
+        "accessibility": "Globale Zugänglichkeit",
+        "banking": "Keine traditionellen Banking-Anforderungen"
+      }
+    },
+    "emailTemplate": {
+      "title": "Bereit loszulegen? Senden Sie dies an Ihren Vermieter",
+      "description": "Kopieren Sie diese E-Mail-Vorlage und senden Sie sie direkt an Ihren Vermieter, um ihn mit Zinslis Mietkautionslösungen bekannt zu machen.",
+      "copy": "E-Mail kopieren",
+      "copied": "Kopiert!",
+      "button": "Zinsli-Plattform besuchen",
+      "subtitle": "Ihr Vermieter kann sich in unter 5 Minuten anmelden und Sie einladen"
+    },
     "benefits": {
       "title": "Vorteile für Mieter",
       "benefit1": "Erzielen Sie Renditen auf Ihre Mietkaution, anstatt sie untätig liegen zu lassen",
@@ -368,6 +396,49 @@
   "rentalSolutionsLandlord": {
     "title": "Mietlösungen für Vermieter",
     "subtitle": "Optimieren Sie Ihre Immobilienverwaltung mit garantierten Mietzahlungen und umfassender Mieterprüfung.",
+    "advantages": {
+      "title": "Moderne Mietverwaltung leicht gemacht",
+      "description": "Ersetzen Sie traditionelle, langsame Banken durch unser schnelles und effizientes Blockchain-System. Unsere innovative Technologie verursacht keine zusätzlichen Kosten und revolutioniert die Verwaltung von Mietkautionen.",
+      "benefits": {
+        "setup": "Einfache und schnelle Einrichtung - kein komplexer Papierkram",
+        "banks": "Kein Umgang mit Banken oder physischer Post",
+        "notifications": "Sofortige E-Mail-Benachrichtigungen bei Kautionszahlungen",
+        "release": "Schnelle Freigabe der Mittel bei Bedarf"
+      }
+    },
+    "stepByStep": {
+      "title": "Erste Schritte in 4 einfachen Schritten",
+      "description": "Die Einrichtung Ihres Vermieterkontos und die Einladung von Mietern ist unkompliziert. Folgen Sie unserer Schritt-für-Schritt-Anleitung, um noch heute zu beginnen.",
+      "steps": {
+        "step1": {
+          "title": "Konto erstellen",
+          "description": "Melden Sie sich bei Zinsli an und verifizieren Sie Ihre Identität als Immobilieneigentümer oder -verwalter."
+        },
+        "step2": {
+          "title": "Mietobjekt einrichten",
+          "description": "Fügen Sie Ihre Mietobjektdetails, monatliche Miete und Kautionsbetrag im System hinzu."
+        },
+        "step3": {
+          "title": "Kautionsanfrage erstellen",
+          "description": "Erstellen Sie eine neue Mietkautionsanfrage und konfigurieren Sie die verfügbaren Zahlungsoptionen für Ihren Mieter."
+        },
+        "step4": {
+          "title": "Mieter einladen",
+          "description": "Senden Sie eine Einladung an die E-Mail-Adresse Ihres Mieters. Er erhält Anweisungen zur Vervollständigung der Kautionseinrichtung."
+        }
+      },
+      "cta": "Einrichtung jetzt starten"
+    },
+    "technology": {
+      "title": "Angetrieben von Plusplus Blockchain-Technologie",
+      "description": "Unsere innovative Blockchain-Technologie ersetzt traditionelle Bankensysteme durch eine effizientere, transparentere und kostengünstigere Lösung für die Mietkautionsverwaltung.",
+      "benefits": {
+        "efficiency": "Blitzschnelle Transaktionen und automatisierte Prozesse",
+        "cost": "Null zusätzliche Kosten im Vergleich zu traditionellem Banking",
+        "transparency": "Vollständige Transparenz und Echtzeit-Verfolgung",
+        "security": "Schweizer Sicherheit mit Blockchain-Schutz"
+      }
+    },
     "benefits": {
       "title": "Vorteile für Vermieter",
       "benefit1": "Garantierte Mietzahlungen auch bei Mietausfall",
@@ -458,6 +529,29 @@
     "hero": {
       "title": "Corporate Treasury",
       "subtitle": "Fortschrittliche Treasury-Management-Lösungen für moderne Unternehmen, die optimale Renditen auf ihre Geldreserven anstreben."
+    },
+    "frankencoin": {
+      "title": "Frankencoin Treasury-Lösungen",
+      "description": "Unsere Treasury-Produkte nutzen Frankencoin, die vertrauenswürdigste Stablecoin der Schweiz, und bieten Ihrem Unternehmen sicheres und stabiles digitales Asset-Management.",
+      "benefits": {
+        "stablecoin": "Grösste und vertrauenswürdigste Stablecoin der Schweiz",
+        "overcollateralized": "Überbesichert für maximale Sicherheit und Stabilität",
+        "audited": "Regelmässig geprüft und transparent verwaltet",
+        "transparent": "Vollständige Transparenz mit Echtzeit-Reservenverifizierung"
+      }
+    },
+    "trust": {
+      "title": "Warum Plusplus vertrauen",
+      "description": "Unser Engagement für Sicherheit, Compliance und Kundenschutz macht uns zur vertrauenswürdigen Wahl für Corporate Treasury Management.",
+      "benefits": {
+        "regulated": "Reguliert und bald VQF-Mitglied",
+        "aml": "Vollständige Einhaltung der AML-Vorschriften",
+        "soc2": "SOC 2-Zertifizierung in Bearbeitung",
+        "segregation": "Starke Trennung der Konten pro Kunde",
+        "liquidity": "Geldmittel immer kurzfristig verfügbar, nie für andere Zwecke verwendet",
+        "multisig": "Sichere Multi-Signatur- und Offline-Custody-Lösungen",
+        "audited": "Smart Contracts sicherheitsgeprüft von"
+      }
     },
     "overview": {
       "title": "Überblick",

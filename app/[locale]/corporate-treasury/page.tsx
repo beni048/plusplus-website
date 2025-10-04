@@ -4,122 +4,137 @@ import { useTranslations } from 'next-intl';
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Calendar } from "lucide-react";
+import Image from 'next/image';
 
 export default function CorporateTreasury() {
-  const t = useTranslations(); // Remove namespace to access all translations
+  const t = useTranslations();
 
   return (
-    <main className="min-h-screen bg-neutral-light pt-32">
-      <div className="container mx-auto px-4 pb-24">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="mb-12 text-center text-3xl sm:text-4xl lg:text-5xl font-medium text-black px-4">
+    <main className="min-h-screen bg-neutral-light pt-32 pb-24">
+      <div className="container mx-auto px-4">
+        <div className="max-w-6xl mx-auto">
+          <h1 className="mb-16 text-center text-3xl sm:text-4xl lg:text-5xl font-medium text-black px-4">
             {t('corporateTreasury.hero.title')}
           </h1>
-          
-          {/* Development Notice */}
-          <div className="bg-amber-50 border-l-4 border-amber-400 p-4 mb-8 rounded-r-lg">
-            <div className="flex">
-              <div className="ml-3">
-                <p className="text-sm text-amber-700">
-                  <strong>Note:</strong> This page is currently in development. All content shown is placeholder text and subject to change.
-                </p>
-              </div>
-            </div>
-          </div>
-          
-          <div className="prose prose-lg max-w-none text-neutral-dark px-4">
-            <p className="text-base sm:text-lg leading-relaxed mb-8 font-secondary">
-              {t('corporateTreasury.hero.subtitle')}
-            </p>
-
-            <h2 className="text-2xl font-semibold text-black mb-4 mt-8">
-              {t('corporateTreasury.overview.title')}
-            </h2>
-            <p className="text-base sm:text-lg leading-relaxed mb-6 font-secondary">
-              {t('corporateTreasury.overview.description')}
-            </p>
-
-            <h2 className="text-2xl font-semibold text-black mb-4 mt-8">
-              {t('corporateTreasury.services.title')}
-            </h2>
-            
-            <h3 className="text-xl font-medium text-black mb-3 mt-6">
-              {t('corporateTreasury.services.liquidity.title')}
-            </h3>
-            <p className="text-base sm:text-lg leading-relaxed mb-4 font-secondary">
-              {t('corporateTreasury.services.liquidity.description')}
-            </p>
-            <ul className="text-base sm:text-lg leading-relaxed mb-6 ml-6 list-disc font-secondary">
-              <li>{t('corporateTreasury.services.liquidity.feature1')}</li>
-              <li>{t('corporateTreasury.services.liquidity.feature2')}</li>
-            </ul>
-
-            <h3 className="text-xl font-medium text-black mb-3 mt-6">
-              {t('corporateTreasury.services.yield.title')}
-            </h3>
-            <p className="text-base sm:text-lg leading-relaxed mb-4 font-secondary">
-              {t('corporateTreasury.services.yield.description')}
-            </p>
-            <ul className="text-base sm:text-lg leading-relaxed mb-6 ml-6 list-disc font-secondary">
-              <li>{t('corporateTreasury.services.yield.feature1')}</li>
-              <li>{t('corporateTreasury.services.yield.feature2')}</li>
-            </ul>
-
-            <h2 className="text-2xl font-semibold text-black mb-4 mt-8">
-              {t('corporateTreasury.benefits.title')}
-            </h2>
-            
-            <h3 className="text-xl font-medium text-black mb-3 mt-6">
-              {t('corporateTreasury.benefits.efficiency.title')}
-            </h3>
-            <p className="text-base sm:text-lg leading-relaxed mb-6 font-secondary">
-              {t('corporateTreasury.benefits.efficiency.description')}
-            </p>
-
-            <h3 className="text-xl font-medium text-black mb-3 mt-6">
-              {t('corporateTreasury.benefits.security.title')}
-            </h3>
-            <p className="text-base sm:text-lg leading-relaxed mb-6 font-secondary">
-              {t('corporateTreasury.benefits.security.description')}
-            </p>
-
-            <h3 className="text-xl font-medium text-black mb-3 mt-6">
-              {t('corporateTreasury.benefits.transparency.title')}
-            </h3>
-            <p className="text-base sm:text-lg leading-relaxed mb-6 font-secondary">
-              {t('corporateTreasury.benefits.transparency.description')}
-            </p>
-
-            <h2 className="text-2xl font-semibold text-black mb-4 mt-8">
-              {t('corporateTreasury.clients.title')}
-            </h2>
-            
-            <h3 className="text-xl font-medium text-black mb-3 mt-6">
-              {t('corporateTreasury.clients.sme.title')}
-            </h3>
-            <p className="text-base sm:text-lg leading-relaxed mb-6 font-secondary">
-              {t('corporateTreasury.clients.sme.description')}
-            </p>
-
-            <h3 className="text-xl font-medium text-black mb-3 mt-6">
-              {t('corporateTreasury.clients.institutions.title')}
-            </h3>
-            <p className="text-base sm:text-lg leading-relaxed mb-6 font-secondary">
-              {t('corporateTreasury.clients.institutions.description')}
-            </p>
-
-            <h3 className="text-xl font-medium text-black mb-3 mt-6">
-              {t('corporateTreasury.clients.startups.title')}
-            </h3>
-            <p className="text-base sm:text-lg leading-relaxed mb-6 font-secondary">
-              {t('corporateTreasury.clients.startups.description')}
-            </p>
-          </div>
         </div>
       </div>
+      
+      {/* Frankencoin Product Section */}
+      <section className="bg-neutral-light py-24">
+        <div className="container mx-auto px-4">
+          <div className="grid gap-12 lg:grid-cols-2 items-center">
+            {/* Text Left */}
+            <div className="space-y-6">
+              <h2 className="text-4xl font-primary font-medium text-black">
+                {t('corporateTreasury.frankencoin.title')}
+              </h2>
+              <p className="text-lg leading-relaxed text-neutral-dark font-secondary">
+                {t('corporateTreasury.frankencoin.description')}
+              </p>
+              <ul className="text-base text-neutral-dark space-y-3 font-secondary">
+                <li className="flex items-start">
+                  <span className="text-accent-orange mr-3 mt-1">•</span>
+                  <span>{t('corporateTreasury.frankencoin.benefits.stablecoin')}</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-accent-orange mr-3 mt-1">•</span>
+                  <span>{t('corporateTreasury.frankencoin.benefits.overcollateralized')}</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-accent-orange mr-3 mt-1">•</span>
+                  <span>{t('corporateTreasury.frankencoin.benefits.audited')}</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-accent-orange mr-3 mt-1">•</span>
+                  <span>{t('corporateTreasury.frankencoin.benefits.transparent')}</span>
+                </li>
+              </ul>
+            </div>
+            
+            {/* Image Right */}
+            <div className="relative aspect-[4/3] w-full">
+              <Image
+                src="/images/collection/scott-graham-5fNmWej4tAA-unsplash.webp"
+                alt="Frankencoin treasury solution"
+                fill
+                className="object-cover rounded-lg shadow-lg"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Plusplus Trust Section */}
+      <section className="bg-neutral-white py-24">
+        <div className="container mx-auto px-4">
+          <div className="grid gap-12 lg:grid-cols-2 items-center">
+            {/* Image Left */}
+            <div className="relative aspect-[4/3] w-full lg:order-1">
+              <Image
+                src="/images/collection/melina-kiefer-iaAyocrpqTE-unsplash.webp"
+                alt="Secure and regulated"
+                fill
+                className="object-cover rounded-lg shadow-lg"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+            
+            {/* Text Right */}
+            <div className="space-y-6 lg:order-2">
+              <h2 className="text-4xl font-primary font-medium text-black">
+                {t('corporateTreasury.trust.title')}
+              </h2>
+              <p className="text-lg leading-relaxed text-neutral-dark font-secondary">
+                {t('corporateTreasury.trust.description')}
+              </p>
+              <ul className="text-base text-neutral-dark space-y-3 font-secondary">
+                <li className="flex items-start">
+                  <span className="text-accent-orange mr-3 mt-1">•</span>
+                  <span>{t('corporateTreasury.trust.benefits.regulated')}</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-accent-orange mr-3 mt-1">•</span>
+                  <span>{t('corporateTreasury.trust.benefits.aml')}</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-accent-orange mr-3 mt-1">•</span>
+                  <span>{t('corporateTreasury.trust.benefits.soc2')}</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-accent-orange mr-3 mt-1">•</span>
+                  <span>{t('corporateTreasury.trust.benefits.segregation')}</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-accent-orange mr-3 mt-1">•</span>
+                  <span>{t('corporateTreasury.trust.benefits.liquidity')}</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-accent-orange mr-3 mt-1">•</span>
+                  <span>{t('corporateTreasury.trust.benefits.multisig')}</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-accent-orange mr-3 mt-1">•</span>
+                  <span>
+                    {t('corporateTreasury.trust.benefits.audited')} 
+                    <a 
+                      href="https://chainsecurity.com" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-accent-orange hover:underline ml-1"
+                    >
+                      ChainSecurity
+                    </a>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Contact Section */}
-      <section className="bg-neutral-white py-24">
+      <section className="bg-neutral-light py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
             <Card className="p-12 shadow-lg border-primary-teal/20">

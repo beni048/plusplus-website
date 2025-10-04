@@ -302,6 +302,34 @@
   "rentalSolutionsTenant": {
     "title": "Rental Solutions for Tenants",
     "subtitle": "Transform your rental deposit into a smart investment opportunity while securing your dream home.",
+    "frankencoin": {
+      "title": "Frankencoin Stablecoin Deposits",
+      "description": "Pay your rental deposit with Frankencoin (ZCHF), a Swiss franc-pegged stablecoin that offers stability and transparency. Perfect for tech-savvy tenants who want to leverage blockchain technology for their rental arrangements.",
+      "benefits": {
+        "stability": "Stable value pegged to Swiss Franc",
+        "transparency": "Blockchain-based transparency",
+        "settlement": "Instant settlement and verification",
+        "fees": "Lower fees than traditional banking"
+      }
+    },
+    "bitcoin": {
+      "title": "Bitcoin Rental Deposits",
+      "description": "Use Bitcoin for your rental deposit while maintaining the potential for appreciation. Your deposit remains secure in escrow while you benefit from Bitcoin's long-term value growth potential.",
+      "benefits": {
+        "appreciation": "Potential for value appreciation",
+        "escrow": "Secure escrow management",
+        "accessibility": "Global accessibility",
+        "banking": "No traditional banking requirements"
+      }
+    },
+    "emailTemplate": {
+      "title": "Ready to Get Started? Send This to Your Landlord",
+      "description": "Copy this email template and send it directly to your landlord to introduce them to Zinsli's rental deposit solutions.",
+      "copy": "Copy Email",
+      "copied": "Copied!",
+      "button": "Visit Zinsli Platform",
+      "subtitle": "Your landlord can sign up and invite you in under 5 minutes"
+    },
     "benefits": {
       "title": "Benefits for Tenants",
       "benefit1": "Earn returns on your rental deposit instead of letting it sit idle",
@@ -368,6 +396,49 @@
   "rentalSolutionsLandlord": {
     "title": "Rental Solutions for Landlords",
     "subtitle": "Streamline your property management with guaranteed rent payments and comprehensive tenant screening.",
+    "advantages": {
+      "title": "Modern Rental Management Made Simple",
+      "description": "Replace traditional, slow banks with our quick and efficient blockchain-powered system. Our innovative technology comes at no additional cost and revolutionizes how rental deposits are managed.",
+      "benefits": {
+        "setup": "Easy and quick setup - no complex paperwork",
+        "banks": "No dealing with banks or physical mail",
+        "notifications": "Instant email notifications when tenants pay deposits",
+        "release": "Quick release of funds when needed"
+      }
+    },
+    "stepByStep": {
+      "title": "Get Started in 4 Simple Steps",
+      "description": "Setting up your landlord account and inviting tenants is straightforward. Follow our step-by-step guide to get started today.",
+      "steps": {
+        "step1": {
+          "title": "Create Your Account",
+          "description": "Sign up at Zinsli and verify your identity as a property owner or manager."
+        },
+        "step2": {
+          "title": "Set Up Rental Property",
+          "description": "Add your rental property details, monthly rent, and deposit amount in the system."
+        },
+        "step3": {
+          "title": "Create Deposit Request",
+          "description": "Generate a new rental deposit request and configure the available payment options for your tenant."
+        },
+        "step4": {
+          "title": "Invite Your Tenant",
+          "description": "Send an invitation to your tenant's email address. They'll receive instructions to complete the deposit setup."
+        }
+      },
+      "cta": "Start Setup Now"
+    },
+    "technology": {
+      "title": "Powered by Plusplus Blockchain Technology",
+      "description": "Our innovative blockchain technology replaces traditional banking systems with a more efficient, transparent, and cost-effective solution for rental deposit management.",
+      "benefits": {
+        "efficiency": "Lightning-fast transactions and automated processes",
+        "cost": "Zero additional costs compared to traditional banking",
+        "transparency": "Complete transparency and real-time tracking",
+        "security": "Swiss-grade security with blockchain protection"
+      }
+    },
     "benefits": {
       "title": "Benefits for Landlords",
       "benefit1": "Guaranteed rent payments even if tenants default",
@@ -458,6 +529,29 @@
     "hero": {
       "title": "Corporate Treasury",
       "subtitle": "Advanced treasury management solutions for modern businesses seeking optimal returns on their cash reserves."
+    },
+    "frankencoin": {
+      "title": "Frankencoin Treasury Solutions",
+      "description": "Our treasury products leverage Frankencoin, Switzerland's most trusted stablecoin, providing your business with secure and stable digital asset management.",
+      "benefits": {
+        "stablecoin": "Switzerland's biggest and most trusted stablecoin",
+        "overcollateralized": "Over-collateralized for maximum security and stability",
+        "audited": "Regularly audited and transparently managed",
+        "transparent": "Full transparency with real-time reserves verification"
+      }
+    },
+    "trust": {
+      "title": "Why Trust Plusplus",
+      "description": "Our commitment to security, compliance, and customer protection makes us the trusted choice for corporate treasury management.",
+      "benefits": {
+        "regulated": "Regulated and soon-to-be VQF member",
+        "aml": "Full compliance with AML regulations",
+        "soc2": "SOC 2 certification in process",
+        "segregation": "Strong segregation of accounts per customer",
+        "liquidity": "Funds always available short-term, never used for other purposes",
+        "multisig": "Secure multi-signature and offline custody solutions",
+        "audited": "Smart contracts security audited by"
+      }
     },
     "overview": {
       "title": "Overview",
