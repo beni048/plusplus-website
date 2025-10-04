@@ -23,7 +23,7 @@
   "mainSections": {
     "rentalSolutions": {
       "title": "Mietlösungen",
-      "paragraph1": "Entdecken Sie unsere umfassenden Mietlösungen, die darauf ausgelegt sind, Ihre finanziellen Bedürfnisse zu erfüllen. Von Geräte-Finanzierung bis hin zu flexiblen Leasingverträgen bieten wir maßgeschneiderte Lösungen, die Ihrem Unternehmen beim Wachstum helfen und gleichzeitig einen optimalen Cashflow aufrechterhalten.",
+      "paragraph1": "Entdecken Sie unsere umfassenden Mietlösungen, die darauf ausgelegt sind, Ihre finanziellen Bedürfnisse zu erfüllen. Von Geräte-Finanzierung bis hin zu flexiblen Leasingverträgen bieten wir massgeschneiderte Lösungen, die Ihrem Unternehmen beim Wachstum helfen und gleichzeitig einen optimalen Cashflow aufrechterhalten.",
       "paragraph2": "Unsere Mietlösungen bieten wettbewerbsfähige Zinssätze, flexible Konditionen und fachkundige Unterstützung während des gesamten Prozesses. Ob Sie ein Startup oder ein etabliertes Unternehmen sind, wir haben die richtige Lösung für Sie.",
       "button": "Mehr erfahren"
     },
@@ -362,7 +362,8 @@
     "noDepositBound": "Keine Kaution gebunden",
     "capitalDevelopment": "Kapitalentwicklung",
     "year": "Jahr",
-    "disclaimer": "Alle Berechnungen basieren auf Marktdaten vom Oktober 2025 (Renditen, Zinsen, Gebühren pro Produkt). Tatsächliche Werte können abweichen. Bitcoin Durchschnitt p.a. über die letzten 5 Jahre ~63%. Versicherung 4-5%, Bank-Sperrkonto 0,1-0,4%, Frankencoin 3% (historisch zwischen 3-5%)."
+    "bitcoinWarning": "Historische Bitcoin-Daten: Bitcoin-Berechnungen verwenden tatsächliche monatliche Eröffnungspreise von Oktober 2009 bis Oktober 2025 und zeigen echte Volatilität einschliesslich grosser Preisrückgänge und -anstiege.",
+    "disclaimer": "Alle Berechnungen basieren auf Marktdaten vom Oktober 2025 (Renditen, Zinsen, Gebühren pro Produkt). Tatsächliche Werte können abweichen. Bitcoin-Berechnungen: 1 Jahr = Okt 2024 bis Okt 2025, max 16 Jahre = Okt 2009 bis Okt 2025 Prozentänderungen. Versicherung 4-5%, Bank-Sperrkonto 0,1-0,4%, Frankencoin 3% (historisch zwischen 3-5%)."
   },
   "rentalSolutionsLandlord": {
     "title": "Mietlösungen für Vermieter",
