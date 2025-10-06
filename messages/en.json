@@ -265,7 +265,8 @@
   },
   "productSelect": {
     "title": "Choose Your Solution",
-    "subtitle": "Select the product category that best fits your needs and discover how Plusplus can help you.",
+    "subtitle": "Select the category that fits your needs.",
+    "subtitleFull": "Select the product category that best fits your needs and discover how Plusplus can help you.",
     "rentalSolutions": {
       "title": "Rental Solutions",
       "description": "Smart rental deposit management and property solutions for tenants and landlords.",
@@ -284,7 +285,8 @@
   },
   "rentalSolutionsSelect": {
     "title": "Choose Your Path",
-    "subtitle": "Tell us about your role in the rental market to get personalized solutions.",
+    "subtitle": "Tell us your role for personalized solutions.",
+    "subtitleFull": "Tell us about your role in the rental market to get personalized solutions.",
     "tenant": {
       "title": "I'm a Tenant",
       "description": "Looking for flexible rental deposit solutions and better financial opportunities.",
@@ -303,7 +305,8 @@
   },
   "rentalSolutionsTenant": {
     "title": "Rental Solutions for Tenants",
-    "subtitle": "Transform your rental deposit into a smart investment opportunity while securing your dream home.",
+    "subtitle": "Transform your deposit into smart investments.",
+    "subtitleFull": "Transform your rental deposit into a smart investment opportunity while securing your dream home.",
     "calculator": {
       "title": "Calculate Your Potential Returns",
       "description": "See how much more you could earn with our innovative deposit solutions compared to traditional options.",
@@ -380,7 +383,8 @@
   "depositCalculator": {
     "backToTenant": "Back to Tenant Solutions",
     "title": "Deposit Calculator",
-    "subtitle": "Compare now how much more you can earn with our innovative deposit solutions compared to traditional options.",
+    "subtitle": "Compare how much more you can earn.",
+    "subtitleFull": "Compare now how much more you can earn with our innovative deposit solutions compared to traditional options.",
     "grossRent": "Gross Rent (CHF/Month)",
     "rentalPeriod": "Rental Period (Years)",
     "depositMultiplier": "Deposit Multiplier",
@@ -410,7 +414,8 @@
   },
   "rentalSolutionsLandlord": {
     "title": "Rental Solutions for Landlords",
-    "subtitle": "Streamline your property management with guaranteed rent payments and comprehensive tenant screening.",
+    "subtitle": "Streamline property management with guaranteed payments.",
+    "subtitleFull": "Streamline your property management with guaranteed rent payments and comprehensive tenant screening.",
     "advantages": {
       "title": "Modern Rental Management Made Simple",
       "description": "Replace traditional, slow banks with our quick and efficient blockchain-powered system. Our innovative technology comes at no additional cost and revolutionizes how rental deposits are managed.",
@@ -549,7 +554,8 @@
   "corporateTreasury": {
     "hero": {
       "title": "Corporate Treasury",
-      "subtitle": "Advanced treasury management solutions for modern businesses seeking optimal returns on their cash reserves."
+      "subtitle": "Advanced treasury management for modern businesses.",
+      "subtitleFull": "Advanced treasury management solutions for modern businesses seeking optimal returns on their cash reserves."
     },
     "frankencoin": {
       "title": "Frankencoin Treasury Solutions",

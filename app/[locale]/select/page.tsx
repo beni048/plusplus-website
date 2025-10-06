@@ -17,12 +17,15 @@ export default function ProductSelect() {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header Section */}
-          <div className="text-center mb-16">
-            <h1 className="mb-12 text-center text-4xl sm:text-5xl lg:text-6xl font-primary font-medium text-black px-4">
+          <div className="text-center mb-8 sm:mb-16">
+            <h1 className="mb-4 sm:mb-12 text-center text-3xl sm:text-5xl lg:text-6xl font-primary font-medium text-black px-4">
               {t('title')}
             </h1>
-            <p className="text-xl font-secondary text-neutral-dark max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl font-secondary text-neutral-dark max-w-3xl mx-auto leading-relaxed px-4 block sm:hidden">
               {t('subtitle')}
+            </p>
+            <p className="text-lg sm:text-xl font-secondary text-neutral-dark max-w-3xl mx-auto leading-relaxed px-4 hidden sm:block">
+              {t('subtitleFull')}
             </p>
           </div>
 

@@ -65,7 +65,7 @@ export default function ContactPage() {
     <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-32">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto">
-          <h1 className="mb-12 text-center text-4xl sm:text-5xl lg:text-6xl font-primary font-medium text-black px-4">
+          <h1 className="mb-4 sm:mb-12 text-center text-3xl sm:text-5xl lg:text-6xl font-primary font-medium text-black px-4">
             {t('contact.title')}
           </h1>
           

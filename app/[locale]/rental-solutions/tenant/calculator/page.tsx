@@ -10,10 +10,10 @@ export default function DepositCalculatorPage() {
 
   return (
     <main className="min-h-screen bg-neutral-light pt-32">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-0 sm:px-4">
         <div className="max-w-6xl mx-auto">
           {/* Back Navigation */}
-          <div className="mb-8">
+          <div className="mb-8 px-4 sm:px-0">
             <Link 
               href="/rental-solutions/tenant"
               className="inline-flex items-center text-neutral-dark hover:text-black transition-colors"
@@ -24,17 +24,20 @@ export default function DepositCalculatorPage() {
           </div>
           
           {/* Header Section */}
-          <div className="text-center mb-16">
-            <h1 className="mb-6 text-center text-4xl sm:text-5xl lg:text-6xl font-medium text-black px-4">
+          <div className="text-center mb-8 sm:mb-16">
+            <h1 className="mb-4 sm:mb-6 text-center text-3xl sm:text-5xl lg:text-6xl font-medium text-black px-4">
               {t('depositCalculator.title')}
             </h1>
-            <p className="text-xl font-secondary text-neutral-dark max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl font-secondary text-neutral-dark max-w-3xl mx-auto leading-relaxed px-4 block sm:hidden">
               {t('depositCalculator.subtitle')}
+            </p>
+            <p className="text-lg sm:text-xl font-secondary text-neutral-dark max-w-3xl mx-auto leading-relaxed px-4 hidden sm:block">
+              {t('depositCalculator.subtitleFull')}
             </p>
           </div>
           
           {/* Deposit Calculator Section */}
-          <div className="mb-16">
+          <div className="mb-16 px-0 sm:px-0">
             <DepositCalculator />
           </div>
         </div>

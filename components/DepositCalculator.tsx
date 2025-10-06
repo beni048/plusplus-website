@@ -479,9 +479,9 @@ export default function DepositCalculator() {
   const maxRentalPeriod = 16; // Updated to 16 years (Oct 2009 to Oct 2025)
 
   return (
-    <div className="bg-gradient-to-br from-neutral-light to-white p-8 rounded-2xl shadow-xl border border-gray-200">
+    <div className="bg-gradient-to-br from-neutral-light to-white p-0 sm:p-8 rounded-none sm:rounded-2xl shadow-xl border-0 sm:border border-gray-200">
       {/* Input Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 bg-white p-4 sm:p-6 rounded-none sm:rounded-xl shadow-sm border-0 sm:border border-gray-100">
         <div className="space-y-2">
           <Label htmlFor="grossRent" className="text-neutral-dark font-medium text-sm leading-tight">
             {t('depositCalculator.grossRent')}
@@ -553,7 +553,7 @@ export default function DepositCalculator() {
       )}
 
       {/* Product Selection */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 bg-white p-4 sm:p-6 rounded-none sm:rounded-xl shadow-sm border-0 sm:border border-gray-100">
         <div className="space-y-2">
           <Label className="text-neutral-dark font-medium">{t('depositCalculator.productA')}</Label>
           <Select value={productA} onValueChange={setProductA}>

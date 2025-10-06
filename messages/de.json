@@ -265,7 +265,8 @@
   },
   "productSelect": {
     "title": "Wählen Sie Ihre Lösung",
-    "subtitle": "Wählen Sie die Produktkategorie, die am besten zu Ihren Bedürfnissen passt, und entdecken Sie, wie Plusplus Ihnen helfen kann.",
+    "subtitle": "Wählen Sie die Kategorie für Ihre Bedürfnisse.",
+    "subtitleFull": "Wählen Sie die passende Kategorie für Ihre spezifischen Finanzierungs- und Immobilienbedürfnisse.",
     "rentalSolutions": {
       "title": "Mietlösungen",
       "description": "Intelligente Mietkautionsverwaltung und Immobilienlösungen für Mieter und Vermieter.",
@@ -284,7 +285,8 @@
   },
   "rentalSolutionsSelect": {
     "title": "Wählen Sie Ihren Weg",
-    "subtitle": "Teilen Sie uns Ihre Rolle auf dem Mietmarkt mit, um personalisierte Lösungen zu erhalten.",
+    "subtitle": "Teilen Sie uns Ihre Rolle für personalisierte Lösungen mit.",
+    "subtitleFull": "Teilen Sie uns Ihre Rolle mit, damit wir Ihnen personalisierte Immobilienlösungen anbieten können.",
     "tenant": {
       "title": "Ich miete",
       "description": "Auf der Suche nach flexiblen Mietkautionslösungen und besseren finanziellen Möglichkeiten.",
@@ -303,7 +305,8 @@
   },
   "rentalSolutionsTenant": {
     "title": "Mietlösungen für Mieter",
-    "subtitle": "Verwandeln Sie Ihre Mietkaution in eine intelligente Investitionsmöglichkeit und sichern Sie sich Ihr Traumzuhause.",
+    "subtitle": "Verwandeln Sie Ihre Kaution in intelligente Investitionen.",
+    "subtitleFull": "Verwandeln Sie Ihre Mietkaution in eine intelligente Investitionsmöglichkeit und sichern Sie sich Ihr Traumzuhause.",
     "calculator": {
       "title": "Berechnen Sie Ihre potenziellen Renditen",
       "description": "Sehen Sie, wie viel mehr Sie mit unseren innovativen Kautionslösungen im Vergleich zu traditionellen Optionen verdienen könnten.",
@@ -380,7 +383,8 @@
   "depositCalculator": {
     "backToTenant": "Zurück zu Mieterlösungen",
     "title": "Kautionsrechner",
-    "subtitle": "Vergleichen Sie jetzt, wie viel mehr Sie mit unseren innovativen Kautionslösungen im Vergleich zu herkömmlichen Optionen verdienen können.",
+    "subtitle": "Vergleichen Sie, wie viel mehr Sie verdienen können.",
+    "subtitleFull": "Vergleichen Sie verschiedene Kautionsoptionen und entdecken Sie, wie viel mehr Sie verdienen können.",
     "grossRent": "Mietzins (CHF/Monat)",
     "rentalPeriod": "Mietdauer (Jahre)",
     "depositMultiplier": "Kautionsfaktor",
@@ -410,7 +414,8 @@
   },
   "rentalSolutionsLandlord": {
     "title": "Mietlösungen für Vermieter",
-    "subtitle": "Optimieren Sie Ihre Immobilienverwaltung mit garantierten Mietzahlungen und umfassender Mieterprüfung.",
+    "subtitle": "Optimieren Sie Immobilienverwaltung mit garantierten Zahlungen.",
+    "subtitleFull": "Optimieren Sie Ihre Immobilienverwaltung mit garantierten Mietzahlungen und umfassender Mieterprüfung.",
     "advantages": {
       "title": "Moderne Mietverwaltung leicht gemacht",
       "description": "Ersetzen Sie traditionelle, langsame Banken durch unser schnelles und effizientes Blockchain-System. Unsere innovative Technologie verursacht keine zusätzlichen Kosten und revolutioniert die Verwaltung von Mietkautionen.",
@@ -549,7 +554,8 @@
   "corporateTreasury": {
     "hero": {
       "title": "Corporate Treasury",
-      "subtitle": "Fortschrittliche Treasury-Management-Lösungen für moderne Unternehmen, die optimale Renditen auf ihre Geldreserven anstreben."
+      "subtitle": "Fortschrittliches Treasury-Management für moderne Unternehmen.",
+      "subtitleFull": "Fortschrittliche Treasury-Management-Lösungen für moderne Unternehmen, die optimale Renditen auf ihre Geldreserven anstreben."
     },
     "frankencoin": {
       "title": "Frankencoin Treasury-Lösungen",
