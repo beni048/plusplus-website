@@ -16,6 +16,11 @@
       "static/chunks/main-app.js",
       "static/chunks/app/[locale]/page.js"
     ],
+    "/[locale]/corporate-treasury/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[locale]/corporate-treasury/page.js"
+    ],
     "/[locale]/rental-solutions/select/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -26,6 +31,16 @@
       "static/chunks/main-app.js",
       "static/chunks/app/[locale]/rental-solutions/tenant/page.js"
     ],
+    "/[locale]/rental-solutions/landlord/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[locale]/rental-solutions/landlord/page.js"
+    ],
+    "/[locale]/contact/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[locale]/contact/page.js"
+    ],
     "/[locale]/terms-and-conditions/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -35,36 +50,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/[locale]/imprint/page.js"
-    ],
-    "/[locale]/privacy-settings/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/privacy-settings/page.js"
-    ],
-    "/[locale]/privacy-policy/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/privacy-policy/page.js"
-    ],
-    "/[locale]/rental-solutions/landlord/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/rental-solutions/landlord/page.js"
-    ],
-    "/[locale]/corporate-treasury/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/corporate-treasury/page.js"
-    ],
-    "/[locale]/contact/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/contact/page.js"
-    ],
-    "/[locale]/select/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/select/page.js"
     ]
   }
 }

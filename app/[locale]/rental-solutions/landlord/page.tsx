@@ -10,22 +10,28 @@ export default function RentalSolutionsLandlord() {
   const zinsliLoginUrl = locale === 'de' ? 'https://app.zinsli.com/de/login' : 'https://app.zinsli.com/en/login';
 
   return (
-    <main className="min-h-screen bg-neutral-light pt-32 pb-24">
+    <main className="min-h-screen bg-neutral-light pt-32">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <h1 className="mb-16 text-center text-3xl sm:text-4xl lg:text-5xl font-medium text-black px-4">
-            {t('rentalSolutionsLandlord.title')}
-          </h1>
+          {/* Header Section */}
+          <div className="text-center mb-16">
+            <h1 className="mb-12 text-center text-4xl sm:text-5xl lg:text-6xl font-medium text-black px-4">
+              {t('rentalSolutionsLandlord.title')}
+            </h1>
+            <p className="text-xl font-secondary text-neutral-dark max-w-3xl mx-auto leading-relaxed px-4">
+              {t('rentalSolutionsLandlord.subtitle')}
+            </p>
+          </div>
         </div>
       </div>
       
       {/* Advantages Section */}
-      <section className="bg-neutral-light py-24">
+      <section className="bg-neutral-light pb-24">
         <div className="container mx-auto px-4">
           <div className="grid gap-12 lg:grid-cols-2 items-center">
             {/* Text Left */}
-            <div className="space-y-6">
-              <h2 className="text-4xl font-primary font-medium text-black">
+            <div className="space-y-6 order-2 lg:order-1">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-primary font-medium text-black">
                 {t('rentalSolutionsLandlord.advantages.title')}
               </h2>
               <p className="text-lg leading-relaxed text-neutral-dark font-secondary">
@@ -52,7 +58,7 @@ export default function RentalSolutionsLandlord() {
             </div>
             
             {/* Image Right */}
-            <div className="relative aspect-[4/3] w-full">
+            <div className="relative aspect-[4/3] w-full order-1 lg:order-2">
               <Image
                 src="/images/collection/scott-graham-5fNmWej4tAA-unsplash.webp"
                 alt="Digital rental management"
@@ -70,7 +76,7 @@ export default function RentalSolutionsLandlord() {
         <div className="container mx-auto px-4">
           <div className="grid gap-12 lg:grid-cols-2 items-center">
             {/* Image Left */}
-            <div className="relative aspect-[4/3] w-full lg:order-1">
+            <div className="relative aspect-[4/3] w-full order-1 lg:order-1">
               <Image
                 src="/images/collection/melina-kiefer-iaAyocrpqTE-unsplash.webp"
                 alt="Step by step setup"
@@ -81,8 +87,8 @@ export default function RentalSolutionsLandlord() {
             </div>
             
             {/* Text Right */}
-            <div className="space-y-6 lg:order-2">
-              <h2 className="text-4xl font-primary font-medium text-black">
+            <div className="space-y-6 order-2 lg:order-2">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-primary font-medium text-black">
                 {t('rentalSolutionsLandlord.stepByStep.title')}
               </h2>
               <p className="text-lg leading-relaxed text-neutral-dark font-secondary">
@@ -151,8 +157,8 @@ export default function RentalSolutionsLandlord() {
         <div className="container mx-auto px-4">
           <div className="grid gap-12 lg:grid-cols-2 items-center">
             {/* Text Left */}
-            <div className="space-y-6">
-              <h2 className="text-4xl font-primary font-medium text-black">
+            <div className="space-y-6 order-2 lg:order-1">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-primary font-medium text-black">
                 {t('rentalSolutionsLandlord.technology.title')}
               </h2>
               <p className="text-lg leading-relaxed text-neutral-dark font-secondary">
@@ -179,7 +185,7 @@ export default function RentalSolutionsLandlord() {
             </div>
             
             {/* Image Right */}
-            <div className="relative aspect-[4/3] w-full">
+            <div className="relative aspect-[4/3] w-full order-1 lg:order-2">
               <Image
                 src="/images/collection/ilia-bronskiy-NsmhIKZFzGo-unsplash.webp"
                 alt="Blockchain technology"

@@ -63,12 +63,18 @@ Freundliche Grüsse,
   };
 
   return (
-    <main className="min-h-screen bg-neutral-light pt-32 pb-24">
+    <main className="min-h-screen bg-neutral-light pt-32">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <h1 className="mb-16 text-center text-3xl sm:text-4xl lg:text-5xl font-medium text-black px-4">
-            {t('rentalSolutionsTenant.title')}
-          </h1>
+          {/* Header Section */}
+          <div className="text-center mb-16">
+            <h1 className="mb-12 text-center text-4xl sm:text-5xl lg:text-6xl font-medium text-black px-4">
+              {t('rentalSolutionsTenant.title')}
+            </h1>
+            <p className="text-xl font-secondary text-neutral-dark max-w-3xl mx-auto leading-relaxed px-4">
+              {t('rentalSolutionsTenant.subtitle')}
+            </p>
+          </div>
           
           {/* Deposit Calculator Section */}
           <div className="mb-16">
@@ -82,8 +88,8 @@ Freundliche Grüsse,
         <div className="container mx-auto px-4">
           <div className="grid gap-12 lg:grid-cols-2 items-center">
             {/* Text Left */}
-            <div className="space-y-6">
-              <h2 className="text-4xl font-primary font-medium text-black">
+            <div className="space-y-6 order-2 lg:order-1">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-primary font-medium text-black">
                 {t('rentalSolutionsTenant.frankencoin.title')}
               </h2>
               <p className="text-lg leading-relaxed text-neutral-dark font-secondary">
@@ -110,7 +116,7 @@ Freundliche Grüsse,
             </div>
             
             {/* Image Right */}
-            <div className="relative aspect-[4/3] w-full">
+            <div className="relative aspect-[4/3] w-full order-1 lg:order-2">
               <Image
                 src="/images/collection/nicolas-peyrol-iWacqnogqO4-unsplash.webp"
                 alt="Frankencoin Stablecoin Deposits"
@@ -128,7 +134,7 @@ Freundliche Grüsse,
         <div className="container mx-auto px-4">
           <div className="grid gap-12 lg:grid-cols-2 items-center">
             {/* Image Left */}
-            <div className="relative aspect-[4/3] w-full lg:order-1">
+            <div className="relative aspect-[4/3] w-full order-1 lg:order-1">
               <Image
                 src="/images/collection/thomas-aubaud-7plmm5fLuas-unsplash.webp"
                 alt="Bitcoin Rental Deposits"
@@ -139,8 +145,8 @@ Freundliche Grüsse,
             </div>
             
             {/* Text Right */}
-            <div className="space-y-6 lg:order-2">
-              <h2 className="text-4xl font-primary font-medium text-black">
+            <div className="space-y-6 order-2 lg:order-2">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-primary font-medium text-black">
                 {t('rentalSolutionsTenant.bitcoin.title')}
               </h2>
               <p className="text-lg leading-relaxed text-neutral-dark font-secondary">
