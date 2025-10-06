@@ -50,6 +50,16 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/[locale]/imprint/page.js"
+    ],
+    "/[locale]/select/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[locale]/select/page.js"
+    ],
+    "/[locale]/rental-solutions/tenant/calculator/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[locale]/rental-solutions/tenant/calculator/page.js"
     ]
   }
 }

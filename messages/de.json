@@ -277,6 +277,7 @@
       "cta": "Services entdecken"
     },
     "contact": {
+      "title": "Hilfe bei der Auswahl?",
       "question": "Keine der obigen Optionen passt zu Ihren Bedürfnissen?",
       "button": "Kontakt aufnehmen"
     }
@@ -295,6 +296,7 @@
       "cta": "Mehr erfahren"
     },
     "contact": {
+      "title": "Hilfe bei der Auswahl?",
       "question": "Keine der obigen Optionen passt zu Ihren Bedürfnissen?",
       "button": "Kontakt aufnehmen"
     }
@@ -302,6 +304,11 @@
   "rentalSolutionsTenant": {
     "title": "Mietlösungen für Mieter",
     "subtitle": "Verwandeln Sie Ihre Mietkaution in eine intelligente Investitionsmöglichkeit und sichern Sie sich Ihr Traumzuhause.",
+    "calculator": {
+      "title": "Berechnen Sie Ihre potenziellen Renditen",
+      "description": "Sehen Sie, wie viel mehr Sie mit unseren innovativen Kautionslösungen im Vergleich zu traditionellen Optionen verdienen könnten.",
+      "button": "Jetzt Kaution vergleichen"
+    },
     "frankencoin": {
       "title": "Frankencoin Stablecoin Kautionen",
       "description": "Zahlen Sie Ihre Mietkaution mit Frankencoin (ZCHF), einem an den Schweizer Franken gekoppelten Stablecoin, der Stabilität und Transparenz bietet. Perfekt für technikaffine Mieter, die Blockchain-Technologie für ihre Mietverträge nutzen möchten.",
@@ -310,7 +317,8 @@
         "transparency": "Blockchain-basierte Transparenz",
         "settlement": "Sofortige Abwicklung und Verifikation",
         "fees": "Niedrigere Gebühren als traditionelles Banking"
-      }
+      },
+      "cta": "Vom Stablecoin profitieren"
     },
     "bitcoin": {
       "title": "Bitcoin Mietkautionen",
@@ -320,7 +328,8 @@
         "escrow": "Sichere Treuhandverwaltung",
         "accessibility": "Globale Zugänglichkeit",
         "banking": "Keine traditionellen Banking-Anforderungen"
-      }
+      },
+      "cta": "Von Bitcoin profitieren"
     },
     "emailTemplate": {
       "title": "Bereit loszulegen? Senden Sie dies an Ihren Vermieter",
@@ -361,9 +370,15 @@
     },
     "cta": {
       "button": "Als Mieter starten"
+    },
+    "finalCta": {
+      "title": "Bereit loszulegen?",
+      "description": "Schließen Sie sich Tausenden von Mietern an, die bereits Renditen auf ihre Mietkautionen mit unserer innovativen Plattform erzielen.",
+      "button": "Plusplus Kaution holen"
     }
   },
   "depositCalculator": {
+    "backToTenant": "Zurück zu Mieterlösungen",
     "title": "Kautionsrechner",
     "subtitle": "Vergleichen Sie jetzt, wie viel mehr Sie mit unseren innovativen Kautionslösungen im Vergleich zu herkömmlichen Optionen verdienen können.",
     "grossRent": "Mietzins (CHF/Monat)",
@@ -404,7 +419,8 @@
         "banks": "Kein Umgang mit Banken oder physischer Post",
         "notifications": "Sofortige E-Mail-Benachrichtigungen bei Kautionszahlungen",
         "release": "Schnelle Freigabe der Mittel bei Bedarf"
-      }
+      },
+      "cta": "Jetzt testen"
     },
     "stepByStep": {
       "title": "Erste Schritte in 4 einfachen Schritten",
@@ -437,7 +453,8 @@
         "cost": "Null zusätzliche Kosten im Vergleich zu traditionellem Banking",
         "transparency": "Vollständige Transparenz und Echtzeit-Verfolgung",
         "security": "Schweizer Sicherheit mit Blockchain-Schutz"
-      }
+      },
+      "cta": "Loslegen"
     },
     "benefits": {
       "title": "Vorteile für Vermieter",
@@ -478,6 +495,10 @@
     },
     "cta": {
       "button": "Als Vermieter starten"
+    },
+    "finalCta": {
+      "title": "Bereit loszulegen?",
+      "description": "Schliessen Sie sich Tausenden von Vermietern an, die bereits ihre Mietverwaltung mit unserer innovativen Plattform vereinfacht haben."
     }
   },
   "rentalSolutions": {
@@ -538,7 +559,8 @@
         "overcollateralized": "Überbesichert für maximale Sicherheit und Stabilität",
         "audited": "Regelmässig geprüft und transparent verwaltet",
         "transparent": "Vollständige Transparenz mit Echtzeit-Reservenverifizierung"
-      }
+      },
+      "cta": "Kostenlose Demo erhalten"
     },
     "trust": {
       "title": "Warum Plusplus vertrauen",
@@ -551,7 +573,8 @@
         "liquidity": "Geldmittel immer kurzfristig verfügbar, nie für andere Zwecke verwendet",
         "multisig": "Sichere Multi-Signatur- und Offline-Custody-Lösungen",
         "audited": "Smart Contracts sicherheitsgeprüft von"
-      }
+      },
+      "cta": "Sprechen Sie mit uns"
     },
     "overview": {
       "title": "Überblick",

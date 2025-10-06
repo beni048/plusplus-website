@@ -3,7 +3,9 @@
 import { useTranslations, useLocale } from 'next-intl';
 import { useState } from 'react';
 import Image from 'next/image';
-import DepositCalculator from '../../../../components/DepositCalculator';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { Calculator, ArrowRight } from 'lucide-react';
 
 export default function RentalSolutionsTenant() {
   const t = useTranslations();
@@ -21,7 +23,7 @@ I heard from a friend that there's a new, quick, and free tool called Zinsli for
 • You receive instant email confirmation as soon as the deposit arrives
 • There are no fees for you as the landlord
 
-Could you please set up a free account at https://app.zinsli.com/en/signup and invite me? You can learn more about the process here: https://pafinance.live/en/rental-solutions/landlord
+Could you please set up a free account at app.zinsli.com/en/login and invite me? You can learn more about the process here: pafinance.live/en/rental-solutions/landlord
 
 It's simple: sign up, click "Invite Tenant," and enter my email. Then I'll complete my side right away.
 
@@ -41,7 +43,7 @@ Ich habe von einem Freund gehört, dass es ein neues, schnelles und kostenloses 
 • Sie erhalten sofortige E-Mail-Bestätigung, sobald die Kaution ankommt
 • Es fallen keine Gebühren für Sie als Vermieter an
 
-Könnten Sie bitte ein kostenloses Konto unter  https://app.zinsli.com/de/signup erstellen und mich einladen? Hier können Sie mehr über den Prozess erfahren: https://pafinance.live/de/rental-solutions/landlord
+Könnten Sie bitte ein kostenloses Konto unter  app.zinsli.com/de/login erstellen und mich einladen? Hier können Sie mehr über den Prozess erfahren: pafinance.live/de/rental-solutions/landlord
 
 Es ist einfach: Registrieren Sie sich, klicken Sie auf "Mieter einladen" und geben Sie meine E-Mail-Adresse ein. Dann erledige ich sofort meinen Teil.
 
@@ -51,6 +53,46 @@ Freundliche Grüsse,
 [Name des Mieters]`;
 
   const emailTemplate = locale === 'de' ? emailTemplateDe : emailTemplateEn;
+
+  const renderEmailWithLinks = (text: string) => {
+    const lines = text.split('\n');
+    return lines.map((line, index) => {
+      // Replace URLs with clickable links
+      const urlRegex = /(app\.zinsli\.com\/[^\s]+|pafinance\.live\/[^\s]+)/g;
+      const parts = line.split(urlRegex);
+      
+      // Determine if this is an empty line (paragraph break)
+      const isEmpty = line.trim() === '';
+      
+      return (
+        <div key={index} className={isEmpty ? "mb-1" : "mb-1"}>
+          {isEmpty ? (
+            // Empty line for paragraph separation
+            <span>&nbsp;</span>
+          ) : (
+            // Regular line with content
+            parts.map((part, partIndex) => {
+              if (urlRegex.test(part)) {
+                const fullUrl = part.startsWith('http') ? part : `https://${part}`;
+                return (
+                  <a
+                    key={partIndex}
+                    href={fullUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800 underline"
+                  >
+                    {part}
+                  </a>
+                );
+              }
+              return part;
+            })
+          )}
+        </div>
+      );
+    });
+  };
 
   const copyToClipboard = async () => {
     try {
@@ -75,20 +117,64 @@ Freundliche Grüsse,
               {t('rentalSolutionsTenant.subtitle')}
             </p>
           </div>
-          
-          {/* Deposit Calculator Section */}
-          <div className="mb-16">
-            <DepositCalculator />
-          </div>
         </div>
       </div>
+      
+      {/* Deposit Calculator Promotion */}
+      <section className="bg-accent-orange py-16">
+        <div className="container mx-auto px-4 text-center">
+          <div className="max-w-2xl mx-auto">
+            <Calculator className="w-16 h-16 mx-auto mb-6 text-white" />
+            <h2 className="text-2xl sm:text-3xl font-primary font-medium text-white mb-4">
+              {t('rentalSolutionsTenant.calculator.title')}
+            </h2>
+            <p className="text-lg text-white/90 mb-8 font-secondary">
+              {t('rentalSolutionsTenant.calculator.description')}
+            </p>
+            <Button 
+              asChild
+              className="bg-white text-accent-orange hover:bg-neutral-light px-6 py-3 text-lg transition-all duration-300 font-primary group"
+            >
+              <Link href="/rental-solutions/tenant/calculator">
+                {t('rentalSolutionsTenant.calculator.button')}
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
       
       {/* Frankencoin Stablecoin Product Section */}
       <section className="bg-neutral-white py-24">
         <div className="container mx-auto px-4">
-          <div className="grid gap-12 lg:grid-cols-2 items-center">
+          <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+            {/* Image Right */}
+            <div className="relative aspect-[4/3] w-full order-1 lg:order-2">
+              <Image
+                src="/images/collection/nicolas-peyrol-iWacqnogqO4-unsplash.webp"
+                alt="Frankencoin Stablecoin Deposits"
+                fill
+                className="object-cover rounded-lg shadow-lg"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+
+            {/* Button Mobile */}
+            <div className="order-2 lg:hidden">
+              <Button 
+                onClick={() => {
+                  const emailSection = document.getElementById('email-template');
+                  emailSection?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary w-full"
+              >
+                {t('rentalSolutionsTenant.frankencoin.cta')}
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </div>
+
             {/* Text Left */}
-            <div className="space-y-6 order-2 lg:order-1">
+            <div className="space-y-6 order-3 lg:order-1">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-primary font-medium text-black">
                 {t('rentalSolutionsTenant.frankencoin.title')}
               </h2>
@@ -113,17 +199,19 @@ Freundliche Grüsse,
                   <span>{t('rentalSolutionsTenant.frankencoin.benefits.fees')}</span>
                 </li>
               </ul>
-            </div>
-            
-            {/* Image Right */}
-            <div className="relative aspect-[4/3] w-full order-1 lg:order-2">
-              <Image
-                src="/images/collection/nicolas-peyrol-iWacqnogqO4-unsplash.webp"
-                alt="Frankencoin Stablecoin Deposits"
-                fill
-                className="object-cover rounded-lg shadow-lg"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
+              {/* Button Desktop */}
+              <div className="pt-6 hidden lg:block">
+                <Button 
+                  onClick={() => {
+                    const emailSection = document.getElementById('email-template');
+                    emailSection?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary"
+                >
+                  {t('rentalSolutionsTenant.frankencoin.cta')}
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </div>
             </div>
           </div>
         </div>
@@ -132,7 +220,7 @@ Freundliche Grüsse,
       {/* Bitcoin Rental Deposit Product Section */}
       <section className="bg-neutral-light py-24">
         <div className="container mx-auto px-4">
-          <div className="grid gap-12 lg:grid-cols-2 items-center">
+          <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
             {/* Image Left */}
             <div className="relative aspect-[4/3] w-full order-1 lg:order-1">
               <Image
@@ -143,9 +231,23 @@ Freundliche Grüsse,
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
+
+            {/* Button Mobile */}
+            <div className="order-2 lg:hidden">
+              <Button 
+                onClick={() => {
+                  const emailSection = document.getElementById('email-template');
+                  emailSection?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary w-full"
+              >
+                {t('rentalSolutionsTenant.bitcoin.cta')}
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </div>
             
             {/* Text Right */}
-            <div className="space-y-6 order-2 lg:order-2">
+            <div className="space-y-6 order-3 lg:order-2">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-primary font-medium text-black">
                 {t('rentalSolutionsTenant.bitcoin.title')}
               </h2>
@@ -170,13 +272,26 @@ Freundliche Grüsse,
                   <span>{t('rentalSolutionsTenant.bitcoin.benefits.banking')}</span>
                 </li>
               </ul>
+              {/* Button Desktop */}
+              <div className="pt-6 hidden lg:block">
+                <Button 
+                  onClick={() => {
+                    const emailSection = document.getElementById('email-template');
+                    emailSection?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary"
+                >
+                  {t('rentalSolutionsTenant.bitcoin.cta')}
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Email Template Section */}
-      <section className="bg-neutral-white py-24">
+      <section id="email-template" className="bg-neutral-white py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl lg:text-3xl font-semibold text-black mb-6 text-center">
@@ -186,16 +301,21 @@ Freundliche Grüsse,
               {t('rentalSolutionsTenant.emailTemplate.description')}
             </p>
             
-            <div className="bg-white border-2 border-gray-200 rounded-lg p-6 mb-6 relative">
+            {/* Copy Button Above Email */}
+            <div className="flex justify-end mb-3">
               <button
                 onClick={copyToClipboard}
-                className="absolute top-4 right-4 bg-accent-orange text-white px-4 py-2 rounded-lg text-sm hover:bg-accent-orange/90 transition-colors"
+                className="bg-accent-orange text-white px-4 py-2 rounded-lg text-sm hover:bg-accent-orange/90 transition-colors"
               >
                 {emailCopied ? t('rentalSolutionsTenant.emailTemplate.copied') : t('rentalSolutionsTenant.emailTemplate.copy')}
               </button>
-              <pre className="whitespace-pre-wrap text-sm text-neutral-dark font-mono leading-relaxed pr-24">
-                {emailTemplate}
-              </pre>
+            </div>
+            
+            {/* Email Content Box */}
+            <div className="bg-white border-2 border-gray-200 rounded-lg p-6 mb-6">
+              <div className="text-sm text-neutral-dark font-mono leading-relaxed whitespace-pre-wrap">
+                {renderEmailWithLinks(emailTemplate)}
+              </div>
             </div>
 
             <div className="text-center">

@@ -277,6 +277,7 @@
       "cta": "Explore Services"
     },
     "contact": {
+      "title": "Need Help Choosing?",
       "question": "None of the above options fit your needs?",
       "button": "Get in Touch"
     }
@@ -295,6 +296,7 @@
       "cta": "Learn More"
     },
     "contact": {
+      "title": "Need Help Choosing?",
       "question": "None of the above options fit your needs?",
       "button": "Get in Touch"
     }
@@ -302,6 +304,11 @@
   "rentalSolutionsTenant": {
     "title": "Rental Solutions for Tenants",
     "subtitle": "Transform your rental deposit into a smart investment opportunity while securing your dream home.",
+    "calculator": {
+      "title": "Calculate Your Potential Returns",
+      "description": "See how much more you could earn with our innovative deposit solutions compared to traditional options.",
+      "button": "Compare Deposits Now"
+    },
     "frankencoin": {
       "title": "Frankencoin Stablecoin Deposits",
       "description": "Pay your rental deposit with Frankencoin (ZCHF), a Swiss franc-pegged stablecoin that offers stability and transparency. Perfect for tech-savvy tenants who want to leverage blockchain technology for their rental arrangements.",
@@ -310,7 +317,8 @@
         "transparency": "Blockchain-based transparency",
         "settlement": "Instant settlement and verification",
         "fees": "Lower fees than traditional banking"
-      }
+      },
+      "cta": "Get Frankencoin Deposit"
     },
     "bitcoin": {
       "title": "Bitcoin Rental Deposits",
@@ -320,7 +328,8 @@
         "escrow": "Secure escrow management",
         "accessibility": "Global accessibility",
         "banking": "No traditional banking requirements"
-      }
+      },
+      "cta": "Get Bitcoin Deposit"
     },
     "emailTemplate": {
       "title": "Ready to Get Started? Send This to Your Landlord",
@@ -361,9 +370,15 @@
     },
     "cta": {
       "button": "Get Started as Tenant"
+    },
+    "finalCta": {
+      "title": "Ready to Get Started?",
+      "description": "Join thousands of tenants who are already earning returns on their rental deposits with our innovative platform.",
+      "button": "Get Plusplus Deposit"
     }
   },
   "depositCalculator": {
+    "backToTenant": "Back to Tenant Solutions",
     "title": "Deposit Calculator",
     "subtitle": "Compare now how much more you can earn with our innovative deposit solutions compared to traditional options.",
     "grossRent": "Gross Rent (CHF/Month)",
@@ -404,7 +419,8 @@
         "banks": "No dealing with banks or physical mail",
         "notifications": "Instant email notifications when tenants pay deposits",
         "release": "Quick release of funds when needed"
-      }
+      },
+      "cta": "Try Now"
     },
     "stepByStep": {
       "title": "Get Started in 4 Simple Steps",
@@ -437,7 +453,8 @@
         "cost": "Zero additional costs compared to traditional banking",
         "transparency": "Complete transparency and real-time tracking",
         "security": "Swiss-grade security with blockchain protection"
-      }
+      },
+      "cta": "Get Started"
     },
     "benefits": {
       "title": "Benefits for Landlords",
@@ -478,6 +495,10 @@
     },
     "cta": {
       "button": "Get Started as Landlord"
+    },
+    "finalCta": {
+      "title": "Ready to Get Started?",
+      "description": "Join thousands of landlords who have already simplified their rental management with our innovative platform."
     }
   },
   "rentalSolutions": {
@@ -538,7 +559,8 @@
         "overcollateralized": "Over-collateralized for maximum security and stability",
         "audited": "Regularly audited and transparently managed",
         "transparent": "Full transparency with real-time reserves verification"
-      }
+      },
+      "cta": "Get a Free Demo"
     },
     "trust": {
       "title": "Why Trust Plusplus",
@@ -551,7 +573,8 @@
         "liquidity": "Funds always available short-term, never used for other purposes",
         "multisig": "Secure multi-signature and offline custody solutions",
         "audited": "Smart contracts security audited by"
-      }
+      },
+      "cta": "Talk to Us"
     },
     "overview": {
       "title": "Overview",

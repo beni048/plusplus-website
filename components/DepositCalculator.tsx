@@ -480,11 +480,6 @@ export default function DepositCalculator() {
 
   return (
     <div className="bg-gradient-to-br from-neutral-light to-white p-8 rounded-2xl shadow-xl border border-gray-200">
-      <div className="mb-8 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-neutral-black">{t('depositCalculator.title')}</h2>
-        <p className="text-neutral-dark text-lg max-w-2xl mx-auto">{t('depositCalculator.subtitle')}</p>
-      </div>
-      
       {/* Input Section */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 bg-white p-6 rounded-xl shadow-sm border border-gray-100">
         <div className="space-y-2">

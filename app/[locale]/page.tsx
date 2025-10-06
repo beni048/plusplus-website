@@ -131,7 +131,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid gap-12 lg:grid-cols-2 items-center">
             {/* Image Left */}
-            <div className="relative aspect-[4/3] w-full lg:order-1">
+            <div className="relative aspect-[4/3] w-full order-2 lg:order-1">
               <Image
                 src="/images/collection/florian-schmid-M8ek54EzfzA-unsplash.webp"
                 alt="Corporate Treasury"
@@ -146,7 +146,7 @@ export default function Home() {
             </div>
             
             {/* Text Right */}
-            <div className="space-y-6 lg:order-2">
+            <div className="space-y-6 order-1 lg:order-2">
               <h2 className="text-4xl font-primary font-medium text-black">
                 {t('mainSections.corporateTreasury.title')}
               </h2>

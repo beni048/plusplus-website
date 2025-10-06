@@ -111,20 +111,16 @@ export default function ProductSelect() {
       <section className="bg-neutral-white py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
-            <Card className="p-12 shadow-lg border-primary-teal/20">
-              <p className="text-lg leading-relaxed text-neutral-dark mb-8 font-secondary">
-                {t('contact.question')}
-              </p>
-              <div className="space-y-4">
-                <Button 
-                  className="w-full sm:w-auto bg-accent-orange text-white px-4 sm:px-8 py-3 sm:py-4 text-base sm:text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary"
-                  onClick={() => window.location.href = `/${locale}/contact`}
-                >
-                  <ArrowRight className="mr-2 h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
-                  <span className="truncate">{t('contact.button')}</span>
-                </Button>
-              </div>
-            </Card>
+            <p className="text-lg leading-relaxed text-neutral-dark mb-8 font-secondary">
+              {t('contact.question')}
+            </p>
+            <Button 
+              className="bg-accent-orange text-white px-8 py-4 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary"
+              onClick={() => window.location.href = `/${locale}/contact`}
+            >
+              {t('contact.button')}
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </Button>
           </div>
         </div>
       </section>

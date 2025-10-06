@@ -3,7 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Calendar } from "lucide-react";
+import { Calendar, ArrowRight } from "lucide-react";
 import Image from 'next/image';
 
 export default function CorporateTreasury() {
@@ -28,9 +28,31 @@ export default function CorporateTreasury() {
       {/* Frankencoin Product Section */}
       <section className="bg-neutral-light pb-24">
         <div className="container mx-auto px-4">
-          <div className="grid gap-12 lg:grid-cols-2 items-center">
+          <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+            {/* Image Right */}
+            <div className="relative aspect-[4/3] w-full order-1 lg:order-2">
+              <Image
+                src="/images/collection/scott-graham-5fNmWej4tAA-unsplash.webp"
+                alt="Frankencoin treasury solution"
+                fill
+                className="object-cover rounded-lg shadow-lg"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+
+            {/* Button Mobile */}
+            <div className="order-2 lg:hidden">
+              <Button
+                onClick={() => window.open('https://meetings-eu1.hubspot.com/jonas-waelti?uuid=907baac1-ae5e-422b-9703-6d822d374dbe', '_blank')}
+                className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary w-full"
+              >
+                {t('corporateTreasury.frankencoin.cta')}
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </div>
+
             {/* Text Left */}
-            <div className="space-y-6 order-2 lg:order-1">
+            <div className="space-y-6 order-3 lg:order-1">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-primary font-medium text-black">
                 {t('corporateTreasury.frankencoin.title')}
               </h2>
@@ -55,17 +77,16 @@ export default function CorporateTreasury() {
                   <span>{t('corporateTreasury.frankencoin.benefits.transparent')}</span>
                 </li>
               </ul>
-            </div>
-            
-            {/* Image Right */}
-            <div className="relative aspect-[4/3] w-full order-1 lg:order-2">
-              <Image
-                src="/images/collection/scott-graham-5fNmWej4tAA-unsplash.webp"
-                alt="Frankencoin treasury solution"
-                fill
-                className="object-cover rounded-lg shadow-lg"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
+              {/* Button Desktop */}
+              <div className="pt-6 hidden lg:block">
+                <Button
+                  onClick={() => window.open('https://meetings-eu1.hubspot.com/jonas-waelti?uuid=907baac1-ae5e-422b-9703-6d822d374dbe', '_blank')}
+                  className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary"
+                >
+                  {t('corporateTreasury.frankencoin.cta')}
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </div>
             </div>
           </div>
         </div>
@@ -74,7 +95,7 @@ export default function CorporateTreasury() {
       {/* Plusplus Trust Section */}
       <section className="bg-neutral-white py-24">
         <div className="container mx-auto px-4">
-          <div className="grid gap-12 lg:grid-cols-2 items-center">
+          <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
             {/* Image Left */}
             <div className="relative aspect-[4/3] w-full order-1 lg:order-1">
               <Image
@@ -85,9 +106,20 @@ export default function CorporateTreasury() {
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
+
+            {/* Button Mobile */}
+            <div className="order-2 lg:hidden">
+              <Button
+                onClick={() => window.open('https://meetings-eu1.hubspot.com/jonas-waelti?uuid=907baac1-ae5e-422b-9703-6d822d374dbe', '_blank')}
+                className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary w-full"
+              >
+                {t('corporateTreasury.trust.cta')}
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </div>
             
             {/* Text Right */}
-            <div className="space-y-6 order-2 lg:order-2">
+            <div className="space-y-6 order-3 lg:order-2">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-primary font-medium text-black">
                 {t('corporateTreasury.trust.title')}
               </h2>
@@ -134,6 +166,16 @@ export default function CorporateTreasury() {
                   </span>
                 </li>
               </ul>
+              {/* Button Desktop */}
+              <div className="pt-6 hidden lg:block">
+                <Button
+                  onClick={() => window.open('https://meetings-eu1.hubspot.com/jonas-waelti?uuid=907baac1-ae5e-422b-9703-6d822d374dbe', '_blank')}
+                  className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary"
+                >
+                  {t('corporateTreasury.trust.cta')}
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </div>
             </div>
           </div>
         </div>
