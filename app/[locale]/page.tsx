@@ -21,19 +21,42 @@ export default function Home() {
           src="/images/title_img.webp"
           alt="Title background image"
           fill
-          className="object-cover"
+          className="object-cover object-center sm:object-right"
           priority
           quality={95}
           sizes="100vw"
           placeholder="blur"
           blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
         />
+        
+        {/* Subtle gradient overlay for better text contrast */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/60"></div>
+        
         {/* Discrete photo credit */}
-        <div className="absolute bottom-2 right-2 text-[10px] text-white/40 font-secondary">
+        <div className="absolute bottom-2 right-2 text-[10px] text-white/60 font-secondary z-10">
           Collin Croome
         </div>
-        <div className="absolute inset-0 flex items-start justify-end" style={{ paddingTop: 'max(calc(33.33vh - 6rem), 6rem)' }}>
-          {/* Desktop: Box with background, Mobile: No box */}
+
+        <div className="absolute inset-0 flex items-center justify-center sm:justify-end" style={{ paddingTop: 'max(calc(33.33vh - 6rem), 6rem)' }}>
+          {/* Mobile: Centered simple layout */}
+          <div className="block sm:hidden w-full px-6 text-center">
+            <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-8 mx-auto max-w-sm">
+              <h1 className="font-primary font-black text-3xl text-white leading-tight mb-4">
+                {t('hero.title.simple')} <span className="text-accent-orange">{t('hero.title.highlight')}</span> {t('hero.title.subtitle')}
+              </h1>
+              <p className="font-secondary text-base text-white/90 mb-6 leading-relaxed">
+                {t('hero.subtitle')}
+              </p>
+              <Link href={`/${locale}/select`}>
+                <Button className="bg-accent-orange text-white px-6 py-3 text-base hover:bg-accent-orange/90 group transition-all duration-300 font-primary">
+                  {t('hero.cta')}
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </Link>
+            </div>
+          </div>
+
+          {/* Desktop: Keep existing layout */}
           <div className="hidden sm:block bg-black/30 backdrop-blur-md border-l border-white/30 shadow-2xl h-auto animate-slide-in-right ml-0 sm:ml-[10vw] md:ml-[15vw] lg:ml-[25vw] xl:ml-[35vw] 2xl:ml-[45vw]" style={{ borderRadius: '0px 0px 0px 0px', borderTopLeftRadius: '0.5rem', borderBottomLeftRadius: '0.5rem', width: '100%', maxWidth: '100%', minHeight: 'auto' }}>
             <div className="flex items-center justify-start">
               <div className="p-6 md:p-8 lg:p-10 max-w-2xl w-full ml-0 sm:ml-[2vw] md:ml-[3vw] lg:ml-[4vw] xl:ml-[5vw]">
@@ -45,38 +68,12 @@ export default function Home() {
                 </p>
                 <div className="mt-8">
                   <Link href={`/${locale}/select`}>
-                    <Button 
-                      className="bg-accent-orange text-white px-6 py-3 md:px-8 md:py-4 text-lg shadow-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary"
-                    >
+                    <Button className="bg-accent-orange text-white px-6 py-3 md:px-8 md:py-4 text-lg shadow-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary">
                       {t('hero.cta')}
                       <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                     </Button>
                   </Link>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Mobile: Light box for title, button below */}
-          <div className="block sm:hidden w-full px-4">
-            <div className="text-center">
-              {/* Light background box for title only */}
-              <div className="bg-black/20 backdrop-blur-md rounded-lg p-6 mb-6 shadow-lg">
-                <h1 className="font-primary font-black text-[clamp(2.5rem,8vw,3.5rem)] text-white leading-tight drop-shadow-lg">
-                  {t('hero.title.simple')} <span className="text-accent-orange drop-shadow-lg">{t('hero.title.highlight')}</span> {t('hero.title.subtitle')}
-                </h1>
-              </div>
-              
-              {/* Button below the box */}
-              <div>
-                <Link href={`/${locale}/select`}>
-                  <Button 
-                    className="bg-accent-orange text-white px-8 py-4 text-lg shadow-2xl hover:bg-accent-orange/90 group transition-all duration-300 border-2 border-black/20 font-primary"
-                  >
-                    {t('hero.cta')}
-                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                  </Button>
-                </Link>
               </div>
             </div>
           </div>
