@@ -58,7 +58,7 @@ Freundliche Grüsse,
     const lines = text.split('\n');
     return lines.map((line, index) => {
       // Replace URLs with clickable links
-      const urlRegex = /(app\.zinsli\.com\/[^\s]+|pafinance\.live\/[^\s]+)/g;
+      const urlRegex = /(app\.zinsli\.com\/[^\s]+|plusplus\.swiss\/[^\s]+)/g;
       const parts = line.split(urlRegex);
       
       // Determine if this is an empty line (paragraph break)
@@ -160,6 +160,10 @@ Freundliche Grüsse,
                 className="object-cover rounded-lg shadow-lg"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
+              {/* Discrete photo credit */}
+              <div className="absolute bottom-1 right-1 text-[10px] text-white/40 font-secondary">
+                Nicolas Peyrol
+              </div>
             </div>
 
             {/* Button Mobile */}
@@ -233,6 +237,10 @@ Freundliche Grüsse,
                 className="object-cover rounded-lg shadow-lg"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
+              {/* Discrete photo credit */}
+              <div className="absolute bottom-1 right-1 text-[10px] text-white/40 font-secondary">
+                Thomas Aubaud
+              </div>
             </div>
 
             {/* Button Mobile */}

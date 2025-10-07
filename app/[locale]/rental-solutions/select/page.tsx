@@ -53,6 +53,10 @@ export default function RentalSolutionsSelect() {
                   <div className="absolute bottom-1 right-1 text-[10px] text-white/40 font-secondary">
                     Maria Ziegler
                   </div>
+                  {/* Discrete photo credit */}
+                  <div className="absolute bottom-1 right-1 text-[10px] text-white/40 font-secondary">
+                    Maria Ziegler
+                  </div>
                 </div>
                 <CardContent className="p-8">
                   <h2 className="text-2xl lg:text-3xl font-primary font-bold text-black mb-4 group-hover:text-blue-600 transition-colors">
@@ -85,6 +89,10 @@ export default function RentalSolutionsSelect() {
                     <div className="bg-green-600/90 backdrop-blur-sm p-3 rounded-lg">
                       <Building2 className="h-8 w-8 text-white" />
                     </div>
+                  </div>
+                  {/* Discrete photo credit */}
+                  <div className="absolute bottom-1 right-1 text-[10px] text-white/40 font-secondary">
+                    Tierra Mallorca
                   </div>
                   {/* Discrete photo credit */}
                   <div className="absolute bottom-1 right-1 text-[10px] text-white/40 font-secondary">

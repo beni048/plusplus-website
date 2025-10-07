@@ -41,6 +41,10 @@ export default function CorporateTreasury() {
                 className="object-cover rounded-lg shadow-lg"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
+              {/* Discrete photo credit */}
+              <div className="absolute bottom-1 right-1 text-[10px] text-white/40 font-secondary">
+                Scott Graham
+              </div>
             </div>
 
             {/* Button Mobile */}
@@ -108,6 +112,10 @@ export default function CorporateTreasury() {
                 className="object-cover rounded-lg shadow-lg"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
+              {/* Discrete photo credit */}
+              <div className="absolute bottom-1 right-1 text-[10px] text-white/40 font-secondary">
+                Melina Kiefer
+              </div>
             </div>
 
             {/* Button Mobile */}
