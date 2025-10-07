@@ -23,7 +23,7 @@ I heard from a friend that there's a new, quick, and free tool called Zinsli for
 • You receive instant email confirmation as soon as the deposit arrives
 • There are no fees for you as the landlord
 
-Could you please set up a free account at app.zinsli.com/en/login and invite me? You can learn more about the process here: pafinance.live/en/rental-solutions/landlord
+Could you please set up a free account at app.zinsli.com/en/login and invite me? You can learn more about the process here: plusplus.swiss/en/rental-solutions/landlord
 
 It's simple: sign up, click "Invite Tenant," and enter my email. Then I'll complete my side right away.
 
@@ -43,7 +43,7 @@ Ich habe von einem Freund gehört, dass es ein neues, schnelles und kostenloses 
 • Sie erhalten sofortige E-Mail-Bestätigung, sobald die Kaution ankommt
 • Es fallen keine Gebühren für Sie als Vermieter an
 
-Könnten Sie bitte ein kostenloses Konto unter  app.zinsli.com/de/login erstellen und mich einladen? Hier können Sie mehr über den Prozess erfahren: pafinance.live/de/rental-solutions/landlord
+Könnten Sie bitte ein kostenloses Konto unter  app.zinsli.com/de/login erstellen und mich einladen? Hier können Sie mehr über den Prozess erfahren: plusplus.swiss/de/rental-solutions/landlord
 
 Es ist einfach: Registrieren Sie sich, klicken Sie auf "Mieter einladen" und geben Sie meine E-Mail-Adresse ein. Dann erledige ich sofort meinen Teil.
 
