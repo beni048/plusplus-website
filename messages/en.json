@@ -7,12 +7,12 @@
   },
   "hero": {
     "title": {
-      "simple": "Reliability",
-      "highlight": "meets",
-      "subtitle": "Innovation"
+      "simple": "New ways for your capital.",
+      "highlight": "",
+      "subtitle": ""
     },
-    "subtitle": "We are redefining financial security – with Swiss quality, simplicity, and transparency.",
-    "cta": "Discover Now"
+    "subtitle": "We provide access to a new generation of financial solutions.",
+    "cta": "Discover now"
   },
   "about": {
     "title": "Plusplus makes saving smart again",
@@ -22,27 +22,27 @@
   },
   "mainSections": {
     "rentalSolutions": {
-      "title": "Rental Solutions",
-      "paragraph1": "Discover our comprehensive rental solutions designed to meet your financial needs. From equipment financing to flexible lease agreements, we provide tailored solutions that help your business grow while maintaining optimal cash flow.",
-      "paragraph2": "Our rental solutions offer competitive rates, flexible terms, and expert support throughout the entire process. Whether you're a startup or an established enterprise, we have the right solution for you.",
-      "button": "Learn More"
+  "title": "Rental Solutions",
+  "paragraph1": "Our digital rental deposit solutions offer a modern alternative to the traditional bank deposit. Instead of locking up capital, the deposit is securely stored on the blockchain: as Swiss Franc stablecoin with yield or in Bitcoin.",
+  "paragraph2": "Behind the scenes, technology ensures fair returns for tenants. For landlords, the process is transparent, secure, and fully digital for the first time.",
+  "button": "Benefit now"
     },
     "corporateTreasury": {
-      "title": "Corporate Treasury",
-      "paragraph1": "Optimize your corporate treasury management with our advanced financial solutions. We help businesses streamline their cash management, improve liquidity, and make informed investment decisions.",
-      "paragraph2": "Our treasury services include cash flow forecasting, risk management, and strategic financial planning. Partner with us to enhance your financial operations and drive sustainable growth.",
-      "button": "Explore Services"
+  "title": "Corporate Treasury",
+  "paragraph1": "Our treasury solutions give companies secure access to the modern, digital financial world. Worldwide, more and more companies and financial institutions rely on stablecoins to manage liquidity more efficiently and profitably.",
+  "paragraph2": "With Frankencoin (ZCHF), a stable Swiss Franc stablecoin exists for the first time. We now enable institutional access to this new standard. Transparent, regulated, and with 3% yield in a zero-interest environment.",
+  "button": "Learn more"
     },
     "partners": {
-      "title": "Partners",
-      "paragraph1": "We collaborate with leading financial technology companies to provide you with the best possible solutions. Our strategic partnerships enable us to offer innovative services and competitive advantages.",
-      "paragraph2": "Through these partnerships, we ensure access to cutting-edge technology, enhanced security, and comprehensive support for all your financial needs."
+  "title": "Partners",
+  "paragraph1": "Our partners are among the leading providers in financial technology and digital infrastructure.",
+  "paragraph2": "Together, we ensure that all systems meet the highest standards in security, compliance, and transparency."
     },
     "contact": {
-      "title": "Ready to Get Started?",
-      "paragraph": "Schedule a consultation with our sales team to discuss your financial needs and discover how our solutions can benefit your business.",
-      "button": "Schedule a Meeting",
-      "subtitle": "Book a 30-minute consultation with our sales head"
+  "title": "Ready to get started?",
+  "paragraph": "Discover our solutions in a personal meeting.\nBook a non-binding 30-minute consultation with our sales manager.",
+  "button": "Schedule a meeting",
+  "subtitle": "Book a 30-minute consultation now."
     }
   },
   "team": {
@@ -264,18 +264,18 @@
     }
   },
   "productSelect": {
-    "title": "Choose Your Solution",
-    "subtitle": "Select the category that fits your needs.",
-    "subtitleFull": "Select the product category that best fits your needs and discover how Plusplus can help you.",
+  "title": "Discover Our Solutions",
+  "subtitle": "Our products combine proven financial principles with digital technology for modern rental and treasury applications.",
+  "subtitleFull": "Our products combine proven financial principles with digital technology for modern rental and treasury applications.",
     "rentalSolutions": {
-      "title": "Rental Solutions",
-      "description": "Smart rental deposit management and property solutions for tenants and landlords.",
-      "cta": "Learn More"
+  "title": "Rental Solutions",
+  "description": "Digital rental deposit solutions for tenants and landlords. Fair, secure, and fully managed online.",
+  "cta": "Learn More"
     },
     "corporateTreasury": {
-      "title": "Corporate Treasury",
-      "description": "Advanced treasury management and investment solutions for businesses and institutions.",
-      "cta": "Explore Services"
+  "title": "Corporate Treasury",
+  "description": "Modern, stablecoin-based treasury and liquidity solutions for companies and institutions.",
+  "cta": "Discover Services"
     },
     "contact": {
       "title": "Need Help Choosing?",
@@ -284,18 +284,18 @@
     }
   },
   "rentalSolutionsSelect": {
-    "title": "Choose Your Path",
-    "subtitle": "Tell us your role for personalized solutions.",
-    "subtitleFull": "Tell us about your role in the rental market to get personalized solutions.",
+  "title": "Find the Right Rental Solution",
+  "subtitle": "Discover our secure, digital deposit solutions. Fair for tenants. Simple for landlords.",
+  "subtitleFull": "Discover our secure, digital deposit solutions. Fair for tenants. Simple for landlords.",
     "tenant": {
-      "title": "I'm a Tenant",
-      "description": "Looking for flexible rental deposit solutions and better financial opportunities.",
-      "cta": "Get Started"
+  "title": "I'm Renting",
+  "description": "Traditional rental deposits are a thing of the past.\nOur digital solution enables fair returns and full transparency. In Swiss Franc stablecoins or in Bitcoin.",
+  "cta": "Get Started"
     },
     "landlord": {
-      "title": "I'm a Landlord/Real Estate Owner",
-      "description": "Seeking efficient property management and rental guarantee solutions.",
-      "cta": "Learn More"
+  "title": "I'm a Landlord",
+  "description": "Want to manage rental deposits easily, transparently, and digitally?\nWith our partner Zinsli, we offer verified security and automated processes. Less effort and more clarity. Completely free.",
+  "cta": "Learn More"
     },
     "contact": {
       "title": "Need Help Choosing?",
@@ -304,43 +304,41 @@
     }
   },
   "rentalSolutionsTenant": {
-    "title": "Rental Solutions for Tenants",
-    "subtitle": "Transform your deposit into smart investments.",
-    "subtitleFull": "Transform your rental deposit into a smart investment opportunity while securing your dream home.",
+  "title": "Digital Rental Deposit. Fair and Simple.",
+  "subtitle": "Make your deposit part of your investment strategy today.",
+  "subtitleFull": "Make your deposit part of your investment strategy today.",
     "calculator": {
-      "title": "Calculate Your Potential Returns",
-      "description": "See how much more you could earn with our innovative deposit solutions compared to traditional options.",
-      "button": "Compare Deposits Now"
+  "title": "Calculate Your Yield Now",
+  "description": "Discover the difference between traditional bank deposits, deposit insurance, and digital alternatives.",
+  "button": "To the Deposit Calculator"
     },
     "frankencoin": {
-      "title": "Frankencoin Stablecoin Deposits",
-      "description": "Pay your rental deposit with Frankencoin (ZCHF), a Swiss franc-pegged stablecoin that offers stability and transparency. Perfect for tech-savvy tenants who want to leverage blockchain technology for their rental arrangements.",
+      "title": "Deposit in Swiss Franc Stablecoins",
+      "description": "The modern alternative to a savings account. Your rental deposit is held in Frankencoin (ZCHF): a stablecoin pegged to the Swiss Franc, offering stability and yield.",
       "benefits": {
-        "stability": "Stable value pegged to Swiss Franc",
-        "transparency": "Blockchain-based transparency",
-        "settlement": "Instant settlement and verification",
-        "fees": "Lower fees than traditional banking"
+        "stability": "Currently 3% yield per year",
+        "transparency": "Stable value development",
+        "settlement": "Institutional custody"
       },
-      "cta": "Get Frankencoin Deposit"
+      "cta": "To Product Factsheet"
     },
     "bitcoin": {
-      "title": "Bitcoin Rental Deposits",
-      "description": "Use Bitcoin for your rental deposit while maintaining the potential for appreciation. Your deposit remains secure in escrow while you benefit from Bitcoin's long-term value growth potential.",
+      "title": "Deposit in Bitcoin",
+      "description": "For forward-thinking tenants. Your rental deposit is securely and segregated as Bitcoin (WBTC). This way, you participate in the long-term development of the world’s leading digital asset.",
       "benefits": {
-        "appreciation": "Potential for value appreciation",
-        "escrow": "Secure escrow management",
-        "accessibility": "Global accessibility",
-        "banking": "No traditional banking requirements"
+        "appreciation": "Long-term value potential",
+        "escrow": "Full transparency",
+        "accessibility": "Institutional custody"
       },
-      "cta": "Get Bitcoin Deposit"
+      "cta": "To Product Factsheet"
     },
     "emailTemplate": {
-      "title": "Ready to Get Started? Send This to Your Landlord",
-      "description": "Copy this email template and send it directly to your landlord to introduce them to Zinsli's rental deposit solutions.",
-      "copy": "Copy Email",
-      "copied": "Copied!",
-      "button": "Visit Zinsli Platform",
-      "subtitle": "Your landlord can sign up and invite you in under 5 minutes"
+  "title": "Ready to get started? Inform your landlord",
+  "description": "Copy this email template and send it directly to your landlord to introduce them to the Plusplus and Zinsli rental deposit solution.",
+  "copy": "Copy Email",
+  "copied": "Copied!",
+  "button": "Visit Zinsli Platform",
+  "subtitle": "Your landlord can sign up and invite you in under 5 minutes"
     },
     "benefits": {
       "title": "Benefits for Tenants",

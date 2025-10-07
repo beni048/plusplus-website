@@ -224,10 +224,7 @@ Freundliche Grüsse,
                   <span className="text-accent-orange mr-3 mt-1">•</span>
                   <span>{t('rentalSolutionsTenant.frankencoin.benefits.settlement')}</span>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-accent-orange mr-3 mt-1">•</span>
-                  <span>{t('rentalSolutionsTenant.frankencoin.benefits.fees')}</span>
-                </li>
+                {/* Removed extra bullet point for Frankencoin */}
               </ul>
               {/* Button Desktop */}
               <div className="pt-6 hidden lg:block">
@@ -304,10 +301,7 @@ Freundliche Grüsse,
                   <span className="text-accent-orange mr-3 mt-1">•</span>
                   <span>{t('rentalSolutionsTenant.bitcoin.benefits.accessibility')}</span>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-accent-orange mr-3 mt-1">•</span>
-                  <span>{t('rentalSolutionsTenant.bitcoin.benefits.banking')}</span>
-                </li>
+                {/* Removed extra bullet point for Bitcoin */}
               </ul>
               {/* Button Desktop */}
               <div className="pt-6 hidden lg:block">

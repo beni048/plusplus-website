@@ -7,11 +7,11 @@
   },
   "hero": {
     "title": {
-      "simple": "Verlässlichkeit",
-      "highlight": "trifft",
-      "subtitle": "Innovation"
+      "simple": "Neue Wege für Ihr Kapital.",
+      "highlight": "",
+      "subtitle": ""
     },
-    "subtitle": "Wir denken finanzielle Sicherheit neu – mit Schweizer Qualität, Einfachheit und Transparenz.",
+    "subtitle": "Wir schaffen den Zugang zu einer neuen Generation von Finanzlösungen.",
     "cta": "Jetzt Entdecken"
   },
   "about": {
@@ -22,27 +22,27 @@
   },
   "mainSections": {
     "rentalSolutions": {
-      "title": "Mietlösungen",
-      "paragraph1": "Entdecken Sie unsere umfassenden Mietlösungen, die darauf ausgelegt sind, Ihre finanziellen Bedürfnisse zu erfüllen. Von Geräte-Finanzierung bis hin zu flexiblen Leasingverträgen bieten wir massgeschneiderte Lösungen, die Ihrem Unternehmen beim Wachstum helfen und gleichzeitig einen optimalen Cashflow aufrechterhalten.",
-      "paragraph2": "Unsere Mietlösungen bieten wettbewerbsfähige Zinssätze, flexible Konditionen und fachkundige Unterstützung während des gesamten Prozesses. Ob Sie ein Startup oder ein etabliertes Unternehmen sind, wir haben die richtige Lösung für Sie.",
-      "button": "Mehr erfahren"
+  "title": "Mietlösungen",
+  "paragraph1": "Unsere digitalen Mietkautionslösungen bieten eine moderne Alternative zum klassischen Bankdepot. Statt Kapital zu blockieren, wird die Kaution sicher auf der Blockchain hinterlegt: als Schweizer Franken Stablecoin mit Rendite oder in Bitcoin.",
+  "paragraph2": "Im Hintergrund sorgt die Technologie für faire Erträge für Mieter:innen. Für Vermieter:innen ist der Prozess transparent, sicher und erstmals vollständig digital.",
+  "button": "Jetzt profitieren"
     },
     "corporateTreasury": {
-      "title": "Corporate Treasury",
-      "paragraph1": "Optimieren Sie Ihr Corporate Treasury Management mit unseren fortschrittlichen Finanzlösungen. Wir helfen Unternehmen dabei, ihr Cash Management zu rationalisieren, die Liquidität zu verbessern und fundierte Investitionsentscheidungen zu treffen.",
-      "paragraph2": "Unsere Treasury-Services umfassen Cashflow-Prognosen, Risikomanagement und strategische Finanzplanung. Arbeiten Sie mit uns zusammen, um Ihre Finanzoperationen zu verbessern und nachhaltiges Wachstum zu fördern.",
-      "button": "Services erkunden"
+  "title": "Corporate Treasury",
+  "paragraph1": "Unsere Treasury-Lösungen eröffnen Unternehmen einen sicheren Zugang zur modernen, digitalen Finanzwelt. Weltweit setzen immer mehr Unternehmen und Finanzinstitute auf Stablecoins, um Liquidität effizienter und gewinnbringend zu verwalten.",
+  "paragraph2": "Mit dem Frankencoin (ZCHF) existiert erstmals ein stabiler Schweizer Franken Stablecoin. Wir ermöglichen jetzt den institutionellen Zugang zu diesem neuen Standard. Transparent, reguliert und mit 3% Rendite in einem Nullzinsumfeld.",
+  "button": "Mehr erfahren"
     },
     "partners": {
-      "title": "Partner",
-      "paragraph1": "Wir arbeiten mit führenden Finanztechnologie-Unternehmen zusammen, um Ihnen die bestmöglichen Lösungen zu bieten. Unsere strategischen Partnerschaften ermöglichen es uns, innovative Services und Wettbewerbsvorteile anzubieten.",
-      "paragraph2": "Durch diese Partnerschaften stellen wir den Zugang zu modernster Technologie, erhöhter Sicherheit und umfassendem Support für alle Ihre finanziellen Bedürfnisse sicher."
+  "title": "Partner",
+  "paragraph1": "Unsere Partner gehören zu den führenden Anbietern im Bereich Finanztechnologie und digitaler Infrastruktur.",
+  "paragraph2": "Gemeinsam stellen wir sicher, dass alle Systeme höchsten Standards in Sicherheit, Compliance und Transparenz entsprechen."
     },
     "contact": {
-      "title": "Bereit loszulegen?",
-      "paragraph": "Vereinbaren Sie eine Beratung mit unserem Vertriebsteam, um Ihre finanziellen Bedürfnisse zu besprechen und zu entdecken, wie unsere Lösungen Ihrem Unternehmen zugutekommen können.",
-      "button": "Meeting planen",
-      "subtitle": "Buchen Sie eine 30-minütige Beratung mit unserem Vertriebsleiter"
+  "title": "Bereit loszulegen?",
+  "paragraph": "Lernen Sie unsere Lösungen in einem persönlichen Gespräch kennen.\nBuchen Sie eine unverbindliche 30-minütige Beratung mit unserem Vertriebsleiter.",
+  "button": "Meeting planen",
+  "subtitle": "Jetzt Termin für eine 30-minütige Beratung buchen."
     }
   },
   "team": {
@@ -264,18 +264,18 @@
     }
   },
   "productSelect": {
-    "title": "Wählen Sie Ihre Lösung",
-    "subtitle": "Wählen Sie die Kategorie für Ihre Bedürfnisse.",
-    "subtitleFull": "Wählen Sie die passende Kategorie für Ihre spezifischen Finanzierungs- und Immobilienbedürfnisse.",
+  "title": "Entdecken Sie unsere Lösungen",
+  "subtitle": "Unsere Produkte verbinden bewährte Finanzprinzipien mit digitaler Technologie für moderne Miet- und Treasury-Anwendungen.",
+  "subtitleFull": "Unsere Produkte verbinden bewährte Finanzprinzipien mit digitaler Technologie für moderne Miet- und Treasury-Anwendungen.",
     "rentalSolutions": {
-      "title": "Mietlösungen",
-      "description": "Intelligente Mietkautionsverwaltung und Immobilienlösungen für Mieter und Vermieter.",
-      "cta": "Mehr erfahren"
+  "title": "Mietlösungen",
+  "description": "Digitale Mietkautionslösungen für Mieter und Vermieter. Fair, sicher und vollständig online verwaltet.",
+  "cta": "Mehr erfahren"
     },
     "corporateTreasury": {
-      "title": "Corporate Treasury",
-      "description": "Fortschrittliche Treasury-Management- und Investitionslösungen für Unternehmen und Institutionen.",
-      "cta": "Services entdecken"
+  "title": "Corporate Treasury",
+  "description": "Moderne, Stablecoin-basierte Treasury- und Liquiditätslösungen für Unternehmen und Institutionen.",
+  "cta": "Services entdecken"
     },
     "contact": {
       "title": "Hilfe bei der Auswahl?",
@@ -284,18 +284,18 @@
     }
   },
   "rentalSolutionsSelect": {
-    "title": "Wählen Sie Ihren Weg",
-    "subtitle": "Teilen Sie uns Ihre Rolle für personalisierte Lösungen mit.",
-    "subtitleFull": "Teilen Sie uns Ihre Rolle mit, damit wir Ihnen personalisierte Immobilienlösungen anbieten können.",
+  "title": "Finden Sie die passende Mietlösung",
+  "subtitle": "Entdecken Sie unsere sicheren, digitalen Kautionslösungen. Fair für Mieter. Einfach für Vermieter.",
+  "subtitleFull": "Entdecken Sie unsere sicheren, digitalen Kautionslösungen. Fair für Mieter. Einfach für Vermieter.",
     "tenant": {
-      "title": "Ich miete",
-      "description": "Auf der Suche nach flexiblen Mietkautionslösungen und besseren finanziellen Möglichkeiten.",
-      "cta": "Loslegen"
+  "title": "Ich miete",
+  "description": "Die klassische Mietkaution war gestern.\nUnsere digitale Lösung ermöglicht faire Erträge und volle Transparenz. In Schweizer Franken Stablecoins oder in Bitcoin.",
+  "cta": "Loslegen"
     },
     "landlord": {
-      "title": "Ich vermiete",
-      "description": "Auf der Suche nach effizienter Immobilienverwaltung und Mietgarantielösungen.",
-      "cta": "Mehr erfahren"
+  "title": "Ich vermiete",
+  "description": "Sie möchten Mietkautionen einfach, transparent und digital verwalten?\nMit unserem Partner Zinsli bieten wir geprüfte Sicherheit und automatisierte Abläufe. Weniger Aufwand und mehr Übersicht. Komplett kostenlos.",
+  "cta": "Mehr erfahren"
     },
     "contact": {
       "title": "Hilfe bei der Auswahl?",
@@ -304,39 +304,38 @@
     }
   },
   "rentalSolutionsTenant": {
-    "title": "Mietlösungen für Mieter",
-    "subtitle": "Verwandeln Sie Ihre Kaution in intelligente Investitionen.",
-    "subtitleFull": "Verwandeln Sie Ihre Mietkaution in eine intelligente Investitionsmöglichkeit und sichern Sie sich Ihr Traumzuhause.",
+  "title": "Digitale Mietkaution. Fair und einfach.",
+  "subtitle": "Machen Sie Ihre Kaution noch heute zu einem Bestandteil Ihrer Anlagestrategie.",
+  "subtitleFull": "Machen Sie Ihre Kaution noch heute zu einem Bestandteil Ihrer Anlagestrategie.",
     "calculator": {
-      "title": "Berechnen Sie Ihre potenziellen Renditen",
-      "description": "Sehen Sie, wie viel mehr Sie mit unseren innovativen Kautionslösungen im Vergleich zu traditionellen Optionen verdienen könnten.",
-      "button": "Jetzt Kaution vergleichen"
+  "title": "Jetzt Rendite berechnen",
+  "description": "Entdecken Sie den Unterschied zwischen klassischer Bankkaution, Kautionsversicherung und digitalen Alternativen.",
+  "button": "Zum Kautionsrechner"
     },
     "frankencoin": {
-      "title": "Frankencoin Stablecoin Kautionen",
-      "description": "Zahlen Sie Ihre Mietkaution mit Frankencoin (ZCHF), einem an den Schweizer Franken gekoppelten Stablecoin, der Stabilität und Transparenz bietet. Perfekt für technikaffine Mieter, die Blockchain-Technologie für ihre Mietverträge nutzen möchten.",
+      "title": "Kaution in Schweizer Franken Stablecoins",
+      "description": "Die moderne Alternative zum Sparkonto. Ihre Mietkaution wird in Frankencoin (ZCHF) hinterlegt: ein an den Schweizer Franken gekoppelter Stablecoin, der Stabilität und Rendite bietet.",
       "benefits": {
-        "stability": "Stabiler Wert gekoppelt an Schweizer Franken",
-        "transparency": "Blockchain-basierte Transparenz",
-        "settlement": "Sofortige Abwicklung und Verifikation",
-        "fees": "Niedrigere Gebühren als traditionelles Banking"
+        "stability": "Aktuell 3% Ertrag pro Jahr",
+        "transparency": "Stabile Wertentwicklung",
+        "settlement": "Institutionelle Verwahrung"
       },
-      "cta": "Vom Stablecoin profitieren"
+  "cta": "Zum Produktemerkblatt"
+
     },
     "bitcoin": {
-      "title": "Bitcoin Mietkautionen",
-      "description": "Nutzen Sie Bitcoin für Ihre Mietkaution und bewahren Sie das Potenzial für Wertsteigerungen. Ihre Kaution bleibt sicher verwahrt, während Sie von Bitcoins langfristigem Wachstumspotenzial profitieren.",
+      "title": "Kaution in Bitcoin",
+      "description": "Für zukunftsorientierte Mieter:innen. Ihre Mietkaution wird als Bitcoin (WBTC) sicher und segregiert hinterlegt. So nehmen Sie an der langfristigen Entwicklung des weltweit führenden digitalen Assets teil.",
       "benefits": {
-        "appreciation": "Potenzial für Wertsteigerung",
-        "escrow": "Sichere Treuhandverwaltung",
-        "accessibility": "Globale Zugänglichkeit",
-        "banking": "Keine traditionellen Banking-Anforderungen"
+        "appreciation": "Langfristiges Wertpotenzial",
+        "escrow": "Volle Transparenz",
+        "accessibility": "Institutionelle Verwahrung"
       },
-      "cta": "Von Bitcoin profitieren"
+  "cta": "Zum Produktemerkblatt"
     },
     "emailTemplate": {
-      "title": "Bereit loszulegen? Senden Sie dies an Ihren Vermieter",
-      "description": "Kopieren Sie diese E-Mail-Vorlage und senden Sie sie direkt an Ihren Vermieter, um ihn mit Zinslis Mietkautionslösungen bekannt zu machen.",
+      "title": "Bereit loszulegen? Informieren Sie Ihren Vermieter",
+      "description": "Kopieren Sie diese E-Mail-Vorlage und senden Sie sie direkt an Ihren Vermieter, um ihn mit der Mietkautionslösung von Plusplus und Zinsli bekannt zu machen.",
       "copy": "E-Mail kopieren",
       "copied": "Kopiert!",
       "button": "Zinsli-Plattform besuchen",
