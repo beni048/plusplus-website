@@ -1,6 +1,7 @@
 {
-  "/[locale]/page": "app/[locale]/page.js",
+  "/[locale]/select/page": "app/[locale]/select/page.js",
   "/[locale]/rental-solutions/select/page": "app/[locale]/rental-solutions/select/page.js",
   "/[locale]/rental-solutions/tenant/page": "app/[locale]/rental-solutions/tenant/page.js",
-  "/[locale]/rental-solutions/landlord/page": "app/[locale]/rental-solutions/landlord/page.js"
+  "/[locale]/rental-solutions/landlord/page": "app/[locale]/rental-solutions/landlord/page.js",
+  "/[locale]/corporate-treasury/page": "app/[locale]/corporate-treasury/page.js"
 }

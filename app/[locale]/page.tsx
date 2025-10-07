@@ -18,13 +18,13 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-[100svh] flex items-center justify-center">
         <Image
-          src="/images/title_img.webp"
+          src="/images/collection_v2/collin-croome-uAp6eburpk0-unsplash.jpg"
           alt="Title background image"
           fill
-          className="object-cover object-center sm:object-right"
           priority
-          quality={95}
+          quality={90}
           sizes="100vw"
+          className="object-cover object-center sm:object-right"
           placeholder="blur"
           blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
         />
@@ -108,14 +108,17 @@ export default function Home() {
             {/* Image Right */}
             <div className="relative aspect-[4/3] w-full">
               <Image
-                src="/images/collection/eric-weber-_wB88hxsW8M-unsplash.webp"
+                src="/images/collection_v2/eric-weber-_wB88hxsW8M-unsplash.jpg"
                 alt="Rental Solutions"
                 fill
-                className="object-cover rounded-lg shadow-lg"
+                quality={85}
                 sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover rounded-lg"
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
               />
               {/* Discrete photo credit */}
-              <div className="absolute bottom-1 right-1 text-[10px] text-white/40 font-secondary">
+              <div className="absolute bottom-2 right-2 text-[10px] text-white/40 font-secondary">
                 Eric Weber
               </div>
             </div>
@@ -130,14 +133,17 @@ export default function Home() {
             {/* Image Left */}
             <div className="relative aspect-[4/3] w-full order-2 lg:order-1">
               <Image
-                src="/images/collection/florian-schmid-M8ek54EzfzA-unsplash.webp"
+                src="/images/collection_v2/florian-schmid-M8ek54EzfzA-unsplash.jpg"
                 alt="Corporate Treasury"
                 fill
-                className="object-cover rounded-lg shadow-lg"
+                quality={85}
                 sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover rounded-lg"
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
               />
               {/* Discrete photo credit */}
-              <div className="absolute bottom-1 right-1 text-[10px] text-white/40 font-secondary">
+              <div className="absolute bottom-2 right-2 text-[10px] text-white/40 font-secondary">
                 Florian Schmid
               </div>
             </div>

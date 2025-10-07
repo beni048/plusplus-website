@@ -151,20 +151,23 @@ Freundliche Grüsse,
       <section className="bg-neutral-white py-24">
         <div className="container mx-auto px-4">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
-            {/* Image Right */}
-            <div className="relative aspect-[4/3] w-full order-1 lg:order-2">
-              <Image
-                src="/images/collection/nicolas-peyrol-iWacqnogqO4-unsplash.webp"
-                alt="Frankencoin Stablecoin Deposits"
-                fill
-                className="object-cover rounded-lg shadow-lg"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-              {/* Discrete photo credit */}
-              <div className="absolute bottom-1 right-1 text-[10px] text-white/40 font-secondary">
-                Nicolas Peyrol
+              {/* Image Right */}
+              <div className="relative aspect-[4/3] w-full order-1 lg:order-2">
+                <Image
+                  src="/images/collection_v2/ricardo-gomez-angel-44EjFu3bies-unsplash.jpg"
+                  alt="Frankencoin Stablecoin Deposits"
+                  fill
+                  quality={85}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover rounded-lg shadow-lg"
+                  placeholder="blur"
+                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                />
+                {/* Discrete photo credit */}
+                <div className="absolute bottom-1 right-1 text-[10px] text-white/40 font-secondary">
+                  Ricardo Gomez Angel
+                </div>
               </div>
-            </div>
 
             {/* Button Mobile */}
             <div className="order-2 lg:hidden">
@@ -186,7 +189,27 @@ Freundliche Grüsse,
                 {t('rentalSolutionsTenant.frankencoin.title')}
               </h2>
               <p className="text-lg leading-relaxed text-neutral-dark font-secondary">
-                {t('rentalSolutionsTenant.frankencoin.description')}
+                {(() => {
+                  const description = t('rentalSolutionsTenant.frankencoin.description');
+                  const parts = description.split('Frankencoin');
+                  if (parts.length > 1) {
+                    return (
+                      <>
+                        {parts[0]}
+                        <a 
+                          href="https://frankencoin.com" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-accent-orange hover:underline transition-all duration-300"
+                        >
+                          Frankencoin
+                        </a>
+                        {parts.slice(1).join('Frankencoin')}
+                      </>
+                    );
+                  }
+                  return description;
+                })()}
               </p>
               <ul className="text-base text-neutral-dark space-y-3 font-secondary">
                 <li className="flex items-start">
@@ -228,20 +251,23 @@ Freundliche Grüsse,
       <section className="bg-neutral-light py-24">
         <div className="container mx-auto px-4">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
-            {/* Image Left */}
-            <div className="relative aspect-[4/3] w-full order-1 lg:order-1">
-              <Image
-                src="/images/collection/thomas-aubaud-7plmm5fLuas-unsplash.webp"
-                alt="Bitcoin Rental Deposits"
-                fill
-                className="object-cover rounded-lg shadow-lg"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-              {/* Discrete photo credit */}
-              <div className="absolute bottom-1 right-1 text-[10px] text-white/40 font-secondary">
-                Thomas Aubaud
+              {/* Image Left */}
+              <div className="relative aspect-[4/3] w-full order-1 lg:order-1">
+                <Image
+                  src="/images/collection_v2/kanchanara-7E3QGntO66M-unsplash.jpg"
+                  alt="Bitcoin Rental Deposits"
+                  fill
+                  quality={85}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover rounded-lg shadow-lg"
+                  placeholder="blur"
+                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                />
+                {/* Discrete photo credit */}
+                <div className="absolute bottom-1 right-1 text-[10px] text-white/40 font-secondary">
+                  Kanchanara
+                </div>
               </div>
-            </div>
 
             {/* Button Mobile */}
             <div className="order-2 lg:hidden">

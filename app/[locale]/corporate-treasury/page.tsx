@@ -35,15 +35,18 @@ export default function CorporateTreasury() {
             {/* Image Right */}
             <div className="relative aspect-[4/3] w-full order-1 lg:order-2">
               <Image
-                src="/images/collection/scott-graham-5fNmWej4tAA-unsplash.webp"
+                src="/images/collection_v2/rico-reutimann-d58AtGgPm64-unsplash.jpg"
                 alt="Frankencoin treasury solution"
                 fill
-                className="object-cover rounded-lg shadow-lg"
+                quality={85}
                 sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover rounded-lg shadow-lg"
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
               />
               {/* Discrete photo credit */}
               <div className="absolute bottom-1 right-1 text-[10px] text-white/40 font-secondary">
-                Scott Graham
+                Rico Reutimann
               </div>
             </div>
 
@@ -106,11 +109,14 @@ export default function CorporateTreasury() {
             {/* Image Left */}
             <div className="relative aspect-[4/3] w-full order-1 lg:order-1">
               <Image
-                src="/images/collection/melina-kiefer-iaAyocrpqTE-unsplash.webp"
+                src="/images/collection_v2/melina-kiefer-iaAyocrpqTE-unsplash.jpg"
                 alt="Secure and regulated"
                 fill
-                className="object-cover rounded-lg shadow-lg"
+                quality={85}
                 sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover rounded-lg shadow-lg"
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
               />
               {/* Discrete photo credit */}
               <div className="absolute bottom-1 right-1 text-[10px] text-white/40 font-secondary">

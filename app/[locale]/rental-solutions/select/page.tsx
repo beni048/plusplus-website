@@ -37,21 +37,20 @@ export default function RentalSolutionsSelect() {
               <Card className="h-full overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-all duration-300 group-hover:scale-105 bg-white">
                 <div className="relative h-64 lg:h-80">
                   <Image
-                    src="/images/collection/maria-ziegler-jJnZg7vBfMs-unsplash.webp"
+                    src="/images/collection_v2/maria-ziegler-jJnZg7vBfMs-unsplash.jpg"
                     alt="Tenant Solutions"
                     fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    quality={85}
                     sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    placeholder="blur"
+                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 via-blue-600/20 to-transparent" />
                   <div className="absolute top-6 left-6">
                     <div className="bg-blue-600/90 backdrop-blur-sm p-3 rounded-lg">
                       <User className="h-8 w-8 text-white" />
                     </div>
-                  </div>
-                  {/* Discrete photo credit */}
-                  <div className="absolute bottom-1 right-1 text-[10px] text-white/40 font-secondary">
-                    Maria Ziegler
                   </div>
                   {/* Discrete photo credit */}
                   <div className="absolute bottom-1 right-1 text-[10px] text-white/40 font-secondary">
@@ -78,21 +77,20 @@ export default function RentalSolutionsSelect() {
               <Card className="h-full overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-all duration-300 group-hover:scale-105 bg-white">
                 <div className="relative h-64 lg:h-80">
                   <Image
-                    src="/images/collection/tierra-mallorca-rgJ1J8SDEAY-unsplash.webp"
+                    src="/images/collection_v2/tierra-mallorca-rgJ1J8SDEAY-unsplash.jpg"
                     alt="Landlord Solutions"
                     fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    quality={85}
                     sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    placeholder="blur"
+                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-green-900/60 via-green-600/20 to-transparent" />
                   <div className="absolute top-6 left-6">
                     <div className="bg-green-600/90 backdrop-blur-sm p-3 rounded-lg">
                       <Building2 className="h-8 w-8 text-white" />
                     </div>
-                  </div>
-                  {/* Discrete photo credit */}
-                  <div className="absolute bottom-1 right-1 text-[10px] text-white/40 font-secondary">
-                    Tierra Mallorca
                   </div>
                   {/* Discrete photo credit */}
                   <div className="absolute bottom-1 right-1 text-[10px] text-white/40 font-secondary">

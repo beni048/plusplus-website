@@ -37,15 +37,18 @@ export default function RentalSolutionsLandlord() {
             {/* Image Left */}
             <div className="relative aspect-[4/3] w-full order-1 lg:order-1">
               <Image
-                src="/images/collection/melina-kiefer-iaAyocrpqTE-unsplash.webp"
+                src="/images/collection_v2/chris-henry-CVzlQGDMOJY-unsplash.jpg"
                 alt="Step by step setup"
                 fill
-                className="object-cover rounded-lg shadow-lg"
+                quality={85}
                 sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover rounded-lg shadow-lg"
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
               />
               {/* Discrete photo credit */}
               <div className="absolute bottom-1 right-1 text-[10px] text-white/40 font-secondary">
-                Melina Kiefer
+                Chris Henry
               </div>
             </div>
 
@@ -133,15 +136,18 @@ export default function RentalSolutionsLandlord() {
             {/* Image Right */}
             <div className="relative aspect-[4/3] w-full order-1 lg:order-2">
               <Image
-                src="/images/collection/scott-graham-5fNmWej4tAA-unsplash.webp"
+                src="/images/collection_v2/charlesdeluvio-AT5vuPoi8vc-unsplash.jpg"
                 alt="Digital rental management"
                 fill
-                className="object-cover rounded-lg shadow-lg"
+                quality={85}
                 sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover rounded-lg shadow-lg"
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
               />
               {/* Discrete photo credit */}
               <div className="absolute bottom-1 right-1 text-[10px] text-white/40 font-secondary">
-                Scott Graham
+                Charles Deluvio
               </div>
             </div>
 
@@ -204,15 +210,18 @@ export default function RentalSolutionsLandlord() {
             {/* Image Left */}
             <div className="relative aspect-[4/3] w-full order-1 lg:order-1">
               <Image
-                src="/images/collection/ilia-bronskiy-NsmhIKZFzGo-unsplash.webp"
+                src="/images/collection_v2/nicolas-peyrol-iWacqnogqO4-unsplash.jpg"
                 alt="Blockchain technology"
                 fill
-                className="object-cover rounded-lg shadow-lg"
+                quality={85}
                 sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover rounded-lg shadow-lg"
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
               />
               {/* Discrete photo credit */}
               <div className="absolute bottom-1 right-1 text-[10px] text-white/40 font-secondary">
-                Ilia Bronskiy
+                Nicolas Peyrol
               </div>
             </div>
 
