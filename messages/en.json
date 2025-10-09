@@ -195,7 +195,7 @@
       },
       "support": {
         "question": "How do I get started or get support?",
-        "answer": "Getting started is easy! For tenants: Contact your landlord and ask them to initiate the process with <a href=\"https://zinsli.com\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-black underline hover:text-accent-orange transition-colors\">Zinsli</a> to use our WBTC and ZCHF-based deposit products for your rental deposit. For landlords: Reach out to Zinsli directly to offer these innovative deposit solutions to your tenants. Need assistance connecting with Zinsli or have questions? Our Swiss-based team is here to help. Contact us at <a href=\"mailto:hello@plusplus.swiss\" class=\"text-black underline hover:text-accent-orange transition-colors\">hello@plusplus.swiss</a> or through our website contact form."
+        "answer": "Getting started is easy! For tenants: Contact your landlord and ask them to initiate the process with <a href=\"https://zinsli.com\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-black underline hover:text-accent-orange transition-colors\">Zinsli</a> to use our WBTC and ZCHF-based deposit products for your rental deposit. For landlords: Reach out to Zinsli directly to offer these innovative deposit solutions to your tenants. Need assistance connecting with Zinsli or have questions? Our Swiss-based team is here to help. Contact us at <a href=\"mailto:info@plusplus.swiss\" class=\"text-black underline hover:text-accent-orange transition-colors\">info@plusplus.swiss</a> or through our website contact form."
             }
     }
   },
@@ -204,7 +204,7 @@
     "intro": "This Privacy Policy explains the nature, scope, and purpose of processing personal data on www.plusplus.swiss (the \"Website\"). For definitions such as \"personal data\" and \"processing,\" please refer to Article 4 of the GDPR and Article 3 of the Swiss Federal Data Protection Act (nFADP).",
     "section1": {
       "title": "1. Data Controller",
-      "content": "Plusplus AG<br />Poststrasse 22<br />6300 Zug, Switzerland<br />Email: hello@plusplus.swiss"
+      "content": "Plusplus AG<br />Poststrasse 22<br />6300 Zug, Switzerland<br />Email: info@plusplus.swiss"
     },
     "section2": {
       "title": "2. Collection and Processing of Personal Data",
@@ -253,7 +253,7 @@
     },
     "section6": {
       "title": "6. Your Rights",
-      "content": "Under Articles 15–20 GDPR, you have the right to access, rectify, erase, restrict processing, and data portability. To exercise these rights, contact us at hello@plusplus.swiss."
+      "content": "Under Articles 15–20 GDPR, you have the right to access, rectify, erase, restrict processing, and data portability. To exercise these rights, contact us at info@plusplus.swiss."
     },
     "section7": {
       "title": "7. Updates to This Policy",
@@ -692,7 +692,7 @@
     "contact": {
       "title": "Contact",
       "email": "Email",
-      "emailAddress": "hello@plusplus.swiss"
+      "emailAddress": "info@plusplus.swiss"
     },
     "legal": {
       "title": "Legal Information",

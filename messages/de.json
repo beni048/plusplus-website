@@ -22,22 +22,22 @@
   },
   "mainSections": {
     "rentalSolutions": {
-  "title": "Mietlösungen",
-  "paragraph1": "Unsere digitalen Mietkautionslösungen bieten eine moderne Alternative zum klassischen Bankdepot. Statt Kapital zu blockieren, wird die Kaution sicher auf der Blockchain hinterlegt: als Schweizer Franken Stablecoin mit Rendite oder in Bitcoin.",
-  "paragraph2": "Im Hintergrund sorgt die Technologie für faire Erträge für Mieter:innen. Für Vermieter:innen ist der Prozess transparent, sicher und erstmals vollständig digital.",
-  "button": "Jetzt profitieren"
-    },
+    "title": "Mietlösungen",
+    "paragraph1": "Unsere digitalen Mietkautionslösungen bieten eine moderne Alternative zum klassischen Bankdepot. Statt Kapital zu blockieren, wird die Kaution sicher auf der Blockchain hinterlegt: als Schweizer Franken Stablecoin mit Rendite oder in Bitcoin.",
+    "paragraph2": "Im Hintergrund sorgt die Technologie für faire Erträge für Mieter:innen. Für Vermieter:innen ist der Prozess transparent, sicher und erstmals vollständig digital.",
+    "button": "Jetzt profitieren"
+  },
     "corporateTreasury": {
-  "title": "Corporate Treasury",
-  "paragraph1": "Unsere Treasury-Lösungen eröffnen Unternehmen einen sicheren Zugang zur modernen, digitalen Finanzwelt. Weltweit setzen immer mehr Unternehmen und Finanzinstitute auf Stablecoins, um Liquidität effizienter und gewinnbringend zu verwalten.",
-  "paragraph2": "Mit dem Frankencoin (ZCHF) existiert erstmals ein stabiler Schweizer Franken Stablecoin. Wir ermöglichen jetzt den institutionellen Zugang zu diesem neuen Standard. Transparent, reguliert und mit 3% Rendite in einem Nullzinsumfeld.",
-  "button": "Mehr erfahren"
-    },
+    "title": "Corporate Treasury",
+    "paragraph1": "Unsere Treasury-Lösungen eröffnen Unternehmen einen sicheren Zugang zur modernen, digitalen Finanzwelt. Weltweit setzen immer mehr Unternehmen und Finanzinstitute auf Stablecoins, um Liquidität effizienter und gewinnbringend zu verwalten.",
+    "paragraph2": "Mit dem Frankencoin (ZCHF) existiert erstmals ein stabiler Schweizer Franken Stablecoin. Wir ermöglichen jetzt den institutionellen Zugang zu diesem neuen Standard. Transparent, reguliert und mit 3% Rendite in einem Nullzinsumfeld.",
+    "button": "Mehr erfahren"
+  },
     "partners": {
-  "title": "Partner",
-  "paragraph1": "Unsere Partner gehören zu den führenden Anbietern im Bereich Finanztechnologie und digitaler Infrastruktur.",
-  "paragraph2": "Gemeinsam stellen wir sicher, dass alle Systeme höchsten Standards in Sicherheit, Compliance und Transparenz entsprechen."
-    },
+    "title": "Partner",
+    "paragraph1": "Unsere Partner gehören zu den führenden Anbietern im Bereich Finanztechnologie und digitaler Infrastruktur.",
+    "paragraph2": "Gemeinsam stellen wir sicher, dass alle Systeme höchsten Standards in Sicherheit, Compliance und Transparenz entsprechen."
+  },
     "contact": {
   "title": "Bereit loszulegen?",
   "paragraph": "Lernen Sie unsere Lösungen in einem persönlichen Gespräch kennen.\nBuchen Sie eine unverbindliche 30-minütige Beratung mit unserem Vertriebsleiter.",
@@ -195,7 +195,7 @@
       },
       "support": {
         "question": "Wie fange ich an oder erhalte Support?",
-        "answer": "Der Einstieg ist einfach! Für Mieter: Kontaktieren Sie Ihren Vermieter und bitten Sie ihn, den Prozess mit <a href=\"https://zinsli.com\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-black underline hover:text-accent-orange transition-colors\">Zinsli</a> zu initiieren, um unsere WBTC- und ZCHF-basierten Kautionsprodukte für Ihre Mietkaution zu nutzen. Für Vermieter: Wenden Sie sich direkt an Zinsli, um diese innovativen Kautionslösungen Ihren Mietern anzubieten. Benötigen Sie Hilfe bei der Verbindung mit Zinsli oder haben Fragen? Unser Schweizer Team hilft gerne. Kontaktieren Sie uns unter <a href=\"mailto:hello@plusplus.swiss\" class=\"text-black underline hover:text-accent-orange transition-colors\">hello@plusplus.swiss</a> oder über das Kontaktformular unserer Website."
+        "answer": "Der Einstieg ist einfach! Für Mieter: Kontaktieren Sie Ihren Vermieter und bitten Sie ihn, den Prozess mit <a href=\"https://zinsli.com\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-black underline hover:text-accent-orange transition-colors\">Zinsli</a> zu initiieren, um unsere WBTC- und ZCHF-basierten Kautionsprodukte für Ihre Mietkaution zu nutzen. Für Vermieter: Wenden Sie sich direkt an Zinsli, um diese innovativen Kautionslösungen Ihren Mietern anzubieten. Benötigen Sie Hilfe bei der Verbindung mit Zinsli oder haben Fragen? Unser Schweizer Team hilft gerne. Kontaktieren Sie uns unter <a href=\"mailto:info@plusplus.swiss\" class=\"text-black underline hover:text-accent-orange transition-colors\">info@plusplus.swiss</a> oder über das Kontaktformular unserer Website."
       }
     }
   },
@@ -204,7 +204,7 @@
     "intro": "Diese Datenschutzerklärung erläutert Art, Umfang und Zweck der Verarbeitung personenbezogener Daten auf www.plusplus.swiss (die \"Website\"). Für Definitionen wie \"personenbezogene Daten\" und \"Verarbeitung\" siehe Art. 4 DSGVO und Art. 3 des Schweizer Bundesdatenschutzgesetzes (nDSG).",
     "section1": {
       "title": "1. Verantwortlicher",
-      "content": "Plusplus AG<br />Poststrasse 22<br />6300 Zug, Schweiz<br />E-Mail: hello@plusplus.swiss"
+      "content": "Plusplus AG<br />Poststrasse 22<br />6300 Zug, Schweiz<br />E-Mail: info@plusplus.swiss"
     },
     "section2": {
       "title": "2. Erhebung und Verarbeitung personenbezogener Daten",
@@ -253,7 +253,7 @@
     },
     "section6": {
       "title": "6. Ihre Rechte",
-      "content": "Nach Art. 15–20 DSGVO haben Sie das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Datenübertragbarkeit. Zur Ausübung dieser Rechte kontaktieren Sie uns unter hello@plusplus.swiss."
+      "content": "Nach Art. 15–20 DSGVO haben Sie das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Datenübertragbarkeit. Zur Ausübung dieser Rechte kontaktieren Sie uns unter info@plusplus.swiss."
     },
     "section7": {
       "title": "7. Aktualisierungen dieser Erklärung",
@@ -693,7 +693,7 @@
     "contact": {
       "title": "Kontakt",
       "email": "E-Mail",
-      "emailAddress": "hello@plusplus.swiss"
+      "emailAddress": "info@plusplus.swiss"
     },
     "legal": {
       "title": "Rechtliche Angaben",

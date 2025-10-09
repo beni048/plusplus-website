@@ -32,20 +32,15 @@ Thank you for making our rental process smoother and more transparent!
 Best regards,
 [Tenant Name]`;
 
-  const emailTemplateDe = `Betreff: Schnelle, kostenlose Mietkautions-Lösung
+  const emailTemplateDe = `Betreff: Aufsetzen meiner Mietkaution via Zinsli
 
-Sehr geehrte/r [Name des Vermieters],
+Sehr geehrte(r) [Name des Vermieters],
 
-Ich habe von einem Freund gehört, dass es ein neues, schnelles und kostenloses Tool namens Zinsli für die Einrichtung von Mietkautionen gibt—und ich würde es gerne für unseren Mietvertrag ausprobieren. Hier ist, warum es für uns beide grossartig ist:
+Ich möchte vorschlagen, meine Mietkaution digital über Zinsli abzuwickeln. Das ist eine moderne, papierlose Lösung, die für Sie und mich Vorteile bringt. 
+Sie können innert weniger Stunden eine Mietkaution eröffnen und werden bei Eingang meiner Zahlung sofort per E-Mail benachrichtigt. Für mich als Mieter ist es bequem, da ich automatische Erinnerungen erhalte und die Kaution in modernen Kautionslösungen mit Rendite hinterlegen kann. 
 
-• Die Einrichtung dauert unter 5 Minuten—keine Briefpost oder langwierige Bankprozesse mehr
-• Ich erhalte automatische Erinnerungen, damit ich niemals eine Kautionszahlung verpasse
-• Sie erhalten sofortige E-Mail-Bestätigung, sobald die Kaution ankommt
-• Es fallen keine Gebühren für Sie als Vermieter an
-
-Könnten Sie bitte ein kostenloses Konto unter  app.zinsli.com/de/login erstellen und mich einladen? Hier können Sie mehr über den Prozess erfahren: plusplus.swiss/de/rental-solutions/landlord
-
-Es ist einfach: Registrieren Sie sich, klicken Sie auf "Mieter einladen" und geben Sie meine E-Mail-Adresse ein. Dann erledige ich sofort meinen Teil.
+Falls Sie mit Wincasa, Fairwalter oder Garaio REM arbeiten, ist die Anbindung an Zinsli vermutlich bereits in Ihrer Verwaltungssoftware integriert und Sie können mich direkt dort einladen. 
+Falls nicht, können Sie sich einfach und schnell auf www.zinsli.com registrieren und dort die Mietkaution aufsetzen. Anschliessend können Sie mich direkt über die Webseite zur Hinterlegung einladen.
 
 Vielen Dank, dass Sie unseren Mietprozess reibungsloser und transparenter gestalten!
 
@@ -58,12 +53,12 @@ Freundliche Grüsse,
     const lines = text.split('\n');
     return lines.map((line, index) => {
       // Replace URLs with clickable links
-      const urlRegex = /(app\.zinsli\.com\/[^\s]+|plusplus\.swiss\/[^\s]+)/g;
+      const urlRegex = /(www\.zinsli\.com[^\s]*)/g;
       const parts = line.split(urlRegex);
-      
+
       // Determine if this is an empty line (paragraph break)
       const isEmpty = line.trim() === '';
-      
+
       return (
         <div key={index} className={isEmpty ? "mb-1" : "mb-1"}>
           {isEmpty ? (
@@ -73,6 +68,21 @@ Freundliche Grüsse,
             // Regular line with content
             parts.map((part, partIndex) => {
               if (urlRegex.test(part)) {
+                // If the detected part is exactly 'www.zinsli.com', show custom link text and href
+                if (part === 'www.zinsli.com') {
+                  return (
+                    <a
+                      key={partIndex}
+                      href="https://app.zinsli.com/de/signup"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 underline"
+                    >
+                      www.zinsli.com
+                    </a>
+                  );
+                }
+                // Otherwise, use the detected URL as both text and href
                 const fullUrl = part.startsWith('http') ? part : `https://${part}`;
                 return (
                   <a
