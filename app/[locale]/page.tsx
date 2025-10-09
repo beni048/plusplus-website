@@ -18,7 +18,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-[100svh] flex items-center justify-center">
         <Image
-          src="/images/collection_v2/collin-croome-uAp6eburpk0-unsplash.jpg"
+          src="/images/collection_v2/elias-bohl-PmGbIGCBzMU-unsplash.jpg"
           alt="Title background image"
           fill
           priority
@@ -34,7 +34,7 @@ export default function Home() {
         
         {/* Discrete photo credit */}
         <div className="absolute bottom-2 right-2 text-[10px] text-white/60 font-secondary z-10">
-          Collin Croome
+          Elias Bohl
         </div>
 
         <div className="absolute inset-0 flex items-center justify-center sm:justify-end" style={{ paddingTop: 'max(calc(33.33vh - 6rem), 6rem)' }}>
