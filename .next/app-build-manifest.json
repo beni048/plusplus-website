@@ -11,10 +11,20 @@
       "static/chunks/main-app.js",
       "static/chunks/app/[locale]/layout.js"
     ],
-    "/[locale]/rental-solutions/tenant/page": [
+    "/[locale]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/rental-solutions/tenant/page.js"
+      "static/chunks/app/[locale]/page.js"
+    ],
+    "/[locale]/corporate-treasury/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[locale]/corporate-treasury/page.js"
+    ],
+    "/_not-found/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/_not-found/page.js"
     ]
   }
 }

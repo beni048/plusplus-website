@@ -109,8 +109,8 @@ export default function CorporateTreasury() {
             {/* Image Left */}
             <div className="relative aspect-[4/3] w-full order-1 lg:order-1">
               <Image
-                src="/images/collection_v2/melina-kiefer-iaAyocrpqTE-unsplash.jpg"
-                alt="Secure and regulated"
+                src="/images/collection_v2/urs-ruchti-2D6A0587.jpg"
+                alt="Corporate Treasury - Urs Ruchti"
                 fill
                 quality={85}
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -120,7 +120,7 @@ export default function CorporateTreasury() {
               />
               {/* Discrete photo credit */}
               <div className="absolute bottom-1 right-1 text-[10px] text-white/40 font-secondary">
-                Melina Kiefer
+                Urs Ruchti
               </div>
             </div>
 

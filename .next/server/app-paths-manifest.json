@@ -1,3 +1,5 @@
 {
-  "/[locale]/rental-solutions/tenant/page": "app/[locale]/rental-solutions/tenant/page.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/[locale]/page": "app/[locale]/page.js",
+  "/[locale]/corporate-treasury/page": "app/[locale]/corporate-treasury/page.js"
 }
