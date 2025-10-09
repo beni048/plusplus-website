@@ -181,15 +181,15 @@ Freundliche Grüsse,
 
             {/* Button Mobile */}
             <div className="order-2 lg:hidden">
-              <Button 
-                onClick={() => {
-                  const emailSection = document.getElementById('email-template');
-                  emailSection?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary w-full"
-              >
-                {t('rentalSolutionsTenant.frankencoin.cta')}
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              <Button asChild className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary w-full">
+                <a
+                  href="/pdfs/Plusplus_Factsheet_ZCHF_Deposit_DE.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t('rentalSolutionsTenant.frankencoin.cta')}
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </a>
               </Button>
             </div>
 
@@ -238,15 +238,15 @@ Freundliche Grüsse,
               </ul>
               {/* Button Desktop */}
               <div className="pt-6 hidden lg:block">
-                <Button 
-                  onClick={() => {
-                    const emailSection = document.getElementById('email-template');
-                    emailSection?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                  className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary"
-                >
-                  {t('rentalSolutionsTenant.frankencoin.cta')}
-                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                <Button asChild className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary">
+                  <a
+                    href="/pdfs/Plusplus_Factsheet_ZCHF_Deposit_DE.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {t('rentalSolutionsTenant.frankencoin.cta')}
+                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  </a>
                 </Button>
               </div>
             </div>
@@ -278,15 +278,15 @@ Freundliche Grüsse,
 
             {/* Button Mobile */}
             <div className="order-2 lg:hidden">
-              <Button 
-                onClick={() => {
-                  const emailSection = document.getElementById('email-template');
-                  emailSection?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary w-full"
-              >
-                {t('rentalSolutionsTenant.bitcoin.cta')}
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              <Button asChild className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary w-full">
+                <a
+                  href="/pdfs/Plusplus_Factsheet_BTC_Deposit_DE.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t('rentalSolutionsTenant.bitcoin.cta')}
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </a>
               </Button>
             </div>
             
@@ -315,15 +315,15 @@ Freundliche Grüsse,
               </ul>
               {/* Button Desktop */}
               <div className="pt-6 hidden lg:block">
-                <Button 
-                  onClick={() => {
-                    const emailSection = document.getElementById('email-template');
-                    emailSection?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                  className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary"
-                >
-                  {t('rentalSolutionsTenant.bitcoin.cta')}
-                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                <Button asChild className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary">
+                  <a
+                    href="/pdfs/Plusplus_Factsheet_BTC_Deposit_DE.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {t('rentalSolutionsTenant.bitcoin.cta')}
+                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  </a>
                 </Button>
               </div>
             </div>
