@@ -24,20 +24,19 @@ export default function Home() {
           priority
           quality={90}
           sizes="100vw"
-          className="object-cover object-center sm:object-right"
+          className="object-cover object-center"
           placeholder="blur"
           blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
         />
-        
         {/* Subtle gradient overlay for better text contrast */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/60"></div>
-        
         {/* Discrete photo credit */}
         <div className="absolute bottom-2 right-2 text-[10px] text-white/60 font-secondary z-10">
           Elias Bohl
         </div>
 
-        <div className="absolute inset-0 flex items-center justify-center sm:justify-end" style={{ paddingTop: 'max(calc(33.33vh - 6rem), 6rem)' }}>
+        {/* Title box container, positioned independently */}
+        <div className="absolute left-0 right-0 flex items-start justify-center" style={{ top: '30vh' }}>
           {/* Mobile: Centered simple layout */}
           <div className="block sm:hidden w-full px-6 text-center">
             <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-8 mx-auto max-w-sm">
