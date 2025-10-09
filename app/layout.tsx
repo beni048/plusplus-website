@@ -15,7 +15,7 @@ const mulish = Mulish({
 });
 
 export const metadata: Metadata = {
-  title: "Plusplus - Bridging TradFi and DeFi",
+  title: "Plusplus - Stablecoin Partner Switzerland",
   description:
     "Plusplus empowers Swiss institutions and tenants with secure, compliant DeFi solutions.",
   metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://plusplus.ch'),
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Plusplus - Bridging TradFi and DeFi",
+    title: "Plusplus - Stablecoin Partner Switzerland",
     description: "Plusplus empowers Swiss institutions and tenants with secure, compliant DeFi solutions.",
     type: "website",
   },
