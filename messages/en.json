@@ -411,53 +411,53 @@
     "disclaimer": "All calculations are based on market data in October 2025 (returns, interest, fees per product). Actual values may vary. Bitcoin calculations: 1 year = Oct 2024 to Oct 2025, max 16 years = Oct 2009 to Oct 2025 percentage changes. Insurance 4-5%, bank locked account 0.1-0.4%, Frankencoin 3% (historically between 3-5%)."
   },
   "rentalSolutionsLandlord": {
-    "title": "Rental Solutions for Landlords",
-    "subtitle": "Streamline property management with guaranteed payments.",
-    "subtitleFull": "Streamline your property management with guaranteed rent payments and comprehensive tenant screening.",
-    "advantages": {
-      "title": "Modern Rental Management Made Simple",
-      "description": "Replace traditional, slow banks with our quick and efficient blockchain-powered system. Our innovative technology comes at no additional cost and revolutionizes how rental deposits are managed.",
-      "benefits": {
-        "setup": "Easy and quick setup - no complex paperwork",
-        "banks": "No dealing with banks or physical mail",
-        "notifications": "Instant email notifications when tenants pay deposits",
-        "release": "Quick release of funds when needed"
-      },
-      "cta": "Try Now"
-    },
+  "title": "Rental deposits that work for you",
+  "subtitle": "Simplify your rental deposit process today.",
+  "subtitleFull": "Legally compliant, digital custody for landlords – more transparency, less effort, happier tenants.",
     "stepByStep": {
-      "title": "Get Started in 4 Simple Steps",
-      "description": "Setting up your landlord account and inviting tenants is straightforward. Follow our step-by-step guide to get started today.",
+      "title": "Set up in 4 easy steps",
+      "intro": "Get started with modern, digital deposit management in under five minutes – no paperwork or complicated processes.",
       "steps": {
-        "step1": {
-          "title": "Create Your Account",
-          "description": "Sign up at Zinsli and verify your identity as a property owner or manager."
+        "1": {
+          "title": "Register",
+          "description": "Create your landlord account in just a few minutes."
         },
-        "step2": {
-          "title": "Set Up Rental Property",
-          "description": "Add your rental property details, monthly rent, and deposit amount in the system."
+        "2": {
+          "title": "Enter property details",
+          "description": "Enter address, deposit amount, and rental period."
         },
-        "step3": {
-          "title": "Create Deposit Request",
-          "description": "Generate a new rental deposit request and configure the available payment options for your tenant."
+        "3": {
+          "title": "Invite tenant",
+          "description": "Your tenant receives instructions to complete the deposit setup."
         },
-        "step4": {
-          "title": "Invite Your Tenant",
-          "description": "Send an invitation to your tenant's email address. They'll receive instructions to complete the deposit setup."
+        "4": {
+          "title": "Lean back",
+          "description": "You automatically receive confirmation when the deposit is paid."
         }
       },
-      "cta": "Start Setup Now"
+      "cta": "Start setup now"
+    },
+    "advantages": {
+      "title": "Your benefits at a glance",
+      "intro": "With Plusplus, you benefit from clear advantages that reduce your admin effort and delight your tenants:",
+      "bullets": {
+        "1": "Instant email notifications for deposit payments",
+        "2": "Automated workflows instead of manual processes and paperwork",
+        "3": "Seamless ERP integration with popular systems like Fairwalter and GARAIO REM",
+        "4": "Attractive tenant retention through market-based returns on the deposit"
+      },
+      "cta": "Try for free now"
     },
     "technology": {
-      "title": "Powered by Plusplus Blockchain Technology",
-      "description": "Our innovative blockchain technology replaces traditional banking systems with a more efficient, transparent, and cost-effective solution for rental deposit management.",
-      "benefits": {
-        "efficiency": "Lightning-fast transactions and automated processes",
-        "cost": "Zero additional costs compared to traditional banking",
-        "transparency": "Complete transparency and real-time tracking",
-        "security": "Swiss-grade security with blockchain protection"
+      "title": "How it works",
+      "intro": "Plusplus is your Swiss partner for stablecoins. For rental deposits in Switzerland, we use the biggest CHF stablecoin (Frankencoin).",
+      "bullets": {
+        "1": "Stablecoin custody: Your tenants’ deposits are held as CHF stablecoins, digital tokens pegged to the Swiss Franc.",
+        "2": "Savings module: Through the Frankencoin savings module, your tenants currently earn around 3% p.a. – yield comes from short-term lending, not speculative investments.",
+        "3": "Capital security: The funds remain exclusively in the stablecoin and are never used outside the savings module.",
+        "4": "Full repayment: Nothing changes for you. At the end of the rental period, you or the tenants receive the full capital plus accrued interest – no fees and no risk for you as landlord."
       },
-      "cta": "Get Started"
+      "cta": "Get started"
     },
     "benefits": {
       "title": "Benefits for Landlords",
@@ -500,8 +500,9 @@
       "button": "Get Started as Landlord"
     },
     "finalCta": {
-      "title": "Ready to Get Started?",
-      "description": "Join thousands of landlords who have already simplified their rental management with our innovative platform."
+      "title": "Ready to get started?",
+      "intro": "Join the satisfied landlords who have already simplified their rental management with our innovative solution.",
+      "cta": "Start setup now"
     }
   },
   "rentalSolutions": {

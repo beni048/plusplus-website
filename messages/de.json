@@ -24,7 +24,7 @@
     "rentalSolutions": {
     "title": "Mietlösungen",
     "paragraph1": "Unsere digitalen Mietkautionslösungen bieten eine moderne Alternative zum klassischen Bankdepot. Statt Kapital zu blockieren, wird die Kaution sicher auf der Blockchain hinterlegt: als Schweizer Franken Stablecoin mit Rendite oder in Bitcoin.",
-    "paragraph2": "Im Hintergrund sorgt die Technologie für faire Erträge für Mieter:innen. Für Vermieter:innen ist der Prozess transparent, sicher und erstmals vollständig digital.",
+    "paragraph2": "Im Hintergrund sorgt die Technologie für faire Erträge für Mieterinnen. Für Vermieter ist der Prozess transparent, sicher und erstmals vollständig digital.",
     "button": "Jetzt profitieren"
   },
     "corporateTreasury": {
@@ -195,7 +195,7 @@
       },
       "support": {
         "question": "Wie fange ich an oder erhalte Support?",
-        "answer": "Der Einstieg ist einfach! Für Mieter: Kontaktieren Sie Ihren Vermieter und bitten Sie ihn, den Prozess mit <a href=\"https://zinsli.com\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-black underline hover:text-accent-orange transition-colors\">Zinsli</a> zu initiieren, um unsere WBTC- und ZCHF-basierten Kautionsprodukte für Ihre Mietkaution zu nutzen. Für Vermieter: Wenden Sie sich direkt an Zinsli, um diese innovativen Kautionslösungen Ihren Mietern anzubieten. Benötigen Sie Hilfe bei der Verbindung mit Zinsli oder haben Fragen? Unser Schweizer Team hilft gerne. Kontaktieren Sie uns unter <a href=\"mailto:info@plusplus.swiss\" class=\"text-black underline hover:text-accent-orange transition-colors\">info@plusplus.swiss</a> oder über das Kontaktformular unserer Website."
+        "answer": "Der Einstieg ist einfach! Für Mieter: Kontaktieren Sie Ihren Vermieter und bitten Sie ihn, den Prozess mit <a href=\"https://zinsli.com\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-black underline hover:text-accent-orange transition-colors\">Zinsli</a> zu initiieren, um unsere WBTC- und ZCHF-basierten Kautionsprodukte für Ihre Mietkaution zu nutzen. Für Vermieterinnen: Wenden Sie sich direkt an Zinsli, um diese innovativen Kautionslösungen Ihren Mietern anzubieten. Benötigen Sie Hilfe bei der Verbindung mit Zinsli oder haben Fragen? Unser Schweizer Team hilft gerne. Kontaktieren Sie uns unter <a href=\"mailto:info@plusplus.swiss\" class=\"text-black underline hover:text-accent-orange transition-colors\">info@plusplus.swiss</a> oder über das Kontaktformular unserer Website."
       }
     }
   },
@@ -412,51 +412,51 @@
     "disclaimer": "Alle Berechnungen basieren auf Marktdaten vom Oktober 2025 (Renditen, Zinsen, Gebühren pro Produkt). Tatsächliche Werte können abweichen. Bitcoin-Berechnungen: 1 Jahr = Okt 2024 bis Okt 2025, max 16 Jahre = Okt 2009 bis Okt 2025 Prozentänderungen. Versicherung 4-5%, Bank-Sperrkonto 0,1-0,4%, Frankencoin 3% (historisch zwischen 3-5%)."
   },
   "rentalSolutionsLandlord": {
-    "title": "Mietlösungen für Vermieter",
-    "subtitle": "Optimieren Sie Immobilienverwaltung mit garantierten Zahlungen.",
-    "subtitleFull": "Optimieren Sie Ihre Immobilienverwaltung mit garantierten Mietzahlungen und umfassender Mieterprüfung.",
-    "advantages": {
-      "title": "Moderne Mietverwaltung leicht gemacht",
-      "description": "Ersetzen Sie traditionelle, langsame Banken durch unser schnelles und effizientes Blockchain-System. Unsere innovative Technologie verursacht keine zusätzlichen Kosten und revolutioniert die Verwaltung von Mietkautionen.",
-      "benefits": {
-        "setup": "Einfache und schnelle Einrichtung - kein komplexer Papierkram",
-        "banks": "Kein Umgang mit Banken oder physischer Post",
-        "notifications": "Sofortige E-Mail-Benachrichtigungen bei Kautionszahlungen",
-        "release": "Schnelle Freigabe der Mittel bei Bedarf"
-      },
-      "cta": "Jetzt testen"
-    },
+  "title": "Mietkautionen, die für Sie arbeiten",
+  "subtitle": "Vereinfachen Sie noch heute Ihren Mietkautions-Prozess.",
+  "subtitleFull": "Rechtskonforme, digitale Verwahrung für Vermieter – mehr Transparenz, weniger Aufwand, zufriedene Mieter.",
     "stepByStep": {
       "title": "Jetzt einrichten in 4 einfachen Schritten",
-      "description": "Die Einrichtung Ihres Vermieterkontos und die Einladung von Mietern ist unkompliziert. Folgen Sie unserer Schritt-für-Schritt-Anleitung, um noch heute zu beginnen.",
+      "intro": "Starten Sie in weniger als fünf Minuten mit modernem, digitalem Kautionsmanagement – ganz ohne Papierkram und komplizierte Prozesse.",
       "steps": {
-        "step1": {
-          "title": "Konto erstellen",
-          "description": "Melden Sie sich bei Zinsli an und verifizieren Sie Ihre Identität als Immobilieneigentümer oder -verwalter."
+        "1": {
+          "title": "Registrieren",
+          "description": "Legen Sie Ihr Vermieter-Konto in wenigen Minuten an."
         },
-        "step2": {
-          "title": "Mietobjekt einrichten",
-          "description": "Fügen Sie Ihre Mietobjektdetails, monatliche Miete und Kautionsbetrag im System hinzu."
+        "2": {
+          "title": "Objektdaten erfassen",
+          "description": "Geben Sie Adresse, Kautionshöhe und Mietdauer ein."
         },
-        "step3": {
-          "title": "Kautionsanfrage erstellen",
-          "description": "Erstellen Sie eine neue Mietkautionsanfrage und konfigurieren Sie die verfügbaren Zahlungsoptionen für Ihren Mieter."
-        },
-        "step4": {
+        "3": {
           "title": "Mieter einladen",
-          "description": "Senden Sie eine Einladung an die E-Mail-Adresse Ihres Mieters. Er erhält Anweisungen zur Vervollständigung der Kautionseinrichtung."
+          "description": "Ihre Mieterin erhält Anweisungen zur Vervollständigung der Kautionseinrichtung."
+        },
+        "4": {
+          "title": "Zurücklehnen",
+          "description": "Sie erhalten automatisch eine Bestätigung, wenn die Kaution eingezahlt wurde."
         }
       },
       "cta": "Einrichtung jetzt starten"
     },
+    "advantages": {
+      "title": "Ihre Vorteile auf einen Blick",
+      "intro": "Mit Plusplus profitieren Sie von klaren Mehrwerten, die Ihren Verwaltungsaufwand reduzieren und Ihre Mieter begeistern:",
+      "bullets": {
+        "1": "Sofortige E-Mail-Benachrichtigungen bei Kautionszahlungen",
+        "2": "Automatisierte Abläufe statt manueller Prozesse und Papierkram",
+        "3": "Nahtlose ERP-Integration in gängige Systeme wie Fairwalter und GARAIO REM",
+        "4": "Attraktive Mieterbindung durch marktnahe Erträge auf die Kaution"
+      },
+      "cta": "Jetzt kostenlos testen"
+    },
     "technology": {
-      "title": "Angetrieben von Plusplus Blockchain-Technologie",
-      "description": "Unsere innovative Blockchain-Technologie ersetzt traditionelle Bankensysteme durch eine effizientere, transparentere und kostengünstigere Lösung für die Mietkautionsverwaltung.",
-      "benefits": {
-        "efficiency": "Blitzschnelle Transaktionen und automatisierte Prozesse",
-        "cost": "Null zusätzliche Kosten im Vergleich zu traditionellem Banking",
-        "transparency": "Vollständige Transparenz und Echtzeit-Verfolgung",
-        "security": "Schweizer Sicherheit mit Blockchain-Schutz"
+      "title": "So funktionierts",
+      "intro": "Plusplus ist Ihr Schweizer Partner für Stablecoins. Für Mietkautionen in der Schweiz nutzen wir den grössten CHF-Stablecoin (Frankencoin).",
+      "bullets": {
+        "1": "Die Kautionsbeträge Ihrer Mieter werden als CHF-Stablecoins gehalten, digitale Token, die an den Schweizer Franken gebunden sind.",
+        "2": "Ihre Mieter erhalten aktuell rund 3% p.a. – die Rendite stammt aus dem kurzfristigen Kreditgeschäft, nicht aus spekulativen Investments.",
+        "3": "Die hinterlegten Mittel verbleiben ausschliesslich im Stablecoin und auf einem Konto dem Mieter zugeordnet.",
+        "4": "Für Sie funktioniert alles gleich wie zuvor. Am Ende der Mietdauer erhalten Sie oder der Mieter das Kapital inklusive angefallener Zinsen zurück – ohne Gebühren und ohne Risiko für Sie."
       },
       "cta": "Loslegen"
     },
@@ -502,7 +502,8 @@
     },
     "finalCta": {
       "title": "Bereit loszulegen?",
-      "description": "Schliessen Sie sich Tausenden von Vermietern an, die bereits ihre Mietverwaltung mit unserer innovativen Plattform vereinfacht haben."
+      "intro": "Schliessen Sie sich den zufriedenen Vermieterinnen an, die bereits ihre Mietverwaltung mit unserer innovativen Lösung vereinfacht haben.",
+      "cta": "Einrichtung jetzt starten"
     }
   },
   "rentalSolutions": {

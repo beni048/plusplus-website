@@ -37,7 +37,7 @@ export default function RentalSolutionsSelect() {
               <Card className="h-full overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-all duration-300 group-hover:scale-105 bg-white">
                 <div className="relative h-64 lg:h-80">
                   <Image
-                    src="/images/collection_v2/maria-ziegler-jJnZg7vBfMs-unsplash.jpg"
+                    src="/images/collection_v2/toa-heftiba-XFdFdmVYe3Y-unsplash.jpg"
                     alt="Tenant Solutions"
                     fill
                     quality={85}
@@ -54,7 +54,7 @@ export default function RentalSolutionsSelect() {
                   </div>
                   {/* Discrete photo credit */}
                   <div className="absolute bottom-1 right-1 text-[10px] text-white/40 font-secondary">
-                    Maria Ziegler
+                    Toa Heftiba
                   </div>
                 </div>
                 <CardContent className="p-8">
@@ -77,7 +77,7 @@ export default function RentalSolutionsSelect() {
               <Card className="h-full overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-all duration-300 group-hover:scale-105 bg-white">
                 <div className="relative h-64 lg:h-80">
                   <Image
-                    src="/images/collection_v2/tierra-mallorca-rgJ1J8SDEAY-unsplash.jpg"
+                    src="/images/collection_v2/jakub-zerdzicki-bqUZEAeWuok-unsplash.jpg"
                     alt="Landlord Solutions"
                     fill
                     quality={85}
@@ -94,7 +94,7 @@ export default function RentalSolutionsSelect() {
                   </div>
                   {/* Discrete photo credit */}
                   <div className="absolute bottom-1 right-1 text-[10px] text-white/40 font-secondary">
-                    Tierra Mallorca
+                    Jakub Kriz
                   </div>
                 </div>
                 <CardContent className="p-8">
