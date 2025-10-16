@@ -455,7 +455,7 @@
         "1": "Stablecoin custody: Your tenants’ deposits are held as CHF stablecoins, digital tokens pegged to the Swiss Franc.",
         "2": "Savings module: Through the Frankencoin savings module, your tenants currently earn around 3% p.a. – yield comes from short-term lending, not speculative investments.",
         "3": "Capital security: The funds remain exclusively in the stablecoin and are never used outside the savings module.",
-        "4": "Full repayment: Nothing changes for you. At the end of the rental period, you or the tenants receive the full capital plus accrued interest – no fees and no risk for you as landlord."
+        "4": "Full repayment: Nothing changes for you. At the end of the rental period, you or the tenants receive the full capital plus accrued yield – no fees and no risk for you as landlord."
       },
       "cta": "Get started"
     },

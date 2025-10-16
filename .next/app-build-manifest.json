@@ -11,10 +11,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/[locale]/layout.js"
     ],
-    "/[locale]/terms-and-conditions/page": [
+    "/[locale]/rental-solutions/landlord/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/terms-and-conditions/page.js"
+      "static/chunks/app/[locale]/rental-solutions/landlord/page.js"
     ],
     "/[locale]/rental-solutions/select/page": [
       "static/chunks/webpack.js",
