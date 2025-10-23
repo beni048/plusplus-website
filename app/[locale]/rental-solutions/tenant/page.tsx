@@ -23,7 +23,7 @@ I heard from a friend that there's a new, quick, and free tool called Zinsli for
 • You receive instant email confirmation as soon as the deposit arrives
 • There are no fees for you as the landlord
 
-Could you please set up a free account at app.zinsli.com/en/login and invite me? You can learn more about the process here: plusplus.swiss/en/rental-solutions/landlord
+Could you please set up a free account at app.zinsli.com/en/signup and invite me? You can learn more about the process here: plusplus.swiss/en/rental-solutions/landlord
 
 It's simple: sign up, click "Invite Tenant," and enter my email. Then I'll complete my side right away.
 
@@ -48,6 +48,15 @@ Freundliche Grüsse,
 [Name des Mieters]`;
 
   const emailTemplate = locale === 'de' ? emailTemplateDe : emailTemplateEn;
+
+  // Locale-specific PDF paths: German (de) vs English (en)
+  const factsheetZCHFPdf = locale === 'de'
+    ? '/pdfs/Plusplus_Factsheet_ZCHF_Deposit_DE.pdf'
+    : '/pdfs/Plusplus_Factsheet_ZCHF_Deposit_EN.pdf';
+
+  const factsheetBTCPdf = locale === 'de'
+    ? '/pdfs/Plusplus_Factsheet_BTC_Deposit_DE.pdf'
+    : '/pdfs/Plusplus_Factsheet_BTC_Deposit_EN.pdf';
 
   const renderEmailWithLinks = (text: string) => {
     const lines = text.split('\n');
@@ -183,7 +192,7 @@ Freundliche Grüsse,
             <div className="order-2 lg:hidden">
               <Button asChild className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary w-full">
                 <a
-                  href="/pdfs/Plusplus_Factsheet_ZCHF_Deposit_DE.pdf"
+                  href={factsheetZCHFPdf}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -240,7 +249,7 @@ Freundliche Grüsse,
               <div className="pt-6 hidden lg:block">
                 <Button asChild className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary">
                   <a
-                    href="/pdfs/Plusplus_Factsheet_ZCHF_Deposit_DE.pdf"
+                    href={factsheetZCHFPdf}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -280,7 +289,7 @@ Freundliche Grüsse,
             <div className="order-2 lg:hidden">
               <Button asChild className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary w-full">
                 <a
-                  href="/pdfs/Plusplus_Factsheet_BTC_Deposit_DE.pdf"
+                  href={factsheetBTCPdf}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -317,7 +326,7 @@ Freundliche Grüsse,
               <div className="pt-6 hidden lg:block">
                 <Button asChild className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary">
                   <a
-                    href="/pdfs/Plusplus_Factsheet_BTC_Deposit_DE.pdf"
+                    href={factsheetBTCPdf}
                     target="_blank"
                     rel="noopener noreferrer"
                   >

@@ -11,10 +11,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/[locale]/layout.js"
     ],
-    "/[locale]/rental-solutions/landlord/page": [
+    "/[locale]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/rental-solutions/landlord/page.js"
+      "static/chunks/app/[locale]/page.js"
     ],
     "/[locale]/rental-solutions/select/page": [
       "static/chunks/webpack.js",
@@ -26,10 +26,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/[locale]/rental-solutions/tenant/page.js"
     ],
-    "/[locale]/corporate-treasury/page": [
+    "/[locale]/terms-and-conditions/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/corporate-treasury/page.js"
+      "static/chunks/app/[locale]/terms-and-conditions/page.js"
     ]
   }
 }
