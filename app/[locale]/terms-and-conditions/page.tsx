@@ -41,11 +41,11 @@ export default function TermsPage() {
                     {t('pdfDownload.agb')}
                   </button>
                   <button
-                    onClick={() => downloadPDF('202509_Plusplus_AGB_Zinsli.pdf')}
+                    onClick={() => downloadPDF('202509_Plusplus_AGB_Zusatz.pdf')}
                     className="inline-flex items-center px-4 py-2 bg-accent-orange text-white rounded-lg hover:bg-accent-orange/90 transition-colors font-primary"
                   >
                     <Download className="w-4 h-4 mr-2" />
-                    {t('pdfDownload.agbZinsli')}
+                    {t('pdfDownload.agbZusatz')}
                   </button>
                 </div>
               </div>

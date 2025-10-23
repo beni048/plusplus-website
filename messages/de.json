@@ -724,7 +724,7 @@
     "pdfDownload": {
       "title": "PDF-Dokumente herunterladen",
       "agb": "AGB herunterladen",
-      "agbZinsli": "AGB Zusatz herunterladen"
+      "agbZusatz": "AGB Zusatz herunterladen"
     },
     "agb": {
       "general": {
