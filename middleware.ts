@@ -1,13 +1,5 @@
-import createMiddleware from 'next-intl/middleware';
+// Deprecated shim: keep middleware file as a thin wrapper that re-exports
+// the new `proxy` implementation for compatibility during the migration to
+// Next.js 16. Remove this file once you are confident `proxy.ts` is in use.
 
-export default createMiddleware({
-  locales: ['en', 'de'],
-  defaultLocale: 'en',
-  localePrefix: 'always' // Change to 'always' to ensure locale is always present
-});
-
-export const config = {
-  matcher: [
-    '/((?!api|_next|_vercel|.*\\..*).*)'
-  ]
-};
+export { proxy as middleware, config } from './proxy';
