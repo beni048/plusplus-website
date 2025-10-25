@@ -12,8 +12,7 @@ import {
   optOutAnalytics, 
   optInAnalytics, 
   getOptOutStatus, 
-  requestDataDeletion, 
-  updateConsent 
+  requestDataDeletion
 } from '@/lib/gtag';
 
 export default function PrivacyControls() {

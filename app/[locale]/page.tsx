@@ -6,12 +6,10 @@ import { ArrowRight, Calendar } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslations, useLocale } from 'next-intl';
-import { useAnalytics } from '@/hooks/use-analytics';
 
 export default function Home() {
   const t = useTranslations();
   const locale = useLocale();
-  const analytics = useAnalytics();
 
   return (
     <main className="flex min-h-screen flex-col">
