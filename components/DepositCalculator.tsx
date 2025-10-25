@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { LineChart, Line, XAxis, YAxis, ResponsiveContainer, CartesianGrid, Tooltip } from 'recharts';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
@@ -35,8 +35,29 @@ const getBitcoinPriceForMonth = (year: number, month: number): number => {
   return BITCOIN_MONTHLY_DATA[key as keyof typeof BITCOIN_MONTHLY_DATA] || 114067.71; // fallback to Oct 2025 price
 };
 
+interface CalculationResult {
+  totalReturn: number;
+  annualReturn: number;
+  finalAmount: number;
+  totalCost: number;
+  annualCost: number;
+  availability: 'fully_available' | 'no_deposit_required';
+  isHistorical?: boolean;
+  percentageGain?: number;
+}
+
+interface Product {
+  id: string;
+  nameKey: string;
+  rate: number;
+  rateRange: string;
+  type: 'investment' | 'cost';
+  color: string;
+  hasDeposit: boolean;
+}
+
 // Function to calculate Bitcoin return based on historical data with percentage gains
-const calculateBitcoinHistorical = (deposit: number, years: number): any => {
+const calculateBitcoinHistorical = (deposit: number, years: number): CalculationResult => {
   const endDate = new Date(2025, 9, 1); // October 1, 2025
   const startDate = new Date(2009, 9, 1); // October 1, 2009
   
@@ -108,7 +129,7 @@ export const PRODUCTS = {
 };
 
 // Calculation functions
-export const calculateProduct = (deposit: number, product: any, years: number) => {
+export const calculateProduct = (deposit: number, product: Product, years: number): CalculationResult => {
   // Use historical data for Bitcoin
   if (product.id === 'bitcoinDeposit') {
     return calculateBitcoinHistorical(deposit, years);
@@ -180,11 +201,11 @@ export const formatCurrencyMobileWithOverflow = (amount: number, currency: strin
 
 interface ProductCardProps {
   title: string;
-  product: any;
+  product: Product;
   grossRent: number;
   rentalPeriod: number;
   depositMultiplier: number;
-  t: any;
+  t: (key: string) => string;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ 
@@ -276,9 +297,9 @@ interface CapitalDevelopmentChartProps {
   grossRent: number;
   rentalPeriod: number;
   depositMultiplier: number;
-  productA: any;
-  productB: any;
-  t: any;
+  productA: Product;
+  productB: Product;
+  t: (key: string) => string;
 }
 
 const CapitalDevelopmentChart: React.FC<CapitalDevelopmentChartProps> = ({ 
@@ -365,17 +386,18 @@ const CapitalDevelopmentChart: React.FC<CapitalDevelopmentChartProps> = ({
     return data;
   };
 
-  const customTooltip = ({ active, payload, label }: any) => {
+  type TooltipPayloadEntry = { dataKey?: string | number; value?: number | string; color?: string };
+  const customTooltip = ({ active, payload, label }: { active?: boolean; payload?: Array<TooltipPayloadEntry> | undefined; label?: string }) => {
     if (active && payload && payload.length) {
       return (
         <div className="bg-white border border-gray-200 p-3 rounded-lg shadow-lg">
           <p className="text-neutral-black font-medium">{label}</p>
-          {payload.map((entry: any, index: number) => (
+          {payload.map((entry, index) => (
             <p key={index} style={{ color: entry.color }} className="text-sm font-medium">
               {entry.dataKey === 'productA' 
                 ? t(productA.nameKey) 
                 : t(productB.nameKey)
-              }: {formatCurrency(entry.value)}
+              }: {formatCurrency(Number(entry.value ?? 0))}
             </p>
           ))}
         </div>
@@ -473,8 +495,8 @@ export default function DepositCalculator() {
   const [productA, setProductA] = useState('bankDeposit');
   const [productB, setProductB] = useState('frankencoinDeposit');
 
-  const selectedProductA = PRODUCTS[productA as keyof typeof PRODUCTS];
-  const selectedProductB = PRODUCTS[productB as keyof typeof PRODUCTS];
+  const selectedProductA = PRODUCTS[productA as keyof typeof PRODUCTS] as Product;
+  const selectedProductB = PRODUCTS[productB as keyof typeof PRODUCTS] as Product;
 
   const maxRentalPeriod = 16; // Updated to 16 years (Oct 2009 to Oct 2025)
 
