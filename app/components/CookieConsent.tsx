@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
@@ -12,19 +12,15 @@ export default function CookieConsentBanner() {
   const t = useTranslations('cookies');
   const locale = useLocale();
   const { trackCookieConsent } = useAnalytics();
-  const [showBanner, setShowBanner] = useState(false);
-
-  useEffect(() => {
+  const [showBanner, setShowBanner] = useState<boolean>(() => {
     try {
       const consent = localStorage.getItem('cookie-consent');
-      if (!consent) {
-        setShowBanner(true);
-      }
-    } catch (error) {
+      return !consent;
+    } catch {
       // Show banner if localStorage fails (e.g., private browsing)
-      setShowBanner(true);
+      return true;
     }
-  }, []);
+  });
 
   const handleAccept = () => {
     trackCookieConsent('accept');

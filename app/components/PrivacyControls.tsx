@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Switch } from '@/components/ui/switch';
@@ -18,11 +18,7 @@ import {
 
 export default function PrivacyControls() {
   const t = useTranslations('privacy');
-  const [analyticsEnabled, setAnalyticsEnabled] = useState(false);
-
-  useEffect(() => {
-    setAnalyticsEnabled(!getOptOutStatus());
-  }, []);
+  const [analyticsEnabled, setAnalyticsEnabled] = useState<boolean>(() => !getOptOutStatus());
 
   const handleAnalyticsToggle = (enabled: boolean) => {
     if (enabled) {
