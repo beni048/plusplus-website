@@ -228,6 +228,8 @@ export default function Home() {
                         width={120}
                         height={40}
                         className="h-10 w-auto"
+                        // Ensure aspect ratio is preserved when CSS changes one dimension
+                        style={{ width: 'auto' }}
                       />
                     </div>
                     <h3 className="mb-3 text-center text-lg font-primary font-bold text-black">
