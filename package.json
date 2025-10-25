@@ -77,6 +77,8 @@
     "zod": "^3.25.60"
   },
   "devDependencies": {
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
     "@playwright/test": "^1.56.1",
     "@types/canvas-confetti": "^1.9.0",
     "@types/nodemailer": "^6.4.17",
