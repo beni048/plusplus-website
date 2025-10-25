@@ -17,8 +17,10 @@ for (const path of paths) {
     const axePath = require.resolve('axe-core/axe.min.js');
     await page.addScriptTag({ path: axePath });
     const results = await page.evaluate(async () => {
-  // Temporarily disable certain rules that are known and tracked for remediation
-  return await (window as unknown as { axe: any }).axe.run(document, {
+      // Temporarily disable certain rules that are known and tracked for remediation
+      type AxeRunResult = { violations?: unknown[] };
+      type AxeWindow = { axe: { run: (root: Node, options?: { rules?: Record<string, { enabled: boolean }> }) => Promise<AxeRunResult> } };
+      return await (window as unknown as AxeWindow).axe.run(document, {
         rules: {
           'color-contrast': { enabled: false },
           'region': { enabled: false },
