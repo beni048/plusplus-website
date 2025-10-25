@@ -1,6 +1,4 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
-  "/api/contact/route": "app/api/contact/route.js",
   "/[locale]/contact/page": "app/[locale]/contact/page.js",
   "/[locale]/corporate-treasury/page": "app/[locale]/corporate-treasury/page.js",
   "/[locale]/help/page": "app/[locale]/help/page.js",
@@ -13,5 +11,8 @@
   "/[locale]/rental-solutions/tenant/calculator/page": "app/[locale]/rental-solutions/tenant/calculator/page.js",
   "/[locale]/rental-solutions/tenant/page": "app/[locale]/rental-solutions/tenant/page.js",
   "/[locale]/select/page": "app/[locale]/select/page.js",
-  "/[locale]/terms-and-conditions/page": "app/[locale]/terms-and-conditions/page.js"
+  "/[locale]/terms-and-conditions/page": "app/[locale]/terms-and-conditions/page.js",
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/contact/route": "app/api/contact/route.js"
 }
