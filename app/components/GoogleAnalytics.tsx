@@ -30,7 +30,7 @@ export default function GoogleAnalytics() {
       strategy="afterInteractive"
       onLoad={() => {
         window.dataLayer = window.dataLayer || [];
-        window.gtag = function gtag(...args: any[]) {
+        window.gtag = function gtag(...args: unknown[]) {
           window.dataLayer.push(args);
         };
         window.gtag('js', new Date());

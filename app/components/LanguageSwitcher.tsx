@@ -15,7 +15,6 @@ interface LanguageSwitcherProps {
 
 export default function LanguageSwitcher({ 
   mobile = false, 
-  onLanguageChange: _onLanguageChange,
   sourceContext 
 }: LanguageSwitcherProps) {
   const locale = useLocale();

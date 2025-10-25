@@ -1,12 +1,12 @@
 "use client";
 
 import { useCallback } from 'react';
-import { usePathname } from 'next/navigation';
 import { trackEvent, isAnalyticsEnabled } from '@/lib/gtag';
 
 // Simple analytics hook for basic tracking
 export function useAnalytics() {
-  const pathname = usePathname();
+  // We intentionally do not keep pathname here to avoid unnecessary re-renders
+  // const pathname = usePathname();
   
   // Simple event tracking
   const trackCustomEvent = useCallback((

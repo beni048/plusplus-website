@@ -1,0 +1,12 @@
+# Codeowners: adjust as appropriate
+# Format: <pattern> <owner>
+# Use GitHub usernames or team names (e.g. @beni048 or @org/team)
+
+# Frontend areas
+/app/ @beni048
+/components/ @beni048
+/components/ui/ @beni048
+
+# Tests and CI
+/tests/ @beni048
+.github/workflows/ @beni048

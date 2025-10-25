@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -79,7 +80,15 @@
     "@playwright/test": "^1.56.1",
     "@types/canvas-confetti": "^1.9.0",
     "@types/nodemailer": "^6.4.17",
-    "eslint": "9.38.0"
+    "eslint": "9.38.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^14.0.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "pnpm exec eslint --fix",
+      "git add"
+    ]
   },
   "overrides": {
     "@types/react": "19.2.2",

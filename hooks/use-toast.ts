@@ -22,6 +22,10 @@ const actionTypes = {
   REMOVE_TOAST: 'REMOVE_TOAST',
 } as const;
 
+// Ensure `actionTypes` remains a runtime reference so linters don't flag it as
+// "assigned a value but only used as a type" — this is a no-op but safe.
+void actionTypes;
+
 let count = 0;
 
 function genId() {

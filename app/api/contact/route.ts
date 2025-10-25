@@ -29,9 +29,12 @@ export async function POST(request: Request) {
   }
 
   try {
-    // Parse request body
-    const { name, email, message } = await request.json();
-    
+    // Parse request body safely
+  const body = (await request.json()) as Record<string, unknown>;
+  const name = typeof body['name'] === 'string' ? (body['name'] as string).trim() : '';
+  const email = typeof body['email'] === 'string' ? (body['email'] as string).trim() : '';
+  const message = typeof body['message'] === 'string' ? (body['message'] as string).trim() : '';
+
     // Validate required fields
     if (!name || !email || !message) {
       return NextResponse.json(
@@ -122,16 +125,22 @@ The Plusplus Team</p>`,
     // Return success response
     return NextResponse.json({ submitted: true });
     
-  } catch (error: any) {
-    // Enhanced error logging
+  } catch (err: unknown) {
+    // Enhanced error logging with safe narrowing
     console.error('Error sending email:');
-    console.error('Status code:', error.statusCode);
-    console.error('Error message:', error.message);
-    
-    if (error.response && error.response.data) {
-      console.error('Mailjet error response:', JSON.stringify(error.response.data, null, 2));
+    if (err instanceof Error) {
+      console.error('Error message:', err.message);
     }
-    
+
+    // Mailjet may return structured error info; attempt to log safely without assuming types
+    try {
+      if (typeof err === 'object' && err !== null) {
+        console.error('Error details:', JSON.stringify(err));
+      }
+    } catch {
+      // swallow logging errors
+    }
+
     return NextResponse.json(
       { message: 'Failed to send email' },
       { status: 500 }
