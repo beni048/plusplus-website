@@ -2,8 +2,7 @@
   "nav": {
     "rentalSolutions": "Mietlösungen",
     "corporateTreasury": "Corporate Treasury",
-    "contact": "Kontakt",
-    "help": "Hilfe"
+    "contact": "Kontakt"
   },
   "hero": {
     "title": {
@@ -14,65 +13,29 @@
     "subtitle": "Wir schaffen den Zugang zu einer neuen Generation von Finanzlösungen.",
     "cta": "Jetzt Entdecken"
   },
-  "about": {
-    "title": "Plusplus macht Sparen wieder smart",
-    "paragraph1": "Wir verbinden die Welt von DeFi mit der Stabilität des Schweizer Frankens und die Welt von TradFi mit der Rentabilität des Bitcoins. Für alle.",
-    "paragraph2": "**Unsere Lösung**: Mietkautionen, die nicht einfach auf dem Konto verstauben, sondern für Sie arbeiten. Ob Bitcoin oder Stablecoins. Bei uns bekommen Sie die Möglichkeit, Ihre Mietkaution nach Ihren Bedürfnissen in einem innovativen Produkt anzulegen. Für Unternehmen bieten wir einfache, sichere und regulierte Zugänge zur dezentralen Finanzwelt. Swiss Made, ohne Tech-Frust.",
-    "paragraph3": "**Unsere Vision**: Wir schaffen eine Finanzwelt, in der Geld nicht einfach liegt, sondern lebt. Plusplus bringt DeFi dorthin, wo es wirklich Sinn macht – in den Alltag. Ob Kaution oder Business Treasury: Wir machen renditestarkes Sparen einfach, sicher und für alle zugänglich."
-  },
   "mainSections": {
     "rentalSolutions": {
-    "title": "Mietlösungen",
-    "paragraph1": "Unsere digitalen Mietkautionslösungen bieten eine moderne Alternative zum klassischen Bankdepot. Statt Kapital zu blockieren, wird die Kaution sicher auf der Blockchain hinterlegt: als Schweizer Franken Stablecoin mit Rendite oder in Bitcoin.",
-    "paragraph2": "Im Hintergrund sorgt die Technologie für faire Erträge für Mieterinnen. Für Vermieter ist der Prozess transparent, sicher und erstmals vollständig digital.",
-    "button": "Jetzt profitieren"
-  },
+      "title": "Mietlösungen",
+      "paragraph1": "Unsere digitalen Mietkautionslösungen bieten eine moderne Alternative zum klassischen Bankdepot. Statt Kapital zu blockieren, wird die Kaution sicher auf der Blockchain hinterlegt: als Schweizer Franken Stablecoin mit Rendite oder in Bitcoin.",
+      "paragraph2": "Im Hintergrund sorgt die Technologie für faire Erträge für Mieterinnen. Für Vermieter ist der Prozess transparent, sicher und erstmals vollständig digital.",
+      "button": "Jetzt profitieren"
+    },
     "corporateTreasury": {
-    "title": "Corporate Treasury",
-    "paragraph1": "Unsere Treasury-Lösungen eröffnen Unternehmen einen sicheren Zugang zur modernen, digitalen Finanzwelt. Weltweit setzen immer mehr Unternehmen und Finanzinstitute auf Stablecoins, um Liquidität effizienter und gewinnbringend zu verwalten.",
-    "paragraph2": "Mit dem Frankencoin (ZCHF) existiert erstmals ein stabiler Schweizer Franken Stablecoin. Wir ermöglichen jetzt den institutionellen Zugang zu diesem neuen Standard. Transparent, reguliert und mit 3% Rendite in einem Nullzinsumfeld.",
-    "button": "Mehr erfahren"
-  },
+      "title": "Corporate Treasury",
+      "paragraph1": "Unsere Treasury-Lösungen eröffnen Unternehmen einen sicheren Zugang zur modernen, digitalen Finanzwelt. Weltweit setzen immer mehr Unternehmen und Finanzinstitute auf Stablecoins, um Liquidität effizienter und gewinnbringend zu verwalten.",
+      "paragraph2": "Mit dem Frankencoin (ZCHF) existiert erstmals ein stabiler Schweizer Franken Stablecoin. Wir ermöglichen jetzt den institutionellen Zugang zu diesem neuen Standard. Transparent, reguliert und mit 3% Rendite in einem Nullzinsumfeld.",
+      "button": "Mehr erfahren"
+    },
     "partners": {
-    "title": "Partner",
-    "paragraph1": "Unsere Partner gehören zu den führenden Anbietern im Bereich Finanztechnologie und digitaler Infrastruktur.",
-    "paragraph2": "Gemeinsam stellen wir sicher, dass alle Systeme höchsten Standards in Sicherheit, Compliance und Transparenz entsprechen."
-  },
+      "title": "Partner",
+      "paragraph1": "Unsere Partner gehören zu den führenden Anbietern im Bereich Finanztechnologie und digitaler Infrastruktur.",
+      "paragraph2": "Gemeinsam stellen wir sicher, dass alle Systeme höchsten Standards in Sicherheit, Compliance und Transparenz entsprechen."
+    },
     "contact": {
-  "title": "Bereit loszulegen?",
-  "paragraph": "Lernen Sie unsere Lösungen in einem persönlichen Gespräch kennen.\nBuchen Sie eine unverbindliche 30-minütige Beratung mit unserem Vertriebsleiter.",
-  "button": "Meeting planen",
-  "subtitle": "Jetzt Termin für eine 30-minütige Beratung buchen."
-    }
-  },
-  "team": {
-    "title": "Unser Team",
-    "members": {
-      "jonas": {
-        "name": "Jonas",
-        "role": "Mitgründer & Sales Berater",
-        "bio": "Experte für Vertrieb und Geschäftsentwicklung. Ehemaliger Relai-Berater und wichtiger Beitragender bei der Skalierung von Lionstep von 1 auf 9 Millionen in drei Jahren."
-      },
-      "benjamin": {
-        "name": "Benjamin",
-        "role": "Mitgründer & COO",
-        "bio": "Technologie- und Geschäftsexperte mit Hintergrund von ETH und ZHAW, spezialisiert auf Entwicklung, IT-Beratung, Cybersicherheit und Cloud-Technologien."
-      },
-      "matthias": {
-        "name": "Matthias",
-        "role": "CTO",
-        "bio": "Veröffentlichter Forscher und Doktorand an der Unibas. 10+ Jahre Expertise in dezentraler Finanzwelt, Smart Contract-Entwicklung und dem Ethereum-Umfeld."
-      }
-    }
-  },
-  "partners": {
-    "title": "Partner",
-    "descriptions": {
-      "zinsli": "Schweizer Marktplatz für digitale Mietkautions-Lösungen.",
-      "frankencoin": "Dezentrales Schweizer Franken Stablecoin-Ökosystem.",
-      "dfx": "Institutionelle DeFi FX-Lösungen für CHF, EUR und USD.",
-      "aktionariat": "Equity-Tokenisierungsplattform für Schweizer KMU.",
-      "bitcoinsuisse": "Pionier im Krypto-Brokerage und Custody-Services."
+      "title": "Bereit loszulegen?",
+      "paragraph": "Lernen Sie unsere Lösungen in einem persönlichen Gespräch kennen.\nBuchen Sie eine unverbindliche 30-minütige Beratung mit unserem Vertriebsleiter.",
+      "button": "Meeting planen",
+      "subtitle": "Jetzt Termin für eine 30-minütige Beratung buchen."
     }
   },
   "contact": {
@@ -100,15 +63,7 @@
     "description": "Wir verwenden Cookies, um Ihre Erfahrung zu verbessern.",
     "learnMore": "Mehr erfahren",
     "acceptOptional": "Alle akzeptieren",
-    "declineOptional": "Nur essentiell",
-    "customize": "Optionen",
-    "savePreferences": "Speichern",
-    "back": "Zurück",
-    "essentialCookies": "Essentielle Cookies",
-    "essentialDescription": "Erforderlich für Website-Funktionalität",
-    "analytics": "Analytik",
-    "analyticsDescription": "Helfen Sie uns, unsere Website zu verbessern",
-    "alwaysOn": "Immer An"
+    "declineOptional": "Nur essentiell"
   },
   "privacy": {
     "controlsTitle": "Datenschutz-Kontrollen",
@@ -126,17 +81,7 @@
     "gdprComplianceLabel": "DSGVO-Konformität",
     "gdprComplianceFeature": "Vollständige Einhaltung der EU-Datenschutzbestimmungen",
     "optOutInfo": "Sie können jederzeit die Analyse deaktivieren und wir stellen Ihnen Werkzeuge zur Verfügung, um alle Ihre Daten zu löschen, falls Sie Ihr Recht auf Vergessenwerden ausüben möchten.",
-    "cookieConsent": "Cookie-Einwilligung (Legacy)",
-    "cookieConsentDescription": "Cookies für erweiterte Funktionalität und Analyse erlauben",
-    "optionalCookieConsent": "Optionale Cookie-Einwilligung", 
-    "optionalCookieConsentDescription": "Optionale Cookies für Analyse und erweiterte Funktionalität aktivieren",
-    "necessaryCookies": "Notwendige Cookies",
-    "necessaryCookiesDescription": "Erforderliche Cookies für grundlegende Website-Funktionen und Sicherheit. Diese sind immer aktiv und können unter DSGVO/ePrivacy-Richtlinie nicht deaktiviert werden.",
     "alwaysActive": "Immer aktiv",
-    "analyticsTracking": "Analyse-Tracking",
-    "analyticsTrackingDescription": "Anonyme Analyse erlauben, um unsere Website zu verbessern",
-    "deleteData": "Meine Daten löschen",
-    "deleteDataDescription": "Alle gespeicherten Daten und Tracking-Präferenzen entfernen",
     "deleteDataButton": "Daten löschen",
     "deleteDataConfirmTitle": "Alle Daten löschen?",
     "deleteDataConfirmDescription": "Dies wird dauerhaft alle Ihre gespeicherten Präferenzen und Tracking-Daten löschen.",
@@ -149,10 +94,6 @@
     "analyticsDescription": "Helfen Sie uns, unsere Website mit anonymen Nutzungsdaten zu verbessern",
     "deleteAllData": "Alle Daten löschen",
     "deleteAllDataDescription": "Alle gespeicherten Präferenzen und Daten dauerhaft entfernen"
-  },
-  "language": {
-    "en": "English",
-    "de": "Deutsch"
   },
   "help": {
     "title": "Häufig gestellte Fragen",
@@ -194,8 +135,7 @@
         "answer": "Wir verpflichten uns zum Schutz Ihrer Privatsphäre unter Schweizer Datenschutzgesetzen und DSGVO. Persönliche Daten werden nur erhoben, wenn für Service-Bereitstellung und regulatorische Compliance notwendig. Wir verwenden sichere, verschlüsselte Systeme für Datenspeicherung und -übertragung. Daten werden niemals an Dritte verkauft und nur mit regulierten Partnern geteilt, wie für Service-Bereitstellung erforderlich. Sie behalten vollständige Kontrolle über Ihre persönlichen Informationen und können jederzeit Zugang, Korrektur oder Löschung beantragen."
       },
       "support": {
-        "question": "Wie fange ich an oder erhalte Support?",
-        "answer": "Der Einstieg ist einfach! Für Mieter: Kontaktieren Sie Ihren Vermieter und bitten Sie ihn, den Prozess mit <a href=\"https://zinsli.com\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-black underline hover:text-accent-orange transition-colors\">Zinsli</a> zu initiieren, um unsere WBTC- und ZCHF-basierten Kautionsprodukte für Ihre Mietkaution zu nutzen. Für Vermieterinnen: Wenden Sie sich direkt an Zinsli, um diese innovativen Kautionslösungen Ihren Mietern anzubieten. Benötigen Sie Hilfe bei der Verbindung mit Zinsli oder haben Fragen? Unser Schweizer Team hilft gerne. Kontaktieren Sie uns unter <a href=\"mailto:info@plusplus.swiss\" class=\"text-black underline hover:text-accent-orange transition-colors\">info@plusplus.swiss</a> oder über das Kontaktformular unserer Website."
+        "question": "Wie fange ich an oder erhalte Support?"
       }
     }
   },
@@ -264,53 +204,51 @@
     }
   },
   "productSelect": {
-  "title": "Entdecken Sie unsere Lösungen",
-  "subtitle": "Unsere Produkte verbinden bewährte Finanzprinzipien mit digitaler Technologie für moderne Miet- und Treasury-Anwendungen.",
-  "subtitleFull": "Unsere Produkte verbinden bewährte Finanzprinzipien mit digitaler Technologie für moderne Miet- und Treasury-Anwendungen.",
+    "title": "Entdecken Sie unsere Lösungen",
+    "subtitle": "Unsere Produkte verbinden bewährte Finanzprinzipien mit digitaler Technologie für moderne Miet- und Treasury-Anwendungen.",
+    "subtitleFull": "Unsere Produkte verbinden bewährte Finanzprinzipien mit digitaler Technologie für moderne Miet- und Treasury-Anwendungen.",
     "rentalSolutions": {
-  "title": "Mietlösungen",
-  "description": "Digitale Mietkautionslösungen für Mieter und Vermieter. Fair, sicher und vollständig online verwaltet.",
-  "cta": "Mehr erfahren"
+      "title": "Mietlösungen",
+      "description": "Digitale Mietkautionslösungen für Mieter und Vermieter. Fair, sicher und vollständig online verwaltet.",
+      "cta": "Mehr erfahren"
     },
     "corporateTreasury": {
-  "title": "Corporate Treasury",
-  "description": "Moderne, Stablecoin-basierte Treasury- und Liquiditätslösungen für Unternehmen und Institutionen.",
-  "cta": "Services entdecken"
+      "title": "Corporate Treasury",
+      "description": "Moderne, Stablecoin-basierte Treasury- und Liquiditätslösungen für Unternehmen und Institutionen.",
+      "cta": "Services entdecken"
     },
     "contact": {
-      "title": "Hilfe bei der Auswahl?",
       "question": "Keine der obigen Optionen passt zu Ihren Bedürfnissen?",
       "button": "Kontakt aufnehmen"
     }
   },
   "rentalSolutionsSelect": {
-  "title": "Finden Sie die passende Mietlösung",
-  "subtitle": "Entdecken Sie unsere sicheren, digitalen Kautionslösungen. Fair für Mieter. Einfach für Vermieter.",
-  "subtitleFull": "Entdecken Sie unsere sicheren, digitalen Kautionslösungen. Fair für Mieter. Einfach für Vermieter.",
+    "title": "Finden Sie die passende Mietlösung",
+    "subtitle": "Entdecken Sie unsere sicheren, digitalen Kautionslösungen. Fair für Mieter. Einfach für Vermieter.",
+    "subtitleFull": "Entdecken Sie unsere sicheren, digitalen Kautionslösungen. Fair für Mieter. Einfach für Vermieter.",
     "tenant": {
-  "title": "Ich miete",
-  "description": "Die klassische Mietkaution war gestern.\nUnsere digitale Lösung ermöglicht faire Erträge und volle Transparenz. In Schweizer Franken Stablecoins oder in Bitcoin.",
-  "cta": "Loslegen"
+      "title": "Ich miete",
+      "description": "Die klassische Mietkaution war gestern.\nUnsere digitale Lösung ermöglicht faire Erträge und volle Transparenz. In Schweizer Franken Stablecoins oder in Bitcoin.",
+      "cta": "Loslegen"
     },
     "landlord": {
-  "title": "Ich vermiete",
-  "description": "Sie möchten Mietkautionen einfach, transparent und digital verwalten?\nMit unserem Partner Zinsli bieten wir geprüfte Sicherheit und automatisierte Abläufe. Weniger Aufwand und mehr Übersicht. Komplett kostenlos.",
-  "cta": "Mehr erfahren"
+      "title": "Ich vermiete",
+      "description": "Sie möchten Mietkautionen einfach, transparent und digital verwalten?\nMit unserem Partner Zinsli bieten wir geprüfte Sicherheit und automatisierte Abläufe. Weniger Aufwand und mehr Übersicht. Komplett kostenlos.",
+      "cta": "Mehr erfahren"
     },
     "contact": {
-      "title": "Hilfe bei der Auswahl?",
       "question": "Keine der obigen Optionen passt zu Ihren Bedürfnissen?",
       "button": "Kontakt aufnehmen"
     }
   },
   "rentalSolutionsTenant": {
-  "title": "Digitale Mietkaution. Fair und einfach.",
-  "subtitle": "Machen Sie Ihre Kaution noch heute zu einem Bestandteil Ihrer Anlagestrategie.",
-  "subtitleFull": "Machen Sie Ihre Kaution noch heute zu einem Bestandteil Ihrer Anlagestrategie.",
+    "title": "Digitale Mietkaution. Fair und einfach.",
+    "subtitle": "Machen Sie Ihre Kaution noch heute zu einem Bestandteil Ihrer Anlagestrategie.",
+    "subtitleFull": "Machen Sie Ihre Kaution noch heute zu einem Bestandteil Ihrer Anlagestrategie.",
     "calculator": {
-  "title": "Jetzt Rendite berechnen",
-  "description": "Entdecken Sie den Unterschied zwischen klassischer Bankkaution, Kautionsversicherung und digitalen Alternativen.",
-  "button": "Zum Kautionsrechner"
+      "title": "Jetzt Rendite berechnen",
+      "description": "Entdecken Sie den Unterschied zwischen klassischer Bankkaution, Kautionsversicherung und digitalen Alternativen.",
+      "button": "Zum Kautionsrechner"
     },
     "frankencoin": {
       "title": "Kaution in Schweizer Franken Stablecoins",
@@ -320,8 +258,7 @@
         "transparency": "Stabile Wertentwicklung",
         "settlement": "Institutionelle Verwahrung"
       },
-  "cta": "Zum Produktemerkblatt"
-
+      "cta": "Zum Produktemerkblatt"
     },
     "bitcoin": {
       "title": "Kaution in Bitcoin",
@@ -331,7 +268,7 @@
         "escrow": "Volle Transparenz",
         "accessibility": "Institutionelle Verwahrung"
       },
-  "cta": "Zum Produktemerkblatt"
+      "cta": "Zum Produktemerkblatt"
     },
     "emailTemplate": {
       "title": "Bereit loszulegen? Informieren Sie Ihren Vermieter",
@@ -340,38 +277,6 @@
       "copied": "Kopiert!",
       "button": "Zinsli-Plattform besuchen",
       "subtitle": "Ihr Vermieter kann sich in unter 5 Minuten anmelden und Sie einladen"
-    },
-    "benefits": {
-      "title": "Vorteile für Mieter",
-      "benefit1": "Erzielen Sie Renditen auf Ihre Mietkaution, anstatt sie untätig liegen zu lassen",
-      "benefit2": "Flexible Zahlungsoptionen, die zu Ihrer finanziellen Situation passen",
-      "benefit3": "Digitale Verwaltung aller mietbezogenen Dokumente und Zahlungen",
-      "benefit4": "Aufbau Ihrer Kreditwürdigkeit durch konsistente, nachverfolgte Zahlungen"
-    },
-    "howItWorks": {
-      "title": "So funktioniert es",
-      "step1": {
-        "title": "1. Bewerben Sie sich für Ihre Mietwohnung",
-        "description": "Nutzen Sie unsere Plattform, um sich für Mietwohnungen mit verbesserter Glaubwürdigkeit durch unser Verifizierungssystem zu bewerben."
-      },
-      "step2": {
-        "title": "2. Intelligente Kautionsinvestition",
-        "description": "Anstatt einer traditionellen Kaution investieren Sie Ihr Geld in unsere sicheren, renditestarken Produkte."
-      },
-      "step3": {
-        "title": "3. Geniessen Sie Ihr Zuhause",
-        "description": "Leben Sie in Ihrer Mietwohnung, während Ihre Kaution für Sie arbeitet und im Laufe der Zeit Renditen erzielt."
-      }
-    },
-    "features": {
-      "title": "Hauptmerkmale",
-      "feature1": "Schweizer regulierte Anlageprodukte für maximale Sicherheit",
-      "feature2": "Echtzeitverfolgung Ihrer Kautionsperformance",
-      "feature3": "Sofortiger Zugang zu Mitteln bei Bedarf",
-      "feature4": "Umfassende Mietversicherung inklusive"
-    },
-    "cta": {
-      "button": "Als Mieter starten"
     },
     "finalCta": {
       "title": "Bereit loszulegen?",
@@ -389,32 +294,20 @@
     "depositMultiplier": "Kautionsfaktor",
     "deposit": "Gesamtkaution",
     "monthlyRent": "Mietzins",
-    "automaticCalculation": "Kaution wird automatisch als {multiplier}× Bruttomietzins gesetzt = {amount}",
-    "products": {
-      "bankDeposit": "Tradition Bank - Bankkonto",
-      "depositInsurance": "Sadcautio - Kautionsversicherung",
-      "bitcoinDeposit": "Plusplus - Bitcoin Kaution",
-      "frankencoinDeposit": "Plusplus - Digitaler Schweizer Franken Kaution"
-    },
     "productA": "Produkt A",
     "productB": "Produkt B",
-    "marketAssumptions": "Marktannahmen (Schweiz, Oktober 2025)",
-    "dataSource": "Berechnungen und Beträge basieren auf Schweizer Marktdaten vom Oktober 2025",
     "totalReturn": "Gesamtertrag über Laufzeit",
     "totalCost": "Gesamtkosten über Laufzeit",
     "perYear": "∅ pro Jahr",
-    "capitalAtEnd": "Kapital am Ende",
-    "fullyAvailable": "Kaution vollständig verfügbar",
-    "noDepositBound": "Keine Kaution gebunden",
     "capitalDevelopment": "Kapitalentwicklung",
     "year": "Jahr",
     "bitcoinWarning": "Historische Bitcoin-Daten: Bitcoin-Berechnungen verwenden tatsächliche monatliche Eröffnungspreise von Oktober 2009 bis Oktober 2025 und zeigen echte Volatilität einschliesslich grosser Preisrückgänge und -anstiege.",
     "disclaimer": "Alle Berechnungen basieren auf Marktdaten vom Oktober 2025 (Renditen, Zinsen, Gebühren pro Produkt). Tatsächliche Werte können abweichen. Bitcoin-Berechnungen: 1 Jahr = Okt 2024 bis Okt 2025, max 16 Jahre = Okt 2009 bis Okt 2025 Prozentänderungen. Versicherung 4-5%, Bank-Sperrkonto 0,1-0,4%, Frankencoin 3% (historisch zwischen 3-5%)."
   },
   "rentalSolutionsLandlord": {
-  "title": "Mietkautionen, die für Sie arbeiten",
-  "subtitle": "Vereinfachen Sie noch heute Ihren Mietkautions-Prozess.",
-  "subtitleFull": "Rechtskonforme, digitale Verwahrung für Vermieter – mehr Transparenz, weniger Aufwand, zufriedene Mieter.",
+    "title": "Mietkautionen, die für Sie arbeiten",
+    "subtitle": "Vereinfachen Sie noch heute Ihren Mietkautions-Prozess.",
+    "subtitleFull": "Rechtskonforme, digitale Verwahrung für Vermieter – mehr Transparenz, weniger Aufwand, zufriedene Mieter.",
     "stepByStep": {
       "title": "Jetzt einrichten in 4 einfachen Schritten",
       "intro": "Starten Sie in weniger als fünf Minuten mit modernem, digitalem Kautionsmanagement – ganz ohne Papierkram und komplizierte Prozesse.",
@@ -460,95 +353,10 @@
       },
       "cta": "Loslegen"
     },
-    "benefits": {
-      "title": "Vorteile für Vermieter",
-      "benefit1": "Garantierte Mietzahlungen auch bei Mietausfall",
-      "benefit2": "Umfassende Mieterprüfung und Kreditbewertung",
-      "benefit3": "Digitale Immobilienverwaltungstools und Dokumentation",
-      "benefit4": "Reduzierte Leerstandszeiten durch unser Mieternetzwerk"
-    },
-    "services": {
-      "title": "Unsere Dienstleistungen",
-      "screening": {
-        "title": "Erweiterte Mieterprüfung",
-        "description": "Unser umfassender Prüfprozess umfasst Bonitätsprüfungen, Einkommensverifizierung und Miethistorienanalyse, um zuverlässige Mieter zu gewährleisten."
-      },
-      "guarantee": {
-        "title": "Mietgarantie",
-        "description": "Wir garantieren Ihr Mieteinkommen für bis zu 12 Monate und schützen Sie vor Mietausfällen für Ihre Sicherheit."
-      },
-      "management": {
-        "title": "Digitale Immobilienverwaltung",
-        "description": "Verwalten Sie alle Aspekte Ihrer Mietimmobilien über unsere digitale Plattform, von Mietverträgen bis zu Wartungsanfragen."
-      }
-    },
-    "howItWorks": {
-      "title": "So funktioniert es",
-      "step1": {
-        "title": "1. Listen Sie Ihre Immobilie auf",
-        "description": "Fügen Sie Ihre Mietimmobilie mit detaillierten Informationen und Fotos zu unserer Plattform hinzu."
-      },
-      "step2": {
-        "title": "2. Mieter-Matching",
-        "description": "Wir prüfen und vermitteln qualifizierte Mieter für Ihre Immobilie basierend auf unseren umfassenden Kriterien."
-      },
-      "step3": {
-        "title": "3. Sichere Verwaltung",
-        "description": "Geniessen Sie garantierte Mietzahlungen und vollständige Immobilienverwaltungsunterstützung während der gesamten Mietdauer."
-      }
-    },
-    "cta": {
-      "button": "Als Vermieter starten"
-    },
     "finalCta": {
       "title": "Bereit loszulegen?",
       "intro": "Schliessen Sie sich den zufriedenen Vermieterinnen an, die bereits ihre Mietverwaltung mit unserer innovativen Lösung vereinfacht haben.",
       "cta": "Einrichtung jetzt starten"
-    }
-  },
-  "rentalSolutions": {
-    "hero": {
-      "title": "Mietlösungen",
-      "subtitle": "Innovative Mietkautions- und Immobilienverwaltungslösungen, die sowohl Mietern als auch Vermietern zugutekommen."
-    },
-    "overview": {
-      "title": "Überblick",
-      "description": "Unsere Mietlösungen überbrücken die Lücke zwischen traditionellen Mietprozessen und moderner Finanztechnologie. Wir bieten sichere, profitable und effiziente Lösungen für alle Parteien im Mietmarkt."
-    },
-    "benefits": {
-      "title": "Vorteile",
-      "tenants": {
-        "title": "Für Mieter",
-        "benefit1": "Erzielen Sie Renditen auf Ihre Mietkaution",
-        "benefit2": "Flexible Zahlungsoptionen",
-        "benefit3": "Digitale Dokumentenverwaltung"
-      },
-      "landlords": {
-        "title": "Für Vermieter",
-        "benefit1": "Garantiertes Mieteinkommen",
-        "benefit2": "Professionelle Mieterprüfung",
-        "benefit3": "Reduzierter Verwaltungsaufwand"
-      }
-    },
-    "howItWorks": {
-      "title": "So funktioniert es",
-      "step1": {
-        "title": "1. Registrierung",
-        "description": "Melden Sie sich auf unserer Plattform an und schliessen Sie die Profilverifizierung ab."
-      },
-      "step2": {
-        "title": "2. Matching",
-        "description": "Wir verbinden qualifizierte Mieter mit geeigneten Immobilien über unseren fortschrittlichen Matching-Algorithmus."
-      },
-      "step3": {
-        "title": "3. Sichere Transaktionen",
-        "description": "Alle Zahlungen und Kautionen werden sicher über unsere schweizer-regulierte Plattform abgewickelt."
-      }
-    },
-    "cta": {
-      "title": "Bereit anzufangen?",
-      "description": "Schliessen Sie sich Tausenden zufriedener Mieter und Vermieter an, die unserer Plattform vertrauen.",
-      "button": "Kontaktieren Sie uns heute"
     }
   },
   "corporateTreasury": {
@@ -581,103 +389,6 @@
         "audited": "Smart Contracts sicherheitsgeprüft von"
       },
       "cta": "Sprechen Sie mit uns"
-    },
-    "overview": {
-      "title": "Überblick",
-      "description": "Unsere Corporate Treasury-Lösungen helfen Unternehmen, ihr Cash-Management durch sichere, hochrentable Anlageprodukte zu optimieren und dabei die für operative Exzellenz erforderliche Liquidität und Sicherheit zu gewährleisten."
-    },
-    "services": {
-      "title": "Unsere Dienstleistungen",
-      "liquidity": {
-        "title": "Liquiditätsmanagement",
-        "description": "Optimieren Sie Ihren Cashflow mit unseren flexiblen Liquiditätslösungen für Unternehmen jeder Grösse.",
-        "feature1": "Echtzeit-Cashflow-Überwachung",
-        "feature2": "Automatisierte Liquiditätsoptimierung"
-      },
-      "yield": {
-        "title": "Renditeoptimierung",
-        "description": "Maximieren Sie die Renditen auf Ihre überschüssigen Geldmittel durch unsere sorgfältig kuratierten Anlageprodukte.",
-        "feature1": "Schweizer regulierte Anlageoptionen",
-        "feature2": "Diversifiziertes Portfoliomanagement"
-      }
-    },
-    "benefits": {
-      "title": "Vorteile",
-      "efficiency": {
-        "title": "Operative Effizienz",
-        "description": "Optimieren Sie Ihre Treasury-Operationen mit unseren automatisierten Systemen und Echtzeit-Reporting."
-      },
-      "security": {
-        "title": "Schweizer Sicherheit",
-        "description": "Alle Investitionen sind durch Schweizer Regulierungen und unsere robuste Sicherheitsinfrastruktur abgesichert."
-      },
-      "transparency": {
-        "title": "Vollständige Transparenz",
-        "description": "Vollständige Sichtbarkeit Ihrer Investitionen mit detailliertem Reporting und Analysen."
-      }
-    },
-    "clients": {
-      "title": "Wen wir bedienen",
-      "sme": {
-        "title": "Klein- und Mittelunternehmen",
-        "description": "Massgeschneiderte Lösungen für wachsende Unternehmen, die ihr Treasury-Management optimieren möchten."
-      },
-      "institutions": {
-        "title": "Finanzinstitute",
-        "description": "Erweiterte Treasury-Lösungen für Banken, Kreditgenossenschaften und Finanzdienstleister."
-      },
-      "startups": {
-        "title": "Startups & Scale-ups",
-        "description": "Flexibles Treasury-Management für schnell wachsende Unternehmen mit dynamischen Cashflow-Bedürfnissen."
-      }
-    },
-    "cta": {
-      "title": "Transformieren Sie Ihr Treasury",
-      "description": "Bereit, Ihr Unternehmens-Cash-Management zu optimieren?",
-      "button": "Beratung vereinbaren"
-    }
-  },
-  "downloads": {
-    "hero": {
-      "title": "Downloads & Ressourcen",
-      "subtitle": "Zugang zu umfassender Dokumentation, rechtlichen Dokumenten und Pressematerialien für Plusplus."
-    },
-    "documentation": {
-      "title": "Dokumentation",
-      "whitepaper": {
-        "title": "Plusplus Whitepaper",
-        "description": "Umfassender Überblick über unsere Technologie, unser Geschäftsmodell und unsere Vision für die Zukunft der Mietfinanzierung.",
-        "button": "Whitepaper herunterladen"
-      },
-      "factsheet": {
-        "title": "Produkt-Factsheet",
-        "description": "Schneller Überblick über unsere wichtigsten Produkte, Funktionen und Vorteile für Mieter und Vermieter.",
-        "button": "Factsheet herunterladen"
-      }
-    },
-    "legal": {
-      "title": "Rechtliche Dokumente",
-      "terms": {
-        "title": "Geschäftsbedingungen",
-        "description": "Vollständige Servicebedingungen und Nutzervereinbarungen für unsere Plattform und Dienstleistungen.",
-        "button": "Bedingungen herunterladen"
-      },
-      "disclosure": {
-        "title": "Risikoaufklärung",
-        "description": "Wichtige Informationen über Anlagerisiken und regulatorische Compliance.",
-        "button": "Risikodokument ansehen"
-      }
-    },
-    "pressKit": {
-      "title": "Pressekit",
-      "description": "Marken-Assets, Logos und Richtlinien für Medien und Partnerschaftsnutzung.",
-      "logos": "Logos herunterladen",
-      "guidelines": "Markenrichtlinien"
-    },
-    "contact": {
-      "title": "Benötigen Sie weitere Informationen?",
-      "description": "Können Sie nicht finden, was Sie suchen? Kontaktieren Sie unser Team für zusätzliche Ressourcen und Support.",
-      "button": "Support kontaktieren"
     }
   },
   "impressum": {
