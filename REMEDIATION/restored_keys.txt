@@ -1,0 +1,7 @@
+en: depositCalculator.products.frankencoinDeposit
+en: depositCalculator.products.bitcoinDeposit
+en: depositCalculator.products.bankDeposit
+en: depositCalculator.products.depositInsurance
+en: partners.descriptions.zinsli
+en: partners.descriptions.frankencoin
+en: partners.descriptions.dfx

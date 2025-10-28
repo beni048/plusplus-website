@@ -1,0 +1,49 @@
+name: E2E Tests (Playwright)
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  playwright-e2e:
+    name: Playwright E2E
+    runs-on: ubuntu-latest
+    env:
+      E2E_BASE_URL: http://localhost:3000
+      PW_BASE_URL: http://localhost:3000
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Prepare pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@latest --activate
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm build
+
+      - name: Start server (background)
+        run: |
+          nohup pnpm start &
+          # wait for the server to respond on port 3000 (up to ~60s)
+          for i in {1..30}; do
+            if curl -sSf "http://localhost:3000" >/dev/null 2>&1; then
+              echo "server is up"; break
+            fi
+            sleep 2
+          done
+
+      - name: Install Playwright Browsers
+        run: pnpm exec playwright install --with-deps
+
+      - name: Run Playwright tests
+        # We use the Playwright test runner for E2E. Tests should reference
+        # E2E_BASE_URL or PW_BASE_URL in their code to point at the running server.
+        run: pnpm exec playwright test --reporter=github

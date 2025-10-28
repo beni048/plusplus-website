@@ -9,7 +9,7 @@ const locales = ['en', 'de'];
  * records accessed keys to REMEDIATION/runtime_used_translation_keys.txt.
  * Enable by setting environment variable I18N_INSTRUMENT=true in dev.
  */
-function maybeInstrument<T extends Record<string, any>>(obj: T) {
+function maybeInstrument<T extends Record<string, unknown>>(obj: T) {
   const enabled = process.env.I18N_INSTRUMENT === 'true';
   if (!enabled) return obj;
 
@@ -18,7 +18,7 @@ function maybeInstrument<T extends Record<string, any>>(obj: T) {
   const outFile = path.join(outDir, 'runtime_used_translation_keys.txt');
   try {
     if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, {recursive: true});
-  } catch (e) {
+  } catch {
     // fail silently — instrumentation must not break the app
   }
 
@@ -27,14 +27,18 @@ function maybeInstrument<T extends Record<string, any>>(obj: T) {
     seen.add(key);
     try {
       fs.appendFileSync(outFile, key + '\n', {encoding: 'utf8'});
-    } catch (e) {
+    } catch {
       // ignore write errors
     }
   };
 
+  // allow `any` for the proxy internals — the proxied runtime shape must
+  // mirror the original object. Keep this narrow and local to avoid
+  // broader use of `any` in the codebase.
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const createProxy = (target: any, prefix = ''): any => {
     if (target === null || typeof target !== 'object') return target;
-    return new Proxy(target, {
+    return new Proxy(target as Record<string, unknown>, {
       get(t, prop, receiver) {
         if (typeof prop === 'symbol') return Reflect.get(t, prop, receiver);
         const key = prefix ? `${prefix}.${String(prop)}` : String(prop);
@@ -52,7 +56,7 @@ function maybeInstrument<T extends Record<string, any>>(obj: T) {
     });
   };
 
-  return createProxy(obj, '');
+  return createProxy(obj, '') as T;
 }
 
 export default getRequestConfig(async ({locale}) => {

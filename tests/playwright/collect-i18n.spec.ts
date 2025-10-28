@@ -44,7 +44,7 @@ test('visit routes to collect i18n keys', async ({ page }) => {
         await btn.click({ timeout: 1000 }).catch(() => {});
         await page.waitForTimeout(300);
       }
-    } catch (e) {
+    } catch {
       // ignore
     }
 
@@ -59,7 +59,7 @@ test('visit routes to collect i18n keys', async ({ page }) => {
         await page.goBack({ waitUntil: 'networkidle' }).catch(() => {});
         await page.waitForTimeout(300);
       }
-    } catch (e) {
+    } catch {
       // ignore
     }
   }

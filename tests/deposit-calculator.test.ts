@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 import { describe, it, expect, vi } from 'vitest'
 
 // Vitest doesn't know the project's '@' path alias by default. Mock the JSON

@@ -159,7 +159,7 @@ export const formatCurrencyMobileWithOverflow = (amount: number, currency: strin
   return { amount: formatted, currency };
 };
 
-export default {
+const depositCalculator = {
   getBitcoinPriceForMonth,
   calculateBitcoinHistorical,
   PRODUCTS,
@@ -168,3 +168,5 @@ export default {
   formatCurrencyWithOverflow,
   formatCurrencyMobileWithOverflow
 };
+
+export default depositCalculator;

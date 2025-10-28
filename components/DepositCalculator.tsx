@@ -10,7 +10,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 
 import {
   getBitcoinPriceForMonth,
-  calculateBitcoinHistorical,
   PRODUCTS,
   calculateProduct,
   formatCurrency,
@@ -21,17 +20,6 @@ import {
 
 // Function to get Bitcoin price for a specific year/month
 // bitcoin data and helpers moved to `lib/deposit-calculator`
-
-interface CalculationResult {
-  totalReturn: number;
-  annualReturn: number;
-  finalAmount: number;
-  totalCost: number;
-  annualCost: number;
-  availability: 'fully_available' | 'no_deposit_required';
-  isHistorical?: boolean;
-  percentageGain?: number;
-}
 
 
 // Function to calculate Bitcoin return based on historical data with percentage gains

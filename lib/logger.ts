@@ -49,4 +49,6 @@ export function logError(message: string, meta?: Meta) {
   }
 }
 
-export default { logInfo, logError };
+const logger = { logInfo, logError };
+
+export default logger;

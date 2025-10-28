@@ -1,6 +1,43 @@
 name: CI
 
 on:
+  push:
+    branches: [ main, master, audit/** ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  unit:
+    name: Lint, Typecheck, Unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Prepare pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@latest --activate
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run ESLint
+        run: pnpm exec eslint . --ext .ts,.tsx
+
+      - name: Typecheck
+        run: pnpm exec tsc --noEmit
+
+      - name: Run unit tests (vitest - explicit unit tests)
+        run: pnpm exec vitest run tests/deposit-calculator.test.ts
+name: CI
+
+on:
   pull_request:
     branches: [ main ]
   push:

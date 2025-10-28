@@ -41,7 +41,7 @@
   "partners": {
     "title": "Trusted Partners",
     "descriptions": {
-      "zinsli": "Swiss marketplace for digital rental-deposit solutions.",
+      "zinsli": "Swiss marketplace for digital rental‑deposit solutions.",
       "frankencoin": "Decentralized Swiss Franc stablecoin ecosystem.",
       "dfx": "Institutional DeFi FX solutions for CHF, EUR, and USD."
     }
@@ -294,8 +294,8 @@
   },
   "depositCalculator": {
     "products": {
-      "bankDeposit": "Traditional Bank - Deposit Account",
-      "depositInsurance": "Deposit Insurance",
+      "bankDeposit": "Tradition Bank - Deposit Account",
+      "depositInsurance": "Sadcautio - Deposit Insurance",
       "bitcoinDeposit": "Plusplus - Bitcoin Deposit",
       "frankencoinDeposit": "Plusplus - Digital Swiss Franc Deposit"
     },

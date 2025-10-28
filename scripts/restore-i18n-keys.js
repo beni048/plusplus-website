@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 const fs = require('fs');
 const path = require('path');
 
@@ -17,7 +18,19 @@ const keysToRestore = [
   'partners.descriptions.dfx'
 ];
 
-function load(p) { return JSON.parse(fs.readFileSync(p,'utf8')); }
+function load(p) {
+  // Read file as UTF-8 and remove control characters that may break JSON.parse
+  // We allow tab, newline and carriage return; strip other C0/C1 control codes.
+  const raw = fs.readFileSync(p, 'utf8');
+  const cleaned = raw.replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F-\u009F]/g, '');
+  try {
+    return JSON.parse(cleaned);
+  } catch {
+    console.error('Failed to parse JSON for', p, '- attempting fallback by removing non-ASCII characters');
+    const ascii = cleaned.replace(/[^\x09\x0A\x0D\x20-\x7E]/g, '');
+    return JSON.parse(ascii);
+  }
+}
 function write(p, obj) { fs.writeFileSync(p, JSON.stringify(obj,null,2)+'\n','utf8'); }
 
 function setPath(obj, pathArr, val) {
