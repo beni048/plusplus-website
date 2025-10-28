@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+  "build": "next build",
+  "test:unit": "vitest run",
     "start": "next start",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
     "prepare": "husky install"
@@ -86,10 +87,14 @@
     "@types/nodemailer": "^6.4.17",
     "axe-core": "^4.11.0",
     "brace-expansion": "1.1.12",
+    "depcheck": "^1.4.7",
     "eslint": "9.38.0",
     "husky": "^8.0.0",
     "lint-staged": "^16.2.6",
-    "micromatch": "4.0.8"
+    "madge": "^8.0.0",
+    "micromatch": "4.0.8",
+    "ts-unused-exports": "^11.0.1",
+    "vitest": "1.0.0"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [

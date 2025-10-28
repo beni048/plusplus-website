@@ -21,11 +21,9 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  console.log('Locale Layout - Current locale:', locale); // Debug log
-  
+  // Do not leave debug logs in production server components
   // Validate that the incoming `locale` parameter is valid
   if (!locales.includes(locale)) {
-    console.log('Invalid locale:', locale); // Debug log
     notFound();
   }
 

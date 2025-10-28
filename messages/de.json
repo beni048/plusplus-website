@@ -38,6 +38,14 @@
       "subtitle": "Jetzt Termin für eine 30-minütige Beratung buchen."
     }
   },
+  "partners": {
+    "title": "Vertrauenswürdige Partner",
+    "descriptions": {
+      "zinsli": "Schweizer Marktplatz für digitale Mietkautionslösungen.",
+      "frankencoin": "Dezentralisiertes Schweizer Franken Stablecoin-Ökosystem.",
+      "dfx": "Institutionelle DeFi-FX-Lösungen für CHF, EUR und USD."
+    }
+  },
   "contact": {
     "title": "Kontakt aufnehmen",
     "form": {
@@ -285,6 +293,12 @@
     }
   },
   "depositCalculator": {
+    "products": {
+      "bankDeposit": "Traditionelle Bank - Sparkonto",
+      "depositInsurance": "Kautionsversicherung",
+      "bitcoinDeposit": "Plusplus - Bitcoin-Kaution",
+      "frankencoinDeposit": "Plusplus - Digitale Schweizer Franken Kaution"
+    },
     "backToTenant": "Zurück zu Mieterlösungen",
     "title": "Kautionsrechner",
     "subtitle": "Vergleichen Sie, wie viel mehr Sie verdienen können.",

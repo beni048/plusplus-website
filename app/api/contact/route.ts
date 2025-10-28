@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import Mailjet from 'node-mailjet';
+import { logInfo, logError } from '@/lib/logger';
 
 // Ensure dynamic rendering for API routes
 export const dynamic = 'force-dynamic';
@@ -110,35 +111,28 @@ The Plusplus Team</p>`,
       ]
     };
     
-    // Log the full request payload for debugging
-    console.log('Sending Mailjet request:', JSON.stringify(messageData, null, 2));
-    
     // Send both emails in a single Mailjet API call
-    const result = await mailjet
-      .post("send", { version: "v3.1" })
-      .request(messageData);
-    
-    // Log the response body
-    console.log('Mailjet response status:', result.response.status);
-    console.log('Mailjet response body:', JSON.stringify(result.body, null, 2));
-    
+    // Avoid logging full payloads to prevent leakage of user content or secrets.
+    logInfo('contact:send_attempt', { to: process.env.CONTACT_FORM_TO_EMAIL ? 'configured' : 'missing' });
+    const result = await mailjet.post('send', { version: 'v3.1' }).request(messageData);
+
+    // Log limited success details
+    try {
+      const status = result?.response?.status;
+      logInfo('contact:send_success', { status });
+    } catch {
+      logInfo('contact:send_success');
+    }
+
     // Return success response
     return NextResponse.json({ submitted: true });
     
   } catch (err: unknown) {
     // Enhanced error logging with safe narrowing
-    console.error('Error sending email:');
     if (err instanceof Error) {
-      console.error('Error message:', err.message);
-    }
-
-    // Mailjet may return structured error info; attempt to log safely without assuming types
-    try {
-      if (typeof err === 'object' && err !== null) {
-        console.error('Error details:', JSON.stringify(err));
-      }
-    } catch {
-      // swallow logging errors
+      logError('contact:send_error', { message: err.message });
+    } else {
+      logError('contact:send_error', { error: typeof err === 'object' ? 'object' : String(err) });
     }
 
     return NextResponse.json(

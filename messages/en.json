@@ -38,6 +38,14 @@
       "subtitle": "Book a 30-minute consultation now."
     }
   },
+  "partners": {
+    "title": "Trusted Partners",
+    "descriptions": {
+      "zinsli": "Swiss marketplace for digital rental-deposit solutions.",
+      "frankencoin": "Decentralized Swiss Franc stablecoin ecosystem.",
+      "dfx": "Institutional DeFi FX solutions for CHF, EUR, and USD."
+    }
+  },
   "contact": {
     "title": "Get in Touch",
     "form": {
@@ -285,6 +293,12 @@
     }
   },
   "depositCalculator": {
+    "products": {
+      "bankDeposit": "Traditional Bank - Deposit Account",
+      "depositInsurance": "Deposit Insurance",
+      "bitcoinDeposit": "Plusplus - Bitcoin Deposit",
+      "frankencoinDeposit": "Plusplus - Digital Swiss Franc Deposit"
+    },
     "backToTenant": "Back to Tenant Solutions",
     "title": "Deposit Calculator",
     "subtitle": "Compare how much more you can earn.",
