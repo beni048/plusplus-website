@@ -102,6 +102,10 @@ jobs:
             sleep 1
           done
 
+      - name: Run MCP guard (route checks / try MCP)
+        run: |
+          node scripts/check-mcp.js --base http://localhost:3000 --routes "/, /contact, /rental-solutions"
+
       - name: Run Playwright tests
         run: pnpm test:e2e
 
