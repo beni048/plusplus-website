@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
   "build": "next build",
-  "test:unit": "vitest run",
+  "test:unit": "vitest run --run --exclude tests/playwright/**",
+  "test:e2e": "pnpm exec playwright test",
     "start": "next start",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
     "prepare": "husky install"
