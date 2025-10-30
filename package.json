@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-  "build": "next build",
-  "test:unit": "vitest run --run --exclude tests/playwright/**",
-  "test:e2e": "pnpm exec playwright test",
+    "build": "next build",
+    "test:unit": "vitest run --run --exclude tests/playwright/**",
+    "test:e2e": "pnpm exec playwright test",
     "start": "next start",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
     "prepare": "husky install"
@@ -44,7 +44,7 @@
     "@types/node": "20.6.2",
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.2",
-  "autoprefixer": "10.4.15",
+    "autoprefixer": "10.4.15",
     "canvas-confetti": "^1.9.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -78,7 +78,6 @@
     "@commitlint/config-conventional": "^20.0.0",
     "@playwright/test": "^1.56.1",
     "@types/canvas-confetti": "^1.9.0",
-    
     "axe-core": "^4.11.0",
     "brace-expansion": "1.1.12",
     "depcheck": "^1.4.7",
@@ -87,8 +86,9 @@
     "lint-staged": "^16.2.6",
     "madge": "^8.0.0",
     "micromatch": "4.0.8",
+    "minimist": "1.2.8",
     "ts-unused-exports": "^11.0.1",
-    "vitest": "1.0.0"
+    "vitest": "1.6.1"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
@@ -101,6 +101,9 @@
     "@types/react-dom": "19.2.2",
     "postcss": "8.4.31",
     "micromatch": "4.0.8",
-    "brace-expansion": "1.1.12"
+    "brace-expansion": "1.1.12",
+    "esbuild": "0.25.0",
+    "vite>esbuild": "0.25.0",
+    "vite-node>esbuild": "0.25.0"
   }
 }

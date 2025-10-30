@@ -32,31 +32,29 @@ function maybeInstrument<T extends Record<string, unknown>>(obj: T) {
     }
   };
 
-  // allow `any` for the proxy internals — the proxied runtime shape must
-  // mirror the original object. Keep this narrow and local to avoid
-  // broader use of `any` in the codebase.
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const createProxy = (target: any, prefix = ''): any => {
+  // Create a typed proxy wrapper while keeping the runtime behavior.
+  // The helper is generic so callers get the original type back.
+  const createProxy = <U>(target: U, prefix = ''): U => {
     if (target === null || typeof target !== 'object') return target;
-    return new Proxy(target as Record<string, unknown>, {
+
+    const handler: ProxyHandler<Record<string, unknown>> = {
       get(t, prop, receiver) {
         if (typeof prop === 'symbol') return Reflect.get(t, prop, receiver);
         const key = prefix ? `${prefix}.${String(prop)}` : String(prop);
         const val = Reflect.get(t, prop, receiver);
-        // if the accessed value is an object, return a proxy so deeper
-        // accesses are also recorded; otherwise record the full key
         if (val && typeof val === 'object') {
-          // record that this namespace was touched
           writeKey(key);
-          return createProxy(val, key);
+          return createProxy(val as unknown as U, key) as unknown as U;
         }
         writeKey(key);
-        return val;
+        return val as unknown as U;
       }
-    });
+    };
+
+    return new Proxy(target as unknown as Record<string, unknown>, handler) as unknown as U;
   };
 
-  return createProxy(obj, '') as T;
+  return createProxy(obj, '');
 }
 
 export default getRequestConfig(async ({locale}) => {
