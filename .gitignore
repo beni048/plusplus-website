@@ -46,3 +46,5 @@ Thumbs.db
 public/exported/
 test-output/
 coverage/
+.next/
+package-lock.json
