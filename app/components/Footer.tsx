@@ -15,21 +15,18 @@ export default function Footer() {
           {/* Left side on desktop, centered stack on mobile - Links and Copyright */}
           <div className="flex flex-col space-y-3 items-center lg:items-start">
             <div className="flex flex-wrap justify-center lg:justify-start items-center gap-4 text-sm">
-              <Link href={`/${locale}/privacy-policy`}>
-                <a
-                  className="text-neutral-white transition-colors hover:text-accent-red underline font-secondary"
-                  href={`/${locale}/privacy-policy`}
-                >
-                  {t('privacyPolicy')}
-                </a>
+              <Link
+                href={`/${locale}/privacy-policy`}
+                className="text-neutral-white transition-colors hover:text-accent-red underline font-secondary"
+              >
+                {t('privacyPolicy')}
               </Link>
               <span className="text-neutral-medium">|</span>
-              <Link href={`/${locale}/privacy-settings`}>
-                <a
-                  className="text-neutral-white transition-colors hover:text-accent-red underline font-secondary"
-                >
-                  {t('privacySettings')}
-                </a>
+              <Link
+                href={`/${locale}/privacy-settings`}
+                className="text-neutral-white transition-colors hover:text-accent-red underline font-secondary"
+              >
+                {t('privacySettings')}
               </Link>
               <span className="text-neutral-medium">|</span>
               <Link

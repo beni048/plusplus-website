@@ -1,50 +1,90 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
 import { useTranslations, useLocale } from 'next-intl';
 import { updateConsent } from '@/lib/gtag';
 import { useAnalytics } from '@/hooks/use-analytics';
+import { useFloatingUI } from '@/app/context/FloatingUIContext';
 
 export default function CookieConsentBanner() {
   const t = useTranslations('cookies');
   const locale = useLocale();
   const { trackCookieConsent } = useAnalytics();
-  const [showBanner, setShowBanner] = useState<boolean>(() => {
+  const { setCookieBannerVisible } = useFloatingUI();
+  const [showBanner, setShowBanner] = useState<boolean>(false);
+  const [isMounted, setIsMounted] = useState<boolean>(false);
+
+  // Initialize banner state after hydration
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => {
     try {
       const consent = localStorage.getItem('cookie-consent');
-      return !consent;
-    } catch {
+      const showBan = !consent;
+      setShowBanner(showBan);
+      setCookieBannerVisible(showBan);
+      setIsMounted(true);
+      console.log('[CookieConsent] Initialized. Consent:', consent, 'Show banner:', showBan);
+    } catch (err) {
       // Show banner if localStorage fails (e.g., private browsing)
-      return true;
+      setShowBanner(true);
+      setCookieBannerVisible(true);
+      setIsMounted(true);
+      console.log('[CookieConsent] localStorage failed, showing banner');
     }
-  });
+  }, []);
 
   const handleAccept = () => {
-    trackCookieConsent('accept');
     try {
+      console.log('[CookieConsent] Accepting cookies...');
+      // 1. Set the cookie first so analytics functions work
       localStorage.setItem('cookie-consent', 'accepted');
+      console.log('[CookieConsent] Consent saved to localStorage');
+      
+      // 2. Update gtag consent (this should work now)
       updateConsent(true);
+      console.log('[CookieConsent] gtag consent updated');
+      
+      // 3. Track the event (now that consent is set)
+      trackCookieConsent('accept');
+      console.log('[CookieConsent] Event tracked');
+      
+      // 4. Hide banner and notify context
       setShowBanner(false);
+      setCookieBannerVisible(false);
+      console.log('[CookieConsent] Banner hidden');
     } catch (error) {
-      console.warn('Failed to save cookie consent:', error);
+      console.error('[CookieConsent] Failed to save cookie consent:', error);
     }
   };
 
   const handleDecline = () => {
-    trackCookieConsent('decline');
     try {
+      console.log('[CookieConsent] Declining cookies...');
+      // 1. Set the cookie first
       localStorage.setItem('cookie-consent', 'declined');
+      console.log('[CookieConsent] Consent saved to localStorage');
+      
+      // 2. Update gtag consent
       updateConsent(false);
+      console.log('[CookieConsent] gtag consent updated');
+      
+      // 3. Track the event
+      trackCookieConsent('decline');
+      console.log('[CookieConsent] Event tracked');
+      
+      // 4. Hide banner and notify context
       setShowBanner(false);
+      setCookieBannerVisible(false);
+      console.log('[CookieConsent] Banner hidden');
     } catch (error) {
-      console.warn('Failed to save cookie consent:', error);
+      console.error('[CookieConsent] Failed to save cookie consent:', error);
     }
   };
 
-  if (!showBanner) {
+  if (!isMounted || !showBanner) {
     return null;
   }
 

@@ -3,20 +3,22 @@
 import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Script from 'next/script';
-import { trackPageView, updateConsent, GA_TRACKING_ID, isAnalyticsEnabled } from '@/lib/gtag';
+import { trackPageView, GA_TRACKING_ID, isAnalyticsEnabled } from '@/lib/gtag';
 
 export default function GoogleAnalytics() {
   const pathname = usePathname();
 
   // Handle page tracking when pathname changes
   useEffect(() => {
-    if (!isAnalyticsEnabled()) return;
+    // Track page views for both development and production
+    // In development: automatically tracked (no consent needed)
+    // In production: only tracked after user accepts cookies
+    const isProduction = process.env.NODE_ENV === 'production';
     
-    const consent = localStorage.getItem('cookie-consent');
-    if (consent === 'accepted') {
-      updateConsent(true);
-      trackPageView(pathname);
-    }
+    if (isProduction && !isAnalyticsEnabled()) return;
+    if (!GA_TRACKING_ID || typeof window.gtag === 'undefined') return;
+    
+    trackPageView(pathname);
   }, [pathname]);
 
   // Don't render if analytics not configured
@@ -34,9 +36,14 @@ export default function GoogleAnalytics() {
           window.dataLayer.push(args);
         };
         window.gtag('js', new Date());
+        
+        // In development, allow analytics by default for testing
+        // In production, deny by default and require user consent
+        const isProduction = process.env.NODE_ENV === 'production';
         window.gtag('consent', 'default', {
-          'analytics_storage': 'denied',
+          'analytics_storage': isProduction ? 'denied' : 'granted',
         });
+        
         window.gtag('config', GA_TRACKING_ID!, {
           send_page_view: false,
         });
