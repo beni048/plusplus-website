@@ -18,7 +18,7 @@ export default function CookieConsentBanner() {
   const [isMounted, setIsMounted] = useState<boolean>(false);
 
   // Initialize banner state after hydration
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+  // eslint-disable-next-line react-hooks/exhaustive-deps, react-hooks/rules-of-hooks
   useEffect(() => {
     try {
       const consent = localStorage.getItem('cookie-consent');
@@ -32,7 +32,7 @@ export default function CookieConsentBanner() {
       setShowBanner(true);
       setCookieBannerVisible(true);
       setIsMounted(true);
-      console.log('[CookieConsent] localStorage failed, showing banner');
+      console.log('[CookieConsent] localStorage failed, showing banner', err);
     }
   }, []);
 
