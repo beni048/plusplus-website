@@ -40,13 +40,13 @@ export default function Home() {
           <div className="block sm:hidden w-full px-6 text-center">
             <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-8 mx-auto max-w-sm">
               <h1 className="font-primary font-black text-3xl text-white leading-tight mb-4">
-                {t('hero.title.simple')} <span className="text-accent-orange">{t('hero.title.highlight')}</span> {t('hero.title.subtitle')}
+                {t('hero.title.simple')} <span className="text-accent-red">{t('hero.title.highlight')}</span> {t('hero.title.subtitle')}
               </h1>
               <p className="font-secondary text-base text-white/90 mb-6 leading-relaxed">
                 {t('hero.subtitle')}
               </p>
               <Link href={`/${locale}/select`}>
-                <Button className="bg-accent-orange text-white px-6 py-3 text-base hover:bg-accent-orange/90 group transition-all duration-300 font-primary">
+                <Button className="bg-accent-red text-white px-6 py-3 text-base hover:bg-accent-red/90 group transition-all duration-300 font-primary">
                   {t('hero.cta')}
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
@@ -59,14 +59,14 @@ export default function Home() {
             <div className="flex items-center justify-start">
               <div className="p-6 md:p-8 lg:p-10 max-w-2xl w-full ml-0 sm:ml-[2vw] md:ml-[3vw] lg:ml-[4vw] xl:ml-[5vw]">
                 <h1 className="font-primary font-black text-[clamp(2.5rem,6vw,4rem)] text-white mt-6 mb-4 leading-tight text-left drop-shadow-lg">
-                  {t('hero.title.simple')} <span className="text-accent-orange drop-shadow-lg">{t('hero.title.highlight')}</span> {t('hero.title.subtitle')}
+                  {t('hero.title.simple')} <span className="text-accent-red drop-shadow-lg">{t('hero.title.highlight')}</span> {t('hero.title.subtitle')}
                 </h1>
                 <p className="font-secondary text-lg md:text-xl text-gray-50 mb-6 leading-relaxed text-left font-medium drop-shadow-md">
                   {t('hero.subtitle')}
                 </p>
                 <div className="mt-8">
                   <Link href={`/${locale}/select`}>
-                    <Button className="bg-accent-orange text-white px-6 py-3 md:px-8 md:py-4 text-lg shadow-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary">
+                    <Button className="bg-accent-red text-white px-6 py-3 md:px-8 md:py-4 text-lg shadow-lg hover:bg-accent-red/90 group transition-all duration-300 font-primary">
                       {t('hero.cta')}
                       <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                     </Button>
@@ -95,7 +95,7 @@ export default function Home() {
               </p>
               <div className="pt-4">
                 <Link href={`/${locale}/rental-solutions/select`}>
-                  <Button className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary">
+                  <Button className="bg-accent-red text-white px-6 py-3 text-lg hover:bg-accent-red/90 group transition-all duration-300 font-primary">
                     {t('mainSections.rentalSolutions.button')}
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </Button>
@@ -159,7 +159,7 @@ export default function Home() {
               </p>
               <div className="pt-4">
                 <Link href={`/${locale}/corporate-treasury`}>
-                  <Button className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary">
+                  <Button className="bg-accent-red text-white px-6 py-3 text-lg hover:bg-accent-red/90 group transition-all duration-300 font-primary">
                     {t('mainSections.corporateTreasury.button')}
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </Button>

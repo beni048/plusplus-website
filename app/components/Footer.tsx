@@ -15,30 +15,33 @@ export default function Footer() {
           {/* Left side on desktop, centered stack on mobile - Links and Copyright */}
           <div className="flex flex-col space-y-3 items-center lg:items-start">
             <div className="flex flex-wrap justify-center lg:justify-start items-center gap-4 text-sm">
-              <Link
-                href={`/${locale}/privacy-policy`}
-                className="text-neutral-white transition-colors hover:text-accent-orange underline font-secondary"
-              >
-                {t('privacyPolicy')}
+              <Link href={`/${locale}/privacy-policy`}>
+                <a
+                  className="text-neutral-white transition-colors hover:text-accent-red underline font-secondary"
+                  href={`/${locale}/privacy-policy`}
+                >
+                  {t('privacyPolicy')}
+                </a>
               </Link>
               <span className="text-neutral-medium">|</span>
-              <Link
-                href={`/${locale}/privacy-settings`}
-                className="text-neutral-white transition-colors hover:text-accent-orange underline font-secondary"
-              >
-                {t('privacySettings')}
+              <Link href={`/${locale}/privacy-settings`}>
+                <a
+                  className="text-neutral-white transition-colors hover:text-accent-red underline font-secondary"
+                >
+                  {t('privacySettings')}
+                </a>
               </Link>
               <span className="text-neutral-medium">|</span>
               <Link
                 href={`/${locale}/imprint`}
-                className="text-neutral-white transition-colors hover:text-accent-orange underline font-secondary"
+                className="text-neutral-white transition-colors hover:text-accent-red underline font-secondary"
               >
                 {t('impressum')}
               </Link>
               <span className="text-neutral-medium">|</span>
               <Link
                 href={`/${locale}/terms-and-conditions`}
-                className="text-neutral-white transition-colors hover:text-accent-orange underline font-secondary"
+                className="text-neutral-white transition-colors hover:text-accent-red underline font-secondary"
               >
                 {t('terms')}
               </Link>
@@ -54,7 +57,7 @@ export default function Footer() {
               href="https://linkedin.com/company/plusplusag"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-neutral-white transition-colors hover:text-accent-orange"
+              className="text-neutral-white transition-colors hover:text-accent-red"
               aria-label="LinkedIn"
             >
               <Linkedin size={20} />

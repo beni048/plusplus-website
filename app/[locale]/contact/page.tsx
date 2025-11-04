@@ -128,7 +128,7 @@ export default function ContactPage() {
                 </div>
                 <Button
                   type="submit"
-                  className="h-12 w-full text-lg bg-accent-orange hover:bg-accent-orange/90 text-white"
+                  className="h-12 w-full text-lg bg-accent-red hover:bg-accent-red/90 text-white"
                   disabled={isLoading}
                 >
                   {isLoading ? t('contact.form.sending') : t('contact.form.submit')}

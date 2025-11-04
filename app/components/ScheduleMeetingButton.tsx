@@ -38,7 +38,7 @@ export default function ScheduleMeetingButton({
   return (
     <Button
       onClick={handleScheduleClick}
-      className={`bg-accent-orange text-white px-8 py-4 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary ${className}`}
+      className={`bg-accent-red text-white px-8 py-4 text-lg hover:bg-accent-red/90 group transition-all duration-300 font-primary ${className}`}
     >
       {children || label || 'Schedule Meeting'}
     </Button>

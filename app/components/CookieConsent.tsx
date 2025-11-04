@@ -56,7 +56,7 @@ export default function CookieConsentBanner() {
             {t('description')}{' '}
             <Link 
               href={`/${locale}/privacy-policy`} 
-              className="text-black underline hover:text-accent-orange transition-colors"
+              className="text-black underline hover:text-accent-red transition-colors"
             >
               {t('learnMore')}
             </Link>
@@ -65,7 +65,7 @@ export default function CookieConsentBanner() {
           <div className="flex flex-col sm:flex-row gap-2">
             <Button
               onClick={handleAccept}
-              className="bg-accent-orange hover:bg-accent-orange/90 text-white flex-1"
+              className="bg-accent-red hover:bg-accent-red/90 text-white flex-1"
             >
               {t('acceptOptional')}
             </Button>

@@ -69,19 +69,19 @@ export default function CorporateTreasury() {
               </p>
               <ul className="text-base text-neutral-dark space-y-3 font-secondary">
                 <li className="flex items-start">
-                  <span className="text-accent-orange mr-3 mt-1">•</span>
+                  <span className="text-accent-red mr-3 mt-1">•</span>
                   <span>{t('corporateTreasury.frankencoin.benefits.stablecoin')}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-accent-orange mr-3 mt-1">•</span>
+                  <span className="text-accent-red mr-3 mt-1">•</span>
                   <span>{t('corporateTreasury.frankencoin.benefits.overcollateralized')}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-accent-orange mr-3 mt-1">•</span>
+                  <span className="text-accent-red mr-3 mt-1">•</span>
                   <span>{t('corporateTreasury.frankencoin.benefits.audited')}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-accent-orange mr-3 mt-1">•</span>
+                  <span className="text-accent-red mr-3 mt-1">•</span>
                   <span>{t('corporateTreasury.frankencoin.benefits.transparent')}</span>
                 </li>
               </ul>
@@ -137,38 +137,38 @@ export default function CorporateTreasury() {
               </p>
               <ul className="text-base text-neutral-dark space-y-3 font-secondary">
                 <li className="flex items-start">
-                  <span className="text-accent-orange mr-3 mt-1">•</span>
+                  <span className="text-accent-red mr-3 mt-1">•</span>
                   <span>{t('corporateTreasury.trust.benefits.regulated')}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-accent-orange mr-3 mt-1">•</span>
+                  <span className="text-accent-red mr-3 mt-1">•</span>
                   <span>{t('corporateTreasury.trust.benefits.aml')}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-accent-orange mr-3 mt-1">•</span>
+                  <span className="text-accent-red mr-3 mt-1">•</span>
                   <span>{t('corporateTreasury.trust.benefits.soc2')}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-accent-orange mr-3 mt-1">•</span>
+                  <span className="text-accent-red mr-3 mt-1">•</span>
                   <span>{t('corporateTreasury.trust.benefits.segregation')}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-accent-orange mr-3 mt-1">•</span>
+                  <span className="text-accent-red mr-3 mt-1">•</span>
                   <span>{t('corporateTreasury.trust.benefits.liquidity')}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-accent-orange mr-3 mt-1">•</span>
+                  <span className="text-accent-red mr-3 mt-1">•</span>
                   <span>{t('corporateTreasury.trust.benefits.multisig')}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-accent-orange mr-3 mt-1">•</span>
+                  <span className="text-accent-red mr-3 mt-1">•</span>
                   <span>
                     {t('corporateTreasury.trust.benefits.audited')} 
                     <a 
                       href="https://chainsecurity.com" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-accent-orange hover:underline ml-1"
+                      className="text-accent-red hover:underline ml-1"
                     >
                       ChainSecurity
                     </a>

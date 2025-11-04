@@ -46,19 +46,19 @@ export default function Navbar() {
             <div className="flex items-center space-x-6">
               <Link 
                 href={`/${locale}/rental-solutions/select`} 
-                className="text-black hover:text-accent-orange font-primary font-medium transition-colors"
+                className="text-black hover:text-accent-red font-primary font-medium transition-colors"
               >
                 {t('rentalSolutions')}
               </Link>
               <Link 
                 href={`/${locale}/corporate-treasury`} 
-                className="text-black hover:text-accent-orange font-primary font-medium transition-colors"
+                className="text-black hover:text-accent-red font-primary font-medium transition-colors"
               >
                 {t('corporateTreasury')}
               </Link>
               <Link 
                 href={`/${locale}/contact`} 
-                className="text-black hover:text-accent-orange font-primary font-medium transition-colors"
+                className="text-black hover:text-accent-red font-primary font-medium transition-colors"
               >
                 {t('contact')}
               </Link>
@@ -75,7 +75,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 text-black hover:text-accent-orange transition-colors"
+            className="lg:hidden p-2 text-black hover:text-accent-red transition-colors"
             onClick={toggleMobileMenu}
             aria-label="Toggle mobile menu"
           >
@@ -89,14 +89,14 @@ export default function Navbar() {
             <div className="px-4 py-6 space-y-4">
               <Link 
                 href={`/${locale}/rental-solutions/select`} 
-                className="block text-black hover:text-accent-orange font-primary font-medium transition-colors py-2"
+                className="block text-black hover:text-accent-red font-primary font-medium transition-colors py-2"
                 onClick={closeMobileMenu}
               >
                 {t('rentalSolutions')}
               </Link>
               <Link 
                 href={`/${locale}/corporate-treasury`} 
-                className="block text-black hover:text-accent-orange font-primary font-medium transition-colors py-2"
+                className="block text-black hover:text-accent-red font-primary font-medium transition-colors py-2"
                 onClick={closeMobileMenu}
               >
                 {t('corporateTreasury')}

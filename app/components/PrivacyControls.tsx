@@ -84,7 +84,7 @@ export default function PrivacyControls() {
             </div>
             <AlertDialog>
               <AlertDialogTrigger asChild>
-                <Button className="bg-accent-orange hover:bg-accent-orange/90 text-white" size="sm">
+                <Button className="bg-accent-red hover:bg-accent-red/90 text-white" size="sm">
                   {t('deleteDataButton')}
                 </Button>
               </AlertDialogTrigger>
@@ -99,7 +99,7 @@ export default function PrivacyControls() {
                   <AlertDialogCancel>{t('cancel')}</AlertDialogCancel>
                   <AlertDialogAction 
                     onClick={handleDataDeletion}
-                    className="bg-accent-orange hover:bg-accent-orange/90 text-white"
+                    className="bg-accent-red hover:bg-accent-red/90 text-white"
                   >
                     {t('confirmDelete')}
                   </AlertDialogAction>

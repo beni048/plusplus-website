@@ -44,7 +44,7 @@ const config: Config = {
         accent: {
           DEFAULT: 'hsl(var(--accent))',
           foreground: 'hsl(var(--accent-foreground))',
-          orange: '#FF0000',
+          red: '#FF0000',
         },
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',

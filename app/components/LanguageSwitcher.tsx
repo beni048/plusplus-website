@@ -63,7 +63,7 @@ export default function LanguageSwitcher({
         variant="ghost"
         size="sm"
         onClick={() => switchToLocale(otherLocale)}
-        className="w-full justify-start text-black hover:text-accent-orange hover:bg-transparent font-primary font-medium transition-colors text-base p-0 h-auto"
+        className="w-full justify-start text-black hover:text-accent-red hover:bg-transparent font-primary font-medium transition-colors text-base p-0 h-auto"
       >
         {currentLabel}
       </Button>
@@ -76,7 +76,7 @@ export default function LanguageSwitcher({
         variant="ghost"
         size="sm"
         onClick={() => setIsOpen(!isOpen)}
-        className={`${mobile ? 'w-full justify-start text-neutral-white hover:text-accent-orange' : 'text-black hover:text-accent-orange'} hover:bg-transparent font-primary font-medium transition-colors text-base p-0 h-auto`}
+        className={`${mobile ? 'w-full justify-start text-neutral-white hover:text-accent-red' : 'text-black hover:text-accent-red'} hover:bg-transparent font-primary font-medium transition-colors text-base p-0 h-auto`}
       >
         {currentLabel}
         <ChevronDown className={`ml-2 h-4 w-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
@@ -86,7 +86,7 @@ export default function LanguageSwitcher({
         <div className="absolute top-full mt-1 bg-white border border-gray-200 rounded-md shadow-lg z-50 min-w-[80px] right-0">
           <button
             onClick={() => switchToLocale(otherLocale)}
-            className="w-full px-4 py-2 text-center text-black hover:bg-gray-50 hover:text-accent-orange font-primary font-medium transition-colors text-base"
+            className="w-full px-4 py-2 text-center text-black hover:bg-gray-50 hover:text-accent-red font-primary font-medium transition-colors text-base"
           >
             {otherLabel}
           </button>
