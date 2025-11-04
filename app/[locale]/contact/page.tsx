@@ -9,6 +9,7 @@ import { Calendar } from "lucide-react";
 import confetti from 'canvas-confetti';
 import { useTranslations } from 'next-intl';
 import { useAnalytics } from '@/hooks/use-analytics';
+import ScheduleMeetingButton from '@/app/components/ScheduleMeetingButton';
 
 export default function ContactPage() {
   const t = useTranslations(); // Remove namespace to access all translations
@@ -151,13 +152,10 @@ export default function ContactPage() {
                 {t('mainSections.contact.paragraph')}
               </p>
               <div className="space-y-4">
-                <Button 
-                  className="bg-accent-orange text-white px-8 py-4 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary"
-                  onClick={() => window.open('https://meetings-eu1.hubspot.com/jonas-waelti?uuid=907baac1-ae5e-422b-9703-6d822d374dbe', '_blank')}
-                >
+                <ScheduleMeetingButton>
                   <Calendar className="mr-2 h-5 w-5" />
                   {t('mainSections.contact.button')}
-                </Button>
+                </ScheduleMeetingButton>
                 <p className="text-sm text-neutral-dark font-secondary">
                   {t('mainSections.contact.subtitle')}
                 </p>

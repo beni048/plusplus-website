@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Calendar, ArrowRight } from "lucide-react";
 import Image from 'next/image';
+import ScheduleMeetingButton from '@/app/components/ScheduleMeetingButton';
 
 export default function CorporateTreasury() {
   const t = useTranslations();
@@ -52,13 +53,10 @@ export default function CorporateTreasury() {
 
             {/* Button Mobile */}
             <div className="order-2 lg:hidden">
-              <Button
-                onClick={() => window.open('https://meetings-eu1.hubspot.com/jonas-waelti?uuid=907baac1-ae5e-422b-9703-6d822d374dbe', '_blank')}
-                className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary w-full"
-              >
+              <ScheduleMeetingButton className="w-full">
                 {t('corporateTreasury.frankencoin.cta')}
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Button>
+              </ScheduleMeetingButton>
             </div>
 
             {/* Text Left */}
@@ -89,13 +87,10 @@ export default function CorporateTreasury() {
               </ul>
               {/* Button Desktop */}
               <div className="pt-6 hidden lg:block">
-                <Button
-                  onClick={() => window.open('https://meetings-eu1.hubspot.com/jonas-waelti?uuid=907baac1-ae5e-422b-9703-6d822d374dbe', '_blank')}
-                  className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary"
-                >
+                <ScheduleMeetingButton>
                   {t('corporateTreasury.frankencoin.cta')}
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                </Button>
+                </ScheduleMeetingButton>
               </div>
             </div>
           </div>
@@ -126,13 +121,10 @@ export default function CorporateTreasury() {
 
             {/* Button Mobile */}
             <div className="order-2 lg:hidden">
-              <Button
-                onClick={() => window.open('https://meetings-eu1.hubspot.com/jonas-waelti?uuid=907baac1-ae5e-422b-9703-6d822d374dbe', '_blank')}
-                className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary w-full"
-              >
+              <ScheduleMeetingButton className="w-full">
                 {t('corporateTreasury.trust.cta')}
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Button>
+              </ScheduleMeetingButton>
             </div>
             
             {/* Text Right */}
@@ -185,13 +177,10 @@ export default function CorporateTreasury() {
               </ul>
               {/* Button Desktop */}
               <div className="pt-6 hidden lg:block">
-                <Button
-                  onClick={() => window.open('https://meetings-eu1.hubspot.com/jonas-waelti?uuid=907baac1-ae5e-422b-9703-6d822d374dbe', '_blank')}
-                  className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary"
-                >
+                <ScheduleMeetingButton>
                   {t('corporateTreasury.trust.cta')}
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                </Button>
+                </ScheduleMeetingButton>
               </div>
             </div>
           </div>
@@ -210,13 +199,10 @@ export default function CorporateTreasury() {
                 {t('mainSections.contact.paragraph')}
               </p>
               <div className="space-y-4">
-                <Button 
-                  className="bg-accent-orange text-white px-8 py-4 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary"
-                  onClick={() => window.open('https://meetings-eu1.hubspot.com/jonas-waelti?uuid=907baac1-ae5e-422b-9703-6d822d374dbe', '_blank')}
-                >
+                <ScheduleMeetingButton>
                   <Calendar className="mr-2 h-5 w-5" />
                   {t('mainSections.contact.button')}
-                </Button>
+                </ScheduleMeetingButton>
                 <p className="text-sm text-neutral-dark font-secondary">
                   {t('mainSections.contact.subtitle')}
                 </p>
