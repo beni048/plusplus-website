@@ -103,7 +103,7 @@ export default function Navbar() {
               </Link>
               <Link 
                 href={`/${locale}/contact`} 
-                className="block text-black hover:text-accent-orange font-primary font-medium transition-colors py-2"
+                className="block text-black hover:text-accent-red font-primary font-medium transition-colors py-2"
                 onClick={closeMobileMenu}
               >
                 {t('contact')}

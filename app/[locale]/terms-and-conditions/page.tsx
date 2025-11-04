@@ -35,14 +35,14 @@ export default function TermsPage() {
                 <div className="flex flex-wrap gap-4">
                   <button
                     onClick={() => downloadPDF('202509_Plusplus_AGB.pdf')}
-                    className="inline-flex items-center px-4 py-2 bg-accent-orange text-white rounded-lg hover:bg-accent-orange/90 transition-colors font-primary"
+                    className="inline-flex items-center px-4 py-2 bg-accent-red text-white rounded-lg hover:bg-accent-red/90 transition-colors font-primary"
                   >
                     <Download className="w-4 h-4 mr-2" />
                     {t('pdfDownload.agb')}
                   </button>
                   <button
                     onClick={() => downloadPDF('202509_Plusplus_AGB_Zusatz.pdf')}
-                    className="inline-flex items-center px-4 py-2 bg-accent-orange text-white rounded-lg hover:bg-accent-orange/90 transition-colors font-primary"
+                    className="inline-flex items-center px-4 py-2 bg-accent-red text-white rounded-lg hover:bg-accent-red/90 transition-colors font-primary"
                   >
                     <Download className="w-4 h-4 mr-2" />
                     {t('pdfDownload.agbZusatz')}

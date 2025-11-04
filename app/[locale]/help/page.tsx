@@ -13,14 +13,14 @@ function SupportAnswer() {
           href="https://zinsli.com" 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="text-black underline hover:text-accent-orange transition-colors"
+          className="text-black underline hover:text-accent-red transition-colors"
         >
           Zinsli
         </a>{' '}
         zu initiieren, um unsere WBTC- und ZCHF-basierten Kautionsprodukte für Ihre Mietkaution zu nutzen. Für Vermieter: Wenden Sie sich direkt an Zinsli, um diese innovativen Kautionslösungen Ihren Mietern anzubieten. Benötigen Sie Hilfe bei der Verbindung mit Zinsli oder haben Fragen? Unser Schweizer Team hilft gerne. Kontaktieren Sie uns unter{' '}
         <a 
           href="mailto:hello@plusplus.swiss" 
-          className="text-black underline hover:text-accent-orange transition-colors"
+          className="text-black underline hover:text-accent-red transition-colors"
         >
           hello@plusplus.swiss
         </a>{' '}
@@ -36,14 +36,14 @@ function SupportAnswer() {
         href="https://zinsli.com" 
         target="_blank" 
         rel="noopener noreferrer" 
-        className="text-black underline hover:text-accent-orange transition-colors"
+        className="text-black underline hover:text-accent-red transition-colors"
       >
         Zinsli
       </a>{' '}
       to use our WBTC and ZCHF-based deposit products for your rental deposit. For landlords: Reach out to Zinsli directly to offer these innovative deposit solutions to your tenants. Need assistance connecting with Zinsli or have questions? Our Swiss-based team is here to help. Contact us at{' '}
       <a 
         href="mailto:hello@plusplus.swiss" 
-        className="text-black underline hover:text-accent-orange transition-colors"
+        className="text-black underline hover:text-accent-red transition-colors"
       >
         hello@plusplus.swiss
       </a>{' '}

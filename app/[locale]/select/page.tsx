@@ -48,7 +48,7 @@ export default function ProductSelect() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                   <div className="absolute top-6 left-6">
-                    <div className="bg-accent-orange/90 backdrop-blur-sm p-3 rounded-lg">
+                    <div className="bg-accent-red/90 backdrop-blur-sm p-3 rounded-lg">
                       <Home className="h-8 w-8 text-white" />
                     </div>
                   </div>
@@ -58,13 +58,13 @@ export default function ProductSelect() {
                   </div>
                 </div>
                 <CardContent className="p-8">
-                  <h2 className="text-2xl lg:text-3xl font-primary font-bold text-black mb-4 group-hover:text-accent-orange transition-colors">
+                  <h2 className="text-2xl lg:text-3xl font-primary font-bold text-black mb-4 group-hover:text-accent-red transition-colors">
                     {t('rentalSolutions.title')}
                   </h2>
                   <p className="text-lg font-secondary text-neutral-dark leading-relaxed mb-6">
                     {t('rentalSolutions.description')}
                   </p>
-                  <div className="flex items-center text-accent-orange font-primary font-medium">
+                  <div className="flex items-center text-accent-red font-primary font-medium">
                     <span className="mr-2">{t('rentalSolutions.cta')}</span>
                     <ArrowRight className="h-5 w-5 group-hover:translate-x-2 transition-transform" />
                   </div>
@@ -124,7 +124,7 @@ export default function ProductSelect() {
               {t('contact.question')}
             </p>
             <Button 
-              className="bg-accent-orange text-white px-8 py-4 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary"
+              className="bg-accent-red text-white px-8 py-4 text-lg hover:bg-accent-red/90 group transition-all duration-300 font-primary"
               onClick={() => window.location.href = `/${locale}/contact`}
             >
               {t('contact.button')}

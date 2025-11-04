@@ -55,7 +55,7 @@ export default function DepositCalculatorPage() {
             </p>
             <Link
               href="/rental-solutions/tenant#email-template"
-              className="bg-accent-orange text-white px-8 py-4 text-lg shadow-lg hover:bg-accent-orange/90 transition-all duration-300 rounded-lg inline-block font-medium"
+              className="bg-accent-red text-white px-8 py-4 text-lg shadow-lg hover:bg-accent-red/90 transition-all duration-300 rounded-lg inline-block font-medium"
             >
               {t('rentalSolutionsTenant.finalCta.button')}
             </Link>

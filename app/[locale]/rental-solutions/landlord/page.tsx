@@ -53,7 +53,7 @@ export default function RentalSolutionsLandlord() {
             <div className="order-2 lg:hidden">
               <Button
                 onClick={() => window.open(zinsliLoginUrl, '_blank')}
-                className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary w-full"
+                className="bg-accent-red text-white px-6 py-3 text-lg hover:bg-accent-red/90 group transition-all duration-300 font-primary w-full"
               >
                 {t('rentalSolutionsLandlord.stepByStep.cta')}
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -69,28 +69,28 @@ export default function RentalSolutionsLandlord() {
               </p>
               <div className="space-y-4">
                 <div className="flex items-start">
-                  <div className="bg-accent-orange text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 mt-1 text-sm font-bold flex-shrink-0">1</div>
+                  <div className="bg-accent-red text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 mt-1 text-sm font-bold flex-shrink-0">1</div>
                   <div>
                     <h3 className="font-semibold text-black mb-1">{t('rentalSolutionsLandlord.stepByStep.steps.1.title')}</h3>
                     <p className="text-neutral-dark text-sm">{t('rentalSolutionsLandlord.stepByStep.steps.1.description')}</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <div className="bg-accent-orange text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 mt-1 text-sm font-bold flex-shrink-0">2</div>
+                  <div className="bg-accent-red text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 mt-1 text-sm font-bold flex-shrink-0">2</div>
                   <div>
                     <h3 className="font-semibold text-black mb-1">{t('rentalSolutionsLandlord.stepByStep.steps.2.title')}</h3>
                     <p className="text-neutral-dark text-sm">{t('rentalSolutionsLandlord.stepByStep.steps.2.description')}</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <div className="bg-accent-orange text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 mt-1 text-sm font-bold flex-shrink-0">3</div>
+                  <div className="bg-accent-red text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 mt-1 text-sm font-bold flex-shrink-0">3</div>
                   <div>
                     <h3 className="font-semibold text-black mb-1">{t('rentalSolutionsLandlord.stepByStep.steps.3.title')}</h3>
                     <p className="text-neutral-dark text-sm">{t('rentalSolutionsLandlord.stepByStep.steps.3.description')}</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <div className="bg-accent-orange text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 mt-1 text-sm font-bold flex-shrink-0">4</div>
+                  <div className="bg-accent-red text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 mt-1 text-sm font-bold flex-shrink-0">4</div>
                   <div>
                     <h3 className="font-semibold text-black mb-1">{t('rentalSolutionsLandlord.stepByStep.steps.4.title')}</h3>
                     <p className="text-neutral-dark text-sm">{t('rentalSolutionsLandlord.stepByStep.steps.4.description')}</p>
@@ -100,7 +100,7 @@ export default function RentalSolutionsLandlord() {
               <div className="pt-6 hidden lg:block">
                 <Button
                   onClick={() => window.open(zinsliLoginUrl, '_blank')}
-                  className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary"
+                  className="bg-accent-red text-white px-6 py-3 text-lg hover:bg-accent-red/90 group transition-all duration-300 font-primary"
                 >
                   {t('rentalSolutionsLandlord.stepByStep.cta')}
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -133,7 +133,7 @@ export default function RentalSolutionsLandlord() {
             <div className="order-2 lg:hidden">
               <Button
                 onClick={() => window.open(zinsliLoginUrl, '_blank')}
-                className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary w-full"
+                className="bg-accent-red text-white px-6 py-3 text-lg hover:bg-accent-red/90 group transition-all duration-300 font-primary w-full"
               >
                 {t('rentalSolutionsLandlord.advantages.cta')}
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -148,26 +148,26 @@ export default function RentalSolutionsLandlord() {
               </p>
               <ul className="text-base text-neutral-dark space-y-3 font-secondary">
                 <li className="flex items-start">
-                  <span className="text-accent-orange mr-3 mt-1">•</span>
+                  <span className="text-accent-red mr-3 mt-1">•</span>
                   <span>{t('rentalSolutionsLandlord.advantages.bullets.1')}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-accent-orange mr-3 mt-1">•</span>
+                  <span className="text-accent-red mr-3 mt-1">•</span>
                   <span>{t('rentalSolutionsLandlord.advantages.bullets.2')}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-accent-orange mr-3 mt-1">•</span>
+                  <span className="text-accent-red mr-3 mt-1">•</span>
                   <span>{t('rentalSolutionsLandlord.advantages.bullets.3')}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-accent-orange mr-3 mt-1">•</span>
+                  <span className="text-accent-red mr-3 mt-1">•</span>
                   <span>{t('rentalSolutionsLandlord.advantages.bullets.4')}</span>
                 </li>
               </ul>
               <div className="pt-6 hidden lg:block">
                 <Button
                   onClick={() => window.open(zinsliLoginUrl, '_blank')}
-                  className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary"
+                  className="bg-accent-red text-white px-6 py-3 text-lg hover:bg-accent-red/90 group transition-all duration-300 font-primary"
                 >
                   {t('rentalSolutionsLandlord.advantages.cta')}
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -200,7 +200,7 @@ export default function RentalSolutionsLandlord() {
             <div className="order-2 lg:hidden">
               <Button
                 onClick={() => window.open(zinsliLoginUrl, '_blank')}
-                className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary w-full"
+                className="bg-accent-red text-white px-6 py-3 text-lg hover:bg-accent-red/90 group transition-all duration-300 font-primary w-full"
               >
                 {t('rentalSolutionsLandlord.technology.cta')}
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -215,26 +215,26 @@ export default function RentalSolutionsLandlord() {
               </p>
               <ul className="text-base text-neutral-dark space-y-3 font-secondary">
                 <li className="flex items-start">
-                  <span className="text-accent-orange mr-3 mt-1">•</span>
+                  <span className="text-accent-red mr-3 mt-1">•</span>
                   <span>{t('rentalSolutionsLandlord.technology.bullets.1')}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-accent-orange mr-3 mt-1">•</span>
+                  <span className="text-accent-red mr-3 mt-1">•</span>
                   <span>{t('rentalSolutionsLandlord.technology.bullets.2')}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-accent-orange mr-3 mt-1">•</span>
+                  <span className="text-accent-red mr-3 mt-1">•</span>
                   <span>{t('rentalSolutionsLandlord.technology.bullets.3')}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-accent-orange mr-3 mt-1">•</span>
+                  <span className="text-accent-red mr-3 mt-1">•</span>
                   <span>{t('rentalSolutionsLandlord.technology.bullets.4')}</span>
                 </li>
               </ul>
               <div className="pt-6 hidden lg:block">
                 <Button
                   onClick={() => window.open(zinsliLoginUrl, '_blank')}
-                  className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary"
+                  className="bg-accent-red text-white px-6 py-3 text-lg hover:bg-accent-red/90 group transition-all duration-300 font-primary"
                 >
                   {t('rentalSolutionsLandlord.technology.cta')}
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -259,7 +259,7 @@ export default function RentalSolutionsLandlord() {
               href={zinsliLoginUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-accent-orange text-white px-8 py-4 text-lg shadow-lg hover:bg-accent-orange/90 transition-all duration-300 rounded-lg inline-block font-medium"
+              className="bg-accent-red text-white px-8 py-4 text-lg shadow-lg hover:bg-accent-red/90 transition-all duration-300 rounded-lg inline-block font-medium"
             >
               {t('rentalSolutionsLandlord.finalCta.cta')}
             </a>

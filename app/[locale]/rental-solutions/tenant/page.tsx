@@ -143,7 +143,7 @@ Freundliche Grüsse,
       </div>
       
       {/* Deposit Calculator Promotion */}
-      <section className="bg-accent-orange py-16">
+      <section className="bg-accent-red py-16">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-2xl mx-auto">
             <Calculator className="w-16 h-16 mx-auto mb-6 text-white" />
@@ -155,7 +155,7 @@ Freundliche Grüsse,
             </p>
             <Button 
               asChild
-              className="bg-white text-accent-orange hover:bg-neutral-light px-6 py-3 text-lg transition-all duration-300 font-primary group"
+              className="bg-white text-accent-red hover:bg-neutral-light px-6 py-3 text-lg transition-all duration-300 font-primary group"
             >
               <Link href="/rental-solutions/tenant/calculator">
                 {t('rentalSolutionsTenant.calculator.button')}
@@ -190,7 +190,7 @@ Freundliche Grüsse,
 
             {/* Button Mobile */}
             <div className="order-2 lg:hidden">
-              <Button asChild className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary w-full">
+              <Button asChild className="bg-accent-red text-white px-6 py-3 text-lg hover:bg-accent-red/90 group transition-all duration-300 font-primary w-full">
                 <a
                   href={factsheetZCHFPdf}
                   target="_blank"
@@ -219,7 +219,7 @@ Freundliche Grüsse,
                           href="https://frankencoin.com" 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="text-accent-orange hover:underline transition-all duration-300"
+                          className="text-accent-red hover:underline transition-all duration-300"
                         >
                           Frankencoin
                         </a>
@@ -232,22 +232,22 @@ Freundliche Grüsse,
               </p>
               <ul className="text-base text-neutral-dark space-y-3 font-secondary">
                 <li className="flex items-start">
-                  <span className="text-accent-orange mr-3 mt-1">•</span>
+                  <span className="text-accent-red mr-3 mt-1">•</span>
                   <span>{t('rentalSolutionsTenant.frankencoin.benefits.stability')}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-accent-orange mr-3 mt-1">•</span>
+                  <span className="text-accent-red mr-3 mt-1">•</span>
                   <span>{t('rentalSolutionsTenant.frankencoin.benefits.transparency')}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-accent-orange mr-3 mt-1">•</span>
+                  <span className="text-accent-red mr-3 mt-1">•</span>
                   <span>{t('rentalSolutionsTenant.frankencoin.benefits.settlement')}</span>
                 </li>
                 {/* Removed extra bullet point for Frankencoin */}
               </ul>
               {/* Button Desktop */}
               <div className="pt-6 hidden lg:block">
-                <Button asChild className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary">
+                <Button asChild className="bg-accent-red text-white px-6 py-3 text-lg hover:bg-accent-red/90 group transition-all duration-300 font-primary">
                   <a
                     href={factsheetZCHFPdf}
                     target="_blank"
@@ -287,7 +287,7 @@ Freundliche Grüsse,
 
             {/* Button Mobile */}
             <div className="order-2 lg:hidden">
-              <Button asChild className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary w-full">
+              <Button asChild className="bg-accent-red text-white px-6 py-3 text-lg hover:bg-accent-red/90 group transition-all duration-300 font-primary w-full">
                 <a
                   href={factsheetBTCPdf}
                   target="_blank"
@@ -309,22 +309,22 @@ Freundliche Grüsse,
               </p>
               <ul className="text-base text-neutral-dark space-y-3 font-secondary">
                 <li className="flex items-start">
-                  <span className="text-accent-orange mr-3 mt-1">•</span>
+                  <span className="text-accent-red mr-3 mt-1">•</span>
                   <span>{t('rentalSolutionsTenant.bitcoin.benefits.appreciation')}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-accent-orange mr-3 mt-1">•</span>
+                  <span className="text-accent-red mr-3 mt-1">•</span>
                   <span>{t('rentalSolutionsTenant.bitcoin.benefits.escrow')}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-accent-orange mr-3 mt-1">•</span>
+                  <span className="text-accent-red mr-3 mt-1">•</span>
                   <span>{t('rentalSolutionsTenant.bitcoin.benefits.accessibility')}</span>
                 </li>
                 {/* Removed extra bullet point for Bitcoin */}
               </ul>
               {/* Button Desktop */}
               <div className="pt-6 hidden lg:block">
-                <Button asChild className="bg-accent-orange text-white px-6 py-3 text-lg hover:bg-accent-orange/90 group transition-all duration-300 font-primary">
+                <Button asChild className="bg-accent-red text-white px-6 py-3 text-lg hover:bg-accent-red/90 group transition-all duration-300 font-primary">
                   <a
                     href={factsheetBTCPdf}
                     target="_blank"
@@ -355,7 +355,7 @@ Freundliche Grüsse,
             <div className="flex justify-end mb-3">
               <button
                 onClick={copyToClipboard}
-                className="bg-accent-orange text-white px-4 py-2 rounded-lg text-sm hover:bg-accent-orange/90 transition-colors"
+                className="bg-accent-red text-white px-4 py-2 rounded-lg text-sm hover:bg-accent-red/90 transition-colors"
               >
                 {emailCopied ? t('rentalSolutionsTenant.emailTemplate.copied') : t('rentalSolutionsTenant.emailTemplate.copy')}
               </button>
@@ -373,7 +373,7 @@ Freundliche Grüsse,
                 href="https://zinsli.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-accent-orange text-white px-8 py-4 text-lg shadow-lg hover:bg-accent-orange/90 transition-all duration-300 rounded-lg inline-block font-medium"
+                className="bg-accent-red text-white px-8 py-4 text-lg shadow-lg hover:bg-accent-red/90 transition-all duration-300 rounded-lg inline-block font-medium"
               >
                 {t('rentalSolutionsTenant.emailTemplate.button')}
               </a>

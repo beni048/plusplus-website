@@ -59,7 +59,7 @@ export default function ScrollToTop() {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed right-4 z-40 p-3 bg-accent-orange hover:bg-accent-orange/90 text-white rounded-full shadow-lg transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-accent-orange focus:ring-offset-2 ${
+      className={`fixed right-4 z-40 p-3 bg-accent-red hover:bg-accent-red/90 text-white rounded-full shadow-lg transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-accent-red focus:ring-offset-2 ${
         cookieBannerVisible 
           ? 'bottom-44 sm:bottom-44' // Above cookie banner on both mobile and desktop
           : 'bottom-4' // Normal position when no cookie banner
