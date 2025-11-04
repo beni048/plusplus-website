@@ -25,14 +25,26 @@ const routes = [
 ];
 
 test('visit routes to collect i18n keys', async ({ page }) => {
+  // Increase the overall test timeout — some pages and client-side loads can be slow
+  // when running locally or in CI. Default Playwright test timeout is 30s.
+  test.setTimeout(120000);
   const base = process.env.E2E_BASE_URL || 'http://localhost:3000';
+  // allow overriding the per-navigation timeout in CI if needed
+  const GOTO_TIMEOUT = parseInt(process.env.PW_GOTO_TIMEOUT || '60000', 10);
   for (const r of routes) {
     const url = new URL(r, base).toString();
     // console.log for debugging if running locally
     console.log('visiting', url);
-    await page.goto(url, { waitUntil: 'networkidle' });
+    try {
+      // Use 'load' instead of 'networkidle' to avoid hangs from long-polling
+      await page.goto(url, { waitUntil: 'load', timeout: GOTO_TIMEOUT });
+    } catch (err) {
+      const errMsg = err && err instanceof Error ? err.message : String(err);
+      console.warn('page.goto failed or timed out for', url, errMsg);
+      // continue — we still want to exercise other routes
+    }
     // allow any client-side lazy loads to run
-    await page.waitForTimeout(700);
+    await page.waitForTimeout(900);
 
     // Try some safe, best-effort interactions to trigger client-only translations.
     // We intentionally swallow errors so the collector continues even if a selector
@@ -55,8 +67,8 @@ test('visit routes to collect i18n keys', async ({ page }) => {
         // open in same tab to exercise client navigation where applicable
         await link.click({ timeout: 1000 }).catch(() => {});
         await page.waitForTimeout(700);
-        // navigate back for the main loop
-        await page.goBack({ waitUntil: 'networkidle' }).catch(() => {});
+        // navigate back for the main loop — use 'load' to avoid long-polling/networkidle hangs
+        await page.goBack({ waitUntil: 'load' }).catch(() => {});
         await page.waitForTimeout(300);
       }
     } catch {

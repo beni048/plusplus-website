@@ -30,6 +30,12 @@
       "title": "Partners",
       "paragraph1": "Our partners are among the leading providers in financial technology and digital infrastructure.",
       "paragraph2": "Together, we ensure that all systems meet the highest standards in security, compliance, and transparency."
+      ,
+      "descriptions": {
+        "zinsli": "Zinsli platform - partner description placeholder",
+        "frankencoin": "Frankencoin - partner description placeholder",
+        "dfx": "DFX - partner description placeholder"
+      }
     },
     "contact": {
       "title": "Ready to get started?",
@@ -302,20 +308,13 @@
     "capitalDevelopment": "Capital Development",
     "year": "Year",
     "bitcoinWarning": "Historical Bitcoin Data: Bitcoin calculations use actual monthly opening prices from October 2009 to October 2025, showing real volatility including major price drops and rallies.",
-    "disclaimer": "All calculations are based on market data in October 2025 (returns, interest, fees per product). Actual values may vary. Bitcoin calculations: 1 year = Oct 2024 to Oct 2025, max 16 years = Oct 2009 to Oct 2025 percentage changes. Insurance 4-5%, bank locked account 0.1-0.4%, Frankencoin 3% (historically between 3-5%).",
+    "disclaimer": "All calculations are based on market data in October 2025 (returns, interest, fees per product). Actual values may vary. Bitcoin calculations: 1 year = Oct 2024 to Oct 2025, max 16 years = Oct 2009 to Oct 2025 percentage changes. Insurance 4-5%, bank locked account 0.1-0.4%, Frankencoin 3% (historically between 3-5%)."
+    ,
     "products": {
-      "bankDeposit": "Bank deposit (low interest, high liquidity)",
-      "bitcoinDeposit": "Bitcoin-based product (higher volatility, potential appreciation)",
-      "depositInsurance": "Deposit insurance product (insured option)",
-      "frankencoinDeposit": "Frankencoin (ZCHF) — Swiss Franc stablecoin with yield"
-    }
-  },
-  "partners": {
-    "title": "Partners",
-    "descriptions": {
-      "zinsli": "Zinsli — verified custody and automation.",
-      "frankencoin": "Frankencoin — Swiss Franc stablecoin with institutional-grade custody.",
-      "dfx": "DFX — institutional liquidity and crypto infrastructure partner."
+      "bankDeposit": "Bank deposit",
+      "bitcoinDeposit": "Bitcoin deposit",
+      "frankencoinDeposit": "Frankencoin (ZCHF) deposit",
+      "depositInsurance": "Deposit insurance"
     }
   },
   "rentalSolutionsLandlord": {

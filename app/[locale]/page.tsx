@@ -234,7 +234,7 @@ export default function Home() {
                       {partner.name}
                     </h3>
                     <p className="text-sm text-center text-neutral-dark font-secondary">
-                      {t(`partners.descriptions.${partner.descriptionKey}`)}
+                      {t(`mainSections.partners.descriptions.${partner.descriptionKey}`)}
                     </p>
                   </Card>
                 </a>

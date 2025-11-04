@@ -30,6 +30,12 @@
       "title": "Partner",
       "paragraph1": "Unsere Partner gehören zu den führenden Anbietern im Bereich Finanztechnologie und digitaler Infrastruktur.",
       "paragraph2": "Gemeinsam stellen wir sicher, dass alle Systeme höchsten Standards in Sicherheit, Compliance und Transparenz entsprechen."
+      ,
+      "descriptions": {
+        "zinsli": "Zinsli Plattform - Partnerbeschreibung Platzhalter",
+        "frankencoin": "Frankencoin - Partnerbeschreibung Platzhalter",
+        "dfx": "DFX - Partnerbeschreibung Platzhalter"
+      }
     },
     "contact": {
       "title": "Bereit loszulegen?",
@@ -305,18 +311,10 @@
     "disclaimer": "Alle Berechnungen basieren auf Marktdaten vom Oktober 2025 (Renditen, Zinsen, Gebühren pro Produkt). Tatsächliche Werte können abweichen. Bitcoin-Berechnungen: 1 Jahr = Okt 2024 bis Okt 2025, max 16 Jahre = Okt 2009 bis Okt 2025 Prozentänderungen. Versicherung 4-5%, Bank-Sperrkonto 0,1-0,4%, Frankencoin 3% (historisch zwischen 3-5%)."
     ,
     "products": {
-      "bankDeposit": "Bankeinlage (niedriger Zins, hohe Liquidität)",
-      "bitcoinDeposit": "Bitcoin-basiertes Produkt (höhere Volatilität, potenzielle Wertsteigerung)",
-      "depositInsurance": "Kautionsversicherungsprodukt (versicherte Option)",
-      "frankencoinDeposit": "Frankencoin (ZCHF) — Schweizer Franken Stablecoin mit Rendite"
-    }
-  },
-  "partners": {
-    "title": "Partner",
-    "descriptions": {
-      "zinsli": "Zinsli — geprüfte Verwahrung und Automatisierung.",
-      "frankencoin": "Frankencoin — Schweizer Franken Stablecoin mit institutioneller Verwahrung.",
-      "dfx": "DFX — institutionelle Liquidität und Krypto-Infrastrukturpartner."
+      "bankDeposit": "Bankeinlage",
+      "bitcoinDeposit": "Bitcoin-Einlage",
+      "frankencoinDeposit": "Frankencoin (ZCHF) Einlage",
+      "depositInsurance": "Kautionsversicherung"
     }
   },
   "rentalSolutionsLandlord": {
