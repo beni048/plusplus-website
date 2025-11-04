@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-  "test:unit": "vitest run --run tests/*.test.ts",
+    "test:unit": "vitest run --run tests/*.test.ts",
     "test:e2e": "pnpm exec playwright test",
     "start": "next start",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
@@ -80,14 +80,11 @@
     "@types/canvas-confetti": "^1.9.0",
     "axe-core": "^4.11.0",
     "brace-expansion": "1.1.12",
-    "depcheck": "^1.4.7",
     "eslint": "9.38.0",
     "husky": "^8.0.0",
     "lint-staged": "^16.2.6",
-    "madge": "^8.0.0",
     "micromatch": "4.0.8",
     "minimist": "1.2.8",
-    "ts-unused-exports": "^11.0.1",
     "vitest": "1.6.1"
   },
   "lint-staged": {
