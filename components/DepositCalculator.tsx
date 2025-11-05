@@ -347,18 +347,18 @@ export default function DepositCalculator() {
         
         <div className="space-y-2">
           <Label htmlFor="deposit" className="text-neutral-dark font-medium text-sm leading-tight">
-            {t('depositCalculator.deposit')}
+            {t('depositCalculator.deposit')} (CHF)
           </Label>
           <Input 
             id="deposit"
             type="number" 
             value={deposit}
-            onChange={(e) => setDeposit(Math.min(500000, Number(e.target.value)))}
-            onBlur={(e) => setDeposit(Math.min(500000, Math.max(1000, Number(e.target.value))))}
+            onChange={(e) => setDeposit(Math.min(150000, Number(e.target.value)))}
+            onBlur={(e) => setDeposit(Math.min(150000, Math.max(1000, Number(e.target.value))))}
             className="bg-white border-gray-300 text-neutral-black focus:border-primary-teal focus:ring-primary-teal"
-            placeholder="6000"
+            placeholder="6000 CHF"
             min="1000"
-            max="500000"
+            max="150000"
           />
         </div>
       </div>
