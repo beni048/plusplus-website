@@ -32,16 +32,16 @@ describe('deposit-calculator helpers', () => {
     expect(res.finalAmount).toBeGreaterThan(1600)
   })
 
-  it('calculates frankencoin product correctly', () => {
-    const product = PRODUCTS.frankencoinDeposit
+  it('calculates CHF Stablecoin product correctly', () => {
+    const product = PRODUCTS.chfStablecoin
     const res = calculateProduct(1000, product, 2)
     expect(res.totalReturn).toBeCloseTo(1000 * product.rate * 2)
     expect(res.finalAmount).toBeCloseTo(1000 + 1000 * product.rate * 2)
     expect(res.annualReturn).toBeCloseTo(1000 * product.rate)
   })
 
-  it('calculates bank deposit compound interest correctly', () => {
-    const product = PRODUCTS.bankDeposit
+  it('calculates kautionskonto compound interest correctly', () => {
+    const product = PRODUCTS.kautionskonto
     const res = calculateProduct(1000, product, 3)
     const expectedFinal = 1000 * Math.pow(1 + product.rate, 3)
     expect(res.finalAmount).toBeCloseTo(expectedFinal)

@@ -34,28 +34,22 @@ import {
 
 interface ProductCardProps {
   title: string;
+  provider: string;
   product: Product;
-  grossRent: number;
+  deposit: number;
   rentalPeriod: number;
-  depositMultiplier: number;
   t: (key: string) => string;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ 
   title, 
+  provider,
   product, 
-  grossRent, 
-  rentalPeriod, 
-  depositMultiplier,
+  deposit, 
+  rentalPeriod,
   t 
 }) => {
-  const deposit = grossRent * depositMultiplier;
   const calc = calculateProduct(deposit, product, rentalPeriod);
-
-  // Split title into provider and product
-  const titleParts = title.split(' - ');
-  const provider = titleParts[0] || '';
-  const productName = titleParts[1] || title;
 
   return (
     <Card className="bg-white border border-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -67,7 +61,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
                 className="w-3 h-3 rounded-full mr-3" 
                 style={{ backgroundColor: product.color }}
               ></div>
-              <span className="text-lg font-semibold">{productName}</span>
+              <span className="text-lg font-semibold text-black">{title}</span>
             </div>
             <div className="text-sm italic text-gray-500 ml-6">{provider}</div>
           </div>
@@ -127,23 +121,20 @@ interface ChartData {
 }
 
 interface CapitalDevelopmentChartProps {
-  grossRent: number;
+  deposit: number;
   rentalPeriod: number;
-  depositMultiplier: number;
   productA: Product;
   productB: Product;
   t: (key: string) => string;
 }
 
 const CapitalDevelopmentChart: React.FC<CapitalDevelopmentChartProps> = ({ 
-  grossRent, 
-  rentalPeriod, 
-  depositMultiplier,
+  deposit, 
+  rentalPeriod,
   productA,
   productB,
   t 
 }) => {
-  const deposit = grossRent * depositMultiplier;
   
   const generateData = (): ChartData[] => {
     const data: ChartData[] = [];
@@ -322,11 +313,10 @@ const CapitalDevelopmentChart: React.FC<CapitalDevelopmentChartProps> = ({
 
 export default function DepositCalculator() {
   const t = useTranslations();
-  const [grossRent, setGrossRent] = useState(2000);
   const [rentalPeriod, setRentalPeriod] = useState(5);
-  const [depositMultiplier, setDepositMultiplier] = useState(3);
-  const [productA, setProductA] = useState('bankDeposit');
-  const [productB, setProductB] = useState('frankencoinDeposit');
+  const [deposit, setDeposit] = useState(6000);
+  const [productA, setProductA] = useState('kautionskonto');
+  const [productB, setProductB] = useState('chfStablecoin');
 
   const selectedProductA = PRODUCTS[productA as keyof typeof PRODUCTS] as Product;
   const selectedProductB = PRODUCTS[productB as keyof typeof PRODUCTS] as Product;
@@ -336,24 +326,7 @@ export default function DepositCalculator() {
   return (
     <div className="bg-gradient-to-br from-neutral-light to-white p-0 sm:p-8 rounded-none sm:rounded-2xl shadow-xl border-0 sm:border border-gray-200">
       {/* Input Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 bg-white p-4 sm:p-6 rounded-none sm:rounded-xl shadow-sm border-0 sm:border border-gray-100">
-        <div className="space-y-2">
-          <Label htmlFor="grossRent" className="text-neutral-dark font-medium text-sm leading-tight">
-            {t('depositCalculator.grossRent')}
-          </Label>
-          <Input 
-            id="grossRent"
-            type="number" 
-            value={grossRent}
-            onChange={(e) => setGrossRent(Math.min(50000, Number(e.target.value)))}
-            onBlur={(e) => setGrossRent(Math.min(50000, Math.max(1000, Number(e.target.value))))}
-            className="bg-white border-gray-300 text-neutral-black focus:border-primary-teal focus:ring-primary-teal"
-            placeholder="2000"
-            min="1000"
-            max="50000"
-          />
-        </div>
-        
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8 bg-white p-4 sm:p-6 rounded-none sm:rounded-xl shadow-sm border-0 sm:border border-gray-100">
         <div className="space-y-2">
           <Label htmlFor="rentalPeriod" className="text-neutral-dark font-medium text-sm leading-tight">
             {t('depositCalculator.rentalPeriod')}
@@ -371,30 +344,22 @@ export default function DepositCalculator() {
             step="0.1"
           />
         </div>
-
-        <div className="space-y-2">
-          <Label htmlFor="depositMultiplier" className="text-neutral-dark font-medium text-sm leading-tight">
-            {t('depositCalculator.depositMultiplier')}
-          </Label>
-          <Select value={depositMultiplier.toString()} onValueChange={(value) => setDepositMultiplier(Number(value))}>
-            <SelectTrigger className="bg-white border-gray-300 focus:border-primary-teal focus:ring-primary-teal">
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="1">1× {t('depositCalculator.monthlyRent')}</SelectItem>
-              <SelectItem value="2">2× {t('depositCalculator.monthlyRent')}</SelectItem>
-              <SelectItem value="3">3× {t('depositCalculator.monthlyRent')}</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
         
         <div className="space-y-2">
-          <Label className="text-neutral-dark font-medium text-sm leading-tight">
+          <Label htmlFor="deposit" className="text-neutral-dark font-medium text-sm leading-tight">
             {t('depositCalculator.deposit')}
           </Label>
-          <div className="bg-primary-teal/10 border border-primary-teal/30 rounded-md px-3 py-2 text-neutral-black font-medium">
-            {formatCurrency(grossRent * depositMultiplier)}
-          </div>
+          <Input 
+            id="deposit"
+            type="number" 
+            value={deposit}
+            onChange={(e) => setDeposit(Math.min(500000, Number(e.target.value)))}
+            onBlur={(e) => setDeposit(Math.min(500000, Math.max(1000, Number(e.target.value))))}
+            className="bg-white border-gray-300 text-neutral-black focus:border-primary-teal focus:ring-primary-teal"
+            placeholder="6000"
+            min="1000"
+            max="500000"
+          />
         </div>
       </div>
 
@@ -403,6 +368,15 @@ export default function DepositCalculator() {
         <div className="mb-6 p-4 bg-orange-50 border border-orange-200 rounded-lg">
           <p className="text-sm text-orange-800">
             <strong>📊 {t('depositCalculator.bitcoinWarning')}</strong>
+          </p>
+        </div>
+      )}
+
+      {/* CHF-Stablecoin Warning */}
+      {(productA === 'chfStablecoin' || productB === 'chfStablecoin') && (
+        <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+          <p className="text-sm text-green-800">
+            <strong>📈 {t('depositCalculator.stablecoinWarning')}</strong>
           </p>
         </div>
       )}
@@ -416,17 +390,17 @@ export default function DepositCalculator() {
               <SelectValue className="text-left" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="frankencoinDeposit">
-                {t(PRODUCTS.frankencoinDeposit.nameKey)}
+              <SelectItem value="kautionskonto">
+                Kautionskonto - Tradition Bank
+              </SelectItem>
+              <SelectItem value="chfStablecoin">
+                CHF-Stablecoin - Plusplus
               </SelectItem>
               <SelectItem value="bitcoinDeposit">
-                {t(PRODUCTS.bitcoinDeposit.nameKey)}
+                Bitcoin - Plusplus
               </SelectItem>
-              <SelectItem value="bankDeposit">
-                {t(PRODUCTS.bankDeposit.nameKey)}
-              </SelectItem>
-              <SelectItem value="depositInsurance">
-                {t(PRODUCTS.depositInsurance.nameKey)}
+              <SelectItem value="kautionsversicherung">
+                Kautionsversicherung - Oldcautio
               </SelectItem>
             </SelectContent>
           </Select>
@@ -439,17 +413,17 @@ export default function DepositCalculator() {
               <SelectValue className="text-left" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="frankencoinDeposit">
-                {t(PRODUCTS.frankencoinDeposit.nameKey)}
+              <SelectItem value="kautionskonto">
+                Kautionskonto - Tradition Bank
+              </SelectItem>
+              <SelectItem value="chfStablecoin">
+                CHF-Stablecoin - Plusplus
               </SelectItem>
               <SelectItem value="bitcoinDeposit">
-                {t(PRODUCTS.bitcoinDeposit.nameKey)}
+                Bitcoin - Plusplus
               </SelectItem>
-              <SelectItem value="bankDeposit">
-                {t(PRODUCTS.bankDeposit.nameKey)}
-              </SelectItem>
-              <SelectItem value="depositInsurance">
-                {t(PRODUCTS.depositInsurance.nameKey)}
+              <SelectItem value="kautionsversicherung">
+                Kautionsversicherung - Oldcautio
               </SelectItem>
             </SelectContent>
           </Select>
@@ -460,27 +434,26 @@ export default function DepositCalculator() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
         <ProductCard 
           title={t(selectedProductA.nameKey)}
+          provider={selectedProductA.id === 'kautionskonto' ? 'Tradition Bank' : selectedProductA.id === 'chfStablecoin' ? 'Plusplus' : selectedProductA.id === 'bitcoinDeposit' ? 'Plusplus' : 'Oldcautio'}
           product={selectedProductA}
-          grossRent={grossRent}
+          deposit={deposit}
           rentalPeriod={rentalPeriod}
-          depositMultiplier={depositMultiplier}
           t={t}
         />
         <ProductCard 
           title={t(selectedProductB.nameKey)}
+          provider={selectedProductB.id === 'kautionskonto' ? 'Tradition Bank' : selectedProductB.id === 'chfStablecoin' ? 'Plusplus' : selectedProductB.id === 'bitcoinDeposit' ? 'Plusplus' : 'Oldcautio'}
           product={selectedProductB}
-          grossRent={grossRent}
+          deposit={deposit}
           rentalPeriod={rentalPeriod}
-          depositMultiplier={depositMultiplier}
           t={t}
         />
       </div>
 
       {/* Chart Component */}
       <CapitalDevelopmentChart 
-        grossRent={grossRent}
+        deposit={deposit}
         rentalPeriod={rentalPeriod}
-        depositMultiplier={depositMultiplier}
         productA={selectedProductA}
         productB={selectedProductB}
         t={t}

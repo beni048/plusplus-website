@@ -56,20 +56,20 @@ export const calculateBitcoinHistorical = (deposit: number, years: number): Calc
 };
 
 export const PRODUCTS: Record<string, Product> = {
-  bankDeposit: {
-    id: 'bankDeposit',
-    nameKey: 'depositCalculator.products.bankDeposit',
+  kautionskonto: {
+    id: 'kautionskonto',
+    nameKey: 'depositCalculator.products.kautionskonto',
     rate: 0.0025,
-    rateRange: '0.1-0.4%',
+    rateRange: '0.25%',
     type: 'investment',
     color: '#9CA3AF',
     hasDeposit: true
   },
-  depositInsurance: {
-    id: 'depositInsurance',
-    nameKey: 'depositCalculator.products.depositInsurance',
+  kautionsversicherung: {
+    id: 'kautionsversicherung',
+    nameKey: 'depositCalculator.products.kautionsversicherung',
     rate: 0.045,
-    rateRange: '4-5%',
+    rateRange: '4.5%',
     type: 'cost',
     color: '#6B7280',
     hasDeposit: false
@@ -83,9 +83,9 @@ export const PRODUCTS: Record<string, Product> = {
     color: '#F97316',
     hasDeposit: true
   },
-  frankencoinDeposit: {
-    id: 'frankencoinDeposit',
-    nameKey: 'depositCalculator.products.frankencoinDeposit',
+  chfStablecoin: {
+    id: 'chfStablecoin',
+    nameKey: 'depositCalculator.products.chfStablecoin',
     rate: 0.03,
     rateRange: '3%',
     type: 'investment',
@@ -100,7 +100,7 @@ export const calculateProduct = (deposit: number, product: Product, years: numbe
   }
 
   if (product.type === 'investment') {
-    if (product.id === 'frankencoinDeposit') {
+    if (product.id === 'chfStablecoin') {
       const totalReturn = deposit * product.rate * years;
       const finalAmount = deposit + totalReturn;
       const annualReturn = deposit * product.rate;
