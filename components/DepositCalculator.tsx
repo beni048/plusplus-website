@@ -391,16 +391,16 @@ export default function DepositCalculator() {
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="kautionskonto">
-                Kautionskonto - Tradition Bank
+                {t('depositCalculator.products.kautionskonto')} - Tradition Bank
               </SelectItem>
               <SelectItem value="chfStablecoin">
-                CHF-Stablecoin - Plusplus
+                {t('depositCalculator.products.chfStablecoin')} - Plusplus
               </SelectItem>
               <SelectItem value="bitcoinDeposit">
-                Bitcoin - Plusplus
+                {t('depositCalculator.products.bitcoinDeposit')} - Plusplus
               </SelectItem>
               <SelectItem value="kautionsversicherung">
-                Kautionsversicherung - Oldcautio
+                {t('depositCalculator.products.kautionsversicherung')} - Oldcautio
               </SelectItem>
             </SelectContent>
           </Select>
@@ -414,16 +414,16 @@ export default function DepositCalculator() {
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="kautionskonto">
-                Kautionskonto - Tradition Bank
+                {t('depositCalculator.products.kautionskonto')} - Tradition Bank
               </SelectItem>
               <SelectItem value="chfStablecoin">
-                CHF-Stablecoin - Plusplus
+                {t('depositCalculator.products.chfStablecoin')} - Plusplus
               </SelectItem>
               <SelectItem value="bitcoinDeposit">
-                Bitcoin - Plusplus
+                {t('depositCalculator.products.bitcoinDeposit')} - Plusplus
               </SelectItem>
               <SelectItem value="kautionsversicherung">
-                Kautionsversicherung - Oldcautio
+                {t('depositCalculator.products.kautionsversicherung')} - Oldcautio
               </SelectItem>
             </SelectContent>
           </Select>
