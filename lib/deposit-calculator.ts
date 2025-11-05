@@ -69,7 +69,7 @@ export const PRODUCTS: Record<string, Product> = {
     id: 'kautionsversicherung',
     nameKey: 'depositCalculator.products.kautionsversicherung',
     rate: 0.045,
-    rateRange: '4.5%',
+    rateRange: '-4.5%',
     type: 'cost',
     color: '#6B7280',
     hasDeposit: false
