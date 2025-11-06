@@ -334,9 +334,36 @@ export default function DepositCalculator() {
           <Input 
             id="rentalPeriod"
             type="number" 
-            value={rentalPeriod}
-            onChange={(e) => setRentalPeriod(Math.min(maxRentalPeriod, Number(e.target.value)))}
-            onBlur={(e) => setRentalPeriod(Math.min(maxRentalPeriod, Math.max(1, Number(e.target.value))))}
+            value={rentalPeriod === 0 ? '' : rentalPeriod}
+            onChange={(e) => {
+              const val = e.target.value;
+              if (val === '') {
+                setRentalPeriod(0);
+              } else {
+                const num = parseFloat(val);
+                if (!isNaN(num)) {
+                  setRentalPeriod(num);
+                }
+              }
+            }}
+            onBlur={(e) => {
+              const value = parseFloat(e.target.value);
+              if (isNaN(value) || value === 0) {
+                setRentalPeriod(1);
+              } else if (value < 1) {
+                setRentalPeriod(1);
+              } else if (value > maxRentalPeriod) {
+                setRentalPeriod(maxRentalPeriod);
+              }
+            }}
+            onInvalid={(e) => {
+              e.preventDefault();
+              if (rentalPeriod > maxRentalPeriod) {
+                setRentalPeriod(maxRentalPeriod);
+              } else if (rentalPeriod < 1) {
+                setRentalPeriod(1);
+              }
+            }}
             className="bg-white border-gray-300 text-neutral-black focus:border-primary-teal focus:ring-primary-teal"
             placeholder="5"
             min="1"
@@ -352,11 +379,38 @@ export default function DepositCalculator() {
           <Input 
             id="deposit"
             type="number" 
-            value={deposit}
-            onChange={(e) => setDeposit(Math.min(150000, Number(e.target.value)))}
-            onBlur={(e) => setDeposit(Math.min(150000, Math.max(1000, Number(e.target.value))))}
+            value={deposit === 0 ? '' : deposit}
+            onChange={(e) => {
+              const val = e.target.value;
+              if (val === '') {
+                setDeposit(0);
+              } else {
+                const num = parseInt(val, 10);
+                if (!isNaN(num)) {
+                  setDeposit(num);
+                }
+              }
+            }}
+            onBlur={(e) => {
+              const value = parseInt(e.target.value, 10);
+              if (isNaN(value) || value === 0) {
+                setDeposit(1000);
+              } else if (value < 1000) {
+                setDeposit(1000);
+              } else if (value > 150000) {
+                setDeposit(150000);
+              }
+            }}
+            onInvalid={(e) => {
+              e.preventDefault();
+              if (deposit > 150000) {
+                setDeposit(150000);
+              } else if (deposit < 1000) {
+                setDeposit(1000);
+              }
+            }}
             className="bg-white border-gray-300 text-neutral-black focus:border-primary-teal focus:ring-primary-teal"
-            placeholder="6000 CHF"
+            placeholder="6000"
             min="1000"
             max="150000"
           />
