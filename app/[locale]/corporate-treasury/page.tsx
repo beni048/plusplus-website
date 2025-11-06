@@ -165,7 +165,7 @@ export default function CorporateTreasury() {
                   <span>
                     {t('corporateTreasury.trust.benefits.audited')} 
                     <a 
-                      href="https://chainsecurity.com" 
+                      href="https://www.chainsecurity.com/security-audit/plusplus-custody" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-accent-red hover:underline ml-1"
