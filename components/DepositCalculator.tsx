@@ -340,8 +340,11 @@ export default function DepositCalculator() {
               if (val === '') {
                 setRentalPeriod(0);
               } else {
-                const num = parseFloat(val);
+                let num = parseFloat(val);
                 if (!isNaN(num)) {
+                  // Clamp immediately to prevent excessive renders
+                  if (num > maxRentalPeriod) num = maxRentalPeriod;
+                  if (num < 1 && num !== 0) num = 1;
                   setRentalPeriod(num);
                 }
               }
@@ -354,14 +357,6 @@ export default function DepositCalculator() {
                 setRentalPeriod(1);
               } else if (value > maxRentalPeriod) {
                 setRentalPeriod(maxRentalPeriod);
-              }
-            }}
-            onInvalid={(e) => {
-              e.preventDefault();
-              if (rentalPeriod > maxRentalPeriod) {
-                setRentalPeriod(maxRentalPeriod);
-              } else if (rentalPeriod < 1) {
-                setRentalPeriod(1);
               }
             }}
             className="bg-white border-gray-300 text-neutral-black focus:border-primary-teal focus:ring-primary-teal"
