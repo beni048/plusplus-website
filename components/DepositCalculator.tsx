@@ -380,8 +380,11 @@ export default function DepositCalculator() {
               if (val === '') {
                 setDeposit(0);
               } else {
-                const num = parseInt(val, 10);
+                let num = parseInt(val, 10);
                 if (!isNaN(num)) {
+                  // Clamp immediately to prevent excessive renders and crashes
+                  if (num > 150000) num = 150000;
+                  if (num < 1000 && num !== 0) num = 1000;
                   setDeposit(num);
                 }
               }
@@ -394,14 +397,6 @@ export default function DepositCalculator() {
                 setDeposit(1000);
               } else if (value > 150000) {
                 setDeposit(150000);
-              }
-            }}
-            onInvalid={(e) => {
-              e.preventDefault();
-              if (deposit > 150000) {
-                setDeposit(150000);
-              } else if (deposit < 1000) {
-                setDeposit(1000);
               }
             }}
             className="bg-white border-gray-300 text-neutral-black focus:border-primary-teal focus:ring-primary-teal"
