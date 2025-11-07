@@ -7,13 +7,72 @@ import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Building2, Home } from 'lucide-react';
+import { Metadata } from 'next';
+import Script from 'next/script';
+
+/* SEO: Generate locale-specific metadata for SERP display and social sharing */
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  const titles = {
+    en: "Choose Your Solution - Rental or Corporate Treasury",
+    de: "Wählen Sie Ihre Lösung - Mietkaution oder Corporate Treasury",
+  };
+
+  const descriptions = {
+    en: "Explore Plusplus solutions for rental deposits and corporate treasury management. Find the perfect fit for your needs.",
+    de: "Entdecken Sie Plusplus Lösungen für Mietkautionen und Corporate Treasury Management. Finden Sie die perfekte Lösung für Ihre Bedürfnisse.",
+  };
+
+  const locale_key = locale as keyof typeof titles;
+  
+  return {
+    title: titles[locale_key] || titles.en,
+    description: descriptions[locale_key] || descriptions.en,
+    openGraph: {
+      title: titles[locale_key] || titles.en,
+      description: descriptions[locale_key] || descriptions.en,
+      type: "website",
+      locale: locale === "de" ? "de_CH" : "en_GB",
+      alternateLocale: locale === "de" ? "en_GB" : "de_CH",
+    },
+  };
+}
 
 export default function ProductSelect() {
   const t = useTranslations('productSelect');
   const locale = useLocale();
 
+  /* SEO: 2-level breadcrumb (Home > Select Solution) */
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      {
+        '@type': 'ListItem',
+        'position': 1,
+        'name': locale === 'de' ? 'Startseite' : 'Home',
+        'item': `https://plusplus.swiss/${locale}`
+      },
+      {
+        '@type': 'ListItem',
+        'position': 2,
+        'name': locale === 'de' ? 'Lösung wählen' : 'Select Solution',
+        'item': `https://plusplus.swiss/${locale}/select`
+      }
+    ]
+  };
+
   return (
     <main className="min-h-screen bg-neutral-light pt-32">
+      {/* SEO: Inject breadcrumb schema for SERP display */}
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema)
+        }}
+      />
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header Section */}
@@ -38,7 +97,7 @@ export default function ProductSelect() {
                 <div className="relative h-64 lg:h-80">
                   <Image
                     src="/images/collection_v2/alain-rouiller-kMSJ5S4gJjw-unsplash.jpg"
-                    alt="Rental Solutions"
+                    alt={locale === 'de' ? 'Schweizer Altstadt mit traditionellen Wohngebäuden zur Veranschaulichung von Mietlösungen für Kaution-Management' : 'Swiss old town with traditional apartment buildings showcasing residential real estate solutions for deposit management'}
                     fill
                     quality={85}
                     sizes="(max-width: 768px) 100vw, 50vw"
@@ -78,7 +137,7 @@ export default function ProductSelect() {
                 <div className="relative h-64 lg:h-80">
                   <Image
                     src="/images/collection_v2/scott-graham-5fNmWej4tAA-unsplash.jpg"
-                    alt="Corporate Treasury"
+                    alt={locale === 'de' ? 'Geschäftstreffen mit Kollegen in Hemdenkragen, die an hölzernem Tisch mit Laptops, Papieren und Stiften arbeiten' : 'Business meeting with colleagues in collared shirts working at wooden table with laptops, papers, and pens'}
                     fill
                     quality={85}
                     sizes="(max-width: 768px) 100vw, 50vw"

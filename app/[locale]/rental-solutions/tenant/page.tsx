@@ -6,10 +6,67 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Calculator, ArrowRight } from 'lucide-react';
+import { Metadata } from 'next';
+import Script from 'next/script';
+
+/* SEO: Generate locale-specific metadata for SERP display and social sharing */
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  const titles = {
+    en: "Tenant Rental Deposits - Frankencoin & Bitcoin Solutions",
+    de: "Mieter Mietkaution - Frankencoin & Bitcoin Lösungen",
+  };
+
+  const descriptions = {
+    en: "Modern rental deposit solutions for tenants in Switzerland. Choose from Frankencoin stablecoin, Bitcoin, or deposit insurance with yield potential.",
+    de: "Moderne Mietkaution Lösungen für Mieter in der Schweiz. Wählen Sie zwischen Frankencoin-Stablecoin, Bitcoin oder Kautionsversicherung mit Rendite.",
+  };
+
+  const locale_key = locale as keyof typeof titles;
+  
+  return {
+    title: titles[locale_key] || titles.en,
+    description: descriptions[locale_key] || descriptions.en,
+    openGraph: {
+      title: titles[locale_key] || titles.en,
+      description: descriptions[locale_key] || descriptions.en,
+      type: "website",
+      locale: locale === "de" ? "de_CH" : "en_GB",
+      alternateLocale: locale === "de" ? "en_GB" : "de_CH",
+    },
+  };
+}
 
 export default function RentalSolutionsTenant() {
   const t = useTranslations();
   const locale = useLocale();
+
+  /* SEO: 3-level breadcrumb (Home > Rental Solutions > Tenant) */
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      {
+        '@type': 'ListItem',
+        'position': 1,
+        'name': locale === 'de' ? 'Startseite' : 'Home',
+        'item': `https://plusplus.swiss/${locale}`
+      },
+      {
+        '@type': 'ListItem',
+        'position': 2,
+        'name': locale === 'de' ? 'Mietlösungen' : 'Rental Solutions',
+        'item': `https://plusplus.swiss/${locale}/rental-solutions/select`
+      },
+      {
+        '@type': 'ListItem',
+        'position': 3,
+        'name': locale === 'de' ? 'Mieter' : 'Tenant',
+        'item': `https://plusplus.swiss/${locale}/rental-solutions/tenant`
+      }
+    ]
+  };
   const [emailCopied, setEmailCopied] = useState(false);
 
   const emailTemplateEn = `Subject: Setting up my rental deposit via Zinsli
@@ -120,6 +177,14 @@ Freundliche Grüsse,
 
   return (
     <main className="min-h-screen bg-neutral-light pt-32">
+      {/* SEO: Inject breadcrumb schema for SERP display */}
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema)
+        }}
+      />
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header Section */}
@@ -169,7 +234,7 @@ Freundliche Grüsse,
               <div className="relative aspect-[4/3] w-full order-1 lg:order-2">
                 <Image
                   src="/images/collection_v2/ricardo-gomez-angel-44EjFu3bies-unsplash.jpg"
-                  alt="Frankencoin Stablecoin Deposits"
+                  alt={locale === 'de' ? 'Architektonisches Metallkreis-Detail des Messe Basel Gebäudes mit moderner Schweizer Architektur' : 'Architectural metal circle detail of Basel Messe building interior showcasing modern Swiss architecture'}
                   fill
                   quality={85}
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -266,7 +331,7 @@ Freundliche Grüsse,
               <div className="relative aspect-[4/3] w-full order-1 lg:order-1">
                 <Image
                   src="/images/collection_v2/kanchanara-7E3QGntO66M-unsplash.jpg"
-                  alt="Bitcoin Rental Deposits"
+                  alt={locale === 'de' ? 'Glänzende Goldmünze mit Bitcoin-Logo auf dunklem unscharfem Untergrund' : 'Shiny gold coin with Bitcoin logo on surface with dark blurred background'}
                   fill
                   quality={85}
                   sizes="(max-width: 768px) 100vw, 50vw"

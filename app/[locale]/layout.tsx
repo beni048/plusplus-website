@@ -1,6 +1,7 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import { Metadata } from 'next';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CookieConsentBanner from '../components/CookieConsent';
@@ -13,6 +14,11 @@ const locales = ['en', 'de'];
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
+
+export const metadata: Metadata = {
+  title: "Plusplus - Stablecoin Partner Switzerland",
+  description: "Swiss DeFi solutions for rental deposits and treasury management",
+};
 
 export default async function LocaleLayout({
   children,

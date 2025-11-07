@@ -7,13 +7,72 @@ import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Building2, User } from 'lucide-react';
+import { Metadata } from 'next';
+import Script from 'next/script';
+
+/* SEO: Generate locale-specific metadata for SERP display and social sharing */
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  const titles = {
+    en: "Rental Solutions - Tenant or Landlord",
+    de: "Mietlösungen - Mieter oder Vermieter",
+  };
+
+  const descriptions = {
+    en: "Choose your role: Tenant seeking deposit solutions or Landlord managing deposits. Flexible options for both sides.",
+    de: "Wählen Sie Ihre Rolle: Mieter mit Kautionslösungen oder Vermieter, der Kautionen verwaltet. Flexible Optionen für beide Seiten.",
+  };
+
+  const locale_key = locale as keyof typeof titles;
+  
+  return {
+    title: titles[locale_key] || titles.en,
+    description: descriptions[locale_key] || descriptions.en,
+    openGraph: {
+      title: titles[locale_key] || titles.en,
+      description: descriptions[locale_key] || descriptions.en,
+      type: "website",
+      locale: locale === "de" ? "de_CH" : "en_GB",
+      alternateLocale: locale === "de" ? "en_GB" : "de_CH",
+    },
+  };
+}
 
 export default function RentalSolutionsSelect() {
   const t = useTranslations('rentalSolutionsSelect');
   const locale = useLocale();
 
+  /* SEO: 2-level breadcrumb (Home > Rental Solutions) */
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      {
+        '@type': 'ListItem',
+        'position': 1,
+        'name': locale === 'de' ? 'Startseite' : 'Home',
+        'item': `https://plusplus.swiss/${locale}`
+      },
+      {
+        '@type': 'ListItem',
+        'position': 2,
+        'name': locale === 'de' ? 'Mietlösungen' : 'Rental Solutions',
+        'item': `https://plusplus.swiss/${locale}/rental-solutions/select`
+      }
+    ]
+  };
+
   return (
     <main className="min-h-screen bg-neutral-light pt-32">
+      {/* SEO: Inject breadcrumb schema for SERP display */}
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema)
+        }}
+      />
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header Section */}
@@ -38,7 +97,7 @@ export default function RentalSolutionsSelect() {
                 <div className="relative h-64 lg:h-80">
                   <Image
                     src="/images/collection_v2/toa-heftiba-XFdFdmVYe3Y-unsplash.jpg"
-                    alt="Tenant Solutions"
+                    alt={locale === 'de' ? 'Paar entspannt sich in hellem Wohnzimmer mit lesender Frau und Mann, der aus dem Fenster schaut' : 'Couple relaxing in bright living room with woman reading book and man gazing out window from couch'}
                     fill
                     quality={85}
                     sizes="(max-width: 768px) 100vw, 50vw"
@@ -78,7 +137,7 @@ export default function RentalSolutionsSelect() {
                 <div className="relative h-64 lg:h-80">
                   <Image
                     src="/images/collection_v2/jakub-zerdzicki-bqUZEAeWuok-unsplash.jpg"
-                    alt="Landlord Solutions"
+                    alt={locale === 'de' ? 'Hand hält Wohnungsschlüssel mit Schlüsselanhänger vor unscharfem Wohnungseingang' : 'Hand holding apartment key with keychain against blurred entrance door background'}
                     fill
                     quality={85}
                     sizes="(max-width: 768px) 100vw, 50vw"

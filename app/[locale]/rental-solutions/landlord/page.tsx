@@ -4,15 +4,80 @@ import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { Metadata } from 'next';
+import Script from 'next/script';
+
+/* SEO: Generate locale-specific metadata for SERP display and social sharing */
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  const titles = {
+    en: "Landlord Rental Deposit Management - Digital Solutions",
+    de: "Vermieter Mietkaution Management - Digitale Lösungen",
+  };
+
+  const descriptions = {
+    en: "Streamlined digital rental deposit management for landlords. Secure setup, automated processes, and integration with property management software.",
+    de: "Vereinfachtes digitales Mietkaution Management für Vermieter. Sichere Einrichtung, automatisierte Prozesse und Integration mit Verwaltungssoftware.",
+  };
+
+  const locale_key = locale as keyof typeof titles;
+  
+  return {
+    title: titles[locale_key] || titles.en,
+    description: descriptions[locale_key] || descriptions.en,
+    openGraph: {
+      title: titles[locale_key] || titles.en,
+      description: descriptions[locale_key] || descriptions.en,
+      type: "website",
+      locale: locale === "de" ? "de_CH" : "en_GB",
+      alternateLocale: locale === "de" ? "en_GB" : "de_CH",
+    },
+  };
+}
 
 export default function RentalSolutionsLandlord() {
   const t = useTranslations();
   const locale = useLocale();
 
+  /* SEO: 3-level breadcrumb (Home > Rental Solutions > Landlord) */
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      {
+        '@type': 'ListItem',
+        'position': 1,
+        'name': locale === 'de' ? 'Startseite' : 'Home',
+        'item': `https://plusplus.swiss/${locale}`
+      },
+      {
+        '@type': 'ListItem',
+        'position': 2,
+        'name': locale === 'de' ? 'Mietlösungen' : 'Rental Solutions',
+        'item': `https://plusplus.swiss/${locale}/rental-solutions/select`
+      },
+      {
+        '@type': 'ListItem',
+        'position': 3,
+        'name': locale === 'de' ? 'Vermieter' : 'Landlord',
+        'item': `https://plusplus.swiss/${locale}/rental-solutions/landlord`
+      }
+    ]
+  };
+
   const zinsliLoginUrl = locale === 'de' ? 'https://app.zinsli.com/de/signup' : 'https://app.zinsli.com/en/signup';
 
   return (
     <main className="min-h-screen bg-neutral-light pt-32">
+      {/* SEO: Inject breadcrumb schema for SERP display */}
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema)
+        }}
+      />
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8 sm:mb-16">
@@ -37,7 +102,7 @@ export default function RentalSolutionsLandlord() {
             <div className="relative aspect-[4/3] w-full order-1 lg:order-1">
               <Image
                 src="/images/collection_v2/chris-henry-CVzlQGDMOJY-unsplash.jpg"
-                alt="Step by step setup"
+                alt={locale === 'de' ? 'Ich-Perspektive einer Person in schwarzer Hose und Sneakern auf hölzerner Brücke mit Metallgeländern' : 'First-person perspective of person sitting on wooden bridge in black pants and sneakers with metal rails'}
                 fill
                 quality={85}
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -118,7 +183,7 @@ export default function RentalSolutionsLandlord() {
             <div className="relative aspect-[4/3] w-full order-1 lg:order-2">
               <Image
                 src="/images/collection_v2/charlesdeluvio-AT5vuPoi8vc-unsplash.jpg"
-                alt="Digital rental management"
+                alt={locale === 'de' ? 'Neonschild mit zwei weissen Händen, die sich schütteln in Plexiglasbox an Betonwand' : 'Neon sign of two white hands shaking in plexiglass box mounted on concrete wall'}
                 fill
                 quality={85}
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -185,7 +250,7 @@ export default function RentalSolutionsLandlord() {
             <div className="relative aspect-[4/3] w-full order-1 lg:order-1">
               <Image
                 src="/images/collection_v2/nicolas-peyrol-iWacqnogqO4-unsplash.jpg"
-                alt="Blockchain technology"
+                alt={locale === 'de' ? 'Schweizer Riesenrad mit zentralem Schweizer Kreuz in verschwommener Bewegungsaufnahme mit Bergen und Strasse' : 'Swiss ferris wheel with central Swiss cross in blurred motion shot with mountains and street foreground'}
                 fill
                 quality={85}
                 sizes="(max-width: 768px) 100vw, 50vw"

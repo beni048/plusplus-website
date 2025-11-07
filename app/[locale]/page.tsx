@@ -7,18 +7,71 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslations, useLocale } from 'next-intl';
 import ScheduleMeetingButton from "@/app/components/ScheduleMeetingButton";
+import { Metadata } from "next";
+import Script from "next/script";
+
+/* SEO: Generate locale-specific metadata for SERP display and social sharing */
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  const titles = {
+    en: "Plusplus - Modern Rental Deposits & Corporate Treasury Solutions",
+    de: "Plusplus - Moderne Mietkaution & Corporate Treasury Lösungen",
+  };
+
+  const descriptions = {
+    en: "Secure, compliant DeFi solutions for Swiss rental deposits and corporate treasury management. Featuring Frankencoin stablecoin, Bitcoin, and deposit insurance.",
+    de: "Sichere, konforme DeFi-Lösungen für Schweizer Mietkautionen und Corporate Treasury Management. Mit Frankencoin-Stablecoin, Bitcoin und Kautionsversicherung.",
+  };
+
+  const locale_key = locale as keyof typeof titles;
+  
+  return {
+    title: titles[locale_key] || titles.en,
+    description: descriptions[locale_key] || descriptions.en,
+    openGraph: {
+      title: titles[locale_key] || titles.en,
+      description: descriptions[locale_key] || descriptions.en,
+      type: "website",
+      locale: locale === "de" ? "de_CH" : "en_GB",
+      alternateLocale: locale === "de" ? "en_GB" : "de_CH",
+    },
+  };
+}
 
 export default function Home() {
   const t = useTranslations();
   const locale = useLocale();
 
+  /* SEO: BreadcrumbList schema enables breadcrumb navigation in Google Search results */
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      {
+        '@type': 'ListItem',
+        'position': 1,
+        'name': locale === 'de' ? 'Startseite' : 'Home',
+        'item': `https://plusplus.swiss/${locale}`
+      }
+    ]
+  };
+
   return (
     <main className="flex min-h-screen flex-col">
+      {/* SEO: Inject breadcrumb schema for Google Search breadcrumb display */}
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema)
+        }}
+      />
       {/* Hero Section */}
       <section className="relative h-[100svh] flex items-center justify-center">
         <Image
           src="/images/collection_v2/elias-bohl-PmGbIGCBzMU-unsplash.jpg"
-          alt="Title background image"
+          alt={locale === 'de' ? 'Bergbrücke in schneebedeckter Alpenlandschaft mit Haus, Kombination aus Natur und Architektur mit malerischen Felsen und Vegetation bei Tageslicht.' : 'Mountain bridge in snowy alpine landscape with house, combining nature and architecture with scenic rocks and vegetation in daylight.'}
           fill
           priority
           quality={90}
@@ -107,11 +160,11 @@ export default function Home() {
             <div className="relative aspect-[4/3] w-full">
               <Image
                 src="/images/collection_v2/eric-weber-_wB88hxsW8M-unsplash.jpg"
-                alt="Rental Solutions"
+                alt={locale === 'de' ? 'Zürich Bahnhofstrasse in der Abenddämmerung mit beleuchteten Schaufenstern, Bäumen, die das goldene Strassenlicht reflektieren, unter dramatischen violetten Abendwolken, die eine atmosphärische Stadtszene schaffen.' : 'Zurich Bahnhofstrasse at twilight with illuminated storefronts, trees reflecting golden streetlights under dramatic purple evening clouds creating atmospheric urban scene.'}
                 fill
                 quality={85}
                 sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover rounded-lg"
+                className="object-cover rounded-lg shadow-lg"
                 placeholder="blur"
                 blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
               />
@@ -132,11 +185,11 @@ export default function Home() {
             <div className="relative aspect-[4/3] w-full order-2 lg:order-1">
               <Image
                 src="/images/collection_v2/florian-schmid-M8ek54EzfzA-unsplash.jpg"
-                alt="Corporate Treasury"
+                alt={locale === 'de' ? 'Luftaufnahme der Zürich-Skyline mit dem Fluss Limmat, der auf den Berg Üetliberg fliesst, mit Bürkliplatz von oben in einem Tagespanorama sichtbar.' : 'Aerial view of Zurich cityscape showing Limmat river flowing towards Üetliberg mountain with Bürkliplatz visible from above in daytime panorama.'}
                 fill
                 quality={85}
                 sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover rounded-lg"
+                className="object-cover rounded-lg shadow-lg"
                 placeholder="blur"
                 blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
               />

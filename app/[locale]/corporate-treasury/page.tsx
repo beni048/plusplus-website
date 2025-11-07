@@ -1,17 +1,100 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Calendar, ArrowRight } from "lucide-react";
 import Image from 'next/image';
 import ScheduleMeetingButton from '@/app/components/ScheduleMeetingButton';
+import { Metadata } from 'next';
+import Script from 'next/script';
+
+/* SEO: Generate locale-specific metadata for SERP display and social sharing */
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  const titles = {
+    en: "Corporate Treasury Solutions - Frankencoin & Plusplus Trust",
+    de: "Corporate Treasury Lösungen - Frankencoin & Plusplus Trust",
+  };
+
+  const descriptions = {
+    en: "Institutional-grade custody and treasury management with Frankencoin stablecoin and Plusplus Trust. Fully regulated, audited by ChainSecurity.",
+    de: "Institutionelle Verwahrung und Treasury Management mit Frankencoin-Stablecoin und Plusplus Trust. Vollständig reguliert, von ChainSecurity geprüft.",
+  };
+
+  const locale_key = locale as keyof typeof titles;
+  
+  return {
+    title: titles[locale_key] || titles.en,
+    description: descriptions[locale_key] || descriptions.en,
+    openGraph: {
+      title: titles[locale_key] || titles.en,
+      description: descriptions[locale_key] || descriptions.en,
+      type: "website",
+      locale: locale === "de" ? "de_CH" : "en_GB",
+      alternateLocale: locale === "de" ? "en_GB" : "de_CH",
+    },
+  };
+}
 
 export default function CorporateTreasury() {
   const t = useTranslations();
+  const locale = useLocale();
+
+  /* SEO: 2-level breadcrumb (Home > Corporate Treasury) */
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      {
+        '@type': 'ListItem',
+        'position': 1,
+        'name': locale === 'de' ? 'Startseite' : 'Home',
+        'item': `https://plusplus.swiss/${locale}`
+      },
+      {
+        '@type': 'ListItem',
+        'position': 2,
+        'name': locale === 'de' ? 'Corporate Treasury' : 'Corporate Treasury',
+        'item': `https://plusplus.swiss/${locale}/corporate-treasury`
+      }
+    ]
+  };
+
+  /* SEO: Service schema describes treasury management offerings */
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    'name': locale === 'de' ? 'Corporate Treasury Management' : 'Corporate Treasury Management',
+    'description': locale === 'de' 
+      ? 'Sichere Treasury Management Lösungen mit Frankencoin und Bitcoin'
+      : 'Secure treasury management solutions with Frankencoin and Bitcoin',
+    'provider': {
+      '@type': 'Organization',
+      'name': 'Plusplus AG',
+      'url': 'https://plusplus.swiss'
+    },
+    'areaServed': 'CH'
+  };
 
   return (
     <main className="min-h-screen bg-neutral-light pt-32">
+      {/* SEO: Inject breadcrumb and service schemas for SERP display */}
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema)
+        }}
+      />
+      <Script
+        id="service-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceSchema)
+        }}
+      />
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header Section */}
@@ -37,7 +120,7 @@ export default function CorporateTreasury() {
             <div className="relative aspect-[4/3] w-full order-1 lg:order-2">
               <Image
                 src="/images/collection_v2/rico-reutimann-d58AtGgPm64-unsplash.jpg"
-                alt="Frankencoin treasury solution"
+                alt={locale === 'de' ? 'Luftaufnahme der Abenddämmerung von Zürich und dem Zürichsee mit dem Fluss Limmat, Bergen in der Ferne und verbleibenden roten Sonnenuntergangslichtern, die eine dramatische Alpenabendlandschaft schaffen.' : 'Aerial twilight view of Zurich and Lake Zurich showing Limmat river, mountains in distance, and remaining red sunset lights creating dramatic alpine evening landscape.'}
                 fill
                 quality={85}
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -105,7 +188,7 @@ export default function CorporateTreasury() {
             <div className="relative aspect-[4/3] w-full order-1 lg:order-1">
               <Image
                 src="/images/collection_v2/urs-ruchti-2D6A0587.jpg"
-                alt="Corporate Treasury - Urs Ruchti"
+                alt={locale === 'de' ? 'Zwei professionelle Männer lächeln vor dunklem Hintergrund, linker Mann trägt blauen Anzug mit weissem Hemd, rechter Mann taller im grauen Anzug mit weissem Hemd, die das Unternehmensteam repräsentieren.' : 'Two professional men smiling against dark background, left man wearing blue suit with white shirt, right man taller in grey suit with white shirt representing company team.'}
                 fill
                 quality={85}
                 sizes="(max-width: 768px) 100vw, 50vw"

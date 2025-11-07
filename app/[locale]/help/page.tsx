@@ -2,6 +2,37 @@
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useTranslations, useLocale } from 'next-intl';
+import Script from 'next/script';
+import { Metadata } from 'next';
+
+/* SEO: Generate locale-specific metadata for SERP display and social sharing */
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  const titles = {
+    en: "FAQ - Frequently Asked Questions",
+    de: "FAQ - Häufig gestellte Fragen",
+  };
+
+  const descriptions = {
+    en: "Find answers to common questions about Plusplus rental deposits, corporate treasury, and blockchain solutions.",
+    de: "Finden Sie Antworten auf häufig gestellte Fragen zu Plusplus Mietkautionen, Corporate Treasury und Blockchain-Lösungen.",
+  };
+
+  const locale_key = locale as keyof typeof titles;
+  
+  return {
+    title: titles[locale_key] || titles.en,
+    description: descriptions[locale_key] || descriptions.en,
+    openGraph: {
+      title: titles[locale_key] || titles.en,
+      description: descriptions[locale_key] || descriptions.en,
+      type: "website",
+      locale: locale === "de" ? "de_CH" : "en_GB",
+      alternateLocale: locale === "de" ? "en_GB" : "de_CH",
+    },
+  };
+}
 
 function SupportAnswer() {
   const locale = useLocale();
@@ -55,8 +86,68 @@ function SupportAnswer() {
 export default function HelpPage() {
   const t = useTranslations('help');
   
+  /* SEO: Build FAQ items from translations for dynamic schema generation */
+  const faqItems = [
+    { id: 'what-is-plusplus', question: t('questions.whatIs.question'), answer: t('questions.whatIs.answer') },
+    { id: 'products', question: t('questions.products.question'), answer: t('questions.products.answer') },
+    { id: 'how-it-works', question: t('questions.howItWorks.question'), answer: t('questions.howItWorks.answer') },
+    { id: 'benefits', question: t('questions.benefits.question'), answer: t('questions.benefits.answer') },
+    { id: 'security', question: t('questions.security.question'), answer: t('questions.security.answer') },
+    { id: 'risks', question: t('questions.risks.question'), answer: t('questions.risks.answer') },
+    { id: 'access', question: t('questions.access.question'), answer: t('questions.access.answer') },
+    { id: 'regulation', question: t('questions.regulation.question'), answer: t('questions.regulation.answer') },
+    { id: 'privacy', question: t('questions.privacy.question'), answer: t('questions.privacy.answer') },
+    { id: 'support', question: t('questions.support.question'), answer: '' } // Answer is dynamic from component
+  ];
+
+  /* 
+    FAQPage SCHEMA
+    Type: schema.org/FAQPage
+    
+    Purpose: Tells search engines that this page is a FAQ page with Q&A content
+    Benefits for SEO:
+    1. Enables FAQ featured snippets in Google Search results
+    2. Shows questions and answers directly in SERP (improves CTR)
+    3. Helps Google match conversational queries to FAQ answers
+    4. Can generate "People Also Ask" sections on SERPs
+    5. Improves visibility for "how to" and "what is" queries
+    
+    Structure:
+    - @type: FAQPage - signals this is a FAQ page
+    - mainEntity: Array of Question objects
+    - Each Question has:
+      - name: the question text
+      - acceptedAnswer: the answer text
+    
+    Note: We only include first 9 items (0-8) because the 10th (support)
+    has a dynamic answer rendered as a component, not static text.
+    
+    Result: Google can display answers directly in search results for these 9 questions
+    Format: JSON-LD (standard for structured data)
+  */
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqItems.slice(0, 9).map(item => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer
+      }
+    }))
+  };
+  
   return (
     <main className="min-h-screen bg-neutral-light pt-32 pb-24">
+      {/* SEO: Inject FAQPage schema for featured snippets and SERP display */}
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema)
+        }}
+      />
       <div className="container mx-auto px-4">
         <h2 className="mb-16 text-center text-4xl font-medium text-black">{t('title')}</h2>
 

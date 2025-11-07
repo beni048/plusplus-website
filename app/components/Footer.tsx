@@ -42,6 +42,13 @@ export default function Footer() {
               >
                 {t('terms')}
               </Link>
+              <span className="text-neutral-medium">|</span>
+              <Link
+                href={`/${locale}/help`}
+                className="text-neutral-white transition-colors hover:text-accent-red underline font-secondary"
+              >
+                {t('help')}
+              </Link>
             </div>
             <div className="text-sm text-neutral-medium font-secondary text-center lg:text-left">
               <p>{t('copyright')}</p>
