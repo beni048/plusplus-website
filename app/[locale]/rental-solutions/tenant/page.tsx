@@ -12,20 +12,15 @@ export default function RentalSolutionsTenant() {
   const locale = useLocale();
   const [emailCopied, setEmailCopied] = useState(false);
 
-  const emailTemplateEn = `Subject: Quick, Free Rental-Deposit Solution
+  const emailTemplateEn = `Subject: Setting up my rental deposit via Zinsli
 
 Dear [Landlord Name],
 
-I heard from a friend that there's a new, quick, and free tool called Zinsli for setting up rental deposits—and I'd love to give it a try for our lease. Here's why it's great for both of us:
+I'd like to suggest setting up my rental deposit digitally via Zinsli. This is a modern, paperless solution that offers benefits for both of us.
+You can open a rental deposit within a few hours and will receive an immediate email notification when I make my payment. As a tenant, it's convenient for me because I receive automatic reminders and can deposit the security in modern deposit solutions with returns.
 
-• It takes under 5 minutes to set up—no more snail-mail or lengthy bank processes
-• I get automated reminders, so I'll never miss a deposit payment
-• You receive instant email confirmation as soon as the deposit arrives
-• There are no fees for you as the landlord
-
-Could you please set up a free account at app.zinsli.com/en/signup and invite me? You can learn more about the process here: plusplus.swiss/en/rental-solutions/landlord
-
-It's simple: sign up, click "Invite Tenant," and enter my email. Then I'll complete my side right away.
+If you work with Wincasa, Fairwalter, or Garaio REM, the integration with Zinsli is likely already available in your property management software and you can invite me directly there.
+If not, you can simply and quickly register at www.zinsli.com and set up the rental deposit there. You can then invite me directly via the website to make the deposit.
 
 Thank you for making our rental process smoother and more transparent!
 
