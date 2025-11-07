@@ -5,34 +5,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import Script from 'next/script';
 import { Metadata } from 'next';
 
-/* SEO: Generate locale-specific metadata for SERP display and social sharing */
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
-  const { locale } = await params;
-  
-  const titles = {
-    en: "FAQ - Frequently Asked Questions",
-    de: "FAQ - Häufig gestellte Fragen",
-  };
-
-  const descriptions = {
-    en: "Find answers to common questions about Plusplus rental deposits, corporate treasury, and blockchain solutions.",
-    de: "Finden Sie Antworten auf häufig gestellte Fragen zu Plusplus Mietkautionen, Corporate Treasury und Blockchain-Lösungen.",
-  };
-
-  const locale_key = locale as keyof typeof titles;
-  
-  return {
-    title: titles[locale_key] || titles.en,
-    description: descriptions[locale_key] || descriptions.en,
-    openGraph: {
-      title: titles[locale_key] || titles.en,
-      description: descriptions[locale_key] || descriptions.en,
-      type: "website",
-      locale: locale === "de" ? "de_CH" : "en_GB",
-      alternateLocale: locale === "de" ? "en_GB" : "de_CH",
-    },
-  };
-}
+/* Note: metadata for this route is provided by a server-side layout to keep this page a client component. */
 
 function SupportAnswer() {
   const locale = useLocale();

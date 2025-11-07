@@ -15,10 +15,33 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export const metadata: Metadata = {
-  title: "Plusplus - Stablecoin Partner Switzerland",
-  description: "Swiss DeFi solutions for rental deposits and treasury management",
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+
+  const titles = {
+    en: "Plusplus - Modern Rental Deposits & Corporate Treasury Solutions",
+    de: "Plusplus - Moderne Mietkaution & Corporate Treasury Lösungen",
+  };
+
+  const descriptions = {
+    en: "Secure, compliant DeFi solutions for Swiss rental deposits and corporate treasury management. Featuring Frankencoin stablecoin, Bitcoin, and deposit insurance.",
+    de: "Sichere, konforme DeFi-Lösungen für Schweizer Mietkautionen und Corporate Treasury Management. Mit Frankencoin-Stablecoin, Bitcoin und Kautionsversicherung.",
+  };
+
+  const locale_key = locale as keyof typeof titles;
+
+  return {
+    title: titles[locale_key] || titles.en,
+    description: descriptions[locale_key] || descriptions.en,
+    openGraph: {
+      title: titles[locale_key] || titles.en,
+      description: descriptions[locale_key] || descriptions.en,
+      type: 'website',
+      locale: locale === 'de' ? 'de_CH' : 'en_GB',
+      alternateLocale: locale === 'de' ? 'en_GB' : 'de_CH',
+    },
+  };
+}
 
 export default async function LocaleLayout({
   children,

@@ -9,34 +9,7 @@ import ScheduleMeetingButton from '@/app/components/ScheduleMeetingButton';
 import { Metadata } from 'next';
 import Script from 'next/script';
 
-/* SEO: Generate locale-specific metadata for SERP display and social sharing */
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
-  const { locale } = await params;
-  
-  const titles = {
-    en: "Corporate Treasury Solutions - Frankencoin & Plusplus Trust",
-    de: "Corporate Treasury Lösungen - Frankencoin & Plusplus Trust",
-  };
-
-  const descriptions = {
-    en: "Institutional-grade custody and treasury management with Frankencoin stablecoin and Plusplus Trust. Fully regulated, audited by ChainSecurity.",
-    de: "Institutionelle Verwahrung und Treasury Management mit Frankencoin-Stablecoin und Plusplus Trust. Vollständig reguliert, von ChainSecurity geprüft.",
-  };
-
-  const locale_key = locale as keyof typeof titles;
-  
-  return {
-    title: titles[locale_key] || titles.en,
-    description: descriptions[locale_key] || descriptions.en,
-    openGraph: {
-      title: titles[locale_key] || titles.en,
-      description: descriptions[locale_key] || descriptions.en,
-      type: "website",
-      locale: locale === "de" ? "de_CH" : "en_GB",
-      alternateLocale: locale === "de" ? "en_GB" : "de_CH",
-    },
-  };
-}
+/* Note: metadata for this route is provided by a server-side layout to keep this page a client component. */
 
 export default function CorporateTreasury() {
   const t = useTranslations();

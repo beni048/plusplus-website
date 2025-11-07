@@ -10,34 +10,10 @@ import ScheduleMeetingButton from "@/app/components/ScheduleMeetingButton";
 import { Metadata } from "next";
 import Script from "next/script";
 
-/* SEO: Generate locale-specific metadata for SERP display and social sharing */
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
-  const { locale } = await params;
-  
-  const titles = {
-    en: "Plusplus - Modern Rental Deposits & Corporate Treasury Solutions",
-    de: "Plusplus - Moderne Mietkaution & Corporate Treasury Lösungen",
-  };
-
-  const descriptions = {
-    en: "Secure, compliant DeFi solutions for Swiss rental deposits and corporate treasury management. Featuring Frankencoin stablecoin, Bitcoin, and deposit insurance.",
-    de: "Sichere, konforme DeFi-Lösungen für Schweizer Mietkautionen und Corporate Treasury Management. Mit Frankencoin-Stablecoin, Bitcoin und Kautionsversicherung.",
-  };
-
-  const locale_key = locale as keyof typeof titles;
-  
-  return {
-    title: titles[locale_key] || titles.en,
-    description: descriptions[locale_key] || descriptions.en,
-    openGraph: {
-      title: titles[locale_key] || titles.en,
-      description: descriptions[locale_key] || descriptions.en,
-      type: "website",
-      locale: locale === "de" ? "de_CH" : "en_GB",
-      alternateLocale: locale === "de" ? "en_GB" : "de_CH",
-    },
-  };
-}
+/* Metadata for the root locale route is provided by the server layout:
+   app/[locale]/layout.tsx
+   This keeps the page component as a client component while ensuring
+   generateMetadata is exported from a server component (required by Next.js/Turbopack). */
 
 export default function Home() {
   const t = useTranslations();
