@@ -49,7 +49,11 @@ const ProductCard: React.FC<ProductCardProps> = ({
   rentalPeriod,
   t 
 }) => {
-  const calc = calculateProduct(deposit, product, rentalPeriod);
+  // Defensive clamping for intermediate states during typing
+  const safeRentalPeriod = Math.max(1, Math.min(rentalPeriod, 16));
+  const safeDeposit = Math.max(1000, Math.min(deposit, 150000));
+  
+  const calc = calculateProduct(safeDeposit, product, safeRentalPeriod);
 
   return (
     <Card className="bg-white border border-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -137,12 +141,16 @@ const CapitalDevelopmentChart: React.FC<CapitalDevelopmentChartProps> = ({
 }) => {
   
   const generateData = (): ChartData[] => {
+    // Defensive clamping for intermediate states during typing
+    const safeRentalPeriod = Math.max(1, Math.min(rentalPeriod, 16));
+    const safeDeposit = Math.max(1000, Math.min(deposit, 150000));
+    
     const data: ChartData[] = [];
     const hasBitcoin = productA.id === 'bitcoinDeposit' || productB.id === 'bitcoinDeposit';
     
     if (hasBitcoin) {
       // For Bitcoin: generate monthly data points for volatility but label only years
-      const monthsTotal = Math.round(rentalPeriod * 12);
+      const monthsTotal = Math.round(safeRentalPeriod * 12);
       const endDate = new Date(2025, 9, 1); // October 1, 2025
       
       for (let month = 0; month <= monthsTotal; month++) {
@@ -160,27 +168,27 @@ const CapitalDevelopmentChart: React.FC<CapitalDevelopmentChartProps> = ({
         if (productA.id === 'bitcoinDeposit') {
           const bitcoinPrice = getBitcoinPriceForMonth(targetDate.getFullYear(), targetDate.getMonth() + 1);
           const initialDate = new Date(endDate);
-          initialDate.setFullYear(initialDate.getFullYear() - rentalPeriod);
+          initialDate.setFullYear(initialDate.getFullYear() - safeRentalPeriod);
           if (initialDate < minDate) initialDate.setTime(minDate.getTime());
           const initialPrice = getBitcoinPriceForMonth(initialDate.getFullYear(), initialDate.getMonth() + 1);
           const percentageGain = ((bitcoinPrice - initialPrice) / initialPrice);
-          valueA = deposit * (1 + percentageGain);
+          valueA = safeDeposit * (1 + percentageGain);
         } else {
-          const calcA = calculateProduct(deposit, productA, currentYear);
-          valueA = productA.type === 'investment' ? deposit + calcA.totalReturn : -calcA.totalCost;
+          const calcA = calculateProduct(safeDeposit, productA, currentYear);
+          valueA = productA.type === 'investment' ? safeDeposit + calcA.totalReturn : -calcA.totalCost;
         }
         
         if (productB.id === 'bitcoinDeposit') {
           const bitcoinPrice = getBitcoinPriceForMonth(targetDate.getFullYear(), targetDate.getMonth() + 1);
           const initialDate = new Date(endDate);
-          initialDate.setFullYear(initialDate.getFullYear() - rentalPeriod);
+          initialDate.setFullYear(initialDate.getFullYear() - safeRentalPeriod);
           if (initialDate < minDate) initialDate.setTime(minDate.getTime());
           const initialPrice = getBitcoinPriceForMonth(initialDate.getFullYear(), initialDate.getMonth() + 1);
           const percentageGain = ((bitcoinPrice - initialPrice) / initialPrice);
-          valueB = deposit * (1 + percentageGain);
+          valueB = safeDeposit * (1 + percentageGain);
         } else {
-          const calcB = calculateProduct(deposit, productB, currentYear);
-          valueB = productB.type === 'investment' ? deposit + calcB.totalReturn : -calcB.totalCost;
+          const calcB = calculateProduct(safeDeposit, productB, currentYear);
+          valueB = productB.type === 'investment' ? safeDeposit + calcB.totalReturn : -calcB.totalCost;
         }
         
         // Only show year labels at exact year boundaries, empty labels for monthly points
@@ -196,14 +204,14 @@ const CapitalDevelopmentChart: React.FC<CapitalDevelopmentChartProps> = ({
       }
     } else {
       // Standard yearly calculation for non-Bitcoin products
-      for (let year = 0; year <= rentalPeriod; year++) {
-        const calcA = calculateProduct(deposit, productA, year);
-        const calcB = calculateProduct(deposit, productB, year);
+      for (let year = 0; year <= safeRentalPeriod; year++) {
+        const calcA = calculateProduct(safeDeposit, productA, year);
+        const calcB = calculateProduct(safeDeposit, productB, year);
         
         data.push({
           year: year === 0 ? '0' : `${t('depositCalculator.year')} ${year}`,
-          productA: productA.type === 'investment' ? deposit + calcA.totalReturn : -calcA.totalCost,
-          productB: productB.type === 'investment' ? deposit + calcB.totalReturn : -calcB.totalCost
+          productA: productA.type === 'investment' ? safeDeposit + calcA.totalReturn : -calcA.totalCost,
+          productB: productB.type === 'investment' ? safeDeposit + calcB.totalReturn : -calcB.totalCost
         });
       }
     }
@@ -340,11 +348,8 @@ export default function DepositCalculator() {
               if (val === '') {
                 setRentalPeriod(0);
               } else {
-                let num = parseFloat(val);
+                const num = parseFloat(val);
                 if (!isNaN(num)) {
-                  // Clamp immediately to prevent excessive renders
-                  if (num > maxRentalPeriod) num = maxRentalPeriod;
-                  if (num < 1 && num !== 0) num = 1;
                   setRentalPeriod(num);
                 }
               }
@@ -380,11 +385,8 @@ export default function DepositCalculator() {
               if (val === '') {
                 setDeposit(0);
               } else {
-                let num = parseInt(val, 10);
+                const num = parseInt(val, 10);
                 if (!isNaN(num)) {
-                  // Clamp immediately to prevent excessive renders and crashes
-                  if (num > 150000) num = 150000;
-                  if (num < 1000 && num !== 0) num = 1000;
                   setDeposit(num);
                 }
               }
