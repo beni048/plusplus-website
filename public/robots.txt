@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap (update if your sitemap URL changes)
+Sitemap: https://plusplus.swiss/sitemap.xml
