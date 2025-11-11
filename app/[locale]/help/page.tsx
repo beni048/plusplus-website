@@ -23,10 +23,10 @@ function SupportAnswer() {
         </a>{' '}
         zu initiieren, um unsere WBTC- und ZCHF-basierten Kautionsprodukte für Ihre Mietkaution zu nutzen. Für Vermieter: Wenden Sie sich direkt an Zinsli, um diese innovativen Kautionslösungen Ihren Mietern anzubieten. Benötigen Sie Hilfe bei der Verbindung mit Zinsli oder haben Fragen? Unser Schweizer Team hilft gerne. Kontaktieren Sie uns unter{' '}
         <a 
-          href="mailto:hello@plusplus.swiss" 
+          href="mailto:info@plusplus.swiss" 
           className="text-black underline hover:text-accent-red transition-colors"
         >
-          hello@plusplus.swiss
+          info@plusplus.swiss
         </a>{' '}
         oder über das Kontaktformular unserer Website.
       </div>
@@ -46,10 +46,10 @@ function SupportAnswer() {
       </a>{' '}
       to use our WBTC and ZCHF-based deposit products for your rental deposit. For landlords: Reach out to Zinsli directly to offer these innovative deposit solutions to your tenants. Need assistance connecting with Zinsli or have questions? Our Swiss-based team is here to help. Contact us at{' '}
       <a 
-        href="mailto:hello@plusplus.swiss" 
+        href="mailto:info@plusplus.swiss" 
         className="text-black underline hover:text-accent-red transition-colors"
       >
-        hello@plusplus.swiss
+        info@plusplus.swiss
       </a>{' '}
       or through our website contact form.
     </div>
@@ -58,8 +58,16 @@ function SupportAnswer() {
 
 export default function HelpPage() {
   const t = useTranslations('help');
-  
+  const locale = useLocale();
+
   /* SEO: Build FAQ items from translations for dynamic schema generation */
+  // The support answer is rendered as a dynamic component in the UI but
+  // we also provide a plain-text version for the FAQ schema so search
+  // engines can index it.
+  const supportAnswerText = locale === 'de'
+    ? 'Der Einstieg ist einfach! Für Mieter: Bitten Sie Ihren Vermieter, den Prozess mit Zinsli (https://zinsli.com) zu initiieren, um WBTC- oder ZCHF-basierte Kautionsprodukte zu nutzen. Für Vermieter: Kontaktieren Sie Zinsli direkt. Bei Fragen wenden Sie sich bitte an info@plusplus.swiss oder nutzen Sie das Kontaktformular auf unserer Website.'
+    : 'Getting started is easy! For tenants: ask your landlord to initiate the process with Zinsli (https://zinsli.com) to use our WBTC or ZCHF-based deposit products. For landlords: contact Zinsli directly. If you need help, please contact info@plusplus.swiss or use the contact form on our website.';
+
   const faqItems = [
     { id: 'what-is-plusplus', question: t('questions.whatIs.question'), answer: t('questions.whatIs.answer') },
     { id: 'products', question: t('questions.products.question'), answer: t('questions.products.answer') },
@@ -70,7 +78,7 @@ export default function HelpPage() {
     { id: 'access', question: t('questions.access.question'), answer: t('questions.access.answer') },
     { id: 'regulation', question: t('questions.regulation.question'), answer: t('questions.regulation.answer') },
     { id: 'privacy', question: t('questions.privacy.question'), answer: t('questions.privacy.answer') },
-    { id: 'support', question: t('questions.support.question'), answer: '' } // Answer is dynamic from component
+    { id: 'support', question: t('questions.support.question'), answer: supportAnswerText }
   ];
 
   /* 
@@ -92,16 +100,13 @@ export default function HelpPage() {
       - name: the question text
       - acceptedAnswer: the answer text
     
-    Note: We only include first 9 items (0-8) because the 10th (support)
-    has a dynamic answer rendered as a component, not static text.
-    
-    Result: Google can display answers directly in search results for these 9 questions
+  Note: We include all FAQ items including the support question. The UI still renders a dynamic component for the support answer, but the schema contains a plain-text version so search engines can index it.
     Format: JSON-LD (standard for structured data)
   */
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: faqItems.slice(0, 9).map(item => ({
+    mainEntity: faqItems.map(item => ({
       '@type': 'Question',
       name: item.question,
       acceptedAnswer: {

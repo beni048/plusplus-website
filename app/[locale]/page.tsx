@@ -220,25 +220,37 @@ export default function Home() {
             </div>
             
             {/* Partners Collection Right */}
-            <div className="grid gap-6 md:grid-cols-2">
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
               {[
                 {
-                  name: "Zinsli.com",
+                  name: "Zinsli",
                   descriptionKey: "zinsli",
                   logo: "/images/partners/zinsli.svg",
                   link: "https://zinsli.com",
                 },
                 {
-                  name: "Frankencoin.com",
+                  name: "Frankencoin",
                   descriptionKey: "frankencoin",
                   logo: "/images/partners/frankencoin.png",
                   link: "https://frankencoin.com",
                 },
                 {
-                  name: "DFX.swiss",
+                  name: "DFX",
                   descriptionKey: "dfx",
                   logo: "/images/partners/dfx.svg",
                   link: "https://dfx.swiss",
+                },
+                {
+                  name: "VNX",
+                  descriptionKey: "vnx",
+                  logo: "/images/partners/vnx.png",
+                  link: "https://www.vnx.li",
+                },
+                {
+                  name: "VQF",
+                  descriptionKey: "vqf",
+                  logo: "/images/partners/vqf.png",
+                  link: "https://www.vqf.ch",
                 },
               ].map((partner) => (
                 <a
@@ -248,22 +260,22 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="transition-transform hover:scale-105"
                 >
-                  <Card className="h-full p-6 border-primary-teal/20">
-                    <div className="mb-4 flex justify-center">
+                  <Card className="h-full p-4 border-primary-teal/20 flex flex-col">
+                    <div className="mb-3 flex justify-center">
                       <Image
                         src={partner.logo}
                         alt={partner.name}
-                        width={120}
-                        height={40}
-                        className="h-10 w-auto"
+                        width={100}
+                        height={35}
+                        className="h-8 w-auto"
                         // Ensure aspect ratio is preserved when CSS changes one dimension
                         style={{ width: 'auto' }}
                       />
                     </div>
-                    <h3 className="mb-3 text-center text-lg font-primary font-bold text-black">
+                    <h3 className="mb-2 text-center text-sm font-primary font-bold text-black">
                       {partner.name}
                     </h3>
-                    <p className="text-sm text-center text-neutral-dark font-secondary">
+                    <p className="text-xs text-center text-neutral-dark font-secondary flex-grow">
                       {t(`mainSections.partners.descriptions.${partner.descriptionKey}`)}
                     </p>
                   </Card>
