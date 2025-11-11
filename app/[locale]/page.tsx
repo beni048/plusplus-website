@@ -9,6 +9,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import ScheduleMeetingButton from "@/app/components/ScheduleMeetingButton";
 import { Metadata } from "next";
 import Script from "next/script";
+import "../partners-carousel.css";
 
 /* Metadata for the root locale route is provided by the server layout:
    app/[locale]/layout.tsx
@@ -220,7 +221,8 @@ export default function Home() {
             </div>
             
             {/* Partners Collection Right */}
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {/* Mobile: Horizontal scroll, Desktop: Grid */}
+            <div className="md:grid md:gap-4 md:grid-cols-2 lg:grid-cols-3 hidden md:block">
               {[
                 {
                   name: "Zinsli",
@@ -252,6 +254,12 @@ export default function Home() {
                   logo: "/images/partners/vqf.png",
                   link: "https://www.vqf.ch",
                 },
+                {
+                  name: "ChainSecurity",
+                  descriptionKey: "chainsecurity",
+                  logo: "/images/partners/chain.jpg",
+                  link: "https://www.chainsecurity.com",
+                },
               ].map((partner) => (
                 <a
                   key={partner.name}
@@ -268,7 +276,6 @@ export default function Home() {
                         width={100}
                         height={35}
                         className="h-8 w-auto"
-                        // Ensure aspect ratio is preserved when CSS changes one dimension
                         style={{ width: 'auto' }}
                       />
                     </div>
@@ -281,6 +288,40 @@ export default function Home() {
                   </Card>
                 </a>
               ))}
+            </div>
+            
+            {/* Mobile: Auto-scrolling carousel */}
+            <div className="md:hidden overflow-hidden">
+              <div className="partners-carousel">
+                <div className="carousel-track">
+                  {[
+                    { name: "Zinsli", logo: "/images/partners/zinsli.svg" },
+                    { name: "Frankencoin", logo: "/images/partners/frankencoin.png" },
+                    { name: "DFX", logo: "/images/partners/dfx.svg" },
+                    { name: "VNX", logo: "/images/partners/vnx.png" },
+                    { name: "VQF", logo: "/images/partners/vqf.png" },
+                    { name: "ChainSecurity", logo: "/images/partners/chain.jpg" },
+                    // Duplicate for seamless loop
+                    { name: "Zinsli", logo: "/images/partners/zinsli.svg" },
+                    { name: "Frankencoin", logo: "/images/partners/frankencoin.png" },
+                    { name: "DFX", logo: "/images/partners/dfx.svg" },
+                    { name: "VNX", logo: "/images/partners/vnx.png" },
+                    { name: "VQF", logo: "/images/partners/vqf.png" },
+                    { name: "ChainSecurity", logo: "/images/partners/chain.jpg" },
+                  ].map((partner, index) => (
+                    <div key={index} className="carousel-item">
+                      <Image
+                        src={partner.logo}
+                        alt={partner.name}
+                        width={80}
+                        height={35}
+                        className="h-12 w-auto"
+                        style={{ width: 'auto' }}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
