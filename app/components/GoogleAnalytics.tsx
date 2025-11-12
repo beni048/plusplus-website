@@ -29,7 +29,7 @@ export default function GoogleAnalytics() {
   return (
     <Script
       src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-      strategy="afterInteractive"
+      strategy="lazyOnload"
       onLoad={() => {
         window.dataLayer = window.dataLayer || [];
         window.gtag = function gtag(...args: unknown[]) {

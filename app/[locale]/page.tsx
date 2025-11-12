@@ -51,7 +51,7 @@ export default function Home() {
           alt={locale === 'de' ? 'Bergbrücke in schneebedeckter Alpenlandschaft mit Haus, Kombination aus Natur und Architektur mit malerischen Felsen und Vegetation bei Tageslicht.' : 'Mountain bridge in snowy alpine landscape with house, combining nature and architecture with scenic rocks and vegetation in daylight.'}
           fill
           priority
-          quality={90}
+          quality={80}
           sizes="100vw"
           className="object-cover object-center"
           placeholder="blur"
@@ -139,7 +139,8 @@ export default function Home() {
                 src="/images/collection_v2/eric-weber-_wB88hxsW8M-unsplash.jpg"
                 alt={locale === 'de' ? 'Zürich Bahnhofstrasse in der Abenddämmerung mit beleuchteten Schaufenstern, Bäumen, die das goldene Strassenlicht reflektieren, unter dramatischen violetten Abendwolken, die eine atmosphärische Stadtszene schaffen.' : 'Zurich Bahnhofstrasse at twilight with illuminated storefronts, trees reflecting golden streetlights under dramatic purple evening clouds creating atmospheric urban scene.'}
                 fill
-                quality={85}
+                loading="lazy"
+                quality={80}
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover rounded-lg shadow-lg"
                 placeholder="blur"
@@ -164,7 +165,8 @@ export default function Home() {
                 src="/images/collection_v2/florian-schmid-M8ek54EzfzA-unsplash.jpg"
                 alt={locale === 'de' ? 'Luftaufnahme der Zürich-Skyline mit dem Fluss Limmat, der auf den Berg Üetliberg fliesst, mit Bürkliplatz von oben in einem Tagespanorama sichtbar.' : 'Aerial view of Zurich cityscape showing Limmat river flowing towards Üetliberg mountain with Bürkliplatz visible from above in daytime panorama.'}
                 fill
-                quality={85}
+                loading="lazy"
+                quality={80}
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover rounded-lg shadow-lg"
                 placeholder="blur"
