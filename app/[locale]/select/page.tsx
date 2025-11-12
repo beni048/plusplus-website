@@ -74,7 +74,8 @@ export default function ProductSelect() {
                     src="/images/collection_v2/alain-rouiller-kMSJ5S4gJjw-unsplash.jpg"
                     alt={locale === 'de' ? 'Schweizer Altstadt mit traditionellen Wohngebäuden zur Veranschaulichung von Mietlösungen für Kaution-Management' : 'Swiss old town with traditional apartment buildings showcasing residential real estate solutions for deposit management'}
                     fill
-                    quality={85}
+                    loading="lazy"
+                    quality={80}
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                     placeholder="blur"
@@ -114,7 +115,8 @@ export default function ProductSelect() {
                     src="/images/collection_v2/scott-graham-5fNmWej4tAA-unsplash.jpg"
                     alt={locale === 'de' ? 'Geschäftstreffen mit Kollegen in Hemdenkragen, die an hölzernem Tisch mit Laptops, Papieren und Stiften arbeiten' : 'Business meeting with colleagues in collared shirts working at wooden table with laptops, papers, and pens'}
                     fill
-                    quality={85}
+                    loading="lazy"
+                    quality={80}
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                     placeholder="blur"

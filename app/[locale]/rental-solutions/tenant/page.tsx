@@ -211,11 +211,12 @@ Freundliche Grüsse,
                   src="/images/collection_v2/ricardo-gomez-angel-44EjFu3bies-unsplash.jpg"
                   alt={locale === 'de' ? 'Architektonisches Metallkreis-Detail des Messe Basel Gebäudes mit moderner Schweizer Architektur' : 'Architectural metal circle detail of Basel Messe building interior showcasing modern Swiss architecture'}
                   fill
-                  quality={85}
+                  loading="lazy"
+                  quality={80}
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover rounded-lg shadow-lg"
                   placeholder="blur"
-                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGJcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                 />
                 {/* Discrete photo credit */}
                 <div className="absolute bottom-1 right-1 text-[10px] text-white/40 font-secondary">
@@ -308,7 +309,8 @@ Freundliche Grüsse,
                   src="/images/collection_v2/kanchanara-7E3QGntO66M-unsplash.jpg"
                   alt={locale === 'de' ? 'Glänzende Goldmünze mit Bitcoin-Logo auf dunklem unscharfem Untergrund' : 'Shiny gold coin with Bitcoin logo on surface with dark blurred background'}
                   fill
-                  quality={85}
+                  loading="lazy"
+                  quality={80}
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover rounded-lg shadow-lg"
                   placeholder="blur"

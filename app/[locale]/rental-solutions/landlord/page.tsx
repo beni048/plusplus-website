@@ -79,7 +79,8 @@ export default function RentalSolutionsLandlord() {
                 src="/images/collection_v2/chris-henry-CVzlQGDMOJY-unsplash.jpg"
                 alt={locale === 'de' ? 'Ich-Perspektive einer Person in schwarzer Hose und Sneakern auf hölzerner Brücke mit Metallgeländern' : 'First-person perspective of person sitting on wooden bridge in black pants and sneakers with metal rails'}
                 fill
-                quality={85}
+                loading="lazy"
+                quality={80}
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover rounded-lg shadow-lg"
                 placeholder="blur"
@@ -160,7 +161,8 @@ export default function RentalSolutionsLandlord() {
                 src="/images/collection_v2/charlesdeluvio-AT5vuPoi8vc-unsplash.jpg"
                 alt={locale === 'de' ? 'Neonschild mit zwei weissen Händen, die sich schütteln in Plexiglasbox an Betonwand' : 'Neon sign of two white hands shaking in plexiglass box mounted on concrete wall'}
                 fill
-                quality={85}
+                loading="lazy"
+                quality={80}
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover rounded-lg shadow-lg"
                 placeholder="blur"
@@ -227,7 +229,8 @@ export default function RentalSolutionsLandlord() {
                 src="/images/collection_v2/nicolas-peyrol-iWacqnogqO4-unsplash.jpg"
                 alt={locale === 'de' ? 'Schweizer Riesenrad mit zentralem Schweizer Kreuz in verschwommener Bewegungsaufnahme mit Bergen und Strasse' : 'Swiss ferris wheel with central Swiss cross in blurred motion shot with mountains and street foreground'}
                 fill
-                quality={85}
+                loading="lazy"
+                quality={80}
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover rounded-lg shadow-lg"
                 placeholder="blur"

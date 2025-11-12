@@ -74,7 +74,8 @@ export default function RentalSolutionsSelect() {
                     src="/images/collection_v2/toa-heftiba-XFdFdmVYe3Y-unsplash.jpg"
                     alt={locale === 'de' ? 'Paar entspannt sich in hellem Wohnzimmer mit lesender Frau und Mann, der aus dem Fenster schaut' : 'Couple relaxing in bright living room with woman reading book and man gazing out window from couch'}
                     fill
-                    quality={85}
+                    loading="lazy"
+                    quality={80}
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                     placeholder="blur"
@@ -114,7 +115,8 @@ export default function RentalSolutionsSelect() {
                     src="/images/collection_v2/jakub-zerdzicki-bqUZEAeWuok-unsplash.jpg"
                     alt={locale === 'de' ? 'Hand hält Wohnungsschlüssel mit Schlüsselanhänger vor unscharfem Wohnungseingang' : 'Hand holding apartment key with keychain against blurred entrance door background'}
                     fill
-                    quality={85}
+                    loading="lazy"
+                    quality={80}
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                     placeholder="blur"

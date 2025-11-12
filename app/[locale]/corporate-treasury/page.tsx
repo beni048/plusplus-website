@@ -95,7 +95,8 @@ export default function CorporateTreasury() {
                 src="/images/collection_v2/rico-reutimann-d58AtGgPm64-unsplash.jpg"
                 alt={locale === 'de' ? 'Luftaufnahme der Abenddämmerung von Zürich und dem Zürichsee mit dem Fluss Limmat, Bergen in der Ferne und verbleibenden roten Sonnenuntergangslichtern, die eine dramatische Alpenabendlandschaft schaffen.' : 'Aerial twilight view of Zurich and Lake Zurich showing Limmat river, mountains in distance, and remaining red sunset lights creating dramatic alpine evening landscape.'}
                 fill
-                quality={85}
+                loading="lazy"
+                quality={80}
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover rounded-lg shadow-lg"
                 placeholder="blur"
@@ -163,7 +164,8 @@ export default function CorporateTreasury() {
                 src="/images/collection_v2/urs-ruchti-2D6A0587.jpg"
                 alt={locale === 'de' ? 'Zwei professionelle Männer lächeln vor dunklem Hintergrund, linker Mann trägt blauen Anzug mit weissem Hemd, rechter Mann taller im grauen Anzug mit weissem Hemd, die das Unternehmensteam repräsentieren.' : 'Two professional men smiling against dark background, left man wearing blue suit with white shirt, right man taller in grey suit with white shirt representing company team.'}
                 fill
-                quality={85}
+                loading="lazy"
+                quality={80}
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover rounded-lg shadow-lg"
                 placeholder="blur"
