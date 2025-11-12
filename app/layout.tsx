@@ -7,12 +7,16 @@ const outfit = Outfit({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-outfit',
+  preload: true,
+  weight: ['400', '500', '600', '700', '800', '900'],
 });
 
 const mulish = Mulish({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-mulish',
+  preload: true,
+  weight: ['400', '500', '600', '700'],
 });
 
 export const metadata: Metadata = {
