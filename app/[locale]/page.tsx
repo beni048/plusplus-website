@@ -223,7 +223,7 @@ export default function Home() {
             </div>
             
             {/* Partners Collection Right */}
-            {/* Mobile: Horizontal scroll, Desktop: Grid */}
+            {/* Mobile: Horizontal scroll, Desktop: Grid with hover descriptions */}
             <div className="md:grid md:gap-4 md:grid-cols-2 lg:grid-cols-4 hidden md:block">
               {[
                 {
@@ -274,25 +274,32 @@ export default function Home() {
                   href={partner.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="transition-transform hover:scale-105"
+                  className="group"
                 >
-                  <Card className="h-full p-4 border-primary-teal/20 flex flex-col">
-                    <div className="mb-3 flex justify-center items-center h-12">
-                      <Image
-                        src={partner.logo}
-                        alt={partner.name}
-                        width={100}
-                        height={40}
-                        className="h-8 w-auto object-contain"
-                        style={{ width: 'auto', maxHeight: '32px' }}
-                      />
+                  <Card className="h-32 p-4 border-primary-teal/20 flex flex-col items-center justify-center transition-all duration-300 hover:shadow-md hover:border-primary-teal/50 relative overflow-hidden">
+                    {/* Logo - visible by default */}
+                    <div className="flex flex-col items-center justify-center h-full w-full group-hover:opacity-0 transition-opacity duration-300">
+                      <div className="mb-2 flex justify-center items-center">
+                        <Image
+                          src={partner.logo}
+                          alt={partner.name}
+                          width={100}
+                          height={40}
+                          className="h-8 w-auto object-contain"
+                          style={{ width: 'auto', maxHeight: '32px' }}
+                        />
+                      </div>
+                      <h3 className="text-center text-sm font-primary font-bold text-black line-clamp-2">
+                        {partner.name}
+                      </h3>
                     </div>
-                    <h3 className="mb-2 text-center text-sm font-primary font-bold text-black">
-                      {partner.name}
-                    </h3>
-                    <p className="text-xs text-center text-neutral-dark font-secondary flex-grow">
-                      {t(`mainSections.partners.descriptions.${partner.descriptionKey}`)}
-                    </p>
+                    
+                    {/* Description - appears on hover */}
+                    <div className="absolute inset-0 p-4 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-primary-teal/5 to-primary-teal/10">
+                      <p className="text-xs text-center text-neutral-dark font-secondary line-clamp-4">
+                        {t(`mainSections.partners.descriptions.${partner.descriptionKey}`)}
+                      </p>
+                    </div>
                   </Card>
                 </a>
               ))}
