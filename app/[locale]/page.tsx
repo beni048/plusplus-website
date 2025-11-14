@@ -285,8 +285,10 @@ export default function Home() {
                           alt={partner.name}
                           width={100}
                           height={40}
-                          className="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
-                          style={{ width: 'auto', maxHeight: '40px' }}
+                          className={`w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 ${
+                            ['Frankencoin', 'VNX', 'VQF', 'GWP'].includes(partner.name) ? 'h-12' : 'h-10'
+                          }`}
+                          style={{ width: 'auto', maxHeight: ['Frankencoin', 'VNX', 'VQF', 'GWP'].includes(partner.name) ? '48px' : '40px' }}
                         />
                       </div>
                       <h3 className="text-center text-sm font-primary font-bold text-black line-clamp-2">
