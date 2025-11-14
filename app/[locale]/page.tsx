@@ -334,6 +334,8 @@ export default function Home() {
                         height={40}
                         className="h-12 w-auto object-contain grayscale"
                         style={{ width: 'auto', maxHeight: '48px' }}
+                        priority={index < 7}
+                        loading={index < 7 ? "eager" : "lazy"}
                       />
                     </div>
                   ))}
