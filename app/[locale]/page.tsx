@@ -224,7 +224,7 @@ export default function Home() {
             
             {/* Partners Collection Right */}
             {/* Mobile: Horizontal scroll, Desktop: Grid */}
-            <div className="md:grid md:gap-4 md:grid-cols-2 lg:grid-cols-3 hidden md:block">
+            <div className="md:grid md:gap-4 md:grid-cols-2 lg:grid-cols-4 hidden md:block">
               {[
                 {
                   name: "Zinsli",
@@ -239,10 +239,10 @@ export default function Home() {
                   link: "https://frankencoin.com",
                 },
                 {
-                  name: "DFX",
-                  descriptionKey: "dfx",
-                  logo: "/images/partners/dfx.svg",
-                  link: "https://dfx.swiss",
+                  name: "MtPelerin",
+                  descriptionKey: "mtpelerin",
+                  logo: "/images/partners/mtpelerin.png",
+                  link: "https://www.mtpelerin.com",
                 },
                 {
                   name: "VNX",
@@ -262,6 +262,12 @@ export default function Home() {
                   logo: "/images/partners/chain.jpg",
                   link: "https://www.chainsecurity.com",
                 },
+                {
+                  name: "GWP",
+                  descriptionKey: "gwp",
+                  logo: "/images/partners/gwp.jpg",
+                  link: "https://www.gwp.ch",
+                },
               ].map((partner) => (
                 <a
                   key={partner.name}
@@ -271,14 +277,14 @@ export default function Home() {
                   className="transition-transform hover:scale-105"
                 >
                   <Card className="h-full p-4 border-primary-teal/20 flex flex-col">
-                    <div className="mb-3 flex justify-center">
+                    <div className="mb-3 flex justify-center items-center h-12">
                       <Image
                         src={partner.logo}
                         alt={partner.name}
                         width={100}
-                        height={35}
-                        className="h-8 w-auto"
-                        style={{ width: 'auto' }}
+                        height={40}
+                        className="h-8 w-auto object-contain"
+                        style={{ width: 'auto', maxHeight: '32px' }}
                       />
                     </div>
                     <h3 className="mb-2 text-center text-sm font-primary font-bold text-black">
@@ -299,26 +305,28 @@ export default function Home() {
                   {[
                     { name: "Zinsli", logo: "/images/partners/zinsli.svg" },
                     { name: "Frankencoin", logo: "/images/partners/frankencoin.png" },
-                    { name: "DFX", logo: "/images/partners/dfx.svg" },
+                    { name: "MtPelerin", logo: "/images/partners/mtpelerin.png" },
                     { name: "VNX", logo: "/images/partners/vnx.png" },
                     { name: "VQF", logo: "/images/partners/vqf.png" },
                     { name: "ChainSecurity", logo: "/images/partners/chain.jpg" },
+                    { name: "GWP", logo: "/images/partners/gwp.jpg" },
                     // Duplicate for seamless loop
                     { name: "Zinsli", logo: "/images/partners/zinsli.svg" },
                     { name: "Frankencoin", logo: "/images/partners/frankencoin.png" },
-                    { name: "DFX", logo: "/images/partners/dfx.svg" },
+                    { name: "MtPelerin", logo: "/images/partners/mtpelerin.png" },
                     { name: "VNX", logo: "/images/partners/vnx.png" },
                     { name: "VQF", logo: "/images/partners/vqf.png" },
                     { name: "ChainSecurity", logo: "/images/partners/chain.jpg" },
+                    { name: "GWP", logo: "/images/partners/gwp.jpg" },
                   ].map((partner, index) => (
                     <div key={index} className="carousel-item">
                       <Image
                         src={partner.logo}
                         alt={partner.name}
                         width={80}
-                        height={35}
-                        className="h-12 w-auto"
-                        style={{ width: 'auto' }}
+                        height={40}
+                        className="h-12 w-auto object-contain"
+                        style={{ width: 'auto', maxHeight: '48px' }}
                       />
                     </div>
                   ))}
