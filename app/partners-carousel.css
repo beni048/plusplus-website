@@ -18,6 +18,9 @@
   gap: 4rem; /* Double spacing: 16 * 0.25rem = 4rem */
   animation: carousel-scroll 30s linear infinite;
   width: max-content;
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 .carousel-item {
@@ -26,4 +29,5 @@
   align-items: center;
   justify-content: center;
   min-width: max-content;
+  backface-visibility: hidden;
 }
