@@ -285,8 +285,8 @@ export default function Home() {
                           alt={partner.name}
                           width={100}
                           height={40}
-                          className="h-8 w-auto object-contain"
-                          style={{ width: 'auto', maxHeight: '32px' }}
+                          className="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                          style={{ width: 'auto', maxHeight: '40px' }}
                         />
                       </div>
                       <h3 className="text-center text-sm font-primary font-bold text-black line-clamp-2">
@@ -332,7 +332,7 @@ export default function Home() {
                         alt={partner.name}
                         width={80}
                         height={40}
-                        className="h-12 w-auto object-contain"
+                        className="h-12 w-auto object-contain grayscale"
                         style={{ width: 'auto', maxHeight: '48px' }}
                       />
                     </div>
