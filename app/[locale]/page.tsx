@@ -296,7 +296,7 @@ export default function Home() {
                     
                     {/* Description - appears on hover */}
                     <div className="absolute inset-0 p-4 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-primary-teal/5 to-primary-teal/10">
-                      <p className="text-xs text-center text-neutral-dark font-secondary line-clamp-4">
+                      <p className="text-xs text-center text-neutral-dark font-secondary line-clamp-3">
                         {t(`mainSections.partners.descriptions.${partner.descriptionKey}`)}
                       </p>
                     </div>
