@@ -69,88 +69,10 @@ export default function RentalSolutionsLandlord() {
         </div>
       </div>
 
-      {/* Step-by-Step Guide Section */}
-      <section className="bg-neutral-light pb-24">
-        <div className="container mx-auto px-4">
-          <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
-            {/* Image Left */}
-            <div className="relative aspect-[4/3] w-full order-1 lg:order-1">
-              <Image
-                src="/images/collection_v2/chris-henry-CVzlQGDMOJY-unsplash.jpg"
-                alt={locale === 'de' ? 'Ich-Perspektive einer Person in schwarzer Hose und Sneakern auf hölzerner Brücke mit Metallgeländern' : 'First-person perspective of person sitting on wooden bridge in black pants and sneakers with metal rails'}
-                fill
-                loading="lazy"
-                quality={80}
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover rounded-lg shadow-lg"
-                placeholder="blur"
-                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-              />
-              <div className="absolute bottom-1 right-1 text-[10px] text-white/40 font-secondary">
-                Chris Henry
-              </div>
-            </div>
-            {/* Button Mobile */}
-            <div className="order-2 lg:hidden">
-              <Button
-                onClick={() => window.open(zinsliLoginUrl, '_blank')}
-                className="bg-accent-red text-white px-6 py-3 text-lg hover:bg-accent-red/90 group transition-all duration-300 font-primary w-full"
-              >
-                {t('rentalSolutionsLandlord.stepByStep.cta')}
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Button>
-            </div>
-            {/* Text Right */}
-            <div className="space-y-6 order-3 lg:order-2">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-primary font-medium text-black">
-                {t('rentalSolutionsLandlord.stepByStep.title')}
-              </h2>
-              <p className="text-lg leading-relaxed text-neutral-dark font-secondary">
-                {t('rentalSolutionsLandlord.stepByStep.intro')}
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <div className="bg-accent-red text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 mt-1 text-sm font-bold flex-shrink-0">1</div>
-                  <div>
-                    <h3 className="font-semibold text-black mb-1">{t('rentalSolutionsLandlord.stepByStep.steps.1.title')}</h3>
-                    <p className="text-neutral-dark text-sm">{t('rentalSolutionsLandlord.stepByStep.steps.1.description')}</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="bg-accent-red text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 mt-1 text-sm font-bold flex-shrink-0">2</div>
-                  <div>
-                    <h3 className="font-semibold text-black mb-1">{t('rentalSolutionsLandlord.stepByStep.steps.2.title')}</h3>
-                    <p className="text-neutral-dark text-sm">{t('rentalSolutionsLandlord.stepByStep.steps.2.description')}</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="bg-accent-red text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 mt-1 text-sm font-bold flex-shrink-0">3</div>
-                  <div>
-                    <h3 className="font-semibold text-black mb-1">{t('rentalSolutionsLandlord.stepByStep.steps.3.title')}</h3>
-                    <p className="text-neutral-dark text-sm">{t('rentalSolutionsLandlord.stepByStep.steps.3.description')}</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="bg-accent-red text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 mt-1 text-sm font-bold flex-shrink-0">4</div>
-                  <div>
-                    <h3 className="font-semibold text-black mb-1">{t('rentalSolutionsLandlord.stepByStep.steps.4.title')}</h3>
-                    <p className="text-neutral-dark text-sm">{t('rentalSolutionsLandlord.stepByStep.steps.4.description')}</p>
-                  </div>
-                </div>
-              </div>
-              <div className="pt-6 hidden lg:block">
-                <Button
-                  onClick={() => window.open(zinsliLoginUrl, '_blank')}
-                  className="bg-accent-red text-white px-6 py-3 text-lg hover:bg-accent-red/90 group transition-all duration-300 font-primary"
-                >
-                  {t('rentalSolutionsLandlord.stepByStep.cta')}
-                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
+      {/* DISABLED: Step-by-Step Guide Section - uncomment to re-enable */}
+
+
 
       {/* Advantages Section */}
       <section className="bg-neutral-white py-24">

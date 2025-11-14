@@ -299,6 +299,7 @@ Freundliche Grüsse,
         </div>
       </section>
 
+
       {/* Bitcoin Rental Deposit Product Section */}
       <section className="bg-neutral-light py-24">
         <div className="container mx-auto px-4">
@@ -357,7 +358,6 @@ Freundliche Grüsse,
                   <span className="text-accent-red mr-3 mt-1">•</span>
                   <span>{t('rentalSolutionsTenant.bitcoin.benefits.accessibility')}</span>
                 </li>
-                {/* Removed extra bullet point for Bitcoin */}
               </ul>
               {/* Button Desktop */}
               <div className="pt-6 hidden lg:block">
@@ -377,50 +377,9 @@ Freundliche Grüsse,
         </div>
       </section>
 
-      {/* Email Template Section */}
-      <section id="email-template" className="bg-neutral-white py-24">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl lg:text-3xl font-semibold text-black mb-6 text-center">
-              {t('rentalSolutionsTenant.emailTemplate.title')}
-            </h2>
-            <p className="text-lg text-neutral-dark mb-8 text-center">
-              {t('rentalSolutionsTenant.emailTemplate.description')}
-            </p>
-            
-            {/* Copy Button Above Email */}
-            <div className="flex justify-end mb-3">
-              <button
-                onClick={copyToClipboard}
-                className="bg-accent-red text-white px-4 py-2 rounded-lg text-sm hover:bg-accent-red/90 transition-colors"
-              >
-                {emailCopied ? t('rentalSolutionsTenant.emailTemplate.copied') : t('rentalSolutionsTenant.emailTemplate.copy')}
-              </button>
-            </div>
-            
-            {/* Email Content Box */}
-            <div className="bg-white border-2 border-gray-200 rounded-lg p-6 mb-6">
-              <div className="text-sm text-neutral-dark font-mono leading-relaxed whitespace-pre-wrap">
-                {renderEmailWithLinks(emailTemplate)}
-              </div>
-            </div>
 
-            <div className="text-center">
-              <a
-                href="https://zinsli.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-accent-red text-white px-8 py-4 text-lg shadow-lg hover:bg-accent-red/90 transition-all duration-300 rounded-lg inline-block font-medium"
-              >
-                {t('rentalSolutionsTenant.emailTemplate.button')}
-              </a>
-              <p className="text-sm text-neutral-dark mt-4">
-                {t('rentalSolutionsTenant.emailTemplate.subtitle')}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+
+      {/* DISABLED: Email Template Section - uncomment to re-enable */}
     </main>
   );
 }
