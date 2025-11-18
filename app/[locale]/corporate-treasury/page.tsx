@@ -86,7 +86,7 @@ export default function CorporateTreasury() {
       </div>
       
       {/* Frankencoin Product Section */}
-      <section className="bg-neutral-white pb-24">
+      <section className="bg-neutral-light pb-24">
         <div className="container mx-auto px-4">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
             {/* Image Right */}
@@ -155,7 +155,7 @@ export default function CorporateTreasury() {
       </section>
 
       {/* Plusplus Trust Section */}
-      <section className="bg-neutral-light py-24">
+      <section className="bg-neutral-white py-24">
         <div className="container mx-auto px-4">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
             {/* Image Left */}
@@ -245,7 +245,7 @@ export default function CorporateTreasury() {
         </div>
       </section>
 
-      {/* DISABLED: Contact Section - uncomment to re-enable
+      {/* Contact Section */}
       <section className="bg-neutral-light py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
@@ -269,7 +269,6 @@ export default function CorporateTreasury() {
           </div>
         </div>
       </section>
-      */}
     </main>
   );
 }
