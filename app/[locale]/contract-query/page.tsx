@@ -1,75 +1,182 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 import { useZCHFDepositDetails } from '@/hooks/use-zchf-deposit';
 import { useWBTCDepositValue } from '@/hooks/use-wbtc-deposit';
+import { useZCHFDepositDate } from '@/hooks/use-deposit-date';
+import { useWBTCDepositDate } from '@/hooks/use-deposit-date';
 import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Badge } from '@/components/ui/badge';
-import { formatUnits, isAddress } from 'viem';
 import { Loader2, AlertCircle, CheckCircle } from 'lucide-react';
+import { convertCustomerNumber, isValidCustomerNumber } from '@/lib/utils/customer-number';
+import { getCachedBitcoinPrice, convertSatoshisToCHF, formatBitcoinPrice } from '@/lib/bitcoin-price';
 
 export default function ContractQueryPage() {
-  const [zchfCollateralAddress, setZchfCollateralAddress] = useState<string>('');
-  const [wbtcAmount, setWbtcAmount] = useState<string>('');
+  const t = useTranslations();
 
-  // Query hooks
+  const [zchfCustomerNumber, setZchfCustomerNumber] = useState<string>('');
+  const [wbtcCustomerNumber, setWbtcCustomerNumber] = useState<string>('');
+  const [zchfAddress, setZchfAddress] = useState<string>('');
+  const [wbtcQueryAmount, setWbtcQueryAmount] = useState<string>('');
+  const [zchfConversionError, setZchfConversionError] = useState<string>('');
+  const [wbtcConversionError, setWbtcConversionError] = useState<string>('');
+  const [mounted, setMounted] = useState(false);
+  const [bitcoinPrice, setBitcoinPrice] = useState<number>(70337); // Default current price in CHF
+
+  // Ensure component is mounted before rendering Web3 content
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setMounted(true);
+  }, []);
+
+  // Load Bitcoin price asynchronously
+  useEffect(() => {
+    const loadPrice = async () => {
+      const priceData = await getCachedBitcoinPrice();
+      setBitcoinPrice(priceData.priceInCHF);
+    };
+    loadPrice();
+  }, []);
+
+  // Query hooks - only execute after mount to avoid hydration issues
   const zchfQuery = useZCHFDepositDetails(
-    isAddress(zchfCollateralAddress) ? zchfCollateralAddress : undefined
+    (mounted && zchfAddress && zchfAddress.startsWith('0x')) ? (zchfAddress as `0x${string}`) : undefined
   );
-  const wbtcQuery = useWBTCDepositValue(wbtcAmount || undefined);
+  const wbtcQuery = useWBTCDepositValue(
+    (mounted && wbtcQueryAmount && wbtcQueryAmount.startsWith('0x')) ? (wbtcQueryAmount as `0x${string}`) : undefined
+  );
 
-  const handleZchfAddressChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setZchfCollateralAddress(e.target.value);
+  // Fetch deposit dates
+  const zchfDateQuery = useZCHFDepositDate(
+    (mounted && zchfAddress && zchfAddress.startsWith('0x')) ? (zchfAddress as `0x${string}`) : undefined
+  );
+  const wbtcDateQuery = useWBTCDepositDate(
+    (mounted && wbtcQueryAmount && wbtcQueryAmount.startsWith('0x')) ? (wbtcQueryAmount as `0x${string}`) : undefined,
+    wbtcQuery.valueInSatoshis,
+    bitcoinPrice
+  );
+  // Effect for ZCHF conversion
+  useEffect(() => {
+    if (zchfCustomerNumber && isValidCustomerNumber(zchfCustomerNumber)) {
+      try {
+        const converted = convertCustomerNumber(zchfCustomerNumber, 'stablecoin');
+        // eslint-disable-next-line react-hooks/set-state-in-effect
+        setZchfAddress(converted);
+         
+        setZchfConversionError('');
+      } catch (error) {
+         
+        setZchfConversionError(error instanceof Error ? error.message : 'Conversion error');
+         
+        setZchfAddress('');
+      }
+    } else {
+       
+      setZchfAddress('');
+       
+      setZchfConversionError('');
+    }
+  }, [zchfCustomerNumber]);
+
+  // Effect for WBTC conversion
+  useEffect(() => {
+    if (wbtcCustomerNumber && isValidCustomerNumber(wbtcCustomerNumber)) {
+      try {
+        // Use same keccak256 conversion as stablecoin
+        const converted = convertCustomerNumber(wbtcCustomerNumber, 'stablecoin');
+        // eslint-disable-next-line react-hooks/set-state-in-effect
+        setWbtcQueryAmount(converted);
+         
+        setWbtcConversionError('');
+      } catch (error) {
+         
+        setWbtcConversionError(error instanceof Error ? error.message : 'Conversion error');
+         
+        setWbtcQueryAmount('');
+      }
+    } else {
+       
+      setWbtcQueryAmount('');
+       
+      setWbtcConversionError('');
+    }
+  }, [wbtcCustomerNumber]);
+
+  // Fetch fresh Bitcoin price when WBTC query result arrives
+  useEffect(() => {
+    if (wbtcQuery.valueInSatoshis !== undefined && !wbtcQuery.isLoading) {
+      // Fetch current Bitcoin price at the time of receiving the result
+      const fetchFreshPrice = async () => {
+        const priceData = await getCachedBitcoinPrice();
+        setBitcoinPrice(priceData.priceInCHF);
+      };
+      fetchFreshPrice();
+    }
+  }, [wbtcQuery.valueInSatoshis, wbtcQuery.isLoading]);
+
+  const handleZchfCustomerNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setZchfCustomerNumber(e.target.value);
   };
 
-  const handleWbtcAmountChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setWbtcAmount(e.target.value);
+  const handleWbtcCustomerNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setWbtcCustomerNumber(e.target.value);
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-neutral-light to-neutral-white py-12 px-4">
-      <div className="container mx-auto max-w-4xl">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-primary font-bold text-black mb-4">
-            Contract Query Tools
-          </h1>
-          <p className="text-lg text-neutral-dark font-secondary">
-            Query ZCHF and WBTC manager contracts for deposit values and details
-          </p>
+    <main className="min-h-screen bg-neutral-light pt-32">
+      <div className="container mx-auto px-4">
+        <div className="max-w-6xl mx-auto">
+          {/* Header Section */}
+          <div className="text-center mb-8 sm:mb-16">
+            <h1 className="mb-4 sm:mb-12 text-center text-3xl sm:text-5xl lg:text-6xl font-medium text-black px-4">
+              {t('contractQuery.title')}
+            </h1>
+            <p className="text-lg sm:text-xl font-secondary text-neutral-dark max-w-3xl mx-auto leading-relaxed px-4">
+              {t('contractQuery.description')}
+            </p>
+          </div>
         </div>
+      </div>
 
-        {/* Tabs */}
-        <Tabs defaultValue="zchf" className="w-full">
-          <TabsList className="grid w-full grid-cols-2 mb-8">
-            <TabsTrigger value="zchf" className="text-base">ZCHF Manager</TabsTrigger>
-            <TabsTrigger value="wbtc" className="text-base">WBTC Manager</TabsTrigger>
-          </TabsList>
+      <section className="bg-neutral-light pb-24">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            {/* Tabs */}
+            <Tabs defaultValue="zchf" className="w-full">
+              <TabsList className="grid w-full grid-cols-2 mb-8">
+                <TabsTrigger value="zchf" className="text-base">{t('contractQuery.stablecoin.label')}</TabsTrigger>
+                <TabsTrigger value="wbtc" className="text-base">{t('contractQuery.bitcoin.label')}</TabsTrigger>
+              </TabsList>
 
-          {/* ZCHF Tab */}
-          <TabsContent value="zchf">
+              {/* ZCHF Tab */}
+              <TabsContent value="zchf">
             <Card className="p-8 border-primary-teal/20 shadow-lg">
               <div className="space-y-6">
                 {/* Input Section */}
                 <div>
                   <label className="block text-sm font-medium text-black mb-3 font-secondary">
-                    Collateral Token Address
+                    {t('contractQuery.stablecoin.inputLabel')}
                   </label>
                   <div className="flex gap-2">
                     <Input
                       type="text"
-                      placeholder="0x..."
-                      value={zchfCollateralAddress}
-                      onChange={handleZchfAddressChange}
+                      placeholder="e.g., xK9mNp2vQr5jLs8T"
+                      value={zchfCustomerNumber}
+                      onChange={handleZchfCustomerNumberChange}
                       className="flex-1 font-mono text-sm"
                     />
                   </div>
                   <p className="text-xs text-neutral-dark mt-2 font-secondary">
-                    Enter the Ethereum address of the collateral token to query deposit details
+                    {t('contractQuery.stablecoin.inputDescription')}
                   </p>
+                  {zchfConversionError && (
+                    <div className="text-xs text-red-600 mt-2 font-secondary">
+                      {zchfConversionError}
+                    </div>
+                  )}
+
                 </div>
 
                 {/* Results Section */}
@@ -83,74 +190,118 @@ export default function ContractQueryPage() {
                 {zchfQuery.isError && (
                   <div className="flex items-start gap-3 p-4 bg-red-50 border border-red-200 rounded-lg">
                     <AlertCircle className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
-                    <div>
+                    <div className="flex-1">
                       <p className="font-medium text-red-900 font-secondary">Error</p>
-                      <p className="text-sm text-red-800 font-secondary">
+                      <p className="text-sm text-red-800 font-secondary mt-1">
                         {zchfQuery.error?.message || 'Failed to fetch deposit details'}
                       </p>
+                      {zchfQuery.error && typeof zchfQuery.error === 'object' && 'cause' in zchfQuery.error && (
+                        <p className="text-xs text-red-700 font-mono mt-2 break-all">
+                          {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+                          Details: {String((zchfQuery.error as any).cause)}
+                        </p>
+                      )}
                     </div>
                   </div>
                 )}
 
                 {zchfQuery.depositDetails && !zchfQuery.isLoading && (
-                  <div className="space-y-4">
+                  <div className="space-y-6">
                     <div className="flex items-center gap-2 mb-4">
                       <CheckCircle className="w-5 h-5 text-green-500" />
                       <span className="font-medium text-green-700 font-secondary">Query Successful</span>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                      {/* Deposit Amount */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                      {/* 1. Deposit Date */}
                       <Card className="p-4 bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200">
                         <p className="text-xs font-semibold text-blue-900 uppercase tracking-wider mb-2 font-secondary">
-                          Deposit Amount
+                          Deposit Date
+                        </p>
+                        {zchfDateQuery.isLoading ? (
+                          <div className="flex items-center gap-2">
+                            <Loader2 className="w-4 h-4 animate-spin text-blue-600" />
+                            <span className="text-sm text-blue-700 font-secondary">Loading...</span>
+                          </div>
+                        ) : zchfDateQuery.depositStats?.depositDate ? (
+                          <p className="text-2xl font-bold text-blue-900 font-mono">
+                            {zchfDateQuery.depositStats.depositDate.formattedDate}
+                          </p>
+                        ) : (
+                          <p className="text-sm text-blue-700 font-secondary">Not available</p>
+                        )}
+                      </Card>
+
+                      {/* 2. Principal (Initial Amount) */}
+                      <Card className="p-4 bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200">
+                        <p className="text-xs font-semibold text-blue-900 uppercase tracking-wider mb-2 font-secondary">
+                          Principal
                         </p>
                         <p className="text-2xl font-bold text-blue-900 font-mono">
-                          {formatUnits(zchfQuery.depositDetails.depositAmount, 18).slice(0, 12)}
+                          {(Number(zchfQuery.depositDetails.initialAmount) / 10 ** 18).toLocaleString('de-CH', { maximumFractionDigits: 2 })}
                         </p>
-                        <Badge className="mt-2 bg-blue-200 text-blue-900 font-secondary">Tokens</Badge>
+                        <p className="text-xs text-blue-700 mt-1 font-secondary">CHF</p>
                       </Card>
 
-                      {/* Value in CHF */}
-                      <Card className="p-4 bg-gradient-to-br from-green-50 to-green-100/50 border-green-200">
-                        <p className="text-xs font-semibold text-green-900 uppercase tracking-wider mb-2 font-secondary">
-                          Value in CHF
+                      {/* 3. Time Since Deposit */}
+                      <Card className="p-4 bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200">
+                        <p className="text-xs font-semibold text-blue-900 uppercase tracking-wider mb-2 font-secondary">
+                          Time Since Deposit
                         </p>
-                        <p className="text-2xl font-bold text-green-900 font-mono">
-                          {formatUnits(zchfQuery.depositDetails.valueInCHF, 18).slice(0, 12)}
-                        </p>
-                        <Badge className="mt-2 bg-green-200 text-green-900 font-secondary">CHF</Badge>
+                        {zchfDateQuery.isLoading ? (
+                          <div className="flex items-center gap-2">
+                            <Loader2 className="w-4 h-4 animate-spin text-blue-600" />
+                            <span className="text-sm text-blue-700 font-secondary">Loading...</span>
+                          </div>
+                        ) : zchfDateQuery.depositStats ? (
+                          <p className="text-2xl font-bold text-blue-900 font-mono">
+                            {zchfDateQuery.depositStats.formattedTimeSinceDeposit}
+                          </p>
+                        ) : (
+                          <p className="text-sm text-blue-700 font-secondary">Not available</p>
+                        )}
                       </Card>
 
-                      {/* Interest Rate */}
-                      <Card className="p-4 bg-gradient-to-br from-purple-50 to-purple-100/50 border-purple-200">
-                        <p className="text-xs font-semibold text-purple-900 uppercase tracking-wider mb-2 font-secondary">
-                          Interest Rate
+                      {/* 4. Current Value */}
+                      <Card className="p-4 bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200">
+                        <p className="text-xs font-semibold text-blue-900 uppercase tracking-wider mb-2 font-secondary">
+                          Current Value
                         </p>
-                        <p className="text-2xl font-bold text-purple-900 font-mono">
-                          {(Number(formatUnits(zchfQuery.depositDetails.interestRate, 18)) * 100).toFixed(2)}%
+                        <p className="text-2xl font-bold text-blue-900 font-mono">
+                          {((Number(zchfQuery.depositDetails.initialAmount) + Number(zchfQuery.depositDetails.netInterest)) / 10 ** 18).toLocaleString('de-CH', { maximumFractionDigits: 2 })}
                         </p>
-                        <Badge className="mt-2 bg-purple-200 text-purple-900 font-secondary">Rate</Badge>
+                        <p className="text-xs text-blue-700 mt-1 font-secondary">CHF</p>
                       </Card>
-                    </div>
 
-                    {/* Raw Data */}
-                    <div className="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
-                      <p className="text-xs font-semibold text-gray-700 uppercase tracking-wider mb-3 font-secondary">
-                        Raw Data
-                      </p>
-                      <div className="space-y-2 font-mono text-xs text-gray-600">
-                        <p><span className="font-semibold">depositAmount:</span> {zchfQuery.depositDetails.depositAmount.toString()}</p>
-                        <p><span className="font-semibold">valueInCHF:</span> {zchfQuery.depositDetails.valueInCHF.toString()}</p>
-                        <p><span className="font-semibold">interestRate:</span> {zchfQuery.depositDetails.interestRate.toString()}</p>
-                      </div>
+                      {/* 5. Gain Since Deposit */}
+                      <Card className={`p-4 bg-gradient-to-br border-2 ${
+                        Number(zchfQuery.depositDetails.netInterest) / 10 ** 18 >= 0
+                          ? 'from-emerald-50 to-emerald-100/50 border-emerald-300'
+                          : 'from-red-50 to-red-100/50 border-red-300'
+                      }`}>
+                        <p className="text-xs font-semibold uppercase tracking-wider mb-2 font-secondary" style={{
+                          color: Number(zchfQuery.depositDetails.netInterest) / 10 ** 18 >= 0 ? '#065f46' : '#7f1d1d'
+                        }}>
+                          Gain Since Deposit
+                        </p>
+                        <p className="text-2xl font-bold font-mono" style={{
+                          color: Number(zchfQuery.depositDetails.netInterest) / 10 ** 18 >= 0 ? '#065f46' : '#7f1d1d'
+                        }}>
+                          {Number(zchfQuery.depositDetails.netInterest) / 10 ** 18 >= 0 ? '+' : ''}{((Number(zchfQuery.depositDetails.netInterest)) / 10 ** 18).toLocaleString('de-CH', { maximumFractionDigits: 2 })}
+                        </p>
+                        <p className="text-xs mt-1 font-secondary" style={{
+                          color: Number(zchfQuery.depositDetails.netInterest) / 10 ** 18 >= 0 ? '#065f46' : '#7f1d1d'
+                        }}>
+                          CHF
+                        </p>
+                      </Card>
                     </div>
                   </div>
                 )}
 
-                {!zchfQuery.isLoading && !zchfQuery.isError && !zchfQuery.depositDetails && zchfCollateralAddress && (
+                {!zchfQuery.isLoading && !zchfQuery.isError && !zchfQuery.depositDetails && zchfAddress && (
                   <div className="flex items-center justify-center p-8 text-neutral-dark">
-                    <span className="font-secondary">Enter a valid Ethereum address to query</span>
+                    <span className="font-secondary">No deposit details found for this address</span>
                   </div>
                 )}
               </div>
@@ -164,32 +315,33 @@ export default function ContractQueryPage() {
                 {/* Input Section */}
                 <div>
                   <label className="block text-sm font-medium text-black mb-3 font-secondary">
-                    WBTC Amount (in BTC)
+                    {t('contractQuery.bitcoin.inputLabel')}
                   </label>
                   <div className="flex gap-2">
                     <Input
-                      type="number"
-                      placeholder="0.5"
-                      value={wbtcAmount}
-                      onChange={handleWbtcAmountChange}
-                      step="0.00000001"
-                      min="0"
-                      className="flex-1"
+                      type="text"
+                      placeholder="e.g., aB7dGh3kMq1Uw9Fy"
+                      value={wbtcCustomerNumber}
+                      onChange={handleWbtcCustomerNumberChange}
+                      className="flex-1 font-mono text-sm"
                     />
-                    <span className="flex items-center px-4 py-2 bg-gray-100 text-gray-700 font-mono font-medium rounded-md">
-                      BTC
-                    </span>
                   </div>
                   <p className="text-xs text-neutral-dark mt-2 font-secondary">
-                    Enter the WBTC amount (max 8 decimal places) to get the equivalent CHF value
+                    {t('contractQuery.bitcoin.inputDescription')}
                   </p>
+                  {wbtcConversionError && (
+                    <div className="text-xs text-red-600 mt-2 font-secondary">
+                      {wbtcConversionError}
+                    </div>
+                  )}
+
                 </div>
 
                 {/* Results Section */}
                 {wbtcQuery.isLoading && (
                   <div className="flex items-center justify-center p-8">
                     <Loader2 className="animate-spin w-6 h-6 text-primary-teal mr-3" />
-                    <span className="text-neutral-dark font-secondary">Converting WBTC to CHF...</span>
+                    <span className="text-neutral-dark font-secondary">Loading deposit details...</span>
                   </div>
                 )}
 
@@ -205,63 +357,149 @@ export default function ContractQueryPage() {
                   </div>
                 )}
 
-                {wbtcQuery.valueInCHF !== undefined && !wbtcQuery.isLoading && (
-                  <div className="space-y-4">
+                {wbtcQuery.valueInSatoshis !== undefined && !wbtcQuery.isLoading && (
+                  <div className="space-y-6">
                     <div className="flex items-center gap-2 mb-4">
                       <CheckCircle className="w-5 h-5 text-green-500" />
-                      <span className="font-medium text-green-700 font-secondary">Conversion Successful</span>
+                      <span className="font-medium text-green-700 font-secondary">Query Successful</span>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {/* WBTC Amount */}
-                      <Card className="p-4 bg-gradient-to-br from-orange-50 to-orange-100/50 border-orange-200">
-                        <p className="text-xs font-semibold text-orange-900 uppercase tracking-wider mb-2 font-secondary">
-                          WBTC Amount
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                      {/* 1. Deposit Date */}
+                      <Card className="p-4 bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200">
+                        <p className="text-xs font-semibold text-blue-900 uppercase tracking-wider mb-2 font-secondary">
+                          Deposit Date
                         </p>
-                        <p className="text-2xl font-bold text-orange-900 font-mono">
-                          {wbtcAmount || '0'}
-                        </p>
-                        <Badge className="mt-2 bg-orange-200 text-orange-900 font-secondary">BTC</Badge>
+                        {wbtcDateQuery.isLoading ? (
+                          <div className="flex items-center gap-2">
+                            <Loader2 className="w-4 h-4 animate-spin text-blue-600" />
+                            <span className="text-sm text-blue-700 font-secondary">Loading...</span>
+                          </div>
+                        ) : wbtcDateQuery.depositStats?.depositDate ? (
+                          <p className="text-2xl font-bold text-blue-900 font-mono">
+                            {wbtcDateQuery.depositStats.depositDate.formattedDate}
+                          </p>
+                        ) : (
+                          <p className="text-sm text-blue-700 font-secondary">Not available</p>
+                        )}
                       </Card>
 
-                      {/* Value in CHF */}
-                      <Card className="p-4 bg-gradient-to-br from-green-50 to-green-100/50 border-green-200">
-                        <p className="text-xs font-semibold text-green-900 uppercase tracking-wider mb-2 font-secondary">
-                          Value in CHF
+                      {/* 2. Principal (Value at Deposit in CHF) */}
+                      <Card className="p-4 bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200">
+                        <p className="text-xs font-semibold text-blue-900 uppercase tracking-wider mb-2 font-secondary">
+                          Principal
                         </p>
-                        <p className="text-2xl font-bold text-green-900 font-mono">
-                          {formatUnits(wbtcQuery.valueInCHF, 18).slice(0, 12)}
+                        {wbtcDateQuery.depositStats ? (
+                          <>
+                            <p className="text-2xl font-bold text-blue-900 font-mono">
+                              {Math.round(wbtcDateQuery.depositStats.valueAtCreation).toLocaleString('de-CH')}
+                            </p>
+                            <p className="text-xs text-blue-700 mt-1 font-secondary">CHF</p>
+                          </>
+                        ) : (
+                          <p className="text-sm text-blue-700 font-secondary">Loading...</p>
+                        )}
+                      </Card>
+
+                      {/* 3. Time Since Deposit */}
+                      <Card className="p-4 bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200">
+                        <p className="text-xs font-semibold text-blue-900 uppercase tracking-wider mb-2 font-secondary">
+                          Time Since Deposit
                         </p>
-                        <Badge className="mt-2 bg-green-200 text-green-900 font-secondary">CHF</Badge>
+                        {wbtcDateQuery.isLoading ? (
+                          <div className="flex items-center gap-2">
+                            <Loader2 className="w-4 h-4 animate-spin text-blue-600" />
+                            <span className="text-sm text-blue-700 font-secondary">Loading...</span>
+                          </div>
+                        ) : wbtcDateQuery.depositStats ? (
+                          <p className="text-2xl font-bold text-blue-900 font-mono">
+                            {wbtcDateQuery.depositStats.formattedTimeSinceDeposit}
+                          </p>
+                        ) : (
+                          <p className="text-sm text-blue-700 font-secondary">Not available</p>
+                        )}
+                      </Card>
+
+                      {/* 4. Current Value */}
+                      <Card className="p-4 bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200">
+                        <p className="text-xs font-semibold text-blue-900 uppercase tracking-wider mb-2 font-secondary">
+                          Current Value
+                        </p>
+                        <p className="text-2xl font-bold text-blue-900 font-mono">
+                          {Math.round(convertSatoshisToCHF(wbtcQuery.valueInSatoshis, bitcoinPrice)).toLocaleString('de-CH')}
+                        </p>
+                        <p className="text-xs text-blue-700 mt-1 font-secondary">CHF</p>
+                      </Card>
+
+                      {/* 5. Bitcoin Amount */}
+                      <Card className="p-4 bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200">
+                        <p className="text-xs font-semibold text-blue-900 uppercase tracking-wider mb-2 font-secondary">
+                          Bitcoin Amount
+                        </p>
+                        <p className="text-2xl font-bold text-blue-900 font-mono">
+                          {(Number(wbtcQuery.valueInSatoshis) / 10 ** 8).toLocaleString('de-CH', { maximumFractionDigits: 8 })} BTC
+                        </p>
+                        <p className="text-xs text-blue-700 mt-1 font-secondary">
+                          @ {formatBitcoinPrice(bitcoinPrice)} CHF
+                        </p>
+                      </Card>
+
+                      {/* 6. Gain Since Deposit */}
+                      <Card className={`p-4 bg-gradient-to-br border-2 ${
+                        wbtcDateQuery.depositStats && wbtcDateQuery.depositStats.valueGain >= 0
+                          ? 'from-emerald-50 to-emerald-100/50 border-emerald-300'
+                          : 'from-red-50 to-red-100/50 border-red-300'
+                      }`}>
+                        <p className="text-xs font-semibold uppercase tracking-wider mb-2 font-secondary" style={{
+                          color: wbtcDateQuery.depositStats && wbtcDateQuery.depositStats.valueGain >= 0 ? '#065f46' : '#7f1d1d'
+                        }}>
+                          Gain Since Deposit
+                        </p>
+                        {wbtcDateQuery.depositStats ? (
+                          <>
+                            <p className="text-2xl font-bold font-mono" style={{
+                              color: wbtcDateQuery.depositStats.valueGain >= 0 ? '#065f46' : '#7f1d1d'
+                            }}>
+                              {wbtcDateQuery.depositStats.valueGain >= 0 ? '+' : ''}{Math.round(wbtcDateQuery.depositStats.valueGain).toLocaleString('de-CH')}
+                            </p>
+                            <p className="text-xs mt-1 font-secondary" style={{
+                              color: wbtcDateQuery.depositStats.valueGain >= 0 ? '#065f46' : '#7f1d1d'
+                            }}>
+                              CHF ({wbtcDateQuery.depositStats.percentageGain >= 0 ? '+' : ''}{wbtcDateQuery.depositStats.percentageGain.toFixed(2)}%)
+                            </p>
+                          </>
+                        ) : (
+                          <p className="text-sm text-red-700 font-secondary">Loading...</p>
+                        )}
                       </Card>
                     </div>
 
-                    {/* Raw Data */}
-                    <div className="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
-                      <p className="text-xs font-semibold text-gray-700 uppercase tracking-wider mb-3 font-secondary">
-                        Raw Data
+                    {/* CoinGecko Attribution */}
+                    <div className="mt-6 p-4 bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-lg">
+                      <p className="text-xs text-amber-900 font-secondary">
+                        <span className="font-semibold">Data Sources:</span> Bitcoin price data provided by <span className="font-semibold">CoinGecko</span>. Historical prices used for deposit value calculations.
                       </p>
-                      <div className="space-y-2 font-mono text-xs text-gray-600">
-                        <p><span className="font-semibold">wbtcAmount:</span> {wbtcAmount} BTC</p>
-                        <p><span className="font-semibold">valueInCHF:</span> {wbtcQuery.valueInCHF.toString()}</p>
-                        <p><span className="font-semibold">valueInCHF (formatted):</span> {formatUnits(wbtcQuery.valueInCHF, 18)}</p>
-                      </div>
                     </div>
                   </div>
                 )}
 
-                {!wbtcQuery.isLoading && !wbtcQuery.isError && !wbtcQuery.valueInCHF && wbtcAmount && (
+                {!wbtcQuery.isLoading && !wbtcQuery.isError && wbtcQuery.valueInSatoshis === undefined && wbtcQueryAmount && (
                   <div className="flex items-center justify-center p-8 text-neutral-dark">
-                    <span className="font-secondary">Enter a valid WBTC amount to query</span>
+                    <span className="font-secondary">No deposit value found for this address</span>
                   </div>
                 )}
               </div>
             </Card>
-          </TabsContent>
-        </Tabs>
+            </TabsContent>
+            </Tabs>
+          </div>
+        </div>
+      </section>
 
-        {/* Contract Info */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <section className="bg-neutral-white py-24">
+        <div className="container mx-auto px-4">
+          {/* Contract Info */}
+          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
           <Card className="p-6 border-primary-teal/20">
             <h3 className="text-lg font-semibold text-black mb-3 font-primary">ZCHF Manager</h3>
             <div className="space-y-2 text-sm font-secondary text-neutral-dark">
@@ -300,7 +538,8 @@ export default function ContractQueryPage() {
             </div>
           </Card>
         </div>
-      </div>
+        </div>
+      </section>
     </main>
   );
 }

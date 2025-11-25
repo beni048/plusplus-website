@@ -48,6 +48,20 @@
       "subtitle": "Jetzt Termin für eine 30-minütige Beratung buchen."
     }
   },
+  "contractQuery": {
+    "title": "Prüfen Sie Ihren Mietkontostand",
+    "description": "Fragen Sie ZCHF- und WBTC-Manager-Verträge für Einzahlungswerte und Details ab",
+    "stablecoin": {
+      "label": "Stablecoin",
+      "inputLabel": "Plusplus oder Zinsli Kundennummer",
+      "inputDescription": "Geben Sie die Kundennummer ein, um die Entwicklung Ihrer Stablecoin-Kaution abzufragen"
+    },
+    "bitcoin": {
+      "label": "Bitcoin",
+      "inputLabel": "Plusplus oder Zinsli Kundennummer",
+      "inputDescription": "Geben Sie die Kundennummer ein, um die Entwicklung Ihrer Bitcoin-Kaution abzufragen"
+    }
+  },
   "contact": {
     "title": "Kontakt aufnehmen",
     "form": {
@@ -68,6 +82,7 @@
     "privacySettings": "Privatsphäre Einstellungen",
     "impressum": "Impressum",
     "terms": "Allgemeine Geschäftsbedingungen",
+    "checkBalance": "Kontostand",
     "help": "FAQ"
   },
   "cookies": {

@@ -44,6 +44,13 @@ export default function Footer() {
               </Link>
               <span className="text-neutral-medium">|</span>
               <Link
+                href={`/${locale}/contract-query`}
+                className="text-neutral-white transition-colors hover:text-accent-red underline font-secondary"
+              >
+                {t('checkBalance')}
+              </Link>
+              <span className="text-neutral-medium">|</span>
+              <Link
                 href={`/${locale}/help`}
                 className="text-neutral-white transition-colors hover:text-accent-red underline font-secondary"
               >

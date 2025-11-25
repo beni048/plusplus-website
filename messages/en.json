@@ -48,6 +48,20 @@
       "subtitle": "Book a 30-minute consultation now."
     }
   },
+  "contractQuery": {
+    "title": "Check your rental deposit balance",
+    "description": "Query ZCHF and WBTC manager contracts for deposit values and details",
+    "stablecoin": {
+      "label": "Stablecoin",
+      "inputLabel": "Plusplus or Zinsli customer number",
+      "inputDescription": "Enter your customer number to check the status of your stablecoin deposit"
+    },
+    "bitcoin": {
+      "label": "Bitcoin",
+      "inputLabel": "Plusplus or Zinsli customer number",
+      "inputDescription": "Enter your customer number to check the status of your Bitcoin deposit"
+    }
+  },
   "contact": {
     "title": "Get in Touch",
     "form": {
@@ -68,6 +82,7 @@
     "privacySettings": "Privacy Settings",
     "impressum": "Imprint",
     "terms": "Terms & Conditions",
+    "checkBalance": "Check Balance",
     "help": "FAQ"
   },
   "cookies": {

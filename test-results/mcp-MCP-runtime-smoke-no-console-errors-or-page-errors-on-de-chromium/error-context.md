@@ -1,0 +1,158 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e4]:
+      - link "Plusplus" [ref=e5] [cursor=pointer]:
+        - /url: /de
+        - img "Plusplus" [ref=e6]
+      - generic [ref=e7]:
+        - generic [ref=e8]:
+          - link "Mietlösungen" [ref=e9] [cursor=pointer]:
+            - /url: /de/rental-solutions/select
+          - link "Corporate Treasury" [ref=e10] [cursor=pointer]:
+            - /url: /de/corporate-treasury
+          - link "Kontakt" [ref=e11] [cursor=pointer]:
+            - /url: /de/contact
+        - button "DE" [ref=e15] [cursor=pointer]:
+          - text: DE
+          - img [ref=e16]
+  - main [ref=e18]:
+    - generic [ref=e19]:
+      - img "Bergbrücke in schneebedeckter Alpenlandschaft mit Haus, Kombination aus Natur und Architektur mit malerischen Felsen und Vegetation bei Tageslicht." [ref=e20]
+      - generic [ref=e22]: Elias Bohl
+      - generic [ref=e26]:
+        - heading "Ihr Partner für Stablecoins" [level=1] [ref=e27]
+        - paragraph [ref=e28]: Wir schaffen den Zugang zu einer neuen Generation von Finanzlösungen.
+        - link "Jetzt Entdecken" [ref=e30] [cursor=pointer]:
+          - /url: /de/select
+          - button "Jetzt Entdecken" [ref=e31]:
+            - text: Jetzt Entdecken
+            - img [ref=e32]
+    - generic [ref=e36]:
+      - generic [ref=e37]:
+        - heading "Mietlösungen" [level=2] [ref=e38]
+        - paragraph [ref=e39]: "Unsere digitalen Mietkautionslösungen bieten eine moderne Alternative zum klassischen Bankdepot. Statt Kapital zu blockieren, wird die Kaution sicher auf der Blockchain hinterlegt: als Schweizer Franken Stablecoin mit Rendite oder in Bitcoin."
+        - paragraph [ref=e40]: Im Hintergrund sorgt die Technologie für faire Erträge für Mieterinnen. Für Vermieter ist der Prozess transparent, sicher und erstmals vollständig digital.
+        - link "Jetzt profitieren" [ref=e42] [cursor=pointer]:
+          - /url: /de/rental-solutions/select
+          - button "Jetzt profitieren" [ref=e43]:
+            - text: Jetzt profitieren
+            - img [ref=e44]
+      - generic [ref=e46]:
+        - img "Zürich Bahnhofstrasse in der Abenddämmerung mit beleuchteten Schaufenstern, Bäumen, die das goldene Strassenlicht reflektieren, unter dramatischen violetten Abendwolken, die eine atmosphärische Stadtszene schaffen." [ref=e47]
+        - generic [ref=e48]: Eric Weber
+    - generic [ref=e51]:
+      - generic [ref=e52]:
+        - img "Luftaufnahme der Zürich-Skyline mit dem Fluss Limmat, der auf den Berg Üetliberg fliesst, mit Bürkliplatz von oben in einem Tagespanorama sichtbar." [ref=e53]
+        - generic [ref=e54]: Florian Schmid
+      - generic [ref=e55]:
+        - heading "Corporate Treasury" [level=2] [ref=e56]
+        - paragraph [ref=e57]: Unsere Treasury-Lösungen eröffnen Unternehmen einen sicheren Zugang zur modernen, digitalen Finanzwelt. Weltweit setzen immer mehr Unternehmen und Finanzinstitute auf Stablecoins, um Liquidität effizienter und gewinnbringend zu verwalten.
+        - paragraph [ref=e58]: Mit dem Frankencoin (ZCHF) existiert erstmals ein stabiler Schweizer Franken Stablecoin. Wir ermöglichen jetzt den institutionellen Zugang zu diesem neuen Standard. Transparent, reguliert und mit 3% Rendite in einem Nullzinsumfeld.
+        - link "Mehr erfahren" [ref=e60] [cursor=pointer]:
+          - /url: /de/corporate-treasury
+          - button "Mehr erfahren" [ref=e61]:
+            - text: Mehr erfahren
+            - img [ref=e62]
+    - generic [ref=e67]:
+      - generic [ref=e68]:
+        - heading "Partner" [level=2] [ref=e69]
+        - paragraph [ref=e70]: Unsere Partner gehören zu den führenden Anbietern im Bereich Finanztechnologie und digitaler Infrastruktur.
+        - paragraph [ref=e71]: Gemeinsam stellen wir sicher, dass alle Systeme höchsten Standards in Sicherheit, Compliance und Transparenz entsprechen.
+      - generic [ref=e72]:
+        - link "Zinsli Zinsli Schweizer Marktplatz für Mietkautionslösungen" [ref=e73] [cursor=pointer]:
+          - /url: https://zinsli.com
+          - generic [ref=e74]:
+            - generic [ref=e75]:
+              - img "Zinsli" [ref=e77]
+              - heading "Zinsli" [level=3] [ref=e78]
+            - paragraph [ref=e80]: Schweizer Marktplatz für Mietkautionslösungen
+        - link "Frankencoin Frankencoin Dezentraler Schweizer Franken Stablecoin" [ref=e81] [cursor=pointer]:
+          - /url: https://frankencoin.com
+          - generic [ref=e82]:
+            - generic [ref=e83]:
+              - img "Frankencoin" [ref=e85]
+              - heading "Frankencoin" [level=3] [ref=e86]
+            - paragraph [ref=e88]: Dezentraler Schweizer Franken Stablecoin
+        - link "MtPelerin MtPelerin Schweizer Kryptowährungs-Handels- und Wallet-Plattform" [ref=e89] [cursor=pointer]:
+          - /url: https://www.mtpelerin.com
+          - generic [ref=e90]:
+            - generic [ref=e91]:
+              - img "MtPelerin" [ref=e93]
+              - heading "MtPelerin" [level=3] [ref=e94]
+            - paragraph [ref=e96]: Schweizer Kryptowährungs-Handels- und Wallet-Plattform
+        - link "VNX VNX Tokenisierte Vermögenswerte und Rohstoffe" [ref=e97] [cursor=pointer]:
+          - /url: https://www.vnx.li
+          - generic [ref=e98]:
+            - generic [ref=e99]:
+              - img "VNX" [ref=e101]
+              - heading "VNX" [level=3] [ref=e102]
+            - paragraph [ref=e104]: Tokenisierte Vermögenswerte und Rohstoffe
+        - link "VQF VQF Qualitätsstandards und Compliance für digitale Finanzen" [ref=e105] [cursor=pointer]:
+          - /url: https://www.vqf.ch
+          - generic [ref=e106]:
+            - generic [ref=e107]:
+              - img "VQF" [ref=e109]
+              - heading "VQF" [level=3] [ref=e110]
+            - paragraph [ref=e112]: Qualitätsstandards und Compliance für digitale Finanzen
+        - link "ChainSecurity ChainSecurity Smart Contract-Sicherheitsprüfungen und Analysen" [ref=e113] [cursor=pointer]:
+          - /url: https://www.chainsecurity.com
+          - generic [ref=e114]:
+            - generic [ref=e115]:
+              - img "ChainSecurity" [ref=e117]
+              - heading "ChainSecurity" [level=3] [ref=e118]
+            - paragraph [ref=e120]: Smart Contract-Sicherheitsprüfungen und Analysen
+        - link "GWP GWP Finanzberatung und regulatorische Compliance-Services" [ref=e121] [cursor=pointer]:
+          - /url: https://www.gwp.ch
+          - generic [ref=e122]:
+            - generic [ref=e123]:
+              - img "GWP" [ref=e125]
+              - heading "GWP" [level=3] [ref=e126]
+            - paragraph [ref=e128]: Finanzberatung und regulatorische Compliance-Services
+    - generic [ref=e132]:
+      - heading "Bereit loszulegen?" [level=2] [ref=e133]
+      - paragraph [ref=e134]: Lernen Sie unsere Lösungen in einem persönlichen Gespräch kennen. Buchen Sie eine unverbindliche 30-minütige Beratung mit unserem Vertriebsleiter.
+      - generic [ref=e135]:
+        - button "Meeting planen" [ref=e136] [cursor=pointer]:
+          - img [ref=e137]
+          - text: Meeting planen
+        - paragraph [ref=e139]: Jetzt Termin für eine 30-minütige Beratung buchen.
+  - contentinfo [ref=e140]:
+    - generic [ref=e142]:
+      - generic [ref=e143]:
+        - generic [ref=e144]:
+          - link "Datenschutzerklärung" [ref=e145] [cursor=pointer]:
+            - /url: /de/privacy-policy
+          - generic [ref=e146]: "|"
+          - link "Privatsphäre Einstellungen" [ref=e147] [cursor=pointer]:
+            - /url: /de/privacy-settings
+          - generic [ref=e148]: "|"
+          - link "Impressum" [ref=e149] [cursor=pointer]:
+            - /url: /de/imprint
+          - generic [ref=e150]: "|"
+          - link "Allgemeine Geschäftsbedingungen" [ref=e151] [cursor=pointer]:
+            - /url: /de/terms-and-conditions
+          - generic [ref=e152]: "|"
+          - link "Kontostand" [ref=e153] [cursor=pointer]:
+            - /url: /de/contract-query
+          - generic [ref=e154]: "|"
+          - link "FAQ" [ref=e155] [cursor=pointer]:
+            - /url: /de/help
+        - paragraph [ref=e157]: © Plusplus AG 2025 | Zug, Schweiz
+      - link "LinkedIn" [ref=e159] [cursor=pointer]:
+        - /url: https://linkedin.com/company/plusplusag
+        - img [ref=e160]
+  - button "Open Next.js Dev Tools" [ref=e169] [cursor=pointer]:
+    - img [ref=e170]
+  - alert [ref=e173]
+  - generic [ref=e176]:
+    - paragraph [ref=e177]:
+      - text: Wir verwenden Cookies, um Ihre Erfahrung zu verbessern.
+      - link "Datenschutzerklärung" [ref=e178] [cursor=pointer]:
+        - /url: /de/privacy-policy
+    - generic [ref=e179]:
+      - button "Alle akzeptieren" [ref=e180] [cursor=pointer]
+      - button "Nur essentiell" [ref=e181] [cursor=pointer]
+```

@@ -1,0 +1,100 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e4]:
+      - link "Plusplus" [ref=e5] [cursor=pointer]:
+        - /url: /en
+        - img "Plusplus" [ref=e6]
+      - generic [ref=e7]:
+        - generic [ref=e8]:
+          - link "Rental Solutions" [ref=e9] [cursor=pointer]:
+            - /url: /en/rental-solutions/select
+          - link "Corporate Treasury" [ref=e10] [cursor=pointer]:
+            - /url: /en/corporate-treasury
+          - link "Contact" [ref=e11] [cursor=pointer]:
+            - /url: /en/contact
+        - button "EN" [ref=e15] [cursor=pointer]:
+          - text: EN
+          - img [ref=e16]
+  - main [ref=e18]:
+    - generic [ref=e20]:
+      - heading "Privacy Policy" [level=1] [ref=e21]
+      - generic [ref=e22]:
+        - paragraph [ref=e23]: This Privacy Policy explains the nature, scope, and purpose of processing personal data on www.plusplus.swiss (the "Website"). For definitions such as "personal data" and "processing," please refer to Article 4 of the GDPR and Article 3 of the Swiss Federal Data Protection Act (nFADP).
+        - heading "1. Data Controller" [level=2] [ref=e24]
+        - paragraph [ref=e25]:
+          - text: Plusplus AG
+          - text: Poststrasse 22
+          - text: 6300 Zug, Switzerland
+          - text: "Email: info@plusplus.swiss"
+        - heading "2. Collection and Processing of Personal Data" [level=2] [ref=e26]
+        - heading "2.1. Access Data / Server Log Files" [level=3] [ref=e27]
+        - paragraph [ref=e28]: When you visit the Website, certain data is automatically transmitted by your browser to our hosting provider, Vercel. This includes your IP address, date and time of access, and the URL requested. These data are technically necessary to operate the Website (Art. 45c TCA, Art. 6(1)(c) GDPR).
+        - heading "2.2. Contact Form" [level=3] [ref=e29]
+        - paragraph [ref=e30]: If you use our contact form, we collect your name, email address, and the message content you submit. Processing is based on our legitimate interest in responding to inquiries (Art. 6(1)(f) GDPR) and, if required, on your explicit consent (Art. 6(1)(a) GDPR).
+        - heading "2.3. Cookies and Tracking" [level=3] [ref=e31]
+        - paragraph [ref=e32]: "The Website uses the following cookies and trackers:"
+        - list [ref=e33]:
+          - listitem [ref=e34]: Necessary cookies for basic site functionality (no consent required).
+          - listitem [ref=e35]: Preference, Statistics, and Marketing cookies only after you have given explicit consent via the cookie banner.
+        - paragraph [ref=e36]: Upon consent, we store a cookie named cookieConsent to record your choice. You may withdraw or modify your consent at any time via the cookie banner.
+        - heading "2.4. Web Analytics" [level=3] [ref=e37]
+        - paragraph [ref=e38]: We use Simple Analytics (EU-hosted, no cookies) or—only after consent—Google Analytics 4 with Consent Mode v2. Data are collected in anonymized form and not linked to any other Google services.
+        - heading "2.5. Third-Party Services" [level=3] [ref=e39]
+        - paragraph [ref=e40]:
+          - text: – reCAPTCHA by Google (operating under the EU-US Data Privacy Framework)
+          - text: – Vercel Analytics (GDPR-compliant)
+        - paragraph [ref=e41]: Data are processed only on a lawful basis or after consent and are not transferred to countries without adequate data protection safeguards.
+        - heading "3. Legal Bases" [level=2] [ref=e42]
+        - list [ref=e43]:
+          - listitem [ref=e44]: "Art. 6(1)(c) GDPR / TCA § 45c: Storage of access data to ensure technical operation"
+          - listitem [ref=e45]: "Art. 6(1)(f) GDPR: Legitimate interest in customer communication"
+          - listitem [ref=e46]: "Art. 6(1)(a) GDPR: Consent for non-essential cookies and tracking"
+        - heading "4. International Data Transfers" [level=2] [ref=e47]
+        - paragraph [ref=e48]: Personal data are transferred only to countries with an adequate level of protection (Switzerland, EU, UK, Canada, U.S. companies under the EU-US Data Privacy Framework). For transfers to other countries, we use Standard Contractual Clauses.
+        - heading "5. Data Retention" [level=2] [ref=e49]
+        - paragraph [ref=e50]: We retain personal data only as long as necessary for the purposes stated or as required by law.
+        - heading "6. Your Rights" [level=2] [ref=e51]
+        - paragraph [ref=e52]: Under Articles 15–20 GDPR, you have the right to access, rectify, erase, restrict processing, and data portability. To exercise these rights, contact us at info@plusplus.swiss.
+        - heading "7. Updates to This Policy" [level=2] [ref=e53]
+        - paragraph [ref=e54]: We may update this Privacy Policy periodically. The date of the latest revision appears below.
+        - paragraph [ref=e56]: "Last updated: September 2025"
+  - contentinfo [ref=e57]:
+    - generic [ref=e59]:
+      - generic [ref=e60]:
+        - generic [ref=e61]:
+          - link "Privacy Policy" [ref=e62] [cursor=pointer]:
+            - /url: /en/privacy-policy
+          - generic [ref=e63]: "|"
+          - link "Privacy Settings" [ref=e64] [cursor=pointer]:
+            - /url: /en/privacy-settings
+          - generic [ref=e65]: "|"
+          - link "Imprint" [ref=e66] [cursor=pointer]:
+            - /url: /en/imprint
+          - generic [ref=e67]: "|"
+          - link "Terms & Conditions" [ref=e68] [cursor=pointer]:
+            - /url: /en/terms-and-conditions
+          - generic [ref=e69]: "|"
+          - link "Check Balance" [ref=e70] [cursor=pointer]:
+            - /url: /en/contract-query
+          - generic [ref=e71]: "|"
+          - link "FAQ" [ref=e72] [cursor=pointer]:
+            - /url: /en/help
+        - paragraph [ref=e74]: © Plusplus AG 2025 | Zug, Switzerland
+      - link "LinkedIn" [ref=e76] [cursor=pointer]:
+        - /url: https://linkedin.com/company/plusplusag
+        - img [ref=e77]
+  - button "Open Next.js Dev Tools" [ref=e86] [cursor=pointer]:
+    - img [ref=e87]
+  - alert [ref=e90]
+  - generic [ref=e93]:
+    - paragraph [ref=e94]:
+      - text: We use cookies to improve your experience.
+      - link "Privacy Policy" [ref=e95] [cursor=pointer]:
+        - /url: /en/privacy-policy
+    - generic [ref=e96]:
+      - button "Accept All" [ref=e97] [cursor=pointer]
+      - button "Essential Only" [ref=e98] [cursor=pointer]
+```

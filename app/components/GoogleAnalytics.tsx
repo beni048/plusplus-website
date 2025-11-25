@@ -26,28 +26,40 @@ export default function GoogleAnalytics() {
     return null;
   }
 
+  const handleScriptLoad = () => {
+    try {
+      if (typeof window === 'undefined') return;
+
+      window.dataLayer = window.dataLayer || [];
+      
+      window.gtag = function gtag(...args: unknown[]) {
+        if (window.dataLayer) {
+          window.dataLayer.push(args);
+        }
+      };
+      
+      window.gtag('js', new Date());
+      
+      // In development, allow analytics by default for testing
+      // In production, deny by default and require user consent
+      const isProduction = process.env.NODE_ENV === 'production';
+      window.gtag('consent', 'default', {
+        'analytics_storage': isProduction ? 'denied' : 'granted',
+      });
+      
+      window.gtag('config', GA_TRACKING_ID, {
+        send_page_view: false,
+      });
+    } catch (error) {
+      console.error('Error initializing Google Analytics:', error);
+    }
+  };
+
   return (
     <Script
       src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
       strategy="lazyOnload"
-      onLoad={() => {
-        window.dataLayer = window.dataLayer || [];
-        window.gtag = function gtag(...args: unknown[]) {
-          window.dataLayer.push(args);
-        };
-        window.gtag('js', new Date());
-        
-        // In development, allow analytics by default for testing
-        // In production, deny by default and require user consent
-        const isProduction = process.env.NODE_ENV === 'production';
-        window.gtag('consent', 'default', {
-          'analytics_storage': isProduction ? 'denied' : 'granted',
-        });
-        
-        window.gtag('config', GA_TRACKING_ID!, {
-          send_page_view: false,
-        });
-      }}
+      onLoad={handleScriptLoad}
     />
   );
 }

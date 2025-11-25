@@ -3,28 +3,29 @@
 import { useReadContract } from 'wagmi';
 import { WBTC_MANAGER_ABI, WBTC_MANAGER_ADDRESS } from '@/lib/contracts/wbtc-abi';
 import { mainnet } from 'wagmi/chains';
-import { parseUnits } from 'viem';
+import { Hex } from 'viem';
 
 /**
- * Hook to query WBTC Manager contract for deposit value conversion
- * @param wbtcAmount - The WBTC amount to query (in wei, 8 decimals)
+ * Hook to query WBTC Manager contract for deposit value
+ * @param depositIdentifier - The deposit identifier (bytes32) to query
  */
-export const useWBTCDepositValue = (wbtcAmount?: bigint | string) => {
-  const amount = typeof wbtcAmount === 'string' ? parseUnits(wbtcAmount, 8) : wbtcAmount;
-
+export const useWBTCDepositValue = (depositIdentifier?: Hex) => {
   const { data, isLoading, error, isError } = useReadContract({
     address: WBTC_MANAGER_ADDRESS,
     abi: WBTC_MANAGER_ABI,
     functionName: 'depositValue',
-    args: amount ? [amount] : undefined,
+    args: depositIdentifier ? [depositIdentifier] : undefined,
     chainId: mainnet.id,
     query: {
-      enabled: !!amount,
+      enabled: !!depositIdentifier,
     },
   });
 
+  // data is the currentValue in satoshis (uint256)
+  const valueInSatoshis = data as bigint | undefined;
+
   return {
-    valueInCHF: data as bigint | undefined,
+    valueInSatoshis,
     isLoading,
     error,
     isError,

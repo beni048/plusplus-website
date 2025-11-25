@@ -5,12 +5,21 @@ import { WagmiProvider, createConfig, http } from 'wagmi';
 import { mainnet } from 'wagmi/chains';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
-const queryClient = new QueryClient();
-
+// Create config outside component to prevent recreation
 const wagmiConfig = createConfig({
   chains: [mainnet],
   transports: {
-    [mainnet.id]: http(),
+    [mainnet.id]: http('https://eth.llamarpc.com'),
+  },
+  ssr: true,
+});
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 1000 * 60 * 60 * 24, // 24 hours
+      gcTime: 1000 * 60 * 60 * 24, // 24 hours (formerly cacheTime)
+    },
   },
 });
 
