@@ -504,7 +504,7 @@ export default function ContractQueryPage() {
                     {/* CoinGecko Attribution */}
                     <div className="mt-6 p-4 bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-lg">
                       <p className="text-xs text-amber-900 font-secondary">
-                        <span className="font-semibold">Data Sources:</span> Bitcoin price data provided by <span className="font-semibold">CoinGecko</span>. Historical prices used for deposit value calculations.
+                        <span className="font-semibold">{t('contractQuery.dataSources')}</span>
                       </p>
                     </div>
                   </div>

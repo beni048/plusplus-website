@@ -77,7 +77,8 @@
     "contractInfo": {
       "address": "Adresse",
       "viewOnEtherscan": "Auf Etherscan anzeigen"
-    }
+    },
+    "dataSources": "Datenquellen: Bitcoin-Preisdaten bereitgestellt von CoinGecko. Historische Preise für Kautionsberechnungen verwendet."
   },
   "contact": {
     "title": "Kontakt aufnehmen",

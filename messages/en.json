@@ -77,7 +77,8 @@
     "contractInfo": {
       "address": "Address",
       "viewOnEtherscan": "View on Etherscan"
-    }
+    },
+    "dataSources": "Data Sources: Bitcoin price data provided by CoinGecko. Historical prices used for principal calculations."
   },
   "contact": {
     "title": "Get in Touch",
