@@ -8,6 +8,7 @@ import { useZCHFDepositDate } from '@/hooks/use-deposit-date';
 import { useWBTCDepositDate } from '@/hooks/use-deposit-date';
 import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Loader2, AlertCircle, CheckCircle } from 'lucide-react';
 import { convertCustomerNumber, isValidCustomerNumber } from '@/lib/utils/customer-number';
@@ -57,71 +58,65 @@ export default function ContractQueryPage() {
     wbtcQuery.valueInSatoshis,
     bitcoinPrice
   );
-  // Effect for ZCHF conversion
-  useEffect(() => {
+
+  // Handle ZCHF form submission
+  const handleZchfSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    
+    if (!mounted) {
+      setZchfConversionError('Component still initializing, please try again');
+      return;
+    }
+
     if (zchfCustomerNumber && isValidCustomerNumber(zchfCustomerNumber)) {
       try {
         const converted = convertCustomerNumber(zchfCustomerNumber, 'stablecoin');
-        // eslint-disable-next-line react-hooks/set-state-in-effect
-        setZchfAddress(converted);
+        if (!converted || !converted.startsWith('0x')) {
+          setZchfConversionError(t('contractQuery.actions.invalidCustomerNumber'));
+          setZchfAddress('');
+          return;
+        }
          
+        setZchfAddress(converted);
         setZchfConversionError('');
       } catch (error) {
-         
         setZchfConversionError(error instanceof Error ? error.message : 'Conversion error');
-         
         setZchfAddress('');
       }
     } else {
-       
+      setZchfConversionError(t('contractQuery.actions.invalidCustomerNumber'));
       setZchfAddress('');
-       
-      setZchfConversionError('');
     }
-  }, [zchfCustomerNumber]);
+  };
 
-  // Effect for WBTC conversion
-  useEffect(() => {
+  // Handle WBTC form submission
+  const handleWbtcSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    
+    if (!mounted) {
+      setWbtcConversionError('Component still initializing, please try again');
+      return;
+    }
+
     if (wbtcCustomerNumber && isValidCustomerNumber(wbtcCustomerNumber)) {
       try {
-        // Use same keccak256 conversion as stablecoin
         const converted = convertCustomerNumber(wbtcCustomerNumber, 'stablecoin');
-        // eslint-disable-next-line react-hooks/set-state-in-effect
-        setWbtcQueryAmount(converted);
+        if (!converted || !converted.startsWith('0x')) {
+          setWbtcConversionError(t('contractQuery.actions.invalidCustomerNumber'));
+          setWbtcQueryAmount('');
+          return;
+        }
          
+        setWbtcQueryAmount(converted);
         setWbtcConversionError('');
       } catch (error) {
-         
         setWbtcConversionError(error instanceof Error ? error.message : 'Conversion error');
-         
         setWbtcQueryAmount('');
       }
     } else {
-       
+      setWbtcConversionError(t('contractQuery.actions.invalidCustomerNumber'));
       setWbtcQueryAmount('');
-       
-      setWbtcConversionError('');
     }
-  }, [wbtcCustomerNumber]);
-
-  // Fetch fresh Bitcoin price when WBTC query result arrives
-  useEffect(() => {
-    if (wbtcQuery.valueInSatoshis !== undefined && !wbtcQuery.isLoading) {
-      // Fetch current Bitcoin price at the time of receiving the result
-      const fetchFreshPrice = async () => {
-        const priceData = await getCachedBitcoinPrice();
-        setBitcoinPrice(priceData.priceInCHF);
-      };
-      fetchFreshPrice();
-    }
-  }, [wbtcQuery.valueInSatoshis, wbtcQuery.isLoading]);
-
-  const handleZchfCustomerNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setZchfCustomerNumber(e.target.value);
-  };
-
-  const handleWbtcCustomerNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setWbtcCustomerNumber(e.target.value);
   };
 
   return (
@@ -155,7 +150,7 @@ export default function ContractQueryPage() {
             <Card className="p-8 border-primary-teal/20 shadow-lg">
               <div className="space-y-6">
                 {/* Input Section */}
-                <div>
+                <form onSubmit={handleZchfSubmit}>
                   <label className="block text-sm font-medium text-black mb-3 font-secondary">
                     {t('contractQuery.stablecoin.inputLabel')}
                   </label>
@@ -164,9 +159,15 @@ export default function ContractQueryPage() {
                       type="text"
                       placeholder="e.g., xK9mNp2vQr5jLs8T"
                       value={zchfCustomerNumber}
-                      onChange={handleZchfCustomerNumberChange}
-                      className="flex-1 font-mono text-sm"
+                      onChange={(e) => setZchfCustomerNumber(e.target.value)}
+                      className="flex-1 font-mono text-sm focus-visible:ring-neutral-dark/30"
                     />
+                    <Button 
+                      type="submit"
+                      className="bg-black hover:bg-neutral-dark text-white font-secondary"
+                    >
+                      {t('contractQuery.actions.query')}
+                    </Button>
                   </div>
                   <p className="text-xs text-neutral-dark mt-2 font-secondary">
                     {t('contractQuery.stablecoin.inputDescription')}
@@ -176,8 +177,7 @@ export default function ContractQueryPage() {
                       {zchfConversionError}
                     </div>
                   )}
-
-                </div>
+                </form>
 
                 {/* Results Section */}
                 {zchfQuery.isLoading && (
@@ -209,14 +209,14 @@ export default function ContractQueryPage() {
                   <div className="space-y-6">
                     <div className="flex items-center gap-2 mb-4">
                       <CheckCircle className="w-5 h-5 text-green-500" />
-                      <span className="font-medium text-green-700 font-secondary">Query Successful</span>
+                      <span className="font-medium text-green-700 font-secondary">{t('contractQuery.actions.querySuccessful')}</span>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                       {/* 1. Deposit Date */}
                       <Card className="p-4 bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200">
                         <p className="text-xs font-semibold text-blue-900 uppercase tracking-wider mb-2 font-secondary">
-                          Deposit Date
+                          {t('contractQuery.fields.depositDate')}
                         </p>
                         {zchfDateQuery.isLoading ? (
                           <div className="flex items-center gap-2">
@@ -235,18 +235,22 @@ export default function ContractQueryPage() {
                       {/* 2. Principal (Initial Amount) */}
                       <Card className="p-4 bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200">
                         <p className="text-xs font-semibold text-blue-900 uppercase tracking-wider mb-2 font-secondary">
-                          Principal
+                          {t('contractQuery.fields.principal')}
                         </p>
-                        <p className="text-2xl font-bold text-blue-900 font-mono">
-                          {(Number(zchfQuery.depositDetails.initialAmount) / 10 ** 18).toLocaleString('de-CH', { maximumFractionDigits: 2 })}
-                        </p>
+                        {zchfQuery.depositDetails ? (
+                          <p className="text-2xl font-bold text-blue-900 font-mono">
+                            {(Number(zchfQuery.depositDetails.initialAmount) / 10 ** 18).toLocaleString('de-CH', { maximumFractionDigits: 2 })}
+                          </p>
+                        ) : (
+                          <p className="text-sm text-blue-700 font-secondary">Loading...</p>
+                        )}
                         <p className="text-xs text-blue-700 mt-1 font-secondary">CHF</p>
                       </Card>
 
                       {/* 3. Time Since Deposit */}
                       <Card className="p-4 bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200">
                         <p className="text-xs font-semibold text-blue-900 uppercase tracking-wider mb-2 font-secondary">
-                          Time Since Deposit
+                          {t('contractQuery.fields.timeSinceDeposit')}
                         </p>
                         {zchfDateQuery.isLoading ? (
                           <div className="flex items-center gap-2">
@@ -265,35 +269,45 @@ export default function ContractQueryPage() {
                       {/* 4. Current Value */}
                       <Card className="p-4 bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200">
                         <p className="text-xs font-semibold text-blue-900 uppercase tracking-wider mb-2 font-secondary">
-                          Current Value
+                          {t('contractQuery.fields.currentValue')}
                         </p>
-                        <p className="text-2xl font-bold text-blue-900 font-mono">
-                          {((Number(zchfQuery.depositDetails.initialAmount) + Number(zchfQuery.depositDetails.netInterest)) / 10 ** 18).toLocaleString('de-CH', { maximumFractionDigits: 2 })}
-                        </p>
+                        {zchfQuery.depositDetails ? (
+                          <p className="text-2xl font-bold text-blue-900 font-mono">
+                            {((Number(zchfQuery.depositDetails.initialAmount) + Number(zchfQuery.depositDetails.netInterest)) / 10 ** 18).toLocaleString('de-CH', { maximumFractionDigits: 2 })}
+                          </p>
+                        ) : (
+                          <p className="text-sm text-blue-700 font-secondary">Loading...</p>
+                        )}
                         <p className="text-xs text-blue-700 mt-1 font-secondary">CHF</p>
                       </Card>
 
                       {/* 5. Gain Since Deposit */}
                       <Card className={`p-4 bg-gradient-to-br border-2 ${
-                        Number(zchfQuery.depositDetails.netInterest) / 10 ** 18 >= 0
+                        zchfQuery.depositDetails && Number(zchfQuery.depositDetails.netInterest) / 10 ** 18 >= 0
                           ? 'from-emerald-50 to-emerald-100/50 border-emerald-300'
                           : 'from-red-50 to-red-100/50 border-red-300'
                       }`}>
                         <p className="text-xs font-semibold uppercase tracking-wider mb-2 font-secondary" style={{
-                          color: Number(zchfQuery.depositDetails.netInterest) / 10 ** 18 >= 0 ? '#065f46' : '#7f1d1d'
+                          color: zchfQuery.depositDetails && Number(zchfQuery.depositDetails.netInterest) / 10 ** 18 >= 0 ? '#065f46' : '#7f1d1d'
                         }}>
-                          Gain Since Deposit
+                          {t('contractQuery.fields.gainSinceDeposit')}
                         </p>
-                        <p className="text-2xl font-bold font-mono" style={{
-                          color: Number(zchfQuery.depositDetails.netInterest) / 10 ** 18 >= 0 ? '#065f46' : '#7f1d1d'
-                        }}>
-                          {Number(zchfQuery.depositDetails.netInterest) / 10 ** 18 >= 0 ? '+' : ''}{((Number(zchfQuery.depositDetails.netInterest)) / 10 ** 18).toLocaleString('de-CH', { maximumFractionDigits: 2 })}
-                        </p>
-                        <p className="text-xs mt-1 font-secondary" style={{
-                          color: Number(zchfQuery.depositDetails.netInterest) / 10 ** 18 >= 0 ? '#065f46' : '#7f1d1d'
-                        }}>
-                          CHF
-                        </p>
+                        {zchfQuery.depositDetails ? (
+                          <>
+                            <p className="text-2xl font-bold font-mono" style={{
+                              color: Number(zchfQuery.depositDetails.netInterest) / 10 ** 18 >= 0 ? '#065f46' : '#7f1d1d'
+                            }}>
+                              {Number(zchfQuery.depositDetails.netInterest) / 10 ** 18 >= 0 ? '+' : ''}{((Number(zchfQuery.depositDetails.netInterest)) / 10 ** 18).toLocaleString('de-CH', { maximumFractionDigits: 2 })}
+                            </p>
+                            <p className="text-xs mt-1 font-secondary" style={{
+                              color: Number(zchfQuery.depositDetails.netInterest) / 10 ** 18 >= 0 ? '#065f46' : '#7f1d1d'
+                            }}>
+                              CHF ({zchfQuery.depositDetails.initialAmount && Number(zchfQuery.depositDetails.initialAmount) > 0 ? (Number(zchfQuery.depositDetails.netInterest) / 10 ** 18 >= 0 ? '+' : '') + ((Number(zchfQuery.depositDetails.netInterest) / 10 ** 18) / (Number(zchfQuery.depositDetails.initialAmount) / 10 ** 18) * 100).toFixed(2) : '0.00'}%)
+                            </p>
+                          </>
+                        ) : (
+                          <p className="text-sm text-red-700 font-secondary">Loading...</p>
+                        )}
                       </Card>
                     </div>
                   </div>
@@ -313,7 +327,7 @@ export default function ContractQueryPage() {
             <Card className="p-8 border-primary-teal/20 shadow-lg">
               <div className="space-y-6">
                 {/* Input Section */}
-                <div>
+                <form onSubmit={handleWbtcSubmit}>
                   <label className="block text-sm font-medium text-black mb-3 font-secondary">
                     {t('contractQuery.bitcoin.inputLabel')}
                   </label>
@@ -322,9 +336,15 @@ export default function ContractQueryPage() {
                       type="text"
                       placeholder="e.g., aB7dGh3kMq1Uw9Fy"
                       value={wbtcCustomerNumber}
-                      onChange={handleWbtcCustomerNumberChange}
-                      className="flex-1 font-mono text-sm"
+                      onChange={(e) => setWbtcCustomerNumber(e.target.value)}
+                      className="flex-1 font-mono text-sm focus-visible:ring-neutral-dark/30"
                     />
+                    <Button 
+                      type="submit"
+                      className="bg-black hover:bg-neutral-dark text-white font-secondary"
+                    >
+                      {t('contractQuery.actions.query')}
+                    </Button>
                   </div>
                   <p className="text-xs text-neutral-dark mt-2 font-secondary">
                     {t('contractQuery.bitcoin.inputDescription')}
@@ -334,8 +354,7 @@ export default function ContractQueryPage() {
                       {wbtcConversionError}
                     </div>
                   )}
-
-                </div>
+                </form>
 
                 {/* Results Section */}
                 {wbtcQuery.isLoading && (
@@ -361,14 +380,14 @@ export default function ContractQueryPage() {
                   <div className="space-y-6">
                     <div className="flex items-center gap-2 mb-4">
                       <CheckCircle className="w-5 h-5 text-green-500" />
-                      <span className="font-medium text-green-700 font-secondary">Query Successful</span>
+                      <span className="font-medium text-green-700 font-secondary">{t('contractQuery.actions.querySuccessful')}</span>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                       {/* 1. Deposit Date */}
                       <Card className="p-4 bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200">
                         <p className="text-xs font-semibold text-blue-900 uppercase tracking-wider mb-2 font-secondary">
-                          Deposit Date
+                          {t('contractQuery.fields.depositDate')}
                         </p>
                         {wbtcDateQuery.isLoading ? (
                           <div className="flex items-center gap-2">
@@ -387,7 +406,7 @@ export default function ContractQueryPage() {
                       {/* 2. Principal (Value at Deposit in CHF) */}
                       <Card className="p-4 bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200">
                         <p className="text-xs font-semibold text-blue-900 uppercase tracking-wider mb-2 font-secondary">
-                          Principal
+                          {t('contractQuery.fields.principal')}
                         </p>
                         {wbtcDateQuery.depositStats ? (
                           <>
@@ -404,7 +423,7 @@ export default function ContractQueryPage() {
                       {/* 3. Time Since Deposit */}
                       <Card className="p-4 bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200">
                         <p className="text-xs font-semibold text-blue-900 uppercase tracking-wider mb-2 font-secondary">
-                          Time Since Deposit
+                          {t('contractQuery.fields.timeSinceDeposit')}
                         </p>
                         {wbtcDateQuery.isLoading ? (
                           <div className="flex items-center gap-2">
@@ -423,22 +442,30 @@ export default function ContractQueryPage() {
                       {/* 4. Current Value */}
                       <Card className="p-4 bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200">
                         <p className="text-xs font-semibold text-blue-900 uppercase tracking-wider mb-2 font-secondary">
-                          Current Value
+                          {t('contractQuery.fields.currentValue')}
                         </p>
-                        <p className="text-2xl font-bold text-blue-900 font-mono">
-                          {Math.round(convertSatoshisToCHF(wbtcQuery.valueInSatoshis, bitcoinPrice)).toLocaleString('de-CH')}
-                        </p>
+                        {wbtcQuery.valueInSatoshis !== undefined ? (
+                          <p className="text-2xl font-bold text-blue-900 font-mono">
+                            {Math.round(convertSatoshisToCHF(wbtcQuery.valueInSatoshis, bitcoinPrice)).toLocaleString('de-CH')}
+                          </p>
+                        ) : (
+                          <p className="text-sm text-blue-700 font-secondary">Loading...</p>
+                        )}
                         <p className="text-xs text-blue-700 mt-1 font-secondary">CHF</p>
                       </Card>
 
                       {/* 5. Bitcoin Amount */}
                       <Card className="p-4 bg-gradient-to-br from-blue-50 to-blue-100/50 border-blue-200">
                         <p className="text-xs font-semibold text-blue-900 uppercase tracking-wider mb-2 font-secondary">
-                          Bitcoin Amount
+                          {t('contractQuery.fields.bitcoinAmount')}
                         </p>
-                        <p className="text-2xl font-bold text-blue-900 font-mono">
-                          {(Number(wbtcQuery.valueInSatoshis) / 10 ** 8).toLocaleString('de-CH', { maximumFractionDigits: 8 })} BTC
-                        </p>
+                        {wbtcQuery.valueInSatoshis !== undefined ? (
+                          <p className="text-2xl font-bold text-blue-900 font-mono">
+                            {(Number(wbtcQuery.valueInSatoshis) / 10 ** 8).toLocaleString('de-CH', { maximumFractionDigits: 8 })} BTC
+                          </p>
+                        ) : (
+                          <p className="text-sm text-blue-700 font-secondary">Loading...</p>
+                        )}
                         <p className="text-xs text-blue-700 mt-1 font-secondary">
                           @ {formatBitcoinPrice(bitcoinPrice)} CHF
                         </p>
@@ -453,7 +480,7 @@ export default function ContractQueryPage() {
                         <p className="text-xs font-semibold uppercase tracking-wider mb-2 font-secondary" style={{
                           color: wbtcDateQuery.depositStats && wbtcDateQuery.depositStats.valueGain >= 0 ? '#065f46' : '#7f1d1d'
                         }}>
-                          Gain Since Deposit
+                          {t('contractQuery.fields.gainSinceDeposit')}
                         </p>
                         {wbtcDateQuery.depositStats ? (
                           <>
@@ -503,18 +530,17 @@ export default function ContractQueryPage() {
           <Card className="p-6 border-primary-teal/20">
             <h3 className="text-lg font-semibold text-black mb-3 font-primary">ZCHF Manager</h3>
             <div className="space-y-2 text-sm font-secondary text-neutral-dark">
-              <p><span className="font-medium text-black">Address:</span></p>
+              <p><span className="font-medium text-black">{t('contractQuery.contractInfo.address')}:</span></p>
               <code className="block bg-gray-100 p-2 rounded text-xs break-all text-gray-700">
                 0x9e0569f5C3B9E8272d7876A30c81900c51D0Bf55
               </code>
-              <p className="mt-3"><span className="font-medium text-black">Function:</span> getDepositDetails(address collateral)</p>
               <a 
                 href="https://etherscan.io/address/0x9e0569f5c3b9e8272d7876a30c81900c51d0bf55"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary-teal hover:text-primary-teal/80 font-medium inline-block mt-3"
+                className="text-black hover:text-neutral-dark font-medium inline-block mt-3"
               >
-                View on Etherscan ↗
+                {t('contractQuery.contractInfo.viewOnEtherscan')} ↗
               </a>
             </div>
           </Card>
@@ -522,18 +548,17 @@ export default function ContractQueryPage() {
           <Card className="p-6 border-primary-teal/20">
             <h3 className="text-lg font-semibold text-black mb-3 font-primary">WBTC Manager</h3>
             <div className="space-y-2 text-sm font-secondary text-neutral-dark">
-              <p><span className="font-medium text-black">Address:</span></p>
+              <p><span className="font-medium text-black">{t('contractQuery.contractInfo.address')}:</span></p>
               <code className="block bg-gray-100 p-2 rounded text-xs break-all text-gray-700">
                 0xdd78844e963c513637BEC8661de05199dE5e9322
               </code>
-              <p className="mt-3"><span className="font-medium text-black">Function:</span> depositValue(uint256 wbtcAmount)</p>
               <a 
                 href="https://etherscan.io/address/0xdd78844e963c513637BEC8661de05199dE5e9322"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary-teal hover:text-primary-teal/80 font-medium inline-block mt-3"
+                className="text-black hover:text-neutral-dark font-medium inline-block mt-3"
               >
-                View on Etherscan ↗
+                {t('contractQuery.contractInfo.viewOnEtherscan')} ↗
               </a>
             </div>
           </Card>

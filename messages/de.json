@@ -60,6 +60,23 @@
       "label": "Bitcoin",
       "inputLabel": "Plusplus oder Zinsli Kundennummer",
       "inputDescription": "Geben Sie die Kundennummer ein, um die Entwicklung Ihrer Bitcoin-Kaution abzufragen"
+    },
+    "fields": {
+      "depositDate": "Einzahlungsdatum",
+      "principal": "Kaution",
+      "timeSinceDeposit": "Zeit seit Einzahlung",
+      "currentValue": "Aktueller Wert",
+      "bitcoinAmount": "Bitcoin-Menge",
+      "gainSinceDeposit": "Gewinn seit Einzahlung"
+    },
+    "actions": {
+      "query": "Abfrage",
+      "querySuccessful": "Abfrage erfolgreich",
+      "invalidCustomerNumber": "Bitte geben Sie eine gültige Kundennummer ein"
+    },
+    "contractInfo": {
+      "address": "Adresse",
+      "viewOnEtherscan": "Auf Etherscan anzeigen"
     }
   },
   "contact": {

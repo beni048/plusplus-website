@@ -7,6 +7,8 @@
  * Returns the current principal and net interest for a given deposit
  */
 
+export const ZCHF_MANAGER_ADDRESS = '0x9e0569f5C3B9E8272d7876A30c81900c51D0Bf55' as const;
+
 export const ZCHF_MANAGER_ABI = [
   {
     inputs: [
@@ -76,5 +78,3 @@ export const ZCHF_MANAGER_ABI = [
     type: 'event',
   },
 ] as const;
-
-export const ZCHF_MANAGER_ADDRESS = '0x9e0569f5C3B9E8272d7876A30c81900c51D0Bf55' as const;

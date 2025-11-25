@@ -60,6 +60,23 @@
       "label": "Bitcoin",
       "inputLabel": "Plusplus or Zinsli customer number",
       "inputDescription": "Enter your customer number to check the status of your Bitcoin deposit"
+    },
+    "fields": {
+      "depositDate": "Deposit Date",
+      "principal": "Principal",
+      "timeSinceDeposit": "Time Since Deposit",
+      "currentValue": "Current Value",
+      "bitcoinAmount": "Bitcoin Amount",
+      "gainSinceDeposit": "Gain Since Deposit"
+    },
+    "actions": {
+      "query": "Query",
+      "querySuccessful": "Query Successful",
+      "invalidCustomerNumber": "Please enter a valid customer number"
+    },
+    "contractInfo": {
+      "address": "Address",
+      "viewOnEtherscan": "View on Etherscan"
     }
   },
   "contact": {
