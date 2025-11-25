@@ -49,8 +49,8 @@
     }
   },
   "contractQuery": {
-    "title": "Prüfen Sie Ihren Mietkontostand",
-    "description": "Fragen Sie ZCHF- und WBTC-Manager-Verträge für Einzahlungswerte und Details ab",
+    "title": "Überprüfen Sie Ihren Kontostand",
+    "description": "Fragen Sie Ihr Plusplus-Konto ab, um Ihren Kontostand, den aktuellen Wert und Ihre Gewinne anzuzeigen",
     "stablecoin": {
       "label": "Stablecoin",
       "inputLabel": "Plusplus oder Zinsli Kundennummer",

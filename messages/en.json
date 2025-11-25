@@ -49,8 +49,8 @@
     }
   },
   "contractQuery": {
-    "title": "Check your rental deposit balance",
-    "description": "Query ZCHF and WBTC manager contracts for deposit values and details",
+    "title": "Check Your Account Balance",
+    "description": "Query your Plusplus account to view your deposit balance, current value, and earnings",
     "stablecoin": {
       "label": "Stablecoin",
       "inputLabel": "Plusplus or Zinsli customer number",
