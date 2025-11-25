@@ -57,6 +57,12 @@ export default function Navbar() {
                 {t('corporateTreasury')}
               </Link>
               <Link 
+                href={`/${locale}/contract-query`} 
+                className="text-black hover:text-accent-red font-primary font-medium transition-colors"
+              >
+                Contract Query
+              </Link>
+              <Link 
                 href={`/${locale}/contact`} 
                 className="text-black hover:text-accent-red font-primary font-medium transition-colors"
               >
@@ -100,6 +106,13 @@ export default function Navbar() {
                 onClick={closeMobileMenu}
               >
                 {t('corporateTreasury')}
+              </Link>
+              <Link 
+                href={`/${locale}/contract-query`} 
+                className="block text-black hover:text-accent-red font-primary font-medium transition-colors py-2"
+                onClick={closeMobileMenu}
+              >
+                Contract Query
               </Link>
               <Link 
                 href={`/${locale}/contact`} 

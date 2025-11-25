@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Outfit, Mulish } from "next/font/google";
 import Script from 'next/script';
+import { Web3Provider } from "@/components/Web3Provider";
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -130,7 +131,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         </noscript>
         {/* End Google Tag Manager (noscript) */}
-        {children}
+        <Web3Provider>
+          {children}
+        </Web3Provider>
       </body>
     </html>
   );
