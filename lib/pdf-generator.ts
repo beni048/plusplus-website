@@ -28,7 +28,7 @@ interface PdfTranslations {
     generatedBy: string;
 }
 
-export const generateContractPdf = (
+export const generateContractPdf = async (
     type: 'zchf' | 'wbtc',
     customerNumber: string,
     data: ContractData,
@@ -46,106 +46,119 @@ export const generateContractPdf = (
     // A robust way is to load it into an HTMLImageElement first or fetch it.
     // For simplicity, let's try adding it directly. If it fails, we might need a base64 string.
     const logoUrl = '/images/logo_plusplus.png';
-    const logoImg = new Image();
-    logoImg.src = logoUrl;
 
-    logoImg.onload = () => {
-        // Add Logo
-        const logoWidth = 40;
-        const logoHeight = (logoImg.height / logoImg.width) * logoWidth;
-        doc.addImage(logoImg, 'PNG', 14, 10, logoWidth, logoHeight);
+    // Fetch the image to get original data and avoid canvas re-encoding bloat
+    try {
+        const response = await fetch(logoUrl);
+        const blob = await response.blob();
+        const reader = new FileReader();
 
-        // Add Address (Right aligned)
-        doc.setFontSize(10);
-        doc.setTextColor(100);
-        const addressLines = [
-            'Plusplus AG',
-            'Poststrasse 22',
-            '6300 Zug',
-            'Switzerland',
-            'info@plusplus.swiss'
-        ];
+        reader.onloadend = () => {
+            const base64data = reader.result as string;
 
-        let yPos = 15;
-        addressLines.forEach(line => {
-            doc.text(line, pageWidth - 14, yPos, { align: 'right' });
-            yPos += 5;
-        });
+            // Add Logo
+            // Calculate aspect ratio if possible, or use fixed dimensions. 
+            // Since we don't have the image object to get width/height immediately, 
+            // we can create an offscreen image to get dimensions OR just assume a standard ratio if known.
+            // Better: Load it into an image to get dimensions, BUT use the base64 data for addImage.
+            const img = new Image();
+            img.src = base64data;
+            img.onload = () => {
+                const logoWidth = 40;
+                const logoHeight = (img.height / img.width) * logoWidth;
 
-        // -- Title & Info --
-        yPos = 50;
-        doc.setFontSize(18);
-        doc.setTextColor(0);
-        doc.text(translations.title, 14, yPos);
+                // Use the base64 data directly
+                doc.addImage(base64data, 'PNG', 14, 10, logoWidth, logoHeight);
 
-        yPos += 10;
-        doc.setFontSize(12);
-        doc.setTextColor(60);
-        doc.text(`${translations.customerNumber}: ${customerNumber}`, 14, yPos);
+                // Add Address (Right aligned)
+                doc.setFontSize(10);
+                doc.setTextColor(100);
+                const addressLines = [
+                    'Plusplus AG',
+                    'Poststrasse 22',
+                    '6300 Zug',
+                    'Switzerland',
+                    'info@plusplus.swiss'
+                ];
 
-        yPos += 6;
-        const date = new Date().toLocaleDateString(locale === 'de' ? 'de-CH' : 'en-GB', {
-            year: 'numeric',
-            month: '2-digit',
-            day: '2-digit',
-            hour: '2-digit',
-            minute: '2-digit'
-        });
-        doc.text(`${translations.date}: ${date}`, 14, yPos);
+                let yPos = 15;
+                addressLines.forEach(line => {
+                    doc.text(line, pageWidth - 14, yPos, { align: 'right' });
+                    yPos += 5;
+                });
 
-        // -- Results Table --
-        yPos += 15;
+                // -- Title & Info --
+                yPos = 50;
+                doc.setFontSize(18);
+                doc.setTextColor(0);
+                doc.text(translations.title, 14, yPos);
 
-        const tableBody = [
-            [translations.depositDate, data.depositDate],
-            [translations.principal, `${data.principal} CHF`],
-            [translations.timeSinceDeposit, data.timeSinceDeposit],
-            [translations.currentValue, `${data.currentValue} CHF`],
-            [translations.gainSinceDeposit, `${data.gain} CHF (${data.gainPercentage}%)`]
-        ];
+                yPos += 10;
+                doc.setFontSize(12);
+                doc.setTextColor(60);
+                doc.text(`${translations.customerNumber}: ${customerNumber}`, 14, yPos);
 
-        if (type === 'wbtc' && data.bitcoinAmount) {
-            tableBody.splice(4, 0, [translations.bitcoinAmount, `${data.bitcoinAmount} BTC`]);
-            if (data.bitcoinPrice) {
-                // Add price info to the Bitcoin Amount row or separate
-                tableBody.splice(5, 0, [translations.bitcoinPrice, `${data.bitcoinPrice} CHF`]);
-            }
-        }
+                yPos += 6;
+                const date = new Date().toLocaleDateString(locale === 'de' ? 'de-CH' : 'en-GB', {
+                    year: 'numeric',
+                    month: '2-digit',
+                    day: '2-digit',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                });
+                doc.text(`${translations.date}: ${date}`, 14, yPos);
 
-        autoTable(doc, {
-            startY: yPos,
-            head: [[translations.metric, translations.value]],
-            body: tableBody,
-            theme: 'grid',
-            headStyles: { fillColor: [0, 0, 0], textColor: 255 },
-            styles: { fontSize: 11, cellPadding: 5 },
-            columnStyles: {
-                0: { fontStyle: 'bold', cellWidth: 80 },
-                1: { halign: 'right' }
-            }
-        });
+                // -- Results Table --
+                yPos += 15;
 
-        // -- Footer --
-        const pageCount = doc.getNumberOfPages();
-        for (let i = 1; i <= pageCount; i++) {
-            doc.setPage(i);
-            doc.setFontSize(8);
-            doc.setTextColor(150);
-            doc.text(`${translations.generatedBy} - https://plusplus.swiss`, pageWidth / 2, doc.internal.pageSize.height - 10, { align: 'center' });
-        }
+                const tableBody = [
+                    [translations.depositDate, data.depositDate],
+                    [translations.principal, `${data.principal} CHF`],
+                    [translations.timeSinceDeposit, data.timeSinceDeposit],
+                    [translations.currentValue, `${data.currentValue} CHF`],
+                    [translations.gainSinceDeposit, `${data.gain} CHF (${data.gainPercentage}%)`]
+                ];
 
-        // Save PDF
-        doc.save(`plusplus_report_${type}_${customerNumber}.pdf`);
-    };
+                if (type === 'wbtc' && data.bitcoinAmount) {
+                    tableBody.splice(4, 0, [translations.bitcoinAmount, `${data.bitcoinAmount} BTC`]);
+                    if (data.bitcoinPrice) {
+                        tableBody.splice(5, 0, [translations.bitcoinPrice, `${data.bitcoinPrice} CHF`]);
+                    }
+                }
 
-    logoImg.onerror = () => {
-        // Fallback if logo fails to load
-        console.warn('Logo failed to load for PDF');
-        // Proceed without logo or with text fallback
+                autoTable(doc, {
+                    startY: yPos,
+                    head: [[translations.metric, translations.value]],
+                    body: tableBody,
+                    theme: 'grid',
+                    headStyles: { fillColor: [0, 0, 0], textColor: 255 },
+                    styles: { fontSize: 11, cellPadding: 5 },
+                    columnStyles: {
+                        0: { fontStyle: 'bold', cellWidth: 80 },
+                        1: { halign: 'right' }
+                    }
+                });
+
+                // -- Footer --
+                const pageCount = doc.getNumberOfPages();
+                for (let i = 1; i <= pageCount; i++) {
+                    doc.setPage(i);
+                    doc.setFontSize(8);
+                    doc.setTextColor(150);
+                    doc.text(`${translations.generatedBy} - https://plusplus.swiss`, pageWidth / 2, doc.internal.pageSize.height - 10, { align: 'center' });
+                }
+
+                // Save PDF
+                doc.save(`plusplus_report_${type}_${customerNumber}.pdf`);
+            };
+        };
+        reader.readAsDataURL(blob);
+
+    } catch (error) {
+        console.error('Error loading logo:', error);
+        // Fallback without logo
         doc.setFontSize(20);
         doc.text('Plusplus AG', 14, 20);
-        // ... rest of the generation logic (duplicated for brevity, ideally refactored)
-        // For now, let's just save without logo to avoid complex callback hell in this snippet
         doc.save(`plusplus_report_${type}_${customerNumber}.pdf`);
-    };
+    }
 };

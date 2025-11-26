@@ -51,7 +51,7 @@ export default function ContractQueryPage() {
 
   // Ensure component is mounted before rendering Web3 content
   useEffect(() => {
-     
+
     setMounted(true);
   }, []);
 
@@ -252,9 +252,9 @@ export default function ContractQueryPage() {
                             variant="outline"
                             size="sm"
                             className="flex items-center gap-2 text-black bg-white border-black hover:bg-neutral-100"
-                            onClick={() => {
+                            onClick={async () => {
                               if (!zchfQuery.depositDetails) return;
-                              generateContractPdf(
+                              await generateContractPdf(
                                 'zchf',
                                 zchfCustomerNumber,
                                 {
@@ -462,9 +462,9 @@ export default function ContractQueryPage() {
                             variant="outline"
                             size="sm"
                             className="flex items-center gap-2 text-black bg-white border-black hover:bg-neutral-100"
-                            onClick={() => {
+                            onClick={async () => {
                               if (wbtcQuery.valueInSatoshis === undefined) return;
-                              generateContractPdf(
+                              await generateContractPdf(
                                 'wbtc',
                                 wbtcCustomerNumber,
                                 {
