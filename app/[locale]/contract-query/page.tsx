@@ -51,7 +51,7 @@ export default function ContractQueryPage() {
 
   // Ensure component is mounted before rendering Web3 content
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
+     
     setMounted(true);
   }, []);
 
@@ -241,7 +241,7 @@ export default function ContractQueryPage() {
                       </div>
                     )}
 
-                    {zchfQuery.depositDetails && !zchfQuery.isLoading && (
+                    {zchfQuery.depositDetails && zchfQuery.depositDetails.initialAmount > 0n && !zchfQuery.isLoading && (
                       <div className="space-y-6">
                         <div className="flex items-center justify-between mb-4">
                           <div className="flex items-center gap-2">
@@ -375,9 +375,9 @@ export default function ContractQueryPage() {
                       </div>
                     )}
 
-                    {!zchfQuery.isLoading && !zchfQuery.isError && !zchfQuery.depositDetails && zchfAddress && (
-                      <div className="flex items-center justify-center p-8 text-neutral-dark">
-                        <span className="font-secondary">No deposit details found for this address</span>
+                    {!zchfQuery.isLoading && !zchfQuery.isError && (!zchfQuery.depositDetails || zchfQuery.depositDetails.initialAmount === 0n) && zchfAddress && (
+                      <div className="text-xs text-red-600 mt-2 font-secondary text-center">
+                        {t('contractQuery.actions.invalidCustomerNumber')}
                       </div>
                     )}
                   </div>
@@ -445,13 +445,13 @@ export default function ContractQueryPage() {
                         <div>
                           <p className="font-medium text-red-900 font-secondary">Error</p>
                           <p className="text-sm text-red-800 font-secondary">
-                            {wbtcQuery.error?.message || 'Failed to convert WBTC to CHF'}
+                            {wbtcQuery.error?.message || 'Failed to fetch deposit details'}
                           </p>
                         </div>
                       </div>
                     )}
 
-                    {wbtcQuery.valueInSatoshis !== undefined && !wbtcQuery.isLoading && (
+                    {wbtcQuery.valueInSatoshis !== undefined && wbtcQuery.valueInSatoshis > 0n && !wbtcQuery.isLoading && (
                       <div className="space-y-6">
                         <div className="flex items-center justify-between mb-4">
                           <div className="flex items-center gap-2">
@@ -461,7 +461,7 @@ export default function ContractQueryPage() {
                           <Button
                             variant="outline"
                             size="sm"
-                            className="flex items-center gap-2 text-white bg-black hover:bg-neutral-dark border-black"
+                            className="flex items-center gap-2 text-black bg-white border-black hover:bg-neutral-100"
                             onClick={() => {
                               if (wbtcQuery.valueInSatoshis === undefined) return;
                               generateContractPdf(
@@ -613,9 +613,9 @@ export default function ContractQueryPage() {
                       </div>
                     )}
 
-                    {!wbtcQuery.isLoading && !wbtcQuery.isError && wbtcQuery.valueInSatoshis === undefined && wbtcQueryAmount && (
-                      <div className="flex items-center justify-center p-8 text-neutral-dark">
-                        <span className="font-secondary">No deposit value found for this address</span>
+                    {!wbtcQuery.isLoading && !wbtcQuery.isError && (wbtcQuery.valueInSatoshis === undefined || wbtcQuery.valueInSatoshis === 0n) && wbtcQueryAmount && (
+                      <div className="text-xs text-red-600 mt-2 font-secondary text-center">
+                        {t('contractQuery.actions.invalidCustomerNumber')}
                       </div>
                     )}
                   </div>
