@@ -54,6 +54,23 @@ class MockFileReader {
 }
 global.FileReader = MockFileReader as unknown as typeof FileReader;
 
+// Mock document.createElement for canvas
+const mockContext = {
+    drawImage: vi.fn(),
+};
+const mockCanvas = {
+    getContext: vi.fn(() => mockContext),
+    toDataURL: vi.fn(() => 'data:image/png;base64,resized-fake-data'),
+    width: 0,
+    height: 0,
+};
+global.document = {
+    createElement: vi.fn((tag) => {
+        if (tag === 'canvas') return mockCanvas;
+        return {};
+    }),
+} as unknown as Document;
+
 describe('generateContractPdf', () => {
     const mockTranslations = {
         title: 'Account Balance',

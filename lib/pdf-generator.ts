@@ -64,11 +64,37 @@ export const generateContractPdf = async (
             const img = new Image();
             img.src = base64data;
             img.onload = () => {
-                const logoWidth = 40;
-                const logoHeight = (img.height / img.width) * logoWidth;
+                let finalData = base64data;
+                let finalWidth = img.width;
+                let finalHeight = img.height;
 
-                // Use the base64 data directly
-                doc.addImage(base64data, 'PNG', 14, 10, logoWidth, logoHeight);
+                // Resize image if it's too large (to avoid 12MB+ PDFs due to raw pixel embedding)
+                const MAX_WIDTH = 600;
+                if (img.width > MAX_WIDTH) {
+                    try {
+                        const canvas = document.createElement('canvas');
+                        const ctx = canvas.getContext('2d');
+                        if (ctx) {
+                            const scale = MAX_WIDTH / img.width;
+                            finalWidth = MAX_WIDTH;
+                            finalHeight = img.height * scale;
+
+                            canvas.width = finalWidth;
+                            canvas.height = finalHeight;
+
+                            ctx.drawImage(img, 0, 0, finalWidth, finalHeight);
+                            finalData = canvas.toDataURL('image/png');
+                        }
+                    } catch (e) {
+                        console.warn('Failed to resize image, using original:', e);
+                    }
+                }
+
+                const logoWidth = 40;
+                const logoHeight = (finalHeight / finalWidth) * logoWidth;
+
+                // Use the (potentially resized) base64 data
+                doc.addImage(finalData, 'PNG', 14, 10, logoWidth, logoHeight);
 
                 // Add Address (Right aligned)
                 doc.setFontSize(10);
