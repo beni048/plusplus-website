@@ -14,10 +14,10 @@ export default function GoogleAnalytics() {
     // In development: automatically tracked (no consent needed)
     // In production: only tracked after user accepts cookies
     const isProduction = process.env.NODE_ENV === 'production';
-    
+
     if (isProduction && !isAnalyticsEnabled()) return;
     if (!GA_TRACKING_ID || typeof window.gtag === 'undefined') return;
-    
+
     trackPageView(pathname);
   }, [pathname]);
 
@@ -26,40 +26,34 @@ export default function GoogleAnalytics() {
     return null;
   }
 
-  const handleScriptLoad = () => {
-    try {
-      if (typeof window === 'undefined') return;
-
-      window.dataLayer = window.dataLayer || [];
-      
-      window.gtag = function gtag(...args: unknown[]) {
-        if (window.dataLayer) {
-          window.dataLayer.push(args);
-        }
-      };
-      
-      window.gtag('js', new Date());
-      
-      // In development, allow analytics by default for testing
-      // In production, deny by default and require user consent
-      const isProduction = process.env.NODE_ENV === 'production';
-      window.gtag('consent', 'default', {
-        'analytics_storage': isProduction ? 'denied' : 'granted',
-      });
-      
-      window.gtag('config', GA_TRACKING_ID, {
-        send_page_view: false,
-      });
-    } catch (error) {
-      console.error('Error initializing Google Analytics:', error);
-    }
-  };
-
   return (
-    <Script
-      src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-      strategy="lazyOnload"
-      onLoad={handleScriptLoad}
-    />
+    <>
+      <Script
+        id="gtag-init"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            // In development, allow analytics by default for testing
+            // In production, deny by default and require user consent
+            var isProduction = '${process.env.NODE_ENV}' === 'production';
+            gtag('consent', 'default', {
+              'analytics_storage': isProduction ? 'denied' : 'granted',
+            });
+            
+            gtag('config', '${GA_TRACKING_ID}', {
+              send_page_view: false,
+            });
+          `,
+        }}
+      />
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+        strategy="afterInteractive"
+      />
+    </>
   );
 }

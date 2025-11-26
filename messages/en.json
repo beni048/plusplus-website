@@ -29,8 +29,7 @@
     "partners": {
       "title": "Partners",
       "paragraph1": "Our partners are among the leading providers in financial technology and digital infrastructure.",
-      "paragraph2": "Together, we ensure that all systems meet the highest standards in security, compliance, and transparency."
-      ,
+      "paragraph2": "Together, we ensure that all systems meet the highest standards in security, compliance, and transparency.",
       "descriptions": {
         "zinsli": "Swiss marketplace for rental deposit solutions",
         "frankencoin": "Decentralized Swiss Franc stablecoin",
@@ -54,12 +53,12 @@
     "stablecoin": {
       "label": "Stablecoin",
       "inputLabel": "Plusplus or Zinsli customer number",
-      "inputDescription": "Enter your customer number to check the status of your stablecoin deposit"
+      "inputDescription": "Enter your customer number to check the status of your stablecoin account"
     },
     "bitcoin": {
       "label": "Bitcoin",
       "inputLabel": "Plusplus or Zinsli customer number",
-      "inputDescription": "Enter your customer number to check the status of your Bitcoin deposit"
+      "inputDescription": "Enter your customer number to check the status of your Bitcoin account"
     },
     "fields": {
       "depositDate": "Deposit Date",
@@ -74,6 +73,7 @@
       "querySuccessful": "Query Successful",
       "invalidCustomerNumber": "Please enter a valid customer number"
     },
+    "customerNumberInfo": "For Plusplus customers: You can find your customer number in your account opening confirmation email.\n\nFor Zinsli customers: Log in to https://app.zinsli.com, select your deposit, go to \"Documents\" -> \"PDF Datasheet\", and look for \"Zinsli Collateral ID\".",
     "contractInfo": {
       "address": "Address",
       "viewOnEtherscan": "View on Etherscan"
@@ -347,8 +347,7 @@
     "year": "Year",
     "bitcoinWarning": "Historical Bitcoin Data: Bitcoin calculations are based on actual monthly opening prices from October 2009 to October 2025 and illustrate real historical volatility of Bitcoin, including significant price declines and increases.",
     "stablecoinWarning": "Historical Data: The illustrated returns for CHF-Stablecoin are based on historical performance data and represent a visualization of the past. They do not guarantee and are not a prediction of future performance.",
-    "disclaimer": "Legal Disclaimer: The calculations presented are based on market data as of October 2025 and are provided for informational and illustrative purposes only. They do not constitute financial advice, investment recommendations, or representations about future results. All calculated values depend on the deposit amount used and holding period and may differ materially. Actual returns, interest rates, and fees may change. For CHF-Stablecoin products: The illustrated returns are based on historical data and are not a guarantee or forecast of future performance. Bitcoin: Calculations use historical monthly price data (1 year = Oct 2024–Oct 2025, max 16 years = Oct 2009–Oct 2025) and illustrate historical volatility only, not future development. Deposit Account (0.25%), Deposit Insurance (-4.5%), CHF-Stablecoin (3%, historically 3-5%). All products are subject to market risks. Prior to entering into a deposit obligation, you should seek professional legal and financial advice."
-    ,
+    "disclaimer": "Legal Disclaimer: The calculations presented are based on market data as of October 2025 and are provided for informational and illustrative purposes only. They do not constitute financial advice, investment recommendations, or representations about future results. All calculated values depend on the deposit amount used and holding period and may differ materially. Actual returns, interest rates, and fees may change. For CHF-Stablecoin products: The illustrated returns are based on historical data and are not a guarantee or forecast of future performance. Bitcoin: Calculations use historical monthly price data (1 year = Oct 2024–Oct 2025, max 16 years = Oct 2009–Oct 2025) and illustrate historical volatility only, not future development. Deposit Account (0.25%), Deposit Insurance (-4.5%), CHF-Stablecoin (3%, historically 3-5%). All products are subject to market risks. Prior to entering into a deposit obligation, you should seek professional legal and financial advice.",
     "products": {
       "kautionskonto": "Deposit Account",
       "bitcoinDeposit": "Bitcoin",

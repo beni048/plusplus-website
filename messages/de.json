@@ -29,8 +29,7 @@
     "partners": {
       "title": "Partner",
       "paragraph1": "Unsere Partner gehören zu den führenden Anbietern im Bereich Finanztechnologie und digitaler Infrastruktur.",
-      "paragraph2": "Gemeinsam stellen wir sicher, dass alle Systeme höchsten Standards in Sicherheit, Compliance und Transparenz entsprechen."
-      ,
+      "paragraph2": "Gemeinsam stellen wir sicher, dass alle Systeme höchsten Standards in Sicherheit, Compliance und Transparenz entsprechen.",
       "descriptions": {
         "zinsli": "Schweizer Marktplatz für Mietkautionslösungen",
         "frankencoin": "Dezentraler Schweizer Franken Stablecoin",
@@ -54,12 +53,12 @@
     "stablecoin": {
       "label": "Stablecoin",
       "inputLabel": "Plusplus oder Zinsli Kundennummer",
-      "inputDescription": "Geben Sie die Kundennummer ein, um die Entwicklung Ihrer Stablecoin-Kaution abzufragen"
+      "inputDescription": "Geben Sie die Kundennummer ein, um die Entwicklung Ihres Stablecoin-Kontos abzufragen"
     },
     "bitcoin": {
       "label": "Bitcoin",
       "inputLabel": "Plusplus oder Zinsli Kundennummer",
-      "inputDescription": "Geben Sie die Kundennummer ein, um die Entwicklung Ihrer Bitcoin-Kaution abzufragen"
+      "inputDescription": "Geben Sie die Kundennummer ein, um die Entwicklung Ihres Bitcoin-Kontos abzufragen"
     },
     "fields": {
       "depositDate": "Einzahlungsdatum",
@@ -74,6 +73,7 @@
       "querySuccessful": "Abfrage erfolgreich",
       "invalidCustomerNumber": "Bitte geben Sie eine gültige Kundennummer ein"
     },
+    "customerNumberInfo": "Für Plusplus-Kunden: Sie finden Ihre Kundennummer in der Bestätigungs-E-Mail zur Kontoeröffnung.\n\nFür Zinsli-Kunden: Loggen Sie sich auf https://app.zinsli.com ein, wählen Sie Ihre Kaution, gehen Sie zu \"Unterlagen\" -> \"PDF-Datenblatt\" und suchen Sie nach \"Zinsli Kautions-ID\".",
     "contractInfo": {
       "address": "Adresse",
       "viewOnEtherscan": "Auf Etherscan anzeigen"
@@ -347,8 +347,7 @@
     "year": "Jahr",
     "bitcoinWarning": "Historische Bitcoin-Daten: Bitcoin-Berechnungen basieren auf tatsächlichen monatlichen Eröffnungspreisen von Oktober 2009 bis Oktober 2025 und zeigen die echte historische Volatilität des Bitcoin, einschliesslich erheblicher Preisrückgänge und Kursanstiege.",
     "stablecoinWarning": "Historische Daten: Die dargestellten Erträge für CHF-Stablecoin basieren auf historischen Leistungsdaten und sind eine Visualisierung der Vergangenheit. Sie garantieren nicht und sind keine Vorhersage für zukünftige Wertentwicklung.",
-    "disclaimer": "Rechtlicher Hinweis: Die dargestellten Berechnungen basieren auf Marktdaten vom Oktober 2025 und dienen ausschliesslich zu Informations- und Illustrationszwecken. Sie stellen keine Finanzberatung, Anlageempfehlung oder Zusicherung zukünftiger Ergebnisse dar. Alle berechneten Werte sind abhängig vom verwendeten Kautionsbetrag und der Laufzeit und können wesentlich abweichen. Tatsächliche Renditen, Zinssätze und Gebühren können sich ändern. Für CHF-Stablecoin-Produkte: Die dargestellten Erträge basieren auf historischen Daten und sind keine Garantie oder Vorhersage für zukünftige Wertentwicklung. Bitcoin: Berechnungen nutzen historische monatliche Kursdaten (1 Jahr = Okt 2024–Okt 2025, max. 16 Jahre = Okt 2009–Okt 2025) und veranschaulichen nur historische Volatilität, nicht zukünftige Entwicklung. Kautionskonto (0,25%), Kautionsversicherung (-4,5%), CHF-Stablecoin (3%, historisch 3-5%). Alle Produkte unterliegen Marktrisiken. Vor dem Eingehen einer Kautionsverpflichtung sollten Sie rechtliche und finanzielle Beratung einholen."
-    ,
+    "disclaimer": "Rechtlicher Hinweis: Die dargestellten Berechnungen basieren auf Marktdaten vom Oktober 2025 und dienen ausschliesslich zu Informations- und Illustrationszwecken. Sie stellen keine Finanzberatung, Anlageempfehlung oder Zusicherung zukünftiger Ergebnisse dar. Alle berechneten Werte sind abhängig vom verwendeten Kautionsbetrag und der Laufzeit und können wesentlich abweichen. Tatsächliche Renditen, Zinssätze und Gebühren können sich ändern. Für CHF-Stablecoin-Produkte: Die dargestellten Erträge basieren auf historischen Daten und sind keine Garantie oder Vorhersage für zukünftige Wertentwicklung. Bitcoin: Berechnungen nutzen historische monatliche Kursdaten (1 Jahr = Okt 2024–Okt 2025, max. 16 Jahre = Okt 2009–Okt 2025) und veranschaulichen nur historische Volatilität, nicht zukünftige Entwicklung. Kautionskonto (0,25%), Kautionsversicherung (-4,5%), CHF-Stablecoin (3%, historisch 3-5%). Alle Produkte unterliegen Marktrisiken. Vor dem Eingehen einer Kautionsverpflichtung sollten Sie rechtliche und finanzielle Beratung einholen.",
     "products": {
       "kautionskonto": "Kautionskonto",
       "bitcoinDeposit": "Bitcoin",
