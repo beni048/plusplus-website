@@ -4,12 +4,14 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
+import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Navbar() {
   const t = useTranslations('nav');
   const locale = useLocale();
+  const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -19,6 +21,8 @@ export default function Navbar() {
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
   };
+
+  const isActive = (path: string) => pathname === path;
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm shadow-sm">
@@ -46,21 +50,40 @@ export default function Navbar() {
             <div className="flex items-center space-x-6">
               {/* <Link
                 href={`/${locale}/rental-solutions/select`}
-                className="text-black hover:text-accent-red font-primary font-medium transition-colors"
+                className={`font-primary font-medium transition-colors ${
+                  isActive(`/${locale}/rental-solutions/select`)
+                    ? 'text-accent-red'
+                    : 'text-black hover:text-accent-red'
+                }`}
               >
                 {t('rentalSolutions')}
               </Link> */}
               <Link
                 href={`/${locale}/corporate-treasury`}
-                className="text-black hover:text-accent-red font-primary font-medium transition-colors"
+                className={`font-primary font-medium transition-colors ${isActive(`/${locale}/corporate-treasury`)
+                    ? 'text-accent-red'
+                    : 'text-black hover:text-accent-red'
+                  }`}
               >
                 {t('corporateTreasury')}
               </Link>
               <Link
                 href={`/${locale}/contact`}
-                className="text-black hover:text-accent-red font-primary font-medium transition-colors"
+                className={`font-primary font-medium transition-colors ${isActive(`/${locale}/contact`)
+                    ? 'text-accent-red'
+                    : 'text-black hover:text-accent-red'
+                  }`}
               >
                 {t('contact')}
+              </Link>
+              <Link
+                href={`/${locale}/contract-query`}
+                className={`font-primary font-medium transition-colors ${isActive(`/${locale}/contract-query`)
+                    ? 'text-accent-red'
+                    : 'text-black hover:text-accent-red'
+                  }`}
+              >
+                {t('checkBalance')}
               </Link>
             </div>
 
@@ -89,24 +112,44 @@ export default function Navbar() {
             <div className="px-4 py-6 space-y-4">
               {/* <Link
                 href={`/${locale}/rental-solutions/select`}
-                className="block text-black hover:text-accent-red font-primary font-medium transition-colors py-2"
+                className={`block font-primary font-medium transition-colors py-2 ${
+                  isActive(`/${locale}/rental-solutions/select`)
+                    ? 'text-accent-red'
+                    : 'text-black hover:text-accent-red'
+                }`}
                 onClick={closeMobileMenu}
               >
                 {t('rentalSolutions')}
               </Link> */}
               <Link
                 href={`/${locale}/corporate-treasury`}
-                className="block text-black hover:text-accent-red font-primary font-medium transition-colors py-2"
+                className={`block font-primary font-medium transition-colors py-2 ${isActive(`/${locale}/corporate-treasury`)
+                    ? 'text-accent-red'
+                    : 'text-black hover:text-accent-red'
+                  }`}
                 onClick={closeMobileMenu}
               >
                 {t('corporateTreasury')}
               </Link>
               <Link
                 href={`/${locale}/contact`}
-                className="block text-black hover:text-accent-red font-primary font-medium transition-colors py-2"
+                className={`block font-primary font-medium transition-colors py-2 ${isActive(`/${locale}/contact`)
+                    ? 'text-accent-red'
+                    : 'text-black hover:text-accent-red'
+                  }`}
                 onClick={closeMobileMenu}
               >
                 {t('contact')}
+              </Link>
+              <Link
+                href={`/${locale}/contract-query`}
+                className={`block font-primary font-medium transition-colors py-2 ${isActive(`/${locale}/contract-query`)
+                    ? 'text-accent-red'
+                    : 'text-black hover:text-accent-red'
+                  }`}
+                onClick={closeMobileMenu}
+              >
+                {t('checkBalance')}
               </Link>
               <div className="pt-4 border-t border-gray-200">
                 <LanguageSwitcher sourceContext="navbar" mobile />

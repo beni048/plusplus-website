@@ -2,7 +2,8 @@
   "nav": {
     "rentalSolutions": "Rental Solutions",
     "corporateTreasury": "Corporate Treasury",
-    "contact": "Contact"
+    "contact": "Contact",
+    "checkBalance": "Check Balance"
   },
   "hero": {
     "title": {
@@ -100,7 +101,6 @@
     "privacySettings": "Privacy Settings",
     "impressum": "Imprint",
     "terms": "Terms & Conditions",
-    "checkBalance": "Check Balance",
     "help": "FAQ"
   },
   "cookies": {
