@@ -75,7 +75,7 @@ export default function Home() {
               <p className="font-secondary text-base text-white/90 mb-6 leading-relaxed">
                 {t('hero.subtitle')}
               </p>
-              <Link href={`/${locale}/select`}>
+              <Link href={`/${locale}/corporate-treasury`}>
                 <Button className="bg-accent-red text-white px-6 py-3 text-base hover:bg-accent-red/90 group transition-all duration-300 font-primary">
                   {t('hero.cta')}
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -95,7 +95,7 @@ export default function Home() {
                   {t('hero.subtitle')}
                 </p>
                 <div className="mt-8">
-                  <Link href={`/${locale}/select`}>
+                  <Link href={`/${locale}/corporate-treasury`}>
                     <Button className="bg-accent-red text-white px-6 py-3 md:px-8 md:py-4 text-lg shadow-lg hover:bg-accent-red/90 group transition-all duration-300 font-primary">
                       {t('hero.cta')}
                       <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -108,11 +108,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Rental Solutions Section */}
+      {/* Rental Solutions Section
       <section id="rental-solutions" className="bg-neutral-white py-24">
         <div className="container mx-auto px-4">
           <div className="grid gap-12 lg:grid-cols-2 items-center">
-            {/* Text Left */}
             <div className="space-y-6">
               <h2 className="text-4xl font-primary font-medium text-black">
                 {t('mainSections.rentalSolutions.title')}
@@ -133,7 +132,6 @@ export default function Home() {
               </div>
             </div>
             
-            {/* Image Right */}
             <div className="relative aspect-[4/3] w-full">
               <Image
                 src="/images/collection_v2/eric-weber-_wB88hxsW8M-unsplash.jpg"
@@ -146,7 +144,6 @@ export default function Home() {
                 placeholder="blur"
                 blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
               />
-              {/* Discrete photo credit */}
               <div className="absolute bottom-2 right-2 text-[10px] text-white/40 font-secondary">
                 Eric Weber
               </div>
@@ -154,6 +151,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      */}
 
       {/* Corporate Treasury Section */}
       <section id="corporate-treasury" className="bg-neutral-light py-24">
@@ -177,7 +175,7 @@ export default function Home() {
                 Florian Schmid
               </div>
             </div>
-            
+
             {/* Text Right */}
             <div className="space-y-6 order-1 lg:order-2">
               <h2 className="text-4xl font-primary font-medium text-black">
@@ -221,7 +219,7 @@ export default function Home() {
                 {t('mainSections.partners.paragraph2')}
               </p>
             </div>
-            
+
             {/* Partners Collection Right */}
             {/* Mobile: Horizontal scroll, Desktop: Grid with hover descriptions */}
             <div className="md:grid md:gap-4 md:grid-cols-2 lg:grid-cols-4 hidden md:block">
@@ -293,7 +291,7 @@ export default function Home() {
                         {partner.name}
                       </h3>
                     </div>
-                    
+
                     {/* Description - appears on hover */}
                     <div className="absolute inset-0 p-4 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-primary-teal/5 to-primary-teal/10">
                       <p className="text-xs text-center text-neutral-dark font-secondary line-clamp-3">
@@ -304,7 +302,7 @@ export default function Home() {
                 </a>
               ))}
             </div>
-            
+
             {/* Mobile: Auto-scrolling carousel */}
             <div className="md:hidden overflow-hidden">
               <div className="partners-carousel">

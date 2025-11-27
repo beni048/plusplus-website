@@ -24,8 +24,8 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link 
-            href={`/${locale}`} 
+          <Link
+            href={`/${locale}`}
             className="flex items-center"
             onClick={closeMobileMenu}
           >
@@ -39,34 +39,34 @@ export default function Navbar() {
               quality={100}
             />
           </Link>
-          
+
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center">
             {/* Navigation Links */}
             <div className="flex items-center space-x-6">
-              <Link 
-                href={`/${locale}/rental-solutions/select`} 
+              {/* <Link
+                href={`/${locale}/rental-solutions/select`}
                 className="text-black hover:text-accent-red font-primary font-medium transition-colors"
               >
                 {t('rentalSolutions')}
-              </Link>
-              <Link 
-                href={`/${locale}/corporate-treasury`} 
+              </Link> */}
+              <Link
+                href={`/${locale}/corporate-treasury`}
                 className="text-black hover:text-accent-red font-primary font-medium transition-colors"
               >
                 {t('corporateTreasury')}
               </Link>
-              <Link 
-                href={`/${locale}/contact`} 
+              <Link
+                href={`/${locale}/contact`}
                 className="text-black hover:text-accent-red font-primary font-medium transition-colors"
               >
                 {t('contact')}
               </Link>
             </div>
-            
+
             {/* Separator */}
             <div className="h-6 w-px bg-gray-300 mx-6"></div>
-            
+
             {/* Language Switcher */}
             <div className="hidden sm:block">
               <LanguageSwitcher sourceContext="navbar" />
@@ -87,22 +87,22 @@ export default function Navbar() {
         {isMobileMenuOpen && (
           <div className="lg:hidden bg-white/95 backdrop-blur-sm border-t border-gray-200">
             <div className="px-4 py-6 space-y-4">
-              <Link 
-                href={`/${locale}/rental-solutions/select`} 
+              {/* <Link
+                href={`/${locale}/rental-solutions/select`}
                 className="block text-black hover:text-accent-red font-primary font-medium transition-colors py-2"
                 onClick={closeMobileMenu}
               >
                 {t('rentalSolutions')}
-              </Link>
-              <Link 
-                href={`/${locale}/corporate-treasury`} 
+              </Link> */}
+              <Link
+                href={`/${locale}/corporate-treasury`}
                 className="block text-black hover:text-accent-red font-primary font-medium transition-colors py-2"
                 onClick={closeMobileMenu}
               >
                 {t('corporateTreasury')}
               </Link>
-              <Link 
-                href={`/${locale}/contact`} 
+              <Link
+                href={`/${locale}/contact`}
                 className="block text-black hover:text-accent-red font-primary font-medium transition-colors py-2"
                 onClick={closeMobileMenu}
               >

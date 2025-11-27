@@ -13,31 +13,31 @@ function SupportAnswer() {
     return (
       <div className="text-lg text-neutral-dark leading-relaxed">
         Der Einstieg ist einfach! <strong>Für Mietlösungen:</strong> Kontaktieren Sie Ihren Vermieter und bitten Sie ihn, den Prozess mit{' '}
-        <a 
-          href="https://zinsli.com" 
-          target="_blank" 
-          rel="noopener noreferrer" 
+        <a
+          href="https://zinsli.com"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-black underline hover:text-accent-red transition-colors"
         >
           Zinsli
         </a>{' '}
         zu initiieren, um unsere WBTC- und ZCHF-basierten Kautionsprodukte für Ihre Mietkaution zu nutzen. Für Vermieter: Wenden Sie sich direkt an Zinsli, um diese innovativen Kautionslösungen Ihren Mietern anzubieten. <strong>Für Corporate Treasury:</strong> Unternehmen können direkt mit unserem Vertriebsteam sprechen, um Liquiditätslösungen zu erkunden. <strong>Haben Sie Fragen?</strong> Unser Schweizer Team steht gerne zur Verfügung. Kontaktieren Sie uns unter{' '}
-        <a 
-          href="mailto:info@plusplus.swiss" 
+        <a
+          href="mailto:info@plusplus.swiss"
           className="text-black underline hover:text-accent-red transition-colors"
         >
           info@plusplus.swiss
         </a>{' '}
-      oder{' '}
-      <a 
-        href="https://meetings-eu1.hubspot.com/jonas-waelti?uuid=907baac1-ae5e-422b-9703-6d822d374dbe" 
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-black underline hover:text-accent-red transition-colors"
-      >
-        buchen Sie ein 30-minütiges Gespräch mit unserem Vertriebsleiter
-      </a>
-      {' '}um zu starten.
+        oder{' '}
+        <a
+          href="https://meetings-eu1.hubspot.com/jonas-waelti?uuid=907baac1-ae5e-422b-9703-6d822d374dbe"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-black underline hover:text-accent-red transition-colors"
+        >
+          buchen Sie ein 30-minütiges Gespräch mit unserem Vertriebsleiter
+        </a>
+        {' '}um zu starten.
       </div>
     );
   }
@@ -45,24 +45,24 @@ function SupportAnswer() {
   return (
     <div className="text-lg text-neutral-dark leading-relaxed">
       Getting started is easy! <strong>For Rental Solutions:</strong> Contact your landlord and ask them to initiate the process with{' '}
-      <a 
-        href="https://zinsli.com" 
-        target="_blank" 
-        rel="noopener noreferrer" 
+      <a
+        href="https://zinsli.com"
+        target="_blank"
+        rel="noopener noreferrer"
         className="text-black underline hover:text-accent-red transition-colors"
       >
         Zinsli
       </a>{' '}
       to use our WBTC and ZCHF-based deposit products for your rental deposit. For landlords: Reach out to Zinsli directly to offer these innovative deposit solutions to your tenants. <strong>For Corporate Treasury:</strong> Companies can speak directly with our sales team to explore liquidity solutions. <strong>Have questions?</strong> Our Swiss-based team is here to help. Contact us at{' '}
-      <a 
-        href="mailto:info@plusplus.swiss" 
+      <a
+        href="mailto:info@plusplus.swiss"
         className="text-black underline hover:text-accent-red transition-colors"
       >
         info@plusplus.swiss
       </a>{' '}
       or{' '}
-      <a 
-        href="https://meetings-eu1.hubspot.com/jonas-waelti?uuid=907baac1-ae5e-422b-9703-6d822d374dbe" 
+      <a
+        href="https://meetings-eu1.hubspot.com/jonas-waelti?uuid=907baac1-ae5e-422b-9703-6d822d374dbe"
         target="_blank"
         rel="noopener noreferrer"
         className="text-black underline hover:text-accent-red transition-colors"
@@ -76,7 +76,7 @@ function SupportAnswer() {
 
 export default function HelpPage() {
   const t = useTranslations('help');
-  
+
   /* SEO: Build FAQ items from translations for dynamic schema generation */
   const faqItems = [
     { id: 'what-is-plusplus', question: t('questions.whatIs.question'), answer: t('questions.whatIs.answer') },
@@ -128,7 +128,7 @@ export default function HelpPage() {
       }
     }))
   };
-  
+
   return (
     <main className="min-h-screen bg-neutral-light pt-32 pb-24">
       {/* SEO: Inject FAQPage schema for featured snippets and SERP display */}

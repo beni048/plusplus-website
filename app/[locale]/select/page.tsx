@@ -65,9 +65,9 @@ export default function ProductSelect() {
 
           {/* Product Cards */}
           <div className="grid gap-8 md:gap-12 lg:grid-cols-2 items-stretch">
-            
+
             {/* Rental Solutions Card */}
-            <Link href={`/${locale}/rental-solutions/select`} className="group">
+            {/* <Link href={`/${locale}/rental-solutions/select`} className="group">
               <Card className="h-full overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-all duration-300 group-hover:scale-105 bg-white">
                 <div className="relative h-64 lg:h-80">
                   <Image
@@ -87,7 +87,6 @@ export default function ProductSelect() {
                       <Home className="h-8 w-8 text-white" />
                     </div>
                   </div>
-                  {/* Discrete photo credit */}
                   <div className="absolute bottom-1 right-1 text-[10px] text-white/40 font-secondary">
                     Alain Rouiller
                   </div>
@@ -105,7 +104,7 @@ export default function ProductSelect() {
                   </div>
                 </CardContent>
               </Card>
-            </Link>
+            </Link> */}
 
             {/* Corporate Treasury Card */}
             <Link href={`/${locale}/corporate-treasury`} className="group">
@@ -159,7 +158,7 @@ export default function ProductSelect() {
             <p className="text-lg leading-relaxed text-neutral-dark mb-8 font-secondary">
               {t('contact.question')}
             </p>
-            <Button 
+            <Button
               className="bg-accent-red text-white px-8 py-4 text-lg hover:bg-accent-red/90 group transition-all duration-300 font-primary"
               onClick={() => window.location.href = `/${locale}/contact`}
             >
