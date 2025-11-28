@@ -31,6 +31,10 @@ export default function JotFormEmbed() {
     }, []);
 
     return (
-        <div ref={containerRef} className="w-full min-h-[500px]" />
+        <div className="relative w-full">
+            <div ref={containerRef} className="w-full min-h-[500px]" />
+            {/* Overlay to hide JotForm branding */}
+            <div className="absolute bottom-0 left-0 w-full h-[60px] bg-neutral-white z-10 pointer-events-none" />
+        </div>
     );
 }
