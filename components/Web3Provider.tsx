@@ -1,7 +1,7 @@
 'use client';
 
 import { ReactNode } from 'react';
-import { WagmiProvider, createConfig, http } from 'wagmi';
+import { WagmiProvider, createConfig, http, fallback } from 'wagmi';
 import { mainnet } from 'wagmi/chains';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
@@ -9,7 +9,12 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 const wagmiConfig = createConfig({
   chains: [mainnet],
   transports: {
-    [mainnet.id]: http('https://eth.llamarpc.com'),
+    [mainnet.id]: fallback([
+      http('https://eth.llamarpc.com'),
+      http('https://rpc.flashbots.net'),
+      http('https://1rpc.io/eth'),
+      http('https://rpc.mevblocker.io'),
+    ], { rank: true }),
   },
   ssr: true,
 });

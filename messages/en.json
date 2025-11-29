@@ -79,7 +79,13 @@
       "address": "Address",
       "viewOnEtherscan": "View on Etherscan"
     },
-    "dataSources": "Data Sources: Bitcoin price data provided by CoinGecko. Historical prices used for principal calculations."
+    "dataSources": "Data Sources: Bitcoin price data provided by CoinGecko. Historical prices used for principal calculations.",
+    "errors": {
+      "networkBusy": "The network is currently busy. Please try again later.",
+      "timeout": "The request took too long to respond. Please try again.",
+      "generic": "An error occurred while fetching your data. Please try again.",
+      "retry": "Retry"
+    }
   },
   "contact": {
     "title": "Get in Touch",

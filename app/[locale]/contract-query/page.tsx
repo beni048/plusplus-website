@@ -10,7 +10,7 @@ import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Loader2, AlertCircle, CheckCircle, Download, Info } from 'lucide-react';
+import { Loader2, AlertCircle, CheckCircle, Download, Info, RefreshCw } from 'lucide-react';
 import {
   Popover,
   PopoverContent,
@@ -227,16 +227,25 @@ export default function ContractQueryPage() {
                       <div className="flex items-start gap-3 p-4 bg-red-50 border border-red-200 rounded-lg">
                         <AlertCircle className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
                         <div className="flex-1">
-                          <p className="font-medium text-red-900 font-secondary">Error</p>
+                          <p className="font-medium text-red-900 font-secondary">
+                            {zchfQuery.error?.message?.toLowerCase().includes('timeout') || zchfQuery.error?.message?.toLowerCase().includes('network')
+                              ? t('contractQuery.errors.networkBusy')
+                              : zchfQuery.error?.message?.toLowerCase().includes('fetch failed')
+                                ? t('contractQuery.errors.timeout')
+                                : t('contractQuery.errors.generic')}
+                          </p>
                           <p className="text-sm text-red-800 font-secondary mt-1">
                             {zchfQuery.error?.message || 'Failed to fetch deposit details'}
                           </p>
-                          {zchfQuery.error && typeof zchfQuery.error === 'object' && 'cause' in zchfQuery.error && (
-                            <p className="text-xs text-red-700 font-mono mt-2 break-all">
-                              {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-                              Details: {String((zchfQuery.error as any).cause)}
-                            </p>
-                          )}
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="mt-3 text-red-900 border-red-200 hover:bg-red-100 hover:text-red-900"
+                            onClick={() => window.location.reload()}
+                          >
+                            <RefreshCw className="w-3 h-3 mr-2" />
+                            {t('contractQuery.errors.retry')}
+                          </Button>
                         </div>
                       </div>
                     )}
@@ -443,10 +452,25 @@ export default function ContractQueryPage() {
                       <div className="flex items-start gap-3 p-4 bg-red-50 border border-red-200 rounded-lg">
                         <AlertCircle className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
                         <div>
-                          <p className="font-medium text-red-900 font-secondary">Error</p>
+                          <p className="font-medium text-red-900 font-secondary">
+                            {wbtcQuery.error?.message?.toLowerCase().includes('timeout') || wbtcQuery.error?.message?.toLowerCase().includes('network')
+                              ? t('contractQuery.errors.networkBusy')
+                              : wbtcQuery.error?.message?.toLowerCase().includes('fetch failed')
+                                ? t('contractQuery.errors.timeout')
+                                : t('contractQuery.errors.generic')}
+                          </p>
                           <p className="text-sm text-red-800 font-secondary">
                             {wbtcQuery.error?.message || 'Failed to fetch deposit details'}
                           </p>
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="mt-3 text-red-900 border-red-200 hover:bg-red-100 hover:text-red-900"
+                            onClick={() => window.location.reload()}
+                          >
+                            <RefreshCw className="w-3 h-3 mr-2" />
+                            {t('contractQuery.errors.retry')}
+                          </Button>
                         </div>
                       </div>
                     )}

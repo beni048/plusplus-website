@@ -1,6 +1,6 @@
 'use client';
 
-import { createPublicClient, http } from 'viem';
+import { createPublicClient, http, fallback } from 'viem';
 import { mainnet } from 'viem/chains';
 import { ZCHF_MANAGER_ADDRESS, ZCHF_MANAGER_ABI } from './contracts/zchf-abi';
 import { WBTC_MANAGER_ADDRESS, WBTC_MANAGER_ABI } from './contracts/wbtc-abi';
@@ -9,7 +9,12 @@ import type { Hex } from 'viem';
 // Create a public client for reading blockchain data
 const publicClient = createPublicClient({
   chain: mainnet,
-  transport: http('https://eth.llamarpc.com'),
+  transport: fallback([
+    http('https://eth.llamarpc.com'),
+    http('https://rpc.flashbots.net'),
+    http('https://1rpc.io/eth'),
+    http('https://rpc.mevblocker.io'),
+  ], { rank: true }),
 });
 
 export interface DepositDate {
@@ -73,7 +78,7 @@ export const calculateTimeSinceDeposit = (depositTimestamp: number): { daysSince
   const now = Math.floor(Date.now() / 1000);
   const secondsSinceDeposit = now - depositTimestamp;
   const daysSinceDeposit = Math.floor(secondsSinceDeposit / (24 * 60 * 60));
-  
+
   const years = Math.floor(daysSinceDeposit / 365);
   const remainingDays = daysSinceDeposit % 365;
 
@@ -113,7 +118,7 @@ const fetchDepositDateByAddress = async (
     });
 
     const [, startTime] = result as [bigint, bigint];
-    
+
     if (startTime === BigInt(0)) {
       return null; // Deposit not found
     }

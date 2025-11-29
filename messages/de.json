@@ -79,7 +79,13 @@
       "address": "Adresse",
       "viewOnEtherscan": "Auf Etherscan anzeigen"
     },
-    "dataSources": "Datenquellen: Bitcoin-Preisdaten bereitgestellt von CoinGecko. Historische Preise für Kautionsberechnungen verwendet."
+    "dataSources": "Datenquellen: Bitcoin-Preisdaten bereitgestellt von CoinGecko. Historische Preise für Kautionsberechnungen verwendet.",
+    "errors": {
+      "networkBusy": "Das Netzwerk ist derzeit ausgelastet. Bitte versuchen Sie es später erneut.",
+      "timeout": "Die Anfrage hat zu lange gedauert. Bitte versuchen Sie es erneut.",
+      "generic": "Ein Fehler ist beim Abrufen Ihrer Daten aufgetreten. Bitte versuchen Sie es erneut.",
+      "retry": "Erneut versuchen"
+    }
   },
   "contact": {
     "title": "Kontakt aufnehmen",
