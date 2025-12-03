@@ -145,19 +145,14 @@
         - /url: https://linkedin.com/company/plusplusag
         - img [ref=e160]
   - button "Open Next.js Dev Tools" [ref=e169] [cursor=pointer]:
-    - generic [ref=e172]:
-      - text: Compiling
-      - generic [ref=e173]:
-        - generic [ref=e174]: .
-        - generic [ref=e175]: .
-        - generic [ref=e176]: .
-  - alert [ref=e177]
-  - generic [ref=e180]:
-    - paragraph [ref=e181]:
+    - img [ref=e170]
+  - alert [ref=e173]
+  - generic [ref=e176]:
+    - paragraph [ref=e177]:
       - text: We use cookies to improve your experience.
-      - link "Privacy Policy" [ref=e182] [cursor=pointer]:
+      - link "Privacy Policy" [ref=e178] [cursor=pointer]:
         - /url: /en/privacy-policy
-    - generic [ref=e183]:
-      - button "Accept All" [ref=e184] [cursor=pointer]
-      - button "Essential Only" [ref=e185] [cursor=pointer]
+    - generic [ref=e179]:
+      - button "Accept All" [ref=e180] [cursor=pointer]
+      - button "Essential Only" [ref=e181] [cursor=pointer]
 ```
