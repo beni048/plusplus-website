@@ -34,14 +34,14 @@ export default function AboutUs() {
             image: '/images/team/Roger.jpg',
             scale: 1.5,
             yOffset: '16%',
-            xOffset: '10%',
+            xOffset: '6%',
         },
         {
             id: 'andreas',
             image: '/images/team/andreas.PNG',
             scale: 2.1,
             yOffset: '26%',
-            xOffset: '15%',
+            xOffset: '3%',
         },
         {
             id: 'magdalena',
