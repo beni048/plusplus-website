@@ -14,6 +14,7 @@ export default function AboutUs() {
             scale: 1.6,
             yOffset: '11%',
             xOffset: '0%',
+            linkedin: 'https://www.linkedin.com/in/rossibeni/',
         },
         {
             id: 'matthias',
@@ -21,13 +22,15 @@ export default function AboutUs() {
             scale: 1.05,
             yOffset: '-2%',
             xOffset: '2%',
+            linkedin: 'https://www.linkedin.com/in/mat-nadler/',
         },
         {
             id: 'jonas',
-            image: null, // Placeholder
+            image: '/images/team/jonas.png',
             scale: 1,
             yOffset: '0%',
             xOffset: '0%',
+            linkedin: 'https://www.linkedin.com/in/jonas-w-791335a0/',
         },
         {
             id: 'roger',
@@ -35,6 +38,7 @@ export default function AboutUs() {
             scale: 1.5,
             yOffset: '16%',
             xOffset: '6%',
+            linkedin: 'https://www.linkedin.com/in/roger-eichenberger-1093a5105/',
         },
         {
             id: 'andreas',
@@ -42,6 +46,7 @@ export default function AboutUs() {
             scale: 2.1,
             yOffset: '26%',
             xOffset: '3%',
+            linkedin: 'https://www.linkedin.com/in/andreas-b%C3%BChler-6530a52a/',
         },
         {
             id: 'magdalena',
@@ -49,6 +54,7 @@ export default function AboutUs() {
             scale: 1.5,
             yOffset: '16%',
             xOffset: '0%',
+            linkedin: 'https://www.linkedin.com/in/magdalena-bo%C5%A1ki%C4%87-446951a9/',
         },
     ];
 
@@ -67,7 +73,7 @@ export default function AboutUs() {
 
                     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                         {teamMembers.map((member) => (
-                            <Card key={member.id} className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center p-6">
+                            <Card key={member.id} className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center p-6 h-full">
                                 <div className="relative w-48 h-48 mb-6 overflow-hidden rounded-full bg-gray-200 shadow-md">
                                     {member.image ? (
                                         <Image
@@ -86,7 +92,7 @@ export default function AboutUs() {
                                         </div>
                                     )}
                                 </div>
-                                <div className="text-left w-full">
+                                <div className="flex-grow">
                                     <h3 className="text-xl font-primary font-bold text-black mb-2 text-center">
                                         {t(`team.${member.id}.name`)}
                                     </h3>
@@ -97,11 +103,23 @@ export default function AboutUs() {
                                         {t(`team.${member.id}.description`)}
                                     </p>
                                 </div>
+                                {member.linkedin && (
+                                    <div className="w-full flex justify-end mt-4">
+                                        <a
+                                            href={member.linkedin}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-black hover:text-neutral-dark font-medium inline-block text-sm"
+                                        >
+                                            {t('linkedinProfile')} ↗
+                                        </a>
+                                    </div>
+                                )}
                             </Card>
                         ))}
                     </div>
                 </div>
             </div>
-        </main>
+        </main >
     );
 }

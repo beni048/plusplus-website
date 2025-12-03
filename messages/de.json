@@ -26,30 +26,31 @@
       },
       "matthias": {
         "name": "Matthias Nadler",
-        "role": "Chief Technology Officer",
+        "role": "Co-Founder & CTO",
         "description": "PhD in Decentralized Finance (bei Prof. Fabian Schär, Uni Basel), Publikationen u.a. mit Vitalik Buterin als Co-Author, Blockchain-Entwicklung, Smart-Contract Infrastruktur"
       },
       "jonas": {
         "name": "Jonas Wälti",
-        "role": "Co-Founder & Advisor",
-        "description": "Serienunternehmer, Relai-Investor (Bitcoin-App), erfolgreiche Exits, Schweizer Fintech- & Krypto-Ökosystem-Netzwerk, Partnerschaften & Investor Relations"
+        "role": "Advisor & Investor",
+        "description": "Relai Investor & Advisor, 15 years B2B Sales experience, Swiss Fintech & Crypto Ecosystem Network, Partnerships & Investor Relations"
       },
       "roger": {
         "name": "Roger Eichenberger",
-        "role": "Verwaltungsratsmitglied & Lead Investor",
+        "role": "VR-Mitglied & Lead Investor",
         "description": "Senior Partner bei Helvetic Trust, 13+ Jahre Private Banking Credit Suisse, TradFi-DeFi-Brücke, regulatorische Compliance, institutionelle Partnerschaften"
       },
       "andreas": {
         "name": "Andreas Bühler",
-        "role": "Verwaltungsratsmitglied",
+        "role": "VR-Mitglied",
         "description": "Anwalt, CIIA/CEFA, spezialisiert auf Finanzmarktregulierung und Infrastruktur-Investments"
       },
       "magdalena": {
         "name": "Magdalena Boškić",
         "role": "Advisorin",
-        "description": "Crypto-Compliance-Expertin, Of Counsel bei Kellerhals Carrard, ex-Head RegTech & Compliance bei Sygnum und Crypto Finance, PhD-Kandidatin & Course Director an der Uni Zürich, Chair AML Committee CMTA."
+        "description": "Crypto-Compliance-Expertin, Of Counsel bei Kellerhals Carrard, ex-Head RegTech & Compliance bei Sygnum und Crypto Finance, PhD-Kandidatin & Course Director an der Uni Zürich, Chair AML Committee CMTA"
       }
-    }
+    },
+    "linkedinProfile": "LinkedIn Profil"
   },
   "mainSections": {
     "rentalSolutions": {

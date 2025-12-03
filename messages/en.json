@@ -26,13 +26,13 @@
       },
       "matthias": {
         "name": "Matthias Nadler",
-        "role": "Chief Technology Officer",
+        "role": "Co-Founder & CTO",
         "description": "PhD in Decentralized Finance (with Prof. Fabian Schär, Univ. Basel), Publications incl. with Vitalik Buterin as Co-Author, Blockchain Development, Smart-Contract Infrastructure"
       },
       "jonas": {
         "name": "Jonas Wälti",
-        "role": "Co-Founder & Advisor",
-        "description": "Serial Entrepreneur, Relai Investor (Bitcoin App), successful Exits, Swiss Fintech & Crypto Ecosystem Network, Partnerships & Investor Relations"
+        "role": "Advisor & Investor",
+        "description": "Relai Investor & Advisor, 15 years B2B Sales experience, Swiss Fintech & Crypto Ecosystem Network, Partnerships & Investor Relations"
       },
       "roger": {
         "name": "Roger Eichenberger",
@@ -47,9 +47,10 @@
       "magdalena": {
         "name": "Magdalena Boškić",
         "role": "Advisor",
-        "description": "Crypto Compliance Expert, Of Counsel at Kellerhals Carrard, ex-Head RegTech & Compliance at Sygnum and Crypto Finance, PhD Candidate & Course Director at Univ. Zurich, Chair AML Committee CMTA."
+        "description": "Crypto Compliance Expert, Of Counsel at Kellerhals Carrard, ex-Head RegTech & Compliance at Sygnum and Crypto Finance, PhD Candidate & Course Director at Univ. Zurich, Chair AML Committee CMTA"
       }
-    }
+    },
+    "linkedinProfile": "LinkedIn Profile"
   },
   "mainSections": {
     "rentalSolutions": {
