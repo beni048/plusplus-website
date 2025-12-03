@@ -53,14 +53,14 @@ export default function AboutUs() {
     ];
 
     return (
-        <main className="flex min-h-screen flex-col pt-20">
-            <section className="bg-neutral-light py-16 md:py-24">
-                <div className="container mx-auto px-4">
-                    <div className="max-w-3xl mx-auto text-center mb-16">
-                        <h1 className="text-4xl md:text-5xl font-primary font-bold text-black mb-6">
+        <main className="min-h-screen bg-neutral-light pt-32">
+            <div className="container mx-auto px-4">
+                <div className="max-w-6xl mx-auto">
+                    <div className="text-center mb-16">
+                        <h1 className="mb-4 sm:mb-12 text-center text-3xl sm:text-5xl lg:text-6xl font-medium text-black px-4">
                             {t('title')}
                         </h1>
-                        <p className="text-xl text-neutral-dark font-secondary">
+                        <p className="text-lg sm:text-xl font-secondary text-neutral-dark max-w-3xl mx-auto leading-relaxed px-4">
                             {t('subtitle')}
                         </p>
                     </div>
@@ -101,7 +101,7 @@ export default function AboutUs() {
                         ))}
                     </div>
                 </div>
-            </section>
+            </div>
         </main>
     );
 }
