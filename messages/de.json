@@ -2,6 +2,7 @@
   "nav": {
     "rentalSolutions": "Mietlösungen",
     "corporateTreasury": "Corporate Treasury",
+    "aboutUs": "Über uns",
     "contact": "Kontakt",
     "checkBalance": "Kontostand"
   },
@@ -13,6 +14,42 @@
     },
     "subtitle": "Wir schaffen den Zugang zu einer neuen Generation von Finanzlösungen.",
     "cta": "Jetzt Entdecken"
+  },
+  "aboutUs": {
+    "title": "Über uns",
+    "subtitle": "Lernen Sie die Experten kennen, die Plusplus mit ihrer Erfahrung in Finanzen, Technologie und Recht vorantreiben.",
+    "team": {
+      "benjamin": {
+        "name": "Benjamin Rossi",
+        "role": "Co-Founder & CEO",
+        "description": "ETH-Ingenieur Informatik & MSc. International Business, erfahrener IT-Projektleiter und ehem. NZZ Journalist, Strategie & Kommunikation"
+      },
+      "matthias": {
+        "name": "Matthias Nadler",
+        "role": "Chief Technology Officer",
+        "description": "PhD in Decentralized Finance (bei Prof. Fabian Schär, Uni Basel), Publikationen u.a. mit Vitalik Buterin als Co-Author, Blockchain-Entwicklung, Smart-Contract Infrastruktur"
+      },
+      "jonas": {
+        "name": "Jonas Wälti",
+        "role": "Co-Founder & Advisor",
+        "description": "Serienunternehmer, Relai-Investor (Bitcoin-App), erfolgreiche Exits, Schweizer Fintech- & Krypto-Ökosystem-Netzwerk, Partnerschaften & Investor Relations"
+      },
+      "roger": {
+        "name": "Roger Eichenberger",
+        "role": "Verwaltungsratsmitglied & Lead Investor",
+        "description": "Senior Partner bei Helvetic Trust, 13+ Jahre Private Banking Credit Suisse, TradFi-DeFi-Brücke, regulatorische Compliance, institutionelle Partnerschaften"
+      },
+      "andreas": {
+        "name": "Andreas Bühler",
+        "role": "Verwaltungsratsmitglied",
+        "description": "Head Legal & Sustainability bei Reichmuth & Co Investment Management AG, Anwalt, CIIA/CEFA, spezialisiert auf Finanzmarktregulierung und Infrastruktur-Investments"
+      },
+      "magdalena": {
+        "name": "Magdalena Boškić",
+        "role": "Advisorin",
+        "description": "Head of RegTech & Crypto Compliance Services bei Sygnum Bank, ehemals Head of Compliance bei Crypto Finance, PhD-Kandidatin Crypto Regulation (Uni Zürich), AML Committee Chair CMTA, Dozentin CAS Crypto Compliance."
+      }
+    }
   },
   "mainSections": {
     "rentalSolutions": {

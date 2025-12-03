@@ -2,6 +2,7 @@
   "nav": {
     "rentalSolutions": "Rental Solutions",
     "corporateTreasury": "Corporate Treasury",
+    "aboutUs": "About Us",
     "contact": "Contact",
     "checkBalance": "Check Balance"
   },
@@ -13,6 +14,42 @@
     },
     "subtitle": "We provide access to a new generation of financial solutions.",
     "cta": "Discover now"
+  },
+  "aboutUs": {
+    "title": "About Us",
+    "subtitle": "Meet the experts driving Plusplus forward with their experience in finance, technology, and law.",
+    "team": {
+      "benjamin": {
+        "name": "Benjamin Rossi",
+        "role": "Co-Founder & CEO",
+        "description": "ETH Engineer Computer Science & MSc. International Business, experienced IT Project Manager and former NZZ Journalist, Strategy & Communication"
+      },
+      "matthias": {
+        "name": "Matthias Nadler",
+        "role": "Chief Technology Officer",
+        "description": "PhD in Decentralized Finance (with Prof. Fabian Schär, Univ. Basel), Publications incl. with Vitalik Buterin as Co-Author, Blockchain Development, Smart-Contract Infrastructure"
+      },
+      "jonas": {
+        "name": "Jonas Wälti",
+        "role": "Co-Founder & Advisor",
+        "description": "Serial Entrepreneur, Relai Investor (Bitcoin App), successful Exits, Swiss Fintech & Crypto Ecosystem Network, Partnerships & Investor Relations"
+      },
+      "roger": {
+        "name": "Roger Eichenberger",
+        "role": "Board Member & Lead Investor",
+        "description": "Senior Partner at Helvetic Trust, 13+ years Private Banking Credit Suisse, TradFi-DeFi Bridge, Regulatory Compliance, Institutional Partnerships"
+      },
+      "andreas": {
+        "name": "Andreas Bühler",
+        "role": "Board Member",
+        "description": "Head Legal & Sustainability at Reichmuth & Co Investment Management AG, Lawyer, CIIA/CEFA, specialized in Financial Market Regulation and Infrastructure Investments"
+      },
+      "magdalena": {
+        "name": "Magdalena Boškić",
+        "role": "Advisor",
+        "description": "Head of RegTech & Crypto Compliance Services at Sygnum Bank, formerly Head of Compliance at Crypto Finance, PhD Candidate Crypto Regulation (Univ. Zurich), AML Committee Chair CMTA, Lecturer CAS Crypto Compliance."
+      }
+    }
   },
   "mainSections": {
     "rentalSolutions": {

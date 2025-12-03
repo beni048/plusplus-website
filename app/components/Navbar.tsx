@@ -61,17 +61,26 @@ export default function Navbar() {
               <Link
                 href={`/${locale}/corporate-treasury`}
                 className={`font-primary font-medium transition-colors ${isActive(`/${locale}/corporate-treasury`)
-                    ? 'text-accent-red'
-                    : 'text-black hover:text-accent-red'
+                  ? 'text-accent-red'
+                  : 'text-black hover:text-accent-red'
                   }`}
               >
                 {t('corporateTreasury')}
               </Link>
               <Link
+                href={`/${locale}/about-us`}
+                className={`font-primary font-medium transition-colors ${isActive(`/${locale}/about-us`)
+                  ? 'text-accent-red'
+                  : 'text-black hover:text-accent-red'
+                  }`}
+              >
+                {t('aboutUs')}
+              </Link>
+              <Link
                 href={`/${locale}/contact`}
                 className={`font-primary font-medium transition-colors ${isActive(`/${locale}/contact`)
-                    ? 'text-accent-red'
-                    : 'text-black hover:text-accent-red'
+                  ? 'text-accent-red'
+                  : 'text-black hover:text-accent-red'
                   }`}
               >
                 {t('contact')}
@@ -79,8 +88,8 @@ export default function Navbar() {
               <Link
                 href={`/${locale}/contract-query`}
                 className={`font-primary font-medium transition-colors ${isActive(`/${locale}/contract-query`)
-                    ? 'text-accent-red'
-                    : 'text-black hover:text-accent-red'
+                  ? 'text-accent-red'
+                  : 'text-black hover:text-accent-red'
                   }`}
               >
                 {t('checkBalance')}
@@ -124,18 +133,28 @@ export default function Navbar() {
               <Link
                 href={`/${locale}/corporate-treasury`}
                 className={`block font-primary font-medium transition-colors py-2 ${isActive(`/${locale}/corporate-treasury`)
-                    ? 'text-accent-red'
-                    : 'text-black hover:text-accent-red'
+                  ? 'text-accent-red'
+                  : 'text-black hover:text-accent-red'
                   }`}
                 onClick={closeMobileMenu}
               >
                 {t('corporateTreasury')}
               </Link>
               <Link
+                href={`/${locale}/about-us`}
+                className={`block font-primary font-medium transition-colors py-2 ${isActive(`/${locale}/about-us`)
+                  ? 'text-accent-red'
+                  : 'text-black hover:text-accent-red'
+                  }`}
+                onClick={closeMobileMenu}
+              >
+                {t('aboutUs')}
+              </Link>
+              <Link
                 href={`/${locale}/contact`}
                 className={`block font-primary font-medium transition-colors py-2 ${isActive(`/${locale}/contact`)
-                    ? 'text-accent-red'
-                    : 'text-black hover:text-accent-red'
+                  ? 'text-accent-red'
+                  : 'text-black hover:text-accent-red'
                   }`}
                 onClick={closeMobileMenu}
               >
@@ -144,8 +163,8 @@ export default function Navbar() {
               <Link
                 href={`/${locale}/contract-query`}
                 className={`block font-primary font-medium transition-colors py-2 ${isActive(`/${locale}/contract-query`)
-                    ? 'text-accent-red'
-                    : 'text-black hover:text-accent-red'
+                  ? 'text-accent-red'
+                  : 'text-black hover:text-accent-red'
                   }`}
                 onClick={closeMobileMenu}
               >
