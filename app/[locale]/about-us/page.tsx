@@ -10,39 +10,45 @@ export default function AboutUs() {
     const teamMembers = [
         {
             id: 'benjamin',
-            image: '/images/team/benjamin.jpg',
-            scale: 1.7,
+            image: '/images/team/benjamin_grey.png',
+            scale: 1.6,
             yOffset: '11%',
+            xOffset: '0%',
         },
         {
             id: 'matthias',
-            image: '/images/team/Matthia_Headshot.jpg',
+            image: '/images/team/matthias_grey.png',
             scale: 1.05,
             yOffset: '-2%',
+            xOffset: '2%',
         },
         {
             id: 'jonas',
             image: null, // Placeholder
             scale: 1,
             yOffset: '0%',
+            xOffset: '0%',
         },
         {
             id: 'roger',
             image: '/images/team/Roger.jpg',
             scale: 1.5,
             yOffset: '16%',
+            xOffset: '6%',
         },
         {
             id: 'andreas',
             image: '/images/team/andreas.PNG',
             scale: 2.1,
             yOffset: '26%',
+            xOffset: '3%',
         },
         {
             id: 'magdalena',
-            image: '/images/team/Magda.jpeg',
+            image: '/images/team/Magda_black.png',
             scale: 1.5,
             yOffset: '16%',
+            xOffset: '0%',
         },
     ];
 
@@ -69,7 +75,7 @@ export default function AboutUs() {
                                             alt={t(`team.${member.id}.name`)}
                                             fill
                                             className="object-cover grayscale"
-                                            style={{ transform: `scale(${member.scale}) translateY(${member.yOffset})` }}
+                                            style={{ transform: `scale(${member.scale}) translateY(${member.yOffset}) translateX(${member.xOffset})` }}
                                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                         />
                                     ) : (
