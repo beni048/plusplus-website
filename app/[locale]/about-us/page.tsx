@@ -109,7 +109,7 @@ export default function AboutUs() {
                                             href={member.linkedin}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="text-black hover:text-neutral-dark font-medium inline-block text-sm"
+                                            className="text-[#0077b5] hover:text-[#005582] font-medium inline-block text-sm"
                                         >
                                             {t('linkedinProfile')} ↗
                                         </a>
