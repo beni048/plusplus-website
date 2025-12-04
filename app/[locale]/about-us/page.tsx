@@ -26,7 +26,7 @@ export default function AboutUs() {
         },
         {
             id: 'jonas',
-            image: '/images/team/jonas.png',
+            image: '/images/team/jonas_grey.png',
             scale: 1,
             yOffset: '0%',
             xOffset: '0%',
@@ -34,7 +34,7 @@ export default function AboutUs() {
         },
         {
             id: 'roger',
-            image: '/images/team/Roger.jpg',
+            image: '/images/team/roger_grey.png',
             scale: 1.5,
             yOffset: '16%',
             xOffset: '6%',
@@ -50,7 +50,7 @@ export default function AboutUs() {
         },
         {
             id: 'magdalena',
-            image: '/images/team/Magda_black.png',
+            image: '/images/team/magdalena_grey.png',
             scale: 1.5,
             yOffset: '16%',
             xOffset: '0%',
