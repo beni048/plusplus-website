@@ -10,10 +10,10 @@ export default function AboutUs() {
     const teamMembers = [
         {
             id: 'benjamin',
-            image: '/images/team/benjamin_grey.png',
-            scale: 1.6,
+            image: '/images/team/benjamin_bright.png',
+            scale: 1.35,
             yOffset: '11%',
-            xOffset: '0%',
+            xOffset: '-3%',
             linkedin: 'https://www.linkedin.com/in/rossibeni/',
         },
         {
@@ -26,9 +26,9 @@ export default function AboutUs() {
         },
         {
             id: 'jonas',
-            image: '/images/team/jonas_grey.png',
-            scale: 1,
-            yOffset: '0%',
+            image: '/images/team/jonas_bright.png',
+            scale: 1.3,
+            yOffset: '6%',
             xOffset: '0%',
             linkedin: 'https://www.linkedin.com/in/jonas-w-791335a0/',
         },
