@@ -5,15 +5,17 @@ import { logInfo, logError } from '@/lib/logger';
 // Ensure dynamic rendering for API routes
 export const dynamic = 'force-dynamic';
 
-// Initialize Mailjet client
-const mailjet = Mailjet.apiConnect(
-  process.env.MJ_APIKEY_PUBLIC!, 
-  process.env.MJ_APIKEY_PRIVATE!
-);
+// Initialize Mailjet client conditionally
+const mailjet = (process.env.MJ_APIKEY_PUBLIC && process.env.MJ_APIKEY_PRIVATE)
+  ? Mailjet.apiConnect(
+    process.env.MJ_APIKEY_PUBLIC,
+    process.env.MJ_APIKEY_PRIVATE
+  )
+  : null;
 
 export async function POST(request: Request) {
   // Check if environment variables are set
-  if (!process.env.MJ_APIKEY_PUBLIC || !process.env.MJ_APIKEY_PRIVATE) {
+  if (!mailjet) {
     console.error('Missing Mailjet API keys');
     return NextResponse.json(
       { message: 'Server configuration error' },
@@ -31,10 +33,10 @@ export async function POST(request: Request) {
 
   try {
     // Parse request body safely
-  const body = (await request.json()) as Record<string, unknown>;
-  const name = typeof body['name'] === 'string' ? (body['name'] as string).trim() : '';
-  const email = typeof body['email'] === 'string' ? (body['email'] as string).trim() : '';
-  const message = typeof body['message'] === 'string' ? (body['message'] as string).trim() : '';
+    const body = (await request.json()) as Record<string, unknown>;
+    const name = typeof body['name'] === 'string' ? (body['name'] as string).trim() : '';
+    const email = typeof body['email'] === 'string' ? (body['email'] as string).trim() : '';
+    const message = typeof body['message'] === 'string' ? (body['message'] as string).trim() : '';
 
     // Validate required fields
     if (!name || !email || !message) {
@@ -43,7 +45,7 @@ export async function POST(request: Request) {
         { status: 400 }
       );
     }
-    
+
     // Validate email format using regex
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
@@ -52,15 +54,15 @@ export async function POST(request: Request) {
         { status: 400 }
       );
     }
-    
+
     // Construct message payload with two messages
     const messageData = {
       Messages: [
         // First message: Notification to support inbox
         {
-          From: { 
-            Email: process.env.CONTACT_FORM_FROM_EMAIL, 
-            Name: "Plusplus Contact Form" 
+          From: {
+            Email: process.env.CONTACT_FORM_FROM_EMAIL,
+            Name: "Plusplus Contact Form"
           },
           To: [
             { Email: process.env.CONTACT_FORM_TO_EMAIL }
@@ -79,9 +81,9 @@ ${message}`,
         },
         // Second message: Confirmation to the user
         {
-          From: { 
-            Email: process.env.CONTACT_FORM_FROM_EMAIL, 
-            Name: "Plusplus" 
+          From: {
+            Email: process.env.CONTACT_FORM_FROM_EMAIL,
+            Name: "Plusplus"
           },
           To: [
             { Email: email, Name: name }
@@ -110,7 +112,7 @@ The Plusplus Team</p>`,
         }
       ]
     };
-    
+
     // Send both emails in a single Mailjet API call
     // Avoid logging full payloads to prevent leakage of user content or secrets.
     logInfo('contact:send_attempt', { to: process.env.CONTACT_FORM_TO_EMAIL ? 'configured' : 'missing' });
@@ -126,7 +128,7 @@ The Plusplus Team</p>`,
 
     // Return success response
     return NextResponse.json({ submitted: true });
-    
+
   } catch (err: unknown) {
     // Enhanced error logging with safe narrowing
     if (err instanceof Error) {
