@@ -7,7 +7,17 @@ import { Card } from '@/components/ui/card';
 export default function AboutUs() {
     const t = useTranslations('aboutUs');
 
-    const teamMembers = [
+    interface TeamMember {
+        id: string;
+        image: string;
+        scale: number;
+        yOffset: string;
+        xOffset: string;
+        linkedin: string;
+        objectPosition?: string;
+    }
+
+    const teamMembers: TeamMember[] = [
         {
             id: 'benjamin',
             image: '/images/team/benjamin_bright.png',
