@@ -720,7 +720,7 @@
       }
     }
   },
-  "applicationForm": {
+  "onboardingForm": {
     "title": "Client On-boarding",
     "subtitle": "Please fill out the form below to complete the on-boarding process.",
     "sections": {

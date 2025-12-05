@@ -1,8 +1,8 @@
 import { useTranslations } from 'next-intl';
-import ApplicationForm from '@/components/forms/ApplicationForm';
+import OnboardingForm from '@/components/forms/OnboardingForm';
 
 export default function DataPage() {
-    const t = useTranslations('applicationForm');
+    const t = useTranslations('onboardingForm');
 
     return (
         <main className="min-h-screen bg-neutral-light pt-32 pb-24">
@@ -18,7 +18,7 @@ export default function DataPage() {
                     </div>
 
                     <div className="bg-white rounded-2xl shadow-sm p-6 sm:p-10">
-                        <ApplicationForm />
+                        <OnboardingForm />
                     </div>
                 </div>
             </div>

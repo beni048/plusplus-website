@@ -24,7 +24,7 @@ export default function AboutUs() {
             scale: 1.3,
             yOffset: '9%',
             xOffset: '-2%',
-            linkedin: 'https://www.linkedin.com/in/benjamin-r-436340176/',
+            linkedin: 'https://www.linkedin.com/in/rossibeni/',
         },
         {
             id: 'matthias',
@@ -32,7 +32,7 @@ export default function AboutUs() {
             scale: 1.1,
             yOffset: '0%',
             xOffset: '2%',
-            linkedin: 'https://www.linkedin.com/in/matthias-g-b5313a165/',
+            linkedin: 'https://www.linkedin.com/in/mat-nadler/',
         },
         {
             id: 'jonas',

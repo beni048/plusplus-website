@@ -724,7 +724,7 @@
       }
     }
   },
-  "applicationForm": {
+  "onboardingForm": {
     "title": "Kunden-Onboarding",
     "subtitle": "Bitte füllen Sie das untenstehende Formular aus, um den Onboarding-Prozess abzuschliessen.",
     "sections": {
