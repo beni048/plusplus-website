@@ -21,10 +21,18 @@ export default function AboutUs() {
         {
             id: 'benjamin',
             image: '/images/team/benjamin_bright.png',
-            scale: 1.4,
-            yOffset: '12%',
-            xOffset: '2%',
+            scale: 1.3,
+            yOffset: '9%',
+            xOffset: '-2%',
             linkedin: 'https://www.linkedin.com/in/benjamin-r-436340176/',
+        },
+        {
+            id: 'matthias',
+            image: '/images/team/matthias_grey.png',
+            scale: 1.1,
+            yOffset: '0%',
+            xOffset: '2%',
+            linkedin: 'https://www.linkedin.com/in/matthias-g-b5313a165/',
         },
         {
             id: 'jonas',
@@ -35,19 +43,11 @@ export default function AboutUs() {
             linkedin: 'https://www.linkedin.com/in/jonas-w-791335a0/',
         },
         {
-            id: 'matthias',
-            image: '/images/team/matthias_grey.png',
-            scale: 1.3,
-            yOffset: '8%',
-            xOffset: '0%',
-            linkedin: 'https://www.linkedin.com/in/matthias-g-b5313a165/',
-        },
-        {
             id: 'luzius',
             image: '/images/team/luzius_grey.png',
             scale: 1.6,
             yOffset: '12%',
-            xOffset: '3%',
+            xOffset: '5%',
             linkedin: 'https://www.linkedin.com/in/luziusmeisser/',
         },
         {
