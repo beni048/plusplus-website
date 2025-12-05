@@ -97,8 +97,8 @@
     }
   },
   "contractQuery": {
-    "title": "Customer On-Boarding",
-    "description": "Complete your account setup and verify your customer information with Plusplus",
+    "title": "Check Your Account Balance",
+    "description": "Query your Plusplus account to view your deposit balance, current value, and earnings",
     "stablecoin": {
       "label": "Stablecoin",
       "inputLabel": "Plusplus or Zinsli customer number",
