@@ -977,6 +977,7 @@
       "legal_entity_type_required": "Rechtsform ist erforderlich.",
       "function_required": "Funktion ist erforderlich.",
       "is_opener_authorized_signatory_required": "Bitte geben Sie an, ob Sie zeichnungsberechtigt sind.",
+      "system_error": "Ein Systemfehler ist aufgetreten. Bitte versuchen Sie es später erneut oder kontaktieren Sie den Support.",
       "volume_required": "Geplantes Transaktionsvolumen ist erforderlich.",
       "purpose_required": "Zweck der Geschäftsbeziehung ist erforderlich.",
       "third_party_required": "Angaben zu wirtschaftlich Berechtigten Dritten sind erforderlich."

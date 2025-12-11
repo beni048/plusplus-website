@@ -974,7 +974,8 @@
       "is_opener_authorized_signatory_required": "Please specify if you are an authorized signatory.",
       "volume_required": "Planned transaction volume is required.",
       "purpose_required": "Relationship purpose is required.",
-      "third_party_required": "Third party relation is required."
+      "third_party_required": "Third party relation is required.",
+      "system_error": "A system error occurred. Please try again later or contact support."
     }
   }
 }

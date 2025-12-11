@@ -196,7 +196,12 @@ export default function OnboardingForm() {
             const result = await response.json();
 
             if (!response.ok) {
-                throw new Error(result.error || 'Submission failed');
+                if (response.status >= 500) {
+                    // Log the raw error for debugging but show friendly message to user
+                    console.error("Server Error:", result.error);
+                    throw new Error(t('messages.system_error'));
+                }
+                throw new Error(result.error || t('messages.error'));
             }
 
             setSubmitStatus({ success: true, message: t('messages.success') });
