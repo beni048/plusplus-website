@@ -103,7 +103,7 @@ export default function OnboardingForm() {
             isSettlorDeceased: undefined,
             trustBeneficiariesFixedClaim: undefined,
 
-
+            specialClarifications: '',
 
             // AML Profile defaults
             amlProfile: {

@@ -130,6 +130,8 @@ export const getFormSchema = (t: (key: string, values?: any) => string) => z.obj
 
     economicBeneficiaries: z.array(getPersonSchema(t)).optional(),
 
+    specialClarifications: z.string().optional(),
+
 }).superRefine((data, ctx) => {
 
     const validatePerson = (person: any, path: (string | number)[]) => {
