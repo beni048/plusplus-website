@@ -108,9 +108,9 @@ export default function OnboardingForm() {
             // AML Profile defaults
             amlProfile: {
                 profession: '',
-                estimatedIncome: undefined,
-                estimatedWealth: undefined,
-                estimatedLiabilities: undefined,
+                estimatedIncome: '',
+                estimatedWealth: '',
+                estimatedLiabilities: '',
                 originOfAssets: { category: undefined, otherExplanation: '' },
                 relationshipPurpose: { type: undefined, otherDetails: '' },
                 thirdPartyRelations: { type: undefined, otherDetails: '' },
