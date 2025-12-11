@@ -1,0 +1,172 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e4]:
+      - link "Plusplus" [ref=e5] [cursor=pointer]:
+        - /url: /en
+        - img "Plusplus" [ref=e6]
+      - generic [ref=e7]:
+        - generic [ref=e8]:
+          - link "Corporate Treasury" [ref=e9] [cursor=pointer]:
+            - /url: /en/corporate-treasury
+          - link "About Us" [ref=e10] [cursor=pointer]:
+            - /url: /en/about-us
+          - link "Contact" [ref=e11] [cursor=pointer]:
+            - /url: /en/contact
+          - link "Check Balance" [ref=e12] [cursor=pointer]:
+            - /url: /en/contract-query
+        - button "EN" [ref=e16] [cursor=pointer]:
+          - text: EN
+          - img [ref=e17]
+  - main [ref=e19]:
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - heading "Client On-boarding" [level=1] [ref=e23]
+        - paragraph [ref=e24]: Please fill out the form below to complete the on-boarding process.
+      - generic [ref=e27]:
+        - generic [ref=e28]:
+          - heading "Entity Type" [level=3] [ref=e30]
+          - generic [ref=e32]:
+            - generic [ref=e34]: Entity Type*
+            - combobox "Entity Type*" [ref=e35] [cursor=pointer]:
+              - generic: Legal Entity
+              - img [ref=e36]
+            - combobox [ref=e38]
+        - generic [ref=e39]:
+          - heading "Representative Opening the Account" [level=3] [ref=e41]
+          - generic [ref=e42]:
+            - generic [ref=e43]:
+              - generic [ref=e44]:
+                - generic [ref=e46]: First Name*
+                - textbox "First Name*" [ref=e47]: Alice
+              - generic [ref=e48]:
+                - generic [ref=e50]: Last Name*
+                - textbox "Last Name*" [ref=e51]: Smith
+              - generic [ref=e52]:
+                - generic [ref=e54]: Function at the Firm*
+                - textbox "Function at the Firm*" [active] [ref=e55]: Director
+              - generic [ref=e56]:
+                - generic [ref=e58]: Date of Birth*
+                - textbox "Date of Birth*" [ref=e59]: 1985-05-05
+              - generic [ref=e60]:
+                - generic [ref=e62]: Nationality*
+                - textbox "Nationality*" [ref=e63]: British
+              - generic [ref=e64]:
+                - generic [ref=e65]:
+                  - generic [ref=e66]: Private Address
+                  - combobox [ref=e67] [cursor=pointer]:
+                    - generic [ref=e68]: Search for an address...
+                    - img [ref=e69]
+                - generic [ref=e72]:
+                  - generic [ref=e73]:
+                    - generic [ref=e75]: Street*
+                    - textbox "Street*" [ref=e76]: Main St
+                  - generic [ref=e77]:
+                    - text: House Number
+                    - textbox "House Number" [ref=e78]: "1"
+                  - generic [ref=e79]:
+                    - generic [ref=e81]: Zip Code*
+                    - textbox "Zip Code*" [ref=e82]: "1000"
+                  - generic [ref=e83]:
+                    - generic [ref=e85]: City*
+                    - textbox "City*" [ref=e86]: London
+                  - generic [ref=e87]:
+                    - generic [ref=e89]: Country*
+                    - textbox "Country*" [ref=e90]: UK
+            - generic [ref=e91]:
+              - generic [ref=e94]: Upload Passport/ID*
+              - generic [ref=e95]:
+                - button [ref=e97] [cursor=pointer]:
+                  - img [ref=e98]
+                - paragraph [ref=e101]: "Accepted formats: PDF, JPG, PNG (Max 5MB)"
+            - generic [ref=e103]:
+              - generic [ref=e105]: Are you an authorized signatory?*
+              - combobox "Are you an authorized signatory?*" [ref=e106] [cursor=pointer]:
+                - generic: Select an option
+                - img [ref=e107]
+              - combobox [ref=e109]
+        - generic [ref=e110]:
+          - heading "Company Information" [level=3] [ref=e112]
+          - generic [ref=e114]:
+            - generic [ref=e115]:
+              - generic [ref=e117]: Company Name*
+              - textbox "Company Name*" [ref=e118]
+            - generic [ref=e119]:
+              - generic [ref=e121]: Commercial Register Number*
+              - textbox "Commercial Register Number*" [ref=e122]
+            - generic [ref=e123]:
+              - generic [ref=e125]: Date of Incorporation*
+              - textbox "Date of Incorporation*" [ref=e126]
+            - generic [ref=e127]:
+              - generic [ref=e128]:
+                - generic [ref=e129]: Domicile Address
+                - combobox [ref=e130] [cursor=pointer]:
+                  - generic [ref=e131]: Search for an address...
+                  - img [ref=e132]
+              - generic [ref=e135]:
+                - generic [ref=e136]:
+                  - generic [ref=e138]: Street*
+                  - textbox "Street*" [ref=e139]
+                - generic [ref=e140]:
+                  - generic [ref=e142]: House Number*
+                  - textbox "House Number*" [ref=e143]
+                - generic [ref=e144]:
+                  - generic [ref=e146]: Zip Code*
+                  - textbox "Zip Code*" [ref=e147]
+                - generic [ref=e148]:
+                  - generic [ref=e150]: City*
+                  - textbox "City*" [ref=e151]
+                - generic [ref=e152]:
+                  - generic [ref=e154]: Country*
+                  - textbox "Country*" [ref=e155]
+            - generic [ref=e156]:
+              - generic [ref=e158]: Upload Commercial Register Extract*
+              - generic [ref=e159]:
+                - button [ref=e161] [cursor=pointer]:
+                  - img [ref=e162]
+                - paragraph [ref=e165]: "Accepted formats: PDF, JPG, PNG (Max 5MB)"
+        - generic [ref=e166]:
+          - heading "Legal Entity Type" [level=3] [ref=e168]
+          - generic [ref=e170]:
+            - generic [ref=e172]: Legal Entity Type*
+            - combobox "Legal Entity Type*" [ref=e173] [cursor=pointer]:
+              - generic: Select type
+              - img [ref=e174]
+            - combobox [ref=e176]
+        - button "Submit Application" [ref=e178] [cursor=pointer]
+  - contentinfo [ref=e179]:
+    - generic [ref=e181]:
+      - generic [ref=e182]:
+        - generic [ref=e183]:
+          - link "Privacy Policy" [ref=e184] [cursor=pointer]:
+            - /url: /en/privacy-policy
+          - generic [ref=e185]: "|"
+          - link "Privacy Settings" [ref=e186] [cursor=pointer]:
+            - /url: /en/privacy-settings
+          - generic [ref=e187]: "|"
+          - link "Imprint" [ref=e188] [cursor=pointer]:
+            - /url: /en/imprint
+          - generic [ref=e189]: "|"
+          - link "Terms & Conditions" [ref=e190] [cursor=pointer]:
+            - /url: /en/terms-and-conditions
+          - generic [ref=e191]: "|"
+          - link "FAQ" [ref=e192] [cursor=pointer]:
+            - /url: /en/help
+        - paragraph [ref=e194]: © Plusplus AG 2025 | Zug, Switzerland
+      - link "LinkedIn" [ref=e196] [cursor=pointer]:
+        - /url: https://linkedin.com/company/plusplusag
+        - img [ref=e197]
+  - button "Open Next.js Dev Tools" [ref=e206] [cursor=pointer]:
+    - img [ref=e207]
+  - alert [ref=e210]
+  - generic [ref=e213]:
+    - paragraph [ref=e214]:
+      - text: We use cookies to improve your experience.
+      - link "Privacy Policy" [ref=e215] [cursor=pointer]:
+        - /url: /en/privacy-policy
+    - generic [ref=e216]:
+      - button "Accept All" [ref=e217] [cursor=pointer]
+      - button "Essential Only" [ref=e218] [cursor=pointer]
+```

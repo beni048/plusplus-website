@@ -9,16 +9,81 @@ export async function POST(req: NextRequest) {
         const formData = await req.formData();
 
         // Extract fields
-        const fields: Record<string, any> = {};
+        const rawFields: Record<string, any> = {};
         const files: File[] = [];
 
         formData.forEach((value, key) => {
             if (value instanceof File) {
                 files.push(value);
             } else {
-                fields[key] = value;
+                try {
+                    // Try to parse JSON strings (for nested objects)
+                    rawFields[key] = JSON.parse(value as string);
+                } catch {
+                    rawFields[key] = value;
+                }
             }
         });
+
+        // Filter fields based on entity type to ensure clean export
+        let fields: Record<string, any> = {};
+        const entityType = rawFields.entityType;
+
+        if (entityType === 'natural_person') {
+            const allowedFields = [
+                'entityType', 'firstName', 'lastName', 'email', 'phone',
+                'dateOfBirth', 'nationality', 'idDocumentType',
+                'street', 'houseNumber', 'zipCode', 'city', 'country',
+                'amlProfile', 'specialClarifications'
+            ];
+
+            allowedFields.forEach(key => {
+                if (rawFields[key] !== undefined) {
+                    fields[key] = rawFields[key];
+                }
+            });
+        } else if (entityType === 'legal_entity') {
+            const allowedFields = [
+                'entityType', 'companyName', 'legalEntityType',
+                'dateOfIncorporation', 'commercialRegisterNumber',
+                'domicileStreet', 'domicileHouseNumber', 'domicileZipCode', 'domicileCity', 'domicileCountry',
+
+                // Opener & Signatories
+                'openerFirstName', 'openerLastName', 'openerFunction', 'openerEmail', 'openerPhone',
+                'openerStreet', 'openerHouseNumber', 'openerZipCode', 'openerCity', 'openerCountry',
+                'openerDateOfBirth', 'openerNationality',
+                'isOpenerAuthorizedSignatory', 'hasSecondSignatory', 'numberOfSignatories',
+                'authorizedSignatory1', 'authorizedSignatory2',
+
+                // Business Details
+                'detailedBusinessActivity', 'sourceOfFunds',
+
+                // Structure & People
+                'managingDirectors',
+                'hasOwnersMoreThan25Percent', 'ownersMoreThan25Percent',
+                'economicBeneficiaries',
+
+                // Foundation
+                'foundationType', 'isFoundationRevocable', 'founder', 'isFounderDeceased',
+                'foundationBoardMembers', 'foundationBeneficiaries', 'foundationBeneficiariesFixedClaim', 'nominationRights',
+
+                // Trust
+                'trustType', 'isTrustRevocable', 'settlor', 'isSettlorDeceased',
+                'trustee', 'protector', 'trustBeneficiaries', 'trustBeneficiariesFixedClaim',
+
+                // Clarifications
+                'specialClarifications'
+            ];
+
+            allowedFields.forEach(key => {
+                if (rawFields[key] !== undefined) {
+                    fields[key] = rawFields[key];
+                }
+            });
+        } else {
+            // Fallback for safety
+            fields = rawFields;
+        }
 
         // Google Auth
         const auth = new google.auth.GoogleAuth({
@@ -66,8 +131,32 @@ export async function POST(req: NextRequest) {
             archive.on('error', reject);
         });
 
-        // Add files to archive
+        // Add files to archive with validation
         for (const file of files) {
+            // Validate size (5MB limit)
+            if (file.size > 5 * 1024 * 1024) {
+                return NextResponse.json({ error: `File ${file.name} exceeds 5MB limit` }, { status: 400 });
+            }
+
+            // Validate type
+            // Validate type
+            const allowedMimeTypes = ['application/pdf', 'image/jpeg', 'image/png', 'image/jpg'];
+            if (!allowedMimeTypes.includes(file.type)) {
+                return NextResponse.json({ error: `File ${file.name} type is not allowed (MIME: ${file.type})` }, { status: 400 });
+            }
+
+            // Validate extension (prevent spoofing exe as jpg if possible, though basic check)
+            const lowerName = file.name.toLowerCase();
+            const allowedExtensions = ['.pdf', '.jpg', '.jpeg', '.png'];
+            const hasValidExtension = allowedExtensions.some(ext => lowerName.endsWith(ext));
+
+            if (!hasValidExtension) {
+                return NextResponse.json({ error: `File ${file.name} extension is not allowed` }, { status: 400 });
+            }
+
+            // Simplification: just check size here as requested by user "maybe just allow low size data uploads".
+            // Virus scan is hard without ClamAV etc.
+
             const buffer = Buffer.from(await file.arrayBuffer());
             archive.append(buffer, { name: file.name });
         }

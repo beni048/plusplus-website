@@ -69,7 +69,7 @@ export default function PersonList({ name, label, description, addButtonLabel = 
                                 name={`${name}.${index}.fullName`}
                                 render={({ field }) => (
                                     <FormItem>
-                                        <FormLabel><MandatoryLabel>{t('fields.fullName')}</MandatoryLabel></FormLabel>
+                                        <FormLabel><MandatoryLabel>{t('fields.full_name')}</MandatoryLabel></FormLabel>
                                         <FormControl>
                                             <Input {...field} placeholder="John Doe" />
                                         </FormControl>
@@ -83,7 +83,7 @@ export default function PersonList({ name, label, description, addButtonLabel = 
                                 name={`${name}.${index}.dateOfBirth`}
                                 render={({ field }) => (
                                     <FormItem>
-                                        <FormLabel><MandatoryLabel>{t('fields.dateOfBirth')}</MandatoryLabel></FormLabel>
+                                        <FormLabel><MandatoryLabel>{t('fields.date_of_birth')}</MandatoryLabel></FormLabel>
                                         <FormControl>
                                             <DatePicker
                                                 value={field.value}
@@ -135,8 +135,8 @@ export default function PersonList({ name, label, description, addButtonLabel = 
                                 name={`${name}.${index}.houseNumber`}
                                 render={({ field }) => (
                                     <FormItem>
-                                        <FormLabel>{t('fields.houseNumber')}</FormLabel>
-                                        <FormControl><Input {...field} value={field.value ?? ''} placeholder={t('placeholders.houseNumber')} /></FormControl>
+                                        <FormLabel><MandatoryLabel>{t('fields.house_number')}</MandatoryLabel></FormLabel>
+                                        <FormControl><Input {...field} value={field.value ?? ''} placeholder={t('placeholders.house_number')} /></FormControl>
                                         <FormMessage />
                                     </FormItem>
                                 )}
@@ -146,8 +146,8 @@ export default function PersonList({ name, label, description, addButtonLabel = 
                                 name={`${name}.${index}.zipCode`}
                                 render={({ field }) => (
                                     <FormItem>
-                                        <FormLabel><MandatoryLabel>{t('fields.zipCode')}</MandatoryLabel></FormLabel>
-                                        <FormControl><Input {...field} value={field.value ?? ''} placeholder={t('placeholders.zipCode')} /></FormControl>
+                                        <FormLabel><MandatoryLabel>{t('fields.zip_code')}</MandatoryLabel></FormLabel>
+                                        <FormControl><Input {...field} value={field.value ?? ''} placeholder={t('placeholders.zip_code')} /></FormControl>
                                         <FormMessage />
                                     </FormItem>
                                 )}
@@ -180,11 +180,11 @@ export default function PersonList({ name, label, description, addButtonLabel = 
 
                 {fields.length === 0 && (
                     <div className="text-center py-8 bg-gray-50 rounded-lg border border-dashed border-gray-300 text-gray-500">
-                        {t('messages.noPeopleAdded', { label: addButtonLabel })}
+                        {t('messages.no_people_added', { label: addButtonLabel })}
                     </div>
                 )}
                 {isOwnersList && fields.length >= 3 && (
-                    <p className="text-sm text-red-600 mt-2">{t('messages.maxThreeOwners')}</p>
+                    <p className="text-sm text-red-600 mt-2">{t('messages.max_three_owners')}</p>
                 )}
             </div>
         </div>

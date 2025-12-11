@@ -21,8 +21,8 @@ export default function AboutUs() {
         {
             id: 'benjamin',
             image: '/images/team/benjamin_bright.png',
-            scale: 1.3,
-            yOffset: '9%',
+            scale: 1.35,
+            yOffset: '10%',
             xOffset: '-2%',
             linkedin: 'https://www.linkedin.com/in/rossibeni/',
         },

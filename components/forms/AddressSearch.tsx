@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Check, ChevronsUpDown, Search } from "lucide-react";
+import { Check, ChevronsUpDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import {
@@ -24,11 +24,25 @@ interface AddressSearchProps {
     label?: string;
 }
 
+interface NominatimResult {
+    place_id: number;
+    display_name: string;
+    address: {
+        road?: string;
+        house_number?: string;
+        postcode?: string;
+        city?: string;
+        town?: string;
+        village?: string;
+        country?: string;
+    };
+}
+
 export function AddressSearch({ onSelect, label }: AddressSearchProps) {
     const [open, setOpen] = useState(false);
     const [value, setValue] = useState("");
     const [query, setQuery] = useState("");
-    const [results, setResults] = useState<any[]>([]);
+    const [results, setResults] = useState<NominatimResult[]>([]);
     const [loading, setLoading] = useState(false);
     const t = useTranslations('onboardingForm');
     const locale = useLocale();
@@ -59,7 +73,7 @@ export function AddressSearch({ onSelect, label }: AddressSearchProps) {
         }, 500);
 
         return () => clearTimeout(timer);
-    }, [query]);
+    }, [query, locale]);
 
     return (
         <div className="flex flex-col space-y-2">
@@ -75,7 +89,7 @@ export function AddressSearch({ onSelect, label }: AddressSearchProps) {
                         <span className="truncate text-left">
                             {value
                                 ? value
-                                : t('placeholders.searchAddress')}
+                                : t('placeholders.search_address')}
                         </span>
                         <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
                     </Button>
@@ -83,13 +97,13 @@ export function AddressSearch({ onSelect, label }: AddressSearchProps) {
                 <PopoverContent className="w-[400px] p-0">
                     <Command shouldFilter={false}>
                         <CommandInput
-                            placeholder={t('placeholders.searchAddress')}
+                            placeholder={t('placeholders.search_address')}
                             value={query}
                             onValueChange={setQuery}
                         />
                         <CommandList>
                             {loading && <CommandItem disabled>Loading...</CommandItem>}
-                            {!loading && results.length === 0 && <CommandEmpty>{t('messages.noAddressFound')}</CommandEmpty>}
+                            {!loading && results.length === 0 && <CommandEmpty>{t('messages.no_address_found')}</CommandEmpty>}
                             <CommandGroup>
                                 {results.map((address) => (
                                     <CommandItem

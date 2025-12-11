@@ -1,0 +1,183 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e4]:
+      - link "Plusplus" [ref=e5] [cursor=pointer]:
+        - /url: /en
+        - img "Plusplus" [ref=e6]
+      - generic [ref=e7]:
+        - generic [ref=e8]:
+          - link "Corporate Treasury" [ref=e9] [cursor=pointer]:
+            - /url: /en/corporate-treasury
+          - link "About Us" [ref=e10] [cursor=pointer]:
+            - /url: /en/about-us
+          - link "Contact" [ref=e11] [cursor=pointer]:
+            - /url: /en/contact
+          - link "Check Balance" [ref=e12] [cursor=pointer]:
+            - /url: /en/contract-query
+        - button "EN" [ref=e16] [cursor=pointer]:
+          - text: EN
+          - img [ref=e17]
+  - main [ref=e19]:
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - heading "Client On-boarding" [level=1] [ref=e23]
+        - paragraph [ref=e24]: Please fill out the form below to complete the on-boarding process.
+      - generic [ref=e27]:
+        - generic [ref=e28]:
+          - heading "Entity Type" [level=3] [ref=e30]
+          - generic [ref=e32]:
+            - generic [ref=e34]: Entity Type*
+            - combobox "Entity Type*" [ref=e35] [cursor=pointer]:
+              - generic: Natural Person
+              - img [ref=e36]
+            - combobox [ref=e38]
+        - generic [ref=e39]:
+          - heading "Personal Information" [level=3] [ref=e41]
+          - generic [ref=e42]:
+            - generic [ref=e43]:
+              - generic [ref=e44]:
+                - generic [ref=e46]: First Name*
+                - textbox "First Name*" [ref=e47]: John
+              - generic [ref=e48]:
+                - generic [ref=e50]: Last Name*
+                - textbox "Last Name*" [ref=e51]: Doe
+              - generic [ref=e52]:
+                - generic [ref=e54]: Date of Birth*
+                - textbox "Date of Birth*" [ref=e55]: 1990-01-01
+              - generic [ref=e56]:
+                - generic [ref=e58]: Nationality*
+                - textbox "Nationality*" [ref=e59]: American
+              - generic [ref=e60]:
+                - generic [ref=e62]: Email Address*
+                - textbox "Email Address*" [ref=e63]: john.doe@example.com
+              - generic [ref=e64]:
+                - generic [ref=e66]: Phone Number*
+                - textbox "Phone Number*" [ref=e67]: "+1234567890"
+              - generic [ref=e68]:
+                - generic [ref=e69]:
+                  - generic [ref=e70]: Address
+                  - combobox [ref=e71] [cursor=pointer]:
+                    - generic [ref=e72]: Search for an address...
+                    - img [ref=e73]
+                - generic [ref=e76]:
+                  - generic [ref=e77]:
+                    - generic [ref=e79]: Street*
+                    - textbox "Street*" [ref=e80]: Main St
+                  - generic [ref=e81]:
+                    - generic [ref=e83]: House Number*
+                    - textbox "House Number*" [ref=e84]: "123"
+                  - generic [ref=e85]:
+                    - generic [ref=e87]: Zip Code*
+                    - textbox "Zip Code*" [ref=e88]: "10001"
+                  - generic [ref=e89]:
+                    - generic [ref=e91]: City*
+                    - textbox "City*" [ref=e92]: New York
+                  - generic [ref=e93]:
+                    - generic [ref=e95]: Country*
+                    - textbox "Country*" [ref=e96]: USA
+              - generic [ref=e97]:
+                - generic [ref=e99]: ID Document Type*
+                - combobox "ID Document Type*" [ref=e100] [cursor=pointer]:
+                  - generic: Select type
+                  - img [ref=e101]
+                - combobox [ref=e103]
+            - generic [ref=e104]:
+              - generic [ref=e107]: Upload Passport/ID*
+              - generic [ref=e108]:
+                - button [ref=e110] [cursor=pointer]:
+                  - img [ref=e111]
+                - paragraph [ref=e114]: "Accepted formats: PDF, JPG, PNG (Max 5MB)"
+            - generic [ref=e115]:
+              - heading "AML Profile" [level=3] [ref=e117]
+              - generic [ref=e118]:
+                - generic [ref=e119]:
+                  - generic [ref=e120]:
+                    - generic [ref=e122]: Profession*
+                    - textbox "Profession*" [ref=e123]: Engineer
+                  - generic [ref=e124]:
+                    - generic [ref=e126]: Estimated Annual Income (CHF)*
+                    - spinbutton "Estimated Annual Income (CHF)*" [ref=e127]: "100000"
+                  - generic [ref=e128]:
+                    - generic [ref=e130]: Estimated Total Wealth (CHF)*
+                    - spinbutton "Estimated Total Wealth (CHF)*" [ref=e131]: "500000"
+                  - generic [ref=e132]:
+                    - generic [ref=e134]: Estimated Total Liabilities (CHF)*
+                    - spinbutton "Estimated Total Liabilities (CHF)*" [active] [ref=e135]: "0"
+                - generic [ref=e137]:
+                  - generic [ref=e139]: Origin of assets introduced into the business relationship*
+                  - combobox "Origin of assets introduced into the business relationship*" [ref=e140] [cursor=pointer]:
+                    - generic: Select an option
+                    - img [ref=e141]
+                  - combobox [ref=e143]
+                - generic [ref=e144]:
+                  - generic [ref=e145]:
+                    - generic [ref=e147]: Purpose of Relationship*
+                    - combobox "Purpose of Relationship*" [ref=e148] [cursor=pointer]:
+                      - generic: Select an option
+                      - img [ref=e149]
+                    - combobox [ref=e151]
+                    - paragraph [ref=e152]: Please specify the main purpose of the business relationship.
+                  - generic [ref=e153]:
+                    - generic [ref=e155]: Planned Transaction Volume (Annual in CHF)*
+                    - textbox "Planned Transaction Volume (Annual in CHF)*" [ref=e156]
+                  - generic [ref=e157]:
+                    - generic [ref=e159]: Third Party Relations*
+                    - combobox "Third Party Relations*" [ref=e160] [cursor=pointer]:
+                      - generic: Select an option
+                      - img [ref=e161]
+                    - combobox [ref=e163]
+                    - paragraph [ref=e164]: Please specify if you act on behalf of a third party or if a third party has rights to the assets.
+            - generic [ref=e165]:
+              - heading "Special Clarifications" [level=3] [ref=e167]
+              - generic [ref=e169]:
+                - text: Special Clarifications
+                - textbox "Special Clarifications" [ref=e170]
+        - button "Submit Application" [ref=e172] [cursor=pointer]
+  - contentinfo [ref=e173]:
+    - generic [ref=e175]:
+      - generic [ref=e176]:
+        - generic [ref=e177]:
+          - link "Privacy Policy" [ref=e178] [cursor=pointer]:
+            - /url: /en/privacy-policy
+          - generic [ref=e179]: "|"
+          - link "Privacy Settings" [ref=e180] [cursor=pointer]:
+            - /url: /en/privacy-settings
+          - generic [ref=e181]: "|"
+          - link "Imprint" [ref=e182] [cursor=pointer]:
+            - /url: /en/imprint
+          - generic [ref=e183]: "|"
+          - link "Terms & Conditions" [ref=e184] [cursor=pointer]:
+            - /url: /en/terms-and-conditions
+          - generic [ref=e185]: "|"
+          - link "FAQ" [ref=e186] [cursor=pointer]:
+            - /url: /en/help
+        - paragraph [ref=e188]: © Plusplus AG 2025 | Zug, Switzerland
+      - link "LinkedIn" [ref=e190] [cursor=pointer]:
+        - /url: https://linkedin.com/company/plusplusag
+        - img [ref=e191]
+  - generic [ref=e199] [cursor=pointer]:
+    - button "Open Next.js Dev Tools" [ref=e200]:
+      - img [ref=e201]
+    - generic [ref=e204]:
+      - button "Open issues overlay" [ref=e205]:
+        - generic [ref=e206]:
+          - generic [ref=e207]: "0"
+          - generic [ref=e208]: "1"
+        - generic [ref=e209]: Issue
+      - button "Collapse issues badge" [ref=e210]:
+        - img [ref=e211]
+  - alert [ref=e213]
+  - generic [ref=e216]:
+    - paragraph [ref=e217]:
+      - text: We use cookies to improve your experience.
+      - link "Privacy Policy" [ref=e218] [cursor=pointer]:
+        - /url: /en/privacy-policy
+    - generic [ref=e219]:
+      - button "Accept All" [ref=e220] [cursor=pointer]
+      - button "Essential Only" [ref=e221] [cursor=pointer]
+  - button "Scroll to top" [ref=e222] [cursor=pointer]:
+    - img [ref=e223]
+```
