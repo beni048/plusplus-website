@@ -84,6 +84,28 @@ export default function OpenerDetails({ onFileChange, files, passportError }: Op
                         </FormItem>
                     )}
                 />
+                <FormField
+                    control={control}
+                    name="openerEmail"
+                    render={({ field }) => (
+                        <FormItem>
+                            <FormLabel><MandatoryLabel>{t('fields.opener_email')}</MandatoryLabel></FormLabel>
+                            <FormControl><Input {...field} type="email" /></FormControl>
+                            <FormMessage />
+                        </FormItem>
+                    )}
+                />
+                <FormField
+                    control={control}
+                    name="openerPhone"
+                    render={({ field }) => (
+                        <FormItem>
+                            <FormLabel><MandatoryLabel>{t('fields.opener_phone')}</MandatoryLabel></FormLabel>
+                            <FormControl><Input {...field} type="tel" /></FormControl>
+                            <FormMessage />
+                        </FormItem>
+                    )}
+                />
                 <div className="md:col-span-2 space-y-4">
                     <AddressSearch
                         label={t('fields.opener_address')}

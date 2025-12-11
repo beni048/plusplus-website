@@ -85,6 +85,8 @@ export const getFormSchema = (t: (key: string, values?: any) => string) => z.obj
     openerCountry: z.string().optional(),
     openerDateOfBirth: z.string().optional(),
     openerNationality: z.string().optional(),
+    openerEmail: z.string().optional(),
+    openerPhone: z.string().optional(),
 
     // Authorized Signatories
     authorizedSignatory1: getPersonSchema(t).optional(),
@@ -153,7 +155,11 @@ export const getFormSchema = (t: (key: string, values?: any) => string) => z.obj
         if (!data.dateOfBirth) ctx.addIssue({ code: z.ZodIssueCode.custom, message: t('messages.dob_required'), path: ["dateOfBirth"] });
         if (!data.nationality) ctx.addIssue({ code: z.ZodIssueCode.custom, message: t('messages.nationality_required'), path: ["nationality"] });
 
-        if (!data.phone) ctx.addIssue({ code: z.ZodIssueCode.custom, message: t('messages.phone_required'), path: ["phone"] });
+        if (!data.phone) {
+            ctx.addIssue({ code: z.ZodIssueCode.custom, message: t('messages.phone_required'), path: ["phone"] });
+        } else if (!/^\+?[0-9\s-]{6,}$/.test(data.phone)) {
+            ctx.addIssue({ code: z.ZodIssueCode.custom, message: t('messages.phone_invalid'), path: ["phone"] });
+        }
         if (!data.street) ctx.addIssue({ code: z.ZodIssueCode.custom, message: t('messages.street_required'), path: ["street"] });
         if (!data.houseNumber) ctx.addIssue({ code: z.ZodIssueCode.custom, message: t('messages.house_number_required'), path: ["houseNumber"] });
         if (!data.zipCode) ctx.addIssue({ code: z.ZodIssueCode.custom, message: t('messages.zip_code_required'), path: ["zipCode"] });
@@ -209,6 +215,19 @@ export const getFormSchema = (t: (key: string, values?: any) => string) => z.obj
         if (!data.openerZipCode) ctx.addIssue({ code: z.ZodIssueCode.custom, message: t('messages.zip_code_required'), path: ["openerZipCode"] });
         if (!data.openerCity) ctx.addIssue({ code: z.ZodIssueCode.custom, message: t('messages.city_required'), path: ["openerCity"] });
         if (!data.openerCountry) ctx.addIssue({ code: z.ZodIssueCode.custom, message: t('messages.country_required'), path: ["openerCountry"] });
+
+        // Opener Contact
+        if (!data.openerEmail) {
+            ctx.addIssue({ code: z.ZodIssueCode.custom, message: t('messages.email_required'), path: ["openerEmail"] });
+        } else if (!z.string().email().safeParse(data.openerEmail).success) {
+            ctx.addIssue({ code: z.ZodIssueCode.custom, message: t('messages.email_invalid'), path: ["openerEmail"] });
+        }
+
+        if (!data.openerPhone) {
+            ctx.addIssue({ code: z.ZodIssueCode.custom, message: t('messages.phone_required'), path: ["openerPhone"] });
+        } else if (!/^\+?[0-9\s-]{6,}$/.test(data.openerPhone)) {
+            ctx.addIssue({ code: z.ZodIssueCode.custom, message: t('messages.phone_invalid'), path: ["openerPhone"] });
+        }
 
         // Opener Auth
         if (!data.isOpenerAuthorizedSignatory) {

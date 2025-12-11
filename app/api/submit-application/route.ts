@@ -49,7 +49,7 @@ export async function POST(req: NextRequest) {
                 'domicileStreet', 'domicileHouseNumber', 'domicileZipCode', 'domicileCity', 'domicileCountry',
 
                 // Opener & Signatories
-                'openerFirstName', 'openerLastName', 'openerFunction',
+                'openerFirstName', 'openerLastName', 'openerFunction', 'openerEmail', 'openerPhone',
                 'openerStreet', 'openerHouseNumber', 'openerZipCode', 'openerCity', 'openerCountry',
                 'openerDateOfBirth', 'openerNationality',
                 'isOpenerAuthorizedSignatory', 'hasSecondSignatory', 'numberOfSignatories',

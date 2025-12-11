@@ -59,6 +59,8 @@ export default function OnboardingForm() {
             openerFunction: '',
             openerDateOfBirth: '',
             openerNationality: '',
+            openerEmail: '',
+            openerPhone: '',
             openerStreet: '',
             openerHouseNumber: '',
             openerZipCode: '',

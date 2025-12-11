@@ -832,6 +832,8 @@
       "opener_function": "Function at the Firm",
       "opener_date_of_birth": "Date of Birth",
       "opener_nationality": "Nationality",
+      "opener_email": "Email Address",
+      "opener_phone": "Phone Number",
       "opener_address": "Private Address",
       "is_opener_authorized_signatory": "Are you an authorized signatory?",
       "authorized_signatory_1": "Authorized Signatory 1",
