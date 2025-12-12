@@ -39,7 +39,7 @@ export default function AboutUs() {
             image: '/images/team/jonas_grey.png',
             scale: 1.3,
             yOffset: '2%',
-            xOffset: '6%',
+            xOffset: '0%',
             linkedin: 'https://www.linkedin.com/in/jonas-w-791335a0/',
         },
         {
@@ -68,7 +68,7 @@ export default function AboutUs() {
         },
         {
             id: 'roger',
-            image: '/images/team/roger_extended_v2.png',
+            image: '/images/team/roger_colored.png',
             scale: 1.8,
             yOffset: '5%',
             xOffset: '4%',
@@ -76,7 +76,7 @@ export default function AboutUs() {
         },
         {
             id: 'andreas',
-            image: '/images/team/andreas_2.PNG',
+            image: '/images/team/andreas_grey.png',
             scale: 2.25,
             yOffset: '19%',
             xOffset: '3%',
@@ -107,7 +107,7 @@ export default function AboutUs() {
                                                 src={member.image}
                                                 alt={t(`team.${member.id}.name`)}
                                                 fill
-                                                className="object-cover grayscale"
+                                                className="object-cover"
                                                 style={{
                                                     transform: `scale(${member.scale}) translateY(${member.yOffset}) translateX(${member.xOffset})`,
                                                     objectPosition: member.objectPosition || 'center'
