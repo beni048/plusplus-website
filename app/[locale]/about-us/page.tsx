@@ -44,7 +44,7 @@ export default function AboutUs() {
         },
         {
             id: 'luzius',
-            image: '/images/team/luzius_grey.png',
+            image: '/images/team/luzius_final.png',
             scale: 1.6,
             yOffset: '12%',
             xOffset: '5%',
@@ -60,7 +60,7 @@ export default function AboutUs() {
         },
         {
             id: 'lucas',
-            image: '/images/team/lucas_grey.png',
+            image: '/images/team/lucas_final.png',
             scale: 1.5,
             yOffset: '12%',
             xOffset: '0%',
@@ -76,7 +76,7 @@ export default function AboutUs() {
         },
         {
             id: 'andreas',
-            image: '/images/team/andreas_grey.png',
+            image: '/images/team/andreas_final.png',
             scale: 2.25,
             yOffset: '19%',
             xOffset: '3%',
