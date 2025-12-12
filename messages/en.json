@@ -51,7 +51,7 @@
       },
       "lucas": {
         "name": "Lucas Betschart",
-        "role": "Advisor",
+        "role": "Advisor & Investor",
         "description": "COO & Co-Founder 21 Analytics, former President Bitcoin Association Switzerland (Apr 2016 - Oct 2022), Bitcoin Developer & Compliance Expert since 2014"
       },
       "luzius": {
@@ -72,7 +72,7 @@
     "corporateTreasury": {
       "title": "Corporate Treasury",
       "paragraph1": "Our treasury solutions give companies secure access to the modern, digital financial world. Worldwide, more and more companies and financial institutions rely on stablecoins to manage liquidity more efficiently and profitably.",
-      "paragraph2": "With Frankencoin (ZCHF), a stable Swiss Franc stablecoin exists for the first time. We now enable institutional access to this new standard. Transparent, regulated, and with 3% yield in a zero-interest environment.",
+      "paragraph2": "With Frankencoin (ZCHF), a stable Swiss Franc stablecoin exists for the first time. We now enable institutional access to this new standard. Transparent, regulated, and with 4% yield in a zero-interest environment.",
       "button": "Learn more"
     },
     "partners": {
@@ -486,7 +486,7 @@
       "description": "Our commitment to security, compliance, and customer protection makes us the trusted choice for corporate treasury management.",
       "benefits": {
         "regulated": "Regulated and soon-to-be VQF member",
-        "aml": "Full compliance with AML regulations",
+        "aml": "Full compliance with AML regulations (VQF Member)",
         "soc2": "SOC 2 certification in process",
         "segregation": "Strong segregation of accounts per customer",
         "liquidity": "Funds always available short-term, never used for other purposes",

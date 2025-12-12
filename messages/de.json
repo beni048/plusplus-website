@@ -51,7 +51,7 @@
       },
       "lucas": {
         "name": "Lucas Betschart",
-        "role": "Advisor",
+        "role": "Advisor & Investor",
         "description": "COO & Co-Founder 21 Analytics, ehemaliger Präsident Bitcoin Association Switzerland (Apr 2016 - Okt 2022), Bitcoin Developer & Compliance-Experte seit 2014"
       },
       "luzius": {
@@ -72,7 +72,7 @@
     "corporateTreasury": {
       "title": "Corporate Treasury",
       "paragraph1": "Unsere Treasury-Lösungen eröffnen Unternehmen einen sicheren Zugang zur modernen, digitalen Finanzwelt. Weltweit setzen immer mehr Unternehmen und Finanzinstitute auf Stablecoins, um Liquidität effizienter und gewinnbringend zu verwalten.",
-      "paragraph2": "Mit dem Frankencoin (ZCHF) existiert erstmals ein stabiler Schweizer Franken Stablecoin. Wir ermöglichen jetzt den institutionellen Zugang zu diesem neuen Standard. Transparent, reguliert und mit 3% Rendite in einem Nullzinsumfeld.",
+      "paragraph2": "Mit dem Frankencoin (ZCHF) existiert erstmals ein stabiler Schweizer Franken Stablecoin. Wir ermöglichen jetzt den institutionellen Zugang zu diesem neuen Standard. Transparent, reguliert und mit 4% Rendite in einem Nullzinsumfeld.",
       "button": "Mehr erfahren"
     },
     "partners": {
@@ -486,7 +486,7 @@
       "description": "Unser Engagement für Sicherheit, Compliance und Kundenschutz macht uns zur vertrauenswürdigen Wahl für Corporate Treasury Management.",
       "benefits": {
         "regulated": "Reguliert und bald VQF-Mitglied",
-        "aml": "Vollständige Einhaltung der AML-Vorschriften",
+        "aml": "Vollständige Einhaltung der AML-Vorschriften (VQF-Mitglied)",
         "soc2": "SOC 2-Zertifizierung in Bearbeitung",
         "segregation": "Starke Trennung der Konten pro Kunde",
         "liquidity": "Geldmittel immer kurzfristig verfügbar, nie für andere Zwecke verwendet",
@@ -725,9 +725,9 @@
     }
   },
   "onboardingForm": {
-    "title": "Kunden-Onboarding",
-    "subtitle": "Bitte füllen Sie das untenstehende Formular aus, um den Onboarding-Prozess abzuschliessen.",
-    "description": "Bitte füllen Sie das untenstehende Formular aus, um den Onboarding-Prozess abzuschliessen.",
+    "title": "Kunden-Onboarding Formular",
+    "subtitle": "Bitte füllen Sie das folgende Formular aus, um den Onboarding-Prozess abzuschliessen.",
+    "description": "Bitte füllen Sie das folgende Formular aus, um den Onboarding-Prozess abzuschliessen.",
     "sections": {
       "entity_type": "Rechtsträger",
       "personal_info": "Persönliche Informationen",

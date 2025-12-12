@@ -40,7 +40,7 @@ export default function CorporateTreasury() {
     '@context': 'https://schema.org',
     '@type': 'Service',
     'name': locale === 'de' ? 'Corporate Treasury Management' : 'Corporate Treasury Management',
-    'description': locale === 'de' 
+    'description': locale === 'de'
       ? 'Sichere Treasury Management Lösungen mit Frankencoin und Bitcoin'
       : 'Secure treasury management solutions with Frankencoin and Bitcoin',
     'provider': {
@@ -84,7 +84,7 @@ export default function CorporateTreasury() {
           </div>
         </div>
       </div>
-      
+
       {/* Frankencoin Product Section */}
       <section className="bg-neutral-light pb-24">
         <div className="container mx-auto px-4">
@@ -184,7 +184,7 @@ export default function CorporateTreasury() {
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </ScheduleMeetingButton>
             </div>
-            
+
             {/* Text Right */}
             <div className="space-y-6 order-3 lg:order-2">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-primary font-medium text-black">
@@ -194,10 +194,7 @@ export default function CorporateTreasury() {
                 {t('corporateTreasury.trust.description')}
               </p>
               <ul className="text-base text-neutral-dark space-y-3 font-secondary">
-                <li className="flex items-start">
-                  <span className="text-accent-red mr-3 mt-1">•</span>
-                  <span>{t('corporateTreasury.trust.benefits.regulated')}</span>
-                </li>
+
                 <li className="flex items-start">
                   <span className="text-accent-red mr-3 mt-1">•</span>
                   <span>{t('corporateTreasury.trust.benefits.aml')}</span>
@@ -221,10 +218,10 @@ export default function CorporateTreasury() {
                 <li className="flex items-start">
                   <span className="text-accent-red mr-3 mt-1">•</span>
                   <span>
-                    {t('corporateTreasury.trust.benefits.audited')} 
-                    <a 
-                      href="https://www.chainsecurity.com/security-audit/plusplus-custody" 
-                      target="_blank" 
+                    {t('corporateTreasury.trust.benefits.audited')}
+                    <a
+                      href="https://www.chainsecurity.com/security-audit/plusplus-custody"
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="text-accent-red hover:underline ml-1"
                     >

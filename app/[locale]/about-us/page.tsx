@@ -36,10 +36,10 @@ export default function AboutUs() {
         },
         {
             id: 'jonas',
-            image: '/images/team/jonas_bright.png',
+            image: '/images/team/jonas_grey.png',
             scale: 1.3,
-            yOffset: '6%',
-            xOffset: '2%',
+            yOffset: '2%',
+            xOffset: '6%',
             linkedin: 'https://www.linkedin.com/in/jonas-w-791335a0/',
         },
         {
