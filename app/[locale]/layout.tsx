@@ -19,8 +19,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
 
   const titles = {
-    en: "Plusplus - Modern Rental Deposits & Corporate Treasury Solutions",
-    de: "Plusplus - Moderne Mietkaution & Corporate Treasury Lösungen",
+    en: "Plusplus - Your Partner for Stablecoins",
+    de: "Plusplus - Ihr Partner für Stablecoins",
   };
 
   const descriptions = {
