@@ -11,9 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/corporate-treasury',
         '/contact',
         '/contract-query',
-        '/rental-solutions/tenant',
-        '/rental-solutions/landlord',
-        '/rental-solutions/select',
+
         '/privacy-policy',
         '/terms-and-conditions',
         '/imprint',
