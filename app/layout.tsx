@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   title: "Plusplus - Stablecoin Partner Switzerland",
   description:
     "Plusplus empowers Swiss institutions and tenants with secure, compliant DeFi solutions.",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://plusplus.swiss'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://www.plusplus.swiss'),
   alternates: {
     canonical: '/',
     languages: {
@@ -54,10 +54,10 @@ export default function RootLayout({
     '@graph': [
       {
         '@type': 'Organization',
-        '@id': 'https://plusplus.swiss/#organization',
+        '@id': 'https://www.plusplus.swiss/#organization',
         name: 'Plusplus AG',
-        url: 'https://plusplus.swiss',
-        logo: 'https://plusplus.swiss/logo.svg',
+        url: 'https://www.plusplus.swiss',
+        logo: 'https://www.plusplus.swiss/logo.svg',
         description: 'Swiss fintech company providing DeFi solutions for rental deposits and treasury management',
         sameAs: [],
         address: {
@@ -76,9 +76,9 @@ export default function RootLayout({
       },
       {
         '@type': 'LocalBusiness',
-        '@id': 'https://plusplus.swiss/#business',
+        '@id': 'https://www.plusplus.swiss/#business',
         name: 'Plusplus AG',
-        url: 'https://plusplus.swiss',
+        url: 'https://www.plusplus.swiss',
         address: {
           '@type': 'PostalAddress',
           streetAddress: 'Poststrasse 22',

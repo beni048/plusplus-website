@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://plusplus.swiss';
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.plusplus.swiss';
     const locales = ['en', 'de'];
 
     // Define all static routes
