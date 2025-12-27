@@ -85,15 +85,7 @@ export default function Navbar() {
               >
                 {t('contact')}
               </Link>
-              <Link
-                href={`/${locale}/contract-query`}
-                className={`font-primary font-medium transition-colors ${isActive(`/${locale}/contract-query`)
-                  ? 'text-accent-red'
-                  : 'text-black hover:text-accent-red'
-                  }`}
-              >
-                {t('checkBalance')}
-              </Link>
+
             </div>
 
             {/* Separator */}
@@ -160,16 +152,7 @@ export default function Navbar() {
               >
                 {t('contact')}
               </Link>
-              <Link
-                href={`/${locale}/contract-query`}
-                className={`block font-primary font-medium transition-colors py-2 ${isActive(`/${locale}/contract-query`)
-                  ? 'text-accent-red'
-                  : 'text-black hover:text-accent-red'
-                  }`}
-                onClick={closeMobileMenu}
-              >
-                {t('checkBalance')}
-              </Link>
+
               <div className="pt-4 border-t border-gray-200">
                 <LanguageSwitcher sourceContext="navbar" mobile />
               </div>

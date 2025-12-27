@@ -3,8 +3,7 @@
     "rentalSolutions": "Mietlösungen",
     "corporateTreasury": "Corporate Treasury",
     "aboutUs": "Über uns",
-    "contact": "Kontakt",
-    "checkBalance": "Kontostand"
+    "contact": "Kontakt"
   },
   "hero": {
     "title": {
@@ -155,7 +154,8 @@
     "privacySettings": "Privatsphäre Einstellungen",
     "impressum": "Impressum",
     "terms": "Allgemeine Geschäftsbedingungen",
-    "help": "FAQ"
+    "help": "FAQ",
+    "checkBalance": "Kontostand"
   },
   "cookies": {
     "description": "Wir verwenden Cookies, um Ihre Erfahrung zu verbessern.",
