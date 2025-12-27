@@ -5,6 +5,11 @@
     "aboutUs": "About Us",
     "contact": "Contact"
   },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you are looking for does not exist or has been moved. Please choose an option from the menu or return to the homepage.",
+    "button": "Return to Homepage"
+  },
   "hero": {
     "title": {
       "simple": "Your Partner for",

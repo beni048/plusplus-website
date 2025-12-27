@@ -5,6 +5,11 @@
     "aboutUs": "Über uns",
     "contact": "Kontakt"
   },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "description": "Die von Ihnen gesuchte Seite existiert nicht oder wurde verschoben. Bitte wählen Sie eine Option aus dem Menü oder kehren Sie zur Startseite zurück.",
+    "button": "Zurück zur Startseite"
+  },
   "hero": {
     "title": {
       "simple": "Ihr Partner für",
