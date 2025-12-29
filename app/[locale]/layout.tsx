@@ -9,7 +9,7 @@ import GoogleAnalytics from '../components/GoogleAnalytics';
 import ScrollToTop from '../components/ScrollToTop';
 import ClientProviders from '../ClientProviders';
 
-const locales = ['en', 'de'];
+const locales = ['en', 'de', 'fr'];
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -21,24 +21,37 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const titles = {
     en: "Plusplus - Your Partner for Stablecoins",
     de: "Plusplus - Ihr Partner für Stablecoins",
+    fr: "Plusplus - Votre partenaire pour les Stablecoins",
   };
 
   const descriptions = {
     en: "Secure, compliant DeFi solutions for Swiss rental deposits and corporate treasury management. Featuring Frankencoin stablecoin, Bitcoin, and deposit insurance.",
     de: "Sichere, konforme DeFi-Lösungen für Schweizer Mietkautionen und Corporate Treasury Management. Mit Frankencoin-Stablecoin, Bitcoin und Kautionsversicherung.",
+    fr: "Solutions DeFi sécurisées et conformes pour les garanties de loyer suisses et la gestion de trésorerie d'entreprise. Avec Frankencoin, Bitcoin et assurance dépôt.",
   };
 
   const locale_key = locale as keyof typeof titles;
 
+  const currentTitle = titles[locale_key] || titles.en;
+  const currentDescription = descriptions[locale_key] || descriptions.en;
+
+  const ogLocaleMap: Record<string, string> = {
+    en: 'en_GB',
+    de: 'de_CH',
+    fr: 'fr_CH'
+  };
+  const currentOgLocale = ogLocaleMap[locale] || 'en_GB';
+  const alternateOgLocales = Object.values(ogLocaleMap).filter(l => l !== currentOgLocale);
+
   return {
-    title: titles[locale_key] || titles.en,
-    description: descriptions[locale_key] || descriptions.en,
+    title: currentTitle,
+    description: currentDescription,
     openGraph: {
-      title: titles[locale_key] || titles.en,
-      description: descriptions[locale_key] || descriptions.en,
+      title: currentTitle,
+      description: currentDescription,
       type: 'website',
-      locale: locale === 'de' ? 'de_CH' : 'en_GB',
-      alternateLocale: locale === 'de' ? 'en_GB' : 'de_CH',
+      locale: currentOgLocale,
+      alternateLocale: alternateOgLocales,
     },
   };
 }

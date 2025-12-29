@@ -1,0 +1,987 @@
+{
+  "nav": {
+    "rentalSolutions": "Solutions Locatives",
+    "corporateTreasury": "Trésorerie d'Entreprise",
+    "aboutUs": "À Propos",
+    "contact": "Contact"
+  },
+  "notFound": {
+    "title": "Page non trouvée",
+    "description": "La page que vous recherchez n'existe pas ou a été déplacée. Veuillez choisir une option dans le menu ou retourner à la page d'accueil.",
+    "button": "Retour à l'accueil"
+  },
+  "hero": {
+    "title": {
+      "simple": "Votre partenaire pour les",
+      "highlight": "Stablecoins",
+      "subtitle": ""
+    },
+    "subtitle": "Nous donnons accès à une nouvelle génération de solutions financières.",
+    "cta": "Découvrir maintenant"
+  },
+  "aboutUs": {
+    "title": "À Propos",
+    "subtitle": "Rencontrez les experts qui font avancer Plusplus grâce à leur expérience en finance, technologie et droit.",
+    "team": {
+      "benjamin": {
+        "name": "Benjamin Rossi",
+        "role": "Co-Fondateur & CEO",
+        "description": "Ingénieur ETH en informatique & MSc. Commerce International, Chef de projet IT expérimenté et ancien journaliste NZZ, Stratégie & Communication"
+      },
+      "matthias": {
+        "name": "Matthias Nadler",
+        "role": "Co-Fondateur & CTO",
+        "description": "Doctorat en Finance Décentralisée (avec le Prof. Fabian Schär, Univ. Bâle), Publications incl. avec Vitalik Buterin comme co-auteur, Développement Blockchain, Infrastructure Smart-Contract"
+      },
+      "jonas": {
+        "name": "Jonas Wälti",
+        "role": "Conseiller & Investisseur",
+        "description": "Investisseur & Conseiller Relai, 15 ans d'expérience en vente B2B, Réseau Écosystème Fintech & Crypto Suisse, Partenariats & Relations Investisseurs"
+      },
+      "roger": {
+        "name": "Roger Eichenberger",
+        "role": "Membre du Conseil & Investisseur Principal",
+        "description": "Associé Senior chez Helvetic Trust, 13+ ans Private Banking Credit Suisse, Pont TradFi-DeFi, Conformité Réglementaire, Partenariats Institutionnels"
+      },
+      "andreas": {
+        "name": "Andreas Bühler",
+        "role": "Membre du Conseil",
+        "description": "Avocat, CIIA/CEFA, spécialisé en Réglementation des Marchés Financiers et Investissements d'Infrastructure"
+      },
+      "magdalena": {
+        "name": "Magdalena Boškić",
+        "role": "Conseillère",
+        "description": "Experte en Conformité Crypto, Of Counsel chez Kellerhals Carrard, ex-Responsable RegTech & Conformité chez Sygnum et Crypto Finance, Doctorante & Directrice de Cours à l'Univ. Zurich, Présidente du Comité AML CMTA"
+      },
+      "lucas": {
+        "name": "Lucas Betschart",
+        "role": "Conseiller & Investisseur",
+        "description": "COO & Co-Fondateur 21 Analytics, ancien Président Bitcoin Association Switzerland (Avr 2016 - Oct 2022), Développeur Bitcoin & Expert Conformité depuis 2014"
+      },
+      "luzius": {
+        "name": "Luzius Meisser",
+        "role": "Conseiller",
+        "description": "Membre du Conseil Bitcoin Suisse AG, Co-Fondateur Aktionariat AG, Membre du Conseil Frankencoin Association, Doctorat Banque & Finance (Université de Zurich), Pionnier Crypto depuis début des années 2010"
+      }
+    },
+    "linkedinProfile": "Profil LinkedIn"
+  },
+  "mainSections": {
+    "rentalSolutions": {
+      "title": "Solutions Locatives",
+      "paragraph1": "Nos solutions de dépôt de location numérique offrent une alternative moderne au dépôt bancaire traditionnel. Au lieu de bloquer le capital, le dépôt est stocké en toute sécurité sur la blockchain : sous forme de stablecoin Franc Suisse avec rendement ou en Bitcoin.",
+      "paragraph2": "En coulisses, la technologie assure des rendements équitables pour les locataires. Pour les propriétaires, le processus est transparent, sécurisé et entièrement numérique pour la première fois.",
+      "button": "En profiter maintenant"
+    },
+    "corporateTreasury": {
+      "title": "Trésorerie d'Entreprise",
+      "paragraph1": "Nos solutions de trésorerie offrent aux entreprises un accès sécurisé au monde financier moderne et numérique. Partout dans le monde, de plus en plus d'entreprises et d'institutions financières s'appuient sur les stablecoins pour gérer leurs liquidités de manière plus efficace et rentable.",
+      "paragraph2": "Avec le Frankencoin (ZCHF), un stablecoin stable en Franc Suisse existe pour la première fois. Nous permettons désormais un accès institutionnel à ce nouveau standard. Transparent, réglementé et avec 4% de rendement dans un environnement à taux zéro.",
+      "button": "En savoir plus"
+    },
+    "partners": {
+      "title": "Partenaires",
+      "paragraph1": "Nos partenaires figurent parmi les principaux fournisseurs de technologies financières et d'infrastructures numériques.",
+      "paragraph2": "Ensemble, nous veillons à ce que tous les systèmes répondent aux normes les plus élevées en matière de sécurité, de conformité et de transparence.",
+      "descriptions": {
+        "zinsli": "Place de marché suisse pour les solutions de dépôt de location",
+        "frankencoin": "Stablecoin décentralisé en Franc Suisse",
+        "mtpelerin": "Plateforme suisse de trading et portefeuille de crypto-monnaies",
+        "vnx": "Actifs réels tokenisés et matières premières",
+        "vqf": "Normes de qualité et conformité pour la finance numérique",
+        "chainsecurity": "Audit de sécurité et analyse de contrats intelligents",
+        "gwp": "Services de conseil financier et de conformité réglementaire"
+      }
+    },
+    "contact": {
+      "title": "Prêt à commencer ?",
+      "paragraph": "Découvrez nos solutions lors d'un entretien personnel.\nRéservez une consultation sans engagement de 30 minutes avec notre responsable des ventes.",
+      "button": "Planifier une réunion",
+      "subtitle": "Réservez une consultation de 30 minutes maintenant."
+    }
+  },
+  "contractQuery": {
+    "title": "Vérifier le solde de votre compte",
+    "description": "Interrogez votre compte Plusplus pour voir le solde de votre dépôt, la valeur actuelle et les gains",
+    "stablecoin": {
+      "label": "Stablecoin",
+      "inputLabel": "Numéro de client Plusplus ou Zinsli",
+      "inputDescription": "Entrez votre numéro de client pour vérifier le statut de votre compte stablecoin"
+    },
+    "bitcoin": {
+      "label": "Bitcoin",
+      "inputLabel": "Numéro de client Plusplus ou Zinsli",
+      "inputDescription": "Entrez votre numéro de client pour vérifier le statut de votre compte Bitcoin"
+    },
+    "fields": {
+      "depositDate": "Date de dépôt",
+      "principal": "Principal",
+      "timeSinceDeposit": "Temps depuis le dépôt",
+      "currentValue": "Valeur actuelle",
+      "bitcoinAmount": "Montant Bitcoin",
+      "gainSinceDeposit": "Gain depuis le dépôt"
+    },
+    "actions": {
+      "query": "Rechercher",
+      "querySuccessful": "Recherche réussie",
+      "invalidCustomerNumber": "Veuillez entrer un numéro de client valide"
+    },
+    "customerNumberInfo": "Pour les clients Plusplus : Vous pouvez trouver votre numéro de client dans l'e-mail de confirmation d'ouverture de compte.\n\nPour les clients Zinsli : Connectez-vous à https://app.zinsli.com, sélectionnez votre dépôt, allez dans « Documents » -> « Fiche technique PDF », et cherchez « Zinsli Collateral ID ».",
+    "contractInfo": {
+      "address": "Adresse",
+      "viewOnEtherscan": "Voir sur Etherscan"
+    },
+    "dataSources": "Sources de données : Données de prix Bitcoin fournies par CoinGecko. Prix historiques utilisés pour les calculs du principal.",
+    "errors": {
+      "networkBusy": "Le réseau est actuellement occupé. Veuillez réessayer plus tard.",
+      "timeout": "La demande a pris trop de temps à répondre. Veuillez réessayer.",
+      "generic": "Une erreur s'est produite lors de la récupération de vos données. Veuillez réessayer.",
+      "retry": "Réessayer"
+    }
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "form": {
+      "name": "Nom",
+      "email": "E-mail",
+      "message": "Message",
+      "submit": "Envoyer",
+      "sending": "Envoi en cours..."
+    },
+    "success": {
+      "title": "Merci pour votre message !",
+      "message": "Nous reviendrons vers vous dès que possible."
+    }
+  },
+  "footer": {
+    "copyright": "© Plusplus AG 2025/2026 | Zoug, Suisse",
+    "privacyPolicy": "Politique de Confidentialité",
+    "privacySettings": "Paramètres de confidentialité",
+    "impressum": "Mentions Légales",
+    "terms": "Termes et Conditions",
+    "help": "FAQ",
+    "checkBalance": "Vérifier le solde"
+  },
+  "cookies": {
+    "description": "Nous utilisons des cookies pour améliorer votre expérience.",
+    "learnMore": "Politique de Confidentialité",
+    "acceptOptional": "Tout Accepter",
+    "declineOptional": "Essentiels Uniquement"
+  },
+  "privacy": {
+    "controlsTitle": "Contrôles de Confidentialité",
+    "pageSubtitle": "Gérez vos préférences de confidentialité et contrôlez comment vos données sont utilisées sur notre site.",
+    "aboutAnalyticsTitle": "À propos de nos analyses",
+    "aboutAnalyticsDescription": "Nous utilisons Google Analytics 4 avec une configuration axée sur la confidentialité pour comprendre comment les visiteurs utilisent notre site. Notre mise en œuvre comprend :",
+    "consentModeLabel": "Mode de Consentement v2",
+    "consentModeFeature": "L'analyse ne fonctionne qu'avec votre consentement explicite",
+    "ipAnonymizationLabel": "Anonymisation IP",
+    "ipAnonymizationFeature": "Votre adresse IP est anonymisée avant traitement",
+    "noAdvertisingLabel": "Pas de Publicité",
+    "noAdvertisingFeature": "Nous n'utilisons pas de fonctionnalités publicitaires ou de remarketing",
+    "dataRetentionLabel": "Rétention des Données",
+    "dataRetentionFeature": "Les données d'analyse sont automatiquement supprimées après 14 mois",
+    "gdprComplianceLabel": "Conformité RGPD",
+    "gdprComplianceFeature": "Conformité totale avec les réglementations de confidentialité de l'UE",
+    "optOutInfo": "Vous pouvez vous désinscrire des analyses à tout moment, et nous fournissons des outils pour supprimer toutes vos données si vous souhaitez exercer votre droit à l'oubli.",
+    "alwaysActive": "Toujours Actif",
+    "deleteDataButton": "Supprimer les Données",
+    "deleteDataConfirmTitle": "Supprimer Toutes les Données ?",
+    "deleteDataConfirmDescription": "Cela supprimera définitivement toutes vos préférences enregistrées et les données de suivi.",
+    "cancel": "Annuler",
+    "confirmDelete": "Supprimer Toutes les Données",
+    "dataDeletionConfirmation": "Toutes vos données ont été supprimées avec succès.",
+    "essentialCookies": "Cookies Essentiels",
+    "essentialCookiesDescription": "Requis pour la fonctionnalité et la sécurité du site",
+    "analytics": "Analytique",
+    "analyticsDescription": "Aidez à améliorer notre site avec des données d'utilisation anonymes",
+    "deleteAllData": "Supprimer Toutes les Données",
+    "deleteAllDataDescription": "Supprimer définitivement toutes les préférences et données stockées"
+  },
+  "help": {
+    "title": "Foire Aux Questions",
+    "questions": {
+      "whatIs": {
+        "question": "Qu'est-ce que Plusplus ?",
+        "answer": "Plusplus AG est le partenaire leader en Suisse pour les stablecoins dans les applications réelles. Basés à Zoug, nous nous spécialisons pour rendre les stablecoins accessibles et conformes pour les particuliers et les institutions à travers la Suisse. Nous comblons le fossé entre la finance traditionnelle et l'innovation blockchain en créant des produits pratiques qui exploitent les stablecoins en Franc Suisse comme le Frankencoin (ZCHF). Nos deux produits phares — Solutions Locatives pour les dépôts numériques et Trésorerie d'Entreprise pour la liquidité institutionnelle — démontrent comment les stablecoins résolvent de véritables défis financiers. Nous combinons l'excellence réglementaire suisse avec la technologie blockchain, garantissant à chaque client une sécurité, une conformité et une transparence de niveau institutionnel."
+      },
+      "products": {
+        "question": "Quels services et produits Plusplus propose-t-il ?",
+        "answer": "Plusplus propose deux solutions de stablecoin conformes aux normes suisses : (1) Solutions Locatives — gestion des dépôts de garantie en Frankencoin (ZCHF) avec 3% de rendement annuel ou en Bitcoin, offrant des rendements équitables pour les locataires tout en simplifiant les processus pour les propriétaires grâce à notre partenariat avec Zinsli. (2) Trésorerie d'Entreprise — gestion de liquidité de niveau institutionnel utilisant le Frankencoin, permettant aux entreprises suisses d'optimiser leurs réserves de trésorerie avec des rendements stables en Francs Suisses. Les deux produits reposent sur la fondation du Frankencoin, le stablecoin Franc Suisse le plus robuste et sur-collatéralisé. Nous gérons toute la complexité technique, la conformité réglementaire et notre solution de conservation propriétaire, permettant à nos clients d'accéder aux avantages des stablecoins sans expertise blockchain."
+      },
+      "howItWorks": {
+        "question": "Comment fonctionne Plusplus ?",
+        "answer": "Plusplus simplifie l'adoption des stablecoins en gérant toute la complexité technique et réglementaire. Pour les Solutions Locatives : Les locataires déposent des fonds, que Plusplus convertit en Frankencoin (ZCHF) et conserve dans des comptes de garde individuels, générant un rendement tout en maintenant une conformité totale avec le droit du bail suisse. Pour la Trésorerie d'Entreprise : Les entreprises déposent des réserves, qui sont déployées dans des modules d'épargne Frankencoin pour des rendements stables. Plusplus gère la sécurité, les exigences réglementaires KYC/AML, l'intégration du protocole DeFi, et fournit une solution de conservation propriétaire."
+      },
+      "benefits": {
+        "question": "Quels sont les avantages d'utiliser Plusplus ?",
+        "answer": "Plusplus offre des avantages stablecoin adaptés aux besoins suisses : (1) Conformité Réglementaire — opérez en toute tranquillité selon le droit suisse et les normes internationales ; (2) Génération de Rendement — accédez à 3% de rendement annuel sur les dépôts contre des taux bancaires proches de zéro ; (3) Transparence — chaque transaction est vérifiable sur la blockchain, éliminant le risque de contrepartie ; (4) Efficacité des Coûts — éliminez les intermédiaires et les délais de traitement ; (5) Sécurité — bénéficiez de la sur-collatéralisation du Frankencoin et de la conservation propriétaire de Plusplus. Pour les Solutions Locatives, les locataires bénéficient de rendements équitables tandis que les propriétaires simplifient la gestion des dépôts. Pour la Trésorerie d'Entreprise, les entreprises optimisent leurs réserves de trésorerie avec une infrastructure institutionnelle. Tous les avantages sont accompagnés d'une surveillance réglementaire suisse sans nécessiter de connaissances techniques en blockchain."
+      },
+      "security": {
+        "question": "Comment mes fonds sont-ils sécurisés ?",
+        "answer": "Plusplus met en œuvre une sécurité de niveau institutionnel grâce à notre solution de conservation propriétaire : (1) Conservation de Pointe — infrastructure de sécurité avancée conçue et exploitée par Plusplus ; (2) Sur-Collatéralisation — le Frankencoin est collatéralisé par des actifs réels, audités régulièrement ; (3) Comptes Ségrégués — la conservation individuelle par client garantit que les fonds restent séparés et sécurisés ; (4) Audits de Smart Contracts — tous les contrats déployés subissent des audits de sécurité tiers ; (5) Conformité Suisse — réglementé selon les normes suisses AML/KYC avec des évaluations de sécurité régulières. Vos stablecoins restent ségrégués à votre nom tandis que l'infrastructure de Plusplus assure une gestion sûre et accessible."
+      },
+      "risks": {
+        "question": "Quels sont les risques d'utiliser Plusplus ?",
+        "answer": "Plusplus communique de manière transparente sur les risques des stablecoins : (1) Risque de Smart Contract — vulnérabilités du code malgré les audits ; nous atténuons cela par des protocoles établis et une surveillance continue. (2) Risque de Protocole — les protocoles DeFi sous-jacents peuvent rencontrer des problèmes techniques ; nous diversifions à travers des plateformes vérifiées. (3) Risque Réglementaire — les réglementations sur les stablecoins peuvent changer ; Plusplus assure activement la conformité suisse et collabore avec les régulateurs. (4) Risque de Marché — bien que le Frankencoin vise la parité 1:1 avec le CHF par collatéralisation, un stress extrême du marché pourrait impacter la stabilité. (5) Risque Opérationnel — interruptions du système, bien que rares, pourraient limiter l'accès ; nous maintenons une redondance et des protocoles d'incident. (6) Risque de Rendement — les rendements futurs peuvent différer des 3% actuels (Novembre 2025) selon les conditions du marché. Chaque produit inclut des informations détaillées sur les risques. Veuillez consulter les documents spécifiques aux risques avant d'investir."
+      },
+      "access": {
+        "question": "Comment puis-je accéder à mes fonds ? Y a-t-il des restrictions ?",
+        "answer": "Plusplus conçoit l'accès aux stablecoins autour des besoins pratiques suisses : Pour les Solutions Locatives, le droit du bail détermine le timing — vous pouvez retirer après la fin de la location ou avec un accord mutuel propriétaire-locataire, suivant les exigences de l'Art. 257e CO suisse. Pour la Trésorerie d'Entreprise, les comptes institutionnels peuvent retirer les jours ouvrables avec un règlement typique en 1-2 jours ouvrables. Le Frankencoin maintient une liquidité continue sur la blockchain et peut être échangé 24/7 sur des bourses décentralisées si nécessaire. Des procédures d'urgence existent pour des besoins urgents. Tous les droits d'accès et les délais sont clairement documentés dans votre contrat produit. Aucune restriction cachée ne s'applique — vos fonds restent les vôtres, détenus en conservation individuelle selon le droit suisse."
+      },
+      "regulation": {
+        "question": "Plusplus est-il réglementé ?",
+        "answer": "Plusplus AG est enregistrée à Zoug et opère sous la réglementation financière suisse. Nous nous conformons pleinement aux exigences suisses AML/KYC. Pour les Solutions Locatives, nous respectons les exigences du droit du bail suisse (Art. 257e CO) pour la gestion des dépôts et les protections légales. Le Frankencoin lui-même est un stablecoin Franc Suisse opérant sous une gouvernance DeFi établie. Plusplus est un membre actif de la VQF. Nos offres de Trésorerie d'Entreprise répondent aux normes de conformité institutionnelle. Nous mettons en œuvre des procédures rigoureuses de KYC/AML, mettant régulièrement à jour les cadres de conformité à mesure que la réglementation suisse sur les stablecoins évolue. Notre solution de conservation propriétaire opère dans le cadre réglementaire strict de la Suisse."
+      },
+      "privacy": {
+        "question": "Comment ma vie privée est-elle protégée ?",
+        "answer": "Plusplus protège votre vie privée selon les normes de la Loi fédérale sur la protection des données (nLPD) et du RGPD. Les données personnelles ne sont collectées que pour la prestation de services et la conformité réglementaire — jamais vendues ou partagées avec des tiers non réglementés. Nous utilisons un cryptage de niveau bancaire pour tout stockage et transmission de données, avec des audits de sécurité garantissant la conformité. Vos stablecoins eux-mêmes opèrent sur une blockchain publique (Ethereum), offrant une transparence totale des transactions tandis que l'identité personnelle reste protégée par une conservation réglementée. Vous gardez le contrôle de vos informations personnelles avec des droits d'accès, de rectification ou de suppression à tout moment. Les exigences réglementaires (KYC/AML) imposent un partage limité avec les autorités suisses et les partenaires — le tout sous des accords de confidentialité stricts. Notre Politique de Confidentialité fournit tous les détails sur le traitement des données."
+      },
+      "support": {
+        "question": "Comment commencer ou obtenir de l'aide ?"
+      }
+    }
+  },
+  "privacyPolicy": {
+    "title": "Politique de Confidentialité",
+    "intro": "Cette Politique de Confidentialité explique la nature, l'étendue et la finalité du traitement des données personnelles sur www.plusplus.swiss (le « Site Web »). Pour les définitions telles que « données personnelles » et « traitement », veuillez consulter l'article 4 du RGPD et l'article 3 de la nouvelle Loi fédérale sur la protection des données (nLPD).",
+    "section1": {
+      "title": "1. Responsable du Traitement",
+      "content": "Plusplus AG<br />Poststrasse 22<br />6300 Zoug, Suisse<br />E-mail : info@plusplus.swiss"
+    },
+    "section2": {
+      "title": "2. Collecte et Traitement des Données Personnelles",
+      "subsection1": {
+        "title": "2.1. Données d'accès / Fichiers journaux du serveur",
+        "content": "Lorsque vous visitez le Site Web, certaines données sont automatiquement transmises par votre navigateur à notre hébergeur, Vercel. Cela inclut votre adresse IP, la date et l'heure d'accès et l'URL demandée. Ces données sont techniquement nécessaires pour exploiter le Site Web (Art. 45c L Télécom, Art. 6(1)(c) RGPD)."
+      },
+      "subsection2": {
+        "title": "2.2. Formulaire de Contact",
+        "content": "Si vous utilisez notre formulaire de contact, nous collectons votre nom, votre adresse e-mail et le contenu du message que vous soumettez. Le traitement est basé sur notre intérêt légitime à répondre aux demandes (Art. 6(1)(f) RGPD) et, si requis, sur votre consentement explicite (Art. 6(1)(a) RGPD)."
+      },
+      "subsection3": {
+        "title": "2.3. Cookies et Suivi",
+        "content1": "Le Site Web utilise les cookies et traceurs suivants :",
+        "list": {
+          "item1": "Cookies nécessaires pour les fonctionnalités de base du site (aucun consentement requis).",
+          "item2": "Cookies de préférences, statistiques et marketing uniquement après avoir donné votre consentement explicite via la bannière de cookies."
+        },
+        "content2": "Dès le consentement, nous stockons un cookie nommé cookieConsent pour enregistrer votre choix. Vous pouvez retirer ou modifier votre consentement à tout moment via la bannière de cookies."
+      },
+      "subsection4": {
+        "title": "2.4. Analyse Web",
+        "content": "Nous utilisons Simple Analytics (hébergé en UE, sans cookies) ou — uniquement après consentement — Google Analytics 4 avec le Mode de Consentement v2. Les données sont collectées de manière anonyme et non liées à d'autres services Google."
+      },
+      "subsection5": {
+        "title": "2.5. Services Tiers",
+        "content1": "– reCAPTCHA par Google (opérant sous le Cadre de protection des données UE-États-Unis)<br />– Vercel Analytics (conforme au RGPD)",
+        "content2": "Les données sont traitées uniquement sur une base légale ou après consentement et ne sont pas transférées vers des pays sans garanties adéquates de protection des données."
+      }
+    },
+    "section3": {
+      "title": "3. Bases Légales",
+      "list": {
+        "item1": "Art. 6(1)(c) RGPD / L Télécom § 45c : Stockage des données d'accès pour assurer le fonctionnement technique",
+        "item2": "Art. 6(1)(f) RGPD : Intérêt légitime dans la communication client",
+        "item3": "Art. 6(1)(a) RGPD : Consentement pour les cookies non essentiels et le suivi"
+      }
+    },
+    "section4": {
+      "title": "4. Transferts Internationaux de Données",
+      "content": "Les données personnelles ne sont transférées que vers des pays disposant d'un niveau de protection adéquat (Suisse, UE, Royaume-Uni, Canada, entreprises américaines sous le Cadre de protection des données UE-États-Unis). Pour les transferts vers d'autres pays, nous utilisons des Clauses Contractuelles Types."
+    },
+    "section5": {
+      "title": "5. Rétention des Données",
+      "content": "Nous ne conservons les données personnelles qu'aussi longtemps que nécessaire aux fins indiquées ou tel que requis par la loi."
+    },
+    "section6": {
+      "title": "6. Vos Droits",
+      "content": "En vertu des articles 15–20 du RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation du traitement et de portabilité des données. Pour exercer ces droits, contactez-nous à info@plusplus.swiss."
+    },
+    "section7": {
+      "title": "7. Mises à jour de cette Politique",
+      "content": "Nous pouvons mettre à jour cette Politique de Confidentialité périodiquement. La date de la dernière révision apparaît ci-dessous."
+    },
+    "effective": {
+      "title": "Dernière mise à jour : Septembre 2025"
+    }
+  },
+  "productSelect": {
+    "title": "Découvrez Nos Solutions",
+    "subtitle": "Nos produits allient des principes financiers éprouvés à la technologie numérique pour des applications modernes de location et de trésorerie.",
+    "subtitleFull": "Nos produits allient des principes financiers éprouvés à la technologie numérique pour des applications modernes de location et de trésorerie.",
+    "rentalSolutions": {
+      "title": "Solutions Locatives",
+      "description": "Solutions de dépôt de garantie numériques pour locataires et propriétaires. Équitables, sécurisées et gérées entièrement en ligne.",
+      "cta": "En savoir plus"
+    },
+    "corporateTreasury": {
+      "title": "Vérifier le Solde",
+      "description": "Solutions modernes de trésorerie et de liquidité basées sur des stablecoins pour entreprises et institutions.",
+      "cta": "Découvrir les Services"
+    },
+    "contact": {
+      "question": "Aucune des options ci-dessus ne correspond à vos besoins ?",
+      "button": "Prendre contact"
+    }
+  },
+  "rentalSolutionsSelect": {
+    "title": "Trouvez la Solution Locative Idéale",
+    "subtitle": "Explorez nos solutions de dépôt sécurisées et numériques. Équitables pour les locataires. Simples pour les propriétaires.",
+    "subtitleFull": "Explorez nos solutions de dépôt sécurisées et numériques. Équitables pour les locataires. Simples pour les propriétaires.",
+    "tenant": {
+      "title": "Je suis Locataire",
+      "description": "Le dépôt de garantie classique appartient au passé.\nNotre solution numérique permet des rendements équitables et une transparence totale. En stablecoins Franc Suisse ou en Bitcoin.",
+      "cta": "Commencer"
+    },
+    "landlord": {
+      "title": "Je suis Propriétaire",
+      "description": "Vous souhaitez gérer les dépôts de garantie simplement, de manière transparente et numérique ?\nNous offrons une sécurité vérifiée et des processus automatisés. Moins d'efforts et une meilleure vue d'ensemble. Entièrement gratuit.",
+      "cta": "En savoir plus"
+    },
+    "contact": {
+      "question": "Aucune des options ci-dessus ne correspond à vos besoins ?",
+      "button": "Prendre contact"
+    }
+  },
+  "rentalSolutionsTenant": {
+    "title": "Dépôt de Garantie Numérique. Équitable et Simple.",
+    "subtitle": "Transformez votre dépôt de garantie en une partie intégrante de votre stratégie d'investissement dès aujourd'hui.",
+    "subtitleFull": "Transformez votre dépôt de garantie en une partie intégrante de votre stratégie d'investissement dès aujourd'hui.",
+    "calculator": {
+      "title": "Calculer Votre Rendement Maintenant",
+      "description": "Découvrez la différence entre les dépôts bancaires traditionnels, l'assurance dépôt et nos alternatives numériques.",
+      "button": "Vers le Calculateur de Dépôt"
+    },
+    "frankencoin": {
+      "title": "Dépôt en Stablecoins Franc Suisse",
+      "description": "L'alternative moderne au compte d'épargne. Votre dépôt locatif est détenu en Frankencoin (ZCHF): un stablecoin indexé sur le Franc Suisse, offrant stabilité et rendement.",
+      "benefits": {
+        "stability": "Actuellement 3% de rendement par an",
+        "transparency": "Performance de valeur stable",
+        "settlement": "Garde institutionnelle"
+      },
+      "cta": "Voir la Fiche Produit"
+    },
+    "bitcoin": {
+      "title": "Dépôt en Bitcoin",
+      "description": "Pour les locataires tournés vers l'avenir. Votre dépôt locatif est détenu de manière sûre et ségrégée en Bitcoin (WBTC). Vous participez ainsi à l'évolution à long terme de l'actif numérique leader mondial.",
+      "benefits": {
+        "appreciation": "Potentiel de valeur à long terme",
+        "escrow": "Transparence totale",
+        "accessibility": "Garde institutionnelle"
+      },
+      "cta": "Voir la Fiche Produit"
+    },
+    "emailTemplate": {
+      "title": "Prêt à commencer ? Informez votre propriétaire",
+      "description": "Copiez ce modèle d'e-mail et envoyez-le directement à votre propriétaire pour lui présenter la solution de dépôt de garantie Plusplus et Zinsli.",
+      "copy": "Copier l'e-mail",
+      "copied": "Copié !",
+      "button": "Visiter la plateforme Zinsli",
+      "subtitle": "Votre propriétaire peut s'inscrire et vous inviter en moins de 5 minutes"
+    },
+    "finalCta": {
+      "title": "Prêt à Commencer ?",
+      "description": "Rejoignez des milliers de locataires qui obtiennent déjà des rendements sur leurs dépôts de garantie avec notre plateforme innovante.",
+      "button": "Obtenir un Dépôt Plusplus"
+    }
+  },
+  "depositCalculator": {
+    "backToTenant": "Retour aux Solutions Locataires",
+    "title": "Calculateur de Dépôt",
+    "subtitle": "Comparez combien vous pourriez gagner en plus.",
+    "subtitleFull": "Comparez maintenant combien vous pouvez gagner en plus avec nos solutions de dépôt innovantes par rapport aux options traditionnelles.",
+    "grossRent": "Loyer Brut (CHF/Mois)",
+    "rentalPeriod": "Durée de Location (Années)",
+    "depositMultiplier": "Multiplicateur de Dépôt",
+    "deposit": "Dépôt Total",
+    "monthlyRent": "Loyer Mensuel",
+    "productA": "Produit A",
+    "productB": "Produit B",
+    "totalReturn": "Rendement total sur la durée",
+    "totalCost": "Coût total sur la durée",
+    "perYear": "∅ par an",
+    "capitalDevelopment": "Développement du Capital",
+    "year": "Année",
+    "bitcoinWarning": "Données Historiques Bitcoin : Les calculs Bitcoin sont basés sur les prix d'ouverture mensuels réels d'octobre 2009 à octobre 2025 et illustrent la véritable volatilité historique du Bitcoin, y compris les baisses de prix significatives et les hausses.",
+    "stablecoinWarning": "Données Historiques : Les rendements affichés pour le Stablecoin CHF sont basés sur des données de performance historiques et sont une visualisation du passé. Ils ne garantissent pas et ne sont pas une prédiction des performances futures.",
+    "disclaimer": "Mentions Légales : Les calculs présentés sont basés sur les données de marché d'octobre 2025 et sont fournis à titre d'information et d'illustration uniquement. Ils ne constituent pas un conseil financier, une recommandation d'investissement ou une représentation des résultats futurs. Toutes les valeurs calculées dépendent du montant du dépôt et de la durée de détention utilisés et peuvent différer considérablement. Les rendements réels, les taux d'intérêt et les frais peuvent changer. Pour les produits Stablecoin CHF : Les rendements affichés sont basés sur des données historiques et ne sont pas une garantie ou une prévision de performance future. Bitcoin : Les calculs utilisent des données de prix mensuelles historiques (1 an = Oct 2024–Oct 2025, max 16 ans = Oct 2009–Oct 2025) et illustrent uniquement la volatilité historique, pas le développement futur. Compte de Dépôt (0,25%), Assurance Dépôt (-4,5%), Stablecoin CHF (3%, historiquement 3-5%). Tous les produits sont soumis aux risques de marché. Avant de s'engager dans une obligation de dépôt, vous devriez demander un conseil juridique et financier professionnel.",
+    "products": {
+      "kautionskonto": "Compte de Dépôt",
+      "bitcoinDeposit": "Bitcoin",
+      "chfStablecoin": "Stablecoin CHF",
+      "kautionsversicherung": "Assurance Dépôt"
+    }
+  },
+  "rentalSolutionsLandlord": {
+    "title": "Des dépôts de garantie qui travaillent pour vous",
+    "subtitle": "Simplifiez votre processus de dépôt de garantie dès aujourd'hui.",
+    "subtitleFull": "Garde numérique conforme à la loi pour les propriétaires – plus de transparence, moins d'efforts, des locataires plus heureux.",
+    "stepByStep": {
+      "title": "Configuration en 4 étapes faciles",
+      "intro": "Commencez avec une gestion de dépôt moderne et numérique en moins de cinq minutes – sans paperasse ni processus compliqués.",
+      "steps": {
+        "1": {
+          "title": "S'inscrire",
+          "description": "Créez votre compte propriétaire en quelques minutes seulement."
+        },
+        "2": {
+          "title": "Saisir les détails du bien",
+          "description": "Entrez l'adresse, le montant du dépôt et la durée de location."
+        },
+        "3": {
+          "title": "Inviter le locataire",
+          "description": "Votre locataire reçoit des instructions pour compléter la configuration du dépôt."
+        },
+        "4": {
+          "title": "Se détendre",
+          "description": "Vous recevez automatiquement une confirmation lorsque le dépôt est payé."
+        }
+      },
+      "cta": "Commencer la configuration maintenant"
+    },
+    "advantages": {
+      "title": "Vos avantages en un coup d'œil",
+      "intro": "Avec Plusplus, vous bénéficiez d'avantages clairs qui réduisent votre effort administratif et ravissent vos locataires :",
+      "bullets": {
+        "1": "Notifications par e-mail instantanées pour les paiements de dépôt",
+        "2": "Flux de travail automatisés au lieu de processus manuels et de paperasse",
+        "3": "Intégration ERP transparente avec les systèmes populaires comme Fairwalter et GARAIO REM",
+        "4": "Fidélisation attractive des locataires grâce aux rendements basés sur le marché sur le dépôt"
+      },
+      "cta": "Essayer gratuitement maintenant"
+    },
+    "technology": {
+      "title": "Comment ça marche",
+      "intro": "Plusplus est votre partenaire suisse pour les stablecoins. Pour les dépôts de garantie en Suisse, nous utilisons le plus grand stablecoin CHF (Frankencoin).",
+      "bullets": {
+        "1": "Garde en stablecoin : Les dépôts de vos locataires sont détenus sous forme de stablecoins CHF, des jetons numériques indexés sur le Franc Suisse.",
+        "2": "Module d'épargne : Grâce au module d'épargne Frankencoin, vos locataires gagnent actuellement environ 3% p.a. – le rendement provient de prêts à court terme, pas d'investissements spéculatifs.",
+        "3": "Sécurité du capital : Les fonds restent exclusivement dans le stablecoin et ne sont jamais utilisés en dehors du module d'épargne.",
+        "4": "Remboursement intégral : Rien ne change pour vous. À la fin de la période de location, vous ou les locataires recevez le capital intégral plus les rendements accumulés – sans frais et sans risque pour vous en tant que propriétaire."
+      },
+      "cta": "Commencer"
+    },
+    "finalCta": {
+      "title": "Prêt à commencer ?",
+      "intro": "Rejoignez les propriétaires satisfaits qui ont déjà simplifié leur gestion locative avec notre solution innovante.",
+      "cta": "Commencer la configuration maintenant"
+    }
+  },
+  "corporateTreasury": {
+    "hero": {
+      "title": "Trésorerie d'Entreprise",
+      "subtitle": "Gestion de trésorerie avancée pour les entreprises modernes.",
+      "subtitleFull": "Solutions de gestion de trésorerie avancées pour les entreprises modernes cherchant des rendements optimaux pour leurs réserves de trésorerie."
+    },
+    "frankencoin": {
+      "title": "Solutions de Trésorerie Frankencoin",
+      "description": "Nos produits de trésorerie tirent parti du Frankencoin, le stablecoin le plus fiable de Suisse, offrant à votre entreprise une gestion d'actifs numériques sécurisée et stable.",
+      "benefits": {
+        "stablecoin": "Le plus grand et le plus fiable stablecoin de Suisse",
+        "overcollateralized": "Sur-collatéralisé pour une sécurité et une stabilité maximales",
+        "audited": "Régulièrement audité et géré de manière transparente",
+        "transparent": "Transparence totale avec vérification des réserves en temps réel"
+      },
+      "cta": "Obtenir une Démo Gratuite"
+    },
+    "trust": {
+      "title": "Pourquoi Faire Confiance à Plusplus",
+      "description": "Notre engagement envers la sécurité, la conformité et la protection des clients fait de nous le choix de confiance pour la gestion de trésorerie d'entreprise.",
+      "benefits": {
+        "regulated": "Régulé et bientôt membre VQF",
+        "aml": "Conformité totale avec les réglementations LBA (Membre VQF)",
+        "soc2": "Certification SOC 2 en cours",
+        "segregation": "Forte ségrégation des comptes par client",
+        "liquidity": "Fonds toujours disponibles à court terme, jamais utilisés à d'autres fins",
+        "multisig": "Solutions de garde multi-signatures et hors ligne sécurisées",
+        "audited": "Sécurité des smart contracts auditée par"
+      },
+      "cta": "Parlez avec nous"
+    }
+  },
+  "impressum": {
+    "title": "Mentions Légales",
+    "company": {
+      "title": "Entreprise",
+      "name": "Société",
+      "companyName": "Plusplus AG",
+      "address": "Adresse",
+      "street": "Poststrasse 22",
+      "city": "6300 Zoug",
+      "country": "Suisse"
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "E-mail",
+      "emailAddress": "info@plusplus.swiss"
+    },
+    "legal": {
+      "title": "Informations Légales",
+      "registry": "Registre du Commerce",
+      "registryValue": "Registre du Commerce de Zoug",
+      "uid": "UID",
+      "uidValue": "CHE-417.251.274",
+      "vatNumber": "Numéro TVA",
+      "vatValue": "CHE-417.251.274"
+    },
+    "disclaimer": {
+      "title": "Avis de non-responsabilité",
+      "content": "Malgré un contrôle minutieux du contenu, nous n'assumons aucune responsabilité pour le contenu des liens externes. Les opérateurs des pages liées sont seuls responsables de leur contenu.",
+      "liability": "Toutes les informations sont fournies sans garantie. Toute responsabilité pour des dommages résultant de l'utilisation des contenus publiés est exclue.",
+      "links": "Les renvois et liens vers des sites web de tiers ne relèvent pas de notre responsabilité. Nous déclinons toute responsabilité pour de tels sites web."
+    },
+    "copyright": {
+      "title": "Droit d'auteur",
+      "text": "Le contenu et les œuvres créés par les exploitants du site sur ces pages sont soumis au droit d'auteur suisse. La duplication, le traitement, la distribution et toute forme d'exploitation en dehors des limites du droit d'auteur nécessitent le consentement écrit de l'auteur ou du créateur respectif."
+    },
+    "effective": {
+      "title": "Dernière mise à jour : Septembre 2025"
+    }
+  },
+  "terms": {
+    "title": "Conditions Générales",
+    "legal_notice": "Avis Juridique",
+    "disclaimer": "En cas de divergence entre les versions allemande et française de ce document, la version allemande prévaudra et fera foi.",
+    "agb": {
+      "general": {
+        "title": "I. Généralités",
+        "text1": "1. Les présentes Conditions Générales (ci-après CG) régissent la relation contractuelle entre Plusplus AG, c/o Alexander Brozek, Poststrasse 22, 6300 Zoug, Suisse (ci-après Plusplus) et ses clients (ci-après Client) en relation avec tous les services offerts par Plusplus, à moins que des CG spécifiques aux produits ne s'appliquent expressément et en priorité. En cas de divergences ou de contradictions, les CG spécifiques aux produits prévalent sur les présentes CG.",
+        "text2": "2. Plusplus fournit ses services exclusivement sur la base de ces CG, de toutes conditions supplémentaires et de la version actuelle de la politique de confidentialité telle que publiée sur le site web de Plusplus. Ces CG s'appliquent à l'utilisation de tous les services offerts par Plusplus, y compris tout le contenu, les fonctions et les services (ci-après SERVICES). En utilisant les services, le Client accepte ces CG et confirme les avoir lues et comprises.",
+        "text3": "3. Lorsque Plusplus sert d'intermédiaire pour des services de tiers fournisseurs au Client, seules les conditions générales de ces tiers fournisseurs s'appliquent dans la relation entre le Client et les tiers fournisseurs."
+      },
+      "contractSubject": {
+        "title": "II. Objet du contrat et conditions d'utilisation",
+        "intro": "1. Ces CG couvrent tous les SERVICES offerts par Plusplus. En s'enregistrant ou en utilisant les SERVICES, le Client confirme qu'il :",
+        "requirement1": "a 18 ans révolus ;",
+        "requirement2": "a la capacité juridique ; et",
+        "requirement3": "est l'ayant droit économique de tous les actifs devant être transférés à Plusplus.",
+        "text1": "2. Plusplus ne fournit pas de services financiers au Client, et en particulier aucune gestion de fortune, garde de titres, négoce de valeurs mobilières ou conseil financier au sens de la Loi sur les services financiers (LSFin) ou de la Loi sur les établissements financiers (LEFin). Les SERVICES de Plusplus ne comprennent pas non plus de conseils financiers, fiscaux ou juridiques.",
+        "text2": "3. Plusplus se réserve le droit de demander des informations, des documents et des explications au Client, de procéder à des vérifications, de refuser d'entamer une relation d'affaires avec le Client et de la résilier à tout moment.",
+        "text3": "4. Plusplus peut servir d'intermédiaire pour des services d'entreprises partenaires et transmettre des données clients à cette fin. La présentation d'une entreprise partenaire ne constitue en aucun cas et d'aucune manière un conseil.",
+        "text4": "5. Plusplus s'efforce toujours d'assurer l'utilisation et la disponibilité les plus illimitées possibles des SERVICES, mais ne peut le garantir. Le Client reconnaît et accepte que les SERVICES peuvent être temporairement restreints pour des raisons techniques (par ex. perturbations, maintenance, erreurs de transmission, interruptions du système) ou pour des raisons indépendantes de la volonté de Plusplus (par ex. force majeure, faute de tiers ou tout type de dysfonctionnement). Plusplus n'est pas responsable des personnes ou des systèmes en dehors de sa sphère d'influence et n'assume aucune garantie pour la disponibilité de certains SERVICES ou services fournis par des tiers.",
+        "text5": "6. Plusplus s'efforce de développer et d'améliorer continuellement ses SERVICES. Par conséquent, Plusplus se réserve le droit de supprimer, modifier, déplacer, retirer ou transférer les SERVICES et leur contenu en tout ou en partie à tout moment avec ou sans préavis et sans aucune responsabilité envers le Client.",
+        "text6": "7. Plusplus est autorisé à bloquer temporairement l'accès aux SERVICES à sa propre discrétion, notamment en raison obligations légales ou de surveillance de divulgation ou de déclaration.",
+        "text7": "8. En outre, Plusplus prend des mesures appropriées pour détecter et prévenir l'abus de ses SERVICES et applique la diligence habituelle dans les transactions commerciales."
+      },
+      "orderProcessing": {
+        "title": "III. Traitement des ordres",
+        "text1": "1. Le Client émet toutes les instructions relatives aux SERVICES via la plateforme web fournie ou d'autres canaux de communication explicitement désignés à cet effet. Plusplus peut, à sa propre discrétion, accepter et traiter des ordres émis en dehors de ces canaux de communication.",
+        "text2": "2. Les ordres sont réputés avoir été passés dès qu'ils ont été confirmés par Plusplus. Plusplus peut rejeter des ordres à tout moment et sans donner de raisons. Les ordres confirmés ne peuvent généralement plus être modifiés ou annulés par le Client. Plusplus reçoit, transmet et/ou exécute les ordres passés par le Client sur une base purement « execution-only » conformément à son devoir de diligence, ce qui n'inclut aucune obligation d'informer ou de conseiller le Client. Le Client reconnaît et accepte qu'aucune communication entre Plusplus et le Client ne constitue un conseil en investissement concernant les jetons de paiement offerts (ci-après TOKEN) ou les investissements dans ceux-ci et que Plusplus n'a pas évalué les connaissances et l'expérience du Client, sa situation financière ou ses objectifs d'investissement.",
+        "text3": "3. Plusplus exécute les ordres sur la base des instructions du Client. En cas d'informations inexactes ou incomplètes, Plusplus peut néanmoins exécuter l'ordre si les informations inexactes ou incomplètes peuvent être corrigées et/ou complétées par Plusplus sans aucun doute raisonnable. Dans tous les cas, le Client supporte le risque associé à un ordre formulé de manière peu claire ou incomplet ou à un ordre contenant des erreurs."
+      },
+      "dataProtection": {
+        "title": "IV. Protection des données, récupération de données et autres dispositions de confidentialité",
+        "text1": "1. Plusplus adhère à la version applicable de la législation sur la protection des données qui lui est applicable.",
+        "text2": "2. Plusplus s'engage à protéger les données du Client à tout moment par des mesures appropriées correspondant au dernier état de la technique et assure qu'elle ne transmettra pas de données personnelles du Client à des tiers, sauf si cela est légalement requis ou si le Client respectif n'y a pas consenti.",
+        "text3": "3. Plusplus est autorisé à divulguer des données personnelles du Client pour le traitement des transactions conformément aux SERVICES respectifs offerts, en particulier pour la conversion de fonds en TOKEN, dans la mesure où cela est nécessaire pour la bonne exécution des transactions.",
+        "text4": "4. Le Client autorise Plusplus à transmettre les données pertinentes du Client et toutes les informations associées à des tiers, y compris mais sans s'y limiter aux services impliqués dans le traitement des paiements, aux autorités ainsi qu'aux filiales de Plusplus, dans le cadre de l'exécution d'un contrat entre le Client et Plusplus, pour répondre aux exigences légales et réglementaires, pour se conformer aux demandes des autorités suisses ou étrangères ou pour protéger les intérêts légitimes de Plusplus.",
+        "text5": "5. En outre, Plusplus publie une politique de confidentialité, accessible sur le site web, qui définit les détails concernant le traitement des données des Clients et la sécurité des données. En cas de contradiction entre ces CG et la politique de confidentialité, cette dernière prévaudra."
+      },
+      "serviceOutsourcing": {
+        "title": "V. Externalisation des services",
+        "text1": "Plusplus est autorisé à externaliser la fourniture des SERVICES en tout ou en partie à des tiers en Suisse ou à l'étranger. Le Client accepte que Plusplus puisse transmettre toutes les données personnelles nécessaires à l'externalisation à des tiers."
+      },
+      "dataProcessing": {
+        "title": "VI. Traitement, enregistrement, transmission, stockage et suppression des données",
+        "text1": "Afin que Plusplus puisse déterminer et répondre aux besoins du Client, Plusplus a besoin de certaines données conformément aux lois applicables sur la protection des données et à la politique de confidentialité. Pour prévenir les abus et sous réserve de délais légaux plus longs, Plusplus conserve les données des Clients pour une période de 10 ans après la fin du contrat. Par la suite, le Client a le droit de faire supprimer les données structurées le concernant des systèmes productifs, dans la mesure où cela est légalement admissible. Plus d'informations à ce sujet peuvent être trouvées dans la politique de confidentialité."
+      },
+      "intellectualProperty": {
+        "title": "VII. Propriété intellectuelle",
+        "text1": "Tous les droits de propriété intellectuelle ainsi que les droits similaires en relation avec tout le contenu des SERVICES fournis, y compris les logiciels, restent la propriété de Plusplus."
+      },
+      "customerDuties": {
+        "title": "VIII. Obligations de diligence du Client",
+        "text1": "1. Les Clients sont tenus de conserver soigneusement et en toute sécurité tous les documents relatifs aux SERVICES afin que des personnes non autorisées ne puissent pas accéder aux informations qu'ils contiennent. Le Client est en outre tenu de prendre toutes les mesures de précaution qui minimisent le risque de fraude ou similaire et est responsable du respect des dispositions légales qui lui sont applicables, notamment en matière fiscale et de blanchiment d'argent.",
+        "text2": "2. Le Client reconnaît que les appareils et les logiciels peuvent faire partie d'un système qui n'est pas sous le contrôle de Plusplus. Le Client est responsable de l'intégrité des systèmes qu'il utilise pour utiliser les SERVICES. Il est recommandé de ne pas transmettre d'informations sensibles ou critiques en termes de temps à Plusplus via des courriels non cryptés ou des canaux de communication électroniques non protégés, mais d'utiliser les canaux prévus à cet effet par Plusplus ainsi que les fournisseurs tiers officiels.",
+        "text3": "3. Les Clients sont en outre tenus de fournir des données Client correctes, actuelles et complètes (y compris une adresse e-mail) ainsi que toutes les autres informations dont Plusplus a besoin pour fournir les services. Plusplus est en droit de se fier aux informations fournies par le Client et de mener des enquêtes aux frais du Client en cas d'avoirs en déshérence."
+      },
+      "indemnification": {
+        "title": "IX. Indemnisation de Plusplus et responsabilité du Client",
+        "text1": "Le Client indemnisera Plusplus contre toutes les réclamations, y compris les demandes de dommages-intérêts, que d'autres clients ou des tiers, y compris les autorités, feraient valoir contre Plusplus en raison d'une violation de droits ou d'obligations par l'utilisation des SERVICES. Dans ce cas, le Client est responsable de tous les coûts, y compris ceux découlant de la représentation juridique, qui surviennent pour Plusplus en raison d'une violation alléguée de droits de tiers."
+      },
+      "riskDisclosure": {
+        "title": "X. Divulgation des risques",
+        "text1": "1. Le Client a reconnu que (i) Plusplus ne dispose pas d'autorisation de la FINMA et n'est pas soumis à la surveillance de la FINMA, (ii) Plusplus traite exclusivement des transactions pour les clients afin d'échanger des fonds de clients en TOKEN, qui ne sont pas qualifiés de titres ou d'instruments financiers en vertu de la Loi sur les services financiers (LSFin) et des circulaires pertinentes de l'Autorité fédérale de surveillance des marchés financiers (FINMA), et (iii) les TOKEN sont tenus à la disposition du client par Plusplus à tout moment et sont transférés individuellement et techniquement séparés vers une blockchain à cet effet (garde individuelle).",
+        "text2": "2. Le Client a en outre reconnu que les TOKEN peuvent être très volatils et/ou inflationnistes et que les marchés sous-jacents peuvent être illiquides, avec le risque que leur valeur puisse diminuer considérablement ou que de tels TOKEN puissent même devenir complètement sans valeur pour d'autres raisons telles que des raisons réglementaires ou techniques. Le Client reconnaît et accepte que les crypto-actifs ne sont pas garantis ou sécurisés par une nation, une institution, une entreprise, une personne particulière ou par Plusplus. En outre, le Client reconnaît et accepte que les TOKEN ne sont pas réglementés dans certaines juridictions et que leur statut juridique et réglementaire peut être incertain, de sorte que les SERVICES de Plusplus sont soumis à des risques correspondants.",
+        "text3": "3. Le Client est conscient que les TOKEN, malgré les précautions de sécurité professionnelles de Plusplus, sont exposés à des risques techniques importants. En particulier, il y a peu d'expérience technique avec certaines fonctionnalités des SERVICES à ce jour, c'est pourquoi leur stabilité, leur fonctionnement sans erreur, leur disponibilité et leur sécurité ne peuvent être garantis. Les failles de sécurité ou les mauvaises configurations peuvent être exploitées par des attaquants, ce qui peut entraîner la perte totale irrévocable des TOKEN du Client. Même les normes de sécurité les plus modernes n'offrent aucune protection complète contre les cyberattaques ciblées, les exploits zero-day ou les erreurs internes. Le Client reconnaît qu'en cas de compromission technique ou d'erreurs, tous les TOKEN du Client peuvent être irrémédiablement perdus, sans possibilité d'annulation ou de récupération.",
+        "text4": "4. Le Client confirme avoir lu et compris les informations de divulgation des risques spécifiques au produit correspondant aux SERVICES le concernant, qui sont mises à sa disposition sur le site web.",
+        "text5": "5. Le Client reconnaît et accepte pleinement les risques associés aux SERVICES. Les risques énumérés dans les CG et dans la brochure mentionnée dans cette section ne sont pas exhaustifs. Plusplus exclut toute responsabilité dans la mesure permise par la loi."
+      },
+      "liability": {
+        "title": "XI. Exclusion de responsabilité",
+        "text1": "1. Tous les SERVICES, y compris les informations qui y sont fournies, sont mis à disposition par Plusplus « tels quels ». Plusplus exclut toute responsabilité dans la mesure permise par la loi et n'est responsable que des actes intentionnels ou de négligence grave. Dans tous les cas, la responsabilité est limitée aux dommages directs ; la revendication de dommages indirects ou consécutifs, de pertes de bénéfices et de dommages consécutifs liés à des défauts est expressément exclue.",
+        "text2": "2. Le Client reconnaît que les transactions à effectuer pour lui par Plusplus sont exécutées sans pouvoir discrétionnaire et que des retards de plusieurs semaines peuvent survenir. Plusplus n'est pas responsable des dommages, y compris les dommages consécutifs ou les pertes de bénéfices, résultant de transactions effectuées tardivement ou à des moments autrement défavorables (y compris la liquidation lors de la résiliation). Le Client reconnaît en outre qu'aux fins de l'exécution des transactions, les fonds ou TOKEN du Client sont détenus sur des comptes de règlement ou des portefeuilles de règlement de Plusplus et ne sont pas privilégiés en vertu du droit de la faillite à ce moment-là.",
+        "text3": "3. Plusplus n'est pas responsable des actes ou omissions des entreprises partenaires.",
+        "text4": "4. Plusplus n'est pas responsable des retards, erreurs ou défaillances causés par des circonstances dont la cause est indépendante de la volonté de Plusplus, telles que la force majeure.",
+        "text5": "5. Dans la mesure permise par la loi, Plusplus exclut toute responsabilité pour les dommages dus au traitement retardé ou non exécuté des demandes ou à la fourniture d'informations."
+      },
+      "providedInformation": {
+        "title": "XII. Informations fournies",
+        "text1": "1. Les informations sur les TOKEN fournies par Plusplus ne sont pas destinées à être utilisées dans le commerce ou au sens de conseils sur des questions financières, d'investissement, fiscales, juridiques, comptables ou autres. Plusplus n'est ni un gestionnaire de fortune, ni un conseiller en investissement ou financier, ni une maison de titres. Aucun des SERVICES ne constitue un conseil en investissement ou une offre, une recommandation ou une sollicitation par Plusplus d'acheter, de vendre ou de détenir un titre ou un produit financier. Plusplus ne fait aucune déclaration et ne donne aucune évaluation concernant l'opportunité ou la pertinence de tout investissement.",
+        "text2": "2. Aucun des SERVICES ne constitue un conseil en investissement général ou individuel. Les produits financiers ou les transactions auxquels certains SERVICES se rapportent peuvent ne pas convenir au profil d'investissement et aux objectifs ou attentes d'investissement du Client. Il incombe au Client de déterminer si les SERVICES respectifs sont appropriés en fonction de ses intérêts et de sa tolérance au risque. Plusplus n'est pas responsable des dommages résultant des transactions mentionnées ici. Plusplus ne recommande pas d'utiliser les SERVICES fournis comme seule base pour les décisions du Client concernant l'utilisation des SERVICES.",
+        "text3": "3. Les informations fournies par Plusplus sont en partie obtenues et mises à disposition par des tiers fournisseurs et peuvent arriver avec du retard selon les informations de ces fournisseurs de données. Plusplus ne vérifie aucune donnée et décline toute obligation de le faire.",
+        "text4": "4. Plusplus décline expressément toute responsabilité quant à l'exactitude, la pertinence ou l'exhaustivité de toute information fournie et n'est pas responsable des erreurs, omissions ou autres défauts dans les informations, de leur fourniture retardée ou interrompue ou des actions entreprises sur la base des informations. Plusplus exclut, dans la mesure permise par la loi, toute responsabilité pour les dommages résultant de l'utilisation d'informations sur les TOKEN ou d'autres investissements fournis dans le cadre de ses SERVICES."
+      },
+      "termination": {
+        "title": "XIII. Durée et résiliation de l'utilisation",
+        "text1": "1. Sauf disposition contraire, la relation contractuelle entre le Client et Plusplus est conclue pour une durée indéterminée. Pour l'utilisation des SERVICES concernant les dépôts de garantie locative, les conditions selon les dispositions spéciales applicables respectives dans leur version respectivement valide, qui sont mises à disposition sur le site web, s'appliquent en particulier.",
+        "text2": "2. Les résiliations peuvent être effectuées via la fonction de résiliation ou la fonction de notification fournie pour le Client, le site web ainsi que par e-mail ou par courrier recommandé.",
+        "text3": "3. Plusplus est autorisé à restreindre ou à résilier la relation contractuelle ou l'utilisation des SERVICES à tout moment sans donner de raisons avec effet immédiat."
+      },
+      "amendments": {
+        "title": "XIV. Entrée en vigueur et modifications des CG",
+        "text1": "Ces CG entrent en vigueur immédiatement. Plusplus se réserve le droit de modifier ces CG à tout moment. Pour toutes les modifications, les CG mises à jour seront mises à la disposition du Client par e-mail, qui seront réputées approuvées par le Client en l'absence d'objection dans les 30 jours. La modification d'une obligation principale de prestation est exclue."
+      },
+      "fees": {
+        "title": "XV. Frais et rémunération",
+        "text1": "1. Plusplus facture aux clients des frais selon la liste de prix actuellement en vigueur, qui peut être consultée sur le site web.",
+        "text2": "2. Plusplus peut compenser directement les frais avec tout crédit tenu à la disposition du Client à tout moment sur les PORTEFEUILLES et facturer les TOKEN détenus individuellement via le PORTEFEUILLE du Client ou lors de l'exécution d'une transaction/conversion. En outre, Plusplus est autorisé à débiter toute créance contre le Client, y compris les frais, sur les moyens de paiement déposés par le Client.",
+        "text3": "3. Plusplus se réserve le droit de modifier et d'adapter le règlement des frais. Chaque modification doit être communiquée au Client sous une forme appropriée par écrit ou par voie électronique par Plusplus ou, le cas échéant, via des partenaires et des tiers fournisseurs et sera réputée approuvée si le Client ne s'oppose pas à la modification par écrit dans les 30 jours.",
+        "text4": "4. Plusplus est autorisé à facturer au Client la taxe sur la valeur ajoutée applicable ainsi que d'autres taxes et frais découlant de la fourniture des SERVICES ou à les compenser avec les crédits/créances du Client.",
+        "text5": "5. Plusplus est autorisé à facturer au Client les coûts spéciaux et extraordinaires causés par le Client.",
+        "text6": "6. Plusplus peut recevoir une rémunération de tiers fournisseurs pour l'utilisation des SERVICES, en particulier pour l'exécution de transactions. Une telle rémunération est divulguée au Client. Le Client accepte que Plusplus accepte cette rémunération et que toute rémunération reste entièrement acquise à Plusplus. Le Client renonce en faveur de Plusplus à tout droit à la restitution de cette rémunération. Dans ce contexte, le Client est conscient qu'il ne peut être exclu que la rémunération puisse conduire à des conflits d'intérêts dans des cas individuels."
+      },
+      "communication": {
+        "title": "XVI. Notifications et communication",
+        "text1": "1. Le Client doit immédiatement informer Plusplus de tous les faits importants pour la relation d'affaires (par ex. changements de nom, d'adresse, de domicile, de numéro de téléphone ou d'adresse e-mail). Dès que les documents électroniques et les notifications de Plusplus sont accessibles au Client ou ont été envoyés par e-mail, ils sont réputés livrés.",
+        "text2": "2. Le Client accepte que Plusplus puisse communiquer avec le Client via tous les canaux électroniques (par ex. e-mails, applications, sites web ou téléphone). La communication peut être effectuée directement par Plusplus et/ou via des partenaires et des tiers fournisseurs et leurs canaux de communication respectifs."
+      },
+      "severability": {
+        "title": "XVII. Clause de sauvegarde",
+        "text1": "Si une disposition, une condition ou un règlement contenu dans ces CG ou dans des documents connexes s'avérait invalide ou inapplicable dans quelque mesure que ce soit, cela n'affecterait pas la validité ou l'applicabilité des autres dispositions de ces CG ou d'autres documents. Il en va de même si les CG ou le document ne contenaient pas une disposition essentielle. Au lieu de la disposition invalide ou inapplicable ou pour combler une lacune contractuelle, s'appliquera la disposition valide et applicable qui se rapproche le plus possible de l'intention économique des parties qui était poursuivie avec la disposition invalide, inapplicable ou pour laquelle un règlement manquait."
+      },
+      "jurisdiction": {
+        "title": "XVIII. Droit applicable et for juridique",
+        "text1": "1. Toutes les relations juridiques entre Plusplus et le Client sont soumises au droit matériel suisse, à l'exclusion des règles de conflit de lois et des traités internationaux.",
+        "text2": "2. Le for exclusif (sous réserve d'autres fors obligatoires) est la ville de Zurich, Suisse. Cependant, Plusplus est en droit de faire valoir ses droits également au domicile du Client ou devant toute autre autorité compétente, le choix de la loi ci-dessus restant valable."
+      },
+      "effective": {
+        "title": "Dernière mise à jour : Septembre 2025"
+      }
+    },
+    "specialConditions": {
+      "title": "Conditions spéciales pour les dépôts de garantie locative via la plateforme Zinsli",
+      "general": {
+        "title": "I. Généralités et champ d'application",
+        "text1": "1. Les conditions spéciales suivantes pour les dépôts de garantie locative via la « Plateforme Zinsli » (ci-après Conditions Spéciales) régissent la relation contractuelle entre Plusplus AG, c/o Alexander Brozek, Poststrasse 22, 6300 Zoug, Suisse, (ci-après Plusplus) ainsi que les locataires et les propriétaires pour les services de Plusplus en relation avec la gestion des dépôts de garantie locative selon l'art. 257e CO, le cas échéant, via la plateforme de Zinsli Finance AG (www.zinsli.com) (ci-après Plateforme Zinsli, les services les SERVICES).",
+        "text2": "2. Ces dispositions spéciales s'appliquent en complément des Conditions Générales de Plusplus (ci-après CG). En cas de divergences ou de contradictions, ces dispositions spéciales prévalent sur les CG.",
+        "text3": "3. Plusplus fournit ses SERVICES exclusivement sur la base de ces dispositions spéciales, de tout accord supplémentaire, des CG ainsi que de la version actuelle de la politique de confidentialité telle que publiée sur le site web de Plusplus. Ces conditions spéciales s'appliquent à l'utilisation de tous les services offerts par Plusplus, y compris tout le contenu, les fonctions et les services en relation avec les SERVICES. En utilisant les SERVICES ou lors de l'inscription pour utiliser les services de Plusplus via la Plateforme Zinsli, le locataire ou le propriétaire accepte ces conditions spéciales."
+      },
+      "deposit": {
+        "title": "II. Ouverture d'un dépôt de garantie locative et échange par Plusplus",
+        "text1": "1. Les locataires et les propriétaires peuvent convenir via la Plateforme Zinsli que le dépôt de garantie locative pour le dépôt de leur garantie de loyer selon l'art. 257e CO est déposé par investissement dans des jetons de paiement (ci-après TOKEN).",
+        "intro": "2. En s'inscrivant, le locataire confirme qu'il :",
+        "requirement1": "Est soit un citoyen suisse, soit un étranger en possession d'un permis de séjour B, B (réfugié reconnu), C ou F ;",
+        "requirement2": "Le bien locatif pour lequel le dépôt de garantie locative est ouvert est situé en Suisse ; et",
+        "requirement3": "A lu et accepté les CG et remplit les exigences supplémentaires qui y sont contenues.",
+        "text2": "3. Via la Plateforme Zinsli, les locataires et les propriétaires donnent leur consentement à l'investissement de la garantie de loyer en TOKEN et instruisent ainsi Plusplus de tenir leur garantie de loyer disponible à tout moment pour le locataire sous la forme des TOKEN qu'ils ont choisis dans un dépôt DLT créé individuellement et techniquement séparé par locataire (ci-après DÉPÔT). Pendant la période de garde, seule Plusplus a accès au DÉPÔT. Selon l'art. 257e CO, le propriétaire du DÉPÔT reste le locataire respectif.",
+        "text3": "4. Plusplus est autorisé à apporter unilatéralement des modifications aux options de sélection offertes et aux produits offerts à tout moment.",
+        "text4": "5. Le paiement par le locataire est effectué par virement bancaire et doit être effectué via un compte bancaire suisse du locataire qui est à son nom.",
+        "text5": "6. Après réception du paiement du dépôt par Plusplus par virement bancaire, Plusplus change le dépôt dans le TOKEN souhaité et les transfère sur le DÉPÔT. La conversion des fonds en TOKEN par Plusplus est effectuée via des tiers fournisseurs et sans aucun pouvoir discrétionnaire de la part de Plusplus.",
+        "text6": "7. Les locataires et les propriétaires ont été informés de la divulgation des risques selon la section X des CG ainsi que des informations spécifiques au produit sur les risques d'investissement."
+      },
+      "losses": {
+        "title": "III. Pertes et utilisation des rendements",
+        "text1": "1. Le locataire reconnaît que les produits qu'il a choisis peuvent être volatils et sujets à des fluctuations de valeur, dont le locataire supporte seul le risque.",
+        "text2": "2. Si des rendements s'accumulent sur le DÉPÔT du locataire, le locataire accepte que tout rendement, gain en capital ou autre augmentation de valeur, dans la mesure où cela est légalement admissible, continue de servir de substrat de responsabilité dans le cadre du dépôt de garantie locative selon l'art. 257e CO et le locataire n'a aucun droit à la remise de ces augmentations de valeur en dehors des dispositions de l'art. 257e al. 3 et 4 CO jusqu'à la dissolution du dépôt de garantie locative. Le locataire renonce également à faire valoir toute demande de paiement partiel.",
+        "text3": "3. Le propriétaire est conscient que les fluctuations de valeur, les problèmes techniques ou les développements réglementaires peuvent conduire à ce que le dépôt convenu soit temporairement inférieur au montant prescrit ou devienne complètement sans valeur. Dans ce contexte, le propriétaire renonce vis-à-vis de Plusplus et du locataire à l'exigence de garanties supplémentaires ou à l'exécution de paiements supplémentaires.",
+        "text4": "4. Les locataires et les propriétaires reconnaissent qu'il n'y a aucune garantie que le dépôt de garantie locative générera des bénéfices ou couvrira le montant du dépôt initial. En particulier, les locataires et les propriétaires reconnaissent qu'une perte totale est possible."
+      },
+      "duration": {
+        "title": "IV. Autres dispositions pendant la durée du dépôt de garantie locative",
+        "text1": "1. Sous réserve de la dissolution complète du dépôt de garantie locative, les locataires et les propriétaires renoncent aux paiements partiels du DÉPÔT pendant la durée des SERVICES.",
+        "text2": "2. Les locataires et les propriétaires ne peuvent apporter de modifications à la sélection de produits pendant la durée de garde du dépôt de garantie locative dans le DÉPÔT jusqu'à sa dissolution.",
+        "text3": "3. Sous réserve de la dissolution complète et du paiement du dépôt de garantie locative selon la section V ci-après, il n'existe à aucun moment de droit au remboursement du virement bancaire effectué par le locataire à Plusplus.",
+        "text4": "4. Sous réserve de la dissolution complète du dépôt de garantie locative selon la section V ci-après, les locataires et les propriétaires renoncent aux paiements du DÉPÔT."
+      },
+      "dissolution": {
+        "title": "V. Dissolution du dépôt de garantie locative",
+        "text1": "1. L'utilisation des SERVICES de Plusplus nécessite une relation contractuelle valide avec Zinsli Finance AG pour l'utilisation de la Plateforme Zinsli. Indépendamment des conditions ci-dessous, une résiliation par le locataire ou le propriétaire vis-à-vis de Zinsli Finance AG entraîne automatiquement la résiliation de la relation contractuelle avec Plusplus.",
+        "text2": "2. La dissolution du dépôt de garantie locative s'effectue conformément aux dispositions légales de l'art. 257e al. 3 CO. En conséquence, Plusplus n'est autorisé à verser le dépôt que si le locataire et le propriétaire y ont consenti, s'il existe un ordre de paiement exécutoire ou un jugement judiciaire exécutoire, ou si le propriétaire n'a fait valoir aucune prétention pendant un an après la fin du bail.",
+        "text3": "3. La dissolution du dépôt de garantie locative s'effectue via la fonction de résiliation ou la fonction de notification fournie pour le locataire ou le propriétaire sur la Plateforme Zinsli. Elle peut également se faire par courrier recommandé.",
+        "text4": "4. En cas de résiliation par Plusplus ou de dissolution du dépôt de garantie locative par le locataire ou le propriétaire, les TOKEN sont tenus à la disposition du locataire à tout moment conformément aux dispositions des CG jusqu'au paiement, sous réserve des dispositions du droit du bail selon l'art. 257e al. 3 CO.",
+        "text5": "5. Si le locataire décide de continuer à faire tenir les TOKEN à disposition par Plusplus dans le cadre des CG pour la durée du dépôt de garantie locative, Plusplus procède à une vérification étendue selon la Loi sur le blanchiment d'argent (LBA). Le locataire doit fournir toutes les informations et documents supplémentaires requis par Plusplus à cet effet. Plusplus se réserve le droit de refuser la relation client sans donner de raisons.",
+        "text6": "6. Plusplus n'est pas responsable des dommages ou des pertes de bénéfices résultant d'une liquidation retardée ou échouée d'un DÉPÔT lors de la résiliation ou de la dissolution du dépôt de garantie locative."
+      },
+      "specialFees": {
+        "title": "VI. Frais",
+        "text1": "1. Plusplus facture aux locataires et aux propriétaires des frais selon la liste de prix actuellement en vigueur, qui peut être consultée sur le site web, jusqu'au paiement du dépôt de garantie locative. Tous les frais s'entendent hors taxes supplémentaires que les locataires ou les propriétaires doivent en relation avec la Plateforme Zinsli.",
+        "text2": "2. Plusplus peut compenser directement les frais avec tout crédit tenu à la disposition du locataire à tout moment sur les DÉPÔTS et facturer les TOKEN détenus individuellement via le DÉPÔT du locataire ou lors de l'exécution d'une transaction/conversion. En outre, Plusplus est autorisé à débiter toute créance contre le locataire ou le propriétaire, y compris les frais, sur les moyens de paiement déposés par le locataire ou le propriétaire.",
+        "text3": "3. Plusplus est autorisé à facturer au client la taxe sur la valeur ajoutée applicable ainsi que d'autres taxes et frais découlant de la fourniture des SERVICES ou à les compenser avec les crédits/créances du client.",
+        "text4": "4. Plusplus se réserve le droit de modifier et d'adapter le règlement des frais. Chaque modification doit être communiquée au locataire ou au propriétaire par e-mail et est réputée approuvée si le locataire ou le propriétaire ne s'oppose pas à la modification dans les 30 jours. Dans le cas contraire, les dispositions tarifaires des CG s'appliquent."
+      },
+      "specialSeverability": {
+        "title": "VII. Clause de sauvegarde",
+        "text1": "Si une disposition, une condition ou un règlement contenu dans ces conditions spéciales ou dans des documents connexes s'avérait invalide ou inapplicable dans quelque mesure que ce soit, cela n'affecterait pas la validité ou l'applicabilité des autres dispositions de ces conditions spéciales ou d'autres documents. Il en va de même si les conditions spéciales ou le document ne contenaient pas une disposition essentielle. Au lieu de la disposition invalide ou inapplicable ou pour combler une lacune contractuelle, s'appliquera la disposition valide et applicable qui se rapproche le plus possible de l'intention économique des parties qui était poursuivie avec la disposition invalide, inapplicable ou pour laquelle un règlement manquait."
+      },
+      "specialJurisdiction": {
+        "title": "VIII. Droit applicable et for juridique",
+        "text1": "1. Toutes les relations juridiques entre Plusplus et le locataire et le propriétaire sont soumises au droit matériel suisse, à l'exclusion des règles de conflit de lois et des traités internationaux.",
+        "text2": "2. Le for exclusif (sous réserve d'autres fors obligatoires) est la ville de Zurich, Suisse. Cependant, Plusplus est en droit de faire valoir ses droits également au domicile du locataire ou du propriétaire ou devant toute autre autorité compétente, le choix de la loi ci-dessus restant valable."
+      },
+      "specialEffective": {
+        "title": "Dernière mise à jour : Septembre 2025"
+      }
+    }
+  },
+  "onboardingForm": {
+    "title": "Intégration Client",
+    "subtitle": "Veuillez remplir le formulaire ci-dessous pour terminer le processus d'intégration.",
+    "description": "Veuillez remplir le formulaire ci-dessous pour terminer le processus d'intégration.",
+    "sections": {
+      "entity_type": "Type d'Entité",
+      "personal_info": "Informations Personnelles",
+      "opener_details": "Représentant ouvrant le compte",
+      "company_info": "Informations sur l'entreprise",
+      "legal_entity_type": "Type d'Entité Juridique",
+      "special_clarifications": "Clarifications Spéciales",
+      "business_activity": "Activité Commerciale",
+      "detailed_business_activity": "Activité Commerciale Détaillée",
+      "foundation_details": "Détails de la Fondation",
+      "trust_details": "Détails du Trust",
+      "operative_details": "Détails de la Société Exploitant",
+      "beneficial_owners": "Ayants Droit Économiques",
+      "economic_beneficiaries": "Bénéficiaires Économiques",
+      "representatives": "Représentants",
+      "origin_of_funds": "Origine des Fonds",
+      "aml_profile": "Profil LBA",
+      "business_details": "Détails Commerciaux",
+      "ownership_structure": "Structure de Propriété"
+    },
+    "options": {
+      "natural_person": "Personne Physique",
+      "legal_entity": "Personne Morale",
+      "operative_company": "Société Exploitant",
+      "domiciliary_company": "Société de Domicile",
+      "foundation": "Fondation",
+      "trust": "Trust",
+      "discretionary": "Discrétionnaire",
+      "non_discretionary": "Non Discrétionnaire",
+      "yes": "Oui",
+      "no": "Non",
+      "financial_services": "Services Financiers",
+      "real_estate": "Immobilier et Construction",
+      "technology": "Technologie et Logiciels",
+      "manufacturing": "Fabrication et Industrie",
+      "trade": "Commerce",
+      "energy_mining": "Énergie, Mines et Matières Premières",
+      "healthcare_pharma": "Santé et Produits Pharmaceutiques",
+      "transport_logistics": "Transport et Logistique",
+      "tourism_hospitality": "Tourisme et Hôtellerie",
+      "public_sector": "Secteur Public et Organismes à But Non Lucratif",
+      "consulting": "Conseil et Services Professionnels",
+      "holding": "Société Holding",
+      "gaming_gambling": "Jeux et Paris",
+      "crypto_virtual_assets": "Crypto et Actifs Virtuels",
+      "loan": "Prêt",
+      "equity": "Capitaux Propres",
+      "passport": "Passeport",
+      "id": "Carte d'Identité",
+      "salary_employment": "Salaire / Revenu de l'emploi",
+      "savings": "Épargne",
+      "investment_capital_gains": "Revenus de placement / Gains en capital",
+      "real_estate_sale": "Vente Immobilière",
+      "company_sale": "Vente d'Entreprise",
+      "inheritance_gift": "Héritage / Donation",
+      "lottery_gambling": "Loterie / Jeux",
+      "wealth_preservation": "Préservation de la Fortune",
+      "capital_appreciation": "Appréciation du Capital",
+      "other": "Autre",
+      "business_profit": "Bénéfices Commerciaux",
+      "capital_investment": "Investissement en Capital",
+      "income_generation": "Génération de Revenus",
+      "diversification": "Diversification",
+      "transactional_banking": "Banque Transactionnelle",
+      "asset_management": "Gestion de Fortune",
+      "no_beneficial_owner": "Non, je suis le seul ayant droit économique",
+      "advisor_attorney": "Conseiller / Avocat",
+      "family_member": "Membre de la Famille",
+      "business_partner": "Partenaire Commercial",
+      "trustee": "Trustee",
+      "aml_source_of_wealth": "Origine de la Fortune",
+      "aml_source_of_funds": "Origine des Fonds",
+      "aml_purpose_of_relationship": "Objet de la Relation",
+      "aml_expected_transaction_volume": "Volume de Transaction Attendu",
+      "aml_politically_exposed_person": "Personne Politiquement Exposée (PPE)",
+      "aml_sanctioned_person": "Personne Sanctionnée",
+      "aml_adverse_media": "Médias Défavorables"
+    },
+    "fields": {
+      "entity_type": "Type d'Entité",
+      "first_name": "Prénom",
+      "last_name": "Nom",
+      "full_name": "Nom Complet",
+      "date_of_birth": "Date de Naissance",
+      "nationality": "Nationalité",
+      "email": "Adresse E-mail",
+      "phone": "Numéro de Téléphone",
+      "street": "Rue",
+      "house_number": "Numéro",
+      "zip_code": "Code Postal",
+      "city": "Ville",
+      "country": "Pays",
+      "address": "Adresse",
+      "company_name": "Nom de l'Entreprise",
+      "commercial_register_number": "Numéro du Registre du Commerce",
+      "date_of_incorporation": "Date de Constitution",
+      "legal_entity_type": "Type d'Entité Juridique",
+      "domicile_address": "Adresse de Domicile",
+      "business_area": "Domaine d'Activité",
+      "detailed_business_activity": "Activité Commerciale",
+      "detailed_business_activity_description": "Sélectionnez l'option qui décrit le mieux l'activité commerciale",
+      "please_specify": "Veuillez préciser",
+      "specify_other": "Veuillez préciser",
+      "opener_first_name": "Prénom",
+      "opener_last_name": "Nom",
+      "opener_function": "Fonction au sein de l'entreprise",
+      "opener_date_of_birth": "Date de Naissance",
+      "opener_nationality": "Nationalité",
+      "opener_email": "Adresse E-mail",
+      "opener_phone": "Numéro de Téléphone",
+      "opener_address": "Adresse Privée",
+      "is_opener_authorized_signatory": "Êtes-vous un signataire autorisé ?",
+      "authorized_signatory_1": "Signataire Autorisé 1",
+      "authorized_signatory_2": "Signataire Autorisé 2",
+      "has_second_signatory": "Y a-t-il un deuxième signataire autorisé ?",
+      "number_of_signatories": "Combien de signataires autorisés ?",
+      "has_owners_more_than_25_percent": "Y a-t-il des propriétaires avec > 25% des parts ?",
+      "managing_directors": "Directeurs Généraux",
+      "owners_more_than_25_percent": "Propriétaires (> 25%)",
+      "foundation_type": "Type de Fondation",
+      "is_foundation_revocable": "La Fondation est-elle révocable ?",
+      "founder": "Fondateur",
+      "is_founder_deceased": "Le Fondateur est-il décédé ?",
+      "foundation_board_members": "Membres du Conseil de Fondation",
+      "foundation_beneficiaries": "Bénéficiaires de la Fondation",
+      "foundation_beneficiaries_fixed_claim": "Les bénéficiaires ont-ils un droit fixe ?",
+      "nomination_rights": "Droits de Nomination",
+      "trust_type": "Type de Trust",
+      "is_trust_revocable": "Le Trust est-il révocable ?",
+      "settlor": "Constituant",
+      "is_settlor_deceased": "Le Constituant est-il décédé ?",
+      "trustee": "Trustee",
+      "protector": "Protecteur",
+      "trust_beneficiaries": "Bénéficiaires du Trust",
+      "trust_beneficiaries_fixed_claim": "Les bénéficiaires ont-ils un droit fixe ?",
+      "economic_beneficiaries": "Bénéficiaires Économiques",
+      "passport": "Passeport / Copie de pièce d'identité",
+      "opener_passport": "Passeport / Copie de pièce d'identité",
+      "commercial_register": "Extrait du Registre du Commerce",
+      "authorization_document": "Document d'Autorisation",
+      "id_card_hint": "Pour la carte d'identité, nous avons besoin du recto et du verso.",
+      "id_document_type": "Type de Document d'Identité",
+      "profession": "Profession",
+      "estimated_income": "Revenu Annuel Estimé (CHF)",
+      "estimated_wealth": "Fortune Totale Estimée (CHF)",
+      "estimated_liabilities": "Passif Total Estimé (CHF)",
+      "origin_of_assets": "Origine des Avoirs",
+      "origin_of_assets_label": "Origine des avoirs introduits dans la relation d'affaires",
+      "origin_of_assets_currency": "Devise",
+      "relationship_purpose": "Objet de la Relation",
+      "relationship_purpose_description": "Veuillez préciser l'objet principal de la relation d'affaires.",
+      "planned_transaction_volume": "Volume de Transaction Prévu (Annuel en CHF)",
+      "third_party_relations": "Relations avec des Tiers",
+      "third_party_relations_description": "Veuillez préciser si vous agissez pour le compte d'un tiers ou si un tiers a des droits sur les actifs.",
+      "special_clarifications": "Clarifications Spéciales",
+      "source_of_funds": "Source des Fonds",
+      "source_of_funds_description": "Sélectionnez la source principale des fonds"
+    },
+    "placeholders": {
+      "select_type": "Sélectionner le type",
+      "select_business_activity": "Sélectionner l'Activité Commerciale",
+      "select_source_of_funds": "Sélectionner la Source des Fonds",
+      "select_option": "Sélectionner une option",
+      "search_address": "Rechercher une adresse...",
+      "street": "Rue",
+      "house_number": "N°",
+      "zip_code": "NPA",
+      "city": "Ville",
+      "country": "Pays"
+    },
+    "labels": {
+      "beneficial_owners_list": "Liste des Ayants Droit Économiques",
+      "economic_beneficiaries_list": "Liste des Bénéficiaires Économiques",
+      "representatives_list": "Liste des Représentants",
+      "managing_directors_list": "Liste des Directeurs Généraux / Membres du Conseil",
+      "owners_list": "Liste des Propriétaires >25%",
+      "foundation_board_members_list": "Liste des Membres du Conseil de Fondation",
+      "foundation_beneficiaries_list": "Liste des Bénéficiaires de la Fondation",
+      "nomination_rights_list": "Liste des Personnes ayant le Droit de Nommer des Représentants",
+      "trust_beneficiaries_list": "Liste des Bénéficiaires du Trust",
+      "file_hint": "Formats acceptés : PDF, JPG, PNG (Max 5Mo)",
+      "founder": "Fondateur",
+      "settlor": "Constituant",
+      "trustee": "Trustee",
+      "protector": "Protecteur",
+      "passport_required": "Une copie du passeport est requise"
+    },
+    "descriptions": {
+      "owners_list": "Veuillez lister toutes les personnes détenant plus de 25% de la société.",
+      "managing_directors_list": "Veuillez lister tous les directeurs généraux et membres du conseil."
+    },
+    "buttons": {
+      "add_beneficial_owner": "Ajouter un Ayant Droit Économique",
+      "add_economic_beneficiary": "Ajouter un Bénéficiaire Économique",
+      "add_representative": "Ajouter un Représentant",
+      "add_person": "Ajouter une Personne",
+      "upload_signatory_power": "Télécharger le Pouvoir de Signature",
+      "upload_passport": "Télécharger Passeport/ID",
+      "upload_commercial_register": "Télécharger Extrait RC",
+      "download_pdf": "Télécharger le PDF",
+      "submit_application": "Soumettre la demande",
+      "submitting": "Envoi en cours..."
+    },
+    "messages": {
+      "no_address_found": "Aucune adresse trouvée.",
+      "passport_required": "Veuillez télécharger une copie de votre passeport ou de votre pièce d'identité.",
+      "success": "Votre demande a été soumise avec succès.",
+      "error": "Une erreur est survenue lors de la soumission du formulaire.",
+      "success_title": "Demande Soumise",
+      "success_description": "Merci d'avoir terminé le processus d'intégration. Nous avons reçu vos documents et les examinerons sous peu.",
+      "max_three_owners": "Vous pouvez ajouter jusqu'à 3 propriétaires avec > 25% des parts.",
+      "commercial_register_required": "L'extrait du Registre du Commerce est requis pour les Personnes Morales.",
+      "file_too_large": "Le fichier {name} est trop volumineux. Taille max : {maxSize}Mo.",
+      "file_type_not_allowed": "Le type de fichier {name} n'est pas autorisé. Acceptés : {types}",
+      "no_people_added": "Aucune personne ajoutée. Cliquez sur \"{label}\" pour en ajouter une.",
+      "entity_type_required": "Veuillez sélectionner un type de client.",
+      "full_name_required": "Le nom complet est requis.",
+      "street_required": "La rue est requise.",
+      "city_required": "La ville est requise.",
+      "country_required": "Le pays est requis.",
+      "dob_required": "La date de naissance est requise.",
+      "nationality_required": "La nationalité est requise.",
+      "zip_code_required": "Le code postal est requis.",
+      "first_name_required": "Le prénom est requis.",
+      "last_name_required": "Le nom est requis.",
+      "email_required": "L'e-mail est requis.",
+      "email_invalid": "Adresse e-mail invalide.",
+      "profession_required": "La profession est requise.",
+      "income_required": "Le revenu estimé est requis.",
+      "wealth_required": "La fortune estimée est requise.",
+      "liabilities_required": "Le passif estimé est requis.",
+      "origin_category_required": "La catégorie d'origine des avoirs est requise.",
+      "company_name_required": "Le nom de l'entreprise est requis.",
+      "owner_required": "Veuillez ajouter au moins un propriétaire.",
+      "managing_director_required": "Veuillez ajouter au moins un directeur général.",
+      "business_activity_required": "L'activité commerciale est requise.",
+      "source_of_funds_required": "La source des fonds est requise.",
+      "economic_beneficiary_required": "Veuillez ajouter au moins un bénéficiaire économique.",
+      "foundation_board_member_required": "Veuillez ajouter au moins un membre du conseil de fondation.",
+      "foundation_beneficiary_required": "Veuillez ajouter au moins un bénéficiaire de la fondation.",
+      "trust_beneficiary_required": "Veuillez ajouter au moins un bénéficiaire du trust.",
+      "house_number_required": "Le numéro de maison est requis.",
+      "phone_required": "Le numéro de téléphone est requis.",
+      "commercial_register_number_required": "Le numéro du registre du commerce est requis.",
+      "date_of_incorporation_required": "La date de constitution est requise.",
+      "legal_entity_type_required": "Le type d'entité juridique est requis.",
+      "function_required": "La fonction est requise.",
+      "is_opener_authorized_signatory_required": "Veuillez préciser si vous êtes un signataire autorisé.",
+      "volume_required": "Le volume de transaction prévu est requis.",
+      "purpose_required": "L'objet de la relation est requis.",
+      "third_party_required": "La relation avec un tiers est requise.",
+      "system_error": "Une erreur système est survenue. Veuillez réessayer plus tard ou contacter le support."
+    }
+  }
+}

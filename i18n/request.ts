@@ -1,8 +1,8 @@
-import {getRequestConfig} from 'next-intl/server';
+import { getRequestConfig } from 'next-intl/server';
 import fs from 'fs';
 import path from 'path';
 
-const locales = ['en', 'de'];
+const locales = ['en', 'de', 'fr'];
 
 /**
  * Instrumentation: optionally wrap the messages object in a Proxy that
@@ -17,7 +17,7 @@ function maybeInstrument<T extends Record<string, unknown>>(obj: T) {
   const outDir = path.resolve(process.cwd(), 'REMEDIATION');
   const outFile = path.join(outDir, 'runtime_used_translation_keys.txt');
   try {
-    if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, {recursive: true});
+    if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
   } catch {
     // fail silently — instrumentation must not break the app
   }
@@ -26,7 +26,7 @@ function maybeInstrument<T extends Record<string, unknown>>(obj: T) {
     if (seen.has(key)) return;
     seen.add(key);
     try {
-      fs.appendFileSync(outFile, key + '\n', {encoding: 'utf8'});
+      fs.appendFileSync(outFile, key + '\n', { encoding: 'utf8' });
     } catch {
       // ignore write errors
     }
@@ -57,7 +57,7 @@ function maybeInstrument<T extends Record<string, unknown>>(obj: T) {
   return createProxy(obj, '');
 }
 
-export default getRequestConfig(async ({locale}) => {
+export default getRequestConfig(async ({ locale }) => {
   // If locale is undefined or invalid, default to 'en'
   const validLocale = locale && locales.includes(locale) ? locale : 'en';
 

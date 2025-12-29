@@ -542,6 +542,7 @@
   },
   "terms": {
     "title": "Terms and Conditions",
+    "legal_notice": "Legal Notice",
     "disclaimer": "In the event of any discrepancy between the German and English versions of this document, the German version shall prevail and be legally binding.",
     "agb": {
       "general": {

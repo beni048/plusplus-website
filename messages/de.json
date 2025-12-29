@@ -542,6 +542,8 @@
   },
   "terms": {
     "title": "Allgemeine Geschäftsbedingungen",
+    "legal_notice": "Rechtlicher Hinweis",
+    "disclaimer": "Im Falle von Abweichungen zwischen der deutschen und englischen Fassung dieses Dokuments ist die deutsche Fassung maßgebend und rechtlich bindend.",
     "pdfDownload": {
       "title": "PDF-Dokumente herunterladen",
       "agb": "AGB herunterladen",

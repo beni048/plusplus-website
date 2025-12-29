@@ -23,9 +23,9 @@ export default function TermsPage() {
           <h1 className="mb-12 text-center text-3xl sm:text-4xl lg:text-5xl font-primary font-medium text-black px-4">
             {t('title')}
           </h1>
-          
+
           <div className="px-4">
-            
+
             {/* PDF Download Buttons - Only show for German */}
             {locale === 'de' && (
               <div className="mb-8 p-4 bg-gray-50 rounded-lg">
@@ -51,13 +51,13 @@ export default function TermsPage() {
               </div>
             )}
 
-            {/* Legal Disclaimer for English */}
-            {locale === 'en' && (
+            {/* Legal Disclaimer for non-German locales */}
+            {locale !== 'de' && (
               <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-8 rounded-r-lg">
                 <div className="flex">
                   <div className="ml-3">
                     <p className="text-sm text-blue-700 font-secondary">
-                      <strong className="font-primary">Legal Notice:</strong> {t('disclaimer')}
+                      <strong className="font-primary">{t('legal_notice')}:</strong> {t('disclaimer')}
                     </p>
                   </div>
                 </div>
@@ -65,7 +65,7 @@ export default function TermsPage() {
             )}
 
             <div className="prose prose-lg max-w-none">
-              
+
               {/* AGB Sections */}
               <section className="mb-8">
                 <h2 className="text-2xl font-primary font-semibold text-black mb-4">

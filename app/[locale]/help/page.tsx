@@ -140,7 +140,7 @@ export default function HelpPage() {
         }}
       />
       <div className="container mx-auto px-4">
-        <h2 className="mb-16 text-center text-4xl font-medium text-black">{t('title')}</h2>
+        <h1 className="mb-12 text-center text-3xl sm:text-4xl lg:text-5xl font-primary font-medium text-black px-4">{t('title')}</h1>
 
         <div className="max-w-3xl mx-auto">
           <Accordion type="single" collapsible className="space-y-4">

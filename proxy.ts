@@ -1,7 +1,7 @@
 import createProxy from 'next-intl/middleware';
 
 export const proxy = createProxy({
-  locales: ['en', 'de'],
+  locales: ['en', 'de', 'fr'],
   defaultLocale: 'en',
   localePrefix: 'always' // Ensure locale is always present
 });
