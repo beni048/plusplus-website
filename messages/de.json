@@ -3,7 +3,36 @@
     "rentalSolutions": "Mietlösungen",
     "corporateTreasury": "Corporate Treasury",
     "aboutUs": "Über uns",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "login": "Login"
+  },
+  "Login": {
+    "title": "Willkommen zurück",
+    "emailStepTitle": "Anmelden mit E-Mail",
+    "emailStepDescription": "Geben Sie Ihre E-Mail-Adresse ein, um sich anzumelden",
+    "otpStepTitle": "Code bestätigen",
+    "otpStepDescription": "Geben Sie den an {email} gesendeten Code ein",
+    "emailLabel": "E-Mail",
+    "otpLabel": "Bestätigungscode",
+    "sendCodeButton": "Code senden",
+    "sendingButton": "Sende...",
+    "verifyButton": "Verifizieren & Anmelden",
+    "verifyingButton": "Verifiziere...",
+    "changeEmail": "E-Mail ändern",
+    "codeSentSuccess": "Code gesendet! Überprüfen Sie Ihre E-Mail.",
+    "loginSuccess": "Anmeldung erfolgreich!",
+    "failedLogin": "Fehler beim Senden des Codes",
+    "invalidCode": "Ungültiger Code"
+  },
+  "Dashboard": {
+    "title": "Mein Dashboard",
+    "welcome": "Willkommen zurück, {email}",
+    "logout": "Abmelden",
+    "accountOverview": "Kontoübersicht",
+    "balance": "Gesamtsaldo",
+    "transactions": "Letzte Transaktionen",
+    "noTransactions": "Keine Transaktionen gefunden",
+    "settings": "Einstellungen"
   },
   "notFound": {
     "title": "Seite nicht gefunden",

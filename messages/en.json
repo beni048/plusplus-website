@@ -3,7 +3,36 @@
     "rentalSolutions": "Rental Solutions",
     "corporateTreasury": "Corporate Treasury",
     "aboutUs": "About Us",
-    "contact": "Contact"
+    "contact": "Contact",
+    "login": "Login"
+  },
+  "Login": {
+    "title": "Welcome back",
+    "emailStepTitle": "Sign in with Email",
+    "emailStepDescription": "Enter your email to sign in to your account",
+    "otpStepTitle": "Verify Code",
+    "otpStepDescription": "Enter the code sent to {email}",
+    "emailLabel": "Email",
+    "otpLabel": "Confirmation Code",
+    "sendCodeButton": "Send Code",
+    "sendingButton": "Sending...",
+    "verifyButton": "Verify & Login",
+    "verifyingButton": "Verifying...",
+    "changeEmail": "Change email",
+    "codeSentSuccess": "Code sent! Check your email.",
+    "loginSuccess": "Login successful!",
+    "failedLogin": "Failed to send OTP",
+    "invalidCode": "Invalid code"
+  },
+  "Dashboard": {
+    "title": "My Dashboard",
+    "welcome": "Welcome back, {email}",
+    "logout": "Logout",
+    "accountOverview": "Account Overview",
+    "balance": "Total Balance",
+    "transactions": "Recent Transactions",
+    "noTransactions": "No transactions found",
+    "settings": "Settings"
   },
   "notFound": {
     "title": "Page not found",

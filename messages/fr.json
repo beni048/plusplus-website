@@ -3,7 +3,36 @@
     "rentalSolutions": "Solutions Locatives",
     "corporateTreasury": "Trésorerie d'Entreprise",
     "aboutUs": "À Propos",
-    "contact": "Contact"
+    "contact": "Contact",
+    "login": "Connexion"
+  },
+  "Login": {
+    "title": "Bon retour",
+    "emailStepTitle": "Connexion par Email",
+    "emailStepDescription": "Entrez votre email pour vous connecter à votre compte",
+    "otpStepTitle": "Vérifier le Code",
+    "otpStepDescription": "Entrez le code envoyé à {email}",
+    "emailLabel": "Email",
+    "otpLabel": "Code de confirmation",
+    "sendCodeButton": "Envoyer le Code",
+    "sendingButton": "Envoi...",
+    "verifyButton": "Vérifier & Se Connecter",
+    "verifyingButton": "Vérification...",
+    "changeEmail": "Changer l'email",
+    "codeSentSuccess": "Code envoyé ! Vérifiez votre email.",
+    "loginSuccess": "Connexion réussie !",
+    "failedLogin": "Échec de l'envoi du code",
+    "invalidCode": "Code invalide"
+  },
+  "Dashboard": {
+    "title": "Mon Tableau de Bord",
+    "welcome": "Bon retour, {email}",
+    "logout": "Se déconnecter",
+    "accountOverview": "Aperçu du Compte",
+    "balance": "Solde Total",
+    "transactions": "Transactions Récentes",
+    "noTransactions": "Aucune transaction trouvée",
+    "settings": "Paramètres"
   },
   "notFound": {
     "title": "Page non trouvée",

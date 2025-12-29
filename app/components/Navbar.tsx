@@ -85,6 +85,15 @@ export default function Navbar() {
               >
                 {t('contact')}
               </Link>
+              <Link
+                href={`/${locale}/login`}
+                className={`font-primary font-medium transition-colors ${isActive(`/${locale}/login`)
+                  ? 'text-accent-red'
+                  : 'text-black hover:text-accent-red'
+                  }`}
+              >
+                {t('login')}
+              </Link>
 
             </div>
 
@@ -151,6 +160,16 @@ export default function Navbar() {
                 onClick={closeMobileMenu}
               >
                 {t('contact')}
+              </Link>
+              <Link
+                href={`/${locale}/login`}
+                className={`block font-primary font-medium transition-colors py-2 ${isActive(`/${locale}/login`)
+                  ? 'text-accent-red'
+                  : 'text-black hover:text-accent-red'
+                  }`}
+                onClick={closeMobileMenu}
+              >
+                {t('login')}
               </Link>
 
               <div className="pt-4 border-t border-gray-200">
