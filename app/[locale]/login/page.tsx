@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState } from 'react';
@@ -9,25 +8,33 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { toast } from 'sonner';
+import { Turnstile } from '@marsidev/react-turnstile';
 
 export default function LoginPage() {
-    const t = useTranslations('Login'); // We need to add translations later
+    const t = useTranslations('Login');
     const router = useRouter();
 
     const [step, setStep] = useState<'email' | 'otp'>('email');
     const [email, setEmail] = useState('');
     const [otp, setOtp] = useState('');
     const [isLoading, setIsLoading] = useState(false);
+    const [token, setToken] = useState<string | null>(null);
 
     const handleSendOtp = async (e: React.FormEvent) => {
         e.preventDefault();
+
+        if (!token) {
+            toast.error('Please complete the security check');
+            return;
+        }
+
         setIsLoading(true);
 
         try {
             const res = await fetch('/api/auth/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email }),
+                body: JSON.stringify({ email, token }),
             });
 
             const data = await res.json();
@@ -40,6 +47,8 @@ export default function LoginPage() {
             setStep('otp');
         } catch (error: any) {
             toast.error(error.message);
+            // Reset token on failure so user has to verify again
+            setToken(null);
         } finally {
             setIsLoading(false);
         }
@@ -64,7 +73,7 @@ export default function LoginPage() {
 
             toast.success('Login successful!');
             router.push('/dashboard');
-            router.refresh(); // Update auth state in components
+            router.refresh();
         } catch (error: any) {
             toast.error(error.message);
         } finally {
@@ -99,6 +108,14 @@ export default function LoginPage() {
                                     className="bg-white"
                                 />
                             </div>
+
+                            <div className="flex justify-center py-2">
+                                <Turnstile
+                                    siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || '1x00000000000000000000AA'}
+                                    onSuccess={(token) => setToken(token)}
+                                />
+                            </div>
+
                             <Button type="submit" className="w-full bg-accent-red hover:bg-accent-red/90 text-white" disabled={isLoading}>
                                 {isLoading ? t('sendingButton') : t('sendCodeButton')}
                             </Button>

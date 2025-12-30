@@ -4,7 +4,42 @@
     "corporateTreasury": "Corporate Treasury",
     "aboutUs": "Über uns",
     "contact": "Kontakt",
-    "login": "Login"
+    "login": "Login",
+    "private": "Privatkunden",
+    "business": "Geschäftskunden",
+    "news": "News"
+  },
+  "private": {
+    "title": "Privatkunden",
+    "hero": {
+      "title": "Privatkunden",
+      "subtitle": "Exklusive Möglichkeiten für Privatpersonen."
+    },
+    "teaser": {
+      "title": "Zukünftige Projekte",
+      "text": "Interessante Projekte folgen bald..."
+    }
+  },
+  "news": {
+    "title": "News",
+    "hero": {
+      "title": "News & Insights",
+      "subtitle": "Updates von Plusplus AG und Einblicke in die Zukunft des digitalen Finanzwesens."
+    },
+    "articles": {
+      "magdalena": {
+        "title": "Magdalena Boškić wird Advisorin bei Plusplus",
+        "date": "4. Dezember 2025",
+        "excerpt": "Wir freuen uns, Magdalena Boškić in unserem Advisory Board begrüßen zu dürfen. Ihre umfassende Expertise im Bereich Crypto Compliance wird unseren regulatorischen Rahmen stärken.",
+        "text": "Wir freuen uns bekannt zu geben, dass Magdalena Boškić der Plusplus AG als Advisorin beigetreten ist. Magdalena bringt umfangreiche Erfahrung in den Bereichen Crypto Compliance und RegTech mit, unter anderem als Head of RegTech & Compliance bei Sygnum und Crypto Finance. Ihre Expertise wird von unschätzbarem Wert sein, während wir unseren regulatorischen Rahmen und unsere Compliance-Standards weiter stärken."
+      },
+      "intro": {
+        "title": "Willkommen in unserem News-Bereich",
+        "date": "1. Dezember 2025",
+        "excerpt": "Start unserer neuen Plattform für Unternehmensupdates und technische Einblicke unseres Teams.",
+        "text": "Willkommen im News-Bereich der Plusplus AG. Hier werden wir Unternehmensupdates, Brancheneinblicke und Thought-Leadership-Beiträge teilen. Wir freuen uns bekannt zu geben, dass unser CTO, Matthias Nadler, interessante Beiträge über Blockchain-Technologie, Stablecoins und Decentralized Finance veröffentlichen wird. Bleiben Sie dran für regelmäßige Updates!"
+      }
+    }
   },
   "Login": {
     "title": "Willkommen zurück",
@@ -189,7 +224,8 @@
     "impressum": "Impressum",
     "terms": "Allgemeine Geschäftsbedingungen",
     "help": "FAQ",
-    "checkBalance": "Kontostand"
+    "checkBalance": "Kontostand",
+    "contact": "Kontakt"
   },
   "cookies": {
     "description": "Wir verwenden Cookies, um Ihre Erfahrung zu verbessern.",
@@ -521,7 +557,7 @@
       "benefits": {
         "regulated": "Reguliert und bald VQF-Mitglied",
         "aml": "Vollständige Einhaltung der AML-Vorschriften (VQF-Mitglied)",
-        "soc2": "SOC 2-Zertifizierung in Bearbeitung",
+        "soc2": "ISO 27001-Zertifizierung in Bearbeitung",
         "segregation": "Starke Trennung der Konten pro Kunde",
         "liquidity": "Geldmittel immer kurzfristig verfügbar, nie für andere Zwecke verwendet",
         "multisig": "Sichere Multi-Signatur- und Offline-Custody-Lösungen",

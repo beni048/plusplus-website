@@ -16,17 +16,24 @@ export default function Footer() {
           <div className="flex flex-col space-y-3 items-center lg:items-start">
             <div className="flex flex-wrap justify-center lg:justify-start items-center gap-4 text-sm">
               <Link
-                href={`/${locale}/privacy-policy`}
+                href={`/${locale}/contact`}
                 className="text-neutral-white transition-colors hover:text-accent-red underline font-secondary"
               >
-                {t('privacyPolicy')}
+                {t('contact')}
               </Link>
               <span className="text-neutral-medium">|</span>
               <Link
-                href={`/${locale}/privacy-settings`}
+                href={`/${locale}/help`}
                 className="text-neutral-white transition-colors hover:text-accent-red underline font-secondary"
               >
-                {t('privacySettings')}
+                {t('help')}
+              </Link>
+              <span className="text-neutral-medium">|</span>
+              <Link
+                href={`/${locale}/contract-query`}
+                className="text-neutral-white transition-colors hover:text-accent-red underline font-secondary"
+              >
+                {t('checkBalance')}
               </Link>
               <span className="text-neutral-medium">|</span>
               <Link
@@ -42,20 +49,19 @@ export default function Footer() {
               >
                 {t('terms')}
               </Link>
-
               <span className="text-neutral-medium">|</span>
               <Link
-                href={`/${locale}/help`}
+                href={`/${locale}/privacy-policy`}
                 className="text-neutral-white transition-colors hover:text-accent-red underline font-secondary"
               >
-                {t('help')}
+                {t('privacyPolicy')}
               </Link>
               <span className="text-neutral-medium">|</span>
               <Link
-                href={`/${locale}/contract-query`}
+                href={`/${locale}/privacy-settings`}
                 className="text-neutral-white transition-colors hover:text-accent-red underline font-secondary"
               >
-                {t('checkBalance')}
+                {t('privacySettings')}
               </Link>
             </div>
             <div className="text-sm text-neutral-medium font-secondary text-center lg:text-left">

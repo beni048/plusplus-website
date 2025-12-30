@@ -25,12 +25,12 @@ export function checkRateLimit(
     limit: number
 ): boolean {
     const ip = req.headers.get('x-forwarded-for') ?? 'unknown-ip'
-    const tokenCount = (cache.get(ip) as number) || [0]
+    const tokenCount = cache.get(ip) || 0
 
-    if (tokenCount[0] === 0) {
+    if (tokenCount === 0) {
         cache.set(ip, 1)
     } else {
-        cache.set(ip, tokenCount[0] + 1)
+        cache.set(ip, tokenCount + 1)
     }
 
     const currentUsage = cache.get(ip) as number

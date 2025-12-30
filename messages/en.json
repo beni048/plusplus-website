@@ -4,7 +4,42 @@
     "corporateTreasury": "Corporate Treasury",
     "aboutUs": "About Us",
     "contact": "Contact",
-    "login": "Login"
+    "login": "Login",
+    "private": "Private Clients",
+    "business": "Business",
+    "news": "News"
+  },
+  "private": {
+    "title": "Private Clients",
+    "hero": {
+      "title": "Private Clients",
+      "subtitle": "Exclusive opportunities for individuals."
+    },
+    "teaser": {
+      "title": "Future Projects",
+      "text": "Interesting projects coming soon..."
+    }
+  },
+  "news": {
+    "title": "News",
+    "hero": {
+      "title": "News & Insights",
+      "subtitle": "Updates from Plusplus AG and insights into the future of digital finance."
+    },
+    "articles": {
+      "magdalena": {
+        "title": "Magdalena Boškić joins Plusplus as Advisor",
+        "date": "December 4, 2025",
+        "excerpt": "We are delighted to welcome Magdalena Boškić to our Advisory Board. Her deep expertise in crypto compliance will strengthen our regulatory framework.",
+        "text": "We are thrilled to announce that Magdalena Boškić has joined Plusplus AG as an Advisor. Magdalena brings extensive experience in crypto compliance and RegTech, having served as Head of RegTech & Compliance at Sygnum and Crypto Finance. Her expertise will be invaluable as we continue to strengthen our regulatory framework and compliance standards."
+      },
+      "intro": {
+        "title": "Welcome to our News Section",
+        "date": "December 1, 2025",
+        "excerpt": "Launching our new platform for company updates and technical insights from our team.",
+        "text": "Welcome to the Plusplus AG news section. Here we will share company updates, industry insights, and thought leadership pieces. We are excited to announce that our CTO, Matthias Nadler, will be publishing interesting articles about blockchain technology, stablecoins, and decentralized finance. Stay tuned for regular updates!"
+      }
+    }
   },
   "Login": {
     "title": "Welcome back",
@@ -189,7 +224,8 @@
     "impressum": "Imprint",
     "terms": "Terms & Conditions",
     "help": "FAQ",
-    "checkBalance": "Check Balance"
+    "checkBalance": "Check Balance",
+    "contact": "Contact"
   },
   "cookies": {
     "description": "We use cookies to improve your experience.",
@@ -521,7 +557,7 @@
       "benefits": {
         "regulated": "Regulated and soon-to-be VQF member",
         "aml": "Full compliance with AML regulations (VQF Member)",
-        "soc2": "SOC 2 certification in process",
+        "soc2": "ISO 27001 certification in process",
         "segregation": "Strong segregation of accounts per customer",
         "liquidity": "Funds always available short-term, never used for other purposes",
         "multisig": "Secure multi-signature and offline custody solutions",

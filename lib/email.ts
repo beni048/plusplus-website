@@ -1,12 +1,12 @@
 import Mailjet from 'node-mailjet';
 
 const mailjet = new Mailjet({
-    apiKey: process.env.MAILJET_API_KEY || 'placeholder',
-    apiSecret: process.env.MAILJET_API_SECRET || 'placeholder'
+    apiKey: process.env.MJ_APIKEY_PUBLIC || 'placeholder',
+    apiSecret: process.env.MJ_APIKEY_PRIVATE || 'placeholder'
 });
 
 export async function sendOTP(email: string, otp: string) {
-    if (!process.env.MAILJET_API_KEY || !process.env.MAILJET_API_SECRET) {
+    if (!process.env.MJ_APIKEY_PUBLIC || !process.env.MJ_APIKEY_PRIVATE) {
         console.warn('Mailjet API keys not set. Logging OTP instead.');
         console.log(`[DEV OPT] OTP for ${email}: ${otp}`);
         return;
@@ -17,8 +17,8 @@ export async function sendOTP(email: string, otp: string) {
             Messages: [
                 {
                     From: {
-                        Email: process.env.MAILJET_SENDER_EMAIL || 'no-reply@plusplus.swiss',
-                        Name: process.env.MAILJET_SENDER_NAME || 'Plusplus Security',
+                        Email: process.env.TREASURY_FROM_EMAIL || 'no-reply@plusplus.swiss',
+                        Name: "Plusplus Security",
                     },
                     To: [
                         {

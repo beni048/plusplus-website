@@ -4,7 +4,42 @@
     "corporateTreasury": "Trésorerie d'Entreprise",
     "aboutUs": "À Propos",
     "contact": "Contact",
-    "login": "Connexion"
+    "login": "Connexion",
+    "private": "Clients Privés",
+    "business": "Entreprises",
+    "news": "Actualités"
+  },
+  "private": {
+    "title": "Clients Privés",
+    "hero": {
+      "title": "Clients Privés",
+      "subtitle": "Opportunités exclusives pour les particuliers."
+    },
+    "teaser": {
+      "title": "Projets Futurs",
+      "text": "Des projets intéressants arrivent bientôt..."
+    }
+  },
+  "news": {
+    "title": "Actualités",
+    "hero": {
+      "title": "Actualités & Insights",
+      "subtitle": "Mises à jour de Plusplus AG et perspectives sur l'avenir de la finance numérique."
+    },
+    "articles": {
+      "magdalena": {
+        "title": "Magdalena Boškić rejoint Plusplus en tant que Conseillère",
+        "date": "4 décembre 2025",
+        "excerpt": "Nous sommes ravis d'accueillir Magdalena Boškić au sein de notre conseil consultatif. Sa profonde expertise en conformité crypto renforcera notre cadre réglementaire.",
+        "text": "Nous sommes ravis d'annoncer que Magdalena Boškić a rejoint Plusplus AG en tant que Conseillère. Magdalena apporte une vaste expérience en conformité crypto et RegTech, ayant occupé le poste de Head of RegTech & Compliance chez Sygnum et Crypto Finance. Son expertise sera inestimable alors que nous continuons de renforcer notre cadre réglementaire et nos normes de conformité."
+      },
+      "intro": {
+        "title": "Bienvenue dans notre section Actualités",
+        "date": "1 décembre 2025",
+        "excerpt": "Lancement de notre nouvelle plateforme pour les mises à jour de l'entreprise et les perspectives techniques de notre équipe.",
+        "text": "Bienvenue dans la section actualités de Plusplus AG. Ici, nous partagerons les mises à jour de l'entreprise, les perspectives de l'industrie et des articles de leadership éclairé. Nous sommes ravis d'annoncer que notre CTO, Matthias Nadler, publiera des articles intéressants sur la technologie blockchain, les stablecoins et la finance décentralisée. Restez à l'écoute pour des mises à jour régulières !"
+      }
+    }
   },
   "Login": {
     "title": "Bon retour",
@@ -189,7 +224,8 @@
     "impressum": "Mentions Légales",
     "terms": "Termes et Conditions",
     "help": "FAQ",
-    "checkBalance": "Vérifier le solde"
+    "checkBalance": "Vérifier le solde",
+    "contact": "Contact"
   },
   "cookies": {
     "description": "Nous utilisons des cookies pour améliorer votre expérience.",
@@ -521,7 +557,7 @@
       "benefits": {
         "regulated": "Régulé et bientôt membre VQF",
         "aml": "Conformité totale avec les réglementations LBA (Membre VQF)",
-        "soc2": "Certification SOC 2 en cours",
+        "soc2": "Certification ISO 27001 en cours",
         "segregation": "Forte ségrégation des comptes par client",
         "liquidity": "Fonds toujours disponibles à court terme, jamais utilisés à d'autres fins",
         "multisig": "Solutions de garde multi-signatures et hors ligne sécurisées",

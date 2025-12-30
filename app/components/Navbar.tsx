@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Navbar() {
@@ -48,25 +49,6 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center">
             {/* Navigation Links */}
             <div className="flex items-center space-x-6">
-              {/* <Link
-                href={`/${locale}/rental-solutions/select`}
-                className={`font-primary font-medium transition-colors ${
-                  isActive(`/${locale}/rental-solutions/select`)
-                    ? 'text-accent-red'
-                    : 'text-black hover:text-accent-red'
-                }`}
-              >
-                {t('rentalSolutions')}
-              </Link> */}
-              <Link
-                href={`/${locale}/corporate-treasury`}
-                className={`font-primary font-medium transition-colors ${isActive(`/${locale}/corporate-treasury`)
-                  ? 'text-accent-red'
-                  : 'text-black hover:text-accent-red'
-                  }`}
-              >
-                {t('corporateTreasury')}
-              </Link>
               <Link
                 href={`/${locale}/about-us`}
                 className={`font-primary font-medium transition-colors ${isActive(`/${locale}/about-us`)
@@ -77,22 +59,38 @@ export default function Navbar() {
                 {t('aboutUs')}
               </Link>
               <Link
-                href={`/${locale}/contact`}
-                className={`font-primary font-medium transition-colors ${isActive(`/${locale}/contact`)
+                href={`/${locale}/private`}
+                className={`font-primary font-medium transition-colors ${isActive(`/${locale}/private`)
                   ? 'text-accent-red'
                   : 'text-black hover:text-accent-red'
                   }`}
               >
-                {t('contact')}
+                {t('private')}
               </Link>
               <Link
-                href={`/${locale}/login`}
-                className={`font-primary font-medium transition-colors ${isActive(`/${locale}/login`)
+                href={`/${locale}/corporate-treasury`}
+                className={`font-primary font-medium transition-colors ${isActive(`/${locale}/corporate-treasury`)
                   ? 'text-accent-red'
                   : 'text-black hover:text-accent-red'
                   }`}
               >
-                {t('login')}
+                {t('business')}
+              </Link>
+              <Link
+                href={`/${locale}/news`}
+                className={`font-primary font-medium transition-colors ${isActive(`/${locale}/news`)
+                  ? 'text-accent-red'
+                  : 'text-black hover:text-accent-red'
+                  }`}
+              >
+                {t('news')}
+              </Link>
+              <Link href={`/${locale}/login`}>
+                <Button
+                  className="bg-accent-red hover:bg-accent-red/90 text-white font-medium px-6 transition-transform hover:scale-105"
+                >
+                  {t('login')}
+                </Button>
               </Link>
 
             </div>
@@ -120,27 +118,6 @@ export default function Navbar() {
         {isMobileMenuOpen && (
           <div className="lg:hidden bg-white/95 backdrop-blur-sm border-t border-gray-200">
             <div className="px-4 py-6 space-y-4">
-              {/* <Link
-                href={`/${locale}/rental-solutions/select`}
-                className={`block font-primary font-medium transition-colors py-2 ${
-                  isActive(`/${locale}/rental-solutions/select`)
-                    ? 'text-accent-red'
-                    : 'text-black hover:text-accent-red'
-                }`}
-                onClick={closeMobileMenu}
-              >
-                {t('rentalSolutions')}
-              </Link> */}
-              <Link
-                href={`/${locale}/corporate-treasury`}
-                className={`block font-primary font-medium transition-colors py-2 ${isActive(`/${locale}/corporate-treasury`)
-                  ? 'text-accent-red'
-                  : 'text-black hover:text-accent-red'
-                  }`}
-                onClick={closeMobileMenu}
-              >
-                {t('corporateTreasury')}
-              </Link>
               <Link
                 href={`/${locale}/about-us`}
                 className={`block font-primary font-medium transition-colors py-2 ${isActive(`/${locale}/about-us`)
@@ -152,24 +129,43 @@ export default function Navbar() {
                 {t('aboutUs')}
               </Link>
               <Link
-                href={`/${locale}/contact`}
-                className={`block font-primary font-medium transition-colors py-2 ${isActive(`/${locale}/contact`)
+                href={`/${locale}/private`}
+                className={`block font-primary font-medium transition-colors py-2 ${isActive(`/${locale}/private`)
                   ? 'text-accent-red'
                   : 'text-black hover:text-accent-red'
                   }`}
                 onClick={closeMobileMenu}
               >
-                {t('contact')}
+                {t('private')}
+              </Link>
+              <Link
+                href={`/${locale}/corporate-treasury`}
+                className={`block font-primary font-medium transition-colors py-2 ${isActive(`/${locale}/corporate-treasury`)
+                  ? 'text-accent-red'
+                  : 'text-black hover:text-accent-red'
+                  }`}
+                onClick={closeMobileMenu}
+              >
+                {t('business')}
+              </Link>
+              <Link
+                href={`/${locale}/news`}
+                className={`block font-primary font-medium transition-colors py-2 ${isActive(`/${locale}/news`)
+                  ? 'text-accent-red'
+                  : 'text-black hover:text-accent-red'
+                  }`}
+                onClick={closeMobileMenu}
+              >
+                {t('news')}
               </Link>
               <Link
                 href={`/${locale}/login`}
-                className={`block font-primary font-medium transition-colors py-2 ${isActive(`/${locale}/login`)
-                  ? 'text-accent-red'
-                  : 'text-black hover:text-accent-red'
-                  }`}
                 onClick={closeMobileMenu}
+                className="block mt-4"
               >
-                {t('login')}
+                <Button className="w-full bg-accent-red hover:bg-accent-red/90 text-white">
+                  {t('login')}
+                </Button>
               </Link>
 
               <div className="pt-4 border-t border-gray-200">
