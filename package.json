@@ -72,7 +72,7 @@
     "node-mailjet": "^6.0.8",
     "postcss": "8.4.31",
     "react": "18.3.1",
-    "react-day-picker": "^8.10.1",
+    "react-day-picker": "^9.13.0",
     "react-dom": "18.3.1",
     "react-hook-form": "^7.57.0",
     "react-resizable-panels": "^2.1.9",
