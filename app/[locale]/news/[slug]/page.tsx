@@ -31,8 +31,8 @@ export async function generateMetadata(props: { params: Promise<{ locale: string
     };
 }
 
-export async function generateStaticParams({ params }: { params: Promise<{ locale: string }> }) {
-    const { locale } = await params;
+export async function generateStaticParams({ params }: { params: { locale: string } }) {
+    const { locale } = params;
     const posts = await getNewsPosts(locale);
     return posts.map((post) => ({
         slug: post.slug,
