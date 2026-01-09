@@ -1,6 +1,6 @@
-import createProxy from 'next-intl/middleware';
+import createMiddleware from 'next-intl/middleware';
 
-export const proxy = createProxy({
+export default createMiddleware({
   locales: ['en', 'de', 'fr'],
   defaultLocale: 'en',
   localePrefix: 'always' // Ensure locale is always present

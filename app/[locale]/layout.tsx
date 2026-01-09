@@ -25,9 +25,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 
   const descriptions = {
-    en: "Secure, compliant DeFi solutions for Swiss rental deposits and corporate treasury management. Featuring Frankencoin stablecoin, Bitcoin, and deposit insurance.",
-    de: "Sichere, konforme DeFi-Lösungen für Schweizer Mietkautionen und Corporate Treasury Management. Mit Frankencoin-Stablecoin, Bitcoin und Kautionsversicherung.",
-    fr: "Solutions DeFi sécurisées et conformes pour les garanties de loyer suisses et la gestion de trésorerie d'entreprise. Avec Frankencoin, Bitcoin et assurance dépôt.",
+    en: "Your Partner for Stablecoins. Secure, compliant DeFi solutions for Swiss rental deposits and corporate treasury management. Featuring Frankencoin stablecoin, Bitcoin, and deposit insurance.",
+    de: "Ihr Partner für Stablecoins. Sichere, konforme DeFi-Lösungen für Schweizer Mietkautionen und Corporate Treasury Management. Mit Frankencoin-Stablecoin, Bitcoin und Kautionsversicherung.",
+    fr: "Votre partenaire pour les Stablecoins. Solutions DeFi sécurisées et conformes pour les garanties de loyer suisses et la gestion de trésorerie d'entreprise. Avec Frankencoin, Bitcoin et assurance dépôt.",
   };
 
   const locale_key = locale as keyof typeof titles;

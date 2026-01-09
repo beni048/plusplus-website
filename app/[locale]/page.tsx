@@ -1,24 +1,28 @@
-"use client";
-
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Calendar } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useTranslations, useLocale } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import ScheduleMeetingButton from "@/app/components/ScheduleMeetingButton";
 import { Metadata } from "next";
 import Script from "next/script";
 import "../partners-carousel.css";
+import { NewsList } from "@/components/NewsList";
+import { NewsLoader } from "@/components/NewsLoader";
+import { Suspense } from "react";
 
 /* Metadata for the root locale route is provided by the server layout:
    app/[locale]/layout.tsx
    This keeps the page component as a client component while ensuring
    generateMetadata is exported from a server component (required by Next.js/Turbopack). */
 
-export default function Home() {
-  const t = useTranslations();
-  const locale = useLocale();
+export default async function Home(props: { params: Promise<{ locale: string }> }) {
+  const params = await props.params;
+  const { locale } = params;
+
+  const t = await getTranslations();
+  // News fetched via Streaming Component now
 
   /* SEO: BreadcrumbList schema enables breadcrumb navigation in Google Search results */
   const breadcrumbSchema = {
@@ -154,47 +158,30 @@ export default function Home() {
       */}
 
       {/* Corporate Treasury Section */}
-      <section id="corporate-treasury" className="bg-neutral-light py-24">
+      {/* Corporate Treasury / News Section */}
+      <section id="latest-news" className="bg-neutral-light py-24">
         <div className="container mx-auto px-4">
-          <div className="grid gap-12 lg:grid-cols-2 items-center">
-            {/* Image Left */}
-            <div className="relative aspect-[4/3] w-full order-2 lg:order-1">
-              <Image
-                src="/images/collection_v2/florian-schmid-M8ek54EzfzA-unsplash.jpg"
-                alt={locale === 'de' ? 'Luftaufnahme der Zürich-Skyline mit dem Fluss Limmat, der auf den Berg Üetliberg fliesst, mit Bürkliplatz von oben in einem Tagespanorama sichtbar.' : 'Aerial view of Zurich cityscape showing Limmat river flowing towards Üetliberg mountain with Bürkliplatz visible from above in daytime panorama.'}
-                fill
-                loading="lazy"
-                quality={80}
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover rounded-lg shadow-lg"
-                placeholder="blur"
-                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-              />
-              {/* Discrete photo credit */}
-              <div className="absolute bottom-2 right-2 text-[10px] text-white/40 font-secondary">
-                Florian Schmid
-              </div>
+          <div className="max-w-4xl">
+            <div className="text-left mb-12">
+              <h2 className="text-4xl font-primary font-medium text-black">
+                {t('news.latest_news_title')}
+              </h2>
             </div>
 
-            {/* Text Right */}
-            <div className="space-y-6 order-1 lg:order-2">
-              <h2 className="text-4xl font-primary font-medium text-black">
-                {t('mainSections.corporateTreasury.title')}
-              </h2>
-              <p className="text-lg leading-relaxed text-neutral-dark font-secondary">
-                {t('mainSections.corporateTreasury.paragraph1')}
-              </p>
-              <p className="text-lg leading-relaxed text-neutral-dark font-secondary">
-                {t('mainSections.corporateTreasury.paragraph2')}
-              </p>
-              <div className="pt-4">
-                <Link href={`/${locale}/corporate-treasury`}>
-                  <Button className="bg-accent-red text-white px-6 py-3 text-lg hover:bg-accent-red/90 group transition-all duration-300 font-primary">
-                    {t('mainSections.corporateTreasury.button')}
-                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                  </Button>
-                </Link>
-              </div>
+            {/* Dynamic News Feed (Limit 3) */}
+            <div className="space-y-12 mb-0">
+              <Suspense fallback={<NewsLoader text="Loading latest news..." />}>
+                <NewsList locale={locale} limit={3} />
+              </Suspense>
+            </div>
+
+            <div className="text-left pt-0 mt-0">
+              <Link href={`/${locale}/news`}>
+                <Button className="bg-accent-red text-white px-6 py-3 text-lg hover:bg-accent-red/90 group transition-all duration-300 font-primary">
+                  {t('news.more_news_button')}
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

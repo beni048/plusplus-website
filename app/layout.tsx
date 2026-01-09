@@ -23,7 +23,7 @@ const mulish = Mulish({
 export const metadata: Metadata = {
   title: "Plusplus - Stablecoin Partner Switzerland",
   description:
-    "Plusplus empowers Swiss institutions and tenants with secure, compliant DeFi solutions.",
+    "Your Partner for Stablecoins. Plusplus empowers Swiss institutions and tenants with secure, compliant DeFi solutions.",
   metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://www.plusplus.swiss'),
   alternates: {
     canonical: '/',

@@ -58,6 +58,7 @@ export default function Navbar() {
               >
                 {t('aboutUs')}
               </Link>
+              {/*
               <Link
                 href={`/${locale}/private`}
                 className={`font-primary font-medium transition-colors ${isActive(`/${locale}/private`)
@@ -67,6 +68,7 @@ export default function Navbar() {
               >
                 {t('private')}
               </Link>
+              */}
               <Link
                 href={`/${locale}/corporate-treasury`}
                 className={`font-primary font-medium transition-colors ${isActive(`/${locale}/corporate-treasury`)
@@ -85,6 +87,7 @@ export default function Navbar() {
               >
                 {t('news')}
               </Link>
+              {/*
               <Link href={`/${locale}/login`}>
                 <Button
                   className="bg-accent-red hover:bg-accent-red/90 text-white font-medium px-6 transition-transform hover:scale-105"
@@ -92,6 +95,7 @@ export default function Navbar() {
                   {t('login')}
                 </Button>
               </Link>
+              */}
 
             </div>
 
@@ -128,6 +132,7 @@ export default function Navbar() {
               >
                 {t('aboutUs')}
               </Link>
+              {/*
               <Link
                 href={`/${locale}/private`}
                 className={`block font-primary font-medium transition-colors py-2 ${isActive(`/${locale}/private`)
@@ -138,6 +143,7 @@ export default function Navbar() {
               >
                 {t('private')}
               </Link>
+              */}
               <Link
                 href={`/${locale}/corporate-treasury`}
                 className={`block font-primary font-medium transition-colors py-2 ${isActive(`/${locale}/corporate-treasury`)
@@ -158,6 +164,7 @@ export default function Navbar() {
               >
                 {t('news')}
               </Link>
+              {/*
               <Link
                 href={`/${locale}/login`}
                 onClick={closeMobileMenu}
@@ -167,6 +174,7 @@ export default function Navbar() {
                   {t('login')}
                 </Button>
               </Link>
+              */}
 
               <div className="pt-4 border-t border-gray-200">
                 <LanguageSwitcher sourceContext="navbar" mobile />

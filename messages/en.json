@@ -39,7 +39,11 @@
         "excerpt": "Launching our new platform for company updates and technical insights from our team.",
         "text": "Welcome to the Plusplus AG news section. Here we will share company updates, industry insights, and thought leadership pieces. We are excited to announce that our CTO, Matthias Nadler, will be publishing interesting articles about blockchain technology, stablecoins, and decentralized finance. Stay tuned for regular updates!"
       }
-    }
+    },
+    "no_news_found": "No news posts found.",
+    "back_to_news": "Back to News",
+    "latest_news_title": "Latest News",
+    "more_news_button": "More News"
   },
   "Login": {
     "title": "Welcome back",
