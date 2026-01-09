@@ -63,7 +63,7 @@ async function debugDrive() {
             }
 
             // Dump HTML for analysis
-            if (file.name?.includes('NEW2026001') || file.name?.includes('Magdalena')) {
+            if ((file.name?.includes('NEW2026001') || file.name?.includes('Magdalena')) && file.id) {
                 console.log('Found target file! Fetching content...');
                 try {
                     const exportRes = await drive.files.export({
