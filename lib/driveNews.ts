@@ -184,7 +184,7 @@ export async function getNewsPosts(locale: string = 'en'): Promise<NewsPost[]> {
         });
 
         // Now fetch content for ALL relevant files to parse metadata
-        const posts = await Promise.all(relevantFiles.map(async (file) => {
+        const postsWithInternalId = await Promise.all(relevantFiles.map(async (file) => {
             const match = (file.name || '').match(filenameRegex)!;
             const [, id] = match;
 
@@ -211,9 +211,6 @@ export async function getNewsPosts(locale: string = 'en'): Promise<NewsPost[]> {
                 }
 
                 // Determine image
-                // 1. Metadata override
-                // 2. Default fallback based on ID prefix
-                // 3. Fallback to generic placeholder
                 let image = metadata.image;
                 if (!image) {
                     // Normalize ID: If it starts with NEW, use it as is. If not, prepend NEW.
@@ -243,6 +240,7 @@ export async function getNewsPosts(locale: string = 'en'): Promise<NewsPost[]> {
                 return {
                     id: file.id!,
                     slug: slug,
+                    internalId: id, // Keep track of filename ID for collision resolution
                     title: title,
                     subtitle: cleanText(metadata.subtitle || ''),
                     summary: cleanText(metadata.subtitle || ''),
@@ -258,7 +256,33 @@ export async function getNewsPosts(locale: string = 'en'): Promise<NewsPost[]> {
             }
         }));
 
-        return posts.filter(p => p !== null) as NewsPost[];
+        const validPosts = postsWithInternalId.filter(p => p !== null) as (NewsPost & { internalId: string })[];
+
+        // Collision Handling: "First Come, First Served" strategy
+        // We process posts from Oldest to Newest. If a slug is taken by an older post,
+        // the newer post must yield (append its internal ID) to preserve the old link.
+
+        // validPosts is currently sorted by CreatedTime Descending (Newest First).
+        // We reverse it to process Oldest First.
+        const reversedPosts = [...validPosts].reverse();
+        const seenSlugs = new Set<string>();
+
+        reversedPosts.forEach(post => {
+            if (seenSlugs.has(post.slug)) {
+                // Collision detected: Newer post trying to use an existing slug.
+                // Resolution: Append "-{internalId}" (e.g. "my-slug-2026002") to make it unique.
+                post.slug = `${post.slug}-${post.internalId}`;
+                // Note: We don't add the *suffixed* slug to seenSlugs because we only care about
+                // protecting the *original* intended base slug. Or strictly, we should?
+                // Actually, if "my-slug-2026002" ALSO exists, we have a bigger problem. 
+                // But internalID is unique per file, so this suffix guarantees uniqueness.
+            } else {
+                seenSlugs.add(post.slug);
+            }
+        });
+
+        // Return the posts (in their original Newest-First order) without the internalId helper
+        return validPosts.map(({ internalId, ...post }) => post);
 
     } catch (error) {
         console.error('Error fetching news posts from Drive:', error);
