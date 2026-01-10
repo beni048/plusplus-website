@@ -5,16 +5,17 @@ import { NewsPost } from '@/lib/driveNews';
 interface NewsCardProps {
     post: NewsPost;
     locale: string;
+    readMoreText: string;
 }
 
-export function NewsCard({ post, locale }: NewsCardProps) {
+export function NewsCard({ post, locale, readMoreText }: NewsCardProps) {
     return (
         <article className="border-b border-gray-100 pb-12 last:border-0 group">
             <Link href={`/${locale}/news/${post.slug}`} className="flex flex-col md:flex-row gap-10 items-start group">
 
                 {/* Image Section (Left) - Substantial size */}
                 {post.image && (
-                    <div className="relative w-full md:w-72 md:h-56 flex-shrink-0 rounded-2xl overflow-hidden shadow-md">
+                    <div className="relative w-full md:w-72 md:h-56 flex-shrink-0 rounded-2xl overflow-hidden shadow-md aspect-[4/3] md:aspect-auto">
                         <img
                             src={post.image}
                             alt={post.title}
@@ -41,16 +42,16 @@ export function NewsCard({ post, locale }: NewsCardProps) {
                         </span>
                     </div>
 
-                    <h2 className="text-3xl sm:text-4xl font-primary font-bold mb-4 group-hover:text-accent-red transition-colors leading-tight">
+                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-primary font-medium mb-4 group-hover:text-accent-red transition-colors leading-tight">
                         {post.title}
                     </h2>
 
-                    <p className="text-xl text-neutral-dark font-secondary leading-relaxed mb-6 line-clamp-3">
+                    <p className="text-lg text-neutral-dark font-secondary leading-relaxed mb-6 line-clamp-3">
                         {post.summary}
                     </p>
 
                     <span className="text-base text-accent-red hover:underline font-bold inline-flex items-center tracking-wide">
-                        Read more
+                        {readMoreText}
                     </span>
                 </div>
             </Link>

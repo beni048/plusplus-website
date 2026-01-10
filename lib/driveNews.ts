@@ -42,6 +42,18 @@ function stripHtml(html: string): string {
     return html.replace(/<[^>]*>?/gm, '').trim();
 }
 
+// Helper to slugify text
+function slugify(text: string): string {
+    return text
+        .toString()
+        .toLowerCase()
+        .trim()
+        .replace(/\s+/g, '-')        // Replace spaces with -
+        .replace(/[^\w\-]+/g, '')    // Remove all non-word chars
+        .replace(/\-\-+/g, '-');     // Replace multiple - with single -
+}
+
+// Helper to clean text
 function cleanText(text: string): string {
     if (!text) return '';
     return he.decode(text).trim();
@@ -67,7 +79,8 @@ function parseNewsContent(html: string): { metadata: Partial<NewsPost>, bodyHtml
         'subtitle': 'subtitle', 'sous-titre': 'subtitle', 'untertitel': 'subtitle',
         'date': 'date', 'datum': 'date',
         'category': 'category', 'catégorie': 'category', 'kategorie': 'category',
-        'image': 'image', 'bild': 'image'
+        'image': 'image', 'bild': 'image',
+        'slug': 'slug'
     };
 
     for (const fullP of matches) {
@@ -215,10 +228,22 @@ export async function getNewsPosts(locale: string = 'en'): Promise<NewsPost[]> {
                     }
                 }
 
+                // Determine Title
+                // Fallback to filename part if no title in metadata
+                const title = cleanText(metadata.title || match[3].replace(/-/g, ' '));
+
+                // Determine Slug
+                // 1. Metadata Slug
+                // 2. Fallback to ID (if Slug is missing)
+                let slug = id;
+                if (metadata.slug) {
+                    slug = cleanText(metadata.slug);
+                }
+
                 return {
                     id: file.id!,
-                    slug: id,
-                    title: cleanText(metadata.title || match[3].replace(/-/g, ' ')),
+                    slug: slug,
+                    title: title,
                     subtitle: cleanText(metadata.subtitle || ''),
                     summary: cleanText(metadata.subtitle || ''),
                     date: date,

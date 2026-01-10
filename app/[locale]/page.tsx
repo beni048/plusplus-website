@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import { ArrowRight, Calendar } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import ScheduleMeetingButton from "@/app/components/ScheduleMeetingButton";
 import { Metadata } from "next";
 import Script from "next/script";
@@ -11,6 +11,8 @@ import "../partners-carousel.css";
 import { NewsList } from "@/components/NewsList";
 import { NewsLoader } from "@/components/NewsLoader";
 import { Suspense } from "react";
+
+export const revalidate = 3600; // Revalidate every hour
 
 /* Metadata for the root locale route is provided by the server layout:
    app/[locale]/layout.tsx
@@ -21,7 +23,10 @@ export default async function Home(props: { params: Promise<{ locale: string }> 
   const params = await props.params;
   const { locale } = params;
 
-  const t = await getTranslations();
+  // Enable static rendering
+  setRequestLocale(locale);
+
+  const t = await getTranslations({ locale });
   // News fetched via Streaming Component now
 
   /* SEO: BreadcrumbList schema enables breadcrumb navigation in Google Search results */
@@ -73,16 +78,16 @@ export default async function Home(props: { params: Promise<{ locale: string }> 
           {/* Mobile: Centered simple layout */}
           <div className="block sm:hidden w-full px-6 text-center">
             <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-8 mx-auto max-w-sm">
-              <h1 className="font-primary font-black text-3xl text-white leading-tight mb-4">
+              <h1 className="font-primary font-black text-4xl text-white leading-tight mb-4">
                 {t('hero.title.simple')} <span className="text-accent-red">{t('hero.title.highlight')}</span> {t('hero.title.subtitle')}
               </h1>
-              <p className="font-secondary text-base text-white/90 mb-6 leading-relaxed">
+              <p className="font-secondary text-lg text-white/90 mb-6 leading-relaxed">
                 {t('hero.subtitle')}
               </p>
               <Link href={`/${locale}/corporate-treasury`}>
-                <Button className="bg-accent-red text-white px-6 py-3 text-base hover:bg-accent-red/90 group transition-all duration-300 font-primary">
+                <Button className="bg-accent-red text-white px-6 py-3 text-lg hover:bg-accent-red/90 group transition-all duration-300 font-primary">
                   {t('hero.cta')}
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Button>
               </Link>
             </div>
@@ -161,28 +166,26 @@ export default async function Home(props: { params: Promise<{ locale: string }> 
       {/* Corporate Treasury / News Section */}
       <section id="latest-news" className="bg-neutral-light py-24">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl">
-            <div className="text-left mb-12">
-              <h2 className="text-4xl font-primary font-medium text-black">
-                {t('news.latest_news_title')}
-              </h2>
-            </div>
+          <div className="text-left mb-12">
+            <h2 className="text-4xl font-primary font-medium text-black">
+              {t('news.latest_news_title')}
+            </h2>
+          </div>
 
-            {/* Dynamic News Feed (Limit 3) */}
-            <div className="space-y-12 mb-0">
-              <Suspense fallback={<NewsLoader text="Loading latest news..." />}>
-                <NewsList locale={locale} limit={3} />
-              </Suspense>
-            </div>
+          {/* Dynamic News Feed (Limit 3) - Centered */}
+          <div className="max-w-4xl mx-auto space-y-12 mb-12">
+            <Suspense fallback={<NewsLoader text={t('news.loading')} />}>
+              <NewsList locale={locale} limit={3} />
+            </Suspense>
+          </div>
 
-            <div className="text-left pt-0 mt-0">
-              <Link href={`/${locale}/news`}>
-                <Button className="bg-accent-red text-white px-6 py-3 text-lg hover:bg-accent-red/90 group transition-all duration-300 font-primary">
-                  {t('news.more_news_button')}
-                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                </Button>
-              </Link>
-            </div>
+          <div className="text-left pt-0 mt-0">
+            <Link href={`/${locale}/news`}>
+              <Button className="w-full sm:w-auto bg-accent-red text-white px-6 py-3 text-lg hover:bg-accent-red/90 group transition-all duration-300 font-primary">
+                {t('news.more_news_button')}
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

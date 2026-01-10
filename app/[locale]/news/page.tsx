@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Card } from "@/components/ui/card";
 import { Calendar, User, Calendar as CalendarIcon } from "lucide-react";
 import ScheduleMeetingButton from '@/app/components/ScheduleMeetingButton';
@@ -18,8 +18,11 @@ export default async function NewsPage(props: { params: Promise<{ locale: string
         locale
     } = params;
 
-    const t = await getTranslations('news');
-    const tMain = await getTranslations('mainSections');
+    // Enable static rendering
+    setRequestLocale(locale);
+
+    const t = await getTranslations({ locale, namespace: 'news' });
+    const tMain = await getTranslations({ locale, namespace: 'mainSections' });
 
     /* SEO: 2-level breadcrumb (Home > News) */
     const breadcrumbSchema = {
@@ -70,7 +73,7 @@ export default async function NewsPage(props: { params: Promise<{ locale: string
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto space-y-12">
 
-                        <Suspense fallback={<NewsLoader />}>
+                        <Suspense fallback={<NewsLoader text={t('loading')} />}>
                             <NewsList locale={locale} />
                         </Suspense>
 

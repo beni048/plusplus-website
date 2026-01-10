@@ -21,6 +21,7 @@
     }
   },
   "news": {
+    "loading_article": "Artikel wird geladen...",
     "title": "News",
     "hero": {
       "title": "News & Insights",
@@ -31,15 +32,21 @@
         "title": "Magdalena Boškić wird Advisorin bei Plusplus",
         "date": "4. Dezember 2025",
         "excerpt": "Wir freuen uns, Magdalena Boškić in unserem Advisory Board begrüßen zu dürfen. Ihre umfassende Expertise im Bereich Crypto Compliance wird unseren regulatorischen Rahmen stärken.",
-        "text": "Wir freuen uns bekannt zu geben, dass Magdalena Boškić der Plusplus AG als Advisorin beigetreten ist. Magdalena bringt umfangreiche Erfahrung in den Bereichen Crypto Compliance und RegTech mit, unter anderem als Head of RegTech & Compliance bei Sygnum und Crypto Finance. Ihre Expertise wird von unschätzbarem Wert sein, während wir unseren regulatorischen Rahmen und unsere Compliance-Standards weiter stärken."
+        "text": "Wir freuen uns, bekannt zu geben, dass Magdalena Boškić als Advisorin zu Plusplus AG gestoßen ist. Magdalena bringt umfassende Erfahrung in den Bereichen Crypto Compliance und RegTech mit und war zuvor als Head of RegTech & Compliance bei Sygnum und Crypto Finance tätig. Ihre Expertise wird von unschätzbarem Wert sein, während wir unseren regulatorischen Rahmen und unsere Compliance-Standards weiter stärken."
       },
       "intro": {
         "title": "Willkommen in unserem News-Bereich",
         "date": "1. Dezember 2025",
-        "excerpt": "Start unserer neuen Plattform für Unternehmensupdates und technische Einblicke unseres Teams.",
-        "text": "Willkommen im News-Bereich der Plusplus AG. Hier werden wir Unternehmensupdates, Brancheneinblicke und Thought-Leadership-Beiträge teilen. Wir freuen uns bekannt zu geben, dass unser CTO, Matthias Nadler, interessante Beiträge über Blockchain-Technologie, Stablecoins und Decentralized Finance veröffentlichen wird. Bleiben Sie dran für regelmäßige Updates!"
+        "excerpt": "Start unserer neuen Plattform für Unternehmens-Updates und technische Einblicke unseres Teams.",
+        "text": "Willkommen im News-Bereich der Plusplus AG. Hier teilen wir Unternehmens-Updates, Brancheneinblicke und Thought-Leadership-Beiträge. Wir freuen uns, bekannt zu geben, dass unser CTO, Matthias Nadler, interessante Artikel über Blockchain-Technologie, Stablecoins und dezentrale Finanzen veröffentlichen wird. Bleiben Sie dran für regelmäßige Updates!"
       }
-    }
+    },
+    "no_news_found": "Keine Neuigkeiten gefunden.",
+    "read_more": "Weiterlesen",
+    "back_to_news": "Zurück zu News",
+    "latest_news_title": "Aktuelle Nachrichten",
+    "loading": "Nachrichten laden...",
+    "more_news_button": "Mehr Nachrichten"
   },
   "Login": {
     "title": "Willkommen zurück",

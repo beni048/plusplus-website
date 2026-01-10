@@ -8,7 +8,7 @@ interface NewsListProps {
 }
 
 export async function NewsList({ locale, limit }: NewsListProps) {
-    const t = await getTranslations('news');
+    const t = await getTranslations({ locale, namespace: 'news' });
     const allPosts = await getNewsPosts(locale);
 
     const posts = limit ? allPosts.slice(0, limit) : allPosts;
@@ -24,7 +24,7 @@ export async function NewsList({ locale, limit }: NewsListProps) {
     return (
         <>
             {posts.map((post) => (
-                <NewsCard key={post.id} post={post} locale={locale} />
+                <NewsCard key={post.id} post={post} locale={locale} readMoreText={t('read_more')} />
             ))}
         </>
     );

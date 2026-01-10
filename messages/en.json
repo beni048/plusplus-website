@@ -41,8 +41,11 @@
       }
     },
     "no_news_found": "No news posts found.",
+    "read_more": "Read more",
     "back_to_news": "Back to News",
     "latest_news_title": "Latest News",
+    "loading": "Loading news...",
+    "loading_article": "Loading article...",
     "more_news_button": "More News"
   },
   "Login": {

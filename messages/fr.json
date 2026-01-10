@@ -21,6 +21,7 @@
     }
   },
   "news": {
+    "loading_article": "Chargement de l'article...",
     "title": "Actualités",
     "hero": {
       "title": "Actualités & Insights",
@@ -39,7 +40,13 @@
         "excerpt": "Lancement de notre nouvelle plateforme pour les mises à jour de l'entreprise et les perspectives techniques de notre équipe.",
         "text": "Bienvenue dans la section actualités de Plusplus AG. Ici, nous partagerons les mises à jour de l'entreprise, les perspectives de l'industrie et des articles de leadership éclairé. Nous sommes ravis d'annoncer que notre CTO, Matthias Nadler, publiera des articles intéressants sur la technologie blockchain, les stablecoins et la finance décentralisée. Restez à l'écoute pour des mises à jour régulières !"
       }
-    }
+    },
+    "no_news_found": "Aucune actualité trouvée.",
+    "read_more": "Lire la suite",
+    "back_to_news": "Retour aux actualités",
+    "latest_news_title": "Dernières Actualités",
+    "loading": "Chargement des actualités...",
+    "more_news_button": "Plus d'actualités"
   },
   "Login": {
     "title": "Bon retour",
