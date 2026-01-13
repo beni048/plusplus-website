@@ -11,7 +11,7 @@ jobs:
       E2E_BASE_URL: http://localhost:3000
       PW_BASE_URL: http://localhost:3000
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
